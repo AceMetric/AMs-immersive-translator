@@ -1,0 +1,50 @@
+{
+  "name": "am-academic-translator",
+  "version": "0.1.4",
+  "private": true,
+  "description": "保护公式与代码、支持本地模型的学术双语翻译插件",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "wxt",
+    "build": "wxt build",
+    "zip": "wxt zip",
+    "postinstall": "wxt prepare",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "glossary:validate": "node scripts/validate-glossary.mjs",
+    "glossary:fetch": "python3 scripts/fetch-wikidata.py && node scripts/split-glossaries.mjs",
+    "glossary:build": "node scripts/build-core.mjs",
+    "release": "npm run zip && python3 scripts/package-release.py",
+    "benchmark": "node scripts/benchmark.mjs",
+    "benchmark:corpus": "node scripts/build-benchmark.mjs",
+    "benchmark:graph": "node scripts/evaluate-term-graph.mjs",
+    "benchmark:view": "node scripts/render-benchmark.mjs"
+  },
+  "dependencies": {
+    "idb": "^8.0.3",
+    "lucide-react": "^0.468.0",
+    "mathjax-full": "^3.2.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/chrome": "^0.1.28",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@wxt-dev/module-react": "^1.2.2",
+    "happy-dom": "^20.0.0",
+    "typescript": "^5.9.0",
+    "vitest": "^5.0.3",
+    "wxt": "^0.21.4",
+    "jiti": "^2.7.0"
+  },
+  "overrides": {
+    "@xmldom/xmldom": "0.9.12"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}
