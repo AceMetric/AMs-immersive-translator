@@ -3,8 +3,10 @@ import importlib.util
 import json
 from pathlib import Path
 import unittest
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'scripts'))
 spec = importlib.util.spec_from_file_location('screening', ROOT / 'scripts/glossary_screening.py')
 screening = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(screening)
@@ -24,6 +26,24 @@ def classify(t, roots=(), types=(), branches=(), core=()):
 
 
 class ScreeningTests(unittest.TestCase):
+    def test_incomplete_description_can_use_typed_bilingual_evidence(self):
+        examples = [('Fermat\'s little theorem', '费马小定理', '', 'math', 'Q65943'),
+                    ('Cauchy\'s theorem', '柯西定理', 'theorem', 'math', 'Q65943'),
+                    ('Andrica\'s conjecture', '安德里卡猜想', 'conjecture', 'math', 'Q319141'),
+                    ('Edmonds–Karp algorithm', 'Edmonds–Karp算法', 'algorithm', 'cs', 'Q30503704'),
+                    ('Circular Linked List', '循环链表', '', 'cs', 'Q175263')]
+        for source, target, description, domain, qid in examples:
+            self.assertEqual(classify(term(source, description, domain, target), [qid]), 'retain', source)
+        self.assertEqual(classify(term('an old conjecture', '', 'math', '猜想'), ['Q108163']), 'quarantine')
+        self.assertEqual(classify(term('a named theorem', '', 'math', '无关译名'), ['Q65943']), 'quarantine')
+        self.assertEqual(classify(term('an arbitrary algorithm', '', 'cs', '算法'), ['Q8366']), 'quarantine')
+        self.assertEqual(classify(term('copyright algorithm', '', 'cs', '版权判定算法'), ['Q30503704']), 'exclude')
+
+    def test_independent_evidence_cannot_override_translation_or_foreign_conflicts(self):
+        t = term('Cauchy\'s theorem', '', target='别人的定理')
+        self.assertEqual(classify(t, ['Q65943'], core=[{'domain':'math','source':t['source'],'target':'柯西定理'}]), 'quarantine')
+        self.assertEqual(classify(term('a sociological theorem', '', target='社会学定理'), ['Q65943']), 'quarantine')
+
     def test_algorithm_families_cover_reported_false_negatives_and_related_terms(self):
         examples = [('Aho–Corasick algorithm', 'string searching algorithm', 'cs'),
                     ('Knuth–Morris–Pratt algorithm', 'string searching algorithm', 'cs'),

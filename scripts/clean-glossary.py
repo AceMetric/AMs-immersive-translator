@@ -11,6 +11,7 @@ from opencc import OpenCC
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from glossary_locale import normalize_region
+from glossary_core_reference import core_reference
 
 ROOT = Path(__file__).resolve().parents[1]
 # Mainland labels are not automatically semantically better than zh-hans.
@@ -85,7 +86,7 @@ def collect(cache_dir):
     return entities, sources
 
 
-def clean(entities, exclusions=None):
+def clean(entities, exclusions=None, core_terms=()):
     converter = OpenCC("t2s")
     locale = json.loads((ROOT / 'data/glossary-locale.json').read_text())
     terms = []
@@ -141,6 +142,10 @@ def clean(entities, exclusions=None):
             rejected.append({"domain": item["domain"], "qid": item["qid"], "source": source,
                              "target": target, "description": description, "reason": reason})
             continue
+        checked = core_reference(source, item['domain'], f"https://www.wikidata.org/wiki/{item['qid']}", core_terms)
+        canonicalization = {**checked, 'inputTarget': target} if checked else None
+        if checked:
+            target = checked['target']
         term = {"id": f"wd-{item['domain']}-{item['qid']}", "source": source, "target": target,
                 "domain": item["domain"], "sense": description or source, "aliases": [],
                 "definition": description, "sourceUrl": f"https://www.wikidata.org/wiki/{item['qid']}",
@@ -156,6 +161,8 @@ def clean(entities, exclusions=None):
                                   "sources": item["evidence"]})
         if equivalent_alternative:
             accepted_evidence[-1]['locale']['equivalentAlternative'] = equivalent_alternative
+        if canonicalization:
+            accepted_evidence[-1]['coreCanonicalization'] = canonicalization
     # Entities with identical labels and definition are merged rather than
     # counted twice. Different definitions of an English homograph survive.
     grouped = {}
@@ -192,14 +199,14 @@ def main():
     if not sources:
         parser.error("No successful snapshots; refusing to replace data with empty output")
     exclusions = json.loads((ROOT / "data/glossary-exclusions.json").read_text())["entries"]
-    terms, evidence, rejected, reasons = clean(entities, exclusions)
+    core = [term for path in (ROOT / 'public/glossaries').glob('core-*.json')
+            for term in json.loads(path.read_text())['terms']]
+    terms, evidence, rejected, reasons = clean(entities, exclusions, core)
     policy_path = ROOT / "data/glossary-screening.json"
     policy = json.loads(policy_path.read_text())
     branches = []
     for name in ("branch-plan.json", "branch-plan-level2.json"):
         branches.extend(json.loads((ROOT / "data/wikidata" / name).read_text())["roots"])
-    core = [term for path in (ROOT / 'public/glossaries').glob('core-*.json')
-            for term in json.loads(path.read_text())['terms']]
     terms, evidence, quarantine, screen_rejected, screening = screen_candidates(terms, evidence, policy, branches, core)
     counts = dict(Counter(t["domain"] for t in terms))
     args.output_dir.mkdir(parents=True, exist_ok=True)

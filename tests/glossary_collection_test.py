@@ -31,6 +31,26 @@ def entity(qid, source="field", zh="域", sense="algebraic structure", types=Non
 
 
 class CleaningTests(unittest.TestCase):
+    def test_core_canonicalization_requires_exact_entity_domain_source_and_unique_sense(self):
+        e = entity('Q1', 'hash table', '散列表', sense='data structure')
+        e['domain'] = 'cs'
+        core = {'id':'core-test','domain':'cs','source':'hash table','target':'哈希表',
+                'sourceUrl':'https://www.wikidata.org/wiki/Q1','quality':'core'}
+        terms, evidence, *_ = cleaner.clean({('cs','Q1'):e}, core_terms=[core])
+        self.assertEqual(terms[0]['target'], '哈希表')
+        self.assertEqual(terms[0]['quality'], 'candidate')
+        self.assertEqual(evidence[0]['coreCanonicalization']['inputTarget'], '散列表')
+        for unsupported in [{**core,'sourceUrl':'https://www.wikidata.org/wiki/Q2'},
+                            {**core,'domain':'math'}, {**core,'source':'hash'},
+                            {**core,'requiresContext':True}]:
+            terms, evidence, *_ = cleaner.clean({('cs','Q1'):e}, core_terms=[unsupported])
+            self.assertEqual(terms[0]['target'], '散列表')
+            self.assertNotIn('coreCanonicalization', evidence[0])
+        terms, *_ = cleaner.clean({('cs','Q1'):e}, core_terms=[core,{**core,'id':'second','target':'其他词义'}])
+        self.assertEqual(terms[0]['target'], '散列表')
+        terms, *_ = cleaner.clean({('cs','Q1'):e}, [{'domain':'cs','qid':'Q1','target':'散列表','reason':'confirmed error'}], [core])
+        self.assertFalse(terms)
+
     def test_regional_phrases_follow_english_concept_not_script_or_domain_alone(self):
         examples = [('artificial intelligence', '人工智慧', '人工智能', 'cs'),
                     ('database', '資料庫', '数据库', 'cs'),

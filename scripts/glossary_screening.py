@@ -1,6 +1,7 @@
 """Explainable, offline domain screening; never promotes a term to reviewed."""
 from collections import Counter
 import re
+from glossary_core_reference import core_reference
 
 
 def screen_candidates(terms, evidence, policy, branches, core_terms=()):
@@ -47,10 +48,12 @@ def screen_candidates(terms, evidence, policy, branches, core_terms=()):
         roots = item['sources']
         trusted = []
         branch_signals = []
+        ancestry_nodes = set()
         blocked = set(item.get('directTypes', [])) & excluded.keys()
         for source in roots:
             root = source['root']
             parents = ancestry(domain, root['id'])
+            ancestry_nodes.update(parents)
             blocked.update(parents & excluded.keys())
             # A trusted path must itself avoid blocked branches.
             if not parents & excluded.keys() and parents & rules['anchors']:
@@ -70,24 +73,37 @@ def screen_candidates(terms, evidence, policy, branches, core_terms=()):
         targets = sorted(core_targets.get((domain, term['source'].casefold()), set()))
         translation_issues = [e['reason'] for e in policy.get('translationReviewEntries', [])
                               if term['id'].endswith('-' + e['qid']) and term['source'] == e['source']]
+        checked = core_reference(term['source'], domain, term.get('sourceUrl', ''), core_terms)
+        if checked and checked['target'] != term['target']:
+            checked = None
+        label_support = [r['id'] for r in policy.get('incompleteDescriptionSupport', [])
+                         if domain == r['domain'] and ancestry_nodes & set(r['anchors'])
+                         and re.search(r['sourcePattern'], term['source'], re.I)
+                         and re.search(r['targetPattern'], term['target'])
+                         and term['source'].casefold() not in r.get('genericLabels', [])]
+        independent = bool(checked or label_support)
+        description_status = ('missing' if not definitions else 'generic'
+                              if definitions.casefold().strip(' .;:') in uninformative else 'specific')
         if hard:
             status, reason = 'exclude', 'explicit non-academic subject'
-        elif blocked and not (trusted or positive or branch_signals):
+        elif blocked and not (trusted or positive or branch_signals or independent):
             status, reason = 'exclude', 'out-of-scope source branch/type'
         elif blocked:
             status, reason = 'quarantine', 'conflicting source branch and domain evidence'
-        elif not definitions:
-            status, reason = 'quarantine', 'missing definition; scope cannot be established'
-        elif definitions.casefold().strip(' .;:') in uninformative:
-            status, reason = 'quarantine', 'definition only repeats a generic class; insufficient evidence'
         elif foreign:
             status, reason = 'quarantine', 'foreign subject signal requires review'
         elif translation_issues:
             status, reason = 'quarantine', 'label meaning needs review; locale normalization is insufficient'
-        elif not (trusted or positive or branch_signals):
-            status, reason = 'quarantine', 'generic taxonomy membership without specific domain evidence'
         elif targets and term['target'] not in targets:
             status, reason = 'quarantine', 'label differs from project-checked core; translation/sense needs review'
+        elif description_status == 'missing' and not independent:
+            status, reason = 'quarantine', 'missing definition; scope cannot be established'
+        elif description_status == 'generic' and not independent:
+            status, reason = 'quarantine', 'definition only repeats a generic class; insufficient evidence'
+        elif not (trusted or positive or branch_signals or independent):
+            status, reason = 'quarantine', 'generic taxonomy membership without specific domain evidence'
+        elif description_status != 'specific':
+            status, reason = 'retain', 'independent domain evidence despite incomplete description'
         else:
             status, reason = 'retain', 'scoped source path or domain-specific definition'
         decision = {'status': status, 'reason': reason, 'policyVersion': policy['version'],
@@ -95,6 +111,8 @@ def screen_candidates(terms, evidence, policy, branches, core_terms=()):
                     'coreTargets': targets,
                     'branchSignals': branch_signals, 'translationIssues': translation_issues,
                     'definitionMatches': [p.search(definitions).group(0) for p in rules['positive'] if p.search(definitions)],
+                    'descriptionStatus': description_status, 'coreReference': checked,
+                    'bilingualClassEvidence': label_support,
                     'definitionSignals': positive, 'foreignSignals': foreign, 'exclusionSignals': hard}
         for source in roots:
             root = source['root']

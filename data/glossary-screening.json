@@ -1,12 +1,13 @@
 {
-  "version": "2026-10-04.2",
+  "version": "2026-10-04.3",
   "license": "CC0-1.0",
   "scope": "Automatic domain screening, not translation review. Generic taxonomy membership alone is insufficient; uncertain entries are quarantined and remain recoverable.",
   "methodReferences": [
     "https://www.wikidata.org/wiki/Help:Basic_membership_properties",
     "https://github.com/ad-freiburg/entity-linking-annotation-guidelines",
     "https://oi-wiki.org/string/ac-automaton/",
-    "https://oi-wiki.org/math/number-theory/discrete-logarithm/"
+    "https://oi-wiki.org/math/number-theory/discrete-logarithm/",
+    "https://www.wikidata.org/wiki/Help:Description"
   ],
   "excludedBranches": {
     "Q159535": "conspiracy theory: outside math/physics/cs terminology",
@@ -19,7 +20,7 @@
   "excludedText": [
     "\\bconspiracy theor(?:y|ies)\\b|阴谋论",
     "\\b(?:apocalypse|end times prediction)\\b|末世预言",
-    "\\bcopyright (?:determination|status)\\b|\\b(?:determining|determine) copyright\\b|\\bcreator.?s copyright\\b",
+    "\\bcopyright (?:determination|status)\\b|\\b(?:determining|determine) copyright\\b|\\bcreator.?s copyright\\b|版权(?:状态|判定)",
     "\\b(?:philatelic|postage stamp issue|postage stamp edition)\\b",
     "\\b(?:musical note|musical pitches|musical tempo)\\b",
     "\\bWikipedia article covering multiple topics\\b"
@@ -166,6 +167,96 @@
       "qid": "Q5550413",
       "source": "Gerchberg–Saxton algorithm",
       "reason": "Chinese label says edge function instead of identifying the phase-retrieval algorithm"
+    }
+  ],
+  "incompleteDescriptionSupport": [
+    {
+      "id": "named-math-theorem",
+      "domain": "math",
+      "anchors": [
+        "Q65943",
+        "Q1422068"
+      ],
+      "sourcePattern": "\\b(?:theorems?|lemma|identity|law)\\b",
+      "targetPattern": "定理|引理|恒等式|定律|法则|律",
+      "genericLabels": [
+        "theorem",
+        "lemma",
+        "identity",
+        "law"
+      ]
+    },
+    {
+      "id": "named-math-conjecture",
+      "domain": "math",
+      "anchors": [
+        "Q319141"
+      ],
+      "sourcePattern": "\\bconjecture\\b",
+      "targetPattern": "猜想",
+      "genericLabels": [
+        "conjecture"
+      ]
+    },
+    {
+      "id": "named-math-constant",
+      "domain": "math",
+      "anchors": [
+        "Q186509"
+      ],
+      "sourcePattern": "\\bconstant\\b",
+      "targetPattern": "常数",
+      "genericLabels": [
+        "constant",
+        "mathematical constant"
+      ]
+    },
+    {
+      "id": "specific-cs-algorithm",
+      "domain": "cs",
+      "anchors": [
+        "Q755673",
+        "Q181593",
+        "Q30503704",
+        "Q97940647",
+        "Q829546",
+        "Q2755432",
+        "Q246593",
+        "Q2835765"
+      ],
+      "sourcePattern": "\\b(?:algorithm|search|filter)\\b",
+      "targetPattern": "算法|搜索|查找|滤波",
+      "genericLabels": [
+        "algorithm",
+        "search",
+        "filter"
+      ]
+    },
+    {
+      "id": "specific-cs-data-structure",
+      "domain": "cs",
+      "anchors": [
+        "Q175263",
+        "Q827335",
+        "Q186152"
+      ],
+      "sourcePattern": "\\b(?:tree|linked list|stack|queue|heap|hash table|array)\\b",
+      "targetPattern": "树|链表|栈|队列|堆|哈希表|散列表|数组",
+      "genericLabels": []
+    },
+    {
+      "id": "specific-network-protocol",
+      "domain": "cs",
+      "anchors": [
+        "Q15836568",
+        "Q132364"
+      ],
+      "sourcePattern": "\\bprotocol\\b",
+      "targetPattern": "协议",
+      "genericLabels": [
+        "protocol",
+        "communication protocol"
+      ]
     }
   ]
 }

@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 from glossary_screening import screen_candidates
 from glossary_locale import normalize_region
+from glossary_core_reference import core_reference
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -66,12 +67,16 @@ def main():
             locale = item['locale']
             assert locale['targetLocale'] == 'zh-CN' and locale['policyVersion'] == locale_policy['version']
             target, changes = normalize_region(locale['scriptLabel'], term['source'], term['definition'], term['domain'], locale_policy)
-            assert target == term['target'] and changes == locale['rules'], 'Stale regional normalization'
+            regional_target = target
+            checked = core_reference(term['source'], term['domain'], term['sourceUrl'], core)
+            expected_reference = {**checked, 'inputTarget': regional_target} if checked else None
+            assert item.get('coreCanonicalization') == expected_reference, 'Stale/mismatched core entity reference'
+            assert (checked['target'] if checked else regional_target) == term['target'] and changes == locale['rules'], 'Stale normalization'
             if locale.get('equivalentAlternative'):
                 alternative = locale['equivalentAlternative']
                 assert (alternative['language'], alternative['originalLabel']) in labels
                 target, changes = normalize_region(alternative['scriptLabel'], term['source'], term['definition'], term['domain'], locale_policy)
-                assert target == term['target'] and changes == alternative['rules'] and changes
+                assert target == regional_target and changes == alternative['rules'] and changes
             records[term['id']] = item['screening']
             all_terms.append(term); all_evidence.append(item)
     retained, accepted, quarantined, excluded, stats = screen_candidates(all_terms, all_evidence, policy, branches, core)
