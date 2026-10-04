@@ -11,8 +11,8 @@ def core_reference(source, domain, entity_url, core_terms):
         return None
     matches = [c for c in core_terms if c.get('quality') == 'core'
                and c['domain'] == domain and c['source'].casefold() == source.casefold()
-               and c.get('sourceUrl') == entity_url and not c.get('requiresContext')]
-    if not matches or len({c['target'] for c in matches}) != 1:
+               and c.get('sourceUrl') == entity_url]
+    if not matches or any(c.get('requiresContext') for c in matches) or len({c['target'] for c in matches}) != 1:
         return None
     c = sorted(matches, key=lambda t: t['id'])[0]
     return {'id': c['id'], 'sourceUrl': entity_url, 'target': c['target']}

@@ -48,6 +48,8 @@ class CleaningTests(unittest.TestCase):
             self.assertNotIn('coreCanonicalization', evidence[0])
         terms, *_ = cleaner.clean({('cs','Q1'):e}, core_terms=[core,{**core,'id':'second','target':'其他词义'}])
         self.assertEqual(terms[0]['target'], '散列表')
+        terms, *_ = cleaner.clean({('cs','Q1'):e}, core_terms=[core,{**core,'id':'guarded','requiresContext':True}])
+        self.assertEqual(terms[0]['target'], '散列表')
         terms, *_ = cleaner.clean({('cs','Q1'):e}, [{'domain':'cs','qid':'Q1','target':'散列表','reason':'confirmed error'}], [core])
         self.assertFalse(terms)
 
