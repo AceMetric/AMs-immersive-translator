@@ -92,4 +92,12 @@ describe('glossary settings enable/disable actions',()=>{
     expect(resolveStoredTerms([core],[candidate,legacy,edited])).toEqual([edited]);
     expect(resolveStoredTerms([core,candidate],[{...candidate,enabled:false}])).toEqual([{...candidate,enabled:false}]);
   });
+  it('keeps removed core preferences dormant until rollback without removing personal edits',()=>{
+    const disabled={...core,enabled:false},legacy={...core,quality:'user' as const};
+    const edited={...legacy,target:'我的明确译名',updatedAt:1};
+    expect(resolveStoredTerms([],[disabled,legacy,edited])).toEqual([edited]);
+    expect(resolveStoredTerms([core],[disabled])).toEqual([{...core,enabled:false}]);
+    expect(resolveStoredTerms([],[{...core,quality:'confirmed' as const}])).toEqual([{...core,quality:'confirmed'}]);
+  });
+
 });

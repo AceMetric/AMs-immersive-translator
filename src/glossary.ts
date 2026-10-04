@@ -8,10 +8,13 @@ export function resolveStoredTerms(builtins: Term[], stored: Term[]): Term[] {
   const byId=new Map(builtins.map(t=>[t.id,t]));
   return stored.flatMap(t=>{
     const builtin=byId.get(t.id);
-    // Removed built-in candidates must not return through old toggle records.
+    // Removed built-in terms must not return through old toggle records.
     // Keep these records in storage so a future reviewed pack can restore the
     // preference, while genuine edited/imported personal terms remain usable.
-    if(!builtin)return t.id.startsWith('wd-')&&(t.quality==='candidate'||t.quality==='user'&&t.updatedAt===undefined)?[]:[t];
+    if(!builtin){
+      const preference=t.quality==='core'||t.quality==='candidate'||t.quality==='user'&&t.updatedAt===undefined&&(t.id.startsWith('wd-')||t.id.startsWith('am-'));
+      return preference?[]:[t];
+    }
     const legacyToggle=t.quality==='user'&&t.updatedAt===undefined&&termKey(t)===termKey(builtin);
     return [t.quality===builtin.quality||legacyToggle?{...builtin,enabled:t.enabled}:t];
   });
