@@ -1,0 +1,2403 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q2417889 wd:Q105702311 wd:Q2914964 wd:Q20827351 wd:Q7901611 wd:Q50701 wd:Q7915757 wd:Q123852388 wd:Q66539727 wd:Q7959586 wd:Q3318070 wd:Q513687 wd:Q7977966 wd:Q136936092 wd:Q1958286 wd:Q1781358 wd:Q130299362 wd:Q91783803 wd:Q1455898 wd:Q869108 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q2417889 wd:Q105702311 wd:Q2914964 wd:Q20827351 wd:Q7901611 wd:Q50701 wd:Q7915757 wd:Q123852388 wd:Q66539727 wd:Q7959586 wd:Q3318070 wd:Q513687 wd:Q7977966 wd:Q136936092 wd:Q1958286 wd:Q1781358 wd:Q130299362 wd:Q91783803 wd:Q1455898 wd:Q869108 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q2417889 wd:Q105702311 wd:Q2914964 wd:Q20827351 wd:Q7901611 wd:Q50701 wd:Q7915757 wd:Q123852388 wd:Q66539727 wd:Q7959586 wd:Q3318070 wd:Q513687 wd:Q7977966 wd:Q136936092 wd:Q1958286 wd:Q1781358 wd:Q130299362 wd:Q91783803 wd:Q1455898 wd:Q869108 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "e244f3c02e51d9bf93fe5ad4402f8ef7f18efca8eb07f9e6faf695c2ce97816e",
+  "responseSha256": "b0ac1d14bb9f050d0460bb5d3f432d36f9273c8dc99af49b5a601c5d4c426316",
+  "retrievedAt": "2026-10-04T05:04:01.792578+00:00",
+  "license": "CC0-1.0",
+  "domain": "math",
+  "roots": [
+    {
+      "domain": "math",
+      "id": "Q2417889",
+      "label": "unlucky number",
+      "description": "number considered by a culture or specific people to be connected with bad luck",
+      "parents": [
+        "Q11563"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q105702311",
+      "label": "unsupervised clustering algorithm",
+      "description": "type of algorithm",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q2914964",
+      "label": "up to",
+      "description": "mathematical statement of uniqueness, except for an equivalent structure (equivalence relation)",
+      "parents": [
+        "Q108163"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q20827351",
+      "label": "urban scaling",
+      "description": "scientific field studying cities as complex systems",
+      "parents": [
+        "Q176737"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q7901611",
+      "label": "Urysohn universal space",
+      "description": "",
+      "parents": [
+        "Q179899"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q50701",
+      "label": "variable",
+      "description": "value that can change, usually with a context of an equation or operation",
+      "parents": [
+        "Q1318370"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q7915757",
+      "label": "variance-stabilizing transformation",
+      "description": "concept in applied statistics",
+      "parents": [
+        "Q12202238"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q123852388",
+      "label": "vertex algebra",
+      "description": "vector space equipped with a vacuum element, a translation operator and a state‐to‐field map satisfying the Borcherds identity",
+      "parents": [
+        "Q205464"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q66539727",
+      "label": "volume",
+      "description": "dimensional entity",
+      "parents": [
+        "Q66539726"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q7959586",
+      "label": "Wagner's gene network model",
+      "description": "evolutionary model",
+      "parents": [
+        "Q486902"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q3318070",
+      "label": "water model",
+      "description": "model to simulate effects of water in computational chemistry,",
+      "parents": [
+        "Q486902"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q513687",
+      "label": "weak key",
+      "description": "Key that is easy to break with a specific cipher",
+      "parents": [
+        "Q471771"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q7977966",
+      "label": "weak solution",
+      "description": "mathematical solution",
+      "parents": [
+        "Q1879813"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q136936092",
+      "label": "Web feed algorithm",
+      "description": "algorithms that determine which content is shown in users' feeds and in which order",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q1958286",
+      "label": "web indexing",
+      "description": "methods for indexing the contents of a website or of the Internet as a whole.",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q1781358",
+      "label": "wedge sum",
+      "description": "\"one-point union\" of a family of topological spaces",
+      "parents": [
+        "Q1419329"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q130299362",
+      "label": "weighted sum",
+      "description": "mathematical sum of products",
+      "parents": [
+        "Q6498784"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q91783803",
+      "label": "Weil divisor",
+      "description": "formal sum of codimension-1 subvarieties",
+      "parents": [
+        "Q909669",
+        "Q4723996"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q1455898",
+      "label": "well-posed problem",
+      "description": "functional relationship F between some input x and output y such that y=g(x) and g is Lipschitz in a neighbourhood of every x",
+      "parents": [
+        "Q1166625"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q869108",
+      "label": "Weyl tensor",
+      "description": "measure of the curvature of a pseudo-Riemannian manifold",
+      "parents": [
+        "Q188524"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "math branches 1181..1200",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28509"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vertex algebra equipped with a conformal element"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q123852388"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vertex operator algebra"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "頂點算子代數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28509"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vertex algebra equipped with a conformal element"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q123852388"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vertex operator algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "顶点算子代数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28509"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vertex algebra equipped with a conformal element"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q123852388"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vertex operator algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "頂點算子代數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q218005"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "addition of a sequence of numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130299362"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sum"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "總和"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6094393"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q218005"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "addition of a sequence of numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130299362"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sum"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "总和"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6094393"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q218005"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "addition of a sequence of numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130299362"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sum"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "总和"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6094393"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q218005"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "addition of a sequence of numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130299362"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sum"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "總和"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6094393"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q218005"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "addition of a sequence of numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130299362"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sum"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "總和"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6094393"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q176623"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable representing a random phenomenon"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "random variable"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "随机变量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q176623"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable representing a random phenomenon"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "random variable"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "隨機變數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "value that can change, usually with a context of an equation or operation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "變數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "value that can change, usually with a context of an equation or operation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "变数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "value that can change, usually with a context of an equation or operation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "變數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "value that can change, usually with a context of an equation or operation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "變數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "value that can change, usually with a context of an equation or operation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "变量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q166211"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "generalization of the concept of random variable to more complicated spaces than the simple real line"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "random element"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "随机元素"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2480745"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "(of mechanical system) number of independent parameters that define its configuration; number of parameters that determine the state of a physical system and is important to the analysis of systems of bodies"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree of freedom"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "自由度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2480745"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "(of mechanical system) number of independent parameters that define its configuration; number of parameters that determine the state of a physical system and is important to the analysis of systems of bodies"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree of freedom"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "自由度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7915757"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "concept in applied statistics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7915757"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variance-stabilizing transformation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "方差稳定化变换"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7977966"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical solution"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7977966"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "weak solution"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "弱解"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5961806"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space obtained by gluing together a collection of circles along a single point"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1781358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rose"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "一束圆"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5961806"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space obtained by gluing together a collection of circles along a single point"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1781358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rose"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "一束圆"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5961806"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space obtained by gluing together a collection of circles along a single point"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1781358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rose"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "一束圆"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5961806"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space obtained by gluing together a collection of circles along a single point"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1781358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rose"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "一束圓"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4422623"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable that is not directly observed but is rather inferred (through a mathematical model) from other variables that are observed (directly measured)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "latent variable"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "隐变量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4422623"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable that is not directly observed but is rather inferred (through a mathematical model) from other variables that are observed (directly measured)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "latent variable"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "隐藏变量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4422623"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable that is not directly observed but is rather inferred (through a mathematical model) from other variables that are observed (directly measured)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "latent variable"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "隐变量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4422623"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable that is not directly observed but is rather inferred (through a mathematical model) from other variables that are observed (directly measured)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "latent variable"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "隱藏變數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2914964"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical statement of uniqueness, except for an equivalent structure (equivalence relation)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2914964"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "up to"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Up to"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66785817"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2914964"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical statement of uniqueness, except for an equivalent structure (equivalence relation)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2914964"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "up to"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Up to"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66785817"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2914964"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical statement of uniqueness, except for an equivalent structure (equivalence relation)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2914964"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "up to"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Up to"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66785817"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1455898"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "functional relationship F between some input x and output y such that y=g(x) and g is Lipschitz in a neighbourhood of every x"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1455898"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "well-posed problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "適定性問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q123852388"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vector space equipped with a vacuum element, a translation operator and a state‐to‐field map satisfying the Borcherds identity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q123852388"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vertex algebra"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "頂點代數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q123852388"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vector space equipped with a vacuum element, a translation operator and a state‐to‐field map satisfying the Borcherds identity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q123852388"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vertex algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "顶点代数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q123852388"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vector space equipped with a vacuum element, a translation operator and a state‐to‐field map satisfying the Borcherds identity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q123852388"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vertex algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "頂點代數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2480745"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "(of mechanical system) number of independent parameters that define its configuration; number of parameters that determine the state of a physical system and is important to the analysis of systems of bodies"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree of freedom"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "自由度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1958286"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "methods for indexing the contents of a website or of the Internet as a whole."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1958286"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "web indexing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "网络索引"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1958286"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "methods for indexing the contents of a website or of the Internet as a whole."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1958286"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "web indexing"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "网络索引"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1958286"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "methods for indexing the contents of a website or of the Internet as a whole."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1958286"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "web indexing"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "网络索引"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1958286"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "methods for indexing the contents of a website or of the Internet as a whole."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1958286"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "web indexing"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "網路索引"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2912653"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer program variable of undefined value"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "uninitialized variable"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "未初始化的變數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5161031"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear combination where the coefficients are non-negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130299362"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "conical combination"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "锥组合"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5161031"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear combination where the coefficients are non-negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130299362"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "conical combination"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "锥组合"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5161031"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear combination where the coefficients are non-negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130299362"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "conical combination"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "錐組合"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9391534"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parameter that represents an output of a mathematical expression"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dependent variable"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "因变量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q61985482"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variables in an economic model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "exogenous and endogenous variables"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "外源性與內生性變數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7075422"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable that can be observed and directly measured"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "observable variable"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "可观测的量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7603913"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable whose value is uniquely determined by the state of a dynamical system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state variable"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "狀態變數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7075422"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable that can be observed and directly measured"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "observable variable"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "可观测的量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7075422"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable that can be observed and directly measured"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "observable variable"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "可观测的量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7075422"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable that can be observed and directly measured"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "observable variable"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "可觀測的量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3492863"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical representation of truth or falsehood"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "propositional variable"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "命题变量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3492863"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical representation of truth or falsehood"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "propositional variable"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "命题变量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3492863"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical representation of truth or falsehood"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "propositional variable"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "命題變量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3492863"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical representation of truth or falsehood"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "propositional variable"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "命題變數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2487752"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parameter that represents an arbitrary input of a mathematical expression"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "independent variable"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "自变量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10531432"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of mathematical variable"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "predicate variable"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "谓词变量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10531432"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of mathematical variable"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "predicate variable"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "謂詞變數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7100785"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "statistical data type"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinal variable"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "順序量錶"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7604387"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3318070"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "model to simulate effects of water in computational chemistry,"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3318070"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "water model"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "水模型"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1781358"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "\"one-point union\" of a family of topological spaces"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1781358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "wedge sum"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "楔和"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q91776238"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1765718"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical concept"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "slack variable"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "松弛变量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1765718"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical concept"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "slack variable"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "松弛变量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1765718"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical concept"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "slack variable"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "松弛变量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1765718"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical concept"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "slack variable"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "鬆弛變數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2285707"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable where there is no ordering among the values"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "categorical variable"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分类变量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7604387"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q877977"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "storage location paired with a name, which contains a value"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "assignable variable"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "变量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q877977"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "storage location paired with a name, which contains a value"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "assignable variable"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "變數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q935944"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "classification of variables in a logic formula based on whether or not they are inside the scope of a quantifier"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "free and bound variables"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "自由变量和约束变量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1140046"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "auxiliary variable or arbitrary constant that characterizes a system or specifies a mathematical function among a family of functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parameter"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "參數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96253971"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1027788"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "independent variable of math function"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "argument of a function"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "函数参数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "auxiliary variable or arbitrary constant that characterizes a system or specifies a mathematical function among a family of functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parameter"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "參數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96253971"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "auxiliary variable or arbitrary constant that characterizes a system or specifies a mathematical function among a family of functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parameter"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "引數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96253971"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q427977"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one that takes the value 0 or 1 to indicate the absence or presence of some categorical effect that may be expected to shift the outcome"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dummy variable"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "虚拟变量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q513687"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Key that is easy to break with a specific cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q513687"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "weak key"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "弱密鑰"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5190938"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q513687"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Key that is easy to break with a specific cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q513687"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "weak key"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "弱密鑰"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q137552198"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q869108"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of the curvature of a pseudo-Riemannian manifold"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q869108"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Weyl tensor"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "外爾曲率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q877977"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "storage location paired with a name, which contains a value"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "assignable variable"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "变量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q877977"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "storage location paired with a name, which contains a value"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "assignable variable"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "變量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1410440"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in computer programming, special kind of variable that holds data that was passed as an argument to a subroutine"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parameter"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "參數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1410440"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in computer programming, special kind of variable that holds data that was passed as an argument to a subroutine"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parameter"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "参数 (计算机)"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1410440"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in computer programming, special kind of variable that holds data that was passed as an argument to a subroutine"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parameter"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "函数参数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1410440"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in computer programming, special kind of variable that holds data that was passed as an argument to a subroutine"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parameter"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "函式引數"
+      }
+    }
+  ]
+}

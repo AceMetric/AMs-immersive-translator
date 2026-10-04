@@ -1,0 +1,1021 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q105483881 wd:Q123872960 wd:Q115693506 wd:Q29876825 wd:Q130299145 wd:Q934791 wd:Q17083590 wd:Q7268987 wd:Q7269097 wd:Q1476018 wd:Q7269731 wd:Q6451496 wd:Q6451502 wd:Q1198051 wd:Q18652028 wd:Q7289274 wd:Q751292 wd:Q2835012 wd:Q818944 wd:Q904041 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q105483881 wd:Q123872960 wd:Q115693506 wd:Q29876825 wd:Q130299145 wd:Q934791 wd:Q17083590 wd:Q7268987 wd:Q7269097 wd:Q1476018 wd:Q7269731 wd:Q6451496 wd:Q6451502 wd:Q1198051 wd:Q18652028 wd:Q7289274 wd:Q751292 wd:Q2835012 wd:Q818944 wd:Q904041 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q105483881 wd:Q123872960 wd:Q115693506 wd:Q29876825 wd:Q130299145 wd:Q934791 wd:Q17083590 wd:Q7268987 wd:Q7269097 wd:Q1476018 wd:Q7269731 wd:Q6451496 wd:Q6451502 wd:Q1198051 wd:Q18652028 wd:Q7289274 wd:Q751292 wd:Q2835012 wd:Q818944 wd:Q904041 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "1e35c678ecb49c50c1e16a8a2c88830554c8819f545abd993424cc36a86a37a9",
+  "responseSha256": "210359293d73290a823bde9c5c468aa94f05d858b64f38e76c859cb97aac5461",
+  "retrievedAt": "2026-10-04T05:09:38.290952+00:00",
+  "license": "CC0-1.0",
+  "domain": "cs",
+  "roots": [
+    {
+      "domain": "cs",
+      "id": "Q105483881",
+      "label": "public blockchain",
+      "description": "blockchain that has a public ledger for anyone to access",
+      "parents": [
+        "Q20514253"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q123872960",
+      "label": "Push API",
+      "description": "",
+      "parents": [
+        "Q165194"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q115693506",
+      "label": "Python 3 built-in data type",
+      "description": "data type built into the Python 3 programming language (such as str, bool, int, float, NoneType, etc.)",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q29876825",
+      "label": "Python dictionary",
+      "description": "data structure in Python",
+      "parents": [
+        "Q115684608"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q130299145",
+      "label": "quadrature rule",
+      "description": "nodes and weights to approximate a definite integral numerically",
+      "parents": [
+        "Q24262840"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q934791",
+      "label": "quadtree",
+      "description": "tree data structure in which each internal node has exactly four children",
+      "parents": [
+        "Q223655"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q17083590",
+      "label": "quantum Byzantine agreement",
+      "description": "quantum version of a Byzantine agreement protocol",
+      "parents": [
+        "Q2623817"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7268987",
+      "label": "quantum KZ equations",
+      "description": "quantum algebra version of the Knizhnik–Zamolodchikov equations",
+      "parents": [
+        "Q8771775"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7269097",
+      "label": "quantum sort",
+      "description": "sorting algorithms for quantum computers",
+      "parents": [
+        "Q2623817"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1476018",
+      "label": "Quasi-Newton method",
+      "description": "optimization algorithm",
+      "parents": [
+        "Q2835765"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7269731",
+      "label": "queap",
+      "description": "priority queue data structure",
+      "parents": [
+        "Q677051"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q6451496",
+      "label": "R*-tree",
+      "description": "a variant of R-trees used for indexing spatial information",
+      "parents": [
+        "Q223655"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q6451502",
+      "label": "R+ tree",
+      "description": "tree data structure in computer science",
+      "parents": [
+        "Q223655"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1198051",
+      "label": "R-tree",
+      "description": "tree-based data structure, used to index spatial information",
+      "parents": [
+        "Q223655"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q18652028",
+      "label": "r-value",
+      "description": "type of C++ reference representing a temporary value",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7289274",
+      "label": "Rambutan",
+      "description": "family of encryption technologies designed by the Communications-Electronics Security Group (CESG)",
+      "parents": [
+        "Q4681865"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q751292",
+      "label": "random binary tree",
+      "description": "binary tree selected at random",
+      "parents": [
+        "Q125389947"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q2835012",
+      "label": "random number table",
+      "description": "table of random numbers",
+      "parents": [
+        "Q186152"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q818944",
+      "label": "range tree",
+      "description": "data structure",
+      "parents": [
+        "Q223655"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q904041",
+      "label": "rate equation",
+      "description": "equation that links reaction rate with concentrations of reactants in a chemical reaction",
+      "parents": [
+        "Q11214"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "cs branches 481..500",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q767680"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical integration"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130299145"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Gaussian quadrature"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "高斯求积"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2877013"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optimization method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1476018"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Broyden–Fletcher–Goldfarb–Shanno algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "BFGS法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1476018"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optimization algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1476018"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Quasi-Newton method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "擬牛頓法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1476018"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optimization algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1476018"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Quasi-Newton method"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "拟牛顿法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1476018"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optimization algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1476018"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Quasi-Newton method"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "拟牛顿法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1476018"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optimization algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1476018"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Quasi-Newton method"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "擬牛頓法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18652028"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of C++ reference representing a temporary value"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18652028"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "r-value"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "右值引用"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q934791"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree data structure in which each internal node has exactly four children"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q934791"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quadtree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "四叉树"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q934791"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree data structure in which each internal node has exactly four children"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q934791"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quadtree"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "四元樹"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q934791"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree data structure in which each internal node has exactly four children"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q934791"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quadtree"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "四元樹"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q904041"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equation that links reaction rate with concentrations of reactants in a chemical reaction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q904041"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rate equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "速率方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q904041"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equation that links reaction rate with concentrations of reactants in a chemical reaction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q904041"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rate equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "速率方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q904041"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equation that links reaction rate with concentrations of reactants in a chemical reaction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q904041"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rate equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "速率方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q944241"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "formulas for numerical integration"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130299145"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Newton–Cotes formula"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "牛頓－寇次公式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q944241"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "formulas for numerical integration"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130299145"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Newton–Cotes formula"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "牛顿-柯特斯公式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q944241"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "formulas for numerical integration"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130299145"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Newton–Cotes formula"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "牛頓-寇次公式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6451496"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a variant of R-trees used for indexing spatial information"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1198051"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "R*-tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "R*树"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6451496"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a variant of R-trees used for indexing spatial information"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6451496"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "R*-tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "R*树"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6451502"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree data structure in computer science"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6451502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "R+ tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "R 树"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q645754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical integration method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130299145"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rectangle method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "矩形法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130299145"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q751292"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary tree selected at random"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q751292"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "random binary tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "隨機二元樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q751292"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary tree selected at random"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q751292"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "random binary tree"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "隨機二元樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1757700"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search tree in which the nodes are heap-ordered by random priorities"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q751292"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "treap"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "树堆"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1757700"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search tree in which the nodes are heap-ordered by random priorities"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q751292"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "treap"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "树堆"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1757700"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search tree in which the nodes are heap-ordered by random priorities"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q751292"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "treap"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "樹堆"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1757700"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search tree in which the nodes are heap-ordered by random priorities"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q751292"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "treap"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "樹堆"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17006685"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optimization method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1476018"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Davidon–Fletcher–Powell formula"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "DFP法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1198051"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree-based data structure, used to index spatial information"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1198051"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "R-tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "R树"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1198051"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree-based data structure, used to index spatial information"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1198051"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "R-tree"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "R树"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1198051"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree-based data structure, used to index spatial information"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1198051"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "R-tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "R樹"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2047 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q632343 wd:Q4112081 wd:Q130213955 wd:Q85788335 wd:Q85920708 wd:Q4317184 wd:Q119717849 wd:Q7049464 wd:Q769909 wd:Q116783037 wd:Q16934823 wd:Q1961588 wd:Q7068979 wd:Q1683292 wd:Q753445 wd:Q7069659 wd:Q18327520 wd:Q116690832 wd:Q97371579 wd:Q26213091 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q632343 wd:Q4112081 wd:Q130213955 wd:Q85788335 wd:Q85920708 wd:Q4317184 wd:Q119717849 wd:Q7049464 wd:Q769909 wd:Q116783037 wd:Q16934823 wd:Q1961588 wd:Q7068979 wd:Q1683292 wd:Q753445 wd:Q7069659 wd:Q18327520 wd:Q116690832 wd:Q97371579 wd:Q26213091 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q632343 wd:Q4112081 wd:Q130213955 wd:Q85788335 wd:Q85920708 wd:Q4317184 wd:Q119717849 wd:Q7049464 wd:Q769909 wd:Q116783037 wd:Q16934823 wd:Q1961588 wd:Q7068979 wd:Q1683292 wd:Q753445 wd:Q7069659 wd:Q18327520 wd:Q116690832 wd:Q97371579 wd:Q26213091 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "309264bafcda6b0552358bac9df9a6faeb592473fbaa521f59768f886af8fed6",
+  "responseSha256": "93b5a33225c0e9fc56dc0ba60bf8405d249d325dd7c2aec3bef03eeb911ab7df",
+  "retrievedAt": "2026-10-04T05:09:22.686958+00:00",
+  "license": "CC0-1.0",
+  "domain": "cs",
+  "roots": [
+    {
+      "domain": "cs",
+      "id": "Q632343",
+      "label": "network socket",
+      "description": "internal endpoint for sending or receiving data within a node on a computer network",
+      "parents": [
+        "Q12562646"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q4112081",
+      "label": "network virtualization",
+      "description": "combining hardware and software network resources and network functionality into a single administrative entity",
+      "parents": [
+        "Q15836568"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q130213955",
+      "label": "neural differential equation",
+      "description": "Equation in machine learning",
+      "parents": [
+        "Q11214"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q85788335",
+      "label": "Neural tangent kernel",
+      "description": "type of kernel in artificial neural networks",
+      "parents": [
+        "Q620622"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q85920708",
+      "label": "non-immutable blockchain",
+      "description": "a blockchain that lacks immutability",
+      "parents": [
+        "Q20514253"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q4317184",
+      "label": "nonhomogeneous differential equation",
+      "description": "",
+      "parents": [
+        "Q11214"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q119717849",
+      "label": "nonlinear differential equation",
+      "description": "differential equation with nonlinear terms",
+      "parents": [
+        "Q11214"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7049464",
+      "label": "nonlinear dimensionality reduction",
+      "description": "summary of algorithms for nonlinear dimensionality reduction",
+      "parents": [
+        "Q16000077"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q769909",
+      "label": "nonlinear programming",
+      "description": "solution process for some optimization problems",
+      "parents": [
+        "Q984063"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q116783037",
+      "label": "normalization",
+      "description": "in archival science, converting a digital object into a persistent file format",
+      "parents": [
+        "Q1783551"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q16934823",
+      "label": "NSA Suite A Cryptography",
+      "description": "classified U.S. cryptographic algorithms",
+      "parents": [
+        "Q4681865"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1961588",
+      "label": "null encryption",
+      "description": "choosing not to use encryption in a system where various encryption options are offered, for testing/debugging, or authentication-only communication",
+      "parents": [
+        "Q4681865"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7068979",
+      "label": "nullable type",
+      "description": "a data type that can have the special value NULL",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1683292",
+      "label": "numerical differentiation",
+      "description": "algorithms for estimating the derivative of mathematical functions",
+      "parents": [
+        "Q124355768"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q753445",
+      "label": "numerical integration",
+      "description": "family of algorithms for finding the definite integral of a function",
+      "parents": [
+        "Q24262840"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7069659",
+      "label": "numerical method for partial differential equations",
+      "description": "class of methods for solving partial differential equations",
+      "parents": [
+        "Q24262840"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q18327520",
+      "label": "numerical method in differential equations",
+      "description": "class of methods for solving differential equations",
+      "parents": [
+        "Q24262840"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q116690832",
+      "label": "OAI-PMH endpoint",
+      "description": "application programming interface for bibliographic metadata using the Open Archives Initiative Protocol for Metadata Harvesting",
+      "parents": [
+        "Q165194"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q97371579",
+      "label": "OAuth 2",
+      "description": "version of the open standard for authorization",
+      "parents": [
+        "Q4825885"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q26213091",
+      "label": "obsolete branch",
+      "description": "branch which is fully obsolete and unsupported",
+      "parents": [
+        "Q925385"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "cs branches 401..420",
+  "rows": [
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7069659"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3333647"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "extended finite element method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "广义有限元方法"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7069659"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3333647"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "extended finite element method"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "扩展有限元"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7069659"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3333647"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "extended finite element method"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "扩展有限元"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7069659"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3333647"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "extended finite element method"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "擴充套件有限元"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q632343"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2612841"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "raw socket"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "原始套接字"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7069659"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11092228"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "infinite element method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "無限单元法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q119717849"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation with nonlinear terms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q119717849"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nonlinear differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "非线性微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7069659"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of methods for solving partial differential equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18327520"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical method for partial differential equations"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "数值偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7068979"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a data type that can have the special value NULL"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7068979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nullable type"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "可空类型"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7068979"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a data type that can have the special value NULL"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7068979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nullable type"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "可空类型"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7068979"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a data type that can have the special value NULL"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7068979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nullable type"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "可空型別"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14866890"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method in numerical analysis not requiring knowledge of neighboring points"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18327520"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "meshfree method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "无网格方法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14866890"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method in numerical analysis not requiring knowledge of neighboring points"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18327520"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "meshfree method"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "無網格法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130213955"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Equation in machine learning"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130213955"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "neural differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "神经微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47494147"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85920708"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "EOS"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "EOS.IO"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10836209"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47494147"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85920708"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "EOS"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "EOS.IO"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85920708"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47494147"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85920708"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "EOS"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "EOS.IO"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q109657450"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28088256"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation with nonlinear terms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q119717849"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nonlinear partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "非线性偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7069659"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of methods for solving partial differential equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7069659"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical method for partial differential equations"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "数值偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7254447"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of analytical partial differential equation-solving processes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7069659"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudo-spectral method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "擬譜法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7254447"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of analytical partial differential equation-solving processes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7069659"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudo-spectral method"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "伪谱法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7254447"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of analytical partial differential equation-solving processes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7069659"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudo-spectral method"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "伪谱法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7254447"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of analytical partial differential equation-solving processes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7069659"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudo-spectral method"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "偽譜法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18327520"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of methods for solving differential equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18327520"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical method in differential equations"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "数值微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107285102"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "innovative technique to solve partial differential equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7069659"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physics-informed neural networks"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "物理信息神经网络"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28088256"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation with nonlinear terms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q119717849"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nonlinear partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "非线性偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6086067"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simple heuristic algorithm for estimating the intrinsic geometry of a data manifold based on a rough estimate of each data point’s neighbors on the manifold"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7049464"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Isomap"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "等距特征映射"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7049464"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "summary of algorithms for nonlinear dimensionality reduction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7049464"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nonlinear dimensionality reduction"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "非线性降维"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85788335"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of kernel in artificial neural networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85788335"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Neural tangent kernel"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "神经正切核"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47494147"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85920708"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "EOS"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "EOS.IO"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q341"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28088256"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation with nonlinear terms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q119717849"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nonlinear partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "非線性偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18385539"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "authentication layer on top of OAuth 2.0"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q97371579"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "OpenID Connect"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "OpenID连接"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18385539"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "authentication layer on top of OAuth 2.0"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q97371579"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "OpenID Connect"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "OpenID连接"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18385539"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "authentication layer on top of OAuth 2.0"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q97371579"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "OpenID Connect"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "OpenID連線"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1683292"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithms for estimating the derivative of mathematical functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1683292"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical differentiation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "數值微分"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q769909"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "solution process for some optimization problems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q769909"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nonlinear programming"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "非线性规划"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q793674"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of ordinary differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q119717849"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bernoulli differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伯努利微分方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q632343"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "internal endpoint for sending or receiving data within a node on a computer network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q632343"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network socket"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "網路插座"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q632343"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "internal endpoint for sending or receiving data within a node on a computer network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q632343"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network socket"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "網路插座"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q753445"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of algorithms for finding the definite integral of a function"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q753445"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical integration"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "數值積分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q621751"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q753445"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of algorithms for finding the definite integral of a function"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q753445"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical integration"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "数值积分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q621751"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q753445"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of algorithms for finding the definite integral of a function"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q753445"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical integration"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "數值積分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q621751"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1417308"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical methods for solving partial differential equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18327520"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "finite-difference time-domain method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "时域有限差分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1147751"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1417308"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical methods for solving partial differential equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18327520"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "finite-difference time-domain method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "时域有限差分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18327520"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1749769"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method for solving boundary value problems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18327520"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "shooting method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "打靶法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q39879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical technique"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q753445"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Monte Carlo integration"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "蒙地卡羅積分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q753445"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1935004"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical computational method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18327520"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "boundary element method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "邊界元法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1935004"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical computational method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18327520"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "boundary element method"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "边界元法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2308831"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of methods used in numerical analysis, scientific computing to solve ODE/PDE"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18327520"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spectral method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "譜方法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2308831"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of methods used in numerical analysis, scientific computing to solve ODE/PDE"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18327520"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spectral method"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "谱方法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2308831"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of methods used in numerical analysis, scientific computing to solve ODE/PDE"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18327520"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spectral method"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "譜方法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q725944"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of implicit and explicit iterative methods"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18327520"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Runge–Kutta method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "龙格-库塔法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65943"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q725944"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of implicit and explicit iterative methods"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18327520"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Runge–Kutta method"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "龙格－库塔法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65943"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q725944"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of implicit and explicit iterative methods"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18327520"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Runge–Kutta method"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "龍格-庫塔法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65943"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q541182"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "methods used to find numerical solutions of ordinary differential equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18327520"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical method for ordinary differential equations"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "數值常微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4373881"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optimization algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q769909"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sequential quadratic programming"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "顺序二次规划"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q220184"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical method for solving physical or engineering problems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7069659"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "finite element method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "有限元素法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q675387"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-linear second order differential equation and its attractor"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q119717849"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Duffing equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "杜芬振子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q64223577"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4736413"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iterative method for solving the Sylvester matrix equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18327520"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Alternating direction implicit method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "交替方向隐式法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4736413"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iterative method for solving the Sylvester matrix equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18327520"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Alternating direction implicit method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "交替方向隐式法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18327520"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q675387"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-linear second order differential equation and its attractor"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q119717849"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Duffing equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "杜芬振子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q119717849"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4112081"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "combining hardware and software network resources and network functionality into a single administrative entity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4112081"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network virtualization"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "虛擬網路"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4112081"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "combining hardware and software network resources and network functionality into a single administrative entity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4112081"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network virtualization"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "网络虚拟化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4112081"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "combining hardware and software network resources and network functionality into a single administrative entity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4112081"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network virtualization"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "网络虚拟化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4112081"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "combining hardware and software network resources and network functionality into a single administrative entity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4112081"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network virtualization"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "網路虛擬化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5427183"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method for numerically solving parabolic partial differential equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18327520"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "FTCS scheme"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "FTCS 格式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1147751"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5427183"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method for numerically solving parabolic partial differential equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18327520"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "FTCS scheme"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "FTCS 格式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18327520"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q588725"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "finite difference method for numerically solving parabolic differential equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7069659"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Crank–Nicolson method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "克兰克－尼科尔森方法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1147751"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q588725"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "finite difference method for numerically solving parabolic differential equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7069659"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Crank–Nicolson method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "克兰克－尼科尔森方法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7069659"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q588725"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "finite difference method for numerically solving parabolic differential equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7069659"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Crank–Nicolson method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "克兰克－尼科尔森方法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q51846061"
+      }
+    }
+  ]
+}

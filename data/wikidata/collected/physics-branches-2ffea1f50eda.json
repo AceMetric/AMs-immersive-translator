@@ -1,0 +1,2528 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q125849536 wd:Q2276380 wd:Q3150571 wd:Q2611270 wd:Q843816 wd:Q12719292 wd:Q108501633 wd:Q108057717 wd:Q123121454 wd:Q1957758 wd:Q245031 wd:Q25497093 wd:Q2000486 wd:Q899137 wd:Q14646828 wd:Q1416096 wd:Q1571801 wd:Q650050 wd:Q114616621 wd:Q112265407 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q125849536 wd:Q2276380 wd:Q3150571 wd:Q2611270 wd:Q843816 wd:Q12719292 wd:Q108501633 wd:Q108057717 wd:Q123121454 wd:Q1957758 wd:Q245031 wd:Q25497093 wd:Q2000486 wd:Q899137 wd:Q14646828 wd:Q1416096 wd:Q1571801 wd:Q650050 wd:Q114616621 wd:Q112265407 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q125849536 wd:Q2276380 wd:Q3150571 wd:Q2611270 wd:Q843816 wd:Q12719292 wd:Q108501633 wd:Q108057717 wd:Q123121454 wd:Q1957758 wd:Q245031 wd:Q25497093 wd:Q2000486 wd:Q899137 wd:Q14646828 wd:Q1416096 wd:Q1571801 wd:Q650050 wd:Q114616621 wd:Q112265407 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "2ffea1f50eda0bef113a56a5deb9028349333db04307857251b9a108cd18cb94",
+  "responseSha256": "b4b98ae40e048f8e8dbd034dc07fb1d9115983b68d2c2891a7f5c484b79c9d63",
+  "retrievedAt": "2026-10-04T05:05:16.524085+00:00",
+  "license": "CC0-1.0",
+  "domain": "physics",
+  "roots": [
+    {
+      "domain": "physics",
+      "id": "Q125849536",
+      "label": "image filtering",
+      "description": "",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q2276380",
+      "label": "imperial horsepower",
+      "description": "unit of power in the Imperial system of units (745.69987 watt)",
+      "parents": [
+        "Q25342"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q3150571",
+      "label": "induced current",
+      "description": "electric current resulting from electromagnetic induction",
+      "parents": [
+        "Q29996"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q2611270",
+      "label": "inductive charging",
+      "description": "type of wireless power transfer",
+      "parents": [
+        "Q1111"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q843816",
+      "label": "inertial mass",
+      "description": "mass as a measure of an object’s inertia (its resistance to being accelerated by a force)",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q12719292",
+      "label": "initial velocity",
+      "description": "",
+      "parents": [
+        "Q11465"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q108501633",
+      "label": "input power",
+      "description": "",
+      "parents": [
+        "Q25342"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q108057717",
+      "label": "instantaneous electric current",
+      "description": "instantaneous value of a time-varying electric current",
+      "parents": [
+        "Q29996"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q123121454",
+      "label": "instruction rate",
+      "description": "physical quantity measuring a computer's processing speed",
+      "parents": [
+        "Q11652"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1957758",
+      "label": "integrable system",
+      "description": "property of certain dynamical systems",
+      "parents": [
+        "Q1454986"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q245031",
+      "label": "intermolecular force",
+      "description": "forces of attraction or repulsion which act between neighboring particles",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q25497093",
+      "label": "internal force",
+      "description": "physical force",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q2000486",
+      "label": "International Bittering Units scale",
+      "description": "unit used to approximately quantify the bitterness of beer; 1 mg/L of iso-alpha acids",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q899137",
+      "label": "interpretation of quantum mechanics",
+      "description": "set of statements which attempt to explain how quantum mechanics informs our understanding of nature",
+      "parents": [
+        "Q9357058"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q14646828",
+      "label": "interval of power values",
+      "description": "",
+      "parents": [
+        "Q25342"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1416096",
+      "label": "intracranial pressure",
+      "description": "pressure inside the skull and thus in the brain tissue and cerebrospinal fluid",
+      "parents": [
+        "Q39552"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1571801",
+      "label": "intramolecular force",
+      "description": "any force that holds together the atoms making up a molecule or compound",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q650050",
+      "label": "intraocular pressure",
+      "description": "fluid pressure inside the eye",
+      "parents": [
+        "Q39552"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q114616621",
+      "label": "ionization frequency",
+      "description": "",
+      "parents": [
+        "Q11652"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q112265407",
+      "label": "isostatic pressure",
+      "description": "equal pressure force applied in all directions",
+      "parents": [
+        "Q39552"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "physics branches 241..260",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189627"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "residual forces between molecules or atomic groups not arising from covalent or ionic bonds"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q245031"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Van der Waals' force"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "范德华力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189627"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "residual forces between molecules or atomic groups not arising from covalent or ionic bonds"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q245031"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Van der Waals' force"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "范德华力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189627"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "residual forces between molecules or atomic groups not arising from covalent or ionic bonds"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q245031"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Van der Waals' force"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "范德华力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189627"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "residual forces between molecules or atomic groups not arising from covalent or ionic bonds"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q245031"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Van der Waals' force"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "凡得瓦力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189627"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "residual forces between molecules or atomic groups not arising from covalent or ionic bonds"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q245031"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Van der Waals' force"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "凡得瓦力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44424"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lasting attraction between atoms that enables the formation of chemical compounds"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1571801"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "chemical bond"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "化学键"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q40590"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interpretation of quantum mechanics which denies the collapse of the wavefunction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "many-worlds interpretation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "多世界诠释"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3144351"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q40590"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interpretation of quantum mechanics which denies the collapse of the wavefunction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "many-worlds interpretation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "多世界诠释"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3144351"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q46079"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "probabilistic interpretation of quantum mechanics involving wavefunction collapse"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Copenhagen interpretation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "哥本哈根詮釋"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3144351"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q46079"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "probabilistic interpretation of quantum mechanics involving wavefunction collapse"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Copenhagen interpretation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "哥本哈根诠释"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3144351"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q46079"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "probabilistic interpretation of quantum mechanics involving wavefunction collapse"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Copenhagen interpretation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "哥本哈根詮釋"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3144351"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232976"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "to determine the motion of two point particles that interact only with each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1957758"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "two-body problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "二體問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q137581967"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44424"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lasting attraction between atoms that enables the formation of chemical compounds"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1571801"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "chemical bond"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "化学键"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q48179"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interpretation of quantum mechanics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pilot wave theory"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "導航波理論"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4795520"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "effect observed in aromatic molecules"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3150571"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "aromatic ring current"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "芳香環電流"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3382117"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4795520"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "effect observed in aromatic molecules"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3150571"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "aromatic ring current"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "芳香環電流"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q70691163"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2276380"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of power in the Imperial system of units (745.69987 watt)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2276380"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "imperial horsepower"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "英制馬力"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387689"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2276380"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of power in the Imperial system of units (745.69987 watt)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2276380"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "imperial horsepower"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "英制馬力"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387689"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2276380"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of power in the Imperial system of units (745.69987 watt)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2276380"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "imperial horsepower"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "英制馬力"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2276380"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of power in the Imperial system of units (745.69987 watt)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2276380"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "imperial horsepower"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "英制馬力"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17162362"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Interpretation of quantum mechanics in which consciousness is postulated to be necessary for the completion of the process of quantum measurement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Consciousness causes collapse"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "意識導致波函數塌縮"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17162362"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Interpretation of quantum mechanics in which consciousness is postulated to be necessary for the completion of the process of quantum measurement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Consciousness causes collapse"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "精神-肉体的量子问题"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17162362"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Interpretation of quantum mechanics in which consciousness is postulated to be necessary for the completion of the process of quantum measurement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Consciousness causes collapse"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "精神-肉体的量子问题"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17162362"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Interpretation of quantum mechanics in which consciousness is postulated to be necessary for the completion of the process of quantum measurement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Consciousness causes collapse"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "精神-肉體的量子問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2611270"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of wireless power transfer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2611270"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "inductive charging"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "無線充電"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q101681081"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2611270"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of wireless power transfer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2611270"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "inductive charging"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "无线充电"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q101681081"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2611270"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of wireless power transfer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2611270"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "inductive charging"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "無線充電"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q101681081"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2611270"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of wireless power transfer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2611270"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "inductive charging"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "無線充電"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q101681081"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2579914"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nonlinear variation of the Schrödinger equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1957758"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nonlinear Schrödinger equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "非線性薛丁格方程式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1957758"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2579914"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nonlinear variation of the Schrödinger equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1957758"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nonlinear Schrödinger equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "非線性薛丁格方程式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28088256"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2915446"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differs from a covalent bond in that it does not involve the sharing of electrons, but rather involves more dispersed variations of electromagnetic interactions between molecules or within a molecule"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q245031"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "noncovalent bonding"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "非共價鍵"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2915446"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differs from a covalent bond in that it does not involve the sharing of electrons, but rather involves more dispersed variations of electromagnetic interactions between molecules or within a molecule"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q245031"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "noncovalent bonding"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "非共价键"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2915446"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differs from a covalent bond in that it does not involve the sharing of electrons, but rather involves more dispersed variations of electromagnetic interactions between molecules or within a molecule"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q245031"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "noncovalent bonding"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "非共價鍵"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17105475"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interpretation of quantum mechanics which treats the state of a quantum system as the relation between the observer and the system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "relational quantum mechanics"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "關係性量子力學"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q39740697"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unreleased wireless charger by Apple"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2611270"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "AirPower"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "AirPower"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10929058"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5944865"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "integrable PDE"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1957758"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hunter–Saxton equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "亨特 - 萨克斯顿方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1957758"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5944865"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "integrable PDE"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1957758"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hunter–Saxton equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "亨特 - 萨克斯顿方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28088256"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5163228"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Interpretation of quantum mechanics based on a consistency criterion that assigns probabilities to various alternative histories of a system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "consistent histories"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "一致性历史"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8009704"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical concept"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1957758"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hitchin system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "希钦系统"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17007944"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cosmological interpretation of quantum mechanics"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "量子力学的宇宙学诠释"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1957758"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5318827"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dym equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "迪姆方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1957758"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1957758"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5318827"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dym equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "迪姆方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28088256"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1416096"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pressure inside the skull and thus in the brain tissue and cerebrospinal fluid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1416096"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "intracranial pressure"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "顱內壓"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1416096"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pressure inside the skull and thus in the brain tissue and cerebrospinal fluid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1416096"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "intracranial pressure"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "颅内压"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1416096"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pressure inside the skull and thus in the brain tissue and cerebrospinal fluid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1416096"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "intracranial pressure"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "颅内压"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1571801"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "any force that holds together the atoms making up a molecule or compound"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1571801"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "intramolecular force"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分子内作用力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q869255"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interpretation of quantum mechanics that considers the quantum state description to apply only to an ensemble of similarly prepared systems, rather than supposing that it exhaustively represents an individual physical system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ensemble interpretation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "系綜詮釋"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3144351"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q869255"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interpretation of quantum mechanics that considers the quantum state description to apply only to an ensemble of similarly prepared systems, rather than supposing that it exhaustively represents an individual physical system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ensemble interpretation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "系综诠释"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3144351"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q869255"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interpretation of quantum mechanics that considers the quantum state description to apply only to an ensemble of similarly prepared systems, rather than supposing that it exhaustively represents an individual physical system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ensemble interpretation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "系綜詮釋"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3144351"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1957758"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "property of certain dynamical systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1957758"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "integrable system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "可积系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33104303"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1957758"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "property of certain dynamical systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1957758"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "integrable system"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "可积系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33104303"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1957758"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "property of certain dynamical systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1957758"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "integrable system"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "可积系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33104303"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1957758"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "property of certain dynamical systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1957758"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "integrable system"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "可積系統"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33104303"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q650050"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fluid pressure inside the eye"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q650050"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "intraocular pressure"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "眼压"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42014143"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1218648"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum physics concepts developed by David Bohm regarding wholeness and non-locality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Implicate and explicate order"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "隐序和显序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17737"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1218648"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum physics concepts developed by David Bohm regarding wholeness and non-locality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Implicate and explicate order"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "隐序和显序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17737"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1218648"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum physics concepts developed by David Bohm regarding wholeness and non-locality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Implicate and explicate order"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "隐序和显序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17737"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1218648"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum physics concepts developed by David Bohm regarding wholeness and non-locality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Implicate and explicate order"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "隱序和顯序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17737"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899444"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interpretation of quantum mechanics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "De Broglie–Bohm theory"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "德布罗意-玻姆理论"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899444"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interpretation of quantum mechanics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "De Broglie–Bohm theory"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "德布罗意-玻姆理论"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899444"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interpretation of quantum mechanics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "De Broglie–Bohm theory"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "德布羅意-玻姆理論"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2000486"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit used to approximately quantify the bitterness of beer; 1 mg/L of iso-alpha acids"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2000486"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "International Bittering Units scale"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "國際苦度單位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q245031"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "forces of attraction or repulsion which act between neighboring particles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q245031"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "intermolecular force"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分子間作用力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q601796"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "integrable partial differential equation of a function u(t,x): uₜ + uₓₓₓ = 6uuₓ"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1957758"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Korteweg–De Vries equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "KdV方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2000486"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit used to approximately quantify the bitterness of beer; 1 mg/L of iso-alpha acids"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2000486"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "International Bittering Units scale"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "國際苦度單位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q285210"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "attractive, noncovalent interactions between aromatic rings"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q245031"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stacking"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "重疊"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q285210"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "attractive, noncovalent interactions between aromatic rings"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q245031"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stacking"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "重叠"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q285210"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "attractive, noncovalent interactions between aromatic rings"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q245031"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stacking"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "重叠"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q285210"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "attractive, noncovalent interactions between aromatic rings"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q245031"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stacking"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "重疊"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q285210"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "attractive, noncovalent interactions between aromatic rings"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q245031"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stacking"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "重疊"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of statements which attempt to explain how quantum mechanics informs our understanding of nature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interpretation of quantum mechanics"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "量子力學詮釋"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of statements which attempt to explain how quantum mechanics informs our understanding of nature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interpretation of quantum mechanics"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "量子力学诠释"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of statements which attempt to explain how quantum mechanics informs our understanding of nature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interpretation of quantum mechanics"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "量子力學詮釋"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q986786"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interpretation of quantum mechanics according to which retarded (forward in time) and advanced (backward in time) waves form a quantum interaction as a Wheeler–Feynman handshake"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transactional interpretation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "交易詮釋"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q986786"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interpretation of quantum mechanics according to which retarded (forward in time) and advanced (backward in time) waves form a quantum interaction as a Wheeler–Feynman handshake"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transactional interpretation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "交易诠释"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q986786"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interpretation of quantum mechanics according to which retarded (forward in time) and advanced (backward in time) waves form a quantum interaction as a Wheeler–Feynman handshake"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transactional interpretation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "交易詮釋"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1218648"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum physics concepts developed by David Bohm regarding wholeness and non-locality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Implicate and explicate order"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "隐序和显序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1218648"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum physics concepts developed by David Bohm regarding wholeness and non-locality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Implicate and explicate order"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "隐序和显序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1218648"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum physics concepts developed by David Bohm regarding wholeness and non-locality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Implicate and explicate order"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "隐序和显序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1218648"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum physics concepts developed by David Bohm regarding wholeness and non-locality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Implicate and explicate order"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "隱序和顯序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1218648"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum physics concepts developed by David Bohm regarding wholeness and non-locality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Implicate and explicate order"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "隐序和显序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1218648"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum physics concepts developed by David Bohm regarding wholeness and non-locality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Implicate and explicate order"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "隐序和显序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1218648"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum physics concepts developed by David Bohm regarding wholeness and non-locality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Implicate and explicate order"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "隐序和显序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1218648"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum physics concepts developed by David Bohm regarding wholeness and non-locality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Implicate and explicate order"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "隱序和顯序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899137"
+      }
+    }
+  ]
+}

@@ -1,0 +1,755 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q136464727 wd:Q23611439 wd:Q2501096 wd:Q109520099 wd:Q6167984 wd:Q1965381 wd:Q4053420 wd:Q488719 wd:Q6171412 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q136464727 wd:Q23611439 wd:Q2501096 wd:Q109520099 wd:Q6167984 wd:Q1965381 wd:Q4053420 wd:Q488719 wd:Q6171412 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q136464727 wd:Q23611439 wd:Q2501096 wd:Q109520099 wd:Q6167984 wd:Q1965381 wd:Q4053420 wd:Q488719 wd:Q6171412 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "89ec69f9a26f39d62c4f59d2f7bdfa94031df7ee3e30c136b71c67e339b0bb94",
+  "responseSha256": "cf74c269003fc58a7d5b28834ad45b5e027408c902a5a5e03f3352ce7e172cd1",
+  "retrievedAt": "2026-10-04T05:08:02.765343+00:00",
+  "license": "CC0-1.0",
+  "domain": "physics",
+  "roots": [
+    {
+      "domain": "physics",
+      "id": "Q136464727",
+      "label": "wet weight",
+      "description": "weight of a vehicle with all consumables but excluding passengers and cargo",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q23611439",
+      "label": "Wikidata property change frequency",
+      "description": "frequency with which the value of a given Wikidata property changes",
+      "parents": [
+        "Q11652"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q2501096",
+      "label": "wind turbine power",
+      "description": "",
+      "parents": [
+        "Q25342"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q109520099",
+      "label": "wind velocity",
+      "description": "",
+      "parents": [
+        "Q11465"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q6167984",
+      "label": "wino",
+      "description": "superpartner of the W boson",
+      "parents": [
+        "Q43116"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1965381",
+      "label": "working mass",
+      "description": "mass against which a system operates",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q4053420",
+      "label": "Y boson",
+      "description": "charged massive gauge boson of charge ±⅓𝑒 in grand unified theories mediating proton decay",
+      "parents": [
+        "Q43116"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q488719",
+      "label": "Z boson",
+      "description": "electrically neutral elementary particle that mediate the weak interaction Z boson",
+      "parents": [
+        "Q43116"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q6171412",
+      "label": "zino",
+      "description": "superpartner of the Z boson",
+      "parents": [
+        "Q43116"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "physics branches 801..809",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1965381"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass against which a system operates"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1965381"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "working mass"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "反作用質量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "frequency with which the value of a given Wikidata property changes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Wikidata property change frequency"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "维基数据属性更改频率"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "frequency with which the value of a given Wikidata property changes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Wikidata property change frequency"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "维基数据属性更改频率"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611288"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "value of this property is not expected to change"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "never changes"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "永不改变"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611288"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "value of this property is not expected to change"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "never changes"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "永不改变"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611288"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "value of this property is not expected to change"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "never changes"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "永不改变"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611288"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "value of this property is not expected to change"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "never changes"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "永不改變"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611288"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "value of this property is not expected to change"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "never changes"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "永不改變"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q488719"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electrically neutral elementary particle that mediate the weak interaction Z boson"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q488719"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Z boson"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Z 玻色子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611587"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the value of this property changes frequently"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "continuously changes"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "不断变化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611587"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the value of this property changes frequently"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "continuously changes"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "不断变化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611587"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the value of this property changes frequently"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "continuously changes"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "不斷更新"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611587"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the value of this property changes frequently"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "continuously changes"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "不斷更新"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24025284"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the value of this property is mostly stable, but can change from time to time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sometimes changes"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "偶爾變化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611840"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "new values of this property can be added"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "values can be added"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "可添加值"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611840"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "new values of this property can be added"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "values can be added"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "可添加值"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611840"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "new values of this property can be added"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "values can be added"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "可新增值"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611840"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "new values of this property can be added"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "values can be added"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "可新增值"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24025284"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the value of this property is mostly stable, but can change from time to time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sometimes changes"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "偶爾變化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24025284"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the value of this property is mostly stable, but can change from time to time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sometimes changes"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "偶尔变化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24025284"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the value of this property is mostly stable, but can change from time to time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sometimes changes"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "偶尔变化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24025284"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the value of this property is mostly stable, but can change from time to time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sometimes changes"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "偶爾變化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q138842903"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "values can be removed"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "可移除值"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23611439"
+      }
+    }
+  ]
+}

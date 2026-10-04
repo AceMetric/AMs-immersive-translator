@@ -1,0 +1,4143 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q121546326 wd:Q139695383 wd:Q133818885 wd:Q112935749 wd:Q126339965 wd:Q56739014 wd:Q88775728 wd:Q134260478 wd:Q2918662 wd:Q1071270 wd:Q3099089 wd:Q17092526 wd:Q8795 wd:Q81414 wd:Q104881076 wd:Q6057306 wd:Q18351985 wd:Q1671754 wd:Q2321565 wd:Q110592254 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q121546326 wd:Q139695383 wd:Q133818885 wd:Q112935749 wd:Q126339965 wd:Q56739014 wd:Q88775728 wd:Q134260478 wd:Q2918662 wd:Q1071270 wd:Q3099089 wd:Q17092526 wd:Q8795 wd:Q81414 wd:Q104881076 wd:Q6057306 wd:Q18351985 wd:Q1671754 wd:Q2321565 wd:Q110592254 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q121546326 wd:Q139695383 wd:Q133818885 wd:Q112935749 wd:Q126339965 wd:Q56739014 wd:Q88775728 wd:Q134260478 wd:Q2918662 wd:Q1071270 wd:Q3099089 wd:Q17092526 wd:Q8795 wd:Q81414 wd:Q104881076 wd:Q6057306 wd:Q18351985 wd:Q1671754 wd:Q2321565 wd:Q110592254 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "32f7001421fbbca498ca1256fe9467184aaee7af463253a322e3ec6ce9c22e98",
+  "responseSha256": "8ed3268a813d20cc4ae050432c7eddd8561ad1e367d489dc4d6700bef28a5acf",
+  "retrievedAt": "2026-10-04T05:09:01.944762+00:00",
+  "license": "CC0-1.0",
+  "domain": "cs",
+  "roots": [
+    {
+      "domain": "cs",
+      "id": "Q121546326",
+      "label": "inferred by common mappings on source and on Wikidata",
+      "description": "type of heuristic",
+      "parents": [
+        "Q201413"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q139695383",
+      "label": "inferred from capital",
+      "description": "heuristic type",
+      "parents": [
+        "Q201413"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q133818885",
+      "label": "inferred from Commons category",
+      "description": "value for P887, used for structured data on commons",
+      "parents": [
+        "Q201413"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q112935749",
+      "label": "inferred from pronunciation",
+      "description": "item for \"based on heuristic\" sourcing; where the pronunciation of a word is distinct enough to identify origin/etymology",
+      "parents": [
+        "Q201413"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q126339965",
+      "label": "inferred from regular expression match in source",
+      "description": "inferring a value based on matching a regular expression within the source document",
+      "parents": [
+        "Q201413"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q56739014",
+      "label": "infinite hidden Markov model",
+      "description": "statistical model",
+      "parents": [
+        "Q176769"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q88775728",
+      "label": "informed search algorithm",
+      "description": "type of search algorithm in which preliminary information is available (generally heuristic)",
+      "parents": [
+        "Q1981968",
+        "Q755673"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q134260478",
+      "label": "infrastructure intelligence",
+      "description": "Integration of artificial intelligence with physical infrastructure to enable real-time optimization, automation, and self-learning across energy, mobility, and smart services.",
+      "parents": [
+        "Q134267630"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q2918662",
+      "label": "input–output table",
+      "description": "",
+      "parents": [
+        "Q186152"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1071270",
+      "label": "integration by substitution",
+      "description": "method of integration",
+      "parents": [
+        "Q1934165"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q3099089",
+      "label": "intelligent character recognition",
+      "description": "computer recognition of written text",
+      "parents": [
+        "Q167555"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q17092526",
+      "label": "Interface-based programming",
+      "description": "",
+      "parents": [
+        "Q188267"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q8795",
+      "label": "Internet Protocol",
+      "description": "network-layer protocol for addressing and routing packets",
+      "parents": [
+        "Q15836568"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q81414",
+      "label": "Internet protocol suite",
+      "description": "framework for communication protocols used in IP networking",
+      "parents": [
+        "Q15836568"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q104881076",
+      "label": "Intersection Non-Emptiness Problem",
+      "description": "",
+      "parents": [
+        "Q3262192"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q6057306",
+      "label": "interval tree",
+      "description": "tree data structure",
+      "parents": [
+        "Q223655"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q18351985",
+      "label": "inversion list",
+      "description": "data structure",
+      "parents": [
+        "Q186152"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1671754",
+      "label": "inverted index",
+      "description": "specialized database index to accelerate full-text search",
+      "parents": [
+        "Q580427"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q2321565",
+      "label": "iterative numerical method",
+      "description": "numerical method in which the n-th approximation of the solution is obtained on the basis on the (n-1) previous approximations",
+      "parents": [
+        "Q24262840"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q110592254",
+      "label": "iTunes genre type",
+      "description": "",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "cs branches 281..300",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110164415"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iTunes genre type"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110592254"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iTunes Podcasts genre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "iTunes播客类型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110592254"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4736413"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iterative method for solving the Sylvester matrix equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Alternating direction implicit method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "交替方向隐式法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4736413"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iterative method for solving the Sylvester matrix equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Alternating direction implicit method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "交替方向隐式法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18327520"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Integration of artificial intelligence with physical infrastructure to enable real-time optimization, automation, and self-learning across energy, mobility, and smart services."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "infrastructure intelligence"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "基础设施智能"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q121359"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Integration of artificial intelligence with physical infrastructure to enable real-time optimization, automation, and self-learning across energy, mobility, and smart services."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "infrastructure intelligence"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "基礎設施智慧"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q121359"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Integration of artificial intelligence with physical infrastructure to enable real-time optimization, automation, and self-learning across energy, mobility, and smart services."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "infrastructure intelligence"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "基础设施智能"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134267259"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Integration of artificial intelligence with physical infrastructure to enable real-time optimization, automation, and self-learning across energy, mobility, and smart services."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "infrastructure intelligence"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "基础设施智能"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134267630"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Integration of artificial intelligence with physical infrastructure to enable real-time optimization, automation, and self-learning across energy, mobility, and smart services."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "infrastructure intelligence"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "基础设施智能"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134267724"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Integration of artificial intelligence with physical infrastructure to enable real-time optimization, automation, and self-learning across energy, mobility, and smart services."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "infrastructure intelligence"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "基礎設施智慧"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134267259"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Integration of artificial intelligence with physical infrastructure to enable real-time optimization, automation, and self-learning across energy, mobility, and smart services."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "infrastructure intelligence"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "基礎設施智慧"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134267630"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Integration of artificial intelligence with physical infrastructure to enable real-time optimization, automation, and self-learning across energy, mobility, and smart services."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "infrastructure intelligence"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "基礎設施智慧"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134267724"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5523472"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "garlic routing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "大蒜路由"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28823650"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "experimental version of the Internet Protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet Protocol version 0, IEN 2"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "網際網路通訊協定第零版互聯網實驗筆記2"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28823652"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "experimental version of the Internet Protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet Protocol version 0, IEN 26"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "網際網路通訊協定第零版互聯網實驗筆記26"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28823656"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "experimental version of the Internet Protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet Protocol version 4, IEN 41"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "網際網路通訊協定第四版互聯網實驗筆記41"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134530002"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "A coordinated system of physical and digital infrastructure elements—such as energy, mobility, communications, and real estate—managed and optimized as a unified whole, often using AI, IoT, and data platforms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Integrated Infrastructure Ecosystem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "综合基础设施生态系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q121359"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134530002"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "A coordinated system of physical and digital infrastructure elements—such as energy, mobility, communications, and real estate—managed and optimized as a unified whole, often using AI, IoT, and data platforms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Integrated Infrastructure Ecosystem"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "綜合基礎設施生態系統"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q121359"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134530002"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "A coordinated system of physical and digital infrastructure elements—such as energy, mobility, communications, and real estate—managed and optimized as a unified whole, often using AI, IoT, and data platforms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Integrated Infrastructure Ecosystem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "综合基础设施生态系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1120057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134530002"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "A coordinated system of physical and digital infrastructure elements—such as energy, mobility, communications, and real estate—managed and optimized as a unified whole, often using AI, IoT, and data platforms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Integrated Infrastructure Ecosystem"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "綜合基礎設施生態系統"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1120057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q31838568"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Newton Raphson Division"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "牛顿-拉弗森除法算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q31838568"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Newton Raphson Division"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "牛顿-拉弗森除法算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q31838568"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Newton Raphson Division"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "牛顿-拉弗森除法算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q31838568"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Newton Raphson Division"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "牛顿-拉弗森除法算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4373881"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optimization algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sequential quadratic programming"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "顺序二次规划"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Integration of artificial intelligence with physical infrastructure to enable real-time optimization, automation, and self-learning across energy, mobility, and smart services."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "infrastructure intelligence"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "基础设施智能"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Integration of artificial intelligence with physical infrastructure to enable real-time optimization, automation, and self-learning across energy, mobility, and smart services."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "infrastructure intelligence"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "基础设施智能"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11660"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Integration of artificial intelligence with physical infrastructure to enable real-time optimization, automation, and self-learning across energy, mobility, and smart services."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "infrastructure intelligence"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "基礎設施智慧"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Integration of artificial intelligence with physical infrastructure to enable real-time optimization, automation, and self-learning across energy, mobility, and smart services."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "infrastructure intelligence"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "基礎設施智慧"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11660"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16937163"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "preconditioner"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "symmetric successive over-relaxation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "对称逐次超松弛迭代法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1754327"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16937163"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "preconditioner"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "symmetric successive over-relaxation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "对称逐次超松弛迭代法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16937163"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "preconditioner"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "symmetric successive over-relaxation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "对称逐次超松弛迭代法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27868110"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134528840"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "AI-powered infrastructure platform developed by Bell, integrating energy trading, dynamic pricing, mobility services, and real-time optimization across physical assets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bell Infrastructure Platform"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "贝尔基础设施平台"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134529045"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134528840"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "AI-powered infrastructure platform developed by Bell, integrating energy trading, dynamic pricing, mobility services, and real-time optimization across physical assets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bell Infrastructure Platform"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "貝爾基礎設施平台"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134529045"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134530002"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "A coordinated system of physical and digital infrastructure elements—such as energy, mobility, communications, and real estate—managed and optimized as a unified whole, often using AI, IoT, and data platforms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Integrated Infrastructure Ecosystem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "综合基础设施生态系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q37813"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134530002"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "A coordinated system of physical and digital infrastructure elements—such as energy, mobility, communications, and real estate—managed and optimized as a unified whole, often using AI, IoT, and data platforms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134260478"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Integrated Infrastructure Ecosystem"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "綜合基礎設施生態系統"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q37813"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q56506808"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a property of iterative methods for solving differential equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "explicit method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "顯式方法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q56506809"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a property of iterative methods for solving differential equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "implicit method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "隱式方法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6094427"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "image reconstruction algorithms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iterative reconstruction"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "三维重建"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q841267"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q218533"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "statistical method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "RANSAC"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "隨機抽樣一致"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree of adoption of the IPv6 protocol on the Internet"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "IPv6"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "IPv6部署"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q830527"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q88775728"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "best-first search"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "最良优先搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q830527"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q88775728"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "best-first search"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "最良優先搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q830527"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q88775728"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "best-first search"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "最良優先搜尋"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q830527"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q88775728"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "best-first search"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "最良优先搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q88775728"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q830527"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q88775728"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "best-first search"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "最良優先搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q88775728"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q830527"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q88775728"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "best-first search"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "最良優先搜尋"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q88775728"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network-layer protocol for addressing and routing packets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "网际协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132364"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network-layer protocol for addressing and routing packets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "网际协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132364"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network-layer protocol for addressing and routing packets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "网际协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q290378"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network-layer protocol for addressing and routing packets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "网际协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q290378"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network-layer protocol for addressing and routing packets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "网际协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12579633"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network-layer protocol for addressing and routing packets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "网际协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12579633"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q338605"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "extension of Internet protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SMTP Authentication"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "SMTP验证"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network-layer protocol for addressing and routing packets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "网际协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132364"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network-layer protocol for addressing and routing packets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "網路協定"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132364"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network-layer protocol for addressing and routing packets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "网际协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q290378"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network-layer protocol for addressing and routing packets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "網路協定"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q290378"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network-layer protocol for addressing and routing packets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "网际协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12579633"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network-layer protocol for addressing and routing packets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "網路協定"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12579633"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "competitive algorithm for searching a problem space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q88775728"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "genetic algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "遗传算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "competitive algorithm for searching a problem space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q88775728"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "genetic algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "遗传算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "competitive algorithm for searching a problem space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q88775728"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "genetic algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "遗传算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "competitive algorithm for searching a problem space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q88775728"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "genetic algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "遺傳算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "competitive algorithm for searching a problem space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q88775728"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "genetic algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "遺傳演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q135803"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "wireless standard for intelligent building networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Z-Wave"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Z-Wave"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q81414"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "framework for communication protocols used in IP networking"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q81414"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet protocol suite"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "互联网协议套件"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16464"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet transition mechanism"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "6in4"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "6in4"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16464"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet transition mechanism"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "6in4"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "6in4"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12333"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16464"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet transition mechanism"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "6in4"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "6in4"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16464"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet transition mechanism"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "6in4"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "6in4"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12333"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q288600"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kaczmarz method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "卡茨馬爾茲法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q288600"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kaczmarz method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "卡茨馬爾茲法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27868110"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2918662"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2918662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "input–output table"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "投入-产出表"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2918662"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2918662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "input–output table"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "投入-产出表"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2516350"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "traffic volume"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "交通流量"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17092526"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17092526"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Interface-based programming"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "基于接口编程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1947696"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Open-source TCP/IP stack"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q81414"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lwIP"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Lwip"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q341"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2311872"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iterative method for solving systems of equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "relaxation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "松弛法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2311872"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iterative method for solving systems of equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "relaxation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "松弛法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2311872"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iterative method for solving systems of equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "relaxation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "松弛法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2311872"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iterative method for solving systems of equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "relaxation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "鬆弛法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1561270"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of solving a linear system of equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "successive over-relaxation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "逐次超松驰法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1561270"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of solving a linear system of equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "successive over-relaxation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "逐次超松驰法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1561270"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of solving a linear system of equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "successive over-relaxation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "逐次超松驰法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1561270"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of solving a linear system of equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "successive over-relaxation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "逐次超鬆馳法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1561270"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of solving a linear system of equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "successive over-relaxation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "逐次超松驰法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27868110"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1561270"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of solving a linear system of equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "successive over-relaxation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "逐次超松驰法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27868110"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1561270"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of solving a linear system of equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "successive over-relaxation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "逐次超松驰法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27868110"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1561270"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of solving a linear system of equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "successive over-relaxation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "逐次超鬆馳法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27868110"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1165964"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "routing protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Intermediate System to Intermediate System"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "中间系统到中间系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1165964"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "routing protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Intermediate System to Intermediate System"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "中间系统到中间系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1165964"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "routing protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Intermediate System to Intermediate System"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "中间系统到中间系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1165964"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "routing protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Intermediate System to Intermediate System"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "中間系統到中間系統"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1165964"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "routing protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Intermediate System to Intermediate System"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "中間系統到中間系統"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1671754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "specialized database index to accelerate full-text search"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1671754"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "inverted index"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "倒排索引"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1071270"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of integration"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1071270"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "integration by substitution"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "换元积分法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4291933"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1071270"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of integration"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1071270"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "integration by substitution"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "换元积分法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4291933"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1071270"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of integration"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1071270"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "integration by substitution"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "換元積分法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4291933"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2042663"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "short-lived transport protocol port for IP communications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ephemeral port"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "临时端口"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q858321"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1947696"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Open-source TCP/IP stack"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q81414"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lwIP"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Lwip"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q81414"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical method in which the n-th approximation of the solution is obtained on the basis on the (n-1) previous approximations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iterative numerical method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "迭代法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical method in which the n-th approximation of the solution is obtained on the basis on the (n-1) previous approximations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iterative numerical method"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "迭代法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical method in which the n-th approximation of the solution is obtained on the basis on the (n-1) previous approximations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iterative numerical method"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "迭代法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical method in which the n-th approximation of the solution is obtained on the basis on the (n-1) previous approximations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iterative numerical method"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "疊代法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1165964"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "routing protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Intermediate System to Intermediate System"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "中间系统到中间系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1648707"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1165964"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "routing protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Intermediate System to Intermediate System"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "中间系统到中间系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1648707"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1165964"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "routing protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Intermediate System to Intermediate System"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "中间系统到中间系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1648707"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1165964"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "routing protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Intermediate System to Intermediate System"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "中間系統到中間系統"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1648707"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1165964"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "routing protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Intermediate System to Intermediate System"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "中間系統到中間系統"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1648707"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1165964"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "routing protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Intermediate System to Intermediate System"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "中间系统到中间系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15087423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1165964"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "routing protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Intermediate System to Intermediate System"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "中间系统到中间系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15087423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1165964"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "routing protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Intermediate System to Intermediate System"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "中间系统到中间系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15087423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1165964"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "routing protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Intermediate System to Intermediate System"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "中間系統到中間系統"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15087423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1165964"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "routing protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Intermediate System to Intermediate System"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "中間系統到中間系統"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15087423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1342337"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "encapsulation of the Internet Protocol designed to work over serial ports and modem connections"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Serial Line Internet Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "串行线路IP协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1342337"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "encapsulation of the Internet Protocol designed to work over serial ports and modem connections"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Serial Line Internet Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "串行线路IP协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1342337"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "encapsulation of the Internet Protocol designed to work over serial ports and modem connections"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Serial Line Internet Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "串列線路IP協定"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1342337"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "encapsulation of the Internet Protocol designed to work over serial ports and modem connections"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Serial Line Internet Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "串列線路IP協議"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1030759"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "root-finding algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fixed-point iteration"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "定點迭代"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1085860"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1030759"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "root-finding algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fixed-point iteration"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "定点迭代法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1085860"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1030759"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "root-finding algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fixed-point iteration"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "定点迭代法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1085860"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1030759"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "root-finding algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fixed-point iteration"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "定點迭代法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1085860"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1030759"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "root-finding algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fixed-point iteration"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "定點迭代"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1030759"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "root-finding algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fixed-point iteration"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "定点迭代法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1030759"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "root-finding algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fixed-point iteration"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "定点迭代法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1030759"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "root-finding algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fixed-point iteration"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "定點迭代法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1135009"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trademark for network-based product"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Digital Addressable Lighting Interface"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "數位可定址照明介面協定"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1135009"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trademark for network-based product"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Digital Addressable Lighting Interface"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "Digital Addressable Lighting Interface [edit]"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8795"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1868524"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method for problem solving in optimization"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q88775728"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "local search"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "局部搜索"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1199743"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optimization algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gradient descent"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "梯度下降法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1199743"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optimization algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gradient descent"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "梯度下降法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1199743"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optimization algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gradient descent"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "梯度下降法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1199743"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optimization algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gradient descent"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "梯度下降法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835765"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1199743"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optimization algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gradient descent"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "梯度下降法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835765"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1199743"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optimization algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gradient descent"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "梯度下降法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835765"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1069090"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iterative method used to solve a linear system of equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Gauss–Seidel method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "高斯-赛德尔迭代"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1069090"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iterative method used to solve a linear system of equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Gauss–Seidel method"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "高斯-賽德爾疊代法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1069090"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iterative method used to solve a linear system of equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Gauss–Seidel method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "高斯-赛德尔迭代"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27868110"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1069090"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iterative method used to solve a linear system of equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Gauss–Seidel method"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "高斯-賽德爾疊代法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27868110"
+      }
+    }
+  ]
+}

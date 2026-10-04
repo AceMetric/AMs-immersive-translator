@@ -1,5 +1,5 @@
 import { cacheGet, cachePut, clearJobs, deleteJob, getUserTerms, pendingJobs, putJob, sha256, getMeta, putMeta, appendDiagnostic, reserveQuota, deleteMetaPrefix } from './db';
-import { findTerms, inferDomain, lockTerms, mergeTerms, validateTerm } from './glossary';
+import { findTerms, inferDomain, lockTerms, mergeTerms, resolveStoredTerms, validateTerm } from './glossary';
 import { callModel, ProviderError,QuotaError,configureProviderRuntime,withRetry } from './providers';
 import {fastRequest,fastPrompt,preciseRequest,precisePrompt,polishPrompt,polishTranslation,translateRequest,recoverProtectedParagraph} from './translation-call';
 import {analysisSample,generationBudget,fitsContext,contextLimit,outputBudget,estimateTokens} from './budget';
@@ -25,13 +25,21 @@ const circuit=new RefinementCircuit(),versions=new Map<string,string>();
 const remembered=new Map<string,Job>();
 const valid=(job:Job)=>!cancelled.has(job.sessionId)&&(!job.configVersion||versions.get(profile(job).id)===job.configVersion);
 const event=(job:Job,type:EngineEvent['type'],extra:Partial<EngineEvent>={})=>emit({type,jobId:job.originJobId??job.id,tabId:job.tabId,sessionId:job.sessionId,epoch:job.epoch,...extra});
-const allTerms=async(session:string,domain:Domain)=>mergeTerms(enrichTerms(await loadPack('core',domain)),articleTerms.get(session)??[],users);
+const allTerms=async(session:string,domain:Domain)=>{
+  const core=enrichTerms(await loadPack('core',domain));
+  const legacyCandidates=users.some(t=>t.quality==='user'&&t.updatedAt===undefined&&t.id.startsWith('wd-'))?await loadPack('extended',domain):[];
+  return mergeTerms(core,articleTerms.get(session)??[],resolveStoredTerms([...core,...legacyCandidates],users).filter(t=>t.quality!=='candidate'));
+};
+const candidateTerms=async(domain:Domain)=>{
+  const base=await loadPack('extended',domain);
+  return mergeTerms(base,resolveStoredTerms(base,users).filter(t=>t.quality==='candidate'));
+};
 async function translate(job:Job,signal:AbortSignal):Promise<Translation[]> {
   const p={...profile(job)};
   const domain=job.domain==='auto'?inferDomain(`${job.context.title} ${job.context.abstract} ${job.context.heading} ${job.segments.map(s=>s.text).join(' ')}`):job.domain;
   const terms=await allTerms(job.sessionId,domain);const precise=job.qualityMode==='precise';const neighbor=precise?1600:400;
   const prepared=job.segments.map(s=>{const canonical=canonicalize(s.text);const ctx=s.context??job.context;return {segment:s,canonical,...lockTerms(canonical.text,terms,domain,String(s.order),`${ctx.title} ${ctx.abstract} ${ctx.heading} ${ctx.before} ${ctx.after}`)};});
-  const candidates=precise?await loadPack('extended',domain):[];
+  const candidates=precise?await candidateTerms(domain):[];
   const localRequest=(entry:typeof prepared[number],scale=1)=>{
     const ctx=entry.segment.context??job.context;
     const readonly:Record<string,string>={};
@@ -59,7 +67,7 @@ async function translate(job:Job,signal:AbortSignal):Promise<Translation[]> {
   for(const item of prepared){const ctx=item.segment.context??job.context;const key=await sha256(stableJSON({version:4,text:item.text,profile:{...p,preciseThinking:p.preciseThinking===true,precisionPolish:undefined},mode:job.mode,quality:job.qualityMode,domain,terms:item.terms.map(t=>[t.source,t.target,t.sense,t.definition]),context:JSON.parse(localRequest(item).user),graph:settings.glossaryGraph,prompt:precise?precisePrompt:fastPrompt}));keys.set(item.segment.id,key);const cached=await cacheGet(key);if(cached!==undefined)await deliver({id:item.segment.id,text:cached},true);else misses.push(item);}
 
   if(misses.length){
-    const glossary=findTerms(misses.map(s=>s.segment.text).join('\n'),await loadPack('extended',domain),domain,true).slice(0,40).map(m=>({source:m.term.source,target:m.term.target,sense:m.term.sense,candidate:true}));
+    const glossary=findTerms(misses.map(s=>s.segment.text).join('\n'),await candidateTerms(domain),domain,true).slice(0,40).map(m=>({source:m.term.source,target:m.term.target,sense:m.term.sense,candidate:true}));
     const run=async(items:typeof prepared):Promise<{id:string;text:string}[]>=> {
       const ctx=Object.fromEntries(Object.entries(job.context).map(([k,v])=>[k,cleanContext(v)])) as Job['context'];
       const wire=items.map((x,i)=>({id:'s'+i,text:x.text}));

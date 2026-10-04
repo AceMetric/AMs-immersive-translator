@@ -1,0 +1,1331 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q18732735 wd:Q131314471 wd:Q898533 wd:Q1228981 wd:Q105495868 wd:Q1140289 wd:Q7140491 wd:Q336894 wd:Q1588477 wd:Q1068172 wd:Q1687697 wd:Q106577624 wd:Q105488366 wd:Q788017 wd:Q12362272 wd:Q4010521 wd:Q133673 wd:Q260761 wd:Q736716 wd:Q2864210 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q18732735 wd:Q131314471 wd:Q898533 wd:Q1228981 wd:Q105495868 wd:Q1140289 wd:Q7140491 wd:Q336894 wd:Q1588477 wd:Q1068172 wd:Q1687697 wd:Q106577624 wd:Q105488366 wd:Q788017 wd:Q12362272 wd:Q4010521 wd:Q133673 wd:Q260761 wd:Q736716 wd:Q2864210 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q18732735 wd:Q131314471 wd:Q898533 wd:Q1228981 wd:Q105495868 wd:Q1140289 wd:Q7140491 wd:Q336894 wd:Q1588477 wd:Q1068172 wd:Q1687697 wd:Q106577624 wd:Q105488366 wd:Q788017 wd:Q12362272 wd:Q4010521 wd:Q133673 wd:Q260761 wd:Q736716 wd:Q2864210 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "29c3b3d942155370f5843f1a2925a0b6101844d6f4ec842aa04a1cd88bd0fafa",
+  "responseSha256": "74c92e024dbd47957a3f8946f01ab2d2a1baf2bd518db56d6cc1b998a588caa7",
+  "retrievedAt": "2026-10-04T05:06:14.958122+00:00",
+  "license": "CC0-1.0",
+  "domain": "physics",
+  "roots": [
+    {
+      "domain": "physics",
+      "id": "Q18732735",
+      "label": "smuon",
+      "description": "superpartner of a muon",
+      "parents": [
+        "Q43116"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q131314471",
+      "label": "social acceleration",
+      "description": "sociological concept",
+      "parents": [
+        "Q11376"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q898533",
+      "label": "sorption",
+      "description": "physical and chemical process by which one substance becomes attached to another",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1228981",
+      "label": "sound event",
+      "description": "",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q105495868",
+      "label": "sound frequency",
+      "description": "reciprocal of the sound period",
+      "parents": [
+        "Q11652"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1140289",
+      "label": "sound intensity",
+      "description": "instantaneous product of sound pressure and particle velocity",
+      "parents": [
+        "Q1061524"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q7140491",
+      "label": "sound particle acceleration",
+      "description": "instantaneous acceleration of a sound particle",
+      "parents": [
+        "Q11376"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q336894",
+      "label": "sound particle velocity",
+      "description": "time derivative of the sound particle displacement",
+      "parents": [
+        "Q11465"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1588477",
+      "label": "sound power",
+      "description": "surface integral over the sound intensity",
+      "parents": [
+        "Q25342"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1068172",
+      "label": "sound pressure",
+      "description": "local pressure deviation from the ambient atmospheric pressure, caused by a sound wave",
+      "parents": [
+        "Q39552"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1687697",
+      "label": "sound propagation",
+      "description": "transmission of audio waves",
+      "parents": [
+        "Q1758425"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q106577624",
+      "label": "sound wave velocity",
+      "description": "vector quantity",
+      "parents": [
+        "Q11465"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q105488366",
+      "label": "sound wavelength",
+      "description": "wavelength of a sound wave",
+      "parents": [
+        "Q41364"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q788017",
+      "label": "spaghettification",
+      "description": "term in astrophysics; stretching of an object into long thin shapes in a strong non-homogeneous gravitational field",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q12362272",
+      "label": "specific pressure",
+      "description": "",
+      "parents": [
+        "Q39552"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q4010521",
+      "label": "Specific relative angular momentum",
+      "description": "vector quantity in celestial mechanics",
+      "parents": [
+        "Q161254"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q133673",
+      "label": "spin",
+      "description": "intrinsic form of angular momentum as a property of quantum particles",
+      "parents": [
+        "Q161254"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q260761",
+      "label": "spin-flip",
+      "description": "phenomenon where the spin axis of a rotating black hole suddenly changes from absorption of a second black hole",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q736716",
+      "label": "spontaneous symmetry breaking",
+      "description": "physical phenomenon in which the vacuum expectation value of a field is not invariant under a symmetry of the action, so that a symmetry present at high temperatures is broken at low temperatures",
+      "parents": [
+        "Q903282"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q2864210",
+      "label": "spraying",
+      "description": "dispersion of liquids",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "physics branches 461..480",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q336894"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "time derivative of the sound particle displacement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q336894"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sound particle velocity"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "粒子速度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q736716"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical phenomenon in which the vacuum expectation value of a field is not invariant under a symmetry of the action, so that a symmetry present at high temperatures is broken at low temperatures"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q736716"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spontaneous symmetry breaking"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "自发对称性破缺"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q736716"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical phenomenon in which the vacuum expectation value of a field is not invariant under a symmetry of the action, so that a symmetry present at high temperatures is broken at low temperatures"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q736716"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spontaneous symmetry breaking"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "自发对称性破缺"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q736716"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical phenomenon in which the vacuum expectation value of a field is not invariant under a symmetry of the action, so that a symmetry present at high temperatures is broken at low temperatures"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q736716"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spontaneous symmetry breaking"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "自發對稱性破缺"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q133673"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "intrinsic form of angular momentum as a property of quantum particles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q133673"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "自旋"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33104303"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q133673"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "intrinsic form of angular momentum as a property of quantum particles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q133673"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spin"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "自旋"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33104303"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q133673"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "intrinsic form of angular momentum as a property of quantum particles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q133673"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spin"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "自旋"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33104303"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q133673"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "intrinsic form of angular momentum as a property of quantum particles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q133673"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spin"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "自旋"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33104303"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q133673"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "intrinsic form of angular momentum as a property of quantum particles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q133673"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spin"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "自旋"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33104303"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q332828"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical or chemical process"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q898533"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "absorption"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "吸收"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87196290"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q332828"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical or chemical process"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q898533"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "absorption"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "吸收"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q100724091"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q788017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "term in astrophysics; stretching of an object into long thin shapes in a strong non-homogeneous gravitational field"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q788017"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spaghettification"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "麵條化"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q788017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "term in astrophysics; stretching of an object into long thin shapes in a strong non-homogeneous gravitational field"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q788017"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spaghettification"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "面条化"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q788017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "term in astrophysics; stretching of an object into long thin shapes in a strong non-homogeneous gravitational field"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q788017"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spaghettification"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "麵條化"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q180254"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "adhesion of atoms, ions, or molecules from a substance to a surface"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q898533"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "adsorption"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "吸附"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q180254"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "adhesion of atoms, ions, or molecules from a substance to a surface"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q898533"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "adsorption"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "吸附"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q180254"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "adhesion of atoms, ions, or molecules from a substance to a surface"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q898533"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "adsorption"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "吸附"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q180254"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "adhesion of atoms, ions, or molecules from a substance to a surface"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q898533"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "adsorption"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "吸附"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q180254"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "adhesion of atoms, ions, or molecules from a substance to a surface"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q898533"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "adsorption"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "吸附"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q260761"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "phenomenon where the spin axis of a rotating black hole suddenly changes from absorption of a second black hole"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q260761"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spin-flip"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "自旋翻轉"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q898533"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q900464"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sorption isotherm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "收附等温线"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q898533"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q900464"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sorption isotherm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "收附等温线"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q898533"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q900464"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sorption isotherm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "收附等溫線"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q898533"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical and chemical process by which one substance becomes attached to another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q898533"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sorption"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "吸附"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131314471"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sociological concept"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131314471"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "social acceleration"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "社会加速"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33104129"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5319045"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spontaneous symmetry breaking due to quantum corrections"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q736716"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dynamical symmetry breaking"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "动力学对称性破缺"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1140289"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "instantaneous product of sound pressure and particle velocity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1140289"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sound intensity"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "音强"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5101837"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "phenomenon in particle physics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q736716"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "chiral symmetry breaking"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "手徵對稱性破缺"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q736716"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7140491"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "instantaneous acceleration of a sound particle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7140491"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sound particle acceleration"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "粒子加速度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4010521"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vector quantity in celestial mechanics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4010521"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Specific relative angular momentum"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "比角动量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66591985"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3941838"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "phenomenon in which a hypothesized supersymmetry at high energy scales is spontaneously broken at low energy scales"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q736716"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "supersymmetry breaking"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "超對稱破缺"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10947878"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Japanese Kanji sound"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1228981"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sō-on"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "宋音"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1228981"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1588477"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "surface integral over the sound intensity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1588477"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sound power"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "声能通量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1588477"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "surface integral over the sound intensity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1588477"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sound power"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "声能通量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1588477"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "surface integral over the sound intensity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1588477"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sound power"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "声能通量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1588477"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "surface integral over the sound intensity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1588477"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sound power"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "聲能通量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1331774"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lowest frequency of a periodic waveform, such as sound"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105495868"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fundamental frequency"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "基本頻率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105495868"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1331774"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lowest frequency of a periodic waveform, such as sound"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105495868"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fundamental frequency"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "基本频率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105495868"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1331774"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lowest frequency of a periodic waveform, such as sound"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105495868"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fundamental frequency"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "基本頻率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105495868"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1068172"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "local pressure deviation from the ambient atmospheric pressure, caused by a sound wave"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1068172"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sound pressure"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "声压"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1068172"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "local pressure deviation from the ambient atmospheric pressure, caused by a sound wave"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1068172"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sound pressure"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "声压"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1068172"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "local pressure deviation from the ambient atmospheric pressure, caused by a sound wave"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1068172"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sound pressure"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "聲壓"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6026475"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spraying the inside of dwellings with an insecticide to kill mosquitoes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2864210"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "indoor residual spraying"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "室內殘留噴灑"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1939 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q7310003 wd:Q8187203 wd:Q1376323 wd:Q110591969 wd:Q2821580 wd:Q7312194 wd:Q118414970 wd:Q110558361 wd:Q1369335 wd:Q754250 wd:Q1097654 wd:Q96941619 wd:Q2880612 wd:Q108067970 wd:Q1283196 wd:Q30338278 wd:Q1256787 wd:Q1413596 wd:Q633130 wd:Q333746 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q7310003 wd:Q8187203 wd:Q1376323 wd:Q110591969 wd:Q2821580 wd:Q7312194 wd:Q118414970 wd:Q110558361 wd:Q1369335 wd:Q754250 wd:Q1097654 wd:Q96941619 wd:Q2880612 wd:Q108067970 wd:Q1283196 wd:Q30338278 wd:Q1256787 wd:Q1413596 wd:Q633130 wd:Q333746 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q7310003 wd:Q8187203 wd:Q1376323 wd:Q110591969 wd:Q2821580 wd:Q7312194 wd:Q118414970 wd:Q110558361 wd:Q1369335 wd:Q754250 wd:Q1097654 wd:Q96941619 wd:Q2880612 wd:Q108067970 wd:Q1283196 wd:Q30338278 wd:Q1256787 wd:Q1413596 wd:Q633130 wd:Q333746 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "81e1c469f52dd23dc931c787dfba8fec1ad2f3d9b27ca1d085d1bfa5f12c7548",
+  "responseSha256": "66a340f8f75aa6b56475692527703d64d768c904f8c8a331ad930120dbdf8445",
+  "retrievedAt": "2026-10-04T05:06:06.670054+00:00",
+  "license": "CC0-1.0",
+  "domain": "physics",
+  "roots": [
+    {
+      "domain": "physics",
+      "id": "Q7310003",
+      "label": "Reid vapor pressure",
+      "description": "Measure of the volatility of gasoline and other petroleum products",
+      "parents": [
+        "Q39552"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q8187203",
+      "label": "relative acceleration",
+      "description": "",
+      "parents": [
+        "Q11376"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1376323",
+      "label": "relative velocity",
+      "description": "velocity of an object or observer B in the rest frame of another object or observer A",
+      "parents": [
+        "Q11465"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q110591969",
+      "label": "relative weight",
+      "description": "relative quality for weight",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q2821580",
+      "label": "relativistic aberration",
+      "description": "the distortion of light at high velocities",
+      "parents": [
+        "Q639"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q7312194",
+      "label": "Removal units",
+      "description": "tradable allowance to emit greenhouse gases",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q118414970",
+      "label": "repulsive force",
+      "description": "force exerted between two objects tending to accelerate them apart",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q110558361",
+      "label": "resistance force",
+      "description": "force applied by an item in reaction to an applied force",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1369335",
+      "label": "resonance frequency",
+      "description": "type of frequency",
+      "parents": [
+        "Q11652"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q754250",
+      "label": "respiratory rate",
+      "description": "breathing frequency; rate at which breathing occurs. This is usually measured in breaths per minute",
+      "parents": [
+        "Q11652"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1097654",
+      "label": "rest mass",
+      "description": "mass of a physical system independent of its motion; equals its total mass when at rest",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q96941619",
+      "label": "rest mass",
+      "description": "mass of a particle at rest in an intertial frame",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q2880612",
+      "label": "resultant force",
+      "description": "Static equivalence of systems of forces and moments",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q108067970",
+      "label": "RMS electric current",
+      "description": "root-mean-square value of a periodical time-varying electric current",
+      "parents": [
+        "Q29996"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1283196",
+      "label": "root pressure",
+      "description": "transverse osmotic pressure within the cells of a root system",
+      "parents": [
+        "Q39552"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q30338278",
+      "label": "rotational frequency",
+      "description": "rate of change of the rotation",
+      "parents": [
+        "Q11652"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1256787",
+      "label": "rotational speed",
+      "description": "physical quantity",
+      "parents": [
+        "Q11652"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1413596",
+      "label": "rub",
+      "description": "physical process",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q633130",
+      "label": "Rubber bushing",
+      "description": "bushing",
+      "parents": [
+        "Q1454986"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q333746",
+      "label": "sampling rate",
+      "description": "term in communications theory",
+      "parents": [
+        "Q11652"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "physics branches 421..440",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11392621"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rotational speed of an engine when it is idling"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1256787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "idle speed"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "怠速"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11392621"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rotational speed of an engine when it is idling"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1256787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "idle speed"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "怠速"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11392621"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rotational speed of an engine when it is idling"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1256787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "idle speed"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "怠速"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110558361"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force applied by an item in reaction to an applied force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110558361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "resistance force"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "阻力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10545201"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proportion of the difference between the actual speed of the asynchronous motor and the synchronous speed to the synchronous speed"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1256787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "slip"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "转差率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1924249"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7310003"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Measure of the volatility of gasoline and other petroleum products"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7310003"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Reid vapor pressure"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "瑞德蒸氣壓"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18120378"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1256787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical quantity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1256787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rotational speed"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "轉速"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1256787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical quantity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1256787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rotational speed"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "转速"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6273772"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "twice the bandwidth of a bandlimited function or channel"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q333746"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Nyquist rate"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "奈奎斯特速率"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1283196"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transverse osmotic pressure within the cells of a root system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1283196"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "root pressure"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "根压"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q914921"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force resisting the motion when a body (such as a ball, tire, or wheel) rolls on a surface"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110558361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rolling resistance"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "滚动阻力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q914921"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force resisting the motion when a body (such as a ball, tire, or wheel) rolls on a surface"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110558361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rolling resistance"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "滚动阻力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1376323"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "velocity of an object or observer B in the rest frame of another object or observer A"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1376323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "relative velocity"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "相對速度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1376323"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "velocity of an object or observer B in the rest frame of another object or observer A"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1376323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "relative velocity"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "相对速度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1376323"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "velocity of an object or observer B in the rest frame of another object or observer A"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1376323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "relative velocity"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "相對速度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1097654"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a physical system independent of its motion; equals its total mass when at rest"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1097654"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rest mass"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "不变质量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1369335"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of frequency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1369335"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "resonance frequency"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "谐振频率"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1369335"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of frequency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1369335"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "resonance frequency"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "谐振频率"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1369335"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of frequency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1369335"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "resonance frequency"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "谐振频率"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1369335"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of frequency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1369335"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "resonance frequency"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "諧振頻率"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3814108"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a stationary electron"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96941619"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron mass"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "電子靜止質量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q173227"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3814108"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a stationary electron"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96941619"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron mass"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "电子静质量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q173227"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3814108"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a stationary electron"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96941619"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron mass"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "电子静质量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q173227"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3814108"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a stationary electron"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96941619"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron mass"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "電子靜質量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q173227"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3814108"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a stationary electron"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96941619"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron mass"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "電子靜止質量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3647172"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3814108"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a stationary electron"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96941619"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron mass"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "电子静质量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3647172"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3814108"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a stationary electron"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96941619"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron mass"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "电子静质量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3647172"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3814108"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a stationary electron"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96941619"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron mass"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "電子靜質量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3647172"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3814108"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a stationary electron"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96941619"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron mass"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "電子靜止質量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q83155724"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3814108"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a stationary electron"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96941619"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron mass"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "电子静质量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q83155724"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3814108"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a stationary electron"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96941619"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron mass"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "电子静质量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q83155724"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3814108"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a stationary electron"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96941619"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron mass"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "電子靜質量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q83155724"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3814108"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a stationary electron"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96941619"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron mass"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "電子靜止質量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96941619"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3814108"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a stationary electron"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96941619"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron mass"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "电子静质量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96941619"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3814108"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a stationary electron"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96941619"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron mass"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "电子静质量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96941619"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3814108"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a stationary electron"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96941619"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron mass"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "電子靜質量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96941619"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2880612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Static equivalence of systems of forces and moments"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2880612"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "resultant force"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "合力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q754250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "breathing frequency; rate at which breathing occurs. This is usually measured in breaths per minute"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q754250"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "respiratory rate"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "呼吸率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42014143"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q754250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "breathing frequency; rate at which breathing occurs. This is usually measured in breaths per minute"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q754250"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "respiratory rate"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "呼吸率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42014143"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q754250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "breathing frequency; rate at which breathing occurs. This is usually measured in breaths per minute"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q754250"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "respiratory rate"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "呼吸率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42014143"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q754250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "breathing frequency; rate at which breathing occurs. This is usually measured in breaths per minute"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q754250"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "respiratory rate"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "呼吸率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42014143"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q754250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "breathing frequency; rate at which breathing occurs. This is usually measured in breaths per minute"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q754250"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "respiratory rate"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "呼吸率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42014143"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q206621"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "retarding force on a body moving in a fluid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110558361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "drag"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "阻力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q206621"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "retarding force on a body moving in a fluid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110558361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "drag"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "阻力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q206621"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "retarding force on a body moving in a fluid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110558361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "drag"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "阻力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q206621"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "retarding force on a body moving in a fluid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110558361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "drag"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "阻力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q333746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "term in communications theory"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q333746"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sampling rate"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "取樣率"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q742924"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cycling term; number of revolutions of the crank per minute"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1256787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cadence"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "踏頻"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q90133499"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q742924"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cycling term; number of revolutions of the crank per minute"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1256787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cadence"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Cadence (单车)"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q90133499"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q742924"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cycling term; number of revolutions of the crank per minute"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1256787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cadence"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Cadence (單車)"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q90133499"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q633130"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bushing"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q633130"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Rubber bushing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "橡胶衬套"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q633130"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bushing"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q633130"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Rubber bushing"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "震荡减振器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q633130"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bushing"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q633130"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Rubber bushing"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "震盪減振器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q333746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "term in communications theory"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q333746"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sampling rate"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "采样率"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128709"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "resistance of a fluid to shear deformation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110558361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "viscosity"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "黏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5725005"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128709"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "resistance of a fluid to shear deformation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110558361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "viscosity"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "黏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5725005"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128709"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "resistance of a fluid to shear deformation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110558361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "viscosity"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "黏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5725005"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128709"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "resistance of a fluid to shear deformation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110558361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "viscosity"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "黏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5725005"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128709"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "resistance of a fluid to shear deformation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110558361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "viscosity"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "黏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5725005"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q333746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "term in communications theory"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q333746"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sampling rate"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "采样率"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q333746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "term in communications theory"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q333746"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sampling rate"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "采样率"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q206621"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "retarding force on a body moving in a fluid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110558361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "drag"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "阻力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82580"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force resisting the relative motion of solid surfaces, fluid layers, and material elements sliding against each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110558361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "friction"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "摩擦力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82580"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force resisting the relative motion of solid surfaces, fluid layers, and material elements sliding against each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110558361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "friction"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "摩擦力"
+      }
+    }
+  ]
+}

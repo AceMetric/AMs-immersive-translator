@@ -1,0 +1,5368 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q5244743 wd:Q1048111 wd:Q12307971 wd:Q5251660 wd:Q9206047 wd:Q1191713 wd:Q3550844 wd:Q3492162 wd:Q2994934 wd:Q1618549 wd:Q55609660 wd:Q5282315 wd:Q590051 wd:Q5636358 wd:Q906277 wd:Q29477802 wd:Q186634 wd:Q305050 wd:Q18481576 wd:Q6745 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q5244743 wd:Q1048111 wd:Q12307971 wd:Q5251660 wd:Q9206047 wd:Q1191713 wd:Q3550844 wd:Q3492162 wd:Q2994934 wd:Q1618549 wd:Q55609660 wd:Q5282315 wd:Q590051 wd:Q5636358 wd:Q906277 wd:Q29477802 wd:Q186634 wd:Q305050 wd:Q18481576 wd:Q6745 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q5244743 wd:Q1048111 wd:Q12307971 wd:Q5251660 wd:Q9206047 wd:Q1191713 wd:Q3550844 wd:Q3492162 wd:Q2994934 wd:Q1618549 wd:Q55609660 wd:Q5282315 wd:Q590051 wd:Q5636358 wd:Q906277 wd:Q29477802 wd:Q186634 wd:Q305050 wd:Q18481576 wd:Q6745 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "9dfee037b8c0f689b6507110afcdda53d6c6719105931e8589daf8f165038105",
+  "responseSha256": "374c621c0b8c6662ebcf273d6b24c2a902f2245d4bd2f8a622fe3a13c306b108",
+  "retrievedAt": "2026-10-04T05:04:51.904956+00:00",
+  "license": "CC0-1.0",
+  "domain": "physics",
+  "roots": [
+    {
+      "domain": "physics",
+      "id": "Q5244743",
+      "label": "de Sitter invariant special relativity",
+      "description": "physics theory in which local spacetime symmetry is the de Sitter group, not the Poincaré group",
+      "parents": [
+        "Q9357058"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1048111",
+      "label": "decay mode",
+      "description": "one of the possible spontaneous processes that an unstable nucleus can expose",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q12307971",
+      "label": "deceleration",
+      "description": "acceleration contrary to an object's direction of motion, slowing it down",
+      "parents": [
+        "Q11376"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q5251660",
+      "label": "defocus aberration",
+      "description": "quality of an image being out of focus",
+      "parents": [
+        "Q639"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q9206047",
+      "label": "deorbit",
+      "description": "act of a spacecraft to deliberately leave orbit",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1191713",
+      "label": "deposition",
+      "description": "process by which aerosol particles collect or deposit themselves on solid surfaces",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q3550844",
+      "label": "derived unit",
+      "description": "",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q3492162",
+      "label": "design speed",
+      "description": "tool to determine geometric features of a new road",
+      "parents": [
+        "Q11465"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q2994934",
+      "label": "dimensionless physical constant",
+      "description": "physical constant with no units",
+      "parents": [
+        "Q173227"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1618549",
+      "label": "dimensionless unit",
+      "description": "in physical quantity, the unit without dimension (no length, no time, ...)",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q55609660",
+      "label": "Dirac matter",
+      "description": "condensed matter system effectively described by the Dirac equation",
+      "parents": [
+        "Q1454986"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q5282315",
+      "label": "Disk loading",
+      "description": "characteristic of rotors/propellers",
+      "parents": [
+        "Q39552"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q590051",
+      "label": "dispersion relation",
+      "description": "relation of wavelength/wavenumber as a function of a wave's frequency",
+      "parents": [
+        "Q1758425"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q5636358",
+      "label": "displacement",
+      "description": "ship's weight",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q906277",
+      "label": "dissipative force",
+      "description": "",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q29477802",
+      "label": "dissipative process",
+      "description": "process in which energy (internal, bulk flow kinetic, or system potential) is transformed from some initial form to some final form (the capacity of the final form to do mechanical work is less than that of the initial form)",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q186634",
+      "label": "distortion",
+      "description": "deviation from rectilinear projection (optics)",
+      "parents": [
+        "Q639"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q305050",
+      "label": "dominant wavelength",
+      "description": "any monochromatic spectral light that evokes the corresponding opposite perception of hue",
+      "parents": [
+        "Q41364"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q18481576",
+      "label": "down antiquark",
+      "description": "antiparticle of the down quark",
+      "parents": [
+        "Q43116"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q6745",
+      "label": "down quark",
+      "description": "down type of quark",
+      "parents": [
+        "Q43116"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "physics branches 121..140",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33680"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of angular measure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radian"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "弧度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33680"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of angular measure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radian"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "弧度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13587321"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33680"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of angular measure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radian"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "弧度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33680"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of angular measure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radian"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "弧度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047053"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11229"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dimensionless unit equivalent to 0.01"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "percent"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "百分比"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27084"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11229"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dimensionless unit equivalent to 0.01"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "percent"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "百分比"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27084"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6745"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "down type of quark"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6745"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "down quark"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "下夸克"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11229"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dimensionless unit equivalent to 0.01"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "percent"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "百分比"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11229"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dimensionless unit equivalent to 0.01"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "percent"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "百分比"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11229"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dimensionless unit equivalent to 0.01"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "percent"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "百分比"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11229"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dimensionless unit equivalent to 0.01"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "percent"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "百分比"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30082620"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measurement of mass of a watercraft, when manned and equipped but without fuel"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard displacement"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "标准排水量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12453"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104439342"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "portion of food that is cut or which occurs as particularly flat or narrow pieces"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "slice"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "片"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104439342"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "portion of food that is cut or which occurs as particularly flat or narrow pieces"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "slice"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "片"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2360980"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104439342"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "portion of food that is cut or which occurs as particularly flat or narrow pieces"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "slice"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "片"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q78754808"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30082647"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a vessel with fixed equipment, but without consumables, cargo, and persons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "light displacement"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "輕排水量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3028081"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30082647"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a vessel with fixed equipment, but without consumables, cargo, and persons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "light displacement"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "輕排水量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12812139"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30082647"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a vessel with fixed equipment, but without consumables, cargo, and persons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "light displacement"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "輕排水量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19978220"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q26879934"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a vessel when floating at its greatest allowable draft"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "full-load displacement"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "滿載排水量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3028081"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q26879934"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a vessel when floating at its greatest allowable draft"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "full-load displacement"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "滿載排水量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12812139"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q26879934"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a vessel when floating at its greatest allowable draft"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "full-load displacement"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "滿載排水量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19978220"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q57084776"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Quantity that describes, for a given mixture and amount of greenhouse gas, the amount of CO2 that would have the same global warming potential (GWP), when measured over a specified timescale (generally, 100 years)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gigatonne of carbon dioxide equivalent"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "十亿吨二氧化碳当量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q57084776"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Quantity that describes, for a given mixture and amount of greenhouse gas, the amount of CO2 that would have the same global warming potential (GWP), when measured over a specified timescale (generally, 100 years)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gigatonne of carbon dioxide equivalent"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "十亿吨二氧化碳当量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3647172"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106629974"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of volume fraction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cubic metre per cubic metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "立方米/立方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q57084776"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Quantity that describes, for a given mixture and amount of greenhouse gas, the amount of CO2 that would have the same global warming potential (GWP), when measured over a specified timescale (generally, 100 years)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gigatonne of carbon dioxide equivalent"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "十亿吨二氧化碳当量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110762942"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106629974"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of volume fraction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cubic metre per cubic metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "立方米/立方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q57084755"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Quantity that describes, for a given mixture and amount of greenhouse gas, the amount of CO2 that would have the same global warming potential (GWP), when measured over a specified timescale (generally, 100 years)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tonne of carbon dioxide equivalent"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "二氧化碳当量吨数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q57084755"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Quantity that describes, for a given mixture and amount of greenhouse gas, the amount of CO2 that would have the same global warming potential (GWP), when measured over a specified timescale (generally, 100 years)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tonne of carbon dioxide equivalent"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "二氧化碳当量吨数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3647172"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106629974"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of volume fraction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cubic metre per cubic metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "立方米/立方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126884367"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q57084755"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Quantity that describes, for a given mixture and amount of greenhouse gas, the amount of CO2 that would have the same global warming potential (GWP), when measured over a specified timescale (generally, 100 years)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tonne of carbon dioxide equivalent"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "二氧化碳当量吨数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110762942"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q78754808"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit counting objects of a certain type"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "counting unit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "計數單位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q136718229"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of warming potential for a greenhouse effect gases"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "megatonne of carbon dioxide equivalent"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "百万吨二氧化碳当量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q136718229"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of warming potential for a greenhouse effect gases"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "megatonne of carbon dioxide equivalent"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "百万吨二氧化碳当量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110762942"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q136718229"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of warming potential for a greenhouse effect gases"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "megatonne of carbon dioxide equivalent"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "百万吨二氧化碳当量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139558263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25416324"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear physics process that has not been observed yet"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "neutrinoless double beta decay"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "無微中子雙β衰變"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25416324"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear physics process that has not been observed yet"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "neutrinoless double beta decay"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "無微中子雙β衰變"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25416324"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear physics process that has not been observed yet"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "neutrinoless double beta decay"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "無微中子雙β衰變"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q898923"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decay where a neutron is ejected from the nucleus"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "neutron emission"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "中子發射"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q898923"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decay where a neutron is ejected from the nucleus"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "neutron emission"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "中子发射"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q898923"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decay where a neutron is ejected from the nucleus"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "neutron emission"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "中子發射"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q836941"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of measurement for sugar content of an aqueous solution"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Brix"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "白利糖度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q836941"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of measurement for sugar content of an aqueous solution"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Brix"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "白利糖度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q836941"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of measurement for sugar content of an aqueous solution"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Brix"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "白利糖度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q306786"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "emmision of beta particles by a decaying radioactive atom"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "beta decay"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Β衰变"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q306786"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "emmision of beta particles by a decaying radioactive atom"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "beta decay"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "β衰变"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q306786"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "emmision of beta particles by a decaying radioactive atom"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "beta decay"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "β衰变"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q306786"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "emmision of beta particles by a decaying radioactive atom"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "beta decay"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "貝他衰變"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q306786"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "emmision of beta particles by a decaying radioactive atom"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "beta decay"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "貝他衰變"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q901540"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear decay in which an atomic nucleus emits a small cluster of neutrons and protons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cluster decay"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "簇衰變"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q901540"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear decay in which an atomic nucleus emits a small cluster of neutrons and protons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cluster decay"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "集团衰变"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q901540"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear decay in which an atomic nucleus emits a small cluster of neutrons and protons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cluster decay"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "簇衰变"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q901540"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear decay in which an atomic nucleus emits a small cluster of neutrons and protons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cluster decay"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "叢集衰變"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q750178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one hundredth of a percent"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basis point"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "萬分率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27084"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q750178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one hundredth of a percent"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basis point"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "基点"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27084"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q750178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one hundredth of a percent"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basis point"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "萬分率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27084"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q750178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one hundredth of a percent"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basis point"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "基本點"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27084"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q520827"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decay mode"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "double electron capture"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "雙電子捕獲"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q520827"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decay mode"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "double electron capture"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "双电子俘获"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q520827"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decay mode"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "double electron capture"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "双电子俘获"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q520827"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decay mode"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "double electron capture"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "雙電子俘獲"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q902157"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radioactive decay where a proton is ejected from the nucleus"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proton emission"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "质子发射"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one of the possible spontaneous processes that an unstable nucleus can expose"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decay mode"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "衰变方式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q901747"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decay mode"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "double beta decay"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "無中微子雙貝他衰變"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q901747"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decay mode"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "double beta decay"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "无中微子双β衰变"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q901747"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decay mode"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "double beta decay"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "無中微子雙β衰變"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q901747"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decay mode"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "double beta decay"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "雙β衰變"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q544431"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radioactive decay process wherein an excited nucleus interacts electromagnetically with one of its electrons, causing it to be ejected from the atom"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "internal conversion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "內部轉換"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q544431"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radioactive decay process wherein an excited nucleus interacts electromagnetically with one of its electrons, causing it to be ejected from the atom"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "internal conversion"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "内转换"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q544431"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radioactive decay process wherein an excited nucleus interacts electromagnetically with one of its electrons, causing it to be ejected from the atom"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "internal conversion"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "内转换"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q544431"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radioactive decay process wherein an excited nucleus interacts electromagnetically with one of its electrons, causing it to be ejected from the atom"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "internal conversion"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "內轉換"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q544431"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radioactive decay process wherein an excited nucleus interacts electromagnetically with one of its electrons, causing it to be ejected from the atom"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "internal conversion"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "內轉換"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q750178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one hundredth of a percent"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basis point"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "萬分率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q750178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one hundredth of a percent"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basis point"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "基点"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q750178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one hundredth of a percent"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basis point"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "萬分率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q750178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one hundredth of a percent"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basis point"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "基本點"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q590051"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "relation of wavelength/wavenumber as a function of a wave's frequency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q590051"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dispersion relation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "色散关系"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1049848"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for the arithmetic difference of two percentages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "percentage point"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "百分點"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1049848"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for the arithmetic difference of two percentages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "percentage point"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "百分点"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1049848"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for the arithmetic difference of two percentages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "percentage point"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "百分點"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q109910"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process in which a proton-rich nuclide absorbs an inner atomic electron"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron capture"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "电子俘获"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q109910"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process in which a proton-rich nuclide absorbs an inner atomic electron"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron capture"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "电子俘获"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q109910"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process in which a proton-rich nuclide absorbs an inner atomic electron"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron capture"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "电子俘获"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q109910"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process in which a proton-rich nuclide absorbs an inner atomic electron"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron capture"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "電子俘獲"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q109910"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process in which a proton-rich nuclide absorbs an inner atomic electron"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron capture"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "電子捕獲"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of solid angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "steradian"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "球面度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of solid angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "steradian"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "球面度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of solid angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "steradian"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "球面度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of solid angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "steradian"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "球面度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of solid angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "steradian"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "球面度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of solid angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "steradian"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "球面度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of solid angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "steradian"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "球面度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of solid angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "steradian"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "球面度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of solid angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "steradian"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "球面度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of solid angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "steradian"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "球面度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of solid angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "steradian"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "球面度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of solid angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "steradian"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "球面度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of solid angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "steradian"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "球面度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of solid angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "steradian"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "球面度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of solid angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "steradian"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "球面度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of solid angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "steradian"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "球面度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111212048"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of solid angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "steradian"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "球面度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111212048"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of solid angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "steradian"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "球面度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111212048"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of solid angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "steradian"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "球面度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111212048"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of solid angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "steradian"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "球面度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111212048"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measurement using combination of base units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "国际单位制导出单位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measurement using combination of base units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "国际单位制导出单位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measurement using combination of base units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "国际单位制导出单位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measurement using combination of base units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "國際單位制導出單位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measurement using combination of base units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "國際單位制導出單位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q146682"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "form of radioactive decay found in very heavy chemical elements"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spontaneous fission"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "自發裂變"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q146682"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "form of radioactive decay found in very heavy chemical elements"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spontaneous fission"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "自发裂变"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q146682"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "form of radioactive decay found in very heavy chemical elements"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spontaneous fission"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "自发裂变"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q146682"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "form of radioactive decay found in very heavy chemical elements"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spontaneous fission"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "自發裂變"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q146682"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "form of radioactive decay found in very heavy chemical elements"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spontaneous fission"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "自發分裂"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q179856"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "emission of alpha particles by a decaying radioactive atom"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "alpha decay"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "α衰变"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q179856"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "emission of alpha particles by a decaying radioactive atom"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "alpha decay"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "α衰变"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q179856"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "emission of alpha particles by a decaying radioactive atom"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "alpha decay"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "α衰变"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q179856"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "emission of alpha particles by a decaying radioactive atom"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "alpha decay"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "α衰变"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q179856"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "emission of alpha particles by a decaying radioactive atom"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "alpha decay"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "α衰變"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q186634"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deviation from rectilinear projection (optics)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q186634"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distortion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "畸變"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q186634"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deviation from rectilinear projection (optics)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q186634"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distortion"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "畸变"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q186634"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deviation from rectilinear projection (optics)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q186634"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distortion"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "畸變"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q225888"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit used in telephony as a measure of offered load or carried load"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "erlang"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "埃朗單位"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284100"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for measuring genetic linkage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "centimorgan"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "厘摩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284100"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for measuring genetic linkage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "centimorgan"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "厘摩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284100"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for measuring genetic linkage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "centimorgan"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "厘摩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284100"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for measuring genetic linkage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "centimorgan"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "厘摩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284100"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for measuring genetic linkage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "centimorgan"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "厘摩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284100"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for measuring genetic linkage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "centimorgan"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "厘摩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284100"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for measuring genetic linkage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "centimorgan"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "厘摩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284100"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for measuring genetic linkage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "centimorgan"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "厘摩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284100"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for measuring genetic linkage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "centimorgan"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "厘摩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284100"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for measuring genetic linkage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "centimorgan"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "厘摩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284100"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for measuring genetic linkage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "centimorgan"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "厘摩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284100"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for measuring genetic linkage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "centimorgan"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "厘摩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284100"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for measuring genetic linkage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "centimorgan"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "厘摩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284100"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for measuring genetic linkage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "centimorgan"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "厘摩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284100"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for measuring genetic linkage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "centimorgan"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "厘摩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284100"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for measuring genetic linkage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "centimorgan"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "厘摩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284100"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for measuring genetic linkage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "centimorgan"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "厘摩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284100"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for measuring genetic linkage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "centimorgan"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "厘摩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284100"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for measuring genetic linkage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "centimorgan"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "厘摩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284100"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for measuring genetic linkage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "centimorgan"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "厘摩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in physical quantity, the unit without dimension (no length, no time, ...)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dimensionless unit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "无维度单位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ship's weight"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "displacement"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "排水量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3028081"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ship's weight"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "displacement"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "满载排水量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3028081"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ship's weight"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "displacement"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "满载排水量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3028081"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ship's weight"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "displacement"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "滿載排水量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3028081"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ship's weight"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "displacement"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "排水量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12812139"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ship's weight"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "displacement"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "满载排水量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12812139"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ship's weight"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "displacement"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "满载排水量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12812139"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ship's weight"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "displacement"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "滿載排水量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12812139"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ship's weight"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "displacement"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "排水量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19978220"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ship's weight"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "displacement"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "满载排水量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19978220"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ship's weight"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "displacement"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "满载排水量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19978220"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ship's weight"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "displacement"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "滿載排水量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19978220"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10885797"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decay mode emitting gamma ray photon"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gamma decay"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伽瑪衰變"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15155948"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "derived unit that, for a given system of quantities and for a chosen set of base units, is a product of powers of base units with no other proportionality factor than one (International Vocabulary of Metrology)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coherent derived unit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "連貫 (單位)"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1357356"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radioactive decay in which a proton is converted into a neutron while releasing a positron and a neutrino"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "positron emission"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "正电子发射"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1357356"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radioactive decay in which a proton is converted into a neutron while releasing a positron and a neutrino"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "positron emission"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "正电子发射"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1357356"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radioactive decay in which a proton is converted into a neutron while releasing a positron and a neutrino"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "positron emission"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "正電子發射"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1048111"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2994934"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical constant with no units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2994934"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dimensionless physical constant"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "标准模型中的基本物理学常数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2994934"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical constant with no units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2994934"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dimensionless physical constant"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "标准模型中的基本物理学常数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2994934"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical constant with no units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2994934"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dimensionless physical constant"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "標準模型中的基本物理學常數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3492162"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tool to determine geometric features of a new road"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3492162"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "design speed"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "設計速率"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21006887"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of measurement based on number of particles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parts per million"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "百萬分率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21006887"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of measurement based on number of particles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parts per million"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "百萬分率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5251660"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quality of an image being out of focus"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5251660"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "defocus aberration"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "散焦像差"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4674678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "frequency dispersion applied to sound and seismic waves"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q590051"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "acoustic dispersion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "声频散"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4674678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "frequency dispersion applied to sound and seismic waves"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q590051"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "acoustic dispersion"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "声频散"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4674678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "frequency dispersion applied to sound and seismic waves"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q590051"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "acoustic dispersion"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "声频散"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4674678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "frequency dispersion applied to sound and seismic waves"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q590051"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "acoustic dispersion"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "聲頻散"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1191713"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process by which aerosol particles collect or deposit themselves on solid surfaces"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1191713"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deposition"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "沉降 (氣溶膠物理學)"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1547498"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "group of 144; a dozen dozen"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gross"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "籮"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1547498"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "group of 144; a dozen dozen"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gross"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "籮"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2360980"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1547498"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "group of 144; a dozen dozen"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gross"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "罗"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1547498"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "group of 144; a dozen dozen"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1618549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gross"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "罗"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2360980"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2994934"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical constant with no units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2994934"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dimensionless physical constant"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "无量纲物理常数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ship's weight"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "displacement"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "排水量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3028081"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ship's weight"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "displacement"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "排水量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12812139"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ship's weight"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "displacement"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "排水量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19978220"
+      }
+    }
+  ]
+}

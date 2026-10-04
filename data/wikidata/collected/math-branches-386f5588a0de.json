@@ -1,0 +1,2793 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q3889188 wd:Q2095069 wd:Q726210 wd:Q28911163 wd:Q13770084 wd:Q7066678 wd:Q1756295 wd:Q1933581 wd:Q7068969 wd:Q113573759 wd:Q109490960 wd:Q109490472 wd:Q122331539 wd:Q121451784 wd:Q109610894 wd:Q109610857 wd:Q121451586 wd:Q2279584 wd:Q10388960 wd:Q124355768 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q3889188 wd:Q2095069 wd:Q726210 wd:Q28911163 wd:Q13770084 wd:Q7066678 wd:Q1756295 wd:Q1933581 wd:Q7068969 wd:Q113573759 wd:Q109490960 wd:Q109490472 wd:Q122331539 wd:Q121451784 wd:Q109610894 wd:Q109610857 wd:Q121451586 wd:Q2279584 wd:Q10388960 wd:Q124355768 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q3889188 wd:Q2095069 wd:Q726210 wd:Q28911163 wd:Q13770084 wd:Q7066678 wd:Q1756295 wd:Q1933581 wd:Q7068969 wd:Q113573759 wd:Q109490960 wd:Q109490472 wd:Q122331539 wd:Q121451784 wd:Q109610894 wd:Q109610857 wd:Q121451586 wd:Q2279584 wd:Q10388960 wd:Q124355768 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "386f5588a0deb9e086ddd5d99189723c293e7dc6707fbe2581d105e93c129f65",
+  "responseSha256": "75a0c82d5de33ad6af898128ad9ca135644d2b21d05a68cd09fa4a586657ae38",
+  "retrievedAt": "2026-10-04T05:01:05.960160+00:00",
+  "license": "CC0-1.0",
+  "domain": "math",
+  "roots": [
+    {
+      "domain": "math",
+      "id": "Q3889188",
+      "label": "normalized number",
+      "description": "",
+      "parents": [
+        "Q11563"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q2095069",
+      "label": "normalizing constant",
+      "description": "constant a such that af(x) is a probability measure",
+      "parents": [
+        "Q11563"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q726210",
+      "label": "normed vector space",
+      "description": "vector space on which a distance is defined",
+      "parents": [
+        "Q63793693"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q28911163",
+      "label": "notable number",
+      "description": "name of number",
+      "parents": [
+        "Q11563"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q13770084",
+      "label": "nothing up my sleeve number",
+      "description": "numbers used by cryptographers to show that they are working in good faith",
+      "parents": [
+        "Q11563"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q7066678",
+      "label": "nowhere commutative semigroup",
+      "description": "algebraic structure in semigroup theory",
+      "parents": [
+        "Q205464"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q1756295",
+      "label": "NSPACE",
+      "description": "computational resource describing the memory space for a non-deterministic Turing machine",
+      "parents": [
+        "Q908207"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q1933581",
+      "label": "NTIME",
+      "description": "complexity class",
+      "parents": [
+        "Q908207"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q7068969",
+      "label": "null semigroup",
+      "description": "semigroup with an absorbing element, called zero, in which the product of any two elements is zero",
+      "parents": [
+        "Q205464"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q113573759",
+      "label": "number data type",
+      "description": "data type that represents a number",
+      "parents": [
+        "Q60655023"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q109490960",
+      "label": "number of combinations with repetition",
+      "description": "number of multisets of cardinality k on n symbols",
+      "parents": [
+        "Q11563"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q109490472",
+      "label": "number of combinations without repetition",
+      "description": "",
+      "parents": [
+        "Q11563"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q122331539",
+      "label": "number of occurrences",
+      "description": "",
+      "parents": [
+        "Q11563"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q121451784",
+      "label": "number of poles",
+      "description": "property of a function within a contour",
+      "parents": [
+        "Q11563"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q109610894",
+      "label": "number of variations with repetition",
+      "description": "",
+      "parents": [
+        "Q11563"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q109610857",
+      "label": "number of variations without repetition",
+      "description": "",
+      "parents": [
+        "Q11563"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q121451586",
+      "label": "number of zeros",
+      "description": "property of a function within a contour",
+      "parents": [
+        "Q11563"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q2279584",
+      "label": "numerator",
+      "description": "top of a fraction",
+      "parents": [
+        "Q6498784"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q10388960",
+      "label": "numeric value",
+      "description": "numerical value of a number, a mathematical constant, or a physical constant",
+      "parents": [
+        "Q2912517"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q124355768",
+      "label": "numerical algorithm",
+      "description": "algorithms that use numerical approximation for solving mathematical problems",
+      "parents": [
+        "Q8366",
+        "Q115160940"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "math branches 721..740",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17014143"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantified characteristic in RPG"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10388960"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character attribute"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "屬性"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1751513"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17014143"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantified characteristic in RPG"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10388960"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character attribute"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "屬性"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24017414"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "古戈尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50705"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "古戈尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50705"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "古戈爾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50705"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q214159"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real or complex vector space with an additional structure called an inner product"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q726210"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "inner product space"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "内积空间"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q214159"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real or complex vector space with an additional structure called an inner product"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q726210"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "inner product space"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "内积空间"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q214159"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real or complex vector space with an additional structure called an inner product"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q726210"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "inner product space"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "内积空间"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q214159"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real or complex vector space with an additional structure called an inner product"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q726210"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "inner product space"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "內積空間"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q214159"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real or complex vector space with an additional structure called an inner product"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q726210"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "inner product space"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "內積空間"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q194397"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "normed vector space that is complete"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q726210"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Banach space"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "巴拿赫空间"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q194397"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "normed vector space that is complete"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q726210"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Banach space"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "巴拿赫空间"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q194397"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "normed vector space that is complete"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q726210"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Banach space"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "巴拿赫空间"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q194397"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "normed vector space that is complete"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q726210"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Banach space"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "巴拿赫空間"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q194397"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "normed vector space that is complete"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q726210"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Banach space"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "巴拿赫空間"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer format for representing rational numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113573759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "floating point"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "浮点数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer format for representing rational numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113573759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "floating point"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "浮点数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer format for representing rational numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113573759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "floating point"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "浮点数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer format for representing rational numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113573759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "floating point"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "浮點數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer format for representing rational numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113573759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "floating point"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "浮點數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "古戈尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184611"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "古戈尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q223722"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "古戈尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q840676"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "古戈尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184611"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "古戈尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q223722"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "古戈尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q840676"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "古戈爾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184611"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "古戈爾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q223722"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "古戈尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1816844"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "古戈爾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q840676"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "古戈尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1816844"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "古戈爾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1816844"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "古戈尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10549775"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "古戈尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10549775"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "古戈爾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10549775"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "古戈尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13366104"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "古戈尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13366104"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "古戈爾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13366104"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "古戈尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16317911"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "古戈尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16317911"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "古戈爾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16317911"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "古戈尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28874617"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "古戈尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "古戈尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28874617"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "古戈尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "古戈爾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28874617"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large integer number defined as ten raised to the power of 100"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "googol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "古戈爾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28911163"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113573759"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4230065"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Complex data type"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "复数数据类型"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1085860"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of algorithms for finding zeros of functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q124355768"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "root-finding algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "求根算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1085860"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of algorithms for finding zeros of functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q124355768"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "root-finding algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "求根算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q729138"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "datum of integral data type"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113573759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "integer data type"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "整数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q729138"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "datum of integral data type"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113573759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "integer data type"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "整数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q729138"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "datum of integral data type"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113573759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "integer data type"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "整數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1933581"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "complexity class"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1933581"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "NTIME"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "NTIME"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1933581"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "complexity class"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1933581"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "NTIME"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "NTIME"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1933581"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "complexity class"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1933581"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "NTIME"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "NTIME"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q726210"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vector space on which a distance is defined"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q726210"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "normed vector space"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "賦範向量空間"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q726210"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vector space on which a distance is defined"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q726210"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "normed vector space"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "赋范矢量空间"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q726210"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vector space on which a distance is defined"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q726210"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "normed vector space"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "赋范向量空间"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q726210"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vector space on which a distance is defined"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q726210"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "normed vector space"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "賦範向量空間"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7980541"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "estimating signal power"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q124355768"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Welch's method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Welch法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q124355768"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7980541"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "estimating signal power"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q124355768"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Welch's method"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Welch法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q124355768"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6516604"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical algorithm for mortality forecasting"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q124355768"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lee–Carter model"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "李-卡特模型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q124355768"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6516604"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical algorithm for mortality forecasting"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q124355768"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lee–Carter model"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "李-卡特模型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q124355768"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1683292"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithms for estimating the derivative of mathematical functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q124355768"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical differentiation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "數值微分"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13770084"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numbers used by cryptographers to show that they are working in good faith"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13770084"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nothing up my sleeve number"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "空衣袖數字"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q568687"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "group with one element"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7068969"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trivial group"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "當然群"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q684363"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q568687"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "group with one element"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7068969"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trivial group"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "當然群"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q834585"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q568687"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "group with one element"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7068969"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trivial group"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "當然群"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q684363"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q568687"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "group with one element"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7068969"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trivial group"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "當然群"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q834585"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q568687"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "group with one element"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7068969"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trivial group"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "當然群"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7068969"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q568687"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "group with one element"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7068969"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trivial group"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "當然群"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7068969"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q568687"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "group with one element"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7068969"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trivial group"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "當然群"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q39492587"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q568687"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "group with one element"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7068969"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trivial group"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "當然群"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q39493069"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q568687"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "group with one element"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7068969"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trivial group"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "當然群"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q39492587"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q568687"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "group with one element"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7068969"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trivial group"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "當然群"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q39493069"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q568687"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "group with one element"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7068969"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trivial group"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "當然群"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q54806735"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q568687"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "group with one element"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7068969"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trivial group"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "當然群"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q54806735"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q568687"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "group with one element"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7068969"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trivial group"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "當然群"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q135734842"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q568687"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "group with one element"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7068969"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trivial group"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "當然群"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q135734842"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1756295"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computational resource describing the memory space for a non-deterministic Turing machine"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1756295"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "NSPACE"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "NSPACE"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1756295"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computational resource describing the memory space for a non-deterministic Turing machine"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1756295"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "NSPACE"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "NSPACE"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1756295"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computational resource describing the memory space for a non-deterministic Turing machine"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1756295"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "NSPACE"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "NSPACE"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1585233"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "space of holomorphic functions on the unit disk or upper half plane"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q726210"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hardy space"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "哈代空間"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1585233"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "space of holomorphic functions on the unit disk or upper half plane"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q726210"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hardy space"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "哈代空间"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1585233"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "space of holomorphic functions on the unit disk or upper half plane"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q726210"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hardy space"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "哈代空間"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2279584"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "top of a fraction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2279584"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerator"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分子"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6766437"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "efficient and stable algorithms for finding the eigenvalues of a matrix"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q124355768"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "eigenvalue algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "特征值算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6766437"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "efficient and stable algorithms for finding the eigenvalues of a matrix"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q124355768"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "eigenvalue algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "特征值算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6766437"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "efficient and stable algorithms for finding the eigenvalues of a matrix"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q124355768"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "eigenvalue algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "特征值算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2095069"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "constant a such that af(x) is a probability measure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2095069"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "normalizing constant"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "归一化常数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2095069"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "constant a such that af(x) is a probability measure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2095069"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "normalizing constant"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "归一化常数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2095069"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "constant a such that af(x) is a probability measure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2095069"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "normalizing constant"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "歸一化常數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7097841"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in functional analysis, a space that can be embedded into the space of bounded operators"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q726210"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "operator space"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "算子空间"
+      }
+    }
+  ]
+}

@@ -13,7 +13,7 @@ const meanings:Record<string,Meaning>={
  'physics:momentum':{definition:'描述运动状态的物理量；此处不采用机器学习优化器的词义。',contexts:['particle','conservation','mechanics'],source:'https://www.feynmanlectures.caltech.edu/I_09.html'},
  'cs:compiler':{definition:'将源语言程序转换为目标语言程序的工具。',contexts:['source code','syntax','code generation'],source:'https://llvm.org/docs/GettingStarted.html'},
 };
-export function enrichTerms(terms:Term[]):Term[]{return terms.map(t=>{const m=meanings[t.domain+':'+t.source.toLowerCase()];return m?{...t,definition:t.definition??m.definition,contexts:[...new Set([...(t.contexts??[]),...m.contexts])],sourceNote:(t.sourceNote??'')+' 消歧说明为项目原创整理；参考 '+m.source}:t;});}
+export function enrichTerms(terms:Term[]):Term[]{return terms.map(t=>{const m=meanings[t.domain+':'+t.source.toLowerCase()];return m?{...t,definition:t.definition??m.definition,contexts:t.contexts?.length?t.contexts:m.contexts,sourceNote:(t.sourceNote??'')+' 消歧说明为项目原创整理；参考 '+m.source}:t;});}
 export type TermEdge={from:string;to:string;weight:number;source:string};
 // Reviewed one-hop concept relationships. They are not generated from cosine
 // similarity or passage co-occurrence and never become mandatory translations.

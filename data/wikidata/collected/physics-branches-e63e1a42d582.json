@@ -1,0 +1,3443 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q11866286 wd:Q748254 wd:Q145660 wd:Q4419098 wd:Q124290144 wd:Q115566573 wd:Q97617324 wd:Q22282168 wd:Q105821893 wd:Q442687 wd:Q101960694 wd:Q106008771 wd:Q1153014 wd:Q118574738 wd:Q17342348 wd:Q172137 wd:Q383041 wd:Q104193508 wd:Q1884377 wd:Q3850884 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q11866286 wd:Q748254 wd:Q145660 wd:Q4419098 wd:Q124290144 wd:Q115566573 wd:Q97617324 wd:Q22282168 wd:Q105821893 wd:Q442687 wd:Q101960694 wd:Q106008771 wd:Q1153014 wd:Q118574738 wd:Q17342348 wd:Q172137 wd:Q383041 wd:Q104193508 wd:Q1884377 wd:Q3850884 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q11866286 wd:Q748254 wd:Q145660 wd:Q4419098 wd:Q124290144 wd:Q115566573 wd:Q97617324 wd:Q22282168 wd:Q105821893 wd:Q442687 wd:Q101960694 wd:Q106008771 wd:Q1153014 wd:Q118574738 wd:Q17342348 wd:Q172137 wd:Q383041 wd:Q104193508 wd:Q1884377 wd:Q3850884 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "e63e1a42d5820656e0771c1f9bc5c427e4a9c08d1207f350a7b5c367fc605dee",
+  "responseSha256": "4cec635572c3780d0bde409db13a571729d01cc1744665cbdc4cca1f6930ec31",
+  "retrievedAt": "2026-10-04T05:05:20.551124+00:00",
+  "license": "CC0-1.0",
+  "domain": "physics",
+  "roots": [
+    {
+      "domain": "physics",
+      "id": "Q11866286",
+      "label": "Jeans mass",
+      "description": "critical mass of a cloud before it can collapse",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q748254",
+      "label": "jet force",
+      "description": "the exhaust from a vehicle or aircraft, propelling the object itself in the opposite direction",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q145660",
+      "label": "juggernaut",
+      "description": "literal or metaphorical force regarded as mercilessly destructive and unstoppable",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q4419098",
+      "label": "kinetic friction force",
+      "description": "force opposing the motion of a body sliding on a surface",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q124290144",
+      "label": "labour through muscle power",
+      "description": "movement of a device by the muscles of a living being",
+      "parents": [
+        "Q42213"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q115566573",
+      "label": "landing weight",
+      "description": "mass of an aircraft, spacecraft, or rocket at the time of landing",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q97617324",
+      "label": "Larmor frequency",
+      "description": "the Larmor angular frequency divided by 2π",
+      "parents": [
+        "Q11652"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q22282168",
+      "label": "legal units of measurement",
+      "description": "",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q105821893",
+      "label": "lens flare",
+      "description": "image artifact produced by scattered or flared light within a lens system",
+      "parents": [
+        "Q639"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q442687",
+      "label": "leptogenesis",
+      "description": "hypothesized processes that could produce the observed asymmetry favoring leptonic matter (leptons) over its antimatter (antileptons)",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q101960694",
+      "label": "lift force",
+      "description": "type of force",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q106008771",
+      "label": "light frequency",
+      "description": "frequency of an electromagnetic wave",
+      "parents": [
+        "Q11652"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1153014",
+      "label": "linkage",
+      "description": "assembly of bodies connected to manage forces and movement",
+      "parents": [
+        "Q1454986"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q118574738",
+      "label": "linked magnetic flux",
+      "description": "",
+      "parents": [
+        "Q177831"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q17342348",
+      "label": "logarithmic unit",
+      "description": "unit of measurement on a logarithmic scale",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q172137",
+      "label": "Lorentz force",
+      "description": "force exerted on a charge in electromagnetic field",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q383041",
+      "label": "magnetic pressure",
+      "description": "energy density associated with a magnetic field",
+      "parents": [
+        "Q39552"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q104193508",
+      "label": "magnetic resonance",
+      "description": "excitation of a quantum system via magnetism",
+      "parents": [
+        "Q172858"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1884377",
+      "label": "magnetohydrodynamic dynamo",
+      "description": "physical phenomenon",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q3850884",
+      "label": "mass (mass spectrometry)",
+      "description": "physical quantities being measured",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "physics branches 261..280",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5329"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logarithmic unit expressing the ratio of a physical quantity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decibel"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分貝"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3268848"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5329"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logarithmic unit expressing the ratio of a physical quantity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decibel"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分貝"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5329"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logarithmic unit expressing the ratio of a physical quantity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decibel"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分貝"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839753"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5329"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logarithmic unit expressing the ratio of a physical quantity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decibel"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分貝"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q138822611"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50094"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logarithmic unit for ratios of measurements of physical field and power quantities"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "neper"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "奈培"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3268848"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50094"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logarithmic unit for ratios of measurements of physical field and power quantities"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "neper"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "奈培"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50094"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logarithmic unit for ratios of measurements of physical field and power quantities"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "neper"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "奈培"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50094"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logarithmic unit for ratios of measurements of physical field and power quantities"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "neper"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "奈培"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839753"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50094"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logarithmic unit for ratios of measurements of physical field and power quantities"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "neper"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "奈培"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q138822611"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q172137"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force exerted on a charge in electromagnetic field"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q172137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lorentz force"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "洛伦兹力"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9357058"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q172137"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force exerted on a charge in electromagnetic field"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q172137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lorentz force"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "洛伦兹力"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9357058"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q172137"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force exerted on a charge in electromagnetic field"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q172137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lorentz force"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "洛伦兹力"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9357058"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q172137"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force exerted on a charge in electromagnetic field"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q172137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lorentz force"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "洛倫茲力"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9357058"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q172137"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force exerted on a charge in electromagnetic field"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q172137"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lorentz force"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "勞侖茲力"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9357058"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50098"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logarithmic unit expressing the ratio of a physical quantity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bel"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "貝"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3268848"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50098"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logarithmic unit expressing the ratio of a physical quantity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bel"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "貝"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50098"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logarithmic unit expressing the ratio of a physical quantity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bel"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "貝"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50098"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logarithmic unit expressing the ratio of a physical quantity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bel"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "貝"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839753"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50098"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logarithmic unit expressing the ratio of a physical quantity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bel"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "貝"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q138822611"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q432571"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical equipment that provides a low-impedance connection between a circuit or electrical installation and earth ground"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "earthing system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "接地系统"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q526016"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical system of two bodies connected to limit their relative movement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kinematic pair"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "結構節點"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q777017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "power level referenced to one milliwatt"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decibel milliwatt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分贝毫瓦"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387689"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q777017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "power level referenced to one milliwatt"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decibel milliwatt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分贝毫瓦"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1140483"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "concept in radio communications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "narrowband"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "窄带"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2695280"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1140483"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "concept in radio communications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "narrowband"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "窄带"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2695280"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1140483"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "concept in radio communications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "narrowband"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "窄帶"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2695280"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q425712"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "six-bar straight-line mechanism"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sarrus linkage"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "薩鲁斯連桿機構"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q425712"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "six-bar straight-line mechanism"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sarrus linkage"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "薩鲁斯連桿"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q425712"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "six-bar straight-line mechanism"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sarrus linkage"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "薩鲁斯連桿機構"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q425712"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "six-bar straight-line mechanism"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sarrus linkage"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "薩魯斯連桿"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q526016"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical system of two bodies connected to limit their relative movement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kinematic pair"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "运动副"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q610863"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanical linkage that converts rotary motion to approximately-straight motion, invented by James Watt"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Watt's linkage"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "瓦特連桿"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q388067"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanical linkage capable of transforming rotary motion into linear motion"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Peaucellier–Lipkin linkage"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Peaucellier-Lipkin 連桿"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q388067"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanical linkage capable of transforming rotary motion into linear motion"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Peaucellier–Lipkin linkage"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "波塞利耶-利普金机械"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q388067"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanical linkage capable of transforming rotary motion into linear motion"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Peaucellier–Lipkin linkage"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "波塞利耶-利普金机械"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q388067"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanical linkage capable of transforming rotary motion into linear motion"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Peaucellier–Lipkin linkage"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "波塞利耶-利普金機械"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q383041"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energy density associated with a magnetic field"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q383041"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magnetic pressure"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "磁壓"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "assembly of bodies connected to manage forces and movement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linkage"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "连杆机构"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "assembly of bodies connected to manage forces and movement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linkage"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "連桿機構"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "assembly of bodies connected to manage forces and movement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linkage"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "連桿機構"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q724178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval unit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cent"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "音分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189962"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q724178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval unit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cent"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "音分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189962"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q724178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval unit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cent"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "音分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189962"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q724178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval unit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cent"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "音分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q724178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval unit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cent"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "音分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q724178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval unit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cent"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "音分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q724178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval unit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cent"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "音分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q724178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval unit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cent"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "音分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q724178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval unit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cent"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "音分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q527395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of fastening or securing flexible linear material by exploiting friction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "knot"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "繩結"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22811462"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q442687"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hypothesized processes that could produce the observed asymmetry favoring leptonic matter (leptons) over its antimatter (antileptons)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q442687"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "leptogenesis"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "輕子創生過程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q442687"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hypothesized processes that could produce the observed asymmetry favoring leptonic matter (leptons) over its antimatter (antileptons)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q442687"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "leptogenesis"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "轻子产生过程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q442687"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hypothesized processes that could produce the observed asymmetry favoring leptonic matter (leptons) over its antimatter (antileptons)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q442687"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "leptogenesis"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "轻子产生过程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q442687"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hypothesized processes that could produce the observed asymmetry favoring leptonic matter (leptons) over its antimatter (antileptons)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q442687"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "leptogenesis"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "輕子產生過程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q568491"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "downwards lift force created by the aerodynamic characteristics of a vehicle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q101960694"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "downforce"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "下壓力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q568491"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "downwards lift force created by the aerodynamic characteristics of a vehicle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q101960694"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "downforce"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "下压力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1368117"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanical engineering"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Parallel motion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "平行运动"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1368117"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanical engineering"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Parallel motion"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "平行运动"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1368117"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanical engineering"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Parallel motion"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "平行运动"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1368117"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanical engineering"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Parallel motion"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "平行運動"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2199357"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "base-10 logarithmic unit for ratios"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decade"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "decade"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2199357"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "base-10 logarithmic unit for ratios"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decade"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "decade"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4557266"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "structure that resembles a geodesic dome"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hoberman sphere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "霍伯曼球面"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6497460"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "component for the motion-related rotary transmission of torque and rotational frequency with the help of gears"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gearbox"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "变速器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2962940"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "four-bar straight-line mechanism"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Chebyshev linkage"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "切比雪夫連桿"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104193508"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "excitation of a quantum system via magnetism"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104193508"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magnetic resonance"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "磁共振"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25499149"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval of 12 half-tones with a frequency ratio of 2:1 (exactly)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "perfect octave"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "纯八度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q386025"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25499149"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval of 12 half-tones with a frequency ratio of 2:1 (exactly)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "perfect octave"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "純八度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q386025"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25499149"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval of 12 half-tones with a frequency ratio of 2:1 (exactly)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "perfect octave"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "完全八度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q386025"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25499149"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval of 12 half-tones with a frequency ratio of 2:1 (exactly)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "perfect octave"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "纯八度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25499149"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval of 12 half-tones with a frequency ratio of 2:1 (exactly)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "perfect octave"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "純八度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25499149"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval of 12 half-tones with a frequency ratio of 2:1 (exactly)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "perfect octave"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "完全八度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7434073"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "uses linked, folding supports in a criss-cross 'X' pattern"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "scissors mechanism"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "交叉機制"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q186713"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4419098"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force opposing the motion of a body sliding on a surface"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4419098"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kinetic friction force"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "滑动摩擦"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33104303"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4419098"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force opposing the motion of a body sliding on a surface"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4419098"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kinetic friction force"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "滑动摩擦"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33104303"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25499149"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval of 12 half-tones with a frequency ratio of 2:1 (exactly)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "perfect octave"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "纯八度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25499149"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval of 12 half-tones with a frequency ratio of 2:1 (exactly)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "perfect octave"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "純八度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25499149"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval of 12 half-tones with a frequency ratio of 2:1 (exactly)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "perfect octave"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "完全八度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115566573"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of an aircraft, spacecraft, or rocket at the time of landing"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115566573"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "landing weight"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "飞机着陆重量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115566573"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of an aircraft, spacecraft, or rocket at the time of landing"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115566573"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "landing weight"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "飞机着陆重量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6497460"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "component for the motion-related rotary transmission of torque and rotational frequency with the help of gears"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gearbox"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "变速器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6497460"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "component for the motion-related rotary transmission of torque and rotational frequency with the help of gears"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gearbox"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "變速器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15551713"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of information"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "shannon"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "香农"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550873"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15551713"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of information"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "shannon"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "香农"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4557266"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "structure that resembles a geodesic dome"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hoberman sphere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "霍伯曼球面"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11422"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105821893"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "image artifact produced by scattered or flared light within a lens system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105821893"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lens flare"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "鏡頭光暈"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105821893"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "image artifact produced by scattered or flared light within a lens system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105821893"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lens flare"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "镜头光晕"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105821893"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "image artifact produced by scattered or flared light within a lens system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105821893"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lens flare"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "镜头光晕"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105821893"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "image artifact produced by scattered or flared light within a lens system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105821893"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lens flare"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "鏡頭光暈"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1436232"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "metalworking Process"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hemming and seaming"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "接縫"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2377388"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical process that generates a star's magnetic field"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1884377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Solar dynamo"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "太陽發電機"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1884377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2377388"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical process that generates a star's magnetic field"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1884377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Solar dynamo"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "太阳发电机"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1884377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2377388"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical process that generates a star's magnetic field"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1884377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Solar dynamo"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "太陽發電機"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1884377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2377388"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical process that generates a star's magnetic field"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1884377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Solar dynamo"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "太陽發電機"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17320256"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2377388"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical process that generates a star's magnetic field"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1884377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Solar dynamo"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "太阳发电机"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17320256"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2377388"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical process that generates a star's magnetic field"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1884377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Solar dynamo"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "太陽發電機"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17320256"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192731"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of internet access using a phone line and the creation of specific tones"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dial-up"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "撥號連線"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192731"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of internet access using a phone line and the creation of specific tones"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dial-up"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "拨号连线"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192731"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of internet access using a phone line and the creation of specific tones"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dial-up"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "拨号连线"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192731"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of internet access using a phone line and the creation of specific tones"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dial-up"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "撥號連線"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192731"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of internet access using a phone line and the creation of specific tones"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dial-up"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "撥號連線"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q261247"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of mass (200 mg)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22282168"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "carat"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "克拉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3647172"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q261247"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of mass (200 mg)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22282168"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "carat"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "克拉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22282168"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q261247"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of mass (200 mg)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22282168"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "carat"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "克拉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q194163"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "wide-bandwidth data transmission"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "broadband"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "寬頻"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2695280"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q194163"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "wide-bandwidth data transmission"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "broadband"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "宽带"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2695280"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q194163"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "wide-bandwidth data transmission"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "broadband"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "宽带"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2695280"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q194163"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "wide-bandwidth data transmission"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "broadband"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "寬頻"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2695280"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q304479"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22282168"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "turn"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "转"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13587321"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q304479"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22282168"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "turn"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "轉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13587321"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q304479"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22282168"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "turn"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "转"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22282168"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q304479"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22282168"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "turn"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "轉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22282168"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q304479"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22282168"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "turn"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "轉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13587321"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q304479"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22282168"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "turn"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "轉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22282168"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q376660"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logarithmic unit of information"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nat"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "纳特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550873"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q376660"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logarithmic unit of information"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nat"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "纳特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      }
+    }
+  ]
+}

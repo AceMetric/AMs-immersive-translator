@@ -1,0 +1,2994 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q12758225 wd:Q18386809 wd:Q97396140 wd:Q97302511 wd:Q7140405 wd:Q909221 wd:Q2391013 wd:Q130497145 wd:Q65155940 wd:Q131455237 wd:Q1503724 wd:Q117862751 wd:Q897715 wd:Q136231952 wd:Q7169136 wd:Q7169557 wd:Q7180612 wd:Q6047068 wd:Q678734 wd:Q1659515 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q12758225 wd:Q18386809 wd:Q97396140 wd:Q97302511 wd:Q7140405 wd:Q909221 wd:Q2391013 wd:Q130497145 wd:Q65155940 wd:Q131455237 wd:Q1503724 wd:Q117862751 wd:Q897715 wd:Q136231952 wd:Q7169136 wd:Q7169557 wd:Q7180612 wd:Q6047068 wd:Q678734 wd:Q1659515 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q12758225 wd:Q18386809 wd:Q97396140 wd:Q97302511 wd:Q7140405 wd:Q909221 wd:Q2391013 wd:Q130497145 wd:Q65155940 wd:Q131455237 wd:Q1503724 wd:Q117862751 wd:Q897715 wd:Q136231952 wd:Q7169136 wd:Q7169557 wd:Q7180612 wd:Q6047068 wd:Q678734 wd:Q1659515 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "ab426b79521968b91e759dad2ed75264909e75d3b6be9be45075dda6eb6c89f5",
+  "responseSha256": "0652b36122c36a49e229971e16a693591ded7f750e9c427f6f24d9e24bd422f3",
+  "retrievedAt": "2026-10-04T05:01:50.208068+00:00",
+  "license": "CC0-1.0",
+  "domain": "math",
+  "roots": [
+    {
+      "domain": "math",
+      "id": "Q12758225",
+      "label": "parser",
+      "description": "software that interprets a string",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q18386809",
+      "label": "partial algebra",
+      "description": "generalization of universal algebra to partial operations",
+      "parents": [
+        "Q205464"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q97396140",
+      "label": "partial group action on a set",
+      "description": "generalization of a group action",
+      "parents": [
+        "Q1756942"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q97302511",
+      "label": "partial operation",
+      "description": "partially defined mathematical procedure which produces a result from operands; calculation from zero or more input values (called operands) to an output value",
+      "parents": [
+        "Q1756942"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q7140405",
+      "label": "partially ordered ring",
+      "description": "ring with a compatible partial order relation",
+      "parents": [
+        "Q121295295"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q909221",
+      "label": "particle in a box",
+      "description": "physical model in quantum mechanics which is analytically solvable",
+      "parents": [
+        "Q486902"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q2391013",
+      "label": "particular solution",
+      "description": "",
+      "parents": [
+        "Q1879813"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q130497145",
+      "label": "Pasch configuration",
+      "description": "geometric configuration of six points and four lines",
+      "parents": [
+        "Q1866689"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q65155940",
+      "label": "Path space",
+      "description": "",
+      "parents": [
+        "Q179899"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q131455237",
+      "label": "path-planning algorithm",
+      "description": "computational method used to determine an optimal or feasible route from a starting point to a destination within a given environment, considering obstacles, constraints, and possibly optimizing for criteria like distance, time, or cost",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q1503724",
+      "label": "pattern matching",
+      "description": "programming language construct for processing data conditionally on its structure",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q117862751",
+      "label": "percolation",
+      "description": "probabilistic model",
+      "parents": [
+        "Q486902",
+        "Q176737"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q897715",
+      "label": "perfect conductor",
+      "description": "type of electrical conductor",
+      "parents": [
+        "Q486902"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q136231952",
+      "label": "peripheral vertex",
+      "description": "graph vertex whose eccentricity is maximum",
+      "parents": [
+        "Q1304193"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q7169136",
+      "label": "Perles configuration",
+      "description": "system of 9 points and 9 lines in the Euclidean plane for which every combinatorially equivalent realization has at least one irrational number as one of its coordinates",
+      "parents": [
+        "Q1866689"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q7169557",
+      "label": "perpetuant",
+      "description": "",
+      "parents": [
+        "Q46230032"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q7180612",
+      "label": "phantom map",
+      "description": "map between spectra whose induced map between homology theories is 0",
+      "parents": [
+        "Q1948412"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q6047068",
+      "label": "Phoenician number",
+      "description": "",
+      "parents": [
+        "Q11563"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q678734",
+      "label": "Phong reflection model",
+      "description": "basic illumination model to calculate specular reflection range",
+      "parents": [
+        "Q486902"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q1659515",
+      "label": "photon mapping",
+      "description": "algorithm in rendering",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "math branches 781..800",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548802"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number three (U+1091B)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤛⁩"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "𐤛"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548802"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number three (U+1091B)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤛⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "𐤛"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548802"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number three (U+1091B)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤛⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "𐤛"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548802"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number three (U+1091B)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤛⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "𐤛"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548802"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number three (U+1091B)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤛⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "𐤛"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548797"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number one hundred (U+10919)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤙⁩"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "𐤙"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548797"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number one hundred (U+10919)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤙⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "𐤙"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548802"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number three (U+1091B)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤛⁩"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "𐤛"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548797"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number one hundred (U+10919)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤙⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "𐤙"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548802"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number three (U+1091B)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤛⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "𐤛"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548800"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number two (U+1091A)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤚⁩"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "𐤚"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548797"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number one hundred (U+10919)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤙⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "𐤙"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548802"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number three (U+1091B)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤛⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "𐤛"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548800"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number two (U+1091A)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤚⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "𐤚"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548802"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number three (U+1091B)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤛⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "𐤛"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548800"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number two (U+1091A)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤚⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "𐤚"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548800"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number two (U+1091A)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤚⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "𐤚"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548797"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number one hundred (U+10919)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤙⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "𐤙"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548802"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number three (U+1091B)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤛⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "𐤛"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548800"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number two (U+1091A)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤚⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "𐤚"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548797"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number one hundred (U+10919)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤙⁩"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "𐤙"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548797"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number one hundred (U+10919)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤙⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "𐤙"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548797"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number one hundred (U+10919)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤙⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "𐤙"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548800"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number two (U+1091A)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤚⁩"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "𐤚"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548797"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number one hundred (U+10919)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤙⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "𐤙"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548800"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number two (U+1091A)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤚⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "𐤚"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548800"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number two (U+1091A)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤚⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "𐤚"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548800"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number two (U+1091A)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤚⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "𐤚"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548797"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number one hundred (U+10919)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤙⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "𐤙"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548800"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number two (U+1091A)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤚⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "𐤚"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3782642"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ring with a compatible total order"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7140405"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordered ring"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "有序环"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3782642"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ring with a compatible total order"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7140405"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordered ring"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "有序环"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3782642"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ring with a compatible total order"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7140405"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordered ring"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "有序環"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3884033"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical procedure which produces a result from one or more input values"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q97302511"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical operation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "运算"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548795"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number twenty (U+10918)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤘⁩"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "𐤘"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548795"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number twenty (U+10918)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤘⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "𐤘"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548795"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number twenty (U+10918)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤘⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "𐤘"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548795"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number twenty (U+10918)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤘⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "𐤘"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548795"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number twenty (U+10918)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤘⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "𐤘"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548795"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number twenty (U+10918)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤘⁩"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "𐤘"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548793"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenicien number ten (U+10917)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤗⁩"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "𐤗"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548795"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number twenty (U+10918)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤘⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "𐤘"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548793"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenicien number ten (U+10917)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤗⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "𐤗"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548795"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number twenty (U+10918)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤘⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "𐤘"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548793"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenicien number ten (U+10917)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤗⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "𐤗"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548795"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number twenty (U+10918)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤘⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "𐤘"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548793"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenicien number ten (U+10917)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤗⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "𐤗"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548795"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number twenty (U+10918)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤘⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "𐤘"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548793"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenicien number ten (U+10917)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤗⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "𐤗"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548793"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenicien number ten (U+10917)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤗⁩"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "𐤗"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548793"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenicien number ten (U+10917)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤗⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "𐤗"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548793"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenicien number ten (U+10917)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤗⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "𐤗"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548793"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenicien number ten (U+10917)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤗⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "𐤗"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548793"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenicien number ten (U+10917)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "⁧𐤗⁩"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "𐤗"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1659515"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm in rendering"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1659515"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "photon mapping"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "光子映射"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4485156"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "software that interprets a string"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parser"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "语法分析器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "software that interprets a string"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parser"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "语法分析器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548791"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number one (U+10916)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "𐤖"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "𐤖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548791"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number one (U+10916)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "𐤖"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "𐤖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548791"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number one (U+10916)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "𐤖"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "𐤖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548791"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number one (U+10916)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "𐤖"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "𐤖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548791"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number one (U+10916)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "𐤖"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "𐤖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548791"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number one (U+10916)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "𐤖"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "𐤖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548791"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number one (U+10916)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "𐤖"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "𐤖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548791"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number one (U+10916)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "𐤖"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "𐤖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548791"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number one (U+10916)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "𐤖"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "𐤖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87548791"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Phoenician number one (U+10916)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6047068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "𐤖"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "𐤖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29654788"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3884033"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical procedure which produces a result from one or more input values"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q97302511"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical operation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "运算"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7180612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "map between spectra whose induced map between homology theories is 0"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7180612"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "phantom map"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "幻影映射"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1151031"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical model of a solid that treates the vibrations of the atomic lattice as phonons in a box"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q909221"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Debye model"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "德拜模型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486902"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1151031"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical model of a solid that treates the vibrations of the atomic lattice as phonons in a box"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q909221"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Debye model"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "德拜模型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486902"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1151031"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical model of a solid that treates the vibrations of the atomic lattice as phonons in a box"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q909221"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Debye model"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "德拜模型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486902"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q932615"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "left-to-right, leftmost derivation top-down parser for a subset of context-free languages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "LL parser"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "LL剖析器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17155032"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1277497"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for parsing strings that belong to a given context-free language"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Earley parser"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "依尔利算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1277497"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for parsing strings that belong to a given context-free language"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Earley parser"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "依尔利算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1277497"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for parsing strings that belong to a given context-free language"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Earley parser"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "依爾利算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q288465"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "operation of the elements of a group as transformations or automorphisms (mathematics)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q97396140"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "group action"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "群作用"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190109"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "commutative ring in which every nonzero element is inversible"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18386809"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "field"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "域"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190109"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "commutative ring in which every nonzero element is inversible"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18386809"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "field"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "域"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190109"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "commutative ring in which every nonzero element is inversible"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18386809"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "field"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "域"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190109"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "commutative ring in which every nonzero element is inversible"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18386809"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "field"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "域"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1277497"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for parsing strings that belong to a given context-free language"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Earley parser"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "依尔利算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1277497"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for parsing strings that belong to a given context-free language"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Earley parser"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "依尔利算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1277497"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for parsing strings that belong to a given context-free language"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Earley parser"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "依爾利算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1503724"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming language construct for processing data conditionally on its structure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1503724"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pattern matching"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "模式匹配"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190109"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "commutative ring in which every nonzero element is inversible"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18386809"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "field"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "體"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q909221"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical model in quantum mechanics which is analytically solvable"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q909221"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "particle in a box"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "無限深方形阱"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q909221"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical model in quantum mechanics which is analytically solvable"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q909221"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "particle in a box"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "无限深方形阱"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q909221"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical model in quantum mechanics which is analytically solvable"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q909221"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "particle in a box"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "無限深方形阱"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1323264"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "style of parser written as a recursive structure matching the grammar it parses"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "recursive-descent parser"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "递归下降分析器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28455561"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1323264"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "style of parser written as a recursive structure matching the grammar it parses"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "recursive-descent parser"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "递归下降解析器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28455561"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1323264"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "style of parser written as a recursive structure matching the grammar it parses"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "recursive-descent parser"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "递归下降分析器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28455561"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1323264"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "style of parser written as a recursive structure matching the grammar it parses"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "recursive-descent parser"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "遞迴下降解析器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28455561"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q185612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sequence of characters that forms a search pattern"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1503724"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "regular expression"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "正则表达式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q185612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sequence of characters that forms a search pattern"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1503724"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "regular expression"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "正则表达式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q185612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sequence of characters that forms a search pattern"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1503724"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "regular expression"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "正則表達式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q185612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sequence of characters that forms a search pattern"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1503724"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "regular expression"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "正規表示式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q185612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sequence of characters that forms a search pattern"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1503724"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "regular expression"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "正则表达式"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7303337"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "recursive ascent parser"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "递归上升解析器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28455561"
+      }
+    }
+  ]
+}

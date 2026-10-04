@@ -1,0 +1,6704 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q5071831 wd:Q184759 wd:Q476145 wd:Q1277797 wd:Q4132471 wd:Q1092682 wd:Q17007886 wd:Q4479242 wd:Q10855346 wd:Q134703186 wd:Q4994879 wd:Q56251056 wd:Q1779479 wd:Q166760 wd:Q111292310 wd:Q21169305 wd:Q131539331 wd:Q99522703 wd:Q115368 wd:Q140773680 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q5071831 wd:Q184759 wd:Q476145 wd:Q1277797 wd:Q4132471 wd:Q1092682 wd:Q17007886 wd:Q4479242 wd:Q10855346 wd:Q134703186 wd:Q4994879 wd:Q56251056 wd:Q1779479 wd:Q166760 wd:Q111292310 wd:Q21169305 wd:Q131539331 wd:Q99522703 wd:Q115368 wd:Q140773680 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q5071831 wd:Q184759 wd:Q476145 wd:Q1277797 wd:Q4132471 wd:Q1092682 wd:Q17007886 wd:Q4479242 wd:Q10855346 wd:Q134703186 wd:Q4994879 wd:Q56251056 wd:Q1779479 wd:Q166760 wd:Q111292310 wd:Q21169305 wd:Q131539331 wd:Q99522703 wd:Q115368 wd:Q140773680 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "7e3fa17e9201c88d80cde4a2c02457c22d8c3deced61159d618189885042ec84",
+  "responseSha256": "8b55c4bcf1b805b59d871a7b337dcc2d027ab324fba329e49f19df5fd2dc2360",
+  "retrievedAt": "2026-10-04T05:08:22.858042+00:00",
+  "license": "CC0-1.0",
+  "domain": "cs",
+  "roots": [
+    {
+      "domain": "cs",
+      "id": "Q5071831",
+      "label": "change data capture",
+      "description": "techniques used to track the data that has changed in a database to allow reacting to the changes",
+      "parents": [
+        "Q181156"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q184759",
+      "label": "character encoding",
+      "description": "system using a prescribed set of digital values to represent textual characters",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q476145",
+      "label": "chart parser",
+      "description": "type of parser for ambiguous grammars",
+      "parents": [
+        "Q12758225"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1277797",
+      "label": "chess strategy",
+      "description": "developing a plan to play this game in the course of a chess game",
+      "parents": [
+        "Q1546627"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q4132471",
+      "label": "cipher block chaining mode",
+      "description": "algorithm which uses a block cipher to encrypt and decrypt information",
+      "parents": [
+        "Q154021"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1092682",
+      "label": "cipher feedback mode",
+      "description": "algorithm which uses a block cipher to encrypt and decrypt information",
+      "parents": [
+        "Q154021"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q17007886",
+      "label": "Circular layout",
+      "description": "graph drawing with vertices on a circle",
+      "parents": [
+        "Q739462"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q4479242",
+      "label": "class",
+      "description": "in object-oriented programming, a definition that specifies how an object works",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q10855346",
+      "label": "classical cipher",
+      "description": "a type of cipher that was used historically but now has fallen, for the most part, into disuse. In contrast to modern cryptographic algorithms, most classical ciphers can be practically computed and solved by hand",
+      "parents": [
+        "Q4681865"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q134703186",
+      "label": "CNG key storage provider",
+      "description": "component of the CNG framework that handles the storage and access of cryptographic keys",
+      "parents": [
+        "Q165194"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q4994879",
+      "label": "code",
+      "description": "cipher that operates on semantic tokens, rather than individual symbols or fixed-size blocks",
+      "parents": [
+        "Q4681865"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q56251056",
+      "label": "CoinMarketCap",
+      "description": "cryptocurrency price data website and app",
+      "parents": [
+        "Q20514253"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1779479",
+      "label": "collocation method",
+      "description": "used in mathematics to solve differential and integral equations",
+      "parents": [
+        "Q24262840"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q166760",
+      "label": "color management",
+      "description": "controlled conversion between the color representations of various devices",
+      "parents": [
+        "Q1783551"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q111292310",
+      "label": "COM interface",
+      "description": "Component Object Model interface",
+      "parents": [
+        "Q165194"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q21169305",
+      "label": "combinatorial optimisation problem",
+      "description": "",
+      "parents": [
+        "Q984063"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q131539331",
+      "label": "Command Message",
+      "description": "",
+      "parents": [
+        "Q181156"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q99522703",
+      "label": "command-line argument",
+      "description": "individual token passed to a computer process on the command line",
+      "parents": [
+        "Q2143407"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q115368",
+      "label": "compass and straightedge construction",
+      "description": "way of drawing geometric objects using only an idealized compass and straightedge",
+      "parents": [
+        "Q10265536"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q140773680",
+      "label": "compensated summation",
+      "description": "class of summation algorithms",
+      "parents": [
+        "Q140773674"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "cs branches 81..100",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "way of drawing geometric objects using only an idealized compass and straightedge"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "compass and straightedge construction"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "尺規作圖"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "way of drawing geometric objects using only an idealized compass and straightedge"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "compass and straightedge construction"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "尺规作图"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "way of drawing geometric objects using only an idealized compass and straightedge"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "compass and straightedge construction"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "尺规作图"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "way of drawing geometric objects using only an idealized compass and straightedge"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "compass and straightedge construction"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "尺規作圖"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "way of drawing geometric objects using only an idealized compass and straightedge"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "compass and straightedge construction"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "尺規作圖"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communication code with signals representing letters, punctuation marks and numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Morse code"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "莫尔斯电码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communication code with signals representing letters, punctuation marks and numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Morse code"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "莫尔斯电码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188889"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communication code with signals representing letters, punctuation marks and numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Morse code"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "摩尔斯电码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communication code with signals representing letters, punctuation marks and numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Morse code"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "摩尔斯电码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188889"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communication code with signals representing letters, punctuation marks and numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Morse code"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "摩尔斯电码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communication code with signals representing letters, punctuation marks and numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Morse code"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "摩尔斯电码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188889"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communication code with signals representing letters, punctuation marks and numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Morse code"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "摩爾斯電碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communication code with signals representing letters, punctuation marks and numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Morse code"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "摩爾斯電碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188889"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communication code with signals representing letters, punctuation marks and numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Morse code"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "摩爾斯電碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communication code with signals representing letters, punctuation marks and numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Morse code"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "摩爾斯電碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188889"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communication code with signals representing letters, punctuation marks and numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Morse code"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "莫尔斯电码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1191702"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communication code with signals representing letters, punctuation marks and numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Morse code"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "摩尔斯电码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1191702"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communication code with signals representing letters, punctuation marks and numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Morse code"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "摩尔斯电码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1191702"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communication code with signals representing letters, punctuation marks and numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Morse code"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "摩爾斯電碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1191702"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communication code with signals representing letters, punctuation marks and numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Morse code"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "摩爾斯電碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1191702"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communication code with signals representing letters, punctuation marks and numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Morse code"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "莫尔斯电码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4004706"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communication code with signals representing letters, punctuation marks and numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Morse code"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "摩尔斯电码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4004706"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communication code with signals representing letters, punctuation marks and numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Morse code"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "摩尔斯电码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4004706"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communication code with signals representing letters, punctuation marks and numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Morse code"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "摩爾斯電碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4004706"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communication code with signals representing letters, punctuation marks and numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Morse code"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "摩爾斯電碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4004706"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communication code with signals representing letters, punctuation marks and numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Morse code"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "莫尔斯电码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q63801299"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communication code with signals representing letters, punctuation marks and numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Morse code"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "摩尔斯电码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q63801299"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communication code with signals representing letters, punctuation marks and numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Morse code"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "摩尔斯电码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q63801299"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communication code with signals representing letters, punctuation marks and numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Morse code"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "摩爾斯電碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q63801299"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communication code with signals representing letters, punctuation marks and numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Morse code"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "摩爾斯電碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q63801299"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8819"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computing industry standard for the consistent encoding, representation and handling of text expressed in most of the world's writing systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The Unicode Standard"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Unicode"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8819"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computing industry standard for the consistent encoding, representation and handling of text expressed in most of the world's writing systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The Unicode Standard"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Unicode"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8819"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computing industry standard for the consistent encoding, representation and handling of text expressed in most of the world's writing systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The Unicode Standard"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Unicode"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8819"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computing industry standard for the consistent encoding, representation and handling of text expressed in most of the world's writing systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The Unicode Standard"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Unicode"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8819"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computing industry standard for the consistent encoding, representation and handling of text expressed in most of the world's writing systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The Unicode Standard"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "統一碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8819"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computing industry standard for the consistent encoding, representation and handling of text expressed in most of the world's writing systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The Unicode Standard"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Unicode"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29149990"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8819"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computing industry standard for the consistent encoding, representation and handling of text expressed in most of the world's writing systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The Unicode Standard"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Unicode"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29149990"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8819"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computing industry standard for the consistent encoding, representation and handling of text expressed in most of the world's writing systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The Unicode Standard"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Unicode"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29149990"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8819"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computing industry standard for the consistent encoding, representation and handling of text expressed in most of the world's writing systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The Unicode Standard"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Unicode"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29149990"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8819"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computing industry standard for the consistent encoding, representation and handling of text expressed in most of the world's writing systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The Unicode Standard"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "統一碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29149990"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126010361"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ideographic Description Sequence (IDS) for HKSCS"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "HKSCS IDS"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "香港增補字符集：表意文字描述序列"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104721863"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding for the Vietnamese alphabet"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "VNI Character Set"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "VNI"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q61757001"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character sets used for Videotex"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Videotex character set"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Videotex字符集"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q489423"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "South Korean character set standard to represent hangul and hanja characters on a computer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "KS X 1001"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "KS X 1001"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q489423"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "South Korean character set standard to represent hangul and hanja characters on a computer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "KS X 1001"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "KS X 1001"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q489423"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "South Korean character set standard to represent hangul and hanja characters on a computer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "KS X 1001"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "KS X 1001"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q489423"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "South Korean character set standard to represent hangul and hanja characters on a computer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "KS X 1001"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "KS X 1001"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12623246"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q489423"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "South Korean character set standard to represent hangul and hanja characters on a computer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "KS X 1001"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "KS X 1001"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12623246"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q489423"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "South Korean character set standard to represent hangul and hanja characters on a computer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "KS X 1001"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "KS X 1001"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12623246"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q489423"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "South Korean character set standard to represent hangul and hanja characters on a computer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "KS X 1001"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "KS X 1001"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29149990"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q489423"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "South Korean character set standard to represent hangul and hanja characters on a computer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "KS X 1001"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "KS X 1001"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29149990"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q489423"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "South Korean character set standard to represent hangul and hanja characters on a computer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "KS X 1001"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "KS X 1001"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29149990"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q737372"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of alphabetic and numeric characters"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "alphanumeric"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "文數字"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q737372"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of alphabetic and numeric characters"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "alphanumeric"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "文數字"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2001982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q144352"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of obsolete single-byte character encodings for the Armenian alphabet defined by Armenian national standard 166-9 (3 variants: ArmSCII-7 defined in AST 34.005, and ArmSCII-8 or ArmSCII-8A defined in AST 34.002)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Armenian Standard Code for Information Interchange"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "亞美尼亞資訊交換標準代碼"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q733081"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "construction of an angle equal to one third a given angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "angle trisection"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "三等分角"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q733081"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "construction of an angle equal to one third a given angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "angle trisection"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "三等分角"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1166625"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q733081"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "construction of an angle equal to one third a given angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "angle trisection"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "三等分角"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q733081"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "construction of an angle equal to one third a given angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "angle trisection"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "三等分角"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q733081"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "construction of an angle equal to one third a given angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "angle trisection"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "三等分角"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1166625"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q733081"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "construction of an angle equal to one third a given angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "angle trisection"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "三等分角"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1166625"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q166760"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "controlled conversion between the color representations of various devices"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q166760"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "color management"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "色彩管理"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q830907"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Very large character set (174,975 characters+) and a font containing each character in the set"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Mojikyō"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "今昔文字鏡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q178285"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q830907"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Very large character set (174,975 characters+) and a font containing each character in the set"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Mojikyō"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "今昔文字鏡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q627945"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer character encoding"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "EBCDIC"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "EBCDIC"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q627945"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer character encoding"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "EBCDIC"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "EBCDIC"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q627945"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer character encoding"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "EBCDIC"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "EBCDIC"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184756"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "use of encoding systems for international characters in HTML"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding in HTML"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "HTML字符编码"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q386787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of character encoding scheme"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable-width character encoding"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "变长编码"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q386787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of character encoding scheme"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable-width character encoding"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "多字元字符"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q386787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of character encoding scheme"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable-width character encoding"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "多字元字符"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q386787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of character encoding scheme"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable-width character encoding"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "多字元字元"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q386787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of character encoding scheme"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable-width character encoding"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "可變長度編碼方案"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q166760"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "controlled conversion between the color representations of various devices"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q166760"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "color management"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "色彩管理"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system using a prescribed set of digital values to represent textual characters"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "字符编码"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system using a prescribed set of digital values to represent textual characters"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "字符编码"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system using a prescribed set of digital values to represent textual characters"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "字符编码"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system using a prescribed set of digital values to represent textual characters"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "字元編碼"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system using a prescribed set of digital values to represent textual characters"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "字元編碼法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q286345"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Japanese character encoding"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Shift JIS"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Shift JIS"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q286345"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Japanese character encoding"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Shift JIS"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Shift JIS"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q386787"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q286345"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Japanese character encoding"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Shift JIS"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Shift_JIS"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q286345"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Japanese character encoding"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Shift JIS"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Shift_JIS"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q286345"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Japanese character encoding"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Shift JIS"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Shift_JIS"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q386787"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q286345"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Japanese character encoding"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Shift JIS"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Shift_JIS"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q286345"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Japanese character encoding"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Shift JIS"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Shift_JIS"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q386787"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q286345"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Japanese character encoding"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Shift JIS"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Shift_JIS"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q386787"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q286345"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Japanese character encoding"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Shift JIS"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "Shift_JIS"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q286345"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Japanese character encoding"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Shift JIS"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "Shift_JIS"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q386787"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q830907"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Very large character set (174,975 characters+) and a font containing each character in the set"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Mojikyō"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "今昔文字鏡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17451"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q712676"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "North Korean character set standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "KPS 9566"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "KPS 9566"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q712676"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "North Korean character set standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "KPS 9566"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "KPS 9566"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184757"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q712676"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "North Korean character set standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "KPS 9566"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "KPS 9566"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q712676"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "North Korean character set standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "KPS 9566"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "KPS 9566"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184757"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q712676"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "North Korean character set standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "KPS 9566"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "KPS 9566"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q712676"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "North Korean character set standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "KPS 9566"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "KPS 9566"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184757"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184766"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of character encoding"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "code page"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "代码页"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184766"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of character encoding"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "code page"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "頁碼"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1484788"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "historical character set designed for the simplified Chinese writing system, standardized in GB 16500 and used in the People's Republic of China"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GBK"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "汉字内码扩展规范"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1484788"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "historical character set designed for the simplified Chinese writing system, standardized in GB 16500 and used in the People's Republic of China"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GBK"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "汉字内码扩展规范"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q834575"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1484788"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "historical character set designed for the simplified Chinese writing system, standardized in GB 16500 and used in the People's Republic of China"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GBK"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "汉字内码扩展规范"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29149990"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1484877"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding standardized in P.R. of China and mostly used for Simplified Chinese, compatible with the universal character set defined in The Unicode® Standard and the ISO/IEC 10646 standard, backward compatible with GB encodings"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GB 18030"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "GB 18030"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1484877"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding standardized in P.R. of China and mostly used for Simplified Chinese, compatible with the universal character set defined in The Unicode® Standard and the ISO/IEC 10646 standard, backward compatible with GB encodings"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GB 18030"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "GB 18030"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q834575"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1484877"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding standardized in P.R. of China and mostly used for Simplified Chinese, compatible with the universal character set defined in The Unicode® Standard and the ISO/IEC 10646 standard, backward compatible with GB encodings"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GB 18030"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "信息技术 中文编码字符集"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1484877"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding standardized in P.R. of China and mostly used for Simplified Chinese, compatible with the universal character set defined in The Unicode® Standard and the ISO/IEC 10646 standard, backward compatible with GB encodings"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GB 18030"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "信息技术 中文编码字符集"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q834575"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1484877"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding standardized in P.R. of China and mostly used for Simplified Chinese, compatible with the universal character set defined in The Unicode® Standard and the ISO/IEC 10646 standard, backward compatible with GB encodings"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GB 18030"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "GB 18030"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29149990"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1484877"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding standardized in P.R. of China and mostly used for Simplified Chinese, compatible with the universal character set defined in The Unicode® Standard and the ISO/IEC 10646 standard, backward compatible with GB encodings"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GB 18030"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "信息技术 中文编码字符集"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29149990"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1421973"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "historical character encoding designed mainly for the simplified ideographic writing system used in the People's Republic of China, with a very basic support of a few other scripts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GB 2312"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "GB 2312"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1421973"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "historical character encoding designed mainly for the simplified ideographic writing system used in the People's Republic of China, with a very basic support of a few other scripts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GB 2312"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "GB 2312"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q834575"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1421973"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "historical character encoding designed mainly for the simplified ideographic writing system used in the People's Republic of China, with a very basic support of a few other scripts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GB 2312"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "信息交换用汉字编码字符集·基本集"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1421973"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "historical character encoding designed mainly for the simplified ideographic writing system used in the People's Republic of China, with a very basic support of a few other scripts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GB 2312"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "信息交换用汉字编码字符集·基本集"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q834575"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1421973"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "historical character encoding designed mainly for the simplified ideographic writing system used in the People's Republic of China, with a very basic support of a few other scripts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GB 2312"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "GB 2312"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1421973"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "historical character encoding designed mainly for the simplified ideographic writing system used in the People's Republic of China, with a very basic support of a few other scripts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GB 2312"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "GB 2312"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q834575"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1421973"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "historical character encoding designed mainly for the simplified ideographic writing system used in the People's Republic of China, with a very basic support of a few other scripts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GB 2312"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "GB 2312"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1421973"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "historical character encoding designed mainly for the simplified ideographic writing system used in the People's Republic of China, with a very basic support of a few other scripts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GB 2312"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "GB 2312"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q834575"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1421973"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "historical character encoding designed mainly for the simplified ideographic writing system used in the People's Republic of China, with a very basic support of a few other scripts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GB 2312"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "GB 2312"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29149990"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1484877"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding standardized in P.R. of China and mostly used for Simplified Chinese, compatible with the universal character set defined in The Unicode® Standard and the ISO/IEC 10646 standard, backward compatible with GB encodings"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GB 18030"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "GB 18030"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q125262501"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1484877"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding standardized in P.R. of China and mostly used for Simplified Chinese, compatible with the universal character set defined in The Unicode® Standard and the ISO/IEC 10646 standard, backward compatible with GB encodings"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GB 18030"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "信息技术 中文编码字符集"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q125262501"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1421973"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "historical character encoding designed mainly for the simplified ideographic writing system used in the People's Republic of China, with a very basic support of a few other scripts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GB 2312"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "信息交换用汉字编码字符集·基本集"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29149990"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1421973"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "historical character encoding designed mainly for the simplified ideographic writing system used in the People's Republic of China, with a very basic support of a few other scripts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GB 2312"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "GB 2312"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29149990"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1421973"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "historical character encoding designed mainly for the simplified ideographic writing system used in the People's Republic of China, with a very basic support of a few other scripts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GB 2312"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "GB 2312"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29149990"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1779479"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "used in mathematics to solve differential and integral equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1779479"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "collocation method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "選點法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1811300"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding defined in RFC 1456 supporting the Vietnamese alphabet (use Q54810388 for the similarly named encoding defined in TCVN 5712:1993)."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "VISCII"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "越南資訊交換標準代碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1811300"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding defined in RFC 1456 supporting the Vietnamese alphabet (use Q54810388 for the similarly named encoding defined in TCVN 5712:1993)."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "VISCII"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "越南资讯交换标准代码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1811300"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding defined in RFC 1456 supporting the Vietnamese alphabet (use Q54810388 for the similarly named encoding defined in TCVN 5712:1993)."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "VISCII"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "越南資訊交換標準代碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1811300"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding defined in RFC 1456 supporting the Vietnamese alphabet (use Q54810388 for the similarly named encoding defined in TCVN 5712:1993)."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "VISCII"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "越南資訊交換標準代碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2610482"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1811300"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding defined in RFC 1456 supporting the Vietnamese alphabet (use Q54810388 for the similarly named encoding defined in TCVN 5712:1993)."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "VISCII"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "越南资讯交换标准代码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2610482"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1811300"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding defined in RFC 1456 supporting the Vietnamese alphabet (use Q54810388 for the similarly named encoding defined in TCVN 5712:1993)."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "VISCII"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "越南資訊交換標準代碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2610482"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1811300"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding defined in RFC 1456 supporting the Vietnamese alphabet (use Q54810388 for the similarly named encoding defined in TCVN 5712:1993)."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "VISCII"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "越南資訊交換標準代碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29149990"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1811300"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding defined in RFC 1456 supporting the Vietnamese alphabet (use Q54810388 for the similarly named encoding defined in TCVN 5712:1993)."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "VISCII"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "越南资讯交换标准代码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29149990"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1811300"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding defined in RFC 1456 supporting the Vietnamese alphabet (use Q54810388 for the similarly named encoding defined in TCVN 5712:1993)."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "VISCII"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "越南資訊交換標準代碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29149990"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1414579"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "8-bit character encoding"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tamil Script Code for Information Interchange"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "泰米爾文字資訊交換碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1414579"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "8-bit character encoding"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tamil Script Code for Information Interchange"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "泰米尔文字资讯交换码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1414579"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "8-bit character encoding"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tamil Script Code for Information Interchange"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "泰米爾文字資訊交換碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2100701"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fractionated cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10855346"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trifid cipher"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "三分密碼"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1661279"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coding scheme for Indian writing systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Indian Script Code for Information Interchange"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "印度文字資訊交換碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q835937"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "text written in the opposite to usual direction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10855346"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mirror writing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "鏡像書寫"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q835937"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "text written in the opposite to usual direction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10855346"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mirror writing"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "镜像书写"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q835937"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "text written in the opposite to usual direction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10855346"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mirror writing"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "鏡像書寫"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1924819"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in a programming language, class whose instances are classes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4479242"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "metaclass"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "元类"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q840498"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of encryption by which the positions held by units of plaintext (which are commonly characters or groups of characters) are shifted according to a regular system, so that the ciphertext constitutes a permutation of the plaintext"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10855346"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transposition cipher"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "置換式密碼"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q840498"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of encryption by which the positions held by units of plaintext (which are commonly characters or groups of characters) are shifted according to a regular system, so that the ciphertext constitutes a permutation of the plaintext"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10855346"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transposition cipher"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "转置密码"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q840498"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of encryption by which the positions held by units of plaintext (which are commonly characters or groups of characters) are shifted according to a regular system, so that the ciphertext constitutes a permutation of the plaintext"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10855346"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transposition cipher"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "转置密码"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q840498"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of encryption by which the positions held by units of plaintext (which are commonly characters or groups of characters) are shifted according to a regular system, so that the ciphertext constitutes a permutation of the plaintext"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10855346"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transposition cipher"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "轉置密碼"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2512796"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "part of KOI character encodings"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "KOI-8"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "KOI-8"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2512796"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "part of KOI character encodings"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "KOI-8"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "KOI-8"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2512796"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "part of KOI character encodings"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "KOI-8"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "KOI-8"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2610482"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nick-name for ASCII-derived 8-bit character sets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Extended ASCII"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "EASCII"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2610482"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nick-name for ASCII-derived 8-bit character sets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Extended ASCII"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "EASCII"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2610482"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nick-name for ASCII-derived 8-bit character sets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Extended ASCII"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "EASCII"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1015387"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ISO standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ISO 6438"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "ISO 6438"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1015387"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ISO standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ISO 6438"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "ISO 6438"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1015387"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ISO standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ISO 6438"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "ISO 6438"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1015387"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ISO standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ISO 6438"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "ISO 6438"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15087423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1015387"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ISO standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ISO 6438"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "ISO 6438"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15087423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1015387"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ISO standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ISO 6438"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "ISO 6438"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15087423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1057678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of data structure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4479242"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "C++ class"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "C++类"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1057678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of data structure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4479242"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "C++ class"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "C++类"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1057678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of data structure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4479242"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "C++ class"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "C++类"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1057678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of data structure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4479242"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "C++ class"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "C++類別"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1057678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of data structure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4479242"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "C++ class"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "C++類別"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1277797"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "developing a plan to play this game in the course of a chess game"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1277797"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "chess strategy"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "國際象棋策略"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1627000"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "HKSCS"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "香港增補字符集"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1627000"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "HKSCS"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "香港增補字符集"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184757"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1965861"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "classes declared inside another class"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4479242"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Inner class"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "内在类"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1965861"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "classes declared inside another class"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4479242"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Inner class"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "内部类"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1965861"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "classes declared inside another class"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4479242"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Inner class"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "内部类"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1965861"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "classes declared inside another class"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4479242"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Inner class"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "內部類"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1186870"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding in which characters are encoded in one or two bytes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "DBCS"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "雙位元組字元集"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1186870"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding in which characters are encoded in one or two bytes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "DBCS"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "双字节字符集"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1186870"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding in which characters are encoded in one or two bytes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "DBCS"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "双位元组字元集"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1186870"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding in which characters are encoded in one or two bytes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "DBCS"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "雙位元組字元集"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2670506"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "given a circle and its centre, the problem of dividing the circle into four equal arcs using only a compass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Napoleon's problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "拿破崙問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2670506"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "given a circle and its centre, the problem of dividing the circle into four equal arcs using only a compass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Napoleon's problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "拿破仑问题"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2670506"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "given a circle and its centre, the problem of dividing the circle into four equal arcs using only a compass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Napoleon's problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "拿破崙問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2670506"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "given a circle and its centre, the problem of dividing the circle into four equal arcs using only a compass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Napoleon's problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "拿破崙問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1166625"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2670506"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "given a circle and its centre, the problem of dividing the circle into four equal arcs using only a compass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Napoleon's problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "拿破仑问题"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1166625"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2670506"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "given a circle and its centre, the problem of dividing the circle into four equal arcs using only a compass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115368"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Napoleon's problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "拿破崙問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1166625"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1779479"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4949970"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Boundary particle method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "边界粒子法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1779479"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10855346"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1102408"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Straddling checkerboard number"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "散列板"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10855346"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1102408"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Straddling checkerboard number"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "散列板"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10855346"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1102408"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Straddling checkerboard number"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "散列板"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55670208"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character code"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "字元碼"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55670208"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character code"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "字元碼"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55670208"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character code"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "字元碼"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4479242"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623007"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Partial class"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "不完全类型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190087"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4479242"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623007"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Partial class"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "不完全类型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190087"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4479242"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623007"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Partial class"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "不完全類型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190087"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3708937"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "square table of alphabets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10855346"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tabula recta"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "表格法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9363228"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character set standard published by the People's Republic of China for representing Korean"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GB 12052"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "GB 12052"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9363228"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character set standard published by the People's Republic of China for representing Korean"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GB 12052"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "GB 12052"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q834575"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9363228"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character set standard published by the People's Republic of China for representing Korean"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GB 12052"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "GB 12052"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29149990"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4479242"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in object-oriented programming, a definition that specifies how an object works"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4479242"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "类"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4994879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cipher that operates on semantic tokens, rather than individual symbols or fixed-size blocks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4994879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "code"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "编码"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4994879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cipher that operates on semantic tokens, rather than individual symbols or fixed-size blocks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4994879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "code"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "编码"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10855346"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a type of cipher that was used historically but now has fallen, for the most part, into disuse. In contrast to modern cryptographic algorithms, most classical ciphers can be practically computed and solved by hand"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10855346"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "classical cipher"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "經典密碼"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4844645"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Object relationship in programming language"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4479242"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "friend class"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "友誼類別"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5970136"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "COM interface initially designed to support Automation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111292310"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "IDispatch"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "IDispatch"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111292310"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5100952"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "four-digit decimal character encoding for electrically telegraphing messages written with Chinese characters"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Chinese telegraph code"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "中文电码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5100952"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "four-digit decimal character encoding for electrically telegraphing messages written with Chinese characters"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Chinese telegraph code"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "中文電碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q56251056"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptocurrency price data website and app"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q56251056"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "CoinMarketCap"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "CoinMarketCap"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q620615"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q56251056"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptocurrency price data website and app"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q56251056"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "CoinMarketCap"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "CoinMarketCap"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q783794"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29149990"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character set in which each character corresponds to a unique number"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coded character set"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "编码字符集"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29149990"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character set in which each character corresponds to a unique number"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coded character set"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "编码字符集"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29149990"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character set in which each character corresponds to a unique number"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coded character set"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "編碼字元集"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29149990"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character set in which each character corresponds to a unique number"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coded character set"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "編碼字元集"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7489000"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "precursor to arithmetic coding, in which probabilities are used to determine codewords"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Shannon–Fano–Elias coding"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "夏農–菲諾–以利亞碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3900173"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Indian government standard for encoding Kashmiri, Persian, Sindhi, and Urdu"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Perso-Arabic Script Code for Information Interchange"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "波斯阿拉伯文字資訊交換碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3490491"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kamenický encoding"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Kamenický編碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2981616"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "information theory technique for assigning shorter encoding sequences to more frequently-occurring represented elements"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable-length code"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "可變長度編碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2981616"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "information theory technique for assigning shorter encoding sequences to more frequently-occurring represented elements"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable-length code"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "可变长度代码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2981616"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "information theory technique for assigning shorter encoding sequences to more frequently-occurring represented elements"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable-length code"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "变长码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2981616"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "information theory technique for assigning shorter encoding sequences to more frequently-occurring represented elements"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable-length code"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "可變長度程式碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2981616"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "information theory technique for assigning shorter encoding sequences to more frequently-occurring represented elements"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable-length code"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "可變長度編碼法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28454447"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character set used by the Lotus 1-2-3 spreadsheet 2.x for DOS"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lotus International Character Set"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "莲花国际字符集"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2903897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "MIME compatible Unicode compression scheme"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Binary Ordered Compression for Unicode"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Unicode二进制有序压缩"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2903897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "MIME compatible Unicode compression scheme"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Binary Ordered Compression for Unicode"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Unicode二进制有序压缩"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2903897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "MIME compatible Unicode compression scheme"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Binary Ordered Compression for Unicode"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Unicode二进制有序压缩"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2903897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "MIME compatible Unicode compression scheme"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Binary Ordered Compression for Unicode"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Unicode二進位制有序壓縮"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4994879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cipher that operates on semantic tokens, rather than individual symbols or fixed-size blocks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4994879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "code"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "编码 (密码学)"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4994879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cipher that operates on semantic tokens, rather than individual symbols or fixed-size blocks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4994879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "code"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "編碼 (密碼學)"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5975453"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Base interface of every other COM interface."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111292310"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "IUnknown"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "IUnknown"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111292310"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7684384"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "encoding for text messages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tap code"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "敲打密碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7684384"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "encoding for text messages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tap code"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "敲打密碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188889"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7684384"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "encoding for text messages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tap code"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "點按代碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7684384"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "encoding for text messages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tap code"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "點按代碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188889"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7684384"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "encoding for text messages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tap code"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "點按程式碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7684384"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "encoding for text messages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tap code"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "點按程式碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188889"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q39087152"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding and character set extensions standardized for telecommunicationand broadcasting in Japan"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ARIB STD B24 character set"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "ARIB外字"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22937538"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character set for Viewdata"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Teletext"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Teletext字符集"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q54810388"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding defined in TCVN 5712:1993 supporting the Vietnamese alphabet (use Q1811300 for the similarly named encoding defined in RFC 1456)."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "VSCII"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "越南資訊交換標準代碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q54810388"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character encoding defined in TCVN 5712:1993 supporting the Vietnamese alphabet (use Q1811300 for the similarly named encoding defined in RFC 1456)."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q184759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "VSCII"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "越南資訊交換標準代碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29149990"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2982293"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computation algorithm to sum a sequence of floating-point numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q140773680"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kahan summation algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "卡韓求和算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q140773680"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q56251056"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptocurrency price data website and app"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q56251056"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "CoinMarketCap"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "CoinMarketCap"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q35127"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q56251056"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptocurrency price data website and app"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q56251056"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "CoinMarketCap"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "CoinMarketCap"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q38926"
+      }
+    }
+  ]
+}

@@ -1,0 +1,4284 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q126960107 wd:Q126975116 wd:Q139054791 wd:Q126899076 wd:Q126899121 wd:Q126902527 wd:Q126972033 wd:Q126957478 wd:Q126837020 wd:Q131551126 wd:Q131579073 wd:Q126951559 wd:Q139549558 wd:Q139568461 wd:Q139568453 wd:Q126946244 wd:Q126888404 wd:Q128318935 wd:Q139549641 wd:Q131577903 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q126960107 wd:Q126975116 wd:Q139054791 wd:Q126899076 wd:Q126899121 wd:Q126902527 wd:Q126972033 wd:Q126957478 wd:Q126837020 wd:Q131551126 wd:Q131579073 wd:Q126951559 wd:Q139549558 wd:Q139568461 wd:Q139568453 wd:Q126946244 wd:Q126888404 wd:Q128318935 wd:Q139549641 wd:Q131577903 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q126960107 wd:Q126975116 wd:Q139054791 wd:Q126899076 wd:Q126899121 wd:Q126902527 wd:Q126972033 wd:Q126957478 wd:Q126837020 wd:Q131551126 wd:Q131579073 wd:Q126951559 wd:Q139549558 wd:Q139568461 wd:Q139568453 wd:Q126946244 wd:Q126888404 wd:Q128318935 wd:Q139549641 wd:Q131577903 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "71a2a3e357012a9f27b3e894d442d211ed13b7bed78bf06243bc1a0832985d95",
+  "responseSha256": "1070b74557d4cf127d1447186f03c6ebc1da1c65bd34867a8ff7a95e3e9057a2",
+  "retrievedAt": "2026-10-04T05:07:15.655596+00:00",
+  "license": "CC0-1.0",
+  "domain": "physics",
+  "roots": [
+    {
+      "domain": "physics",
+      "id": "Q126960107",
+      "label": "unit of electric field strength",
+      "description": "unit for reporting measurement of electric field strength",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126975116",
+      "label": "unit of electric flux",
+      "description": "unit for reporting measurement of electric flux",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q139054791",
+      "label": "unit of electric polarization",
+      "description": "unit for reporting electric polartization",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126899076",
+      "label": "unit of electric potential",
+      "description": "unit for reporting measurement of electric potential",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126899121",
+      "label": "unit of electric potential difference",
+      "description": "unit for reporting measurement of electric potential difference",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126902527",
+      "label": "unit of electric resistance",
+      "description": "unit for reporting measurement of electric resistance",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126972033",
+      "label": "unit of electric resistivity",
+      "description": "unit for reporting measurement of electric resistivity",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126957478",
+      "label": "unit of electrolytic conductivity",
+      "description": "unit for reporting measurement of electrolytic conductivity",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126837020",
+      "label": "unit of energy density",
+      "description": "unit of measurement for energy per volume",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q131551126",
+      "label": "unit of energy distribution of cross section",
+      "description": "unit for reporting energy distribution of cross section",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q131579073",
+      "label": "unit of energy fluence",
+      "description": "unit for reporting energy fluence",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126951559",
+      "label": "unit of energy fluence rate",
+      "description": "unit for reporting measurement of energy fluence rate",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q139549558",
+      "label": "unit of energy flux density",
+      "description": "unit for reporting energy flux density",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q139568461",
+      "label": "unit of energy per amount of data",
+      "description": "unit for reporting energy per amount of data",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q139568453",
+      "label": "unit of energy price",
+      "description": "unit for reporting energy price",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126946244",
+      "label": "unit of entropy",
+      "description": "unit for reporting measurement of entropy",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126888404",
+      "label": "unit of exposure",
+      "description": "unit for reporting measurement of exposure",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q128318935",
+      "label": "unit of exposure rate",
+      "description": "unit for reporting the increase in exposure to ionizing radiation per unit of time",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q139549641",
+      "label": "unit of floating-point operation rate",
+      "description": "unit for reporting floating-point operation rate",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q131577903",
+      "label": "unit of fluidity",
+      "description": "unit for reporting fluidity",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "physics branches 601..620",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106707404"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of entropy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126946244"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per square second kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每平方秒开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106707404"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of entropy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126946244"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per square second kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每平方秒开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126946244"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107222200"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of exposure rate"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128318935"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ampere per kilogram"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "安培/千克"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107222200"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of exposure rate"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128318935"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ampere per kilogram"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "安培/千克"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128318935"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107299709"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per cubic second ampere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每立方秒安培"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107299709"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per cubic second ampere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每立方秒安培"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107299709"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per cubic second ampere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每立方秒安培"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107299709"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per cubic second ampere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每立方秒安培"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107299360"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical resistivity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126972033"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram cubic metre per cubic second square ampere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克立方米每立方秒平方安培"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107299360"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical resistivity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126972033"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram cubic metre per cubic second square ampere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克立方米每立方秒平方安培"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126972033"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107299709"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per cubic second ampere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每立方秒安培"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107299709"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per cubic second ampere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每立方秒安培"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107299709"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per cubic second ampere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每立方秒安培"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107299709"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per cubic second ampere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每立方秒安培"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107096164"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical conductivity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126957478"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cubic second square ampere per kilogram cubic metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "立方秒平方安培每千克立方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107096164"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical conductivity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126957478"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cubic second square ampere per kilogram cubic metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "立方秒平方安培每千克立方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126957475"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107096164"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical conductivity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126957478"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cubic second square ampere per kilogram cubic metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "立方秒平方安培每千克立方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126957478"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188768"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of computer performance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139549641"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "FLOPS"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "每秒浮點運算次數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q78754808"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188768"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of computer performance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139549641"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "FLOPS"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "每秒浮点运算次数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q78754808"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188768"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of computer performance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139549641"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "FLOPS"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "每秒浮點運算次數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q78754808"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188768"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of computer performance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139549641"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "FLOPS"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "每秒浮點運算次數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139549641"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188768"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of computer performance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139549641"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "FLOPS"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "每秒浮点运算次数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139549641"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188768"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of computer performance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139549641"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "FLOPS"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "每秒浮點運算次數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139549641"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928085"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928167"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "歐姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "歐姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "歐姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "歐姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "歐姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928085"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "歐姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "歐姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928167"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q321017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "legacy unit of measurement for the kerma of X-rays and gamma rays up to 3 MeV; equals 0.258 mC/kg"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126888404"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "roentgen"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "倫琴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q321017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "legacy unit of measurement for the kerma of X-rays and gamma rays up to 3 MeV; equals 0.258 mC/kg"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126888404"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "roentgen"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "伦琴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q321017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "legacy unit of measurement for the kerma of X-rays and gamma rays up to 3 MeV; equals 0.258 mC/kg"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126888404"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "roentgen"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "伦琴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q321017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "legacy unit of measurement for the kerma of X-rays and gamma rays up to 3 MeV; equals 0.258 mC/kg"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126888404"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "roentgen"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "倫琴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q321017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "legacy unit of measurement for the kerma of X-rays and gamma rays up to 3 MeV; equals 0.258 mC/kg"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126888404"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "roentgen"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "倫琴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q321017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "legacy unit of measurement for the kerma of X-rays and gamma rays up to 3 MeV; equals 0.258 mC/kg"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126888404"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "roentgen"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "倫琴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126888404"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q321017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "legacy unit of measurement for the kerma of X-rays and gamma rays up to 3 MeV; equals 0.258 mC/kg"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126888404"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "roentgen"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "伦琴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126888404"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q321017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "legacy unit of measurement for the kerma of X-rays and gamma rays up to 3 MeV; equals 0.258 mC/kg"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126888404"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "roentgen"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "伦琴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126888404"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q321017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "legacy unit of measurement for the kerma of X-rays and gamma rays up to 3 MeV; equals 0.258 mC/kg"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126888404"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "roentgen"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "倫琴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126888404"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q321017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "legacy unit of measurement for the kerma of X-rays and gamma rays up to 3 MeV; equals 0.258 mC/kg"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126888404"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "roentgen"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "倫琴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126888404"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139549641"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5558595"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gigaflops"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "GFLOPS"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139549641"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139549641"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66778234"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "teraflops"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "TFLOPS"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139549641"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139549641"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66778809"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "megaflops"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "MFLOPS"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139549641"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139549641"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66778863"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "petaflops"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千万亿flops"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139549641"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2554092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilovolt"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "千伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2554092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilovolt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "千伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3566737"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of intensity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126951559"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "watt per square metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "瓦特每平方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106688958"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of heat flow density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126951559"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per cubic second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克每立方秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3566737"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of intensity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126951559"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "watt per square metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "瓦特每平方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126951559"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3566737"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of intensity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126951559"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "watt per square metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "瓦特每平方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126951571"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q80374519"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of radiant exposure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131579073"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per square metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "焦耳每平方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106688958"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of heat flow density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126951559"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per cubic second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克每立方秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126951559"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106688958"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of heat flow density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126951559"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per cubic second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克每立方秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126951571"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q80374519"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of radiant exposure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131579073"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per square metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "焦耳每平方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127828818"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2554092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilovolt"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "千伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2554092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilovolt"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "千伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2554092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilovolt"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "千伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2554092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilovolt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "千伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2554092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilovolt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "千伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2554092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilovolt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "千伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q80374519"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of radiant exposure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131579073"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per square metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "焦耳每平方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131579073"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2448803"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "millivolt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "毫伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2448803"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "millivolt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "毫伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2448803"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "millivolt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "毫伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2448803"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "millivolt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "毫伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1091059"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical resistance in the emu-cgs system; equals 1 nanoohm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abohm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "绝对欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1091059"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical resistance in the emu-cgs system; equals 1 nanoohm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abohm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "绝对欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928085"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1091059"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical resistance in the emu-cgs system; equals 1 nanoohm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abohm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "绝对欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1091059"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical resistance in the emu-cgs system; equals 1 nanoohm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abohm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "绝对欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928167"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1091059"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical resistance in the emu-cgs system; equals 1 nanoohm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abohm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "绝对欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1091059"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical resistance in the emu-cgs system; equals 1 nanoohm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abohm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "绝对欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928085"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1091059"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical resistance in the emu-cgs system; equals 1 nanoohm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abohm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "绝对欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1091059"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical resistance in the emu-cgs system; equals 1 nanoohm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abohm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "绝对欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928167"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1091059"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical resistance in the emu-cgs system; equals 1 nanoohm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abohm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "絕對歐姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1091059"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical resistance in the emu-cgs system; equals 1 nanoohm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abohm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "絕對歐姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928085"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1091059"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical resistance in the emu-cgs system; equals 1 nanoohm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abohm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "絕對歐姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1091059"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical resistance in the emu-cgs system; equals 1 nanoohm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abohm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "絕對歐姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928167"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2448803"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "millivolt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "毫伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2448803"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "millivolt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "毫伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2448803"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "millivolt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "毫伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2448803"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "millivolt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "毫伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3562962"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric field strength"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126960107"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt per metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伏特每公尺"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3562962"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric field strength"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126960107"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt per metre"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "伏特每公尺"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3562962"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric field strength"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126960107"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt per metre"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "伏特每公尺"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3562962"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric field strength"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126960107"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt per metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伏特每公尺"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126960107"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3562962"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric field strength"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126960107"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt per metre"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "伏特每公尺"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126960107"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3562962"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric field strength"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126960107"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt per metre"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "伏特每公尺"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126960107"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q100293463"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of fluidity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131577903"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "reciprocal pascal second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "倒帕斯卡秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q100293463"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of fluidity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131577903"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "reciprocal pascal second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "倒帕斯卡秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131577903"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1441459"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric resistivity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126972033"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "欧姆米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1441459"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric resistivity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126972033"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "欧姆米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126972033"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69424806"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of energy density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126837020"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per cubic metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "焦耳/立方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69424806"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of energy density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126837020"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per cubic metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "焦耳/立方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126837020"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2554092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilovolt"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "千伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2554092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilovolt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "千伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q99721917"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of exposure rate"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128318935"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coulomb per kilogram second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "库仑每千克秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q99721917"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of exposure rate"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128318935"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coulomb per kilogram second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "库仑每千克秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128318935"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2554092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilovolt"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "千伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2554092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilovolt"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "千伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2554092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilovolt"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "千伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2554092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilovolt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "千伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2554092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilovolt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "千伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2554092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilovolt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "千伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28683485"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of exposure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126888404"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coulomb per kilogram"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "库仑/千克"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28683485"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of exposure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126888404"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coulomb per kilogram"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "库仑/千克"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126888404"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q83948162"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric flux"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126975116"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伏特米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q83948162"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric flux"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126975116"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伏特米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126975116"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98267267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of energy distribution of cross section"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131551126"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "square metre per joule"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "每焦耳平方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98267267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of energy distribution of cross section"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131551126"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "square metre per joule"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "每焦耳平方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131551126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21393312"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of entropy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126946244"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "焦耳/开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21393312"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of entropy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126946244"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "焦耳/开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21393312"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of entropy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126946244"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "焦耳/开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126946244"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q97541209"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of the gyromagnetic ratio"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126888404"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ampere second per kilogram"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "安培秒每千克"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q97541209"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of the gyromagnetic ratio"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126888404"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ampere second per kilogram"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "安培秒每千克"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126888404"
+      }
+    }
+  ]
+}

@@ -1,0 +1,4110 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q531152 wd:Q97159636 wd:Q197536 wd:Q113364611 wd:Q2146125 wd:Q5253991 wd:Q4365417 wd:Q997433 wd:Q1949683 wd:Q1224342 wd:Q29793089 wd:Q29791662 wd:Q188695 wd:Q1259393 wd:Q41408440 wd:Q2835898 wd:Q5283146 wd:Q25110971 wd:Q848539 wd:Q302088 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q531152 wd:Q97159636 wd:Q197536 wd:Q113364611 wd:Q2146125 wd:Q5253991 wd:Q4365417 wd:Q997433 wd:Q1949683 wd:Q1224342 wd:Q29793089 wd:Q29791662 wd:Q188695 wd:Q1259393 wd:Q41408440 wd:Q2835898 wd:Q5283146 wd:Q25110971 wd:Q848539 wd:Q302088 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q531152 wd:Q97159636 wd:Q197536 wd:Q113364611 wd:Q2146125 wd:Q5253991 wd:Q4365417 wd:Q997433 wd:Q1949683 wd:Q1224342 wd:Q29793089 wd:Q29791662 wd:Q188695 wd:Q1259393 wd:Q41408440 wd:Q2835898 wd:Q5283146 wd:Q25110971 wd:Q848539 wd:Q302088 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "03a405375bbb3056c8ab7d077f05dfab34850338111953d09ff08d8440b373a4",
+  "responseSha256": "29085eaeaeb678f42d5cfbf688213c91ac0988c842dc192e0544ba5e8c29c833",
+  "retrievedAt": "2026-10-04T05:08:34.088282+00:00",
+  "license": "CC0-1.0",
+  "domain": "cs",
+  "roots": [
+    {
+      "domain": "cs",
+      "id": "Q531152",
+      "label": "declarative programming",
+      "description": "programming paradigm that expresses the logic of a computation without describing its control flow",
+      "parents": [
+        "Q188267"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q97159636",
+      "label": "Deep Convolutional GAN",
+      "description": "",
+      "parents": [
+        "Q25104379"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q197536",
+      "label": "deep learning",
+      "description": "specialized form of machine learning that uses artificial neural networks to identify patterns in data",
+      "parents": [
+        "Q111862379"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q113364611",
+      "label": "deep learning model",
+      "description": "description of a deep learning network",
+      "parents": [
+        "Q115215420"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q2146125",
+      "label": "delay differential equation",
+      "description": "type of differential equation",
+      "parents": [
+        "Q11214"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q5253991",
+      "label": "delimited continuation",
+      "description": "a continuation that returns a value and thus may be reused and composed",
+      "parents": [
+        "Q1128903"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q4365417",
+      "label": "dense index",
+      "description": "type of database index",
+      "parents": [
+        "Q580427"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q997433",
+      "label": "dependent type",
+      "description": "data type whose definition depends on a value",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1949683",
+      "label": "deterrence theory",
+      "description": "theory of preventing aggression through threat of force",
+      "parents": [
+        "Q1546627"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1224342",
+      "label": "difference list",
+      "description": "list data structure",
+      "parents": [
+        "Q27948"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q29793089",
+      "label": "digital search tree",
+      "description": "trie data structure which stores the strings in internal nodes",
+      "parents": [
+        "Q223655"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q29791662",
+      "label": "digital tree",
+      "description": "tree data structure for storing strings in which nodes are organized by substrings common to two or more strings",
+      "parents": [
+        "Q223655"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q188695",
+      "label": "DirectX",
+      "description": "collection of multimedia related APIs on Microsoft platforms",
+      "parents": [
+        "Q165194"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1259393",
+      "label": "disjoint-set data structure",
+      "description": "data structure that keeps track of a set of elements partitioned into a number of disjoint (nonoverlapping) subsets",
+      "parents": [
+        "Q223655"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q41408440",
+      "label": "disk scheduling algorithm",
+      "description": "",
+      "parents": [
+        "Q41401699"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q2835898",
+      "label": "distributed algorithm",
+      "description": "algorithm designed to run on computer hardware constructed from interconnected processors",
+      "parents": [
+        "Q1087987"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q5283146",
+      "label": "distributed design pattern",
+      "description": "",
+      "parents": [
+        "Q181156"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q25110971",
+      "label": "distributed ledger",
+      "description": "store of digital data spread across multiple sites and synchronized via a consensus algorithm",
+      "parents": [
+        "Q85914626"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q848539",
+      "label": "division by zero",
+      "description": "the result yielded by a real number when divided by zero",
+      "parents": [
+        "Q1226939"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q302088",
+      "label": "document classification",
+      "description": "problem in library science, information science and computer science",
+      "parents": [
+        "Q1744628"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "cs branches 141..160",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q220849"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical scheme for verifying the authenticity of digital documents"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835898"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital signature"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "數位簽章"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q137552198"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q220849"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical scheme for verifying the authenticity of digital documents"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835898"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital signature"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "数字签名"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q137552198"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q220849"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical scheme for verifying the authenticity of digital documents"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835898"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital signature"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "数字签名"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q137552198"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q220849"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical scheme for verifying the authenticity of digital documents"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835898"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital signature"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "數位簽章"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q137552198"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q220849"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical scheme for verifying the authenticity of digital documents"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835898"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital signature"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "數位簽章"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q137552198"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q302088"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "problem in library science, information science and computer science"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q302088"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "document classification"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "文档分类"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q302088"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "problem in library science, information science and computer science"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q302088"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "document classification"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "文档分类"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q302088"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "problem in library science, information science and computer science"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q302088"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "document classification"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "文件分類"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q275603"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm based on formal logic"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic programming"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "邏輯編程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188267"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q275603"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm based on formal logic"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic programming"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "逻辑编程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188267"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q275603"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm based on formal logic"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic programming"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "逻辑编程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188267"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q275603"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm based on formal logic"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic programming"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "邏輯編程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188267"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q275603"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm based on formal logic"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic programming"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "邏輯編程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188267"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q275603"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm based on formal logic"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic programming"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "邏輯編程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q275603"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm based on formal logic"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic programming"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "逻辑编程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q275603"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm based on formal logic"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic programming"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "逻辑编程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q275603"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm based on formal logic"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic programming"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "邏輯編程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q275603"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm based on formal logic"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic programming"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "邏輯編程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q193076"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm based on applying and composing functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "functional programming"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "函数式编程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188267"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q193076"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm based on applying and composing functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "functional programming"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "函数式编程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188267"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q193076"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm based on applying and composing functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "functional programming"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "函数式编程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188267"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q193076"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm based on applying and composing functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "functional programming"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "函數式編程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188267"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q193076"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm based on applying and composing functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "functional programming"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "函数式编程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q193076"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm based on applying and composing functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "functional programming"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "函数式编程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q193076"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm based on applying and composing functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "functional programming"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "函数式编程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q193076"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm based on applying and composing functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "functional programming"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "函數式編程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q197536"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "specialized form of machine learning that uses artificial neural networks to identify patterns in data"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q197536"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deep learning"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "深度学习"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q197536"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "specialized form of machine learning that uses artificial neural networks to identify patterns in data"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q197536"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deep learning"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "深度学习"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q197536"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "specialized form of machine learning that uses artificial neural networks to identify patterns in data"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q197536"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deep learning"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "深度學習"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q124362453"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deep learning architecture"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Mamba"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Mamba (深度学习架构)"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113660857"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "image-generating machine learning model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Stable Diffusion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Stable Diffusion"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1806885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113660857"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "image-generating machine learning model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Stable Diffusion"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Stable Diffusion"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1806885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113660857"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "image-generating machine learning model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Stable Diffusion"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Stable Diffusion"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1806885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113660857"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "image-generating machine learning model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Stable Diffusion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Stable Diffusion"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113660857"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "image-generating machine learning model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Stable Diffusion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Stable Diffusion"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113940039"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113660857"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "image-generating machine learning model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Stable Diffusion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Stable Diffusion"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q114617315"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113660857"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "image-generating machine learning model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Stable Diffusion"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Stable Diffusion"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113660857"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "image-generating machine learning model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Stable Diffusion"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Stable Diffusion"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113660857"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "image-generating machine learning model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Stable Diffusion"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Stable Diffusion"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113940039"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113660857"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "image-generating machine learning model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Stable Diffusion"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Stable Diffusion"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113940039"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113660857"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "image-generating machine learning model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Stable Diffusion"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Stable Diffusion"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q114617315"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113660857"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "image-generating machine learning model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Stable Diffusion"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Stable Diffusion"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q114617315"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "description of a deep learning network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deep learning model"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "深度學習模型"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "description of a deep learning network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deep learning model"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "深度学习模型"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q136094053"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deep learning architecture"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Mamba2"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Mamba2"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1949683"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "theory of preventing aggression through threat of force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1949683"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deterrence theory"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "核抑止理論"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1949683"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "theory of preventing aggression through threat of force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1949683"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deterrence theory"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "威慑理论"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1949683"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "theory of preventing aggression through threat of force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1949683"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deterrence theory"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "威慑理论"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1949683"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "theory of preventing aggression through threat of force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1949683"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deterrence theory"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "威懾理論"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1949683"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "theory of preventing aggression through threat of force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1949683"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deterrence theory"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "嚇阻理論"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1985141"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of algorithms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835898"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-blocking algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "非阻塞算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1985141"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of algorithms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835898"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-blocking algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "无锁算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1985141"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of algorithms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835898"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-blocking algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "無鎖演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q852160"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of international nuclear weapons policy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1949683"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear umbrella"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "核保护伞"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q852160"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of international nuclear weapons policy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1949683"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear umbrella"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "核保护伞"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q852160"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of international nuclear weapons policy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1949683"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear umbrella"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "核保護傘"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2141106"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "processing of email to organize it according to specified criteria"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q302088"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "email filtering"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "电子邮件过滤"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30295815"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2141106"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "processing of email to organize it according to specified criteria"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q302088"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "email filtering"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "电子邮件过滤"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30295815"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2141106"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "processing of email to organize it according to specified criteria"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q302088"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "email filtering"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "電子郵件過濾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30295815"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1414322"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanism for capturing chronological and causal relationships"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835898"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logical clock"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "逻辑时钟"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1414322"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanism for capturing chronological and causal relationships"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835898"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logical clock"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "逻辑时钟"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1414322"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanism for capturing chronological and causal relationships"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835898"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logical clock"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "邏輯時鐘"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q988829"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "disk-scheduling algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q41408440"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "elevator algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "电梯算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q41408440"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1259393"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure that keeps track of a set of elements partitioned into a number of disjoint (nonoverlapping) subsets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1259393"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "disjoint-set data structure"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "併查集"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1259393"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure that keeps track of a set of elements partitioned into a number of disjoint (nonoverlapping) subsets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1259393"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "disjoint-set data structure"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "互斥集資料結構"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1259393"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure that keeps track of a set of elements partitioned into a number of disjoint (nonoverlapping) subsets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1259393"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "disjoint-set data structure"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "互斥集資料結構"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q848539"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the result yielded by a real number when divided by zero"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q848539"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division by zero"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "除以零"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6498784"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q848539"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the result yielded by a real number when divided by zero"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q848539"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division by zero"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "除以零"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6498784"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q848539"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the result yielded by a real number when divided by zero"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q848539"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division by zero"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "除以零"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6498784"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q528588"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm wherein relations between variables are stated in the form of constraints"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "constraint programming"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "约束编程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q528588"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm wherein relations between variables are stated in the form of constraints"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "constraint programming"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "約束邏輯編程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q528588"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm wherein relations between variables are stated in the form of constraints"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "constraint programming"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "約束邏輯程式設計"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm that expresses the logic of a computation without describing its control flow"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "declarative programming"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "宣告式編程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188267"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm that expresses the logic of a computation without describing its control flow"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "declarative programming"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "声明式编程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188267"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm that expresses the logic of a computation without describing its control flow"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "declarative programming"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "宣告式編程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm that expresses the logic of a computation without describing its control flow"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "declarative programming"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "声明式编程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1172543"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm that models program as a directed graph of data flow between operations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dataflow programming"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "数据流程编程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188267"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1172543"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm that models program as a directed graph of data flow between operations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dataflow programming"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "数据流式编程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188267"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1172543"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm that models program as a directed graph of data flow between operations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dataflow programming"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "資料流式程式設計"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188267"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1172543"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm that models program as a directed graph of data flow between operations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dataflow programming"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "数据流程编程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1172543"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm that models program as a directed graph of data flow between operations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dataflow programming"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "数据流式编程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1172543"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm that models program as a directed graph of data flow between operations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dataflow programming"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "資料流式程式設計"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q997433"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data type whose definition depends on a value"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q997433"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dependent type"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "依赖类型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19478619"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q997433"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data type whose definition depends on a value"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q997433"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dependent type"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "依赖类型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19478619"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q997433"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data type whose definition depends on a value"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q997433"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dependent type"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "依賴類型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19478619"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1424189"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "concept in distributed computing"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835898"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "leader election"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "集群节点选举"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1424189"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "concept in distributed computing"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835898"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "leader election"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "集群节点选举"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1424189"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "concept in distributed computing"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835898"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "leader election"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "集群节点选举"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1424189"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "concept in distributed computing"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835898"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "leader election"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "叢集節點選舉"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835898"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm designed to run on computer hardware constructed from interconnected processors"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835898"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分散式演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4543888"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "disk scheduling algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q41408440"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "LOOK algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "LOOK算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q41408440"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q54253105"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical indeterminate form"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q848539"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "zero over zero"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "零除以零"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115089"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q54253105"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical indeterminate form"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q848539"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "zero over zero"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "零除以零"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q848539"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q54253105"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical indeterminate form"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q848539"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "zero over zero"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "零除以零"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115089"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q54253105"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical indeterminate form"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q848539"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "zero over zero"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "零除以零"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115089"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q54253105"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical indeterminate form"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q848539"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "zero over zero"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "零除以零"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q848539"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q54253105"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical indeterminate form"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q848539"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "zero over zero"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "零除以零"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q848539"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "store of digital data spread across multiple sites and synchronized via a consensus algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed ledger"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分布式账簿"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8148"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8148"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "區塊鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8148"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65079156"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "techniques combining deep learning and reinforcement learning principles to create efficient machine learning algorithms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q197536"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deep reinforcement learning"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "深度强化学习"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28453809"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm that treats all computation as the evaluation of mathematical functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "purely functional programming"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "纯函数式编程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188267"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28453809"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming paradigm that treats all computation as the evaluation of mathematical functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531152"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "purely functional programming"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "纯函数式编程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4543980"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "disk-scheduling algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q41408440"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "shortest seek first"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "最短寻道优先"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q41408440"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q268592"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q627436"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047113"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2267705"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "區塊鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q268592"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "區塊鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q627436"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "區塊鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047113"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "區塊鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2267705"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11862829"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "區塊鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11862829"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2146125"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2146125"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "delay differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "时滞微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85810444"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "machine-learning model architecture first developed by Google Brain"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transformer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "transformer架构"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q846636"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85810444"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "machine-learning model architecture first developed by Google Brain"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transformer"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "transformer架构"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q846636"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q268592"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q627436"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047113"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q268592"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q627436"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "區塊鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q268592"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "區塊鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q627436"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047113"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2267705"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "區塊鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047113"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2267705"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "區塊鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2267705"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11862829"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11862829"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "區塊鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11862829"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4053284"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "database transaction between two or more networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835898"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed transaction"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分布式事务"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4053284"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "database transaction between two or more networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835898"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed transaction"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "分布式事务"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4053284"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "database transaction between two or more networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835898"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed transaction"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "分布式事务"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4053284"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "database transaction between two or more networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835898"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed transaction"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "分散式事務"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8148"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25110971"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "區塊鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8148"
+      }
+    }
+  ]
+}

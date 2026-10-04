@@ -6,7 +6,7 @@ export type Term = {
   id: string; source: string; target: string; domain: Exclude<Domain, 'auto'>; sense: string;
   aliases: string[]; sourceUrl: string; license: string;
   quality: 'core' | 'candidate' | 'user' | 'confirmed' | 'article';
-  enabled: boolean; updatedAt?: number; contexts?:string[]; sourceNote?:string; definition?:string;
+  enabled: boolean; updatedAt?: number; contexts?:string[]; requiresContext?:boolean; sourceNote?:string; definition?:string;
 };
 export type GlossaryPack = { name: string; version: string; author: string; license: string; terms: Term[] };
 export type Profile = {

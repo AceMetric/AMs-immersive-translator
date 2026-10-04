@@ -1,0 +1,1433 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q322177 wd:Q253011 wd:Q22968916 wd:Q332828 wd:Q336744 wd:Q103982270 wd:Q85248618 wd:Q63385404 wd:Q108717854 wd:Q4674704 wd:Q956248 wd:Q2558427 wd:Q12713283 wd:Q1757056 wd:Q44437955 wd:Q313958 wd:Q3299483 wd:Q173725 wd:Q789775 wd:Q119285737 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q322177 wd:Q253011 wd:Q22968916 wd:Q332828 wd:Q336744 wd:Q103982270 wd:Q85248618 wd:Q63385404 wd:Q108717854 wd:Q4674704 wd:Q956248 wd:Q2558427 wd:Q12713283 wd:Q1757056 wd:Q44437955 wd:Q313958 wd:Q3299483 wd:Q173725 wd:Q789775 wd:Q119285737 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q322177 wd:Q253011 wd:Q22968916 wd:Q332828 wd:Q336744 wd:Q103982270 wd:Q85248618 wd:Q63385404 wd:Q108717854 wd:Q4674704 wd:Q956248 wd:Q2558427 wd:Q12713283 wd:Q1757056 wd:Q44437955 wd:Q313958 wd:Q3299483 wd:Q173725 wd:Q789775 wd:Q119285737 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "f5437293895b389442dfc84f853b0fe597bca373904be8d28d7100bca6e2badc",
+  "responseSha256": "0850fc0c5fc91d56892799c9bd8855b8094be61b0bee2c9f44c74382894bc665",
+  "retrievedAt": "2026-10-04T05:04:07.991262+00:00",
+  "license": "CC0-1.0",
+  "domain": "physics",
+  "roots": [
+    {
+      "domain": "physics",
+      "id": "Q322177",
+      "label": "ablation",
+      "description": "removal of material from the surface of an object by vaporization, chipping, or other erosive processes",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q253011",
+      "label": "Abraham–Lorentz force",
+      "description": "recoil force on an accelerating charged particle caused by the particle emitting electromagnetic radiation",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q22968916",
+      "label": "absolute pressure",
+      "description": "",
+      "parents": [
+        "Q39552"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q332828",
+      "label": "absorption",
+      "description": "physical or chemical process",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q336744",
+      "label": "Abzugswiderstand",
+      "description": "German term: the force that must be expended to put certain mechanisms in transition",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q103982270",
+      "label": "acceleration of free fall",
+      "description": "at a point on Earth, vector sum of gravitational and centrifugal acceleration",
+      "parents": [
+        "Q11376"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q85248618",
+      "label": "accretion",
+      "description": "process where an object gradually forms or grows by collecting mass from its environment over time",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q63385404",
+      "label": "acid migration",
+      "description": "transfer of acid from one material to another",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q108717854",
+      "label": "acoustic formants",
+      "description": "",
+      "parents": [
+        "Q172858"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q4674704",
+      "label": "Acoustic radiation force",
+      "description": "Psychical phenomenon from acoustic waves",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q956248",
+      "label": "acoustic radiation pressure",
+      "description": "apparent pressure difference between the average pressure at a surface moving with the displacement of the wave propagation (the Lagrangian pressure) and the pressure that would have existed in the fluid of the same mean density when at rest",
+      "parents": [
+        "Q39552"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q2558427",
+      "label": "acoustic resonance",
+      "description": "phenomenon where acoustic systems amplify sound waves whose frequency matches one of its own natural frequencies of vibration (its resonance frequencies)",
+      "parents": [
+        "Q172858"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q12713283",
+      "label": "active current",
+      "description": "",
+      "parents": [
+        "Q29996"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1757056",
+      "label": "adhesive weight",
+      "description": "weight on the driving wheels of a train",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q44437955",
+      "label": "ADM mass",
+      "description": "in general relativity, notion of energy-momentum that can be defined for asymptotically flat spacetimes (e.g. black holes with vanishing cosmological constant)",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q313958",
+      "label": "advisory speed",
+      "description": "unofficial but encouraged safe speed where a statutory speed limit is not posted",
+      "parents": [
+        "Q11465"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q3299483",
+      "label": "aerodynamic force",
+      "description": "",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q173725",
+      "label": "air conditioning",
+      "description": "primarily cooling (but also warming or drying) of air in buildings or vehicles using a heat-pump",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q789775",
+      "label": "ambient pressure",
+      "description": "pressure of the surrounding medium",
+      "parents": [
+        "Q39552"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q119285737",
+      "label": "amplitude of electric current",
+      "description": "",
+      "parents": [
+        "Q29996"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "physics branches 1..20",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q81809"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "static pressure exerted by the weight of the atmosphere"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q789775"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "atmospheric pressure"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "气压"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q313958"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unofficial but encouraged safe speed where a statutory speed limit is not posted"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q313958"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "advisory speed"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "建议速限"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q313958"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unofficial but encouraged safe speed where a statutory speed limit is not posted"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q313958"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "advisory speed"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "建議速限"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q173725"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "primarily cooling (but also warming or drying) of air in buildings or vehicles using a heat-pump"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q173725"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "air conditioning"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "空氣調節"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q173725"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "primarily cooling (but also warming or drying) of air in buildings or vehicles using a heat-pump"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q173725"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "air conditioning"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "空气调节"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q173725"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "primarily cooling (but also warming or drying) of air in buildings or vehicles using a heat-pump"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q173725"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "air conditioning"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "空气调节"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q173725"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "primarily cooling (but also warming or drying) of air in buildings or vehicles using a heat-pump"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q173725"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "air conditioning"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "空氣調節"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q173725"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "primarily cooling (but also warming or drying) of air in buildings or vehicles using a heat-pump"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q173725"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "air conditioning"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "空氣調節"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q202448"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process using extreme cold to destroy tissue"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q322177"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryoablation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "冷凍消融術"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q332828"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical or chemical process"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q332828"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "absorption"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "吸收"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87196290"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q332828"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical or chemical process"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q332828"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "absorption"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "吸收"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q100724091"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q322177"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "removal of material from the surface of an object by vaporization, chipping, or other erosive processes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q322177"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ablation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "燒蝕"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q253011"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "recoil force on an accelerating charged particle caused by the particle emitting electromagnetic radiation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q253011"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Abraham–Lorentz force"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "阿布拉罕-勞侖茲力"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1293220"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4674704"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Psychical phenomenon from acoustic waves"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4674704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Acoustic radiation force"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "聲放射力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413914"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "difference between the observed acceleration of a planet's gravity and a value predicted from a model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103982270"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gravity anomaly"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "重力异常"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q567555"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413914"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "difference between the observed acceleration of a planet's gravity and a value predicted from a model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103982270"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gravity anomaly"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "重力异常"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q567555"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413914"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "difference between the observed acceleration of a planet's gravity and a value predicted from a model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103982270"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gravity anomaly"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "重力異常"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q567555"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q903984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process in which small crystals preferentially dissolve and re-precipitate onto larger crystals over time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85248618"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ostwald ripening"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "奧斯瓦爾德熟化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1293220"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q903984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process in which small crystals preferentially dissolve and re-precipitate onto larger crystals over time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85248618"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ostwald ripening"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "奥斯瓦尔德熟化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1293220"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q903984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process in which small crystals preferentially dissolve and re-precipitate onto larger crystals over time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85248618"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ostwald ripening"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "奧斯瓦爾德熟化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1293220"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q903984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process in which small crystals preferentially dissolve and re-precipitate onto larger crystals over time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85248618"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ostwald ripening"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "奧斯瓦爾德熟化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2281940"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q903984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process in which small crystals preferentially dissolve and re-precipitate onto larger crystals over time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85248618"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ostwald ripening"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "奥斯瓦尔德熟化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2281940"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q903984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process in which small crystals preferentially dissolve and re-precipitate onto larger crystals over time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85248618"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ostwald ripening"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "奧斯瓦爾德熟化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2281940"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44437955"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in general relativity, notion of energy-momentum that can be defined for asymptotically flat spacetimes (e.g. black holes with vanishing cosmological constant)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44437955"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ADM mass"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "ADM質量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q419978"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "astrophysical process in which matter gravitationally collects into a massive object"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85248618"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "accretion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "吸积"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q751989"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1806547"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process that removes material from an object by heating it with a laser"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q322177"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "laser ablation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "激光消融"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1806547"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process that removes material from an object by heating it with a laser"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q322177"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "laser ablation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "激光消融"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1806547"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process that removes material from an object by heating it with a laser"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q322177"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "laser ablation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "激光消融"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1806547"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process that removes material from an object by heating it with a laser"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q322177"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "laser ablation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "雷射消融"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1621796"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "surgical procedure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q322177"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radiofrequency ablation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "射頻燒灼術"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1621796"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "surgical procedure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q322177"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radiofrequency ablation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "射频消融术"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1621796"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "surgical procedure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q322177"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radiofrequency ablation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "射频消融术"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1621796"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "surgical procedure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q322177"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radiofrequency ablation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "射頻消融術"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q789775"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pressure of the surrounding medium"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q789775"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ambient pressure"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "外界压力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q789775"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pressure of the surrounding medium"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q789775"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ambient pressure"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "外界压力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q789775"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pressure of the surrounding medium"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q789775"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ambient pressure"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "外界压力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q789775"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pressure of the surrounding medium"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q789775"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ambient pressure"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "外界壓力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4391435"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process by which the nephron removes water and solutes from the tubular fluid and returns them to the circulating blood"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q332828"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "reabsorption"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "再吸收作用"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3249551"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2558427"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "phenomenon where acoustic systems amplify sound waves whose frequency matches one of its own natural frequencies of vibration (its resonance frequencies)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2558427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "acoustic resonance"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "声共振"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1312298"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cooling system that uses solar power"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q173725"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "solar air conditioning"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "太阳能空调"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44437955"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in general relativity, notion of energy-momentum that can be defined for asymptotically flat spacetimes (e.g. black holes with vanishing cosmological constant)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44437955"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ADM mass"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "ADM質量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2553430"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process by which material is added to a tectonic plate or a landmass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85248618"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "accretion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "增生 (地质学)"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5422871"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "removal by fishery managers of one or both eyestalks from a crustacean"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q322177"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "eyestalk ablation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "眼柄消融"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q322177"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96649518"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "absorption into the circulatory system of cells or tissue"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q332828"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "resorption"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "再吸收"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q332828"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5422871"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "removal by fishery managers of one or both eyestalks from a crustacean"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q322177"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "eyestalk ablation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "眼柄消融"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104370547"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q360053"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "air conditioning in automobiles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q173725"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "automobile air conditioning"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "汽车空调"
+      }
+    }
+  ]
+}

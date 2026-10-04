@@ -1,0 +1,7069 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q29522 wd:Q4655144 wd:Q677051 wd:Q22905832 wd:Q18205503 wd:Q12562646 wd:Q4904184 wd:Q98844843 wd:Q3408087 wd:Q1146944 wd:Q104886715 wd:Q4927183 wd:Q154021 wd:Q20514253 wd:Q886092 wd:Q16997789 wd:Q796890 wd:Q601325 wd:Q4034716 wd:Q850362 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q29522 wd:Q4655144 wd:Q677051 wd:Q22905832 wd:Q18205503 wd:Q12562646 wd:Q4904184 wd:Q98844843 wd:Q3408087 wd:Q1146944 wd:Q104886715 wd:Q4927183 wd:Q154021 wd:Q20514253 wd:Q886092 wd:Q16997789 wd:Q796890 wd:Q601325 wd:Q4034716 wd:Q850362 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q29522 wd:Q4655144 wd:Q677051 wd:Q22905832 wd:Q18205503 wd:Q12562646 wd:Q4904184 wd:Q98844843 wd:Q3408087 wd:Q1146944 wd:Q104886715 wd:Q4927183 wd:Q154021 wd:Q20514253 wd:Q886092 wd:Q16997789 wd:Q796890 wd:Q601325 wd:Q4034716 wd:Q850362 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "e5281616f995759414b48fa13dd3112abaa3e1e248467c6be3e23fed25a35789",
+  "responseSha256": "5c5f7879cb17ddeba47a89423e9ee2a1321fe02c25400c86d0681143c45c4866",
+  "retrievedAt": "2026-10-04T03:22:43.892248+00:00",
+  "license": "CC0-1.0",
+  "domain": "cs",
+  "roots": [
+    {
+      "domain": "cs",
+      "id": "Q29522",
+      "label": "automatic repeat request",
+      "description": "error-control method for data transmission",
+      "parents": [
+        "Q132364"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q4655144",
+      "label": "AWPP",
+      "description": "complexity class",
+      "parents": [
+        "Q3435924"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q677051",
+      "label": "B-tree",
+      "description": "a self-balancing, tree-based data structure, that allows read/write access in logarithmic time",
+      "parents": [
+        "Q175263"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q22905832",
+      "label": "behavior model",
+      "description": "algorithm that selects actions for intelligent agents",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q18205503",
+      "label": "Bend minimization",
+      "description": "methods to minimize complexity of graph drawings",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q12562646",
+      "label": "Berkeley sockets",
+      "description": "Inter-process communication API",
+      "parents": [
+        "Q132364"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q4904184",
+      "label": "bidirectional map",
+      "description": "associative data structure whose key–value pairs are in bijection",
+      "parents": [
+        "Q175263"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q98844843",
+      "label": "bioinformatics method",
+      "description": "algorithm or method in bioinformatics",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q3408087",
+      "label": "bit-oriented protocol",
+      "description": "communications protocol that sees the transmitted data as an opaque stream of bits",
+      "parents": [
+        "Q132364"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q1146944",
+      "label": "block",
+      "description": "sequence of bytes or bits, having a nominal length (a block size)",
+      "parents": [
+        "Q175263"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q104886715",
+      "label": "block",
+      "description": "single group of data in a blockchain",
+      "parents": [
+        "Q175263"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q4927183",
+      "label": "block allocation map",
+      "description": "data structure used to track disk blocks in use",
+      "parents": [
+        "Q175263"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q154021",
+      "label": "block cipher mode of operation",
+      "description": "algorithm that uses a block cipher to provide an information service such as confidentiality or authenticity",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q20514253",
+      "label": "blockchain",
+      "description": "distributed data store for digital transactions",
+      "parents": [
+        "Q175263"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q886092",
+      "label": "Bluetooth profile",
+      "description": "standardized usage of Bluetooth short-range radio communications",
+      "parents": [
+        "Q132364"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q16997789",
+      "label": "boustrophedon cell decomposition",
+      "description": "algorithmic method used in artificial intelligence and robotics for optimizing the configuration space with a minimum total redundant path length to follow in order to avoid obstacles",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q796890",
+      "label": "BPP",
+      "description": "complexity class",
+      "parents": [
+        "Q3435924"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q601325",
+      "label": "BQP",
+      "description": "complexity class",
+      "parents": [
+        "Q3435924"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q4034716",
+      "label": "Bridge Protocol Data Units",
+      "description": "frames that contain information about the spanning tree protocol",
+      "parents": [
+        "Q175263"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q850362",
+      "label": "brute-force search",
+      "description": "computer problem-solving technique",
+      "parents": [
+        "Q8366"
+      ]
+    }
+  ],
+  "limit": 20000,
+  "name": "cs branches 21..40",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "比特幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132364"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "比特币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132364"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "比特幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132364"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "比特幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q756202"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "比特幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q986008"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "比特币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q756202"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "比特幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q756202"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "比特币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q986008"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "比特幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q986008"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "比特幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1643989"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "比特币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1643989"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "比特幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1643989"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "比特幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "比特币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "比特幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "比特幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19892282"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "比特币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19892282"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "比特幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19892282"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "比特幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "比特币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "比特幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29522"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "error-control method for data transmission"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29522"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "automatic repeat request"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "ARQ"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q154021"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm that uses a block cipher to provide an information service such as confidentiality or authenticity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q154021"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher mode of operation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "块密码的工作模式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "比特幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q341"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "比特幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8142"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "比特币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q341"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "比特币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8142"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "比特幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q341"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131723"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "digital cash system and associated currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "比特幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8142"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q169233"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B-tree of order 4"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q677051"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "2–3–4 tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "2-3-4树"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q169233"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B-tree of order 4"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q677051"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "2–3–4 tree"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "2-3-4树"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q169233"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B-tree of order 4"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q677051"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "2–3–4 tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "2-3-4树"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q169233"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B-tree of order 4"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q677051"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "2–3–4 tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "2-3-4樹"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q169233"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B-tree of order 4"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q677051"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "2–3–4 tree"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "2-3-4樹"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16783523"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "public blockchain platform with programmable transaction functionality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "以太坊"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q193424"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16783523"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "public blockchain platform with programmable transaction functionality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "以太币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q193424"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16783523"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "public blockchain platform with programmable transaction functionality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "以太幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q193424"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16783523"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "public blockchain platform with programmable transaction functionality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "以太坊"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16783523"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "public blockchain platform with programmable transaction functionality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "以太币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16783523"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "public blockchain platform with programmable transaction functionality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "以太幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16783523"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "public blockchain platform with programmable transaction functionality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "以太坊"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16783523"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "public blockchain platform with programmable transaction functionality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "以太币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16783523"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "public blockchain platform with programmable transaction functionality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "以太幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16783523"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "public blockchain platform with programmable transaction functionality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "以太坊"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85827478"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16783523"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "public blockchain platform with programmable transaction functionality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "以太币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85827478"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16783523"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "public blockchain platform with programmable transaction functionality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "以太幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85827478"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16783523"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "public blockchain platform with programmable transaction functionality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "以太坊"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q109657450"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16783523"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "public blockchain platform with programmable transaction functionality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "以太币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q109657450"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16783523"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "public blockchain platform with programmable transaction functionality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "以太幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q109657450"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16783523"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "public blockchain platform with programmable transaction functionality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "以太坊"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q136937248"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16783523"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "public blockchain platform with programmable transaction functionality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "以太币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q136937248"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16783523"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "public blockchain platform with programmable transaction functionality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "以太幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q136937248"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9299950"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proof by examining all individual cases"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q850362"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proof by exhaustion"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "穷举法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q850362"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9299950"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proof by examining all individual cases"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q850362"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proof by exhaustion"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "穷举法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q850362"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9299950"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proof by examining all individual cases"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q850362"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proof by exhaustion"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "窮舉法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q850362"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9299950"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proof by examining all individual cases"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q850362"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proof by exhaustion"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "穷举法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105530558"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9299950"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proof by examining all individual cases"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q850362"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proof by exhaustion"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "穷举法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105530558"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9299950"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proof by examining all individual cases"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q850362"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proof by exhaustion"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "窮舉法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105530558"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15377916"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source peer-to-peer digital currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dogecoin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "狗狗幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15377916"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source peer-to-peer digital currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dogecoin"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "多吉币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15377916"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source peer-to-peer digital currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dogecoin"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "狗狗幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15377916"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source peer-to-peer digital currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dogecoin"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "汪汪幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15377916"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source peer-to-peer digital currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dogecoin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "狗狗幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15377916"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source peer-to-peer digital currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dogecoin"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "多吉币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15377916"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source peer-to-peer digital currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dogecoin"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "狗狗幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15377916"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source peer-to-peer digital currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dogecoin"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "汪汪幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15377916"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source peer-to-peer digital currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dogecoin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "狗狗幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106561513"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15377916"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source peer-to-peer digital currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dogecoin"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "多吉币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106561513"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15377916"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source peer-to-peer digital currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dogecoin"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "狗狗幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106561513"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15377916"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source peer-to-peer digital currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dogecoin"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "汪汪幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106561513"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15377916"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source peer-to-peer digital currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dogecoin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "狗狗幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q109536316"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15377916"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source peer-to-peer digital currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dogecoin"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "多吉币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q109536316"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15377916"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source peer-to-peer digital currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dogecoin"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "狗狗幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q109536316"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15377916"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source peer-to-peer digital currency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dogecoin"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "汪汪幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q109536316"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9299950"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proof by examining all individual cases"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q850362"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proof by exhaustion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "穷举法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q850362"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9299950"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proof by examining all individual cases"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q850362"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proof by exhaustion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "穷举法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105530558"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18756242"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptocurrency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "NEM"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "新经币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10836209"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18756242"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptocurrency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "NEM"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "新经币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18756242"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptocurrency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "NEM"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "新经币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18205503"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "methods to minimize complexity of graph drawings"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18205503"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bend minimization"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "彎曲最小化問題"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16783523"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "public blockchain platform with programmable transaction functionality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "以太坊"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q341"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16783523"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "public blockchain platform with programmable transaction functionality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "以太币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q341"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16783523"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "public blockchain platform with programmable transaction functionality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "以太幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q341"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12562646"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Inter-process communication API"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12562646"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Berkeley sockets"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Berkeley套接字"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q165194"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10860200"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic automatic repeat-request (ARQ) data transmission and error detection protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29522"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stop-and-wait ARQ"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "停止并等待ARQ"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10860200"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic automatic repeat-request (ARQ) data transmission and error detection protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29522"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stop-and-wait ARQ"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "停止并等待ARQ"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10860200"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic automatic repeat-request (ARQ) data transmission and error detection protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29522"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stop-and-wait ARQ"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "停止并等待ARQ"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10860200"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic automatic repeat-request (ARQ) data transmission and error detection protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29522"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stop-and-wait ARQ"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "停止並等待ARQ"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1307473"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "payment protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ripple"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Ripple幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q341"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q677051"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a self-balancing, tree-based data structure, that allows read/write access in logarithmic time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q677051"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B-tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "B树"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q677051"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a self-balancing, tree-based data structure, that allows read/write access in logarithmic time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q677051"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B-tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "B树"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q677051"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a self-balancing, tree-based data structure, that allows read/write access in logarithmic time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q677051"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B-tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "B樹"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q677051"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a self-balancing, tree-based data structure, that allows read/write access in logarithmic time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q677051"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B-tree"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "B-樹"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5519271"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "authenticated encryption mode for block ciphers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q154021"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Galois/Counter Mode"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伽羅瓦/計數器模式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q154021"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5519271"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "authenticated encryption mode for block ciphers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q154021"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Galois/Counter Mode"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伽羅瓦/計數器模式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15263584"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q850362"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer problem-solving technique"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q850362"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "brute-force search"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "暴力搜索法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1799072"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q850362"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer problem-solving technique"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q850362"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "brute-force search"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "暴力搜索法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1799072"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q850362"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer problem-solving technique"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q850362"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "brute-force search"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "暴力搜尋法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1799072"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q850362"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer problem-solving technique"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q850362"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "brute-force search"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "暴力搜索法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28455561"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q850362"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer problem-solving technique"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q850362"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "brute-force search"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "暴力搜索法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28455561"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q850362"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer problem-solving technique"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q850362"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "brute-force search"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "暴力搜尋法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28455561"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408087"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communications protocol that sees the transmitted data as an opaque stream of bits"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408087"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bit-oriented protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "面向比特的协议"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q169338"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B-tree of order 3"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q677051"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "2–3 tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "2-3树"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q169338"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B-tree of order 3"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q677051"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "2–3 tree"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "2-3树"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q169338"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B-tree of order 3"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q677051"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "2–3 tree"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "2-3樹"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q796890"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "complexity class"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q796890"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "BPP"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "BPP (複雜度)"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q908207"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q796890"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "complexity class"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q796890"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "BPP"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "BPP問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q908207"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2044498"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "socket for exchanging data between processes executing on the same OS; similar to an Internet socket, but all communication occurs within the same OS"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12562646"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Unix domain socket"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Unix domain socket"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1307473"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "payment protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ripple"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Ripple幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q632343"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "internal endpoint for sending or receiving data within a node on a computer network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12562646"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network socket"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "網路插座"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q632343"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "internal endpoint for sending or receiving data within a node on a computer network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12562646"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network socket"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "網路插座"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q612728"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "contiguous, fixed-size block of sectors that some filesystems use as a unit of disk space allocation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1146944"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data cluster"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "簇"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550873"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q886092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standardized usage of Bluetooth short-range radio communications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q886092"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bluetooth profile"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "藍牙規範"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6771358"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "\"dead\" region of allocated computer memory that the process can no longer access"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1146944"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unreachable memory"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "不可访问内存"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1936252"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B-tree in which nodes are kept 2/3 full by redistributing keys to fill two child nodes, then splitting them into three nodes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q677051"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B*-tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "B*-樹"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1936252"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B-tree in which nodes are kept 2/3 full by redistributing keys to fill two child nodes, then splitting them into three nodes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q677051"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B*-tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "B*-樹"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1936252"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B-tree in which nodes are kept 2/3 full by redistributing keys to fill two child nodes, then splitting them into three nodes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q677051"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B*-tree"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "B*-樹"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1146944"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sequence of bytes or bits, having a nominal length (a block size)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1146944"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "数据区块"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47574"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1146944"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sequence of bytes or bits, having a nominal length (a block size)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1146944"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "資料區塊"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47574"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1146944"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sequence of bytes or bits, having a nominal length (a block size)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1146944"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "块"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47574"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1709294"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "automatic repeat-request (ARQ) protocol in data transmission and error detection"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29522"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Go-Back-N ARQ"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "后退N帧ARQ"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1709294"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "automatic repeat-request (ARQ) protocol in data transmission and error detection"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29522"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Go-Back-N ARQ"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "后退N帧ARQ"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1709294"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "automatic repeat-request (ARQ) protocol in data transmission and error detection"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29522"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Go-Back-N ARQ"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "后退N帧ARQ"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1709294"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "automatic repeat-request (ARQ) protocol in data transmission and error detection"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29522"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Go-Back-N ARQ"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "後退N幀ARQ"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q601325"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "complexity class"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q601325"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "BQP"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "BQP"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q908207"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112618232"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Everscale"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Everscale"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112618232"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Everscale"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Everscale"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107439672"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open-source decentralized computing platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Stacks blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Stacks blockchain"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110233099"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Avalanche"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "雪崩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q986008"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110233099"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Avalanche"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Avalanche"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q986008"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110233099"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Avalanche"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "Avalanche"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q986008"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110233099"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Avalanche"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "雪崩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110233099"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Avalanche"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Avalanche"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110233099"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Avalanche"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "Avalanche"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110233099"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Avalanche"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "雪崩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110233099"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Avalanche"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Avalanche"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110233099"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Avalanche"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "Avalanche"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107439672"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open-source decentralized computing platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Stacks blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Stacks blockchain"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85827478"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107439672"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open-source decentralized computing platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Stacks blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Stacks blockchain"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85827478"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q56251056"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptocurrency price data website and app"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "CoinMarketCap"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "CoinMarketCap"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q620615"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q56251056"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptocurrency price data website and app"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "CoinMarketCap"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "CoinMarketCap"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q783794"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29583124"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source blockchain computing platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum Classic"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "以太坊經典"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10836209"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29583124"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source blockchain computing platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum Classic"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "以太经典"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10836209"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29583124"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source blockchain computing platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum Classic"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "以太經典"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10836209"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29583124"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source blockchain computing platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum Classic"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "以太坊經典"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29583124"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source blockchain computing platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum Classic"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "以太经典"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29583124"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source blockchain computing platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum Classic"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "以太經典"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110233099"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Avalanche"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "雪崩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85827478"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110233099"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Avalanche"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Avalanche"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85827478"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110233099"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Avalanche"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "Avalanche"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85827478"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29583124"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source blockchain computing platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum Classic"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "以太坊經典"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29583124"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source blockchain computing platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum Classic"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "以太经典"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29583124"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source blockchain computing platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum Classic"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "以太經典"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110233099"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Avalanche"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "雪崩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q109657450"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110233099"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Avalanche"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Avalanche"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q109657450"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110233099"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Avalanche"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "Avalanche"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q109657450"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47273538"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decentralized, open-source blockchain network that can execute peer-to-peer transactions and serve as a platform for deploying smart contracts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Cardano"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "卡爾達諾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q341"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30938181"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain and cryptocurrency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Algorand"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "阿尔戈兰德"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q986008"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30938181"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain and cryptocurrency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Algorand"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "阿尔戈兰德"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30938181"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain and cryptocurrency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Algorand"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "阿尔戈兰德"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30938181"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain and cryptocurrency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Algorand"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "阿尔戈兰德"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85827478"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q48893562"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "change in consensus rules of a blockchain; if contentious, can result in multiple permanent alternative chains"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fork"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分叉"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29583124"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source blockchain computing platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum Classic"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "以太坊經典"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q341"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29583124"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source blockchain computing platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum Classic"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "以太经典"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q341"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29583124"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open source blockchain computing platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethereum Classic"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "以太經典"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q341"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q56251056"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptocurrency price data website and app"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "CoinMarketCap"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "CoinMarketCap"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q35127"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q56251056"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptocurrency price data website and app"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "CoinMarketCap"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "CoinMarketCap"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q38926"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47273538"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decentralized, open-source blockchain network that can execute peer-to-peer transactions and serve as a platform for deploying smart contracts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Cardano"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "卡爾達諾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47273538"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decentralized, open-source blockchain network that can execute peer-to-peer transactions and serve as a platform for deploying smart contracts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Cardano"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "卡爾達諾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q34328146"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fork of the cryptocurrency Bitcoin in August 2017"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin Cash"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "比特币现金"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q34328146"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fork of the cryptocurrency Bitcoin in August 2017"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin Cash"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "比特幣現金"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q34328146"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fork of the cryptocurrency Bitcoin in August 2017"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin Cash"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "比特幣現金"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q34328146"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fork of the cryptocurrency Bitcoin in August 2017"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin Cash"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "比特币现金"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q34328146"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fork of the cryptocurrency Bitcoin in August 2017"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin Cash"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "比特幣現金"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q34328146"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fork of the cryptocurrency Bitcoin in August 2017"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin Cash"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "比特幣現金"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47273538"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decentralized, open-source blockchain network that can execute peer-to-peer transactions and serve as a platform for deploying smart contracts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Cardano"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "卡爾達諾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85827478"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q34328146"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fork of the cryptocurrency Bitcoin in August 2017"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin Cash"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "比特币现金"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q54864610"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q34328146"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fork of the cryptocurrency Bitcoin in August 2017"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin Cash"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "比特幣現金"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q54864610"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q34328146"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fork of the cryptocurrency Bitcoin in August 2017"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin Cash"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "比特幣現金"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q54864610"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q34328146"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fork of the cryptocurrency Bitcoin in August 2017"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin Cash"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "比特币现金"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85827478"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q34328146"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fork of the cryptocurrency Bitcoin in August 2017"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin Cash"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "比特幣現金"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85827478"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q34328146"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fork of the cryptocurrency Bitcoin in August 2017"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bitcoin Cash"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "比特幣現金"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85827478"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47482556"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm which uses a block cipher to protect the integrity and authenticity of information"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q154021"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "message authentication code algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "消息认证码算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126103486"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Conflux Network"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "树图链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2297609"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126103486"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Conflux Network"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "树图链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2297609"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126103486"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Conflux Network"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "樹圖鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2297609"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126103486"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Conflux Network"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "树图链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126103486"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Conflux Network"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "树图链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126103486"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Conflux Network"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "樹圖鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107439672"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open-source decentralized computing platform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Stacks blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Stacks blockchain"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19893485"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptocurrency wallet software"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Monero"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "门罗币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q341"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19893485"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptocurrency wallet software"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Monero"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "门罗币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q341"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19893485"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptocurrency wallet software"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Monero"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "門羅幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q341"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q268592"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q627436"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047113"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q268592"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q627436"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "區塊鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q268592"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "區塊鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q627436"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047113"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2267705"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "區塊鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047113"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2267705"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "區塊鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2267705"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11862829"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11862829"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "區塊鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11862829"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27148141"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "privacy-focused cryptocurrency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Zcash"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Zcash"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10836209"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27148141"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "privacy-focused cryptocurrency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Zcash"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Zcash"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27148141"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "privacy-focused cryptocurrency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Zcash"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Zcash"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18204722"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27148141"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "privacy-focused cryptocurrency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Zcash"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Zcash"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8148"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "區塊鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8148"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19893485"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptocurrency wallet software"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Monero"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "门罗币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10836209"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19893485"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptocurrency wallet software"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Monero"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "门罗币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10836209"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19893485"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptocurrency wallet software"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Monero"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "門羅幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10836209"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19893485"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptocurrency wallet software"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Monero"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "门罗币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19893485"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptocurrency wallet software"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Monero"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "门罗币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19893485"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptocurrency wallet software"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Monero"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "門羅幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13479982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19893485"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptocurrency wallet software"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Monero"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "门罗币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18204722"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19893485"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptocurrency wallet software"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Monero"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "门罗币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18204722"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19893485"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptocurrency wallet software"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Monero"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "門羅幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18204722"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19893485"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptocurrency wallet software"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Monero"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "门罗币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19893485"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptocurrency wallet software"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Monero"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "门罗币"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19893485"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptocurrency wallet software"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Monero"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "門羅幣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8148"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8148"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "區塊鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8148"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27148141"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "privacy-focused cryptocurrency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Zcash"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Zcash"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q341"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q268592"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q627436"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047113"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2267705"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "區塊鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q268592"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "區塊鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q627436"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "區塊鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047113"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "區塊鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2267705"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "区块链"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11862829"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed data store for digital transactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20514253"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "區塊鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11862829"
+      }
+    }
+  ]
+}

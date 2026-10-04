@@ -1,0 +1,5808 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q126970548 wd:Q126979705 wd:Q126959552 wd:Q126980031 wd:Q139556468 wd:Q21813488 wd:Q139558263 wd:Q128262698 wd:Q139559456 wd:Q126900030 wd:Q36548538 wd:Q138873018 wd:Q138874195 wd:Q139567580 wd:Q139532472 wd:Q139554640 wd:Q139554759 wd:Q28599320 wd:Q21684377 wd:Q105828635 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q126970548 wd:Q126979705 wd:Q126959552 wd:Q126980031 wd:Q139556468 wd:Q21813488 wd:Q139558263 wd:Q128262698 wd:Q139559456 wd:Q126900030 wd:Q36548538 wd:Q138873018 wd:Q138874195 wd:Q139567580 wd:Q139532472 wd:Q139554640 wd:Q139554759 wd:Q28599320 wd:Q21684377 wd:Q105828635 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q126970548 wd:Q126979705 wd:Q126959552 wd:Q126980031 wd:Q139556468 wd:Q21813488 wd:Q139558263 wd:Q128262698 wd:Q139559456 wd:Q126900030 wd:Q36548538 wd:Q138873018 wd:Q138874195 wd:Q139567580 wd:Q139532472 wd:Q139554640 wd:Q139554759 wd:Q28599320 wd:Q21684377 wd:Q105828635 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "cfecf68f3586a2d683a42058431f1c8007ad01d846084be67971d04e7e6ad151",
+  "responseSha256": "96f72efcd681a2162ca2424122494fe3023d2bbd285b41fac066d1c3689f6db7",
+  "retrievedAt": "2026-10-04T05:07:55.508661+00:00",
+  "license": "CC0-1.0",
+  "domain": "physics",
+  "roots": [
+    {
+      "domain": "physics",
+      "id": "Q126970548",
+      "label": "unit of the Thomson coefficient",
+      "description": "unit for reporting measurement of the Thomson coefficient",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126979705",
+      "label": "unit of thermal conductance",
+      "description": "unit for reporting measurement of thermal conductance",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126959552",
+      "label": "unit of thermal conductivity",
+      "description": "unit for reporting measurement of thermal conductivity",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126980031",
+      "label": "unit of thermal insulance",
+      "description": "unit for reporting measurement of thermal insulance",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q139556468",
+      "label": "unit of thermal resistivity",
+      "description": "unit for reporting thermal resistivity",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q21813488",
+      "label": "unit of torque",
+      "description": "unit of measurement",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q139558263",
+      "label": "unit of total carbon dioxide equivalent mass",
+      "description": "unit for reporting total carbon dioxide equivalent mass",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q128262698",
+      "label": "unit of total mass stopping power",
+      "description": "unit for reporting measurement of total mass stopping power",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q139559456",
+      "label": "unit of vascular resistance",
+      "description": "unit for reporting vascular resistance",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126900030",
+      "label": "unit of voltage",
+      "description": "unit for reporting measurement of voltage",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q36548538",
+      "label": "unit of volumetric flow rate",
+      "description": "unit for reporting measurement of volumetric flow rate",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q138873018",
+      "label": "unit of volumetric heat capacity",
+      "description": "unit for reporting volumetric heat capacity",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q138874195",
+      "label": "unit of volumetric thermal expansion",
+      "description": "unit for reporting volumetric thermal expansion",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q139567580",
+      "label": "unit of volumetric usage per time",
+      "description": "unit for reporting volumetric usage per time",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q139532472",
+      "label": "unit of volumic data density",
+      "description": "unit for reporting volumic data density",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q139554640",
+      "label": "unit of volumic number density",
+      "description": "unit for reporting volumic number density",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q139554759",
+      "label": "unit of volumic power density",
+      "description": "unit for reporting volumic power density",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q28599320",
+      "label": "unit of water hardness",
+      "description": "",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q21684377",
+      "label": "unit without standard conversion to SI",
+      "description": "unit or class of units that can have various definitions and can't be converted to SI units with a single conversion factor. If some of the units in this class can be converted to SI units, specific items should be made for them.",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q105828635",
+      "label": "United States Pharmacopeia unit",
+      "description": "arbitrary unit",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "physics branches 761..780",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5151"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "irregular unit of time dividing a calendar year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "month"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "月"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1790144"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5151"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "irregular unit of time dividing a calendar year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "month"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "月"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5151"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "irregular unit of time dividing a calendar year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "month"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "月"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric potential, of electric potential difference (voltage), and of electromotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5151"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "irregular unit of time dividing a calendar year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "month"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "月"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1790144"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5151"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "irregular unit of time dividing a calendar year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "month"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "月"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1790144"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5151"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "irregular unit of time dividing a calendar year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "month"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "月"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1790144"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5151"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "irregular unit of time dividing a calendar year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "month"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "月"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5151"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "irregular unit of time dividing a calendar year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "month"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "月"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5151"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "irregular unit of time dividing a calendar year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "month"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "月"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5151"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "irregular unit of time dividing a calendar year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "month"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "月"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5151"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "irregular unit of time dividing a calendar year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "month"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "月"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5151"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "irregular unit of time dividing a calendar year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "month"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "月"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5151"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "irregular unit of time dividing a calendar year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "month"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "月份"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1790144"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5151"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "irregular unit of time dividing a calendar year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "month"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "月份"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5151"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "irregular unit of time dividing a calendar year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "month"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "月份"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of Celsius temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Celsius"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "摄氏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of Celsius temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Celsius"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "摄氏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of Celsius temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Celsius"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "攝氏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of Celsius temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Celsius"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "攝氏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of Celsius temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Celsius"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "摄氏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of Celsius temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Celsius"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "摄氏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of Celsius temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Celsius"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "攝氏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of Celsius temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Celsius"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "攝氏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of Celsius temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Celsius"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "摄氏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126917082"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of Celsius temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Celsius"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "摄氏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126917082"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of Celsius temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Celsius"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "攝氏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126917082"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of Celsius temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Celsius"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "攝氏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126917082"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q39274"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-SI metric unit of flow equal to 1 million cubic metres per second"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q36548538"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sverdrup"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "斯维尔德鲁普"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q36548538"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42289"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Fahrenheit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "华氏温标"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42289"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Fahrenheit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "华氏温标"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68723978"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42289"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Fahrenheit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "华氏温标"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of Celsius temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Celsius"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "攝氏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of Celsius temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Celsius"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "攝氏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of Celsius temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Celsius"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "攝氏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of Celsius temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Celsius"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "攝氏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of Celsius temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Celsius"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "攝氏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126917082"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of Celsius temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Celsius"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "摄氏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of Celsius temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Celsius"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "摄氏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of Celsius temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Celsius"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "攝氏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of Celsius temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Celsius"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "攝氏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of Celsius temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Celsius"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "摄氏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of Celsius temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Celsius"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "摄氏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of Celsius temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Celsius"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "攝氏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25267"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of Celsius temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degree Celsius"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "攝氏度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215571"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of torque"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21813488"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "newton metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "牛頓米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21813488"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215571"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of torque"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21813488"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "newton metre"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "牛顿米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21813488"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215571"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of torque"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21813488"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "newton metre"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "牛顿米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21813488"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215571"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of torque"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21813488"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "newton metre"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "牛頓米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21813488"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215571"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of torque"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21813488"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "newton metre"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "牛頓米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21813488"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215571"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of torque"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21813488"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "newton metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "牛頓米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215571"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of torque"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21813488"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "newton metre"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "牛顿米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215571"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of torque"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21813488"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "newton metre"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "牛顿米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215571"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of torque"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21813488"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "newton metre"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "牛頓米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215571"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of torque"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21813488"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "newton metre"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "牛頓米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207733"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Russian unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "verst"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "俄里"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1978718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207733"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Russian unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "verst"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "俄里"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1978718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207733"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Russian unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "verst"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "俄里"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1978718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207733"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Russian unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "verst"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "俄里"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1978718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207733"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Russian unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "verst"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "俄里"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1978718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q591259"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "units of time based on the Moon"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lunar month"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "朔望月"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1790144"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207733"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Russian unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "verst"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "俄里"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207733"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Russian unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "verst"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "俄里"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207733"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Russian unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "verst"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "俄里"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207733"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Russian unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "verst"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "俄里"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207733"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Russian unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "verst"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "俄里"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q591259"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "units of time based on the Moon"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lunar month"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "朔望月"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q214377"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ell"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "厄爾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1978718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q214377"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ell"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "厄爾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2534228"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q214377"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ell"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "厄爾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16782623"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q214377"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ell"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "厄爾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q214377"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ell"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "厄爾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28608087"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q591259"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "units of time based on the Moon"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lunar month"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "太陰月"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1790144"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q591259"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "units of time based on the Moon"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lunar month"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "太陰月"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q488021"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of cargo capacity, TEU"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "twenty-foot equivalent unit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "20呎標準貨櫃"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1302471"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q488021"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of cargo capacity, TEU"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "twenty-foot equivalent unit"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "20呎标准货柜"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1302471"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q488021"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of cargo capacity, TEU"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "twenty-foot equivalent unit"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "20呎標準貨櫃"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1302471"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q488021"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of cargo capacity, TEU"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "twenty-foot equivalent unit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "20呎標準貨櫃"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q488021"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of cargo capacity, TEU"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "twenty-foot equivalent unit"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "20呎标准货柜"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q488021"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of cargo capacity, TEU"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "twenty-foot equivalent unit"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "20呎標準貨櫃"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q214377"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ell"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "厄爾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1978718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q214377"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ell"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "厄爾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2534228"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q214377"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ell"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "厄爾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16782623"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q214377"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ell"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "厄爾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q214377"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ell"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "厄爾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28608087"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1463969"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of thermal conductivity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126959552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "watt per metre kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "瓦特/米开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126959552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1645966"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ancient Greek unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stadion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "斯塔迪亞"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607056"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1645966"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ancient Greek unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stadion"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "斯塔达"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607056"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1645966"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ancient Greek unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stadion"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "斯塔达"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607056"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1645966"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ancient Greek unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stadion"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "斯塔達"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607056"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1645966"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ancient Greek unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stadion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "斯塔迪亞"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1978718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1645966"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ancient Greek unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stadion"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "斯塔达"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1978718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1645966"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ancient Greek unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stadion"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "斯塔达"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1978718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1645966"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ancient Greek unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stadion"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "斯塔達"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1978718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1645966"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ancient Greek unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stadion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "斯塔迪亞"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1645966"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ancient Greek unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stadion"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "斯塔达"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1645966"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ancient Greek unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stadion"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "斯塔达"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1645966"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ancient Greek unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stadion"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "斯塔達"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q794261"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of volume flow rate"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q36548538"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cubic metre per second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "立方公尺每秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q794261"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of volume flow rate"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q36548538"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cubic metre per second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "立方公尺每秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1370617"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q794261"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of volume flow rate"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q36548538"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cubic metre per second"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "立方公尺每秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q794261"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of volume flow rate"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q36548538"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cubic metre per second"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "立方公尺每秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1370617"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q794261"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of volume flow rate"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q36548538"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cubic metre per second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "立方公尺每秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q36548538"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q794261"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of volume flow rate"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q36548538"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cubic metre per second"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "立方公尺每秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q36548538"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q794261"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of volume flow rate"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q36548538"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cubic metre per second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "立方公尺每秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q794261"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of volume flow rate"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q36548538"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cubic metre per second"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "立方公尺每秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q660818"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "league"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "里格"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2534228"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q660818"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "league"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "里格"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16782623"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q660818"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "league"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "里格"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q660818"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "league"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "里格"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28608087"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1643308"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of time; 3 months, quarter of a year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quarter"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "季度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1790144"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1643308"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of time; 3 months, quarter of a year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quarter"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "季度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q856240"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of volumetric flow rate"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q36548538"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cubic foot per minute"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "立方英尺/分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q36548538"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1463969"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of thermal conductivity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126959552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "watt per metre kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "瓦特/米开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106681350"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of moment of force, torque and energy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21813488"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per square second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每平方秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2916980"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106681350"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of moment of force, torque and energy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21813488"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per square second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每平方秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21813488"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106681350"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of moment of force, torque and energy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21813488"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per square second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每平方秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107222165"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of total mass stopping power"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128262698"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quartic metre per square second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "每平方秒每立方米的四次方"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107222165"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of total mass stopping power"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128262698"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quartic metre per square second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "每平方秒每立方米的四次方"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128262698"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q84451486"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of thermal resistivity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139556468"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kelvin metre per watt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "开尔文米每瓦特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q84451486"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of thermal resistivity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139556468"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kelvin metre per watt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "开尔文米每瓦特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139556468"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q136718229"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of warming potential for a greenhouse effect gases"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139558263"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "megatonne of carbon dioxide equivalent"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "百万吨二氧化碳当量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550844"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q136718229"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of warming potential for a greenhouse effect gases"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139558263"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "megatonne of carbon dioxide equivalent"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "百万吨二氧化碳当量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110762942"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q136718229"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of warming potential for a greenhouse effect gases"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139558263"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "megatonne of carbon dioxide equivalent"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "百万吨二氧化碳当量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139558263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106689063"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of thermal conductivity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126959552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram metre per cubic second kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克米每立方秒开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106689063"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of thermal conductivity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126959552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram metre per cubic second kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克米每立方秒开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126959552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q73432913"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for age"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "days old"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "天"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1790144"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q73432913"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for age"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "days old"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "天"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q73432674"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for age"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "months old"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "个月"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1790144"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q73432674"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for age"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "months old"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "个月"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1790144"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q81663366"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of thermal conductance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126979705"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "watt per kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "瓦特每开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q73432674"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for age"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "months old"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "个月"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q73432674"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for age"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "months old"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "个月"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q81663366"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of thermal conductance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126979705"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "watt per kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "瓦特每开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126979705"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q73432913"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for age"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "days old"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "天"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1790144"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q73432913"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for age"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "days old"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "天"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107305236"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of the Seebeck and Thomson coefficient"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126970548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per cubic second ampere kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每立方秒安培开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107305236"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of the Seebeck and Thomson coefficient"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126970548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per cubic second ampere kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每立方秒安培开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126970059"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107305236"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of the Seebeck and Thomson coefficient"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126970548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per cubic second ampere kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每立方秒安培开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126970548"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107299709"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per cubic second ampere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每立方秒安培"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107299709"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per cubic second ampere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每立方秒安培"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107299709"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per cubic second ampere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每立方秒安培"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107299709"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per cubic second ampere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每立方秒安培"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106689255"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of thermal conductance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126979705"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per cubic second kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每立方秒开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106689255"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of thermal conductance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126979705"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per cubic second kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每立方秒开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126979705"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106689202"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of thermal insulance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126980031"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cubic second kelvin per kilogram"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "立方秒开尔文每千克"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105761745"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of the Seebeck and Thomson coefficient"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126970548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt per kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伏特/开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106689202"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of thermal insulance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126980031"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cubic second kelvin per kilogram"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "立方秒开尔文每千克"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126980031"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105761745"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of the Seebeck and Thomson coefficient"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126970548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt per kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伏特/开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126970059"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105761745"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of the Seebeck and Thomson coefficient"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126970548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "volt per kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伏特/开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126970548"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98643033"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of total mass stopping power"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128262698"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule square metre per kilogram"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "焦耳平方米每千克"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98643033"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of total mass stopping power"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128262698"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule square metre per kilogram"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "焦耳平方米每千克"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128262698"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3186734"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of volumetric heat capacity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q138873018"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per cubic metre kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "焦耳每立方米开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2554092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilovolt"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "千伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2554092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilovolt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "千伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3186734"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of volumetric heat capacity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q138873018"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per cubic metre kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "焦耳每立方米开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q138873018"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3332092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of thermal insulance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126980031"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "square metre kelvin per watt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "平方米开尔文每瓦特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2554092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilovolt"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "千伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2554092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilovolt"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "千伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2554092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilovolt"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "千伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2554092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilovolt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "千伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2554092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilovolt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "千伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2554092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilovolt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "千伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3332092"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of thermal insulance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126980031"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "square metre kelvin per watt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "平方米开尔文每瓦特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126980031"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit or class of units that can have various definitions and can't be converted to SI units with a single conversion factor. If some of the units in this class can be converted to SI units, specific items should be made for them."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit without standard conversion to SI"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "无法标准转换为国际单位制的单位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2232211"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for voltage measurement; 10 nanovolts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abvolt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "絕對伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24564698"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for age"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "years old"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "歲"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1790144"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24564698"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for age"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "years old"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "歲"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2448803"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "millivolt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "毫伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2448803"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "millivolt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "毫伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899076"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2448803"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "millivolt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "毫伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126899121"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2448803"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of voltage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "millivolt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "毫伏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24564698"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for age"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "years old"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "岁"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1790144"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24564698"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for age"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "years old"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "歲"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1790144"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24564698"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for age"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "years old"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "岁"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24564698"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for age"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "years old"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "歲"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11247037"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of mass or volume, varying by language and place"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ton"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "英噸"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1302471"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11247037"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of mass or volume, varying by language and place"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ton"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "英噸"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3647172"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11247037"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of mass or volume, varying by language and place"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ton"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "英噸"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24564698"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for age"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "years old"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "岁"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1790144"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24564698"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for age"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "years old"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "岁"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1790144"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24564698"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for age"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "years old"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "岁"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24564698"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for age"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "years old"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "岁"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21684377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2066484"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cgs-esu unit of voltage; approximately 300 volts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "statvolt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "靜伏特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126900030"
+      }
+    }
+  ]
+}

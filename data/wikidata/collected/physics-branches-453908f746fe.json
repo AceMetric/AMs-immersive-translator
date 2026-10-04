@@ -1,0 +1,3459 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q126955170 wd:Q128212830 wd:Q126959772 wd:Q126959833 wd:Q126959878 wd:Q126959812 wd:Q128210929 wd:Q138882773 wd:Q126979217 wd:Q138882825 wd:Q139549822 wd:Q10387685 wd:Q138882865 wd:Q126977885 wd:Q126978213 wd:Q139623437 wd:Q131578008 wd:Q126974913 wd:Q128328881 wd:Q139549861 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q126955170 wd:Q128212830 wd:Q126959772 wd:Q126959833 wd:Q126959878 wd:Q126959812 wd:Q128210929 wd:Q138882773 wd:Q126979217 wd:Q138882825 wd:Q139549822 wd:Q10387685 wd:Q138882865 wd:Q126977885 wd:Q126978213 wd:Q139623437 wd:Q131578008 wd:Q126974913 wd:Q128328881 wd:Q139549861 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q126955170 wd:Q128212830 wd:Q126959772 wd:Q126959833 wd:Q126959878 wd:Q126959812 wd:Q128210929 wd:Q138882773 wd:Q126979217 wd:Q138882825 wd:Q139549822 wd:Q10387685 wd:Q138882865 wd:Q126977885 wd:Q126978213 wd:Q139623437 wd:Q131578008 wd:Q126974913 wd:Q128328881 wd:Q139549861 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "453908f746fe3db1aa4a3f432d3dbc26ae50cb9c4cd15a56196827446932a961",
+  "responseSha256": "4b1ac91faf74a7690f064a5058a01f3ae69bbf5f9637d3ae68a3627fef0b9fa3",
+  "retrievedAt": "2026-10-04T05:07:31.918965+00:00",
+  "license": "CC0-1.0",
+  "domain": "physics",
+  "roots": [
+    {
+      "domain": "physics",
+      "id": "Q126955170",
+      "label": "unit of magnetic flux density",
+      "description": "unit for reporting measurement of magnetic flux density",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q128212830",
+      "label": "unit of magnetic moment",
+      "description": "unit for reporting measurement magnetic moment",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126959772",
+      "label": "unit of magnetic permeability",
+      "description": "unit for reporting measurement of magnetic permeability",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126959833",
+      "label": "unit of magnetic polarization",
+      "description": "unit for reporting measurement of magnetic polarization",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126959878",
+      "label": "unit of magnetic reluctance",
+      "description": "unit for reporting measurement of magnetic reluctance",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126959812",
+      "label": "unit of magnetic vector potential",
+      "description": "unit for reporting measurement of magnetic vector potential",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q128210929",
+      "label": "unit of magnetomotive force",
+      "description": "unit for reporting measurement of magnetomotive force",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q138882773",
+      "label": "unit of mass absorption coefficient",
+      "description": "unit for reporting mass absorption coefficient",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126979217",
+      "label": "unit of mass attenuation coefficient",
+      "description": "unit for reporting measurement of mass attenuation coefficient",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q138882825",
+      "label": "unit of mass attenuation coefficient",
+      "description": "unit for reporting mass attenuation coefficient",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q139549822",
+      "label": "unit of mass change rate",
+      "description": "unit for reporting mass change rate",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q10387685",
+      "label": "unit of mass density",
+      "description": "unit for reporting measurement of mass density",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q138882865",
+      "label": "unit of mass energy-transfer coefficient",
+      "description": "unit for reporting mass energy-transfer coefficient",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126977885",
+      "label": "unit of mass flow",
+      "description": "unit for reporting measurement of mass flow",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126978213",
+      "label": "unit of mass flow rate",
+      "description": "unit for reporting measurement of mass flow rate",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q139623437",
+      "label": "unit of mass per charge",
+      "description": "unit for reporting mass per charge",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q131578008",
+      "label": "unit of mass per energy",
+      "description": "unit for reporting mass per energy",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126974913",
+      "label": "unit of maximum luminous efficacy",
+      "description": "unit for reporting measurement of maximum luminous efficacy",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q128328881",
+      "label": "unit of mean energy imparted",
+      "description": "unit for reporting measurement of mean energy imparted",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q139549861",
+      "label": "unit of mechanical impedance",
+      "description": "unit for reporting mechanical impedance",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "physics branches 661..680",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13147228"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gram per cubic centimetre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "克每立方厘米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13147228"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gram per cubic centimetre"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "克每立方公分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13147228"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gram per cubic centimetre"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "克每立方公分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13147228"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gram per cubic centimetre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "克每立方厘米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13147228"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gram per cubic centimetre"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "克每立方公分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13147228"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gram per cubic centimetre"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "克每立方公分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13147228"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gram per cubic centimetre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "克每立方厘米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55433947"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13147228"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gram per cubic centimetre"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "克每立方公分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55433947"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13147228"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gram per cubic centimetre"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "克每立方公分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55433947"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413142"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of magnetomotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128210929"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gilbert"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "吉伯 (單位)"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413142"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of magnetomotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128210929"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gilbert"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "吉伯 (單位)"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128210929"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21077820"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of concentration"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "milligram per cubic metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "毫克每立方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21077820"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of concentration"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "milligram per cubic metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "毫克每立方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21077820"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of concentration"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "milligram per cubic metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "毫克每立方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55433947"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q844211"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of mass density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per cubic metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克每立方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q844211"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of mass density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per cubic metre"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "千克每立方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q844211"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of mass density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per cubic metre"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "公斤每立方公尺"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q844211"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of mass density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per cubic metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克每立方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q844211"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of mass density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per cubic metre"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "千克每立方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q844211"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of mass density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per cubic metre"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "公斤每立方公尺"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q844211"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of mass density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per cubic metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克每立方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55433947"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q844211"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of mass density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per cubic metre"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "千克每立方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55433947"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q844211"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of mass density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per cubic metre"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "公斤每立方公尺"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55433947"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q844211"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of mass density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per cubic metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克每立方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q844211"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of mass density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per cubic metre"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "千克每立方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q844211"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of mass density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per cubic metre"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "公斤每立方公尺"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1166093"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical constant of magnetic moment"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212830"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear magneton"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "核磁子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q173227"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21392882"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of magnetic permeability"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126959772"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "newton per square ampere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "牛顿每平方安培"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1166093"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical constant of magnetic moment"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212830"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear magneton"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "核磁子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212830"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21392882"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of magnetic permeability"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126959772"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "newton per square ampere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "牛顿每平方安培"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126959772"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21088638"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of magnetic moment"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212830"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per tesla"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "焦耳每特斯拉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21088638"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of magnetic moment"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212830"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per tesla"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "焦耳每特斯拉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for reporting measurement of mass density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of mass density"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "密度单位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21088638"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of magnetic moment"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212830"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per tesla"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "焦耳每特斯拉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212830"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21088638"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of magnetic moment"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212830"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per tesla"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "焦耳每特斯拉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212830"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21088638"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of magnetic moment"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212830"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per tesla"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "焦耳/特斯拉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21088638"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of magnetic moment"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212830"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per tesla"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "焦耳/特斯拉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212830"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899679"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Baumé degree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "波美度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55726194"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of density and concentration"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "milligram per litre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "毫克每升"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55726194"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of density and concentration"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "milligram per litre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "毫克每升"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55433947"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55726194"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of density and concentration"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "milligram per litre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "毫克每升"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839753"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55663153"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of magnetic permeability"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126959772"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "henry per metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "亨利每米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q77899731"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of the magnetic vector potential"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126959812"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "weber per metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "韦伯每米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55663153"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of magnetic permeability"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126959772"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "henry per metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "亨利每米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126959772"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q77899731"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of the magnetic vector potential"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126959812"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "weber per metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "韦伯每米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126959812"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106936862"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of luminous efficacy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126974913"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "candela steradian cubic second per kilogram square metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "坎德拉·球面度·立方秒/千克·平方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106936862"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of luminous efficacy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126974913"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "candela steradian cubic second per kilogram square metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "坎德拉·球面度·立方秒/千克·平方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126974890"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106936862"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of luminous efficacy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126974913"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "candela steradian cubic second per kilogram square metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "坎德拉·球面度·立方秒/千克·平方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126974902"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106936862"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of luminous efficacy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126974913"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "candela steradian cubic second per kilogram square metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "坎德拉·球面度·立方秒/千克·平方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126974913"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106936862"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of luminous efficacy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126974913"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "candela steradian cubic second per kilogram square metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "坎德拉·球面度·立方秒/千克·平方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126974943"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q86200529"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of the mass attenuation coefficient"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126979217"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "square metre per kilogram"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "平方米/千克"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q86200529"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of the mass attenuation coefficient"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126979217"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "square metre per kilogram"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "平方米/千克"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126979217"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25381181"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of mass flow rate"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126978213"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克每秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q83386886"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of luminous efficacy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126974913"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lumen per watt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "流明/瓦特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25381181"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of mass flow rate"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126978213"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克每秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126978213"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q83386886"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of luminous efficacy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126974913"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lumen per watt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "流明/瓦特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126974890"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q83386886"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of luminous efficacy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126974913"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lumen per watt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "流明/瓦特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126974902"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q83386886"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of luminous efficacy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126974913"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lumen per watt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "流明/瓦特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126974913"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q83386886"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of luminous efficacy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126974913"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lumen per watt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "流明/瓦特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126974943"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21604951"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gram per cubic metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "克每立方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21604951"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gram per cubic metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "克每立方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21604951"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gram per cubic metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "克每立方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55433947"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q101515303"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of mass per energy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131578008"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per joule"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克/焦耳"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107305389"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of magnetic flux density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per square second ampere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克每平方秒安培"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q101515303"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of mass per energy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131578008"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per joule"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克/焦耳"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131578008"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107305389"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of magnetic flux density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per square second ampere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克每平方秒安培"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87049028"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of mechanical impedance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139549861"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "newton second per metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "牛顿秒每米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q87049028"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of mechanical impedance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139549861"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "newton second per metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "牛顿秒每米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139549861"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104907187"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "microgram per litre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "微克每升"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104907187"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "microgram per litre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "微克每升"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839753"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q77996931"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of magnetic reluctance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126959878"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "reciprocal henry"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "每亨利"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q77996931"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of magnetic reluctance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126959878"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "reciprocal henry"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "每亨利"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126959878"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q108270163"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of capacity of a transportation network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139549822"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tonne per year"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "吨每年"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139549822"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q92011107"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of mass flow"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126977885"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per square metre second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克每平方米秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q92011107"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of mass flow"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126977885"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per square metre second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克每平方米秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126977885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q834105"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of measurement of mass concentration that shows how many grams of a certain substance are present in one litre of a usually liquid or gaseous mixture"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gram per litre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "克/合"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55433947"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q834105"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of measurement of mass concentration that shows how many grams of a certain substance are present in one litre of a usually liquid or gaseous mixture"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gram per litre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "克/合"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839753"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163343"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of magnetic flux density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tesla"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "特斯拉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163343"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of magnetic flux density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tesla"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "特斯拉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163343"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of magnetic flux density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tesla"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "特斯拉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163343"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of magnetic flux density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tesla"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "特斯拉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163343"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of magnetic flux density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tesla"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "特斯拉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163343"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of magnetic flux density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tesla"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "特斯拉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163343"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of magnetic flux density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tesla"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "特斯拉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163343"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of magnetic flux density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tesla"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "特斯拉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163343"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of magnetic flux density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tesla"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "特斯拉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163343"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of magnetic flux density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tesla"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "特斯拉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163343"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of magnetic flux density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tesla"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "特斯拉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163343"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of magnetic flux density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tesla"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "特斯拉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q737120"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of magnetic moment (approx. 9.2 J/T); the magnetic dipole moment of an electron orbiting an atom with angular momentum ℏ in the Bohr model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212830"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bohr magneton"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "玻尔磁子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q173227"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q737120"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of magnetic moment (approx. 9.2 J/T); the magnetic dipole moment of an electron orbiting an atom with angular momentum ℏ in the Bohr model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212830"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bohr magneton"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "玻尔磁子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212830"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q474533"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of magnetomotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128210929"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ampere-turn"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "安培轉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128210929"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q474533"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of magnetomotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128210929"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ampere-turn"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "安培转"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128210929"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q474533"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of magnetomotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128210929"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ampere-turn"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "安培转"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128210929"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q474533"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of magnetomotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128210929"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ampere-turn"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "安培轉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128210929"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163343"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of magnetic flux density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tesla"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "特斯拉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163343"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of magnetic flux density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tesla"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "特斯拉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163343"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of magnetic flux density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tesla"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "特斯拉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177493"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cgs unit of magnetic flux density (0.1 millitesla)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gauss"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "高斯"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177493"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cgs unit of magnetic flux density (0.1 millitesla)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gauss"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "高斯"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177493"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cgs unit of magnetic flux density (0.1 millitesla)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gauss"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "高斯"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q474533"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of magnetomotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128210929"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ampere-turn"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "安培轉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q413"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q474533"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of magnetomotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128210929"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ampere-turn"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "安培轉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11406"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q474533"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of magnetomotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128210929"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ampere-turn"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "安培转"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q413"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q474533"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of magnetomotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128210929"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ampere-turn"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "安培转"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11406"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q474533"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of magnetomotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128210929"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ampere-turn"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "安培转"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q413"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q474533"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of magnetomotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128210929"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ampere-turn"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "安培转"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11406"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q474533"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of magnetomotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128210929"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ampere-turn"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "安培轉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q413"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q474533"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of magnetomotive force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128210929"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ampere-turn"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "安培轉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11406"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q536785"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "very large unit of density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Planck density"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "普朗克密度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q468999"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q536785"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "very large unit of density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Planck density"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "普朗克密度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q834105"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of measurement of mass concentration that shows how many grams of a certain substance are present in one litre of a usually liquid or gaseous mixture"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gram per litre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "克/合"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387685"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2760 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q846354 wd:Q7117817 wd:Q1330967 wd:Q1195972 wd:Q1087987 wd:Q12758225 wd:Q614361 wd:Q4381439 wd:Q131455237 wd:Q1969601 wd:Q1503724 wd:Q7158533 wd:Q2427787 wd:Q1063380 wd:Q1659515 wd:Q1546627 wd:Q25303629 wd:Q1068675 wd:Q1681391 wd:Q7233606 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q846354 wd:Q7117817 wd:Q1330967 wd:Q1195972 wd:Q1087987 wd:Q12758225 wd:Q614361 wd:Q4381439 wd:Q131455237 wd:Q1969601 wd:Q1503724 wd:Q7158533 wd:Q2427787 wd:Q1063380 wd:Q1659515 wd:Q1546627 wd:Q25303629 wd:Q1068675 wd:Q1681391 wd:Q7233606 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q846354 wd:Q7117817 wd:Q1330967 wd:Q1195972 wd:Q1087987 wd:Q12758225 wd:Q614361 wd:Q4381439 wd:Q131455237 wd:Q1969601 wd:Q1503724 wd:Q7158533 wd:Q2427787 wd:Q1063380 wd:Q1659515 wd:Q1546627 wd:Q25303629 wd:Q1068675 wd:Q1681391 wd:Q7233606 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "83c1e1fe8f4fc688b90fa4c40ae793b31f9011d52dd17b64e1cccabaffc26843",
+  "responseSha256": "4aaf87930f4324db27398560b877aa4594e5ca5104cf7df04724cff96c175a59",
+  "retrievedAt": "2026-10-04T03:24:49.365470+00:00",
+  "license": "CC0-1.0",
+  "domain": "cs",
+  "roots": [
+    {
+      "domain": "cs",
+      "id": "Q846354",
+      "label": "P",
+      "description": "computational complexity class of problems",
+      "parents": [
+        "Q3435924"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q7117817",
+      "label": "P/poly",
+      "description": "complexity class of languages recognized by a polynomial-time Turing machine with a polynomial-bounded advice function",
+      "parents": [
+        "Q3435924"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q1330967",
+      "label": "page replacement algorithm",
+      "description": "algorithm in an OS that decides which memory pages to page out (swap out, write to disk) when a requested page is not in memory (page fault) and a free page cannot be used to satisfy the allocation (because there are too few or none)",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q1195972",
+      "label": "page table",
+      "description": "data structure that maps virtual addresses with physical addresses",
+      "parents": [
+        "Q175263"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q1087987",
+      "label": "parallel algorithm",
+      "description": "algorithm which can do multiple operations in the same time",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q12758225",
+      "label": "parser",
+      "description": "software that interprets a string",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q614361",
+      "label": "partition table",
+      "description": "table maintained on disk by a computer operating system describing the partitions on that disk",
+      "parents": [
+        "Q175263"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q4381439",
+      "label": "passive data structure",
+      "description": "another term for record",
+      "parents": [
+        "Q175263"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q131455237",
+      "label": "path-planning algorithm",
+      "description": "computational method used to determine an optimal or feasible route from a starting point to a destination within a given environment, considering obstacles, constraints, and possibly optimizing for criteria like distance, time, or cost",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q1969601",
+      "label": "pathfinding",
+      "description": "plotting, by a computer application, of the shortest route between two points",
+      "parents": [
+        "Q3435924"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q1503724",
+      "label": "pattern matching",
+      "description": "programming language construct for processing data conditionally on its structure",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q7158533",
+      "label": "Pebble motion problems",
+      "description": "set of related problems in graph theory",
+      "parents": [
+        "Q3435924"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q2427787",
+      "label": "persistent data structure",
+      "description": "data structure that always preserves the previous version of itself when it is modified",
+      "parents": [
+        "Q175263"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q1063380",
+      "label": "PH",
+      "description": "algorithmic complexity class; the union of all complexity classes in the polynomial hierarchy; the set of languages expressible by second-order logic",
+      "parents": [
+        "Q3435924"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q1659515",
+      "label": "photon mapping",
+      "description": "algorithm in rendering",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q1546627",
+      "label": "player strategy",
+      "description": "complete plan on how a game player will behave in every possible game situation",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q25303629",
+      "label": "polynomial identity testing",
+      "description": "problem of determining whether a given polynomial is identically zero",
+      "parents": [
+        "Q3435924"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q1068675",
+      "label": "polynomial long division",
+      "description": "dividing polynomials similar to long division for regular numbers",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q1681391",
+      "label": "polytope model",
+      "description": "mathematical framework for programs that perform large numbers of operations which must be represented compactly",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q7233606",
+      "label": "PostBQP",
+      "description": "complexity class",
+      "parents": [
+        "Q3435924"
+      ]
+    }
+  ],
+  "limit": 20000,
+  "name": "cs branches 221..240",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7310997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "reliable delivery of packets to multiple recipients simultaneously"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1087987"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "reliable multicast"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "可靠多播"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132364"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7310997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "reliable delivery of packets to multiple recipients simultaneously"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1087987"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "reliable multicast"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "可靠多播"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1087987"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3493567"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "defensive strategy in basketball"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Double team"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "包夾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835898"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm designed to run on computer hardware constructed from interconnected processors"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1087987"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分散式演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3062515"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "subsidiary partition table in the MBR partitioning scheme"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q614361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "extended boot record"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "扩展引导记录"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "software that interprets a string"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parser"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "语法分析器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "software that interprets a string"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parser"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "语法分析器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4381439"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "another term for record"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4381439"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "passive data structure"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "POD (程序设计)"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6771330"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "strategy which only depends on the current state of a game"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Markov strategy"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "马尔可夫策略"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6771330"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "strategy which only depends on the current state of a game"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Markov strategy"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "馬爾可夫策略"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27924245"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "persistent data structure that does not rely on mutable state"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2427787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "purely functional data structure"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "纯函数式数据结构"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6781885"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Agreement algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1087987"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Marzullo's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Marzullo算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1087987"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6781885"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Agreement algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1087987"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Marzullo's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Marzullo算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1087987"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6781885"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Agreement algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1087987"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Marzullo's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Marzullo算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1087987"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6781885"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Agreement algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1087987"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Marzullo's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Marzullo演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1087987"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7303337"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "recursive ascent parser"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "递归上升解析器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28455561"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q307521"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a situation where players have only a small incentive to change strategies"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Epsilon-equilibrium"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Ε-均衡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q307521"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a situation where players have only a small incentive to change strategies"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Epsilon-equilibrium"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "ε-均衡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q307521"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a situation where players have only a small incentive to change strategies"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Epsilon-equilibrium"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "ε-均衡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q307521"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a situation where players have only a small incentive to change strategies"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Epsilon-equilibrium"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "ε-均衡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q307521"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a situation where players have only a small incentive to change strategies"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Epsilon-equilibrium"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "ε-均衡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q932615"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "left-to-right, leftmost derivation top-down parser for a subset of context-free languages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "LL parser"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "LL剖析器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17155032"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q614361"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "table maintained on disk by a computer operating system describing the partitions on that disk"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q614361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partition table"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分区表"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063380"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithmic complexity class; the union of all complexity classes in the polynomial hierarchy; the set of languages expressible by second-order logic"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063380"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "PH"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "多項式層次結構"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q908207"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063380"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithmic complexity class; the union of all complexity classes in the polynomial hierarchy; the set of languages expressible by second-order logic"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063380"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "PH"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "PH"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q908207"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063380"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithmic complexity class; the union of all complexity classes in the polynomial hierarchy; the set of languages expressible by second-order logic"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063380"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "PH"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "PH"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q908207"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q375944"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer disk partitioning scheme"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q614361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Apple Partition Map"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Apple Partition Map"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79803608"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q846354"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computational complexity class of problems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q846354"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "P"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "多項式時間類問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q908207"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q846354"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computational complexity class of problems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q846354"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "P"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "多项式时间类问题"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q908207"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q846354"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computational complexity class of problems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q846354"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "P"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "多項式時間類問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q908207"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q846354"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computational complexity class of problems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q846354"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "P"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "P"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q908207"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q269652"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of clock synchronisation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1087987"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Berkeley algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Berkeley算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1087987"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q269652"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of clock synchronisation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1087987"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Berkeley algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Berkeley算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1087987"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q269652"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of clock synchronisation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1087987"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Berkeley algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Berkeley演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1087987"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q987969"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of protocols for solving consensus in a network of unreliable processors"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1087987"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Paxos"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Paxos算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28455561"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q987969"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of protocols for solving consensus in a network of unreliable processors"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1087987"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Paxos"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Paxos算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28455561"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q987969"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of protocols for solving consensus in a network of unreliable processors"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1087987"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Paxos"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Paxos算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28455561"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q987969"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of protocols for solving consensus in a network of unreliable processors"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1087987"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Paxos"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "Paxos演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28455561"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q846354"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computational complexity class of problems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q846354"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "P"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "P"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q908207"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q185612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sequence of characters that forms a search pattern"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1503724"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "regular expression"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "正则表达式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q185612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sequence of characters that forms a search pattern"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1503724"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "regular expression"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "正则表达式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q185612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sequence of characters that forms a search pattern"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1503724"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "regular expression"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "正則表達式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q185612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sequence of characters that forms a search pattern"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1503724"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "regular expression"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "正規表示式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q185612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sequence of characters that forms a search pattern"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1503724"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "regular expression"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "正则表达式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q603889"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard for the layout of the partition table on a physical storage device used in a desktop or server PC"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q614361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GUID Partition Table"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "全局唯一标识符磁碟分割表"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79803608"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q603889"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard for the layout of the partition table on a physical storage device used in a desktop or server PC"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q614361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GUID Partition Table"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "GUID Partition Table"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79803608"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q603889"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard for the layout of the partition table on a physical storage device used in a desktop or server PC"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q614361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GUID Partition Table"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "GUID Partition Table"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79803608"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q603889"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard for the layout of the partition table on a physical storage device used in a desktop or server PC"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q614361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GUID Partition Table"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "GUID Partition Table"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79803608"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2427787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure that always preserves the previous version of itself when it is modified"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2427787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "persistent data structure"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "可持久化資料結構"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2427787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure that always preserves the previous version of itself when it is modified"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2427787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "persistent data structure"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "持久性数据结构"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2427787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure that always preserves the previous version of itself when it is modified"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2427787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "persistent data structure"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "持久性数据结构"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2427787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure that always preserves the previous version of itself when it is modified"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2427787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "persistent data structure"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "永續性資料結構"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1969601"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "plotting, by a computer application, of the shortest route between two points"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1969601"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pathfinding"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "寻路"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55070019"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1969601"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "plotting, by a computer application, of the shortest route between two points"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1969601"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pathfinding"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "寻路"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55070019"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1969601"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "plotting, by a computer application, of the shortest route between two points"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1969601"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pathfinding"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "尋路"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55070019"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1069992"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "strategy which, if adopted by a population in a given environment, cannot be invaded by any alternative strategy that is initially rare"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evolutionarily stable strategy"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "演化均衡策略"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1069992"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "strategy which, if adopted by a population in a given environment, cannot be invaded by any alternative strategy that is initially rare"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evolutionarily stable strategy"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "evolutional stable strategy"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1069992"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "strategy which, if adopted by a population in a given environment, cannot be invaded by any alternative strategy that is initially rare"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evolutionarily stable strategy"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "进化稳定策略"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1069992"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "strategy which, if adopted by a population in a given environment, cannot be invaded by any alternative strategy that is initially rare"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evolutionarily stable strategy"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "進化穩定策略"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1277497"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for parsing strings that belong to a given context-free language"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Earley parser"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "依尔利算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1277497"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for parsing strings that belong to a given context-free language"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Earley parser"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "依尔利算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1277497"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for parsing strings that belong to a given context-free language"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Earley parser"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "依爾利算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "complete plan on how a game player will behave in every possible game situation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "player strategy"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "策略"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "complete plan on how a game player will behave in every possible game situation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "player strategy"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "策略"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1330967"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm in an OS that decides which memory pages to page out (swap out, write to disk) when a requested page is not in memory (page fault) and a free page cannot be used to satisfy the allocation (because there are too few or none)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1330967"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "page replacement algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "快取文件置換機制"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1330967"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm in an OS that decides which memory pages to page out (swap out, write to disk) when a requested page is not in memory (page fault) and a free page cannot be used to satisfy the allocation (because there are too few or none)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1330967"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "page replacement algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "高速缓存文件置换机制"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1330967"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm in an OS that decides which memory pages to page out (swap out, write to disk) when a requested page is not in memory (page fault) and a free page cannot be used to satisfy the allocation (because there are too few or none)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1330967"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "page replacement algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "快取文件置换机制"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1330967"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm in an OS that decides which memory pages to page out (swap out, write to disk) when a requested page is not in memory (page fault) and a free page cannot be used to satisfy the allocation (because there are too few or none)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1330967"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "page replacement algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "快取文件置換機制"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1068675"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dividing polynomials similar to long division for regular numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1068675"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "polynomial long division"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "多项式长除法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1068675"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dividing polynomials similar to long division for regular numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1068675"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "polynomial long division"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "多项式长除法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1068675"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dividing polynomials similar to long division for regular numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1068675"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "polynomial long division"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "多項式長除法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1949683"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "theory of preventing aggression through threat of force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deterrence theory"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "核抑止理論"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1949683"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "theory of preventing aggression through threat of force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deterrence theory"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "威慑理论"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1949683"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "theory of preventing aggression through threat of force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deterrence theory"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "威慑理论"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1949683"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "theory of preventing aggression through threat of force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deterrence theory"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "威懾理論"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1949683"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "theory of preventing aggression through threat of force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deterrence theory"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "嚇阻理論"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1087987"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm which can do multiple operations in the same time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1087987"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parallel algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "平行演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1659515"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm in rendering"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1659515"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "photon mapping"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "光子映射"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4485156"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1277797"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "developing a plan to play this game in the course of a chess game"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "chess strategy"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "國際象棋策略"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1195972"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure that maps virtual addresses with physical addresses"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1195972"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "page table"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分頁表"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1195972"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure that maps virtual addresses with physical addresses"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1195972"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "page table"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "标签页表"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1195972"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure that maps virtual addresses with physical addresses"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1195972"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "page table"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "分页表"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1195972"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure that maps virtual addresses with physical addresses"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1195972"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "page table"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "分頁表"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1277497"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for parsing strings that belong to a given context-free language"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Earley parser"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "依尔利算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1277497"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for parsing strings that belong to a given context-free language"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Earley parser"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "依尔利算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1277497"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for parsing strings that belong to a given context-free language"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Earley parser"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "依爾利算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1228785"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "disklabel for BSD-related operating systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q614361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "BSD disklabel"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "BSD磁碟標籤"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79803608"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1503724"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming language construct for processing data conditionally on its structure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1503724"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pattern matching"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "模式匹配"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1323264"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "style of parser written as a recursive structure matching the grammar it parses"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "recursive-descent parser"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "递归下降分析器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28455561"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1323264"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "style of parser written as a recursive structure matching the grammar it parses"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "recursive-descent parser"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "递归下降解析器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28455561"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1323264"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "style of parser written as a recursive structure matching the grammar it parses"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "recursive-descent parser"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "递归下降分析器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28455561"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1323264"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "style of parser written as a recursive structure matching the grammar it parses"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12758225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "recursive-descent parser"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "遞迴下降解析器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28455561"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2733833"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "game theoretic concept of a strategy that produces the most favorable outcome for a player"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Best response"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "最佳反應"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q84475169"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "complete plan on how a game player will behave in every possible game situation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546627"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "player strategy"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "策略"
+      }
+    }
+  ]
+}

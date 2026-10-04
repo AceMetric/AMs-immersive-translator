@@ -1,0 +1,1718 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q112702082 wd:Q139831852 wd:Q16976963 wd:Q5500256 wd:Q28406324 wd:Q97359222 wd:Q5508968 wd:Q5510283 wd:Q5511111 wd:Q1491980 wd:Q5519035 wd:Q1486676 wd:Q20820008 wd:Q134972301 wd:Q187787 wd:Q5532874 wd:Q41883546 wd:Q5535495 wd:Q141473683 wd:Q1323676 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q112702082 wd:Q139831852 wd:Q16976963 wd:Q5500256 wd:Q28406324 wd:Q97359222 wd:Q5508968 wd:Q5510283 wd:Q5511111 wd:Q1491980 wd:Q5519035 wd:Q1486676 wd:Q20820008 wd:Q134972301 wd:Q187787 wd:Q5532874 wd:Q41883546 wd:Q5535495 wd:Q141473683 wd:Q1323676 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q112702082 wd:Q139831852 wd:Q16976963 wd:Q5500256 wd:Q28406324 wd:Q97359222 wd:Q5508968 wd:Q5510283 wd:Q5511111 wd:Q1491980 wd:Q5519035 wd:Q1486676 wd:Q20820008 wd:Q134972301 wd:Q187787 wd:Q5532874 wd:Q41883546 wd:Q5535495 wd:Q141473683 wd:Q1323676 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "9293280322cbd90cd6ed84ff55a8d9c1e36b2743c6f78bc59e98053452cf9199",
+  "responseSha256": "eebbb2dd60f3a9637dd1fcd879adb468a2446d8fd2a4fdaff2af10921d6fd189",
+  "retrievedAt": "2026-10-04T05:08:47.851374+00:00",
+  "license": "CC0-1.0",
+  "domain": "cs",
+  "roots": [
+    {
+      "domain": "cs",
+      "id": "Q112702082",
+      "label": "foundation model",
+      "description": "artificial intelligence model paradigm",
+      "parents": [
+        "Q115215420"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q139831852",
+      "label": "fractionation",
+      "description": "process by which an entity splits into two or more entities",
+      "parents": [
+        "Q1226939"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q16976963",
+      "label": "frecency",
+      "description": "computing term; heuristic combining frequency and recency",
+      "parents": [
+        "Q201413"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q5500256",
+      "label": "free list",
+      "description": "data structure used in a scheme for dynamic memory allocation",
+      "parents": [
+        "Q27948"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q28406324",
+      "label": "functional differential equation",
+      "description": "differential equation with deviating argument",
+      "parents": [
+        "Q11214"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q97359222",
+      "label": "functor",
+      "description": "design pattern in pure functional programming",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q5508968",
+      "label": "fundamental pattern",
+      "description": "",
+      "parents": [
+        "Q181156"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q5510283",
+      "label": "fusion tree",
+      "description": "type of tree data structure that implements an associative array on w-bit integers",
+      "parents": [
+        "Q677051"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q5511111",
+      "label": "fuzzy clustering",
+      "description": "cluster analysis where membership of a data point in a cluster is fuzzy",
+      "parents": [
+        "Q28058114"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1491980",
+      "label": "Galerkin method",
+      "description": "class of methods for converting a continuous operator problem to a discrete problem",
+      "parents": [
+        "Q24262840"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q5519035",
+      "label": "galley division",
+      "description": "most widely used method of division prior to 1600",
+      "parents": [
+        "Q1226939"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1486676",
+      "label": "General responsibility assignment software patterns",
+      "description": "Guidelines in object-oriented design",
+      "parents": [
+        "Q181156"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q20820008",
+      "label": "generic type",
+      "description": "data type with the option of specifying type parameters",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q134972301",
+      "label": "genesis block",
+      "description": "first block of a blockchain",
+      "parents": [
+        "Q104886715"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q187787",
+      "label": "genetic algorithm",
+      "description": "competitive algorithm for searching a problem space",
+      "parents": [
+        "Q111862379"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q5532874",
+      "label": "genetic algorithm scheduling",
+      "description": "",
+      "parents": [
+        "Q41401699"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q41883546",
+      "label": "geometric algorithm",
+      "description": "type of combinatorial algorithm",
+      "parents": [
+        "Q41883552"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q5535495",
+      "label": "geometric network",
+      "description": "GIS object used to model a series of interconnected features",
+      "parents": [
+        "Q105636095"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q141473683",
+      "label": "geospatial API",
+      "description": "type of API for geospatial data",
+      "parents": [
+        "Q165194"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1323676",
+      "label": "Glide",
+      "description": "free software",
+      "parents": [
+        "Q165194"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "cs branches 221..240",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15305109"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process of dividing up a sample mixture into smaller quantities according to their physical (e.g. size, solubility) or chemical (e.g. bonding, reactivity) properties"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139831852"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fractionation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分提技術"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10843872"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23805"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "design pattern in object-oriented programming where an object, instead of performing one of its stated tasks, delegates that task to an associated helper object"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5508968"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "delegation pattern"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "委托模式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5508968"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q379273"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "form of abstraction for type or method to allow them to be functions of a type parameter"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20820008"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "generics in Java"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Java中的泛型"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q379273"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "form of abstraction for type or method to allow them to be functions of a type parameter"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20820008"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "generics in Java"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Java的类型擦除"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189029"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cell components"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139831852"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cell fractionation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "細胞離拆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55222906"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189029"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cell components"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139831852"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cell fractionation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "细胞分离"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55222906"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189029"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cell components"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139831852"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cell fractionation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "细胞分离"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55222906"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189029"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cell components"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139831852"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cell fractionation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "細胞分離"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55222906"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1491980"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of methods for converting a continuous operator problem to a discrete problem"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1491980"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Galerkin method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伽辽金法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "competitive algorithm for searching a problem space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "genetic algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "遗传算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "competitive algorithm for searching a problem space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "genetic algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "遗传算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "competitive algorithm for searching a problem space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "genetic algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "遗传算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "competitive algorithm for searching a problem space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "genetic algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "遺傳算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "competitive algorithm for searching a problem space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "genetic algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "遺傳演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1323676"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "free software"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1323676"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Glide"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Glide"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q341"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1154798"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "increasing the number of shares in a company, without dilution or change in total capitalization"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139831852"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stock split"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "除权"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q379273"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "form of abstraction for type or method to allow them to be functions of a type parameter"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20820008"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "generics in Java"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Java的类型擦除"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q379273"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "form of abstraction for type or method to allow them to be functions of a type parameter"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20820008"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "generics in Java"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Java的型別擦除"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q518554"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division of a territory"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139831852"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partition"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "瓜分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q116505632"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q518554"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division of a territory"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139831852"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partition"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "瓜分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q116505632"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q518554"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division of a territory"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139831852"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partition"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "瓜分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q116505632"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1486676"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Guidelines in object-oriented design"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1486676"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "General responsibility assignment software patterns"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "GRASP (物件導向設計)"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q782281"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "separation technique to characterize the size of colloidal particles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139831852"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "field-flow fractionation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "場流分離"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4519148"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "paradigm used to simplify the design of hardware and software devices"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5508968"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Functional design"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "機能設計"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5508968"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1900757"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "design pattern in computer science"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5508968"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "marker interface pattern"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "標記介面模式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1486676"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Guidelines in object-oriented design"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1486676"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "General responsibility assignment software patterns"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "GRASP (面向对象设计)"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1486676"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Guidelines in object-oriented design"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1486676"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "General responsibility assignment software patterns"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "GRASP (物件導向設計)"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5511111"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cluster analysis where membership of a data point in a cluster is fuzzy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5511111"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fuzzy clustering"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "模糊聚类"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5535495"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GIS object used to model a series of interconnected features"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5535495"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "geometric network"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "几何网络"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q820272"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optimization algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hill climbing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "爬山算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141495"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q820272"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optimization algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hill climbing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "爬山算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11949983"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data sampling technique used in genetic algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Stochastic universal sampling"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "通用隨機抽樣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5500256"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure used in a scheme for dynamic memory allocation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5500256"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "free list"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "自由表"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23822"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method for structuring software"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5508968"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pattern interface"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "接口模式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5508968"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q125919502"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large multimodal model from OpenAI"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112702082"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GPT-4o"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "GPT-4o"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112702082"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q125919502"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large multimodal model from OpenAI"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112702082"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GPT-4o"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "GPT-4o"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112702082"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q125919502"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large multimodal model from OpenAI"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112702082"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GPT-4o"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "GPT-4o"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q116777014"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q125919502"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large multimodal model from OpenAI"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112702082"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GPT-4o"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "GPT-4o"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117349473"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q125919502"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large multimodal model from OpenAI"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112702082"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GPT-4o"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "GPT-4o"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q116777014"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q125919502"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "large multimodal model from OpenAI"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112702082"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GPT-4o"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "GPT-4o"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117349473"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106847586"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "read-only API for OpenStreetMap"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141473683"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Overpass API"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "Overpass API"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q557770"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106847586"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "read-only API for OpenStreetMap"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141473683"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Overpass API"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "Overpass API"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5376585"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112702082"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "artificial intelligence model paradigm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112702082"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "foundation model"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "基础模型"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112702082"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "artificial intelligence model paradigm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112702082"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "foundation model"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "基礎模型"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112702082"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "artificial intelligence model paradigm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112702082"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "foundation model"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "基礎模型"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28406324"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation with deviating argument"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28406324"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "functional differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "泛函微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106847586"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "read-only API for OpenStreetMap"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141473683"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Overpass API"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "Overpass API"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q114901571"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106847586"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "read-only API for OpenStreetMap"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141473683"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Overpass API"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "Overpass API"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141473683"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25822543"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "API for OpenStreetMap"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141473683"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "OSM API"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "OSM API"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141473683"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25822543"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "API for OpenStreetMap"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141473683"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "OSM API"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "OSM API"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141497409"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25822543"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "API for OpenStreetMap"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141473683"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "OSM API"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "OSM API"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141473683"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25822543"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "API for OpenStreetMap"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141473683"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "OSM API"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "OSM API"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141497409"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25822543"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "API for OpenStreetMap"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141473683"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "OSM API"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "OSM API"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141473683"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25822543"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "API for OpenStreetMap"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141473683"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "OSM API"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "OSM API"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141497409"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q97359222"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "design pattern in pure functional programming"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q97359222"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "functor"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "函子 (函数式编程)"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1375130"
+      }
+    }
+  ]
+}

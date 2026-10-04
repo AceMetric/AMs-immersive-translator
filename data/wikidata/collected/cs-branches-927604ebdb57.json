@@ -1,0 +1,7226 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q140882333 wd:Q3283875 wd:Q5570451 wd:Q5570872 wd:Q5572140 wd:Q115156595 wd:Q5575026 wd:Q1709294 wd:Q30503704 wd:Q907955 wd:Q655908 wd:Q603889 wd:Q1575058 wd:Q19643919 wd:Q17091412 wd:Q183427 wd:Q207440 wd:Q14746 wd:Q5628978 wd:Q274089 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q140882333 wd:Q3283875 wd:Q5570451 wd:Q5570872 wd:Q5572140 wd:Q115156595 wd:Q5575026 wd:Q1709294 wd:Q30503704 wd:Q907955 wd:Q655908 wd:Q603889 wd:Q1575058 wd:Q19643919 wd:Q17091412 wd:Q183427 wd:Q207440 wd:Q14746 wd:Q5628978 wd:Q274089 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q140882333 wd:Q3283875 wd:Q5570451 wd:Q5570872 wd:Q5572140 wd:Q115156595 wd:Q5575026 wd:Q1709294 wd:Q30503704 wd:Q907955 wd:Q655908 wd:Q603889 wd:Q1575058 wd:Q19643919 wd:Q17091412 wd:Q183427 wd:Q207440 wd:Q14746 wd:Q5628978 wd:Q274089 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "927604ebdb572736e91616dade079374c300c906ed9ef640fbf274350f62eaf0",
+  "responseSha256": "6632f62adb90440e15da0225bf1494476748217e39bbaee04f3456840a3d27cd",
+  "retrievedAt": "2026-10-04T05:08:52.894992+00:00",
+  "license": "CC0-1.0",
+  "domain": "cs",
+  "roots": [
+    {
+      "domain": "cs",
+      "id": "Q140882333",
+      "label": "GLL parser",
+      "description": "parsing algorithm for context-free languages",
+      "parents": [
+        "Q12758225"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q3283875",
+      "label": "glob",
+      "description": "computer operation of listing files that match a wildcard pattern",
+      "parents": [
+        "Q55622415"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q5570451",
+      "label": "global interpreter lock",
+      "description": "coarse-grained mutex used in some process virtual machines",
+      "parents": [
+        "Q1047554"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q5570872",
+      "label": "global optimum",
+      "description": "",
+      "parents": [
+        "Q984063",
+        "Q755673"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q5572140",
+      "label": "glove problem",
+      "description": "optimization problem in operations research",
+      "parents": [
+        "Q984063"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q115156595",
+      "label": "Go library",
+      "description": "software library for the Go programming language",
+      "parents": [
+        "Q165194"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q5575026",
+      "label": "Go opening terminology",
+      "description": "initial moves of a Go game",
+      "parents": [
+        "Q1546627"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1709294",
+      "label": "Go-Back-N ARQ",
+      "description": "automatic repeat-request (ARQ) protocol in data transmission and error detection",
+      "parents": [
+        "Q29522"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q30503704",
+      "label": "graph algorithm",
+      "description": "type of algorithm",
+      "parents": [
+        "Q41883552"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q907955",
+      "label": "graph traversal",
+      "description": "checking and/or changing each vertex in a graph",
+      "parents": [
+        "Q755673"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q655908",
+      "label": "grille",
+      "description": "class of ciphers",
+      "parents": [
+        "Q4681865"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q603889",
+      "label": "GUID Partition Table",
+      "description": "standard for the layout of the partition table on a physical storage device used in a desktop or server PC",
+      "parents": [
+        "Q614361"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1575058",
+      "label": "handle",
+      "description": "abstract reference to an open or active computing resource",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q19643919",
+      "label": "Haselgrove's equations",
+      "description": "",
+      "parents": [
+        "Q11214"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q17091412",
+      "label": "hash array mapped trie",
+      "description": "implementation of an associative array that combines the characteristics of a hash table and an array mapped trie",
+      "parents": [
+        "Q80585"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q183427",
+      "label": "hash function",
+      "description": "type of function that maps data of arbitrary size to data of fixed size",
+      "parents": [
+        "Q1064349"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q207440",
+      "label": "hash table",
+      "description": "associates data values with key values - a lookup table",
+      "parents": [
+        "Q80585"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q14746",
+      "label": "hash tree",
+      "description": "tree data structure whose nodes are recursively cryptographically hashed",
+      "parents": [
+        "Q223655"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q5628978",
+      "label": "HATEOAS",
+      "description": "abbreviation for Hypermedia as the Engine of Application State, a constraint of the REST application architecture",
+      "parents": [
+        "Q749568"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q274089",
+      "label": "heap",
+      "description": "tree-based data structure in computer science",
+      "parents": [
+        "Q223655"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "cs branches 241..260",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree data structure whose nodes are recursively cryptographically hashed"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14746"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hash tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "默克樹"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree data structure whose nodes are recursively cryptographically hashed"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14746"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hash tree"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "默克树"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree data structure whose nodes are recursively cryptographically hashed"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14746"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hash tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Merkle 树"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree data structure whose nodes are recursively cryptographically hashed"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14746"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hash tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "默克樹"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "戴克斯特拉算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "戴克斯特拉算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "戴克斯特拉算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "戴克斯特拉演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "戴克斯特拉演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type which stores memory addresses in a computer program"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1575058"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pointer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "指针"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type which stores memory addresses in a computer program"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1575058"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pointer"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "指针"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type which stores memory addresses in a computer program"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1575058"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pointer"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "指针"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type which stores memory addresses in a computer program"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1575058"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pointer"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "指標"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type which stores memory addresses in a computer program"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1575058"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pointer"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "指標"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q245471"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of hash function used to detect errors in data storage or transmission"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cyclic redundancy check"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "循環冗餘校驗"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1062839"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q245471"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of hash function used to detect errors in data storage or transmission"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cyclic redundancy check"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "循环冗余校验"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1062839"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q245471"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of hash function used to detect errors in data storage or transmission"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cyclic redundancy check"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "循環冗餘校驗"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1062839"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q245471"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of hash function used to detect errors in data storage or transmission"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cyclic redundancy check"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "循環冗餘校驗"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21262209"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q245471"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of hash function used to detect errors in data storage or transmission"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cyclic redundancy check"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "循环冗余校验"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21262209"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q245471"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of hash function used to detect errors in data storage or transmission"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cyclic redundancy check"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "循環冗餘校驗"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21262209"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207440"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "associates data values with key values - a lookup table"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207440"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hash table"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "哈希表"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207440"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "associates data values with key values - a lookup table"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207440"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hash table"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "散列表"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207440"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "associates data values with key values - a lookup table"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207440"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hash table"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "散列表"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207440"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "associates data values with key values - a lookup table"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207440"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hash table"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "雜湊表"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207440"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "associates data values with key values - a lookup table"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207440"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hash table"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "雜湊表"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of function that maps data of arbitrary size to data of fixed size"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hash function"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "散列函數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of function that maps data of arbitrary size to data of fixed size"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hash function"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "散列函数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of function that maps data of arbitrary size to data of fixed size"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hash function"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "散列函数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of function that maps data of arbitrary size to data of fixed size"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hash function"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "雜湊函數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of function that maps data of arbitrary size to data of fixed size"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hash function"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "雜湊函數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q274089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree-based data structure in computer science"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q274089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heap"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "堆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q827335"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q274089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree-based data structure in computer science"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q274089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heap"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "堆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q827335"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q274089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree-based data structure in computer science"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q274089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heap"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "堆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q827335"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q274089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree-based data structure in computer science"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q274089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heap"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "堆積"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q827335"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q274089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree-based data structure in computer science"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q274089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heap"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "堆積"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q827335"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "戴克斯特拉算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q504353"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "戴克斯特拉算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q504353"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "戴克斯特拉算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q504353"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "戴克斯特拉演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q504353"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "戴克斯特拉演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q504353"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "戴克斯特拉算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "戴克斯特拉算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "戴克斯特拉算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "戴克斯特拉演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "戴克斯特拉演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "戴克斯特拉算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "戴克斯特拉算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "戴克斯特拉算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "戴克斯特拉演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "戴克斯特拉演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q59750"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding shortest paths by simultaneously searching from the source and destination until both searches meet"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bidirectional search"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "双向搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q755673"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q59750"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding shortest paths by simultaneously searching from the source and destination until both searches meet"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bidirectional search"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "双向搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q59750"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding shortest paths by simultaneously searching from the source and destination until both searches meet"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bidirectional search"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "双向搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130370792"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q59750"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding shortest paths by simultaneously searching from the source and destination until both searches meet"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bidirectional search"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "双向搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130370847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q325904"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for searching the nodes of a graph in order by their hop count from a starting node"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q907955"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "breadth-first search"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "广度优先搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q325904"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for searching the nodes of a graph in order by their hop count from a starting node"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q907955"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "breadth-first search"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "广度优先搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q325904"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for searching the nodes of a graph in order by their hop count from a starting node"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q907955"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "breadth-first search"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "广度优先搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q325904"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for searching the nodes of a graph in order by their hop count from a starting node"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q907955"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "breadth-first search"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "廣度優先搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q325904"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for searching the nodes of a graph in order by their hop count from a starting node"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q907955"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "breadth-first search"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "廣度優先搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q583889"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "push–relabel maximum flow algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "push–relabel maximum flow algorithm"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q603889"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard for the layout of the partition table on a physical storage device used in a desktop or server PC"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q603889"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GUID Partition Table"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "全局唯一标识符磁碟分割表"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79803608"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q603889"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard for the layout of the partition table on a physical storage device used in a desktop or server PC"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q603889"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GUID Partition Table"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "GUID Partition Table"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79803608"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q603889"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard for the layout of the partition table on a physical storage device used in a desktop or server PC"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q603889"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GUID Partition Table"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "GUID Partition Table"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79803608"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q603889"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard for the layout of the partition table on a physical storage device used in a desktop or server PC"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q603889"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "GUID Partition Table"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "GUID Partition Table"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79803608"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q470813"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding the minimum spanning tree for weighted undirected graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Prim's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "普林演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q470813"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding the minimum spanning tree for weighted undirected graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Prim's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "普里姆算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q470813"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding the minimum spanning tree for weighted undirected graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Prim's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "普里姆算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q470813"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding the minimum spanning tree for weighted undirected graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Prim's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "普林演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q470813"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding the minimum spanning tree for weighted undirected graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Prim's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "普林演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q655908"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of ciphers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q655908"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "grille"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "格網密碼"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q277680"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm used for pathfinding and graph traversal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "A* search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "A*搜寻算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q277680"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm used for pathfinding and graph traversal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "A* search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "A*搜寻算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q277680"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm used for pathfinding and graph traversal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "A* search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "A*搜寻算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130370792"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q277680"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm used for pathfinding and graph traversal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "A* search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "A*搜寻算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130370867"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284695"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ford–Fulkerson algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Ford–Fulkerson算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284695"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ford–Fulkerson algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Ford–Fulkerson算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284695"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ford–Fulkerson algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Ford–Fulkerson演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q730933"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for computing the maximal flow of a network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dinic's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Dinic算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q730933"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for computing the maximal flow of a network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dinic's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Dinic算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q730933"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for computing the maximal flow of a network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dinic's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Dinic演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q730933"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for computing the maximal flow of a network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dinic's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "Dinic演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q477202"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "special class of hash function that has certain properties which make it suitable for use in cryptography"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptographic hash function"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "密碼雜湊函數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q739462"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "visualization of node-link graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph drawing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "網路圖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q739462"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "visualization of node-link graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph drawing"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "图形绘制"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q739462"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "visualization of node-link graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph drawing"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "图形绘制"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q739462"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "visualization of node-link graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph drawing"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "圖形繪製"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q583889"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "push–relabel maximum flow algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "push–relabel maximum flow algorithm"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q470813"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding the minimum spanning tree for weighted undirected graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Prim's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "普林演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q504353"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q470813"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding the minimum spanning tree for weighted undirected graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Prim's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "普里姆算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q504353"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q470813"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding the minimum spanning tree for weighted undirected graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Prim's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "普里姆算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q504353"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q470813"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding the minimum spanning tree for weighted undirected graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Prim's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "普林演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q504353"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q470813"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding the minimum spanning tree for weighted undirected graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Prim's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "普林演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q504353"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q470813"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding the minimum spanning tree for weighted undirected graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Prim's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "普林演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q470813"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding the minimum spanning tree for weighted undirected graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Prim's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "普里姆算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q470813"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding the minimum spanning tree for weighted undirected graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Prim's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "普里姆算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q470813"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding the minimum spanning tree for weighted undirected graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Prim's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "普林演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q470813"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding the minimum spanning tree for weighted undirected graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Prim's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "普林演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q358014"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "32-bit hash algorithm used to detect accidental data corruption"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Adler-32"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Adler-32"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284695"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ford–Fulkerson algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Ford–Fulkerson算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284695"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ford–Fulkerson algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Ford–Fulkerson算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284695"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ford–Fulkerson algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Ford–Fulkerson演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q730933"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for computing the maximal flow of a network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dinic's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Dinic算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q730933"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for computing the maximal flow of a network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dinic's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Dinic算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q730933"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for computing the maximal flow of a network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dinic's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Dinic演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q730933"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for computing the maximal flow of a network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dinic's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "Dinic演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q797860"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "minimum spanning forest algorithm that greedily adds edges"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kruskal's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "克鲁斯克尔演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q504353"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q797860"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "minimum spanning forest algorithm that greedily adds edges"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kruskal's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "克鲁斯克尔算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q504353"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q797860"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "minimum spanning forest algorithm that greedily adds edges"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kruskal's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "克鲁斯克尔演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q504353"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q797860"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "minimum spanning forest algorithm that greedily adds edges"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kruskal's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "克魯斯克爾演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q504353"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q797860"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "minimum spanning forest algorithm that greedily adds edges"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kruskal's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "克鲁斯克尔演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q797860"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "minimum spanning forest algorithm that greedily adds edges"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kruskal's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "克鲁斯克尔算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q797860"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "minimum spanning forest algorithm that greedily adds edges"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kruskal's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "克鲁斯克尔演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q797860"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "minimum spanning forest algorithm that greedily adds edges"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kruskal's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "克魯斯克爾演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25537314"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "technique for quickly estimating similarity of sets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SimHash"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "SimHash"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "图算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "图算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "圖論演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "圖論演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18207665"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm in graph theory"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Havel–Hakimi algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Havel–Hakimi算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8073201"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hash function construction used in computer programs that play abstract board games"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Zobrist hashing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Zobrist哈希"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28753832"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8073201"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hash function construction used in computer programs that play abstract board games"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Zobrist hashing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Zobrist哈希"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66739921"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8073201"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hash function construction used in computer programs that play abstract board games"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Zobrist hashing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Zobrist哈希"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q84475169"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7502159"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Shortest Path Faster Algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "最短路径快速算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7502159"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Shortest Path Faster Algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "最短路徑快速演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791673"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "complete tree data structure where every node has a key more extreme (greater or less) than the key of its parent"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q274089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "k-ary heap"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "k-元堆積"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791673"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "complete tree data structure where every node has a key more extreme (greater or less) than the key of its parent"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q274089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "k-ary heap"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "k-元堆積"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791673"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "complete tree data structure where every node has a key more extreme (greater or less) than the key of its parent"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q274089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "k-ary heap"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "k-元堆積"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23808439"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Recursive algorithm in graph theory"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Stoer–Wagner algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Stoer-Wagner算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17152481"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of heap data structure with relatively simple implementation and excellent practical amortized performance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q274089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pairing heap"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "配对堆"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5628978"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abbreviation for Hypermedia as the Engine of Application State, a constraint of the REST application architecture"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5628978"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "HATEOAS"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "HATEOAS"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188267"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q907955"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "checking and/or changing each vertex in a graph"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q907955"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph traversal"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "图遍历"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1302658"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Edmonds–Karp algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Edmonds–Karp算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1210082"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of algorithms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q907955"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree traversal"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "树的遍历"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1210082"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of algorithms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q907955"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree traversal"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "樹的走訪"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q863506"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decentralized distributed system that provides a lookup service similar to a hash table"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207440"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed hash table"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分散式雜湊表"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q863506"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decentralized distributed system that provides a lookup service similar to a hash table"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207440"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed hash table"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "分布式散列表"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q863506"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decentralized distributed system that provides a lookup service similar to a hash table"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207440"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed hash table"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "分散式雜湊表"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q961691"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed hash table for decentralized peer-to-peer computer networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207440"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kademlia"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Kademlia"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207440"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q816319"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for traversing or searching tree or graph data structures"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q907955"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "depth-first search"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "深度优先搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q816319"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for traversing or searching tree or graph data structures"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q907955"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "depth-first search"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "深度优先搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q816319"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for traversing or searching tree or graph data structures"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q907955"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "depth-first search"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "深度优先搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q816319"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for traversing or searching tree or graph data structures"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q907955"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "depth-first search"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "深度優先搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864032"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "priority queue made from heap-ordered trees with power-of-two sizes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q274089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binomial heap"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "二项堆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q274089"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047576"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding all-pairs shortest paths in graphs, allowing some edge weights to be negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Floyd–Warshall algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "弗洛伊德算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047576"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding all-pairs shortest paths in graphs, allowing some edge weights to be negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Floyd–Warshall algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "弗洛伊德算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047576"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding all-pairs shortest paths in graphs, allowing some edge weights to be negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Floyd–Warshall algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "弗洛伊德算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047576"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding all-pairs shortest paths in graphs, allowing some edge weights to be negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Floyd–Warshall algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "弗洛伊德演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047576"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding all-pairs shortest paths in graphs, allowing some edge weights to be negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Floyd–Warshall algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "弗洛伊德算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047576"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding all-pairs shortest paths in graphs, allowing some edge weights to be negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Floyd–Warshall algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "弗洛伊德算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047576"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding all-pairs shortest paths in graphs, allowing some edge weights to be negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Floyd–Warshall algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "弗洛伊德算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047576"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding all-pairs shortest paths in graphs, allowing some edge weights to be negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Floyd–Warshall algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "弗洛伊德演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q816022"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding single-source shortest paths in graphs, allowing some edge weights to be negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bellman–Ford algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "贝尔曼-福特算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q816022"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding single-source shortest paths in graphs, allowing some edge weights to be negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bellman–Ford algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "贝尔曼-福特算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q816022"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding single-source shortest paths in graphs, allowing some edge weights to be negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bellman–Ford algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "贝尔曼-福特算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1302658"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Edmonds–Karp algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Edmonds–Karp算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1060813"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abstract indicator (handle) used to access a file or other input/output resource"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1575058"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "file descriptor"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "文件描述符"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1060813"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abstract indicator (handle) used to access a file or other input/output resource"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1575058"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "file descriptor"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "文件描述符"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1060813"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abstract indicator (handle) used to access a file or other input/output resource"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1575058"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "file descriptor"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "檔案描述符"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q852555"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network protocol that builds a loop-free logical topology for Ethernet networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Spanning Tree Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "生成树协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132364"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q852555"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network protocol that builds a loop-free logical topology for Ethernet networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Spanning Tree Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "生成树协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132364"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q852555"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network protocol that builds a loop-free logical topology for Ethernet networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Spanning Tree Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "生成樹協議"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132364"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q852555"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network protocol that builds a loop-free logical topology for Ethernet networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Spanning Tree Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "生成树协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q852555"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network protocol that builds a loop-free logical topology for Ethernet networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Spanning Tree Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "生成树协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q852555"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network protocol that builds a loop-free logical topology for Ethernet networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Spanning Tree Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "生成樹協議"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q830527"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "best-first search"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "最良优先搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q830527"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "best-first search"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "最良優先搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q830527"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "best-first search"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "最良優先搜尋"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q830527"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "best-first search"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "最良优先搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q88775728"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q830527"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "best-first search"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "最良優先搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q88775728"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q830527"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "best-first search"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "最良優先搜尋"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q88775728"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1109779"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "handle in a user interface that allows the user to find a file or resource"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1575058"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "file shortcut"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "文件快捷方式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q235557"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4893208"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heap data structure implemented as a binary tree"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q274089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "skew heap"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "斜堆"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4893208"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heap data structure implemented as a binary tree"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q274089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "skew heap"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "斜堆"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4893208"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heap data structure implemented as a binary tree"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q274089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "skew heap"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "斜堆"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2031707"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a recursive backtracking algorithm for finding maximal cliques in an undirected graph"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bron–Kerbosch algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Bron–Kerbosch算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5570451"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coarse-grained mutex used in some process virtual machines"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5570451"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "global interpreter lock"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "GIL"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7692348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5494049"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "depth-first characterization of planar graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fraysseix–Rosenstiehl planarity criterion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "左右平面性判別法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2070573"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of hash functions generate no collisions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "perfect hash function"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "完美散列"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2859761"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method used in machine learning to extract marginalization in general graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Junction tree algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "联结树算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2859761"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method used in machine learning to extract marginalization in general graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Junction tree algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Junction tree算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2859761"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method used in machine learning to extract marginalization in general graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Junction tree algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "联结树算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2859761"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method used in machine learning to extract marginalization in general graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Junction tree algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Junction tree演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1972285"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph theory algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tarjan's strongly connected components algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Tarjan算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1972285"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph theory algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tarjan's strongly connected components algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Tarjan算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1972285"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph theory algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tarjan's strongly connected components algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Tarjan算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2998101"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iterator over rows returned from a database query"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1575058"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "database cursor"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "指标"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1972285"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph theory algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tarjan's strongly connected components algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "塔揚強連通元件演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4972931"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heap/priority queue data structure with very low worst case time bounds"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q274089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "brodal queue"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Brodal队列"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1516988"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for maximum cardinality matching in bipartite graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hopcroft–Karp algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "霍普克洛夫特－卡普算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1516988"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for maximum cardinality matching in bipartite graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hopcroft–Karp algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "霍普克洛夫特－卡普算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1516988"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for maximum cardinality matching in bipartite graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hopcroft–Karp algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Hopcroft Karp演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1468211"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding minimum spanning trees by repeatedly finding the shortest edge out of each subtree in a forest and adding all such edges to the forest"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Borůvka's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Boruvka演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1468211"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding minimum spanning trees by repeatedly finding the shortest edge out of each subtree in a forest and adding all such edges to the forest"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Borůvka's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Borůvka算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1468211"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding minimum spanning trees by repeatedly finding the shortest edge out of each subtree in a forest and adding all such edges to the forest"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Borůvka's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Borůvka算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1468211"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding minimum spanning trees by repeatedly finding the shortest edge out of each subtree in a forest and adding all such edges to the forest"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Borůvka's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Borůvka演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1468211"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding minimum spanning trees by repeatedly finding the shortest edge out of each subtree in a forest and adding all such edges to the forest"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Borůvka's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Boruvka演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1468211"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding minimum spanning trees by repeatedly finding the shortest edge out of each subtree in a forest and adding all such edges to the forest"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Borůvka's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Borůvka算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1468211"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding minimum spanning trees by repeatedly finding the shortest edge out of each subtree in a forest and adding all such edges to the forest"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Borůvka's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Borůvka算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1468211"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding minimum spanning trees by repeatedly finding the shortest edge out of each subtree in a forest and adding all such edges to the forest"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Borůvka's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Borůvka演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2655281"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm to find the strongly connected component of a directed graph"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kosaraju's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Kosaraju算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2655281"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm to find the strongly connected component of a directed graph"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kosaraju's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Kosaraju算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2655281"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm to find the strongly connected component of a directed graph"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kosaraju's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Kosaraju演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2655281"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm to find the strongly connected component of a directed graph"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kosaraju's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "Kosaraju演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2298125"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "authentication method used on some Internet forums"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tripcode"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Tripcode"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2298125"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "authentication method used on some Internet forums"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tripcode"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Tripcode"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2298125"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "authentication method used on some Internet forums"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tripcode"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Tripcode"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2345824"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm to find shortest paths between all pairs of vertices in a sparse, edge-weighted (possibly negatively), directed graph; uses the Bellman–Ford algorithm to remove negative weights and Dijkstra’s algorithm on the rest"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Johnson's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "约翰逊算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2345824"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm to find shortest paths between all pairs of vertices in a sparse, edge-weighted (possibly negatively), directed graph; uses the Bellman–Ford algorithm to remove negative weights and Dijkstra’s algorithm on the rest"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Johnson's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "johnson算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3954109"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1575058"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "security descriptor"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "安全描述符"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2031707"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a recursive backtracking algorithm for finding maximal cliques in an undirected graph"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bron–Kerbosch algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Bron–Kerbosch算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4924414"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "randomized algorithm for minimum cuts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Karger's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Karger算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q583461"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2998101"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iterator over rows returned from a database query"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1575058"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "database cursor"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "指標"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4924414"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "randomized algorithm for minimum cuts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Karger's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Karger算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1326388"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in computing, an object whose methods enables a program to orderly traverse elements having some logical conditions in a given container from a given first element"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1575058"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iterator"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "迭代器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1326388"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in computing, an object whose methods enables a program to orderly traverse elements having some logical conditions in a given container from a given first element"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1575058"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iterator"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "迭代器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1326388"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in computing, an object whose methods enables a program to orderly traverse elements having some logical conditions in a given container from a given first element"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1575058"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iterator"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "迭代器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1807085"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "condensed digital summary (“fingerprint”) deterministically generated from an audio signal, that can be used to identify an audio sample or quickly locate similar items in an audio database"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Acoustic fingerprint"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "声学指纹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1807085"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "condensed digital summary (“fingerprint”) deterministically generated from an audio signal, that can be used to identify an audio sample or quickly locate similar items in an audio database"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Acoustic fingerprint"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "声学指纹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1807085"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "condensed digital summary (“fingerprint”) deterministically generated from an audio signal, that can be used to identify an audio sample or quickly locate similar items in an audio database"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Acoustic fingerprint"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "聲學指紋"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1575058"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abstract reference to an open or active computing resource"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1575058"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "handle"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "句柄"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1709294"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "automatic repeat-request (ARQ) protocol in data transmission and error detection"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1709294"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Go-Back-N ARQ"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "后退N帧ARQ"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1709294"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "automatic repeat-request (ARQ) protocol in data transmission and error detection"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1709294"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Go-Back-N ARQ"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "后退N帧ARQ"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1709294"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "automatic repeat-request (ARQ) protocol in data transmission and error detection"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1709294"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Go-Back-N ARQ"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "后退N帧ARQ"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1709294"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "automatic repeat-request (ARQ) protocol in data transmission and error detection"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1709294"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Go-Back-N ARQ"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "後退N幀ARQ"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3283875"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer operation of listing files that match a wildcard pattern"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3283875"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "glob"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Glob"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1972285"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph theory algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tarjan's strongly connected components algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Tarjan算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1972285"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph theory algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tarjan's strongly connected components algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Tarjan算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1972285"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph theory algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tarjan's strongly connected components algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Tarjan算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1972285"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph theory algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tarjan's strongly connected components algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "塔揚強連通元件演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4228982"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hash function where the input is hashed in a window that moves through the input"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rolling hash"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "旋转哈希"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1410737"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heap data structure made of a forest of trees"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q274089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fibonacci heap"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "斐波那契堆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1410737"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heap data structure made of a forest of trees"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q274089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fibonacci heap"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "斐波那契堆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q274089"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1516988"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for maximum cardinality matching in bipartite graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hopcroft–Karp algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "霍普克洛夫特－卡普算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1516988"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for maximum cardinality matching in bipartite graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hopcroft–Karp algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "霍普克洛夫特－卡普算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1516988"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for maximum cardinality matching in bipartite graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hopcroft–Karp algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Hopcroft Karp演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2655281"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm to find the strongly connected component of a directed graph"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kosaraju's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Kosaraju算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2655281"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm to find the strongly connected component of a directed graph"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kosaraju's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Kosaraju算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2655281"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm to find the strongly connected component of a directed graph"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kosaraju's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Kosaraju演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2655281"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm to find the strongly connected component of a directed graph"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kosaraju's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "Kosaraju演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4036754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptographic hash function"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "CubeHash"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "CubeHash函數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4036754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptographic hash function"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "CubeHash"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "CubeHash函數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4036754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptographic hash function"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q183427"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "CubeHash"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "CubeHash函式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5203305"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "priority queue data structure, a generalization of the binary heap in which the nodes have d children instead of 2"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q274089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "d-ary heap"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "D叉堆"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5203305"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "priority queue data structure, a generalization of the binary heap in which the nodes have d children instead of 2"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q274089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "d-ary heap"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "d-元堆積"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2998101"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iterator over rows returned from a database query"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1575058"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "database cursor"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "指针"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2998101"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iterator over rows returned from a database query"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1575058"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "database cursor"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "指標"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2345824"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm to find shortest paths between all pairs of vertices in a sparse, edge-weighted (possibly negatively), directed graph; uses the Bellman–Ford algorithm to remove negative weights and Dijkstra’s algorithm on the rest"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Johnson's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "约翰逊算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1058754"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2345824"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm to find shortest paths between all pairs of vertices in a sparse, edge-weighted (possibly negatively), directed graph; uses the Bellman–Ford algorithm to remove negative weights and Dijkstra’s algorithm on the rest"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Johnson's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "johnson算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1058754"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2345824"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm to find shortest paths between all pairs of vertices in a sparse, edge-weighted (possibly negatively), directed graph; uses the Bellman–Ford algorithm to remove negative weights and Dijkstra’s algorithm on the rest"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Johnson's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "约翰逊算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2345824"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm to find shortest paths between all pairs of vertices in a sparse, edge-weighted (possibly negatively), directed graph; uses the Bellman–Ford algorithm to remove negative weights and Dijkstra’s algorithm on the rest"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Johnson's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "johnson算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    }
+  ]
+}

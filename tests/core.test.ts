@@ -16,6 +16,10 @@ describe('terminology invariants',()=>{
   it('resolves a homograph in its domain',()=>{const terms=[term('field','域'),term('field','场','physics'),term('field','字段','cs')];expect(lockTerms('field',terms,'physics','s').literals).toEqual({'⟪AM:T:s:0⟫':'场'});expect(findTerms('field',terms,'cs')[0]?.term.target).toBe('字段');});
   it('honors user overrides and disabled builtins',()=>{const core=term('field','域'),user={...core,target:'数域',quality:'user' as const};expect(mergeTerms([core],[user])[0]?.target).toBe('数域');expect(findTerms('field',mergeTerms([core],[{...user,enabled:false}]),'math')).toEqual([]);});
   it('matches uppercase aliases case sensitively',()=>{const t={...term('support vector machine','支持向量机','cs'),aliases:['SVM']};expect(findTerms('SVM svm', [t],'cs')).toHaveLength(1);});
+  it('preserves Unicode caseless matching and exact acronym boundaries',()=>{
+    const terms=[term('set','集合'),term('Kelvin','开尔文'),term('σ-algebra','σ代数'),{...term('support vector machine','支持向量机'),aliases:['SVM']}];
+    expect(findTerms('ſet Kelvin ς-algebra SVM svm SVMextra',terms,'math').map(m=>m.term.target)).toEqual(['集合','开尔文','σ代数','支持向量机']);
+  });
   it('infers academic domains from context',()=>{expect(inferDomain('quantum Hamiltonian energy particle')).toBe('physics');expect(inferDomain('Lean Mathlib theorem proof')).toBe('math');});
   it('uses sense context and leaves unresolved competing senses unlocked',()=>{const optical={...term('polarization','偏振','physics'),contexts:['light','optical']};const electric={...term('polarization','极化','physics'),contexts:['electric','dielectric']};expect(findTerms('polarization',[optical,electric],'physics',false,'optical light')[0]?.term.target).toBe('偏振');expect(findTerms('polarization',[optical,electric],'physics')).toHaveLength(0);});
   it.each(['json','csv','tsv'] as const)('round-trips %s with quotes and newlines',format=>{const t=term('test "quoted", phrase','译名\n第二行');const rows=parseImport(exportTerms([t],format),format);expect(rows[0]?.source).toBe(t.source);expect(rows[0]?.target).toBe(t.target);expect(termKey(rows[0]!)).toBe(termKey(t));});

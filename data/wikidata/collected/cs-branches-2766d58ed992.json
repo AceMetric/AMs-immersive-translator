@@ -1,0 +1,2928 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q1194708 wd:Q878825 wd:Q543151 wd:Q85824984 wd:Q875276 wd:Q3546108 wd:Q55112485 wd:Q124289691 wd:Q1228785 wd:Q30235544 wd:Q19366708 wd:Q838047 wd:Q1057678 wd:Q4438875 wd:Q76699829 wd:Q5030897 wd:Q55080308 wd:Q9185267 wd:Q105205042 wd:Q1059963 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q1194708 wd:Q878825 wd:Q543151 wd:Q85824984 wd:Q875276 wd:Q3546108 wd:Q55112485 wd:Q124289691 wd:Q1228785 wd:Q30235544 wd:Q19366708 wd:Q838047 wd:Q1057678 wd:Q4438875 wd:Q76699829 wd:Q5030897 wd:Q55080308 wd:Q9185267 wd:Q105205042 wd:Q1059963 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q1194708 wd:Q878825 wd:Q543151 wd:Q85824984 wd:Q875276 wd:Q3546108 wd:Q55112485 wd:Q124289691 wd:Q1228785 wd:Q30235544 wd:Q19366708 wd:Q838047 wd:Q1057678 wd:Q4438875 wd:Q76699829 wd:Q5030897 wd:Q55080308 wd:Q9185267 wd:Q105205042 wd:Q1059963 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "2766d58ed9921adf64c35f0c91d07c7ac7002710c39023a584aeca4d36d81869",
+  "responseSha256": "41fe3457cbcf469c1105ee2e37e057e9266f72d4eb087826bd6ca9bda48d8a2d",
+  "retrievedAt": "2026-10-04T05:08:18.567919+00:00",
+  "license": "CC0-1.0",
+  "domain": "cs",
+  "roots": [
+    {
+      "domain": "cs",
+      "id": "Q1194708",
+      "label": "bitmap",
+      "description": "data structure for mapping from some domain (for example, a range of integers) to bits",
+      "parents": [
+        "Q186152"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q878825",
+      "label": "bitmap index",
+      "description": "special kind of database index that uses bitmaps",
+      "parents": [
+        "Q580427"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q543151",
+      "label": "block cipher",
+      "description": "cipher that works on fixed-size blocks of bits",
+      "parents": [
+        "Q4681865"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q85824984",
+      "label": "blockchain consensus algorithm",
+      "description": "algorithm to coordinate and ensure consensus on a blockchain",
+      "parents": [
+        "Q85914626"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q875276",
+      "label": "boolean satisfiability problem",
+      "description": "problem of determining if a Boolean formula could be made true",
+      "parents": [
+        "Q3262192"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q3546108",
+      "label": "bottom type",
+      "description": "type that is the subtype of all other types; equivalent to the empty type if uninhabited",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q55112485",
+      "label": "bottom-up parser",
+      "description": "parser that uses the bottom-up approach",
+      "parents": [
+        "Q12758225"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q124289691",
+      "label": "broken cipher",
+      "description": "cipher which admits a cryptographic attack significantly below its intended security level",
+      "parents": [
+        "Q4681865"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1228785",
+      "label": "BSD disklabel",
+      "description": "disklabel for BSD-related operating systems",
+      "parents": [
+        "Q614361"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q30235544",
+      "label": "BSP tree",
+      "description": "",
+      "parents": [
+        "Q223655"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q19366708",
+      "label": "C array",
+      "description": "data type in C and C++ programming languages; a thin abstraction on top of pointers; their length is usually known in compile-time (except for C99 variable-length arrays); when passed as function argument, they decay to pointers",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q838047",
+      "label": "C data type",
+      "description": "data type supported by the C programming language",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1057678",
+      "label": "C++ class",
+      "description": "type of data structure",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q4438875",
+      "label": "C++ reference",
+      "description": "specific kind of reference datatype in C++",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q76699829",
+      "label": "call by name",
+      "description": "evaluation strategy where the arguments to a function are not evaluated before the function is called, but substituted directly into the function body and left to be evaluated whenever they appear in the function",
+      "parents": [
+        "Q2881121"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q5030897",
+      "label": "Canadian traveller problem",
+      "description": "generalization of the shortest path problem to graphs that are partially observable",
+      "parents": [
+        "Q984063"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q55080308",
+      "label": "Cartesian genetic programming",
+      "description": "form of genetic programming, which uses a graph representation to encode computer programs",
+      "parents": [
+        "Q629498"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q9185267",
+      "label": "Caustics",
+      "description": "Method used in computer graphics to model light",
+      "parents": [
+        "Q1659515"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q105205042",
+      "label": "chaining",
+      "description": "class of collision resolution schemes",
+      "parents": [
+        "Q105204442"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1059963",
+      "label": "challenge–response authentication",
+      "description": "type of authentication protocol",
+      "parents": [
+        "Q4825885"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "cs branches 61..80",
+  "rows": [
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30235544"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30235544"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "BSP tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "二元空間分割樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1057678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of data structure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1057678"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "C++ class"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "C++类"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1057678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of data structure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1057678"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "C++ class"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "C++类"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1057678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of data structure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1057678"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "C++ class"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "C++类"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1057678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of data structure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1057678"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "C++ class"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "C++類別"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1057678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of data structure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1057678"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "C++ class"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "C++類別"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q875276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "problem of determining if a Boolean formula could be made true"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q875276"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "boolean satisfiability problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "布尔可满足性问题"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1128326"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q875276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "problem of determining if a Boolean formula could be made true"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q875276"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "boolean satisfiability problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "布尔可满足性问题"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1350299"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q875276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "problem of determining if a Boolean formula could be made true"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q875276"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "boolean satisfiability problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "布尔可满足性问题"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3262192"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q875276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "problem of determining if a Boolean formula could be made true"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q875276"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "boolean satisfiability problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "布尔可满足性问题"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1128326"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q875276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "problem of determining if a Boolean formula could be made true"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q875276"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "boolean satisfiability problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "布尔可满足性问题"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1350299"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q875276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "problem of determining if a Boolean formula could be made true"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q875276"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "boolean satisfiability problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "布爾可滿足性問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1128326"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q875276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "problem of determining if a Boolean formula could be made true"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q875276"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "boolean satisfiability problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "布爾可滿足性問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1350299"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q875276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "problem of determining if a Boolean formula could be made true"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q875276"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "boolean satisfiability problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "布尔可满足性问题"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3262192"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q875276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "problem of determining if a Boolean formula could be made true"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q875276"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "boolean satisfiability problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "布爾可滿足性問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3262192"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q875276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "problem of determining if a Boolean formula could be made true"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q875276"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "boolean satisfiability problem"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "布林可滿足性問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1128326"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q875276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "problem of determining if a Boolean formula could be made true"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q875276"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "boolean satisfiability problem"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "布林可滿足性問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1350299"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q875276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "problem of determining if a Boolean formula could be made true"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q875276"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "boolean satisfiability problem"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "布林可滿足性問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3262192"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q838047"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data type supported by the C programming language"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q838047"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "C data type"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "数据类型 (C语言)"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1060131"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "authentication protocol for the point-to-point protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1059963"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Challenge-Handshake Authentication Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "挑戰握手鑑別協定"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4825885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1060131"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "authentication protocol for the point-to-point protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1059963"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Challenge-Handshake Authentication Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "挑战握手验证协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4825885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1060131"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "authentication protocol for the point-to-point protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1059963"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Challenge-Handshake Authentication Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "挑戰握手鑑別協定"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4825885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1194708"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure for mapping from some domain (for example, a range of integers) to bits"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1194708"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bitmap"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "位图"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1194708"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure for mapping from some domain (for example, a range of integers) to bits"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1194708"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bitmap"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "位图"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1194708"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure for mapping from some domain (for example, a range of integers) to bits"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1194708"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bitmap"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "位图"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1194708"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure for mapping from some domain (for example, a range of integers) to bits"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1194708"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bitmap"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "點陣圖"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1059963"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of authentication protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1059963"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "challenge–response authentication"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "挑战响应"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1059963"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of authentication protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1059963"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "challenge–response authentication"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "挑战响应"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1059963"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of authentication protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1059963"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "challenge–response authentication"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "挑战响应"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1059963"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of authentication protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1059963"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "challenge–response authentication"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "挑戰響應"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q162738"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "raster image used to store values, such as surface elevation data, for display in 3D computer graphics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1194708"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heightmap"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "高度贴图"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q162738"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "raster image used to store values, such as surface elevation data, for display in 3D computer graphics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1194708"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heightmap"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "高度贴图"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q162738"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "raster image used to store values, such as surface elevation data, for display in 3D computer graphics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1194708"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heightmap"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "高度貼圖"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309949"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multidimensional search tree for points in k dimensional space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30235544"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "k-d tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "K-d树"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309949"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multidimensional search tree for points in k dimensional space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30235544"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "k-d tree"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "k-d树"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309949"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multidimensional search tree for points in k dimensional space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30235544"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "k-d tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "k-d树"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309949"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multidimensional search tree for points in k dimensional space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30235544"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "k-d tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "k-d樹"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309949"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multidimensional search tree for points in k dimensional space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30235544"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "k-d tree"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "k-d樹"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q848204"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "symmetric-key block cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "International Data Encryption Algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "國際資料加密演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1028476"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Feistel network based block cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Camellia"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Camellia"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1028476"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Feistel network based block cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Camellia"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Camellia"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1044361"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q878825"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "special kind of database index that uses bitmaps"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q878825"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bitmap index"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "位图索引"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q878825"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "special kind of database index that uses bitmaps"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q878825"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bitmap index"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "位图索引"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q878825"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "special kind of database index that uses bitmaps"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q878825"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bitmap index"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "位圖索引"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cipher that works on fixed-size blocks of bits"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分组密码"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1044361"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher design construction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Feistel cipher"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Feistel架構"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1044361"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher design construction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Feistel cipher"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Feistel架构"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Advanced Encryption Standard"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "高级加密标准"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q317623"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Advanced Encryption Standard"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "高级加密标准"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q317623"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Advanced Encryption Standard"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "高级加密标准"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Advanced Encryption Standard"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "高级加密标准"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q317623"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Advanced Encryption Standard"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "高级加密标准"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Advanced Encryption Standard"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "高级加密标准"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Advanced Encryption Standard"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "高級加密標準"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q317623"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Advanced Encryption Standard"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "高级加密标准"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q917824"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Advanced Encryption Standard"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "高级加密标准"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q917824"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Advanced Encryption Standard"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "高級加密標準"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Advanced Encryption Standard"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "高階加密標準"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q317623"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Advanced Encryption Standard"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "高级加密标准"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q917824"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Advanced Encryption Standard"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "高階加密標準"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Advanced Encryption Standard"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "高级加密标准"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1433692"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Advanced Encryption Standard"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "高級加密標準"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q917824"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Advanced Encryption Standard"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "高级加密标准"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1433692"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Advanced Encryption Standard"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "高级加密标准"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1433692"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Advanced Encryption Standard"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "高階加密標準"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q917824"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Advanced Encryption Standard"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "高級加密標準"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1433692"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Advanced Encryption Standard"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "高階加密標準"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1433692"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q840633"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ARIA"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "ARIA加密算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7249984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a system that regulates the formation of blocks on a blockchain"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85824984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proof of work"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "工作證明"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85824984"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7249984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a system that regulates the formation of blocks on a blockchain"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85824984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proof of work"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "工作量证明系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85824984"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7249984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a system that regulates the formation of blocks on a blockchain"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85824984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proof of work"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "工作量證明系統"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85824984"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2658354"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SHARK"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "SHARK"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2658354"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SHARK"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "SHARK"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1422306"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SKIPJACK"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Skipjack加密"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1422306"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SKIPJACK"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Skipjack加密"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1228785"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "disklabel for BSD-related operating systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1228785"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "BSD disklabel"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "BSD磁碟標籤"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79803608"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3546108"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type that is the subtype of all other types; equivalent to the empty type if uninhabited"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3546108"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bottom type"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "底类型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10535634"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1333561"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher used predominately in China"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ShangMi 4"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "SM4"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1356939"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "symmetric key block cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "RC6"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "RC6"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1501904"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Serpent"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Serpent"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17084934"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of block cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Speck"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Speck码"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17083510"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain consensus algorithm class and instance based on count of owned units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85824984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proof of stake"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "持有量證明"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1254335"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17083510"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain consensus algorithm class and instance based on count of owned units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85824984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proof of stake"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "权益证明"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1254335"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17083510"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain consensus algorithm class and instance based on count of owned units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85824984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proof of stake"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "权益证明"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1254335"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17083510"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain consensus algorithm class and instance based on count of owned units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85824984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proof of stake"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "持有量證明"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1254335"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17083510"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blockchain consensus algorithm class and instance based on count of owned units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85824984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proof of stake"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "持有量證明"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1254335"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4438875"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "specific kind of reference datatype in C++"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4438875"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "C++ reference"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "引用 (C++)"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5030897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "generalization of the shortest path problem to graphs that are partially observable"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5030897"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Canadian traveller problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "加拿大旅行者问题"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5030897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "generalization of the shortest path problem to graphs that are partially observable"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5030897"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Canadian traveller problem"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "加拿大旅行者问题"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5030897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "generalization of the shortest path problem to graphs that are partially observable"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5030897"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Canadian traveller problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "加拿大旅行者问题"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5030897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "generalization of the shortest path problem to graphs that are partially observable"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5030897"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Canadian traveller problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "加拿大旅行者問題"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28135735"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "means of showing legitimate interest in a service by allocating a memory"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85824984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Proof of Space"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "容量验证"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85824984"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28135735"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "means of showing legitimate interest in a service by allocating a memory"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85824984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Proof of Space"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "容量验证"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85824984"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28135735"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "means of showing legitimate interest in a service by allocating a memory"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85824984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Proof of Space"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "容量驗證"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85824984"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2658354"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SHARK"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "SHARK"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4596967"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "theoretical computer science problem"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q875276"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "2-satisfiability"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "2-可滿足性"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3435924"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4596967"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "theoretical computer science problem"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q875276"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "2-satisfiability"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "2-布林可滿足性"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3435924"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18652028"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of C++ reference representing a temporary value"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4438875"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "r-value"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "右值引用"
+      }
+    }
+  ]
+}

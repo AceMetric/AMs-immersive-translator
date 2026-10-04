@@ -7,6 +7,9 @@ manifest=json.loads((root/'.output/chrome-mv3/manifest.json').read_text())
 assert not manifest.get('host_permissions'),'Release must not contain test grants'
 assert manifest['manifest_version']==3
 version=manifest['version']
+index=json.loads((root/'public/glossaries/index.json').read_text())
+core_count=sum(p['count'] for p in index['packs'] if p['group']=='core')
+candidate_count=sum(p['count'] for p in index['packs'] if p['group']=='extended')
 installer=release/f'AM-学术翻译-{version}.zip'
 with zipfile.ZipFile(installer,'w',zipfile.ZIP_DEFLATED) as z:
     for p in sorted((root/'.output/chrome-mv3').rglob('*')):
@@ -35,7 +38,7 @@ with zipfile.ZipFile(installer,'w',zipfile.ZIP_DEFLATED) as z:
 免费价格清单30天有效，过期需重新核实；线上质量未实测。
 术语图为默认关闭的消歧实验。升级无需重新配置模型。
 词库覆盖数学、物理、计算机，支持手选和自动识别。
-核心 1,363 条（项目编辑整理，待持续专业复核）；候选 1,245 条。
+核心 {core_count:,} 条（项目编辑整理，待持续专业复核）；候选 {candidate_count:,} 条。
 目前不支持 PDF、扫描件，未发布 Chrome 商店。
 ''')
 source=release/f'AM-学术翻译-{version}-源码.zip'

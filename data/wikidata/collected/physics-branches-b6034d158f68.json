@@ -1,0 +1,2258 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q1759415 wd:Q575887 wd:Q123184276 wd:Q106321197 wd:Q7269085 wd:Q21193136 wd:Q28729648 wd:Q240105 wd:Q1253356 wd:Q649036 wd:Q1474701 wd:Q11448 wd:Q4115097 wd:Q343546 wd:Q667379 wd:Q15087352 wd:Q884373 wd:Q550046 wd:Q949326 wd:Q139527994 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q1759415 wd:Q575887 wd:Q123184276 wd:Q106321197 wd:Q7269085 wd:Q21193136 wd:Q28729648 wd:Q240105 wd:Q1253356 wd:Q649036 wd:Q1474701 wd:Q11448 wd:Q4115097 wd:Q343546 wd:Q667379 wd:Q15087352 wd:Q884373 wd:Q550046 wd:Q949326 wd:Q139527994 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q1759415 wd:Q575887 wd:Q123184276 wd:Q106321197 wd:Q7269085 wd:Q21193136 wd:Q28729648 wd:Q240105 wd:Q1253356 wd:Q649036 wd:Q1474701 wd:Q11448 wd:Q4115097 wd:Q343546 wd:Q667379 wd:Q15087352 wd:Q884373 wd:Q550046 wd:Q949326 wd:Q139527994 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "b6034d158f68617e313dd3b825e080d130496d555068ff47e7aa686e022d25fa",
+  "responseSha256": "045e6efe82a2f151537ee1914d7cec3bfc7fda32f2d3e5abf84a6460e22b2114",
+  "retrievedAt": "2026-10-04T05:06:01.961438+00:00",
+  "license": "CC0-1.0",
+  "domain": "physics",
+  "roots": [
+    {
+      "domain": "physics",
+      "id": "Q1759415",
+      "label": "pulse pressure",
+      "description": "difference between the systolic and diastolic pressure readings",
+      "parents": [
+        "Q39552"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q575887",
+      "label": "pulse repetition frequency",
+      "description": "number of pulses of a repeating signal in a specific time unit",
+      "parents": [
+        "Q11652"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q123184276",
+      "label": "puncturing",
+      "description": "creation of a hole through a solid surface by a pointed object",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q106321197",
+      "label": "quantizing distortion power",
+      "description": "",
+      "parents": [
+        "Q25342"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q7269085",
+      "label": "quantum process",
+      "description": "time evolution of quantum systems",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q21193136",
+      "label": "quantum system",
+      "description": "portion of the whole universe (environment or physical world) which is taken under consideration to make analysis or to study for quantum physics pertaining to the wave-particle duality in that system and everything else than this system",
+      "parents": [
+        "Q1454986"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q28729648",
+      "label": "quark or lepton",
+      "description": "elementary particle of matter (not antimatter, so not antiquark or antilepton)",
+      "parents": [
+        "Q43116"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q240105",
+      "label": "radial velocity",
+      "description": "component of the velocity in radial direction",
+      "parents": [
+        "Q11465"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1253356",
+      "label": "radiant flux",
+      "description": "power carried by electromagnetic waves",
+      "parents": [
+        "Q25342"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q649036",
+      "label": "radiation pressure",
+      "description": "pressure exerted upon any surface exposed to electromagnetic radiation",
+      "parents": [
+        "Q39552"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1474701",
+      "label": "radio propagation",
+      "description": "behavior of radio waves as they travel, or are propagated, from one point to another, or into various parts of the atmosphere",
+      "parents": [
+        "Q1758425"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q11448",
+      "label": "radioactivity",
+      "description": "process by which an unstable atom emits radiation",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q4115097",
+      "label": "ram pressure",
+      "description": "pressure exerted on a body that is moving through a fluid medium",
+      "parents": [
+        "Q39552"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q343546",
+      "label": "reaction",
+      "description": "part of Newton's laws",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q667379",
+      "label": "reaction time",
+      "description": "period taken for subject to respond to a stimulus",
+      "parents": [
+        "Q11465"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q15087352",
+      "label": "reactive centrifugal force",
+      "description": "reaction to centripetal force",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q884373",
+      "label": "reactive current",
+      "description": "non-active current under sinusoidal conditions",
+      "parents": [
+        "Q29996"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q550046",
+      "label": "reduced mass",
+      "description": "\"effective\" inertial mass appearing in the two-body problem of Newtonian mechanics; quantity which allows the two-body problem to be solved as if it were a one-body problem",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q949326",
+      "label": "refresh rate",
+      "description": "frequency at which a display hardware displays a new image",
+      "parents": [
+        "Q11652"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q139527994",
+      "label": "regional units of measurement",
+      "description": "unit of measurement specific to a geographic region",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "physics branches 401..420",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105902"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "total amount of radiant electromagnetic power emitted by an object per unit time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1253356"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "luminosity"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "光度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105902"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "total amount of radiant electromagnetic power emitted by an object per unit time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1253356"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "luminosity"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "光度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29291"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum mechanical model of a quantum nonrelativistic particle subject to a classical spherically symmetric potential well"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21193136"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "particle in a spherically symmetric potential"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "球對稱位勢"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21193136"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105902"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "total amount of radiant electromagnetic power emitted by an object per unit time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1253356"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "luminosity"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "光度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105902"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "total amount of radiant electromagnetic power emitted by an object per unit time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1253356"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "luminosity"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "光度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105902"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "total amount of radiant electromagnetic power emitted by an object per unit time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1253356"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "luminosity"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "光度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q176555"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computational device relying on quantum mechanics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21193136"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum computer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "量子计算机"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q176555"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computational device relying on quantum mechanics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21193136"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum computer"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "量子计算机"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11448"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process by which an unstable atom emits radiation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11448"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radioactivity"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "放射性"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42092561"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "traditional English volume measurement units for wine"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139527994"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "English wine cask unit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "英格蘭酒類單位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28729648"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "elementary particle of matter (not antimatter, so not antiquark or antilepton)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28729648"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quark or lepton"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "夸克與輕子"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q649036"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pressure exerted upon any surface exposed to electromagnetic radiation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q649036"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radiation pressure"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "輻射壓"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q649036"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pressure exerted upon any surface exposed to electromagnetic radiation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q649036"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radiation pressure"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "辐射压"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q649036"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pressure exerted upon any surface exposed to electromagnetic radiation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q649036"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radiation pressure"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "輻射壓"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q550046"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "\"effective\" inertial mass appearing in the two-body problem of Newtonian mechanics; quantity which allows the two-body problem to be solved as if it were a one-body problem"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q550046"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "reduced mass"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "約化質量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q435922"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "traditional system of measurement used by Han Chinese"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139527994"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Chinese unit of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "中國度量衡"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q435922"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "traditional system of measurement used by Han Chinese"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139527994"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Chinese unit of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "中國度量衡"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q243821"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum system that can exist in any quantum superposition of two independent (physically distinguishable) quantum states; quantum systems with two possible states"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21193136"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "two-state quantum system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "雙態系統"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q464643"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "penetration of a victim with a sharp or pointed object at close range"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q123184276"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stabbing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "刺傷"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1931388"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q464643"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "penetration of a victim with a sharp or pointed object at close range"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q123184276"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stabbing"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "刺傷"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1931388"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q464643"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "penetration of a victim with a sharp or pointed object at close range"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q123184276"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stabbing"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "刺傷"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1931388"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q464643"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "penetration of a victim with a sharp or pointed object at close range"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q123184276"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stabbing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "刺傷"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130583773"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q464643"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "penetration of a victim with a sharp or pointed object at close range"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q123184276"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stabbing"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "刺傷"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130583773"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q464643"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "penetration of a victim with a sharp or pointed object at close range"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q123184276"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stabbing"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "刺傷"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130583773"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q464643"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "penetration of a victim with a sharp or pointed object at close range"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q123184276"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stabbing"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "刺击"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1931388"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q719444"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "procedure to collect cerebrospinal fluid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q123184276"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lumbar puncture"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "腰椎穿刺"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q796194"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q719444"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "procedure to collect cerebrospinal fluid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q123184276"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lumbar puncture"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "腰椎穿刺术"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q796194"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q719444"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "procedure to collect cerebrospinal fluid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q123184276"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lumbar puncture"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "腰椎穿刺"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q796194"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q719444"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "procedure to collect cerebrospinal fluid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q123184276"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lumbar puncture"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "腰椎穿刺術"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q796194"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q464643"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "penetration of a victim with a sharp or pointed object at close range"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q123184276"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stabbing"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "刺击"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130583773"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q667379"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "period taken for subject to respond to a stimulus"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q667379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "reaction time"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "反应时"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q667379"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "period taken for subject to respond to a stimulus"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q667379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "reaction time"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "反应时间"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q667379"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "period taken for subject to respond to a stimulus"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q667379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "reaction time"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "反應時間"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q240105"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "component of the velocity in radial direction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q240105"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radial velocity"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "徑向速度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q423066"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process to make stable elements radioactive"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11448"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "induced radioactivity"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "感生放射性"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q343546"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "part of Newton's laws"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q343546"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "reaction"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "反作用力"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139527994"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3372263"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Norwegian units of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "挪威度量衡"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11448"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q108882997"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "artificial radioactivity"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "人工放射性"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11448"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q108882997"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "artificial radioactivity"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "人工放射性"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q751590"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of radio propagation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1474701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Near Vertical Incidence Skywave"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "幾近垂直投射天波"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1474701"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1253356"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "power carried by electromagnetic waves"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1253356"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radiant flux"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "辐射通量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1253356"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "power carried by electromagnetic waves"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1253356"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radiant flux"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "辐射通量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1253356"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "power carried by electromagnetic waves"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1253356"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radiant flux"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "輻射通量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q949326"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "frequency at which a display hardware displays a new image"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q949326"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "refresh rate"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "畫面更新率"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q949326"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "frequency at which a display hardware displays a new image"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q949326"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "refresh rate"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "刷新频率"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q949326"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "frequency at which a display hardware displays a new image"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q949326"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "refresh rate"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "刷新频率"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q949326"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "frequency at which a display hardware displays a new image"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q949326"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "refresh rate"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "重新整理頻率"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4115097"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pressure exerted on a body that is moving through a fluid medium"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4115097"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ram pressure"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "衝壓力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4115097"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pressure exerted on a body that is moving through a fluid medium"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4115097"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ram pressure"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "冲压力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4115097"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pressure exerted on a body that is moving through a fluid medium"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4115097"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ram pressure"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "衝壓力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q884373"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-active current under sinusoidal conditions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q884373"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "reactive current"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "无功电流"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q884373"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-active current under sinusoidal conditions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q884373"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "reactive current"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "無功電流"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1473826"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Type of radio propagation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1474701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sporadic E propagation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "偶发E层传播"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1293220"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2495111"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum mechanical system that interacts with a quantum-mechanical environment"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21193136"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open quantum system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "开放量子系统"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1759415"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "difference between the systolic and diastolic pressure readings"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1759415"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pulse pressure"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "脈壓"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42014143"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1759415"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "difference between the systolic and diastolic pressure readings"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1759415"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pulse pressure"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "脉压"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42014143"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1759415"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "difference between the systolic and diastolic pressure readings"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1759415"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pulse pressure"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "脉压"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42014143"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2381860"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum-mechanical model of a particle in one dimension subject to a short-range interaction modeled as a Dirac delta"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21193136"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "delta potential"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "delta位势阱"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486902"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2381860"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum-mechanical model of a particle in one dimension subject to a short-range interaction modeled as a Dirac delta"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21193136"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "delta potential"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "delta位勢阱"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486902"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2381860"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum-mechanical model of a particle in one dimension subject to a short-range interaction modeled as a Dirac delta"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21193136"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "delta potential"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "delta位勢阱"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486902"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2381860"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum-mechanical model of a particle in one dimension subject to a short-range interaction modeled as a Dirac delta"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21193136"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "delta potential"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "delta位势阱"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21193136"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2381860"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum-mechanical model of a particle in one dimension subject to a short-range interaction modeled as a Dirac delta"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21193136"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "delta potential"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "delta位勢阱"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21193136"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2381860"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum-mechanical model of a particle in one dimension subject to a short-range interaction modeled as a Dirac delta"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21193136"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "delta potential"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "delta位勢阱"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21193136"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11827794"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "propagation phenomenon that results in radio signals reaching the receiving antenna by two or more paths"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1474701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multipath propagation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "多重路徑傳輸"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11827794"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "propagation phenomenon that results in radio signals reaching the receiving antenna by two or more paths"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1474701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multipath propagation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "多径传播"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11827794"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "propagation phenomenon that results in radio signals reaching the receiving antenna by two or more paths"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1474701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multipath propagation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "多徑傳播"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21193136"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "portion of the whole universe (environment or physical world) which is taken under consideration to make analysis or to study for quantum physics pertaining to the wave-particle duality in that system and everything else than this system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21193136"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "量子系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28860529"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19873232"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "overview of units of measurement once used in Estonia"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139527994"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Estonian units of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "爱沙尼亚度量衡"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19873232"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "overview of units of measurement once used in Estonia"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139527994"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Estonian units of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "爱沙尼亚度量衡"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19873232"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "overview of units of measurement once used in Estonia"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139527994"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Estonian units of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "愛沙尼亞度量衡"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2110140"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum mechanical model whose partition function is the Riemann zeta function"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21193136"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "primon gas"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "自由黎曼氣體"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21193136"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4844927"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radioactive materials in the human environment"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11448"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "environmental radioactivity"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "環境放射性"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1639901"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "propagation of radio waves via the ionosphere"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1474701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "skywave"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "天波"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1474701"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7572183"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum system whose ground state is one in which the particles are in repetitive motion"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21193136"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "time crystal"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "時間晶體"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1474701"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "behavior of radio waves as they travel, or are propagated, from one point to another, or into various parts of the atmosphere"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1474701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radio propagation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "无线电传播"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1474701"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "behavior of radio waves as they travel, or are propagated, from one point to another, or into various parts of the atmosphere"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1474701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radio propagation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "无线电传播"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1474701"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "behavior of radio waves as they travel, or are propagated, from one point to another, or into various parts of the atmosphere"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1474701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radio propagation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "无线电传播"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1474701"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "behavior of radio waves as they travel, or are propagated, from one point to another, or into various parts of the atmosphere"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1474701"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radio propagation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "無線電傳播"
+      }
+    }
+  ]
+}

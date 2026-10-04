@@ -1,0 +1,1715 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q4001197 wd:Q1110221 wd:Q122624423 wd:Q136484632 wd:Q3502995 wd:Q7885028 wd:Q4443425 wd:Q1307872 wd:Q7894123 wd:Q9364012 wd:Q2044498 wd:Q6771358 wd:Q29465264 wd:Q136553043 wd:Q3274096 wd:Q7912781 wd:Q59627259 wd:Q837274 wd:Q7915684 wd:Q7915686 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q4001197 wd:Q1110221 wd:Q122624423 wd:Q136484632 wd:Q3502995 wd:Q7885028 wd:Q4443425 wd:Q1307872 wd:Q7894123 wd:Q9364012 wd:Q2044498 wd:Q6771358 wd:Q29465264 wd:Q136553043 wd:Q3274096 wd:Q7912781 wd:Q59627259 wd:Q837274 wd:Q7915684 wd:Q7915686 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q4001197 wd:Q1110221 wd:Q122624423 wd:Q136484632 wd:Q3502995 wd:Q7885028 wd:Q4443425 wd:Q1307872 wd:Q7894123 wd:Q9364012 wd:Q2044498 wd:Q6771358 wd:Q29465264 wd:Q136553043 wd:Q3274096 wd:Q7912781 wd:Q59627259 wd:Q837274 wd:Q7915684 wd:Q7915686 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "440fdcaf81f0a7250ac2d5f7e249deda75aa7286bb3cd18e9261294f0a7da67f",
+  "responseSha256": "e15801e7dd35d77e59280fd149b3bb3b25f6174bfb780846f4b896878a1a7e14",
+  "retrievedAt": "2026-10-04T05:10:05.511687+00:00",
+  "license": "CC0-1.0",
+  "domain": "cs",
+  "roots": [
+    {
+      "domain": "cs",
+      "id": "Q4001197",
+      "label": "type checking",
+      "description": "analysis and verification of data types in the source code of a computer program",
+      "parents": [
+        "Q2112188"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1110221",
+      "label": "Type library",
+      "description": "",
+      "parents": [
+        "Q165194"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q122624423",
+      "label": "typing discipline",
+      "description": "category of type systems based on fundamental properties and behavior",
+      "parents": [
+        "Q188267"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q136484632",
+      "label": "uncritical thinking",
+      "description": "the failure to evaluate information, ideas, or arguments carefully, logically, and systematically.",
+      "parents": [
+        "Q201413"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q3502995",
+      "label": "undecidable problem",
+      "description": "decision problem for which it is impossible to construct an algorithm that always leads to a correct yes-or-no answer",
+      "parents": [
+        "Q3262192"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7885028",
+      "label": "Uniform Consensus",
+      "description": "Distributed computing problem",
+      "parents": [
+        "Q2994424"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q4443425",
+      "label": "uninformed search algorithm",
+      "description": "type of search algorithm",
+      "parents": [
+        "Q755673"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1307872",
+      "label": "unit type",
+      "description": "type allowing only one value in type theory",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7894123",
+      "label": "universal differential equation",
+      "description": "",
+      "parents": [
+        "Q11214"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q9364012",
+      "label": "Universal Host Controller Interface",
+      "description": "proprietary interface created by Intel for USB 1.x",
+      "parents": [
+        "Q13551889"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q2044498",
+      "label": "Unix domain socket",
+      "description": "socket for exchanging data between processes executing on the same OS; similar to an Internet socket, but all communication occurs within the same OS",
+      "parents": [
+        "Q12562646"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q6771358",
+      "label": "unreachable memory",
+      "description": "\"dead\" region of allocated computer memory that the process can no longer access",
+      "parents": [
+        "Q1146944"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q29465264",
+      "label": "unsigned char",
+      "description": "data type in C and C++",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q136553043",
+      "label": "user-defined data type",
+      "description": "",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q3274096",
+      "label": "utility maximization problem",
+      "description": "the fundamental optimization problem that economic agents face",
+      "parents": [
+        "Q984063"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7912781",
+      "label": "value type",
+      "description": "data type",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q59627259",
+      "label": "value type and reference type",
+      "description": "Wikipedia article covering multiple topics",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q837274",
+      "label": "Van Emde Boas tree",
+      "description": "tree data structure which implements an associative array with m-bit integer keys",
+      "parents": [
+        "Q223655"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7915684",
+      "label": "variable-length array",
+      "description": "data structure in programming",
+      "parents": [
+        "Q186152"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7915686",
+      "label": "variable-length quantity",
+      "description": "encoding method which can be used to encode variable length integers",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "cs branches 621..640",
+  "rows": [
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7894123"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7894123"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "universal differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "通用微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q59627259"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Wikipedia article covering multiple topics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q59627259"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "value type and reference type"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "值类型与引用类型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21484471"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6771358"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "\"dead\" region of allocated computer memory that the process can no longer access"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6771358"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unreachable memory"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "不可访问内存"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1940914"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type system paradigm where all type checking is done at compile time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "static typing"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "靜態類型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q991202"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "specificity of a programming language's syntax when manipulating types of data"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "strong typing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "強型別"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1268978"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type system paradigm in which objects' types are enforced at runtime"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dynamic typing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "动态类型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q374282"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "style of dynamic, structural typing with lazy checking of objects' attributes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "duck typing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "鸭子类型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q374282"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "style of dynamic, structural typing with lazy checking of objects' attributes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "duck typing"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "鸭子类型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q374282"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "style of dynamic, structural typing with lazy checking of objects' attributes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "duck typing"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "鸭子类型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q374282"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "style of dynamic, structural typing with lazy checking of objects' attributes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "duck typing"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "鴨子類型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q374282"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "style of dynamic, structural typing with lazy checking of objects' attributes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "duck typing"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "鴨子類別型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1940914"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type system paradigm where all type checking is done at compile time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "static typing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "静态类型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3274096"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the fundamental optimization problem that economic agents face"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3274096"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "utility maximization problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "效用最大化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29028649"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3274096"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the fundamental optimization problem that economic agents face"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3274096"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "utility maximization problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "效用最大化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29028649"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3274096"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the fundamental optimization problem that economic agents face"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3274096"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "utility maximization problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "效用最大化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29028649"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3502995"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decision problem for which it is impossible to construct an algorithm that always leads to a correct yes-or-no answer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3502995"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "undecidable problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "不可判定问题"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130286945"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3502995"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decision problem for which it is impossible to construct an algorithm that always leads to a correct yes-or-no answer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3502995"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "undecidable problem"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "不可解问题"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130286945"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3502995"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decision problem for which it is impossible to construct an algorithm that always leads to a correct yes-or-no answer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3502995"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "undecidable problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "不可判定问题"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130286945"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3502995"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decision problem for which it is impossible to construct an algorithm that always leads to a correct yes-or-no answer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3502995"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "undecidable problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "不可解問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130286945"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1304954"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distrust or hatred of reason or reasoning"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q136484632"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hatred of reason"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "理性恨"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1304954"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distrust or hatred of reason or reasoning"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q136484632"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hatred of reason"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "理性恨"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q160232"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1304954"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distrust or hatred of reason or reasoning"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q136484632"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hatred of reason"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "理性恨"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1304954"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distrust or hatred of reason or reasoning"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q136484632"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hatred of reason"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "理性恨"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q160232"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1304954"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distrust or hatred of reason or reasoning"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q136484632"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hatred of reason"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "理性恨"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1851760"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1304954"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distrust or hatred of reason or reasoning"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q136484632"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hatred of reason"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "理性恨"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1851760"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1304954"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distrust or hatred of reason or reasoning"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q136484632"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hatred of reason"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "理性恨"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33104279"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1304954"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distrust or hatred of reason or reasoning"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q136484632"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hatred of reason"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "理性恨"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33104279"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q325904"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for searching the nodes of a graph in order by their hop count from a starting node"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "breadth-first search"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "广度优先搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q325904"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for searching the nodes of a graph in order by their hop count from a starting node"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "breadth-first search"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "广度优先搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q325904"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for searching the nodes of a graph in order by their hop count from a starting node"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "breadth-first search"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "广度优先搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q325904"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for searching the nodes of a graph in order by their hop count from a starting node"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "breadth-first search"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "廣度優先搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q325904"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for searching the nodes of a graph in order by their hop count from a starting node"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "breadth-first search"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "廣度優先搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837274"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree data structure which implements an associative array with m-bit integer keys"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Van Emde Boas tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Van Emde Boas树"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837274"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree data structure which implements an associative array with m-bit integer keys"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Van Emde Boas tree"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Van Emde Boas树"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837274"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree data structure which implements an associative array with m-bit integer keys"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Van Emde Boas tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Van Emde Boas树"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837274"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree data structure which implements an associative array with m-bit integer keys"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Van Emde Boas tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Van Emde Boas樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936724"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "major class of type system, in which type compatibility and equivalence are determined by the type's actual structure or definition, and not by other characteristics such as its name or place of declaration"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "structural typing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "结构化类型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936724"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "major class of type system, in which type compatibility and equivalence are determined by the type's actual structure or definition, and not by other characteristics such as its name or place of declaration"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "structural typing"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "结构化类型系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936724"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "major class of type system, in which type compatibility and equivalence are determined by the type's actual structure or definition, and not by other characteristics such as its name or place of declaration"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "structural typing"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "結構類型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936724"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "major class of type system, in which type compatibility and equivalence are determined by the type's actual structure or definition, and not by other characteristics such as its name or place of declaration"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "structural typing"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "結構化型別系統"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q991202"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "specificity of a programming language's syntax when manipulating types of data"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "strong typing"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "強類型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3509459"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "major class of type system, in which compatibility and equivalence of data types is determined by explicit declarations and/or the name of the types"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nominative typing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "名义类型系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3509459"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "major class of type system, in which compatibility and equivalence of data types is determined by explicit declarations and/or the name of the types"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nominative typing"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "名义类型系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3509459"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "major class of type system, in which compatibility and equivalence of data types is determined by explicit declarations and/or the name of the types"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nominative typing"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "名义类型系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3509459"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "major class of type system, in which compatibility and equivalence of data types is determined by explicit declarations and/or the name of the types"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nominative typing"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "名義型別系統"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7915684"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure in programming"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7915684"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable-length array"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "可变长数组"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1268978"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type system paradigm in which objects' types are enforced at runtime"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dynamic typing"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "動態類型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2044498"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "socket for exchanging data between processes executing on the same OS; similar to an Internet socket, but all communication occurs within the same OS"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2044498"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Unix domain socket"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Unix domain socket"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1307872"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type allowing only one value in type theory"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1307872"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit type"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "单值类型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q91432273"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q816319"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for traversing or searching tree or graph data structures"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "depth-first search"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "深度优先搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q816319"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for traversing or searching tree or graph data structures"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "depth-first search"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "深度优先搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q816319"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for traversing or searching tree or graph data structures"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "depth-first search"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "深度优先搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q816319"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for traversing or searching tree or graph data structures"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "depth-first search"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "深度優先搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4443425"
+      }
+    }
+  ]
+}

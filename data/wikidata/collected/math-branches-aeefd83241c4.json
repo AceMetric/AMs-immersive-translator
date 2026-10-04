@@ -1,0 +1,4818 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q140248632 wd:Q1826448 wd:Q4895685 wd:Q1868500 wd:Q3883775 wd:Q6664661 wd:Q583034 wd:Q865967 wd:Q15832668 wd:Q6664820 wd:Q211548 wd:Q6667304 wd:Q1774662 wd:Q843812 wd:Q3311695 wd:Q2066070 wd:Q106237587 wd:Q1538521 wd:Q150052 wd:Q42614797 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q140248632 wd:Q1826448 wd:Q4895685 wd:Q1868500 wd:Q3883775 wd:Q6664661 wd:Q583034 wd:Q865967 wd:Q15832668 wd:Q6664820 wd:Q211548 wd:Q6667304 wd:Q1774662 wd:Q843812 wd:Q3311695 wd:Q2066070 wd:Q106237587 wd:Q1538521 wd:Q150052 wd:Q42614797 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q140248632 wd:Q1826448 wd:Q4895685 wd:Q1868500 wd:Q3883775 wd:Q6664661 wd:Q583034 wd:Q865967 wd:Q15832668 wd:Q6664820 wd:Q211548 wd:Q6667304 wd:Q1774662 wd:Q843812 wd:Q3311695 wd:Q2066070 wd:Q106237587 wd:Q1538521 wd:Q150052 wd:Q42614797 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "aeefd83241c4821ff8b77fcd64f658b022cc8091e9d311512631105a5fa757bb",
+  "responseSha256": "734c67bf2223fc9c2557823d9a05479f0e0563adb1bc80ddaa8547f4bd29f451",
+  "retrievedAt": "2026-10-04T04:58:52.784881+00:00",
+  "license": "CC0-1.0",
+  "domain": "math",
+  "roots": [
+    {
+      "domain": "math",
+      "id": "Q140248632",
+      "label": "linear term",
+      "description": "",
+      "parents": [
+        "Q1318370"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q1826448",
+      "label": "linear-time algorithm",
+      "description": "algorithm whose running time increases at most linearly with the input size",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q4895685",
+      "label": "linearity of differentiation",
+      "description": "calculus property",
+      "parents": [
+        "Q90011163"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q1868500",
+      "label": "local martingale",
+      "description": "stochastic process satisfying the localized martingale property: i.e. such that there exists a sequence of stopping times, almost surely increasing and almost surely diverging, such that the corresponding stopped processes are martingales",
+      "parents": [
+        "Q176737"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q3883775",
+      "label": "local time",
+      "description": "stochastic process associated with semimartingale processes such as Brownian motion",
+      "parents": [
+        "Q176737"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q6664661",
+      "label": "locally acyclic morphism",
+      "description": "",
+      "parents": [
+        "Q1948412"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q583034",
+      "label": "locally compact space",
+      "description": "topological space such that every point has a neighbourhood with compact closure",
+      "parents": [
+        "Q179899"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q865967",
+      "label": "locally connected space",
+      "description": "property of topological spaces",
+      "parents": [
+        "Q179899"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q15832668",
+      "label": "locally contractible space",
+      "description": "",
+      "parents": [
+        "Q179899"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q6664820",
+      "label": "location test",
+      "description": "type of statistical test based on the location parameter of a population",
+      "parents": [
+        "Q210832"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q211548",
+      "label": "locus",
+      "description": "set of points whose location satisfies or is determined by one or more specified conditions",
+      "parents": [
+        "Q123410745"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q6667304",
+      "label": "logarithmic conformal field theory",
+      "description": "conformal field theory with logarithmic short distance behavior",
+      "parents": [
+        "Q1191271"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q1774662",
+      "label": "logic puzzle",
+      "description": "puzzle deriving from the mathematics field of deduction",
+      "parents": [
+        "Q1166625"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q843812",
+      "label": "logical assertion",
+      "description": "statement that asserts that a certain premise is true",
+      "parents": [
+        "Q108163"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q3311695",
+      "label": "logical truth",
+      "description": "statement which is true regardless of the truth or falsity of its constituent parts",
+      "parents": [
+        "Q108163"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q2066070",
+      "label": "loop space",
+      "description": "space of basepoint preserving maps from a circle",
+      "parents": [
+        "Q4391173",
+        "Q179899"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q106237587",
+      "label": "loss probability",
+      "description": "probability for losing a call attempt",
+      "parents": [
+        "Q9492"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q1538521",
+      "label": "lossless decomposition",
+      "description": "decomposition of a database relation such that a natural join of the resulting relations yields back the original relation",
+      "parents": [
+        "Q12202238"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q150052",
+      "label": "Lotka–Volterra equations",
+      "description": "first-order nonlinear differential equations, frequently used to describe the dynamics of biological systems in which two species interact, one as a predator and the other as prey",
+      "parents": [
+        "Q486902"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q42614797",
+      "label": "L∞-algebra",
+      "description": "algebra satisfying the Jacobi identity up to homotopy",
+      "parents": [
+        "Q205464"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "math branches 581..600",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17278"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simple curve of Euclidean geometry, a type of conic section"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "circle"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "圓"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207961"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17278"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simple curve of Euclidean geometry, a type of conic section"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "circle"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "圓"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3695082"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17278"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simple curve of Euclidean geometry, a type of conic section"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "circle"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "圓"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q135899982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "round, rotationally symmetric shape of the 2D surface of a ball in 3D space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sphere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "球面"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q83155724"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "round, rotationally symmetric shape of the 2D surface of a ball in 3D space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sphere"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "球面"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q83155724"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17278"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simple curve of Euclidean geometry, a type of conic section"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "circle"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "圓"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207961"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17278"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simple curve of Euclidean geometry, a type of conic section"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "circle"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "圓"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3695082"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17285"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "flat, infinite two-dimensional surface"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "plane"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "平面"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21550639"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17278"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simple curve of Euclidean geometry, a type of conic section"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "circle"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "圓"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q135899982"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "round, rotationally symmetric shape of the 2D surface of a ball in 3D space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sphere"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "球面"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q83155724"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33041"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle by George Boolos and Raymond Smullyan"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The Hardest Logic Puzzle Ever"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "史上最難邏輯謎題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47054"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44914"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic-based number-placement puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sudoku"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "數獨"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47054"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44914"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic-based number-placement puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sudoku"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "數獨"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47728"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44914"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic-based number-placement puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sudoku"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "数独"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47054"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44914"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic-based number-placement puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sudoku"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "数独"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47728"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44914"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic-based number-placement puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sudoku"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "數獨"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47054"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44914"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic-based number-placement puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sudoku"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "數獨"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47728"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27809"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division of an angle into two angles with equal measures"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "angle bisector"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "平分線"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3128632"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44914"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic-based number-placement puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sudoku"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "数独"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1188693"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44914"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic-based number-placement puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sudoku"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "数独"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44946"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fundamental object of geometry: locus within which we can distinguish no other locus than itself"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "point"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "點"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453739"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44946"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fundamental object of geometry: locus within which we can distinguish no other locus than itself"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "point"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "點"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453739"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44946"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fundamental object of geometry: locus within which we can distinguish no other locus than itself"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "point"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "点"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453739"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44946"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fundamental object of geometry: locus within which we can distinguish no other locus than itself"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "point"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "点"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453739"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44946"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fundamental object of geometry: locus within which we can distinguish no other locus than itself"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "point"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "点"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453739"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33041"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle by George Boolos and Raymond Smullyan"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The Hardest Logic Puzzle Ever"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "史上最難邏輯謎題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33279"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of mental challenges"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "river crossing puzzle"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "渡河問題"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44914"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic-based number-placement puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sudoku"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "數獨"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1188693"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44914"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic-based number-placement puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sudoku"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "數獨"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44914"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic-based number-placement puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sudoku"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "数独"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1188693"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44914"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic-based number-placement puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sudoku"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "數獨"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1188693"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44914"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic-based number-placement puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sudoku"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "数独"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44914"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic-based number-placement puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sudoku"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "數獨"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44914"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic-based number-placement puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sudoku"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "数独"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47054"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44914"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic-based number-placement puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sudoku"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "数独"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47728"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q48297"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "plane curve: symmetrical conic section"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parabola"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "抛物线"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q169497"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "well-known logic puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Zebra Puzzle"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "誰養班馬？"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q124255"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "curve obtained by intersecting a cone and a plane"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "conic section"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "圆锥曲线"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q124255"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "curve obtained by intersecting a cone and a plane"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "conic section"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "圆锥曲线"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q124255"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "curve obtained by intersecting a cone and a plane"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "conic section"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "圆锥曲线"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q124255"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "curve obtained by intersecting a cone and a plane"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "conic section"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "圓錐曲線"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q124255"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "curve obtained by intersecting a cone and a plane"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "conic section"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "圓錐曲線"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207961"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "form of an object or its external boundary"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "shape"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "形状"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207961"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "form of an object or its external boundary"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "shape"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "形状"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207961"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "form of an object or its external boundary"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "shape"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "形狀"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207961"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "form of an object or its external boundary"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "shape"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "形狀"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q150052"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "first-order nonlinear differential equations, frequently used to describe the dynamics of biological systems in which two species interact, one as a predator and the other as prey"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q150052"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lotka–Volterra equations"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "洛特卡－沃爾泰拉方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q150052"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "first-order nonlinear differential equations, frequently used to describe the dynamics of biological systems in which two species interact, one as a predator and the other as prey"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q150052"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lotka–Volterra equations"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "洛特卡－沃尔泰拉方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q150052"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "first-order nonlinear differential equations, frequently used to describe the dynamics of biological systems in which two species interact, one as a predator and the other as prey"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q150052"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lotka–Volterra equations"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "洛特卡－沃尔泰拉方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q150052"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "first-order nonlinear differential equations, frequently used to describe the dynamics of biological systems in which two species interact, one as a predator and the other as prey"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q150052"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lotka–Volterra equations"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "洛特卡－沃爾泰拉方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q150052"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "first-order nonlinear differential equations, frequently used to describe the dynamics of biological systems in which two species interact, one as a predator and the other as prey"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q150052"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lotka–Volterra equations"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "洛特卡－沃爾泰拉方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q207961"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "form of an object or its external boundary"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "shape"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "形狀"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q240004"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Nurikabe"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "數牆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q534112"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "model in probability theory, used in gambling"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1868500"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "martingale"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "鞅"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q240004"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Nurikabe"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "數牆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21055677"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q461533"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "locus of points at equal phase in a wave"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "wavefront"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "波阵面"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q461533"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "locus of points at equal phase in a wave"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "wavefront"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "波阵面"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q461533"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "locus of points at equal phase in a wave"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "wavefront"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "波阵面"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q461533"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "locus of points at equal phase in a wave"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "wavefront"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "波陣面"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q461533"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "locus of points at equal phase in a wave"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "wavefront"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "波陣面"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q381892"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space in which from every open cover of the space, a finite cover can be extracted"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q583034"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "compact space"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "紧空间"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q381892"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space in which from every open cover of the space, a finite cover can be extracted"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q583034"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "compact space"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "紧空间"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q381892"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space in which from every open cover of the space, a finite cover can be extracted"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q583034"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "compact space"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "紧空间"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q381892"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space in which from every open cover of the space, a finite cover can be extracted"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q583034"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "compact space"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "緊空間"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q381892"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space in which from every open cover of the space, a finite cover can be extracted"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q583034"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "compact space"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "緊空間"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of points whose location satisfies or is determined by one or more specified conditions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "locus"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "轨迹"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21550639"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of points whose location satisfies or is determined by one or more specified conditions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "locus"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "軌跡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21550639"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of points whose location satisfies or is determined by one or more specified conditions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "locus"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "軌跡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21550639"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of points whose location satisfies or is determined by one or more specified conditions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "locus"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "轨迹"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21550639"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of points whose location satisfies or is determined by one or more specified conditions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "locus"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "轨迹"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21550639"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q583034"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space such that every point has a neighbourhood with compact closure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q583034"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "locally compact space"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "局部紧空间"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q583034"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space such that every point has a neighbourhood with compact closure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q583034"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "locally compact space"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "局部紧空间"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q583034"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space such that every point has a neighbourhood with compact closure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q583034"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "locally compact space"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "局部紧空间"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q583034"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space such that every point has a neighbourhood with compact closure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q583034"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "locally compact space"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "區域性緊空間"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q212785"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle often referred to as a mathematical transliteration of the crossword"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kakuro"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "数和"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q212785"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle often referred to as a mathematical transliteration of the crossword"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kakuro"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "数和"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q212785"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle often referred to as a mathematical transliteration of the crossword"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kakuro"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "数和"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q212785"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle often referred to as a mathematical transliteration of the crossword"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kakuro"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "數和"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q212785"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle often referred to as a mathematical transliteration of the crossword"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kakuro"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "數和"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q478093"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "shikaku"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "數方"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q212785"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle often referred to as a mathematical transliteration of the crossword"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kakuro"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "数和"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21055677"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q212785"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle often referred to as a mathematical transliteration of the crossword"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kakuro"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "数和"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21055677"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q212785"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle often referred to as a mathematical transliteration of the crossword"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kakuro"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "数和"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21055677"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q212785"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle often referred to as a mathematical transliteration of the crossword"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kakuro"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "數和"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21055677"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q212785"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle often referred to as a mathematical transliteration of the crossword"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kakuro"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "數和"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21055677"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q372499"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "KenKen"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "算獨"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q230689"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space that can be continuously shrunk to a point"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15832668"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "contractible space"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "可收縮空間"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q230689"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space that can be continuously shrunk to a point"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15832668"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "contractible space"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "可缩空间"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q230689"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space that can be continuously shrunk to a point"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15832668"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "contractible space"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "可縮空間"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q815412"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "2001 video game"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Light Up"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "點亮"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7889"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q815412"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "2001 video game"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Light Up"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "點亮"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7889"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q815412"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "2001 video game"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Light Up"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "點亮"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7889"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q843812"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "statement that asserts that a certain premise is true"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q843812"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logical assertion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "逻辑断言"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q843812"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "statement that asserts that a certain premise is true"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q843812"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logical assertion"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "逻辑断言"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q843812"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "statement that asserts that a certain premise is true"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q843812"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logical assertion"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "邏輯斷言"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q835894"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "picture logic puzzles in which cells in a grid must be colored or left blank according to numbers at the side of the grid to reveal a hidden picture"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Nonogram"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "數織"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q835894"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "picture logic puzzles in which cells in a grid must be colored or left blank according to numbers at the side of the grid to reveal a hidden picture"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Nonogram"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "數織"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q835894"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "picture logic puzzles in which cells in a grid must be colored or left blank according to numbers at the side of the grid to reveal a hidden picture"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Nonogram"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "數織"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21055677"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q835894"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "picture logic puzzles in which cells in a grid must be colored or left blank according to numbers at the side of the grid to reveal a hidden picture"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Nonogram"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "數織"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21055677"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1228250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "general concept of a line (curved or straight)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "line"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "綫"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1133242"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "geometric shape"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "semicircle"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "半圓"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1133242"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "geometric shape"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "semicircle"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "半圆"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1133242"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "geometric shape"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "semicircle"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "半圆"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q716430"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Numberlink"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "數連"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q862761"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "given a subset S of a topological space X, the biggest set of points in S not part of the boundary of S"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interior"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "内部"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44106280"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q862761"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "given a subset S of a topological space X, the biggest set of points in S not part of the boundary of S"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interior"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "內部"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44106280"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q815412"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "2001 video game"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Light Up"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "點亮"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q815412"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "2001 video game"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Light Up"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "點亮"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q815412"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "2001 video game"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Light Up"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "點亮"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q673276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hashiwokakero"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "橋梁遊戲"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q673276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hashiwokakero"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "橋梁遊戲"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q673276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hashiwokakero"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "橋樑遊戲"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q862761"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "given a subset S of a topological space X, the biggest set of points in S not part of the boundary of S"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interior"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "内部"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44106280"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42614797"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5553164"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Gerstenhaber algebra"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "格尔斯滕哈伯代数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7835145"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of logic puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transport puzzle"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "运输解谜"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107551175"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5532410"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "curve that is a circle or a straight line"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "generalised circle"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "广义圆"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11953040"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "puzzle in Douglas Hofstadter's book \"Gödel, Escher, Bach\""
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "MU puzzle"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "MU謎題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1378504"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11953040"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "puzzle in Douglas Hofstadter's book \"Gödel, Escher, Bach\""
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "MU puzzle"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "MU謎題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3175077"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "region in space consisting of points at the same potential"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equipotential"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "等位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3311695"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "statement which is true regardless of the truth or falsity of its constituent parts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3311695"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logical truth"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "邏輯真理"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3883775"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stochastic process associated with semimartingale processes such as Brownian motion"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3883775"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "local time"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "局部時"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3883775"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stochastic process associated with semimartingale processes such as Brownian motion"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3883775"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "local time"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "局部時"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3883775"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stochastic process associated with semimartingale processes such as Brownian motion"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3883775"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "local time"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "局部時"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3883775"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stochastic process associated with semimartingale processes such as Brownian motion"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3883775"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "local time"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "區域性時"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q60617925"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "video game which relies on logical thinking in puzzle solving"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic video game"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "逻辑电子游戏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q659563"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42614797"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algebra satisfying the Jacobi identity up to homotopy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42614797"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "L∞-algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "L∞代数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42614797"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algebra satisfying the Jacobi identity up to homotopy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42614797"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "L∞-algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "L∞代數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6675827"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "loop space over a Lie group"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2066070"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "loop group"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "閉路群"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3823917"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "balance puzzle"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "秤球問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1166625"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2352532"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Str8ts"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "順獨"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6458834"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "LITS"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "數拼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4386982"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "point that is at the same distance to every object in a given set"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equidistant"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "等遠"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4386982"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "point that is at the same distance to every object in a given set"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equidistant"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "等遠"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4895685"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "calculus property"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4895685"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linearity of differentiation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "微分的線性"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2121861"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of curve"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quadratrix of Hippias"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "二次希皮亞斯曲線"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2121861"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of curve"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quadratrix of Hippias"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "二次希皮亞斯曲線"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2120242"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Slitherlink"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "數迴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2120242"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Slitherlink"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "数回"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2120242"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Slitherlink"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "數迴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2120242"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Slitherlink"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "數迴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21055677"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2120242"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Slitherlink"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "数回"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21055677"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2120242"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Slitherlink"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "數迴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21055677"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2066070"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "space of basepoint preserving maps from a circle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2066070"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "loop space"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "閉路空間"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1804923"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "locally Euclidean topological space that is not paracompact"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q583034"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "long line"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "長直線"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q326908"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1804923"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "locally Euclidean topological space that is not paracompact"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q583034"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "long line"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "長直線"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q583034"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1804923"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "locally Euclidean topological space that is not paracompact"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q583034"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "long line"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "長直線"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q912058"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1804923"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "locally Euclidean topological space that is not paracompact"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q583034"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "long line"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "長直線"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q926996"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1804923"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "locally Euclidean topological space that is not paracompact"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q583034"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "long line"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "長直線"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1071795"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1507104"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "game defined by mathematical parameters"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical game"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "數學遊戲"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107551175"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1507104"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "game defined by mathematical parameters"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical game"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "数学游戏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107551175"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1507104"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "game defined by mathematical parameters"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical game"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "數學遊戲"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107551175"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1659478"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hidato"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "嗨达图"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1868517"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-discrete locally compact topological field"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q583034"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "local field"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "局部域"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1420204"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "line segment bisector passes through the midpoint of the segment at right angles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "perpendicular bisector"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "垂直平分線"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q205034"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1420204"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "line segment bisector passes through the midpoint of the segment at right angles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "perpendicular bisector"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "垂直平分線"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3128632"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1322786"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "term in topology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "exterior"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "外部"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1322786"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "term in topology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "exterior"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "外部"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1322786"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "term in topology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "exterior"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "外部"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1414219"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fillomino"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "數聯"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1541599"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic shapes represented in vector graphics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "geometric primitive"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "几何图元"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1541599"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic shapes represented in vector graphics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "geometric primitive"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "幾何圖元"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "puzzle deriving from the mathematics field of deduction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "邏輯益智遊戲"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107551175"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1364910"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "point, line, or curve common to two or more objects such as lines, curves, planes, and surfaces"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "intersection (geometry)"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "相交"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1548905"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logic puzzle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1774662"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Knights and Knaves"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "武士與無賴"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1868500"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stochastic process satisfying the localized martingale property: i.e. such that there exists a sequence of stopping times, almost surely increasing and almost surely diverging, such that the corresponding stopped processes are martingales"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1868500"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "local martingale"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "局部鞅"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2106473"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "line determined by two circles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radical axis"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "根軸"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413738"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equation in polar coordinates"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q211548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "superformula"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "超公式"
+      }
+    }
+  ]
+}

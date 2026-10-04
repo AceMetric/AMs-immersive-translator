@@ -1,0 +1,250 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q55622415 wd:Q622993 wd:Q1584581 wd:Q6577686 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q55622415 wd:Q622993 wd:Q1584581 wd:Q6577686 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q55622415 wd:Q622993 wd:Q1584581 wd:Q6577686 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "aee543dd21fa13fa8f48b2a231c53bed0969d52d7832c08399eb39c37d55bb87",
+  "responseSha256": "c314b041b2099dc8d98056b256609a19d3452c3ea3b4114d542ac3ad121d171e",
+  "retrievedAt": "2026-10-04T03:26:00.978864+00:00",
+  "license": "CC0-1.0",
+  "domain": "cs",
+  "roots": [
+    {
+      "domain": "cs",
+      "id": "Q55622415",
+      "label": "wildcard matching",
+      "description": "checking whether a string matches a wildcard pattern",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q622993",
+      "label": "X.25",
+      "description": "standard protocol suite for packet switched wide area network (WAN) communication",
+      "parents": [
+        "Q132364"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q1584581",
+      "label": "XMPP Extension Protocol",
+      "description": "standard for adding features to XMPP",
+      "parents": [
+        "Q132364"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q6577686",
+      "label": "zipper",
+      "description": "technique of representing an aggregate data structure so that it is convenient for writing programs that traverse the structure arbitrarily and update its contents",
+      "parents": [
+        "Q175263"
+      ]
+    }
+  ],
+  "limit": 20000,
+  "name": "cs branches 341..344",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q622993"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard protocol suite for packet switched wide area network (WAN) communication"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q622993"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "X.25"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "X.25"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q67080166"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q622993"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard protocol suite for packet switched wide area network (WAN) communication"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q622993"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "X.25"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "X.25"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q67080166"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q622993"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard protocol suite for packet switched wide area network (WAN) communication"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q622993"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "X.25"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "X.25"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q67080166"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55622415"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "checking whether a string matches a wildcard pattern"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55622415"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "wildcard matching"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "匹配通配符"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3435924"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22907457"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "extension to XMPP for multi-client end-to-end encryption"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1584581"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "OMEMO"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "OMEMO"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1254335"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22907457"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "extension to XMPP for multi-client end-to-end encryption"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1584581"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "OMEMO"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "OMEMO"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1584581"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3283875"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer operation of listing files that match a wildcard pattern"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55622415"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "glob"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Glob"
+      }
+    }
+  ]
+}

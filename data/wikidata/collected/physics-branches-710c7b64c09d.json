@@ -1,0 +1,3545 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q132798332 wd:Q2673034 wd:Q1638155 wd:Q188392 wd:Q189214 wd:Q228436 wd:Q69684056 wd:Q2306924 wd:Q614981 wd:Q18359 wd:Q1053879 wd:Q2419903 wd:Q213016 wd:Q503327 wd:Q112939462 wd:Q533668 wd:Q2477230 wd:Q119487995 wd:Q223325 wd:Q2431756 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q132798332 wd:Q2673034 wd:Q1638155 wd:Q188392 wd:Q189214 wd:Q228436 wd:Q69684056 wd:Q2306924 wd:Q614981 wd:Q18359 wd:Q1053879 wd:Q2419903 wd:Q213016 wd:Q503327 wd:Q112939462 wd:Q533668 wd:Q2477230 wd:Q119487995 wd:Q223325 wd:Q2431756 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q132798332 wd:Q2673034 wd:Q1638155 wd:Q188392 wd:Q189214 wd:Q228436 wd:Q69684056 wd:Q2306924 wd:Q614981 wd:Q18359 wd:Q1053879 wd:Q2419903 wd:Q213016 wd:Q503327 wd:Q112939462 wd:Q533668 wd:Q2477230 wd:Q119487995 wd:Q223325 wd:Q2431756 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "710c7b64c09d5419d1df9cda44c96ee4fbd9ba1b99a9e019523b0189182be8dc",
+  "responseSha256": "3b5dcdd2e4d0d18847d1dc95735c5604abc7777d218aa790e39acb43d6104a0e",
+  "retrievedAt": "2026-10-04T05:06:25.149394+00:00",
+  "license": "CC0-1.0",
+  "domain": "physics",
+  "roots": [
+    {
+      "domain": "physics",
+      "id": "Q132798332",
+      "label": "T violation",
+      "description": "violation of T (time) symmetry in particle physics and cosmology",
+      "parents": [
+        "Q903282"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q2673034",
+      "label": "tangential acceleration",
+      "description": "",
+      "parents": [
+        "Q11376"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1638155",
+      "label": "tare weight",
+      "description": "weight of an empty vehicle or container",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q188392",
+      "label": "tau",
+      "description": "heavy, negatively charged subatomic particle",
+      "parents": [
+        "Q43116"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q189214",
+      "label": "tempo",
+      "description": "musical concept indicating to the speed of interpretation",
+      "parents": [
+        "Q11465"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q228436",
+      "label": "tension",
+      "description": "pulling power of an engine or animal",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q69684056",
+      "label": "tension and compression",
+      "description": "forces acting axially on a structure",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q2306924",
+      "label": "tension energy",
+      "description": "type of energy",
+      "parents": [
+        "Q155640"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q614981",
+      "label": "terminal velocity",
+      "description": "highest velocity attainable by an object as it falls through a fluid",
+      "parents": [
+        "Q11465"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q18359",
+      "label": "theory of everything",
+      "description": "hypothetical single, all-encompassing, coherent theoretical framework of physics",
+      "parents": [
+        "Q9357058"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1053879",
+      "label": "thermal design power",
+      "description": "specified amount of heat a computer component generates under normal conditions that the cooling system must dissipate",
+      "parents": [
+        "Q25342"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q2419903",
+      "label": "thermal power",
+      "description": "physical quantity indicating thermal energy converted over a period of time",
+      "parents": [
+        "Q25342"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q213016",
+      "label": "thermodynamic process",
+      "description": "energetic development of a thermodynamic system proceeding from an initial state to a final state",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q503327",
+      "label": "thermodynamic system",
+      "description": "precisely specified macroscopic region of the universe, defined by boundaries",
+      "parents": [
+        "Q1454986"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q112939462",
+      "label": "thermoelectromotive force",
+      "description": "",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q533668",
+      "label": "thrust",
+      "description": "force which expels or accelerates mass in one direction",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q2477230",
+      "label": "tidal acceleration",
+      "description": "cause of tidal locking",
+      "parents": [
+        "Q11376"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q119487995",
+      "label": "tidal acceleration",
+      "description": "gravitational acceleration difference between two points in space",
+      "parents": [
+        "Q11376"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q223325",
+      "label": "tidal force",
+      "description": "secondary effect of the force of gravity of one body on another",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q2431756",
+      "label": "tidal resonance",
+      "description": "phenomenon that occurs when the tide excites a resonant mode of a part of an ocean, producing a higher tidal range",
+      "parents": [
+        "Q172858"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "physics branches 501..520",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15211908"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process or amount of energy moving from one specified object, system, or location, to another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energy transfer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "能量转移"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q900800"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15211908"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process or amount of energy moving from one specified object, system, or location, to another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energy transfer"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "能量轉移"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q900800"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q179635"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transport of thermal energy in physical systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heat transfer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "熱傳"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q179635"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transport of thermal energy in physical systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heat transfer"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "传热"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q179635"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transport of thermal energy in physical systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heat transfer"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "传热"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q179635"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transport of thermal energy in physical systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heat transfer"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "傳熱"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q179635"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transport of thermal energy in physical systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heat transfer"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "傳熱"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q178185"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system that performs the conversion of heat or thermal energy to mechanical work"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q503327"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heat engine"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "热机"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q135841149"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q178185"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system that performs the conversion of heat or thermal energy to mechanical work"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q503327"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heat engine"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "热机"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q135841149"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q178185"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system that performs the conversion of heat or thermal energy to mechanical work"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q503327"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heat engine"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "熱機"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q135841149"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q178185"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system that performs the conversion of heat or thermal energy to mechanical work"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q503327"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heat engine"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "熱機"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q135841149"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188392"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heavy, negatively charged subatomic particle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188392"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tau"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "τ子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188392"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heavy, negatively charged subatomic particle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188392"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tau"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "τ子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188392"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heavy, negatively charged subatomic particle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188392"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tau"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "τ子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188392"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heavy, negatively charged subatomic particle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188392"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tau"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "τ子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188392"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heavy, negatively charged subatomic particle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188392"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tau"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "τ子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q75920"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linked sequence of thermodynamic processes that involve transfer of heat and work into and out of the system,while varying pressure, temperature, and other state variables within the system, and that eventually returns the system to its initial state"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic cycle"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "热力学循环"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q60661"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic reaction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "exothermic process"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "放热过程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q178185"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system that performs the conversion of heat or thermal energy to mechanical work"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q503327"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heat engine"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "热机"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q135841149"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18359"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hypothetical single, all-encompassing, coherent theoretical framework of physics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18359"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "theory of everything"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "万有理论"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q182453"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic process with zero heat transfer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "adiabatic process"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "绝热过程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q182453"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic process with zero heat transfer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "adiabatic process"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "绝热过程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q182453"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic process with zero heat transfer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "adiabatic process"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "绝热过程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q182453"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic process with zero heat transfer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "adiabatic process"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "絕熱過程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q182453"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic process with zero heat transfer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "adiabatic process"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "絕熱過程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189214"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical concept indicating to the speed of interpretation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tempo"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "速度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11696608"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189214"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical concept indicating to the speed of interpretation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tempo"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "速度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11696608"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189214"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical concept indicating to the speed of interpretation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tempo"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "速度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11696608"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213659"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lowering the temperature of a liquid or gas below freezing without it becoming a solid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "supercooling"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "过冷"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11430"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213659"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lowering the temperature of a liquid or gas below freezing without it becoming a solid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "supercooling"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "过冷"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11430"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213659"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lowering the temperature of a liquid or gas below freezing without it becoming a solid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "supercooling"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "过冷"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11430"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213659"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lowering the temperature of a liquid or gas below freezing without it becoming a solid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "supercooling"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "過冷"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11430"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213659"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lowering the temperature of a liquid or gas below freezing without it becoming a solid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "supercooling"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "過冷"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11430"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q216828"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "chemical property of like molecules sticking together"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q228436"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cohesion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "凝聚 (化學)"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4373292"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q216828"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "chemical property of like molecules sticking together"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q228436"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cohesion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "凝聚 (化學)"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29053854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189214"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical concept indicating to the speed of interpretation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tempo"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "速度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11696608"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energetic development of a thermodynamic system proceeding from an initial state to a final state"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic process"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "热力学过程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energetic development of a thermodynamic system proceeding from an initial state to a final state"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic process"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "热力学过程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energetic development of a thermodynamic system proceeding from an initial state to a final state"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic process"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "热力学过程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energetic development of a thermodynamic system proceeding from an initial state to a final state"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic process"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "熱力學過程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energetic development of a thermodynamic system proceeding from an initial state to a final state"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic process"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "熱力學過程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188666"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interaction in which dissimilar surfaces or particles stick together"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q228436"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "adhesion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "黏附"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4366377"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213659"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lowering the temperature of a liquid or gas below freezing without it becoming a solid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "supercooling"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "过冷"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1293220"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213659"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lowering the temperature of a liquid or gas below freezing without it becoming a solid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "supercooling"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "过冷"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1293220"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213659"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lowering the temperature of a liquid or gas below freezing without it becoming a solid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "supercooling"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "过冷"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1293220"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213659"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lowering the temperature of a liquid or gas below freezing without it becoming a solid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "supercooling"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "過冷"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1293220"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213659"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lowering the temperature of a liquid or gas below freezing without it becoming a solid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "supercooling"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "過冷"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1293220"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q223325"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "secondary effect of the force of gravity of one body on another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q223325"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tidal force"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "潮汐力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q223325"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "secondary effect of the force of gravity of one body on another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q223325"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tidal force"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "潮汐力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q223325"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "secondary effect of the force of gravity of one body on another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q223325"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tidal force"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "潮汐力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q223325"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "secondary effect of the force of gravity of one body on another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q223325"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tidal force"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "潮汐力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q223325"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "secondary effect of the force of gravity of one body on another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q223325"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tidal force"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "潮汐力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189214"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical concept indicating to the speed of interpretation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tempo"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "演奏速度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11696608"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q503327"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "precisely specified macroscopic region of the universe, defined by boundaries"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q503327"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "热力学系统"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q503327"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "precisely specified macroscopic region of the universe, defined by boundaries"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q503327"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic system"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "热力学系統"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q503327"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "precisely specified macroscopic region of the universe, defined by boundaries"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q503327"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic system"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "熱力學系統"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q644139"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical phenomenon"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "superheating"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "沸腾延迟"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1293220"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q533668"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force which expels or accelerates mass in one direction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q533668"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thrust"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "推力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q831024"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of thermodynamic process"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "polytropic process"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "多方过程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q831024"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of thermodynamic process"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "polytropic process"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "多方过程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q831024"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of thermodynamic process"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "polytropic process"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "多方過程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q632388"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic process that is not reversible"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "irreversible process"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "不可逆性"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q116505632"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q524072"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "weight of a vehicle without any payload"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1638155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "curb weight"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "整备质量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28733284"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q614981"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "highest velocity attainable by an object as it falls through a fluid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q614981"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "terminal velocity"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "終端速度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284256"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process by which a solid with a highly organised atomic or molecular structure forms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "crystallization"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "结晶"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q320388"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical systems that don't interact with other parts of the universe"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q503327"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "isolated system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "孤立系統"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2673034"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2673034"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tangential acceleration"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "切向加速度"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2673034"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2673034"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tangential acceleration"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "切向加速度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4311765"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process of increasing an object's temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heating"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "加热"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4311765"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process of increasing an object's temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heating"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "加热"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2477230"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cause of tidal locking"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2477230"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tidal acceleration"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "潮汐加速"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3239681"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2477230"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cause of tidal locking"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2477230"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tidal acceleration"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "潮汐加速"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3239681"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2477230"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cause of tidal locking"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2477230"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tidal acceleration"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "潮汐加速"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3239681"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2001317"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic process"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "adiabatic expansion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "绝热膨胀"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2081524"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast musical tempo"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "allegro"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "快板"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115211517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2081524"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast musical tempo"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "allegro"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "快板"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115211517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2081524"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast musical tempo"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "allegro"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "快板"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115211517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2712821"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "application of inward (\"pushing\") forces to a material or structure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69684056"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "compression"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "壓縮力"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17320256"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1638155"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "weight of an empty vehicle or container"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1638155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tare weight"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "皮重"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5562673"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "subclass of thrust"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q533668"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gimballed thrust"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "万向节推进"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5562673"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "subclass of thrust"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q533668"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gimballed thrust"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "万向节推进"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5562673"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "subclass of thrust"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q533668"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gimballed thrust"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "万向节推进"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12571883"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic process that absorbs energy from its surroundings"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "endothermic process"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "吸热过程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2499193"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "slow musical tempo, between adagio and allegro"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "andante"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "行板"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115211517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3736203"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "moderate musical tempo between andante and allegro"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "moderato"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "中庸的"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115211517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3929317"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transfer of thermal energy via thermal radiation, heat conduction or convection"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cooling"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "冷却"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q898312"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "systems with external interactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q503327"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "開放系統"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q898312"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "systems with external interactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q503327"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open system"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "開放系統"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q908584"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Pulling force transmitted axially – Opposite of compression"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69684056"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanical tension"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "张力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q908584"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Pulling force transmitted axially – Opposite of compression"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69684056"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanical tension"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "張力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1349211"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "displacement of the solid earth's surface caused by the gravity of the Moon and Sun"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q223325"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Earth tide"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "固体潮"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q223325"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1053879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "specified amount of heat a computer component generates under normal conditions that the cooling system must dissipate"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1053879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermal design power"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "热设计功耗"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7295721"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1322176"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "theory, especially during the 1970s, of imminent cooling of the Earth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "global cooling"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "全球寒化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1322176"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "theory, especially during the 1970s, of imminent cooling of the Earth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "global cooling"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "全球寒化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1322176"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "theory, especially during the 1970s, of imminent cooling of the Earth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "global cooling"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "全球寒化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q931727"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tidal force experienced by objects subject to the gravitational field of a galaxy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q223325"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "galactic tide"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "星系潮汐"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1053879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "specified amount of heat a computer component generates under normal conditions that the cooling system must dissipate"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1053879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermal design power"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "热设计功耗"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7295721"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1053879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "specified amount of heat a computer component generates under normal conditions that the cooling system must dissipate"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1053879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermal design power"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "熱設計功耗"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7295721"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q900231"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energy transfer, or its amount (& direction), in a thermodynamic process due to macroscopic factors external to a thermodynamic system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "work"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "功"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q900800"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q908584"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Pulling force transmitted axially – Opposite of compression"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69684056"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanical tension"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "張力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q900222"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic process in which equilibrium is maintained for the duration of the process"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quasistatic process"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "準靜態過程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q900222"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic process in which equilibrium is maintained for the duration of the process"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quasistatic process"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "准静态过程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q900222"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic process in which equilibrium is maintained for the duration of the process"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quasistatic process"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "準靜態過程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q898312"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "systems with external interactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q503327"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open system"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "开放系统"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q898312"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "systems with external interactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q503327"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open system"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "开放系统"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q898312"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "systems with external interactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q503327"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open system"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "開放系統"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q909022"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "first step in the formation of either a new thermodynamic phase or a new structure via self-assembly or self-organization"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nucleation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "成核"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q909022"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "first step in the formation of either a new thermodynamic phase or a new structure via self-assembly or self-organization"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nucleation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "成核"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q909022"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "first step in the formation of either a new thermodynamic phase or a new structure via self-assembly or self-organization"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nucleation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "成核"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q907297"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic process with no change in enthalpy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "isenthalpic process"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "等焓過程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q907297"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic process with no change in enthalpy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "isenthalpic process"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "等焓过程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q907297"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic process with no change in enthalpy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "isenthalpic process"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "等焓過程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q874188"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "removal of frost and ice from a refrigerator"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "defrosting"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "除霜"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063336"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "expressive resource consisting of playing with a certain freedom the tempo and the relative values of the notes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rubato"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "自由速度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063336"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "expressive resource consisting of playing with a certain freedom the tempo and the relative values of the notes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rubato"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "伸缩处理"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063336"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "expressive resource consisting of playing with a certain freedom the tempo and the relative values of the notes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rubato"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "伸缩处理"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063336"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "expressive resource consisting of playing with a certain freedom the tempo and the relative values of the notes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rubato"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "伸縮處理"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1322176"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "theory, especially during the 1970s, of imminent cooling of the Earth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "global cooling"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "全球寒化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17737"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1322176"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "theory, especially during the 1970s, of imminent cooling of the Earth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "global cooling"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "全球寒化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17737"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1322176"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "theory, especially during the 1970s, of imminent cooling of the Earth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "global cooling"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "全球寒化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17737"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q900231"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energy transfer, or its amount (& direction), in a thermodynamic process due to macroscopic factors external to a thermodynamic system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "work"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "功 (熱力學)"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q900800"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1324943"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic system with a heat capacity that is large enough that when it is in thermal contact with another system of interest or its environment, its temperature remains effectively constant"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q503327"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermal reservoir"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "熱庫"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1324943"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic system with a heat capacity that is large enough that when it is in thermal contact with another system of interest or its environment, its temperature remains effectively constant"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q503327"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermal reservoir"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "热库"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1324943"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermodynamic system with a heat capacity that is large enough that when it is in thermal contact with another system of interest or its environment, its temperature remains effectively constant"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q503327"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermal reservoir"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "熱庫"
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?item ?matchedLabel ?en ?zh ?description ?kind WHERE {\n          VALUES ?matchedLabel { \"nucleus sampling\"@en }\n          ?item (rdfs:label|skos:altLabel) ?matchedLabel.\n          OPTIONAL { ?item rdfs:label ?en. FILTER(LANG(?en)=\"en\") }\n          OPTIONAL { ?item rdfs:label ?zh. FILTER(LANG(?zh) IN (\"zh-hans\",\"zh-cn\",\"zh\")) }\n          OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n          OPTIONAL { ?item wdt:P31 ?kind }\n        }",
+  "querySha256": "90b566a70356e5d3120cfd1f6439326d1bbcbaa2d2193bb1e44a01d1891ad5b5",
+  "responseSha256": "daac2bc5cc75c86d7a4500f1a064570331bbdd5ffdf1fa8dfc3e81675f723f6a",
+  "retrievedAt": "2026-10-04T03:16:03.952234+00:00",
+  "license": "CC0-1.0",
+  "name": "core evidence 1361..1361",
+  "inputTerms": [
+    {
+      "domain": "cs",
+      "source": "nucleus sampling",
+      "target": "核采样"
+    }
+  ],
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122237668"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Language model technique"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Top-p sampling"
+      },
+      "matchedLabel": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nucleus sampling"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    }
+  ]
+}

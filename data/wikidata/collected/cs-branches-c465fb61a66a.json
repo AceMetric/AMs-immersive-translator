@@ -1,0 +1,3161 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q285861 wd:Q798554 wd:Q968642 wd:Q28407493 wd:Q29791656 wd:Q1002937 wd:Q1516247 wd:Q4861558 wd:Q17004744 wd:Q4874475 wd:Q1063558 wd:Q2733833 wd:Q4907765 wd:Q17005494 wd:Q4913907 wd:Q380172 wd:Q3607994 wd:Q1992074 wd:Q2374485 wd:Q124623933 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q285861 wd:Q798554 wd:Q968642 wd:Q28407493 wd:Q29791656 wd:Q1002937 wd:Q1516247 wd:Q4861558 wd:Q17004744 wd:Q4874475 wd:Q1063558 wd:Q2733833 wd:Q4907765 wd:Q17005494 wd:Q4913907 wd:Q380172 wd:Q3607994 wd:Q1992074 wd:Q2374485 wd:Q124623933 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q285861 wd:Q798554 wd:Q968642 wd:Q28407493 wd:Q29791656 wd:Q1002937 wd:Q1516247 wd:Q4861558 wd:Q17004744 wd:Q4874475 wd:Q1063558 wd:Q2733833 wd:Q4907765 wd:Q17005494 wd:Q4913907 wd:Q380172 wd:Q3607994 wd:Q1992074 wd:Q2374485 wd:Q124623933 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "c465fb61a66a0b63abca3114a5860b0de15dc221aeb79dfb3be73c1c0cc9a05f",
+  "responseSha256": "735d05961b471c3b3ea3e90d4f12ad389577faf04f792cfd3b82f403fdcf3211",
+  "retrievedAt": "2026-10-04T05:08:14.913055+00:00",
+  "license": "CC0-1.0",
+  "domain": "cs",
+  "roots": [
+    {
+      "domain": "cs",
+      "id": "Q285861",
+      "label": "B+ tree",
+      "description": "B-tree in which each node contains only keys (not key–value pairs), and to which an additional level is added at the bottom with linked leaves",
+      "parents": [
+        "Q223655"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q798554",
+      "label": "backtracking",
+      "description": "class of algorithm",
+      "parents": [
+        "Q755673"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q968642",
+      "label": "backward induction",
+      "description": "process of reasoning backwards in time",
+      "parents": [
+        "Q201413"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q28407493",
+      "label": "Bacterial colony optimization",
+      "description": "optimization algorithm",
+      "parents": [
+        "Q2835765"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q29791656",
+      "label": "balanced tree",
+      "description": "a tree data structure where no leaf is much farther away from the root than any other leaf",
+      "parents": [
+        "Q223655"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1002937",
+      "label": "Balancing of rotating masses",
+      "description": "mechanical vibration",
+      "parents": [
+        "Q984063"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1516247",
+      "label": "bargaining problem",
+      "description": "payoff selection problem about how surplus can be shared between two agents",
+      "parents": [
+        "Q984063"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q4861558",
+      "label": "Barnes interpolation",
+      "description": "data processing technique",
+      "parents": [
+        "Q187631"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q17004744",
+      "label": "Bayes classifier",
+      "description": "the classifier having the smallest probability of misclassification of all classes using the same set of features",
+      "parents": [
+        "Q1744627"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q4874475",
+      "label": "Bayesian interpretation of regularization",
+      "description": "Bayesian framework",
+      "parents": [
+        "Q620622"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1063558",
+      "label": "behavioral pattern",
+      "description": "type of software design pattern",
+      "parents": [
+        "Q181156"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q2733833",
+      "label": "Best response",
+      "description": "game theoretic concept of a strategy that produces the most favorable outcome for a player",
+      "parents": [
+        "Q1546627"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q4907765",
+      "label": "bilinear program",
+      "description": "nonlinear optimization problem whose objective or constraint functions are bilinear",
+      "parents": [
+        "Q984063"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q17005494",
+      "label": "binary classification",
+      "description": "the task of classifying the elements of a given set into two groups (predicting which group each one belongs to) on the basis of a classification rule",
+      "parents": [
+        "Q1744628"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q4913907",
+      "label": "binary protocol",
+      "description": "protocol intended or expected to be read by a machine rather than a human being",
+      "parents": [
+        "Q15836568"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q380172",
+      "label": "binary tree",
+      "description": "tree data structure in which each node has at most two children",
+      "parents": [
+        "Q223655"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q3607994",
+      "label": "binomial tree",
+      "description": "ordered tree data structure of order k ≥ 0, that is Bk, whose root has k children where the ith child is binomial tree of order k-i",
+      "parents": [
+        "Q223655"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1992074",
+      "label": "bit array",
+      "description": "array data structure that compactly stores bits",
+      "parents": [
+        "Q186152"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q2374485",
+      "label": "bit field",
+      "description": "data structure used in computer programming",
+      "parents": [
+        "Q186152"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q124623933",
+      "label": "bitcoin block",
+      "description": "group of transactions in the bitcoin blockchain",
+      "parents": [
+        "Q104886715"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "cs branches 41..60",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791664"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary tree data structure in which every level (depth), except possibly the deepest, is completely filled"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380172"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "complete binary tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "完全二元樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791664"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary tree data structure in which every level (depth), except possibly the deepest, is completely filled"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380172"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "complete binary tree"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "完全二元樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791667"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary tree data structure in which each node has exactly zero or two children"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380172"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "full binary tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "滿二元樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791667"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary tree data structure in which each node has exactly zero or two children"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380172"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "full binary tree"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "滿二元樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791656"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a tree data structure where no leaf is much farther away from the root than any other leaf"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791656"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "balanced tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "平衡樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791960"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree data structure whose subtrees differ in height by no more than one and the subtrees are height-balanced"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791656"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "height-balanced tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "高度平衡樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791960"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree data structure whose subtrees differ in height by no more than one and the subtrees are height-balanced"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791656"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "height-balanced tree"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "高度平衡樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17005494"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the task of classifying the elements of a given set into two groups (predicting which group each one belongs to) on the basis of a classification rule"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17005494"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary classification"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "二元分类器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17005494"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the task of classifying the elements of a given set into two groups (predicting which group each one belongs to) on the basis of a classification rule"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17005494"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary classification"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "二元分类器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17005494"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the task of classifying the elements of a given set into two groups (predicting which group each one belongs to) on the basis of a classification rule"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17005494"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary classification"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "二元分类器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17005494"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the task of classifying the elements of a given set into two groups (predicting which group each one belongs to) on the basis of a classification rule"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17005494"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary classification"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "二元分類器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23601418"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "behavioral design pattern in software engineering"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blackboard pattern"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "黑板"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23601418"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "behavioral design pattern in software engineering"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blackboard pattern"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "黑板系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23601418"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "behavioral design pattern in software engineering"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blackboard pattern"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "黑板系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23601418"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "behavioral design pattern in software engineering"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "blackboard pattern"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "黑板系統"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791656"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a tree data structure where no leaf is much farther away from the root than any other leaf"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791656"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "balanced tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "平衡树"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791656"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a tree data structure where no leaf is much farther away from the root than any other leaf"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791656"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "balanced tree"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "平衡樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q798554"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q798554"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "backtracking"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "回溯法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q775349"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "design pattern enabling selection of algorithms at runtime"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "strategy pattern"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "策略模式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q285861"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B-tree in which each node contains only keys (not key–value pairs), and to which an additional level is added at the bottom with linked leaves"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q285861"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B+ tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "B+树"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q285861"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B-tree in which each node contains only keys (not key–value pairs), and to which an additional level is added at the bottom with linked leaves"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q285861"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B+ tree"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "B+树"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q285861"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B-tree in which each node contains only keys (not key–value pairs), and to which an additional level is added at the bottom with linked leaves"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q285861"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B+ tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "B+树"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q285861"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B-tree in which each node contains only keys (not key–value pairs), and to which an additional level is added at the bottom with linked leaves"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q285861"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B+ tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "B+樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q285861"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B-tree in which each node contains only keys (not key–value pairs), and to which an additional level is added at the bottom with linked leaves"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q285861"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B+ tree"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "B+樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q739120"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "version 2 of the Hypertext Transfer Protocol used by the World Wide Web"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4913907"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "HTTP/2"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "超文本傳輸協議/2"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q290378"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q739120"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "version 2 of the Hypertext Transfer Protocol used by the World Wide Web"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4913907"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "HTTP/2"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "HTTP/2"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q290378"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q739120"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "version 2 of the Hypertext Transfer Protocol used by the World Wide Web"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4913907"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "HTTP/2"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "超文本傳輸協議/2"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4485156"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q739120"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "version 2 of the Hypertext Transfer Protocol used by the World Wide Web"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4913907"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "HTTP/2"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "HTTP/2"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4485156"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q739120"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "version 2 of the Hypertext Transfer Protocol used by the World Wide Web"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4913907"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "HTTP/2"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "超文本傳輸協議/2"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4913907"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q739120"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "version 2 of the Hypertext Transfer Protocol used by the World Wide Web"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4913907"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "HTTP/2"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "HTTP/2"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4913907"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q739120"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "version 2 of the Hypertext Transfer Protocol used by the World Wide Web"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4913907"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "HTTP/2"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "超文本傳輸協議/2"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q739120"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "version 2 of the Hypertext Transfer Protocol used by the World Wide Web"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4913907"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "HTTP/2"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "HTTP/2"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q739120"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "version 2 of the Hypertext Transfer Protocol used by the World Wide Web"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4913907"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "HTTP/2"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "超文本傳輸協議/2"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55155149"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q739120"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "version 2 of the Hypertext Transfer Protocol used by the World Wide Web"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4913907"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "HTTP/2"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "HTTP/2"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55155149"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q245955"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "any node-based binary search tree that automatically keeps its height small"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791656"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "self-balancing binary search tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "自平衡二叉搜索树"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q245955"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "any node-based binary search tree that automatically keeps its height small"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791656"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "self-balancing binary search tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "自平衡二元搜尋樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q245955"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "any node-based binary search tree that automatically keeps its height small"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791656"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "self-balancing binary search tree"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "自平衡二元搜尋樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q386776"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "behavioral design pattern"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "command pattern"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "命令模式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380172"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree data structure in which each node has at most two children"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380172"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "二叉树"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q827335"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380172"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree data structure in which each node has at most two children"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380172"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary tree"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "二叉树"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q827335"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380172"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree data structure in which each node has at most two children"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380172"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "二叉树"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q827335"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380172"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree data structure in which each node has at most two children"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380172"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "二元樹"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q827335"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380172"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree data structure in which each node has at most two children"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380172"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary tree"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "二元樹"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q827335"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q231062"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming pattern"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "chain-of-responsibility pattern"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "责任链模式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q677051"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a self-balancing, tree-based data structure, that allows read/write access in logarithmic time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791656"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B-tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "B树"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q677051"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a self-balancing, tree-based data structure, that allows read/write access in logarithmic time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791656"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B-tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "B树"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q677051"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a self-balancing, tree-based data structure, that allows read/write access in logarithmic time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791656"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B-tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "B樹"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q677051"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a self-balancing, tree-based data structure, that allows read/write access in logarithmic time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791656"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B-tree"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "B-樹"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q812530"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "classification algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17004744"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "naive Bayes classifier"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "朴素贝叶斯分类器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623818"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure in tree form with 0, 1, or 2 children per node, sorted for fast lookup"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380172"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "二叉搜索树"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623818"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure in tree form with 0, 1, or 2 children per node, sorted for fast lookup"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380172"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search tree"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "二叉查找树"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623818"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure in tree form with 0, 1, or 2 children per node, sorted for fast lookup"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380172"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "二元搜寻树"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623818"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure in tree form with 0, 1, or 2 children per node, sorted for fast lookup"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380172"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "二元搜尋樹"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623818"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure in tree form with 0, 1, or 2 children per node, sorted for fast lookup"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380172"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search tree"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "二元搜尋樹"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q751292"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary tree selected at random"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380172"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "random binary tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "隨機二元樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q751292"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary tree selected at random"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380172"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "random binary tree"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "隨機二元樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q746674"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure commonly used in computer systems that play board games"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1992074"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bitboard"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "位版"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q818562"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "design pattern"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "observer pattern"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "观察者模式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2374485"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure used in computer programming"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2374485"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bit field"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "位段"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2374485"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure used in computer programming"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2374485"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bit field"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "位段"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2374485"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure used in computer programming"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2374485"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bit field"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "位段"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175263"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1516247"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "payoff selection problem about how surplus can be shared between two agents"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1516247"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bargaining problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "讨价还价问题"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1516247"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "payoff selection problem about how surplus can be shared between two agents"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1516247"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bargaining problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "討價還價問題"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546118"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "behavioral design pattern defining an object that encapsulates how a set of objects interact"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mediator pattern"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "中介者模式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1546118"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "behavioral design pattern defining an object that encapsulates how a set of objects interact"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mediator pattern"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "the mediator"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1809585"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "object with no referenced value or with defined neutral (\"null\") behavior"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "null object pattern"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "空对象模式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1992074"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "array data structure that compactly stores bits"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1992074"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bit array"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "位数组"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1992074"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "array data structure that compactly stores bits"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1992074"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bit array"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "位数组"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1992074"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "array data structure that compactly stores bits"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1992074"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bit array"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "位数组"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1992074"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "array data structure that compactly stores bits"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1992074"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bit array"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "位陣列"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1992074"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "array data structure that compactly stores bits"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1992074"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bit array"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "位陣列"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1002937"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanical vibration"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1002937"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Balancing of rotating masses"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "轮胎动平衡"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1002937"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanical vibration"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1002937"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Balancing of rotating masses"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "轮胎动平衡"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1002937"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanical vibration"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1002937"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Balancing of rotating masses"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "轮胎动平衡"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4913907"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "protocol intended or expected to be read by a machine rather than a human being"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4913907"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "二進制協議"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4913907"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "protocol intended or expected to be read by a machine rather than a human being"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4913907"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "二進制協議"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q830719"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "design pattern"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "visitor pattern"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "访问者模式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2466492"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree structure in information science"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q285861"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "UB-tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "UB樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q968642"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process of reasoning backwards in time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q968642"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "backward induction"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "逆向歸納法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1799072"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q968642"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process of reasoning backwards in time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q968642"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "backward induction"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "逆向归纳法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1799072"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q968642"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process of reasoning backwards in time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q968642"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "backward induction"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "逆向歸納"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1799072"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5121595"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "behavioral design pattern in software development"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "circuit breaker pattern"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "斷路器設計理念"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11061289"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary tree data structure where no leaf is more than a certain amount farther from the root than any other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791656"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "balanced binary tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "平衡二元樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11061289"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary tree data structure where no leaf is more than a certain amount farther from the root than any other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791656"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "balanced binary tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "平衡二元樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11061289"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary tree data structure where no leaf is more than a certain amount farther from the root than any other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791656"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "balanced binary tree"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "平衡二元樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2733833"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "game theoretic concept of a strategy that produces the most favorable outcome for a player"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2733833"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Best response"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "最佳反應"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q84475169"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4913907"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "protocol intended or expected to be read by a machine rather than a human being"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4913907"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "二進制協議"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4913907"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "protocol intended or expected to be read by a machine rather than a human being"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4913907"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "二進位制協議"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1276370"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure that can efficiently update elements and calculate prefix sums in a table of numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3607994"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fenwick tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "树状数组"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1276370"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure that can efficiently update elements and calculate prefix sums in a table of numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3607994"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fenwick tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "树状数组"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1276370"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure that can efficiently update elements and calculate prefix sums in a table of numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3607994"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fenwick tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "樹狀數組"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1276370"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure that can efficiently update elements and calculate prefix sums in a table of numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3607994"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fenwick tree"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "樹狀數組"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1537002"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "approach in computer programming"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interpreter pattern"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "解释器模式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1537002"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "approach in computer programming"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interpreter pattern"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "解释器模式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1537002"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "approach in computer programming"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interpreter pattern"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "直譯器模式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2142696"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "object-oriented design pattern using an iterator to traverse a container and access the container's elements"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iterator pattern"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "迭代器模式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4874475"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bayesian framework"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4874475"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bayesian interpretation of regularization"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "贝叶斯学派的观点"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4874475"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bayesian framework"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4874475"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bayesian interpretation of regularization"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "贝叶斯学派的观点"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4874475"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bayesian framework"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4874475"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bayesian interpretation of regularization"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "貝葉斯學派的觀點"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4893208"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heap data structure implemented as a binary tree"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380172"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "skew heap"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "斜堆"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4893208"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heap data structure implemented as a binary tree"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380172"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "skew heap"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "斜堆"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4893208"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heap data structure implemented as a binary tree"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380172"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "skew heap"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "斜堆"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1194708"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure for mapping from some domain (for example, a range of integers) to bits"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1992074"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bitmap"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "位图"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1194708"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure for mapping from some domain (for example, a range of integers) to bits"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1992074"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bitmap"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "位图"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1194708"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure for mapping from some domain (for example, a range of integers) to bits"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1992074"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bitmap"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "位图"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1194708"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure for mapping from some domain (for example, a range of integers) to bits"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1992074"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bitmap"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "點陣圖"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of software design pattern"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "behavioral pattern"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "行為型模式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of software design pattern"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "behavioral pattern"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "行为型模式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of software design pattern"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1063558"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "behavioral pattern"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "行為型模式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7979855"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of self-balancing binary search trees that can be used to implement dynamic sets, dictionaries (maps) and sequences"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791656"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "weight-balanced tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "加权平衡树"
+      }
+    }
+  ]
+}

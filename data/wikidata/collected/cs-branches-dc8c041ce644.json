@@ -1,0 +1,2320 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q4060698 wd:Q2044242 wd:Q18388881 wd:Q15058706 wd:Q118155 wd:Q637347 wd:Q2103034 wd:Q2097762 wd:Q7236600 wd:Q3359815 wd:Q17141564 wd:Q2541 wd:Q11888847 wd:Q105483835 wd:Q3922358 wd:Q332172 wd:Q4047424 wd:Q130203 wd:Q3408089 wd:Q7252872 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q4060698 wd:Q2044242 wd:Q18388881 wd:Q15058706 wd:Q118155 wd:Q637347 wd:Q2103034 wd:Q2097762 wd:Q7236600 wd:Q3359815 wd:Q17141564 wd:Q2541 wd:Q11888847 wd:Q105483835 wd:Q3922358 wd:Q332172 wd:Q4047424 wd:Q130203 wd:Q3408089 wd:Q7252872 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q4060698 wd:Q2044242 wd:Q18388881 wd:Q15058706 wd:Q118155 wd:Q637347 wd:Q2103034 wd:Q2097762 wd:Q7236600 wd:Q3359815 wd:Q17141564 wd:Q2541 wd:Q11888847 wd:Q105483835 wd:Q3922358 wd:Q332172 wd:Q4047424 wd:Q130203 wd:Q3408089 wd:Q7252872 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "dc8c041ce6441dc331f5185e71defef72f617d13efec5caf2c0a9a5ef43673ef",
+  "responseSha256": "1b4eb20fb7221da806bdbda0b073418e5b10a8cb8ee69eb6cd5359404d136c58",
+  "retrievedAt": "2026-10-04T05:09:34.967887+00:00",
+  "license": "CC0-1.0",
+  "domain": "cs",
+  "roots": [
+    {
+      "domain": "cs",
+      "id": "Q4060698",
+      "label": "pixel-art scaling algorithm",
+      "description": "any image scaling algorithm optimized for pixel art, often used as a graphical filter in video game emulators",
+      "parents": [
+        "Q65949919"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q2044242",
+      "label": "PJLink",
+      "description": "application protocol",
+      "parents": [
+        "Q15836568"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q18388881",
+      "label": "planarization",
+      "description": "technique for drawing non-planar graphs",
+      "parents": [
+        "Q739462"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q15058706",
+      "label": "point set registration",
+      "description": "computerised pattern matching",
+      "parents": [
+        "Q1503724"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q118155",
+      "label": "pointer",
+      "description": "type which stores memory addresses in a computer program",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q637347",
+      "label": "polynomial interpolation",
+      "description": "interpolation of a given data set by the polynomial of lowest possible degree that passes through the points of the dataset",
+      "parents": [
+        "Q187631"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q2103034",
+      "label": "polynomial-time reduction",
+      "description": "method for solving one problem using another",
+      "parents": [
+        "Q1197709"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q2097762",
+      "label": "power generator",
+      "description": "random number generator",
+      "parents": [
+        "Q1623338"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7236600",
+      "label": "Power quality compression algorithm",
+      "description": "",
+      "parents": [
+        "Q2755432"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q3359815",
+      "label": "PPPoX",
+      "description": "family of encapsulating communications protocols implementing Point-to-Point Protocol",
+      "parents": [
+        "Q15836568"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q17141564",
+      "label": "precedence graph",
+      "description": "graph of database transactions recording precedence and conflicts",
+      "parents": [
+        "Q2479726"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q2541",
+      "label": "prediction by partial matching",
+      "description": "adaptive statistical data compression technique",
+      "parents": [
+        "Q2755432"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q11888847",
+      "label": "prioritization",
+      "description": "activity that arranges items or activities in order of importance or time-sensitivity relative to each other",
+      "parents": [
+        "Q24476018"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q105483835",
+      "label": "private blockchain",
+      "description": "blockchain that has a private ledger, not available to the public",
+      "parents": [
+        "Q20514253"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q3922358",
+      "label": "Process control block in Unix",
+      "description": "",
+      "parents": [
+        "Q1142922"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q332172",
+      "label": "process optimization",
+      "description": "adjusting a process",
+      "parents": [
+        "Q24476018"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q4047424",
+      "label": "profile-guided optimization",
+      "description": "compiler optimization technique in computer programming that uses profiling to improve program runtime performance",
+      "parents": [
+        "Q28057154"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q130203",
+      "label": "promise problem",
+      "description": "type of computational problem",
+      "parents": [
+        "Q3262192"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q3408089",
+      "label": "proprietary protocol",
+      "description": "communications protocol not documented by a publicly available standard",
+      "parents": [
+        "Q15836568"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7252872",
+      "label": "proximity problems",
+      "description": "distance estimation problems in computational geometry",
+      "parents": [
+        "Q984063"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "cs branches 461..480",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4047424"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "compiler optimization technique in computer programming that uses profiling to improve program runtime performance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4047424"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "profile-guided optimization"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "按配置优化"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communications protocol not documented by a publicly available standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proprietary protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "專有協議"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communications protocol not documented by a publicly available standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proprietary protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "专有协议"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communications protocol not documented by a publicly available standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proprietary protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "专利协议"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communications protocol not documented by a publicly available standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proprietary protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "專有協議"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7095589"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming datatype"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "opaque pointer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "不透明指针"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2751766"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "app's proprietary Voice Over IP network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Skype protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Skype協定"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132364"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2751766"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "app's proprietary Voice Over IP network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Skype protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Skype協定"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19848926"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a value indicating that a pointer does not refer to a valid object"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "null pointer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "空指標"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q36381317"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "placing concern with oneself above the interests of others"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11888847"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "selfishness"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "自私"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2393196"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19848926"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a value indicating that a pointer does not refer to a valid object"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "null pointer"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "空指针"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19848926"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a value indicating that a pointer does not refer to a valid object"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "null pointer"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "空指针"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q36381317"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "placing concern with oneself above the interests of others"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11888847"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "selfishness"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "自私"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11888847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q36381317"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "placing concern with oneself above the interests of others"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11888847"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "selfishness"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "自私"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q31172650"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19848926"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a value indicating that a pointer does not refer to a valid object"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "null pointer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "空指標"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19848926"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a value indicating that a pointer does not refer to a valid object"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "null pointer"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "空指针"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19848926"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a value indicating that a pointer does not refer to a valid object"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "null pointer"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "空指针"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4060698"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "any image scaling algorithm optimized for pixel art, often used as a graphical filter in video game emulators"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4060698"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pixel-art scaling algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "点阵图缩放算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4060698"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "any image scaling algorithm optimized for pixel art, often used as a graphical filter in video game emulators"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4060698"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pixel-art scaling algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "点阵图缩放算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4060698"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "any image scaling algorithm optimized for pixel art, often used as a graphical filter in video game emulators"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4060698"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pixel-art scaling algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "點陣圖縮放演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17141564"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph of database transactions recording precedence and conflicts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17141564"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "precedence graph"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "拓扑图"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17141564"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph of database transactions recording precedence and conflicts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17141564"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "precedence graph"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "前趋图"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17141564"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph of database transactions recording precedence and conflicts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17141564"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "precedence graph"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "前趨圖"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5923290"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "image scaling algorithm for pixel art"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4060698"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hqx"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Hqx"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4060698"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2736305"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pointer that points to a function"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "function pointer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "函数指针"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2736305"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pointer that points to a function"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "function pointer"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "函数指针"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2736305"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pointer that points to a function"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "function pointer"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "函數指針"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q133825987"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interface for audiovisual content"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "General Purpose Media Interface"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "GPMI"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132364"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q133825987"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interface for audiovisual content"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "General Purpose Media Interface"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "GPMI"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1153429"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q133825987"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interface for audiovisual content"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "General Purpose Media Interface"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "GPMI"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5687677"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in a multithreaded system, a pointer kept by each thread indicating which nodes the thread is currently accessing and must not be modified or deallocated by another thread"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hazard pointer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "冒险指针"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11888847"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "activity that arranges items or activities in order of importance or time-sensitivity relative to each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11888847"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "prioritization"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分辨事情的優先次序"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11888847"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "activity that arranges items or activities in order of importance or time-sensitivity relative to each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11888847"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "prioritization"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "优先级"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11888847"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "activity that arranges items or activities in order of importance or time-sensitivity relative to each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11888847"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "prioritization"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "優先順序"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11888847"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7314872"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "requirement prioritization"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "需求優先順序"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2008089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "instant messaging and presence information protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "OSCAR protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "OSCAR协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2008089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "instant messaging and presence information protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "OSCAR protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "OSCAR协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44451"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method for polynomial interpolation over a set of points and corresponding derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q637347"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hermite interpolation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "埃尔米特插值"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q332172"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "adjusting a process"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q332172"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process optimization"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "流程最佳化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047113"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q332172"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "adjusting a process"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q332172"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process optimization"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "过程优化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047113"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q332172"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "adjusting a process"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q332172"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process optimization"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "过程优化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047113"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q332172"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "adjusting a process"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q332172"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process optimization"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "過程優化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047113"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1642293"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in computer programming: pointer that does not point to a valid object"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dangling pointer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "迷途指针"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q125292064"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type which stores memory addresses in a computer program"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pointer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "指针"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type which stores memory addresses in a computer program"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pointer"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "指针"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type which stores memory addresses in a computer program"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pointer"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "指针"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type which stores memory addresses in a computer program"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pointer"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "指標"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type which stores memory addresses in a computer program"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pointer"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "指標"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2541"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "adaptive statistical data compression technique"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2541"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "prediction by partial matching"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "通过部分匹配预测"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2541"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "adaptive statistical data compression technique"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2541"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "prediction by partial matching"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "通过部分匹配预测"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2541"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "adaptive statistical data compression technique"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2541"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "prediction by partial matching"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "通過部分匹配預測"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2103034"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method for solving one problem using another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2103034"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "polynomial-time reduction"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "多项式时间归约"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2103034"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method for solving one problem using another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2103034"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "polynomial-time reduction"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "多项式时间图灵归约"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2103034"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method for solving one problem using another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2103034"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "polynomial-time reduction"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "多項式時間圖靈歸約"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1665677"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abstract data type that simulates a pointer while providing added features, such as automatic memory management or bounds checking, intended to reduce bugs caused by the misuse of pointers, while retaining efficiency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q118155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "smart pointer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "智能指针"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q827335"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q780067"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "prioritization and sorting of patients based on severity and likelihood of survival under limited medical resources"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11888847"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "triage"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分诊"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q637347"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interpolation of a given data set by the polynomial of lowest possible degree that passes through the points of the dataset"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q637347"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "polynomial interpolation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "多项式插值"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130203"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of computational problem"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130203"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "promise problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "承諾問題"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130203"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of computational problem"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130203"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "promise problem"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "承诺问题"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130203"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of computational problem"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130203"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "promise problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "承诺问题"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130203"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of computational problem"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130203"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "promise problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "承諾問題"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130203"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of computational problem"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130203"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "promise problem"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "承諾問題"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q621238"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proprietary modification of the DVI connector"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Apple Display Connector"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "蘋果顯示連接器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q621238"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proprietary modification of the DVI connector"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Apple Display Connector"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "蘋果顯示連接器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q621238"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proprietary modification of the DVI connector"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Apple Display Connector"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "蘋果顯示連接器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q621238"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proprietary modification of the DVI connector"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Apple Display Connector"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "蘋果顯示聯結器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q621238"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proprietary modification of the DVI connector"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Apple Display Connector"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "蘋果顯示連接器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6046311"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q621238"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proprietary modification of the DVI connector"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Apple Display Connector"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "蘋果顯示連接器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6046311"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q621238"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proprietary modification of the DVI connector"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Apple Display Connector"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "蘋果顯示連接器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6046311"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q621238"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proprietary modification of the DVI connector"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Apple Display Connector"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "蘋果顯示聯結器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6046311"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2159843"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "instant messaging protocol by Microsoft"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Microsoft Notification Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "微軟通知協議"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2159843"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "instant messaging protocol by Microsoft"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Microsoft Notification Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "微软通知协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2159843"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "instant messaging protocol by Microsoft"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Microsoft Notification Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "微软通知协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2159843"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "instant messaging protocol by Microsoft"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Microsoft Notification Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "微軟通知協議"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2159843"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "instant messaging protocol by Microsoft"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Microsoft Notification Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "微軟通知協議"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2159843"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "instant messaging protocol by Microsoft"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Microsoft Notification Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "微软通知协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2159843"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "instant messaging protocol by Microsoft"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Microsoft Notification Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "微软通知协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2159843"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "instant messaging protocol by Microsoft"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Microsoft Notification Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "微軟通知協議"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1891 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q55357515 wd:Q140654854 wd:Q107569025 wd:Q70322509 wd:Q65498858 wd:Q65498996 wd:Q65498884 wd:Q65498626 wd:Q47482556 wd:Q127879 wd:Q1385229 wd:Q6824332 wd:Q1192011 wd:Q114174256 wd:Q4043466 wd:Q70467303 wd:Q1345102 wd:Q127603495 wd:Q122929170 wd:Q6453666 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q55357515 wd:Q140654854 wd:Q107569025 wd:Q70322509 wd:Q65498858 wd:Q65498996 wd:Q65498884 wd:Q65498626 wd:Q47482556 wd:Q127879 wd:Q1385229 wd:Q6824332 wd:Q1192011 wd:Q114174256 wd:Q4043466 wd:Q70467303 wd:Q1345102 wd:Q127603495 wd:Q122929170 wd:Q6453666 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q55357515 wd:Q140654854 wd:Q107569025 wd:Q70322509 wd:Q65498858 wd:Q65498996 wd:Q65498884 wd:Q65498626 wd:Q47482556 wd:Q127879 wd:Q1385229 wd:Q6824332 wd:Q1192011 wd:Q114174256 wd:Q4043466 wd:Q70467303 wd:Q1345102 wd:Q127603495 wd:Q122929170 wd:Q6453666 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "99da0dd80e04ba366f0d3e1e47a2d99393b64f215fdce9103661030dc978093f",
+  "responseSha256": "ea05e9a831fe1514d570b804d43c4acbf42df28cee9f8e8ab937e0f2db8d0454",
+  "retrievedAt": "2026-10-04T05:09:15.759816+00:00",
+  "license": "CC0-1.0",
+  "domain": "cs",
+  "roots": [
+    {
+      "domain": "cs",
+      "id": "Q55357515",
+      "label": "MBR partition table",
+      "description": "partition table in a Master Boot Record",
+      "parents": [
+        "Q614361"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q140654854",
+      "label": "MCP server",
+      "description": "Server for AI assistance",
+      "parents": [
+        "Q165194"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q107569025",
+      "label": "MediaWiki REST API",
+      "description": "",
+      "parents": [
+        "Q749568"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q70322509",
+      "label": "medical record linkage",
+      "description": "creation and maintenance of medical and vital records in multiple institutions, so that combined use for individuals is possible",
+      "parents": [
+        "Q1266546"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q65498858",
+      "label": "Mercurial HTTP command protocol",
+      "description": "set of computer network protocols used by the Mercurial distributed revision control system",
+      "parents": [
+        "Q15836568"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q65498996",
+      "label": "Mercurial HTTP command protocol over TLS",
+      "description": "set of computer network protocols used by the Mercurial distributed revision control system",
+      "parents": [
+        "Q15836568"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q65498884",
+      "label": "Mercurial SSH command protocol",
+      "description": "set of computer network protocols used by the Mercurial distributed revision control system",
+      "parents": [
+        "Q15836568"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q65498626",
+      "label": "Mercurial wire protocol",
+      "description": "set of computer network protocols used by the Mercurial distributed revision control system",
+      "parents": [
+        "Q15836568"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q47482556",
+      "label": "message authentication code algorithm",
+      "description": "algorithm which uses a block cipher to protect the integrity and authenticity of information",
+      "parents": [
+        "Q154021"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q127879",
+      "label": "Message Passing Interface",
+      "description": "message-passing system for parallel computers",
+      "parents": [
+        "Q165194"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1385229",
+      "label": "metaheuristic",
+      "description": "higher-level procedure designed to find, generate or select a heuristic",
+      "parents": [
+        "Q1981968"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q6824332",
+      "label": "Metric tree",
+      "description": "Tree data structure",
+      "parents": [
+        "Q223655"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1192011",
+      "label": "MICR",
+      "description": "character-recognition technology",
+      "parents": [
+        "Q167555"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q114174256",
+      "label": "Microcontroller Abstraction Layer",
+      "description": "",
+      "parents": [
+        "Q1200992"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q4043466",
+      "label": "Microsoft Point-to-Point Compression",
+      "description": "compression algorithm",
+      "parents": [
+        "Q2755432"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q70467303",
+      "label": "minimization",
+      "description": "process of seeking to make a value as small as possible",
+      "parents": [
+        "Q24476018"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1345102",
+      "label": "mobile VoIP",
+      "description": "extension of a voice over IP network",
+      "parents": [
+        "Q81945"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q127603495",
+      "label": "model-based clustering",
+      "description": "class of algorithms",
+      "parents": [
+        "Q24953001"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q122929170",
+      "label": "modem over VoIP",
+      "description": "carriage of analog modem signals over a VoIP network",
+      "parents": [
+        "Q15836568"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q6453666",
+      "label": "modular programming",
+      "description": "structured programming technique where a program is divided into modules with specific functions",
+      "parents": [
+        "Q188267"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "cs branches 361..380",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14489129"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "subset of evolutionary computation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evolutionary algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "进化算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14489129"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "subset of evolutionary computation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evolutionary algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "演化演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14489129"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "subset of evolutionary computation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evolutionary algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "演化演演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14489129"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "subset of evolutionary computation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evolutionary algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "進化演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47482556"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm which uses a block cipher to protect the integrity and authenticity of information"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47482556"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "message authentication code algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "消息认证码算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14489129"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "subset of evolutionary computation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evolutionary algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "进化算法"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q119960603"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "crow search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "乌鸦搜索算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453666"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "structured programming technique where a program is divided into modules with specific functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453666"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "modular programming"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "模块化编程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1378470"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453666"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "structured programming technique where a program is divided into modules with specific functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453666"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "modular programming"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "模块化程序设计"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1378470"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453666"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "structured programming technique where a program is divided into modules with specific functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453666"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "modular programming"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "模組化程式設計"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1378470"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453666"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "structured programming technique where a program is divided into modules with specific functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453666"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "modular programming"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "模組化程式設計"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1378470"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453666"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "structured programming technique where a program is divided into modules with specific functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453666"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "modular programming"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "模块化编程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453666"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "structured programming technique where a program is divided into modules with specific functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453666"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "modular programming"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "模块化程序设计"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453666"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "structured programming technique where a program is divided into modules with specific functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453666"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "modular programming"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "模組化程式設計"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453666"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "structured programming technique where a program is divided into modules with specific functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453666"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "modular programming"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "模組化程式設計"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7625053"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "principle in machine learning"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q70467303"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Structural risk minimization"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "結構風險最小化"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7119717"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "message authentication code algorithm created by Phillip Rogaway"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47482556"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parallelizable message authentication code"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "PMAC消息认证码"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2823869"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "boosting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "AdaBoost"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "AdaBoost"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "higher-level procedure designed to find, generate or select a heuristic"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "metaheuristic"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "元启发算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "higher-level procedure designed to find, generate or select a heuristic"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "metaheuristic"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "後設启发式算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "higher-level procedure designed to find, generate or select a heuristic"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "metaheuristic"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "元启发式方法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "higher-level procedure designed to find, generate or select a heuristic"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "metaheuristic"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "元啟發式演演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q460851"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "probabilistic techniques for solving computational problems that can be reduced to finding good paths through graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ant colony optimization algorithms"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "蚁群算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2736227"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "message authentication code algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47482556"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cipher block chaining message authentication code"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "密码块链接消息认证码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47482556"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q799897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ensemble method within machine learning"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bootstrap aggregating"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Bagging算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453666"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "structured programming technique where a program is divided into modules with specific functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453666"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "modular programming"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "模块化编程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11023"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453666"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "structured programming technique where a program is divided into modules with specific functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453666"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "modular programming"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "模块化程序设计"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11023"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453666"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "structured programming technique where a program is divided into modules with specific functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453666"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "modular programming"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "模組化程式設計"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11023"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453666"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "structured programming technique where a program is divided into modules with specific functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6453666"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "modular programming"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "模組化程式設計"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11023"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "message-passing system for parallel computers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Message Passing Interface"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "訊息傳遞介面"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132364"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "message-passing system for parallel computers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Message Passing Interface"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "訊息傳遞介面"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188860"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "message-passing system for parallel computers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Message Passing Interface"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "訊息傳遞介面"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q317623"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "message-passing system for parallel computers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Message Passing Interface"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "讯息传递接口"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132364"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "message-passing system for parallel computers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Message Passing Interface"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "讯息传递接口"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188860"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "message-passing system for parallel computers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Message Passing Interface"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "讯息传递接口"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q317623"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "message-passing system for parallel computers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Message Passing Interface"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "讯息传递介面"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132364"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "message-passing system for parallel computers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Message Passing Interface"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "讯息传递介面"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188860"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "message-passing system for parallel computers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Message Passing Interface"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "讯息传递介面"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q317623"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "message-passing system for parallel computers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Message Passing Interface"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "訊息傳遞介面"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132364"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "message-passing system for parallel computers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Message Passing Interface"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "訊息傳遞介面"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188860"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "message-passing system for parallel computers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Message Passing Interface"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "訊息傳遞介面"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q317623"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "message-passing system for parallel computers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Message Passing Interface"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "訊息傳遞介面"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132364"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "message-passing system for parallel computers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Message Passing Interface"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "訊息傳遞介面"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188860"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "message-passing system for parallel computers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q127879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Message Passing Interface"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "訊息傳遞介面"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q317623"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6824332"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tree data structure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6824332"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Metric tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "度量树"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6824332"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tree data structure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6824332"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Metric tree"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "度量树"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6824332"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tree data structure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6824332"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Metric tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "度量树"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6824332"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tree data structure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6824332"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Metric tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "度量樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7092316"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "message authentication code algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47482556"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one-key message authentication code"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "OMAC消息认证码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47482556"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2823869"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "boosting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "AdaBoost"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "AdaBoost"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q466303"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ensemble meta-algorithm for reducing bias and variance in machine learning"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "boosting"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "提升方法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1192011"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character-recognition technology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1192011"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "MICR"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "MICR"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5451844"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in mathematical optimization, a metaheuristic proposed by Xin-She Yang"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Firefly algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "萤火虫算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1345102"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "extension of a voice over IP network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1345102"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mobile VoIP"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "移动VoIP"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1345102"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "extension of a voice over IP network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1345102"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mobile VoIP"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "移动VoIP"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1345102"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "extension of a voice over IP network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1345102"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mobile VoIP"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "移动VoIP"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1345102"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "extension of a voice over IP network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1345102"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mobile VoIP"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "移動VoIP"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q799897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ensemble method within machine learning"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bootstrap aggregating"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Bagging算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q863783"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical optimization technique for searching for a solution in a space otherwise too large for ordinary search methods to yield results"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simulated annealing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "模拟退火"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q863783"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical optimization technique for searching for a solution in a space otherwise too large for ordinary search methods to yield results"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simulated annealing"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "模拟退火"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q863783"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical optimization technique for searching for a solution in a space otherwise too large for ordinary search methods to yield results"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simulated annealing"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "模擬退火"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1385229"
+      }
+    }
+  ]
+}

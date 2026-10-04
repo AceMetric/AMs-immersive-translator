@@ -1,0 +1,2817 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q15053549 wd:Q65088056 wd:Q5610964 wd:Q217361 wd:Q15279434 wd:Q106372205 wd:Q190070 wd:Q1073121 wd:Q112187490 wd:Q112187521 wd:Q12160631 wd:Q11780455 wd:Q1617700 wd:Q55613727 wd:Q906378 wd:Q1365721 wd:Q620876 wd:Q8192415 wd:Q131302471 wd:Q1149672 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q15053549 wd:Q65088056 wd:Q5610964 wd:Q217361 wd:Q15279434 wd:Q106372205 wd:Q190070 wd:Q1073121 wd:Q112187490 wd:Q112187521 wd:Q12160631 wd:Q11780455 wd:Q1617700 wd:Q55613727 wd:Q906378 wd:Q1365721 wd:Q620876 wd:Q8192415 wd:Q131302471 wd:Q1149672 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q15053549 wd:Q65088056 wd:Q5610964 wd:Q217361 wd:Q15279434 wd:Q106372205 wd:Q190070 wd:Q1073121 wd:Q112187490 wd:Q112187521 wd:Q12160631 wd:Q11780455 wd:Q1617700 wd:Q55613727 wd:Q906378 wd:Q1365721 wd:Q620876 wd:Q8192415 wd:Q131302471 wd:Q1149672 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "3d9a26f7570236b4147c9a46017dec4d5b38173afe6b3d37a21115a8c4e7bb3b",
+  "responseSha256": "9cdb2bc53b5feb5b1137df64d87e012c0613e4c421bc984911fd4950143dc667",
+  "retrievedAt": "2026-10-04T05:05:12.748082+00:00",
+  "license": "CC0-1.0",
+  "domain": "physics",
+  "roots": [
+    {
+      "domain": "physics",
+      "id": "Q15053549",
+      "label": "gravitationally bound system",
+      "description": "type of astronomical objects",
+      "parents": [
+        "Q1454986"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q65088056",
+      "label": "gross weight",
+      "description": "combined weight of a vehicle or container and its contents",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q5610964",
+      "label": "ground pressure",
+      "description": "measurement of pressure exerted on the ground, often used for the pressure from an offroad vehicle's wheels or tracks",
+      "parents": [
+        "Q39552"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q217361",
+      "label": "group velocity",
+      "description": "physical quantity",
+      "parents": [
+        "Q11465"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q15279434",
+      "label": "hardware modification",
+      "description": "modification of the physical components of a device by the end user",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q106372205",
+      "label": "harmonic frequency",
+      "description": "",
+      "parents": [
+        "Q11652"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q190070",
+      "label": "harmonic oscillator",
+      "description": "physical system that responds to a restoring force inversely proportional to displacement",
+      "parents": [
+        "Q1454986"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1073121",
+      "label": "heart rate",
+      "description": "number of contractions (beats) of the heart per minute (bpm)",
+      "parents": [
+        "Q11652"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q112187490",
+      "label": "heat capacity at constant pressure",
+      "description": "",
+      "parents": [
+        "Q179388"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q112187521",
+      "label": "heat capacity at constant volume",
+      "description": "",
+      "parents": [
+        "Q179388"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q12160631",
+      "label": "heat flow rate",
+      "description": "rate of transfer of energy as heat",
+      "parents": [
+        "Q25342"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q11780455",
+      "label": "heterogeneous system",
+      "description": "",
+      "parents": [
+        "Q1454986"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1617700",
+      "label": "higgsino",
+      "description": "superpartner of the Higgs boson",
+      "parents": [
+        "Q43116"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q55613727",
+      "label": "higher-spin theory",
+      "description": "theory with particles of spin more than two",
+      "parents": [
+        "Q9357058"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q906378",
+      "label": "homogeneous system",
+      "description": "notion in physics",
+      "parents": [
+        "Q1454986"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1365721",
+      "label": "hull speed",
+      "description": "speed at which the wavelength of a vessel's bow wave is equal to the waterline length",
+      "parents": [
+        "Q11465"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q620876",
+      "label": "human body weight",
+      "description": "person's mass or weight",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q8192415",
+      "label": "human power generation",
+      "description": "power source",
+      "parents": [
+        "Q25342"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q131302471",
+      "label": "humorous units of measurement",
+      "description": "unit of measurement used primarily for its humor value",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1149672",
+      "label": "hydrostatic pressure",
+      "description": "pressure due to weight of a fluid at rest",
+      "parents": [
+        "Q39552"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "physics branches 221..240",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25972335"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degrees of separation between a person and actor Kevin Bacon"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131302471"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bacon number"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "贝肯数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q865746"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25972335"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degrees of separation between a person and actor Kevin Bacon"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131302471"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bacon number"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "贝肯数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2742711"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25972335"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "degrees of separation between a person and actor Kevin Bacon"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131302471"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bacon number"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "贝肯数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131302471"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1617700"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "superpartner of the Higgs boson"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1617700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "higgsino"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "超希格斯粒子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q906378"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "notion in physics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q906378"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "homogeneous system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "均相系統"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q978297"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of two astronomical bodies which orbit each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15053549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary system"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "聯星系統"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17444909"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1073121"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of contractions (beats) of the heart per minute (bpm)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1073121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heart rate"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "心率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42014143"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1149672"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pressure due to weight of a fluid at rest"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1149672"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hydrostatic pressure"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "流體壓力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1149672"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pressure due to weight of a fluid at rest"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1149672"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hydrostatic pressure"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "流体压力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1149672"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pressure due to weight of a fluid at rest"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1149672"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hydrostatic pressure"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "流體壓力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047021"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "customization of a computer case"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15279434"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "case modding"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "機殼改裝"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q938476"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "maximum weight of a craft at which takeoff is permitted"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65088056"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "maximum takeoff weight"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "最大起飞重量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7692348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q938476"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "maximum weight of a craft at which takeoff is permitted"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65088056"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "maximum takeoff weight"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "最大起飞重量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7692348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q938476"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "maximum weight of a craft at which takeoff is permitted"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65088056"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "maximum takeoff weight"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "最大起飛重量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7692348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1073121"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of contractions (beats) of the heart per minute (bpm)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1073121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heart rate"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "RR间期"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42014143"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1073121"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of contractions (beats) of the heart per minute (bpm)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1073121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heart rate"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "心率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42014143"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1073121"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of contractions (beats) of the heart per minute (bpm)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1073121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heart rate"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "心率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42014143"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q978297"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of two astronomical bodies which orbit each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15053549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "聯星系統"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17444909"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q677864"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum mechanical model of a particle in a harmonic potential well"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190070"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum harmonic oscillator"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "量子諧振子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q193946"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1365721"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "speed at which the wavelength of a vessel's bow wave is equal to the waterline length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1365721"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hull speed"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "船身極速"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q620876"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "person's mass or weight"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q620876"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "human body weight"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "体重"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q37787614"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q620876"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "person's mass or weight"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q620876"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "human body weight"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "体重"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42014143"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q620876"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "person's mass or weight"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q620876"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "human body weight"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "体重"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q37787614"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q620876"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "person's mass or weight"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q620876"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "human body weight"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "體重"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q37787614"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q620876"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "person's mass or weight"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q620876"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "human body weight"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "体重"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42014143"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q620876"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "person's mass or weight"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q620876"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "human body weight"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "體重"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42014143"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q733193"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "member of a class of materials analogous to metal alloys, in which at least two polymers are blended together to create a new material with different physical properties."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q906378"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "polymer blend"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "共混物"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20702"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "suspended weight capable of swinging freely from a pivot"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190070"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pendulum"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "擺"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20702"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "suspended weight capable of swinging freely from a pivot"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190070"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pendulum"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "摆"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20702"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "suspended weight capable of swinging freely from a pivot"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190070"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pendulum"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "摆"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20702"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "suspended weight capable of swinging freely from a pivot"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190070"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pendulum"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "擺"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q595871"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of astronomical object, stars which orbit each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15053549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "star system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "恆星系統"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17444909"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q595871"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of astronomical object, stars which orbit each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15053549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "star system"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "恒星系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17444909"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q595871"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of astronomical object, stars which orbit each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15053549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "star system"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "恆星系統"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17444909"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q217361"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical quantity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q217361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "group velocity"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "群速度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q217361"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical quantity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q217361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "group velocity"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "群速度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q217361"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical quantity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q217361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "group velocity"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "群速度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q217361"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical quantity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q217361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "group velocity"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "群速度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q217361"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical quantity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q217361"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "group velocity"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "群速度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q206717"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of non-stellar objects in orbit around a star"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15053549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "planetary system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "行星系"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17444909"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q206717"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of non-stellar objects in orbit around a star"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15053549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "planetary system"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "行星系"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17444909"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q206717"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of non-stellar objects in orbit around a star"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15053549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "planetary system"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "行星系"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17444909"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q206717"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of non-stellar objects in orbit around a star"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15053549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "planetary system"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "行星系"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17444909"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q206717"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of non-stellar objects in orbit around a star"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15053549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "planetary system"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "行星系"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17444909"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190070"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical system that responds to a restoring force inversely proportional to displacement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190070"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "harmonic oscillator"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "諧振子"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190070"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical system that responds to a restoring force inversely proportional to displacement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190070"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "harmonic oscillator"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "谐振子"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190070"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical system that responds to a restoring force inversely proportional to displacement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190070"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "harmonic oscillator"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "谐振子"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190070"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical system that responds to a restoring force inversely proportional to displacement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190070"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "harmonic oscillator"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "諧振子"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190070"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical system that responds to a restoring force inversely proportional to displacement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190070"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "harmonic oscillator"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "諧振子"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5610964"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measurement of pressure exerted on the ground, often used for the pressure from an offroad vehicle's wheels or tracks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5610964"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ground pressure"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "接地压力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5610964"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measurement of pressure exerted on the ground, often used for the pressure from an offroad vehicle's wheels or tracks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5610964"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ground pressure"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "接地压力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5610964"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measurement of pressure exerted on the ground, often used for the pressure from an offroad vehicle's wheels or tracks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5610964"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ground pressure"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "接地壓力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2632607"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "harmonic oscillator whose parameters oscillate in time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190070"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Parametric oscillator"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "參數振盪器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18589965"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Moon orbiting Earth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15053549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Earth–Moon system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "地月系"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q669420"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18589965"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Moon orbiting Earth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15053549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Earth–Moon system"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "地月系"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q669420"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18589965"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Moon orbiting Earth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15053549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Earth–Moon system"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "地月系"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q669420"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18589965"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Moon orbiting Earth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15053549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Earth–Moon system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "地月系"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15053549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18589965"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Moon orbiting Earth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15053549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Earth–Moon system"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "地月系"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15053549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18589965"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Moon orbiting Earth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15053549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Earth–Moon system"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "地月系"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15053549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18589965"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Moon orbiting Earth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15053549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Earth–Moon system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "地月系"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29431432"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18589965"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Moon orbiting Earth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15053549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Earth–Moon system"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "地月系"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29431432"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18589965"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Moon orbiting Earth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15053549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Earth–Moon system"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "地月系"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29431432"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17009773"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "accounting of the energy flows at and below the planet's crust"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12160631"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Earth's internal heat budget"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "地球內部的熱量平衡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12160631"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17009773"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "accounting of the energy flows at and below the planet's crust"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12160631"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Earth's internal heat budget"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "地球的热流"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12160631"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17009773"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "accounting of the energy flows at and below the planet's crust"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12160631"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Earth's internal heat budget"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "地球的热流"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12160631"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17009773"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "accounting of the energy flows at and below the planet's crust"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12160631"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Earth's internal heat budget"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "地球的熱流"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12160631"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6795900"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "maximum weight of a craft at which landing is permitted"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65088056"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "maximum landing weight"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "最大降落重量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12453"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6795900"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "maximum weight of a craft at which landing is permitted"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65088056"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "maximum landing weight"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "最大着陆重量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12453"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6795900"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "maximum weight of a craft at which landing is permitted"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65088056"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "maximum landing weight"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "最大着陆重量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12453"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6795900"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "maximum weight of a craft at which landing is permitted"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65088056"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "maximum landing weight"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "最大著陸重量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12453"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4128476"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "weight of an organism at birth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q620876"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "birth weight"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "新生兒體重"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42014143"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4128476"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "weight of an organism at birth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q620876"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "birth weight"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "出生体重"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42014143"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4128476"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "weight of an organism at birth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q620876"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "birth weight"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "出生體重"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42014143"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14515149"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "largest known gravitationally bound object in universe; aggregation of galaxies"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15053549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "galaxy group or cluster"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "星系團與星系群"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17444909"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14515149"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "largest known gravitationally bound object in universe; aggregation of galaxies"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15053549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "galaxy group or cluster"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "星系團與星系羣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17444909"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2095762"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nonstandard unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131302471"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "smoot"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "斯穆特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1978718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2095762"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nonstandard unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131302471"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "smoot"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "斯穆特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1978718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2095762"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nonstandard unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131302471"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "smoot"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "斯穆特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2095762"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nonstandard unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131302471"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "smoot"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "斯穆特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2095762"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nonstandard unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131302471"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "smoot"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "斯穆特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131302471"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2095762"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nonstandard unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131302471"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "smoot"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "斯穆特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131302471"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11976246"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heart rate when not exerting"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1073121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "resting heart rate"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "静息心率"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4396596"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of gravitational system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15053549"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Klemperer rosette"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "玫瑰花結軌道"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17444909"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6795900"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "maximum weight of a craft at which landing is permitted"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65088056"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "maximum landing weight"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "最大降落重量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7692348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6795900"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "maximum weight of a craft at which landing is permitted"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65088056"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "maximum landing weight"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "最大着陆重量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7692348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6795900"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "maximum weight of a craft at which landing is permitted"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65088056"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "maximum landing weight"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "最大着陆重量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7692348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6795900"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "maximum weight of a craft at which landing is permitted"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65088056"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "maximum landing weight"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "最大著陸重量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7692348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4698550"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "total aircraft weight at any moment during flight or ground operation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65088056"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "aircraft gross weight"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "飛機起飛總重;"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3297564"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "total weight of an aircraft and its contents, minus usable fuel"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65088056"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "zero-fuel weight"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "最大無燃油重量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12453"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3297564"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "total weight of an aircraft and its contents, minus usable fuel"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65088056"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "zero-fuel weight"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "最大无燃油重量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12453"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8192415"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "power source"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8192415"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "human power generation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "人力發電"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8192415"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "power source"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8192415"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "human power generation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "人力发电"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8192415"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "power source"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8192415"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "human power generation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "人力發電"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2333272"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "total mass of a missile, rocket, or spacecraft at the time of launch"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65088056"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "launch weight"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "發射質量"
+      }
+    }
+  ]
+}

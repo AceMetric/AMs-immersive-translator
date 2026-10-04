@@ -1,0 +1,2578 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q110269115 wd:Q187631 wd:Q11917068 wd:Q17082383 wd:Q6787891 wd:Q6806461 wd:Q719484 wd:Q11341754 wd:Q4418033 wd:Q811591 wd:Q1197114 wd:Q135113164 wd:Q6934870 wd:Q130762 wd:Q1047554 wd:Q1199050 wd:Q16928028 wd:Q1513879 wd:Q120970897 wd:Q17042063 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q110269115 wd:Q187631 wd:Q11917068 wd:Q17082383 wd:Q6787891 wd:Q6806461 wd:Q719484 wd:Q11341754 wd:Q4418033 wd:Q811591 wd:Q1197114 wd:Q135113164 wd:Q6934870 wd:Q130762 wd:Q1047554 wd:Q1199050 wd:Q16928028 wd:Q1513879 wd:Q120970897 wd:Q17042063 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q110269115 wd:Q187631 wd:Q11917068 wd:Q17082383 wd:Q6787891 wd:Q6806461 wd:Q719484 wd:Q11341754 wd:Q4418033 wd:Q811591 wd:Q1197114 wd:Q135113164 wd:Q6934870 wd:Q130762 wd:Q1047554 wd:Q1199050 wd:Q16928028 wd:Q1513879 wd:Q120970897 wd:Q17042063 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "dabd89a31252558d1888ea84bd1eeaff6a76d58bb1dc370d85d446fe5419bce0",
+  "responseSha256": "686d67b2ae52e029cc995f08f6c80c394a4d0813bfa6a6b1bb28fbbe52408215",
+  "retrievedAt": "2026-10-04T03:24:23.910954+00:00",
+  "license": "CC0-1.0",
+  "domain": "cs",
+  "roots": [
+    {
+      "domain": "cs",
+      "id": "Q110269115",
+      "label": "matching system",
+      "description": "type of algorithm to generate matches between two or more sets",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q187631",
+      "label": "mathematical interpolation",
+      "description": "method for constructing new data points between known data points",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q11917068",
+      "label": "matrix diagonalization",
+      "description": "matrix transformation procedure in linear algebra",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q17082383",
+      "label": "matrix multiplication algorithm",
+      "description": "algorithm to multiply matrices",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q6787891",
+      "label": "matrix splitting",
+      "description": "representation of a matrix as a sum",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q6806461",
+      "label": "medical algorithm",
+      "description": "algorithmic operation utilized in the study of medical information pertaining to health care",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q719484",
+      "label": "Memory map",
+      "description": "data structure",
+      "parents": [
+        "Q175263"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q11341754",
+      "label": "merge algorithm",
+      "description": "algorithm that combines multiple sorted lists into one",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q4418033",
+      "label": "mesh generation",
+      "description": "dividing a geometric space into discrete cells",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q811591",
+      "label": "method of analytic tableaux",
+      "description": "fundamental concept in automated theorem proving",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q1197114",
+      "label": "methods of computing square roots",
+      "description": "algorithms for calculating square roots",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q135113164",
+      "label": "Model-based Offline Policy Optimization",
+      "description": "algorithm",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q6934870",
+      "label": "multiple-instance learning",
+      "description": "weakly-supervised learning algorithms where training set is arranged in a labeled bag of instances, and a single class label is assigned to a bag",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q130762",
+      "label": "multiplication algorithm",
+      "description": "algorithm to multiply numbers",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q1047554",
+      "label": "mutual exclusion",
+      "description": "property of concurrency control, which is instituted for the purpose of preventing race conditions",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q1199050",
+      "label": "N-body problem",
+      "description": "problem of predicting the individual motions of a group of celestial objects interacting with each other gravitationally",
+      "parents": [
+        "Q3435924"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q16928028",
+      "label": "name binding",
+      "description": "computer programming constraint allowing to bind a symbolic name to an object, valid in a well-defined scope, and to resolve it as a reference by a static or dynamic linking process",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q1513879",
+      "label": "natural language generation",
+      "description": "automatic text generation using a computer algorithm",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q120970897",
+      "label": "nature-inspired algorithm",
+      "description": "type of algorithm inspired by natural phenomena",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q17042063",
+      "label": "Nesting algorithm",
+      "description": "class of computional packing optimisation procedure",
+      "parents": [
+        "Q8366"
+      ]
+    }
+  ],
+  "limit": 20000,
+  "name": "cs branches 181..200",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16928028"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer programming constraint allowing to bind a symbolic name to an object, valid in a well-defined scope, and to resolve it as a reference by a static or dynamic linking process"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16928028"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "name binding"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "名字绑定"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16928028"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer programming constraint allowing to bind a symbolic name to an object, valid in a well-defined scope, and to resolve it as a reference by a static or dynamic linking process"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16928028"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "name binding"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "名称绑定"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16928028"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer programming constraint allowing to bind a symbolic name to an object, valid in a well-defined scope, and to resolve it as a reference by a static or dynamic linking process"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16928028"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "name binding"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "名称绑定"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16928028"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer programming constraint allowing to bind a symbolic name to an object, valid in a well-defined scope, and to resolve it as a reference by a static or dynamic linking process"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16928028"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "name binding"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "名稱繫結"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55628597"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "automatic generation or recognition of paraphrased text"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1513879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "paraphrasing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "自動改寫"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25111796"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of merge algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11341754"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "K-way merge algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "K路合并算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11341754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm that combines multiple sorted lists into one"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11341754"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "合併算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11341754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm that combines multiple sorted lists into one"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11341754"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "合併算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11341754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm that combines multiple sorted lists into one"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11341754"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "合併演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17082383"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm to multiply matrices"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17082383"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "matrix multiplication algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "矩阵乘法算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17082383"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm to multiply matrices"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17082383"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "matrix multiplication algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "矩阵乘法算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17082383"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm to multiply matrices"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17082383"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "matrix multiplication algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "矩陣乘法演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29973476"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "calculation method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "long multiplication"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "長乘法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q637347"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interpolation of a given data set by the polynomial of lowest possible degree that passes through the points of the dataset"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187631"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "polynomial interpolation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "多项式插值"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232976"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "to determine the motion of two point particles that interact only with each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1199050"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "two-body problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "二體問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q137581967"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q719484"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q719484"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Memory map"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "内存映射"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5830907"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q719484"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q719484"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Memory map"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "内存映射"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5830907"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q719484"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q719484"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Memory map"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "内存映射"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5830907"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q719484"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q719484"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Memory map"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "記憶體對映"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5830907"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607699"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "classical mechanics problem of three massive point particles interacting via Newtonian gravity; special case of the 𝑛‐body problem for 𝑛=3"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1199050"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "three-body problem"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "三体问题"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q759676"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607699"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "classical mechanics problem of three massive point particles interacting via Newtonian gravity; special case of the 𝑛‐body problem for 𝑛=3"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1199050"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "three-body problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "三体问题"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q759676"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607699"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "classical mechanics problem of three massive point particles interacting via Newtonian gravity; special case of the 𝑛‐body problem for 𝑛=3"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1199050"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "three-body problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "三體問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q759676"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607699"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "classical mechanics problem of three massive point particles interacting via Newtonian gravity; special case of the 𝑛‐body problem for 𝑛=3"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1199050"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "three-body problem"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "三體問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q759676"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187631"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method for constructing new data points between known data points"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187631"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical interpolation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "插值"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486902"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm to multiply numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multiplication algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "乘法演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm to multiply numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multiplication algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "乘法算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm to multiply numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multiplication algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "乘法算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm to multiply numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multiplication algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "乘法演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q545002"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187631"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spline interpolation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "样条插值"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q71746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of rapid mental calculation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Trachtenberg system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "特拉亨伯格速算系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q71746"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of rapid mental calculation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Trachtenberg system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "特拉亨伯格速算系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q620584"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187631"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method for constructing new data points between known data points"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187631"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical interpolation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "插值"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486902"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187631"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method for constructing new data points between known data points"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187631"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical interpolation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "插值"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486902"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187631"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method for constructing new data points between known data points"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187631"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical interpolation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "插值"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486902"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187631"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method for constructing new data points between known data points"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187631"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical interpolation"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "插值"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486902"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607699"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "classical mechanics problem of three massive point particles interacting via Newtonian gravity; special case of the 𝑛‐body problem for 𝑛=3"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1199050"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "three-body problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "三体问题"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q759676"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q477049"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm invented by Andrew D. Booth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Booth's multiplication algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "布斯乘法算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q728507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "first subcubic matrix multiplication algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17082383"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Strassen algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "施特拉森演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17082383"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q629940"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for integer multiplication"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Karatsuba algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Karatsuba算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6787891"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "representation of a matrix as a sum"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6787891"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "matrix splitting"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "矩阵分裂"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4418033"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dividing a geometric space into discrete cells"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4418033"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mesh generation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "網格生成器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1199050"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "problem of predicting the individual motions of a group of celestial objects interacting with each other gravitationally"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1199050"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "N-body problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "多体问题"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1199050"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "problem of predicting the individual motions of a group of celestial objects interacting with each other gravitationally"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1199050"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "N-body problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "多体问题"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1199050"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "problem of predicting the individual motions of a group of celestial objects interacting with each other gravitationally"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1199050"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "N-body problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "多體問題"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1522355"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multiplication algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Toom–Cook multiplication"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Toom–Cook乘法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2135255"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "calculating method used in ancient China"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Rod calculus"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "筹算"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2135255"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "calculating method used in ancient China"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Rod calculus"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "筹算"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2135255"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "calculating method used in ancient China"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Rod calculus"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "籌算"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q960279"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Computer programming, a variable only usable in a portion of a program (the scope)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16928028"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "local variable"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "局部变量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7104529"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method in linear algebra"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11917068"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "orthogonal diagonalization"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "正交對角化"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1513879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "automatic text generation using a computer algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1513879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "natural language generation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "自然語言生成"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047113"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1513879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "automatic text generation using a computer algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1513879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "natural language generation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "自然語言生成"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2267705"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1513879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "automatic text generation using a computer algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1513879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "natural language generation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "自然語言生成"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11862829"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047554"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "property of concurrency control, which is instituted for the purpose of preventing race conditions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047554"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mutual exclusion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "互斥锁"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047554"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "property of concurrency control, which is instituted for the purpose of preventing race conditions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047554"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mutual exclusion"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "互斥锁"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047554"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "property of concurrency control, which is instituted for the purpose of preventing race conditions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047554"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mutual exclusion"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "互斥鎖"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7139384"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Software that generates nonsensical text"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1513879"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parody generator"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "模仿生成器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1346420"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multiplication algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ancient Egyptian multiplication"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "古埃及乘法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1346420"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multiplication algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ancient Egyptian multiplication"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "古埃及乘法演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1346420"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multiplication algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ancient Egyptian multiplication"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "古埃及乘法演演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6934870"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "weakly-supervised learning algorithms where training set is arranged in a labeled bag of instances, and a single class label is assigned to a bag"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6934870"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multiple-instance learning"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "多示例学习"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6806461"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithmic operation utilized in the study of medical information pertaining to health care"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6806461"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "medical algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "醫學演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6806461"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithmic operation utilized in the study of medical information pertaining to health care"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6806461"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "medical algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "醫學算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6806461"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithmic operation utilized in the study of medical information pertaining to health care"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6806461"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "medical algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "醫學演演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5570451"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coarse-grained mutex used in some process virtual machines"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047554"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "global interpreter lock"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "GIL"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7692348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835790"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "integer multiplication algorithm for very large numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fürer's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Fürer演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835790"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "integer multiplication algorithm for very large numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fürer's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Fürer演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835790"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "integer multiplication algorithm for very large numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fürer's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Fürer演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835790"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "integer multiplication algorithm for very large numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fürer's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Fürer演演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6334079"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interpolation on functions of more than one variable"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187631"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multivariate interpolation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "空间插值"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6334079"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interpolation on functions of more than one variable"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187631"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multivariate interpolation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "空间插值"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6334079"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interpolation on functions of more than one variable"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187631"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multivariate interpolation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "空間插值"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1197114"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithms for calculating square roots"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1197114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "methods of computing square roots"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "平方根演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1085860"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1197114"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithms for calculating square roots"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1197114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "methods of computing square roots"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "平方根演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1085860"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1197114"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithms for calculating square roots"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1197114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "methods of computing square roots"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "平方根演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1085860"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1197114"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithms for calculating square roots"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1197114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "methods of computing square roots"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "平方根演演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1085860"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1938391"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multiplication algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Schönhage–Strassen algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Schönhage-Strassen演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835794"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for matrix multiplication"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17082383"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Coppersmith–Winograd algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Coppersmith–Winograd算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17082383"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835794"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for matrix multiplication"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17082383"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Coppersmith–Winograd algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Coppersmith–Winograd演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17082383"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835794"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for matrix multiplication"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17082383"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Coppersmith–Winograd algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Coppersmith–Winograd算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65072234"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835794"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for matrix multiplication"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17082383"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Coppersmith–Winograd algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Coppersmith–Winograd演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65072234"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835794"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for matrix multiplication"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17082383"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Coppersmith–Winograd algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Coppersmith–Winograd算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17082383"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835794"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for matrix multiplication"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17082383"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Coppersmith–Winograd algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Coppersmith–Winograd算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65072234"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3516846"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multiplication algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lattice multiplication"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "格子乘法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130762"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2266329"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in mathematics, linear interpolation is a method of curve fitting using linear polynomials to construct new data points within the range of a discrete set of known data points"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187631"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear interpolation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "线性插值"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2266329"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in mathematics, linear interpolation is a method of curve fitting using linear polynomials to construct new data points within the range of a discrete set of known data points"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187631"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear interpolation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "线性插值"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2266329"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in mathematics, linear interpolation is a method of curve fitting using linear polynomials to construct new data points within the range of a discrete set of known data points"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187631"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear interpolation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "線性插值"
+      }
+    }
+  ]
+}

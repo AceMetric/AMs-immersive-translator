@@ -1,0 +1,3419 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q4681865 wd:Q95972591 wd:Q5125465 wd:Q130303652 wd:Q1744627 wd:Q16885330 wd:Q24953001 wd:Q25305554 wd:Q78321178 wd:Q78322695 wd:Q91435461 wd:Q5139921 wd:Q1105784 wd:Q91267747 wd:Q50700 wd:Q111204834 wd:Q5145971 wd:Q141155789 wd:Q105204442 wd:Q19799740 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q4681865 wd:Q95972591 wd:Q5125465 wd:Q130303652 wd:Q1744627 wd:Q16885330 wd:Q24953001 wd:Q25305554 wd:Q78321178 wd:Q78322695 wd:Q91435461 wd:Q5139921 wd:Q1105784 wd:Q91267747 wd:Q50700 wd:Q111204834 wd:Q5145971 wd:Q141155789 wd:Q105204442 wd:Q19799740 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q4681865 wd:Q95972591 wd:Q5125465 wd:Q130303652 wd:Q1744627 wd:Q16885330 wd:Q24953001 wd:Q25305554 wd:Q78321178 wd:Q78322695 wd:Q91435461 wd:Q5139921 wd:Q1105784 wd:Q91267747 wd:Q50700 wd:Q111204834 wd:Q5145971 wd:Q141155789 wd:Q105204442 wd:Q19799740 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "4d116aa74a5d96688349afbf6f934ca08057b7b3d8f1d62f1ec8af0fbe5d209c",
+  "responseSha256": "22605efd392833d664440d5540b87494c282ea740760d6fb0881cb3658a15624",
+  "retrievedAt": "2026-10-04T04:56:31.741107+00:00",
+  "license": "CC0-1.0",
+  "domain": "math",
+  "roots": [
+    {
+      "domain": "math",
+      "id": "Q4681865",
+      "label": "cipher",
+      "description": "algorithm for encrypting and decrypting information",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q95972591",
+      "label": "claim",
+      "description": "statement about some entity",
+      "parents": [
+        "Q108163"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q5125465",
+      "label": "clamping",
+      "description": "mathematical operation of constraining a value to fall within a given range",
+      "parents": [
+        "Q12202238"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q130303652",
+      "label": "class function",
+      "description": "function whose domain and codomain need not be a set",
+      "parents": [
+        "Q217594"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q1744627",
+      "label": "classification algorithm",
+      "description": "algorithm that classifies objects into predefined categories based on their characteristics",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q16885330",
+      "label": "Clifford semigroup",
+      "description": "",
+      "parents": [
+        "Q205464"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q24953001",
+      "label": "clustering algorithm",
+      "description": "algorithm designed to find groups of similar data points in a dataset",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q25305554",
+      "label": "Coarse-grained model",
+      "description": "type of mathematical model",
+      "parents": [
+        "Q486902"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q78321178",
+      "label": "coboundary",
+      "description": "cochain that is in the image of the differential",
+      "parents": [
+        "Q78320522"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q78322695",
+      "label": "coboundary operator",
+      "description": "",
+      "parents": [
+        "Q1948412"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q91435461",
+      "label": "coconstant morphism",
+      "description": "morphism such that composing with it is constant on the left",
+      "parents": [
+        "Q1948412"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q5139921",
+      "label": "cocycle",
+      "description": "cochain that is closed",
+      "parents": [
+        "Q78320522"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q1105784",
+      "label": "code point",
+      "description": "numerical value representing a character in a coded character set",
+      "parents": [
+        "Q11563"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q91267747",
+      "label": "codiscrete space",
+      "description": "space with a trivial topology",
+      "parents": [
+        "Q179899"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q50700",
+      "label": "coefficient",
+      "description": "multiplicative factor involved in some term of a polynomial, a series, or an expression",
+      "parents": [
+        "Q11563"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q111204834",
+      "label": "colimit",
+      "description": "category theory concept that generalizes disjoint unions of sets, direct sums of modules, etc.",
+      "parents": [
+        "Q20642780"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q5145971",
+      "label": "Collateral Billing number",
+      "description": "",
+      "parents": [
+        "Q11563"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q141155789",
+      "label": "collection of points",
+      "description": "",
+      "parents": [
+        "Q123410745"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q105204442",
+      "label": "collision resolution scheme",
+      "description": "scheme for handling collisions in hash tables",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q19799740",
+      "label": "color appearance model",
+      "description": "any mathematical model describing human perception of colors",
+      "parents": [
+        "Q486902"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "math branches 141..160",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5330"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of mean number of citations per article of an academic journal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "impact factor"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "影响因子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q170584"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5330"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of mean number of citations per article of an academic journal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "impact factor"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "影响因子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q170584"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5330"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of mean number of citations per article of an academic journal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "impact factor"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "影响因子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2091629"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5330"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of mean number of citations per article of an academic journal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "impact factor"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "影响因子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2091629"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5330"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of mean number of citations per article of an academic journal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "impact factor"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "影响因子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5122404"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5330"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of mean number of citations per article of an academic journal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "impact factor"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "影响因子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5122404"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5330"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of mean number of citations per article of an academic journal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "impact factor"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "影响因子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106466728"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5330"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of mean number of citations per article of an academic journal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "impact factor"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "影响因子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106466728"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q282453"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of methods for supervised statistical learning"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1744627"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "support vector machine"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "支持向量机"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q150474"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "encryption technique utilizing a one-time pre-shared key at least as long as the encrypted message"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one-time pad"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "一次性密碼本"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q150474"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "encryption technique utilizing a one-time pre-shared key at least as long as the encrypted message"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one-time pad"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "一次性密码本"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q150474"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "encryption technique utilizing a one-time pre-shared key at least as long as the encrypted message"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one-time pad"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "一次性密码本"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q150474"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "encryption technique utilizing a one-time pre-shared key at least as long as the encrypted message"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one-time pad"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "一次性密碼本"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q150474"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "encryption technique utilizing a one-time pre-shared key at least as long as the encrypted message"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one-time pad"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "一次性密碼本"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q75384"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coefficient describing the amplitude, intensity, or total power of a transmitted wave relative to an incident wave"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transmission coefficient"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "透射係數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5330"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of mean number of citations per article of an academic journal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "impact factor"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "影响因子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5330"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of mean number of citations per article of an academic journal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "impact factor"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "影响因子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q259563"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "substitution cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Atbash"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "阿特巴希密碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q220871"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "symmetric encryption cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "four-square cipher"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "四方密碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q290299"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of cipher used in World War I"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ADFGVX cipher"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "ADFGVX密碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multiplicative factor involved in some term of a polynomial, a series, or an expression"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coefficient"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "系数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multiplicative factor involved in some term of a polynomial, a series, or an expression"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coefficient"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "係數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q906015"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "colimit of a \"directed family of objects\""
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111204834"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "direct limit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "归纳极限"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q906015"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "colimit of a \"directed family of objects\""
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111204834"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "direct limit"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "归纳极限"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q906015"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "colimit of a \"directed family of objects\""
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111204834"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "direct limit"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "归纳极限"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q906015"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "colimit of a \"directed family of objects\""
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111204834"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "direct limit"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "歸納極限"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "symmetric key cipher where plaintext digits are combined with a pseudorandom cipher digit stream"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stream cipher"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "流密码"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "symmetric key cipher where plaintext digits are combined with a pseudorandom cipher digit stream"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stream cipher"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "流密碼"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1053352"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Product cipher"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "乘积密码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q847816"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in Riemannian geometry, the coefficient of the Levi-Civita connection of a Riemannian metric"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Christoffel symbol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "克里斯托费尔符号"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q847816"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in Riemannian geometry, the coefficient of the Levi-Civita connection of a Riemannian metric"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Christoffel symbol"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "克里斯托费尔符号"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q847816"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in Riemannian geometry, the coefficient of the Levi-Civita connection of a Riemannian metric"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Christoffel symbol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "克里斯托費爾符號"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q847816"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in Riemannian geometry, the coefficient of the Levi-Civita connection of a Riemannian metric"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Christoffel symbol"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "克里斯多福符號"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q382486"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of substitution cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "affine cipher"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "仿射密碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q959710"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "password-based authentication protocol used by PPP or RADIUS"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Password Authentication Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "密码认证协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q959710"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "password-based authentication protocol used by PPP or RADIUS"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Password Authentication Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "密码认证协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q959710"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "password-based authentication protocol used by PPP or RADIUS"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Password Authentication Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "密码认证协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4825885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q959710"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "password-based authentication protocol used by PPP or RADIUS"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Password Authentication Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "通行碼鑑別協定"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q959710"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "password-based authentication protocol used by PPP or RADIUS"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Password Authentication Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "密码认证协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4825885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q959710"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "password-based authentication protocol used by PPP or RADIUS"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Password Authentication Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "通行碼鑑別協定"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4825885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q798585"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "steganography method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bacon's cipher"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "培根密碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q794679"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of cipher in cryptography"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bifid cipher"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "二分密碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q543151"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cipher that works on fixed-size blocks of bits"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "block cipher"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分组密码"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1105784"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical value representing a character in a coded character set"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1105784"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "code point"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "码位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1105784"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical value representing a character in a coded character set"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1105784"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "code point"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "碼點"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q812923"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a set of three ciphertexts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Beale ciphers"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "比尔密码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1589480"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q812923"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a set of three ciphertexts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Beale ciphers"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "比尔密码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1589480"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q812923"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a set of three ciphertexts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Beale ciphers"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "比尔密码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q812923"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a set of three ciphertexts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Beale ciphers"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "比尔密码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q626500"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of encoding by which units of plaintext are replaced with ciphertext, according to a fixed system; the \"units\" may be single letters (the most common), pairs of letters, triplets of letters, mixtures of the above, and so forth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "substitution cipher"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "替换式密码"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q626500"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of encoding by which units of plaintext are replaced with ciphertext, according to a fixed system; the \"units\" may be single letters (the most common), pairs of letters, triplets of letters, mixtures of the above, and so forth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "substitution cipher"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "代换"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q626500"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of encoding by which units of plaintext are replaced with ciphertext, according to a fixed system; the \"units\" may be single letters (the most common), pairs of letters, triplets of letters, mixtures of the above, and so forth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "substitution cipher"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "替换式密码"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q626500"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of encoding by which units of plaintext are replaced with ciphertext, according to a fixed system; the \"units\" may be single letters (the most common), pairs of letters, triplets of letters, mixtures of the above, and so forth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "substitution cipher"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "替換式密碼"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q753375"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coefficient of the term of order −1 in the Laurent expansion of a function holomorphic outside a point, whose value can be extracted by a contour integral"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "residue"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "留数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q753375"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coefficient of the term of order −1 in the Laurent expansion of a function holomorphic outside a point, whose value can be extracted by a contour integral"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "residue"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "留数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q753375"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coefficient of the term of order −1 in the Laurent expansion of a function holomorphic outside a point, whose value can be extracted by a contour integral"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "residue"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "留數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q847816"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in Riemannian geometry, the coefficient of the Levi-Civita connection of a Riemannian metric"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Christoffel symbol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "克里斯托费尔符号"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q847816"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in Riemannian geometry, the coefficient of the Levi-Civita connection of a Riemannian metric"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Christoffel symbol"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "克里斯托费尔符号"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q847816"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in Riemannian geometry, the coefficient of the Levi-Civita connection of a Riemannian metric"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Christoffel symbol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "克里斯托費爾符號"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q847816"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in Riemannian geometry, the coefficient of the Levi-Civita connection of a Riemannian metric"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Christoffel symbol"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "克里斯多福符號"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q655908"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of ciphers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "grille"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "格網密碼"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "symmetric key cipher where plaintext digits are combined with a pseudorandom cipher digit stream"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stream cipher"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "流密码"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25305554"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of mathematical model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25305554"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Coarse-grained model"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "粗粒化"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19799740"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "any mathematical model describing human perception of colors"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19799740"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "color appearance model"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "颜色外观模型"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111204834"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "category theory concept that generalizes disjoint unions of sets, direct sums of modules, etc."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111204834"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "colimit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "余极限"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111204834"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "category theory concept that generalizes disjoint unions of sets, direct sums of modules, etc."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111204834"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "colimit"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "余极限"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111204834"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "category theory concept that generalizes disjoint unions of sets, direct sums of modules, etc."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111204834"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "colimit"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "餘極限"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q60772781"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "wide-block cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Adiantum"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "铁线蕨 (密码)"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q137574399"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q109615047"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "code point for the universal character set defined by ISO/ICE 10646 and The Unicode® Standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1105784"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Unicode code point"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Unicode码位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q109615047"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "code point for the universal character set defined by ISO/ICE 10646 and The Unicode® Standard"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1105784"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Unicode code point"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Unicode码位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5139921"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cochain that is closed"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5139921"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cocycle"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "闭上链"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5139921"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cochain that is closed"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5139921"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cocycle"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "閉上鍊"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5256447"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "claim by a manufacturer of food products"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q95972591"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "health claim"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "健康声称"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10855346"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a type of cipher that was used historically but now has fallen, for the most part, into disuse. In contrast to modern cryptographic algorithms, most classical ciphers can be practically computed and solved by hand"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "classical cipher"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "經典密碼"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5776102"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantity characterizing the deviation of a solvent from ideal behavior"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "osmotic coefficient"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "渗透系数 (物理化学)"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q91267747"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "space with a trivial topology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q91267747"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "codiscrete space"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "不可分空间"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5140810"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "generalisation of quotient in category theory"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111204834"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coequalizer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "餘等化子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20642780"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of collision resolution schemes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105204442"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open addressing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "开放寻址"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of collision resolution schemes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105204442"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open addressing"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "开放寻址"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of collision resolution schemes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105204442"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open addressing"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "开放寻址"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of collision resolution schemes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105204442"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open addressing"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "開放定址"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20820114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multinomial coefficient"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "多項式系數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1744627"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q61991985"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Automated Pain Recognition"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "自动疼痛识别"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4049983"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of the “number of elements of the set”, either as a cardinal number or as the equivalence class of sets admitting bijections to this set"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130303652"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cardinality"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "势"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1124307"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Encryption technique"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "two-square cipher"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "二方密碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2221081"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical measure of overcoming air resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ballistic coefficient"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "彈道係數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2520805"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of the degree of consanguinity (or biological relationship) between two individuals"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coefficient of relationship"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "亲缘系数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2520805"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of the degree of consanguinity (or biological relationship) between two individuals"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coefficient of relationship"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "近亲繁殖系数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2520805"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of the degree of consanguinity (or biological relationship) between two individuals"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coefficient of relationship"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "近親繁殖係數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3433612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "numerical measure of some type of correlation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "correlation coefficient"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "關聯係數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4049983"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of the “number of elements of the set”, either as a cardinal number or as the equivalence class of sets admitting bijections to this set"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130303652"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cardinality"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "势"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4994879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cipher that operates on semantic tokens, rather than individual symbols or fixed-size blocks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "code"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "编码 (密码学)"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4994879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cipher that operates on semantic tokens, rather than individual symbols or fixed-size blocks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "code"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "編碼 (密碼學)"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4223017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "classifier that maps input data into defined subsumptive output categories"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1744627"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hierarchical classifier"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "层级分类器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1932524"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dimensionless scalar value which describes the ratio of the force of friction between two bodies and the force pressing them together; depends on the materials used, ranges from near zero to greater than one"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coefficient of friction"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "摩擦係數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1633079"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "category-theoretic colimit of a diagram of the form 𝑋←𝑍→𝑌"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111204834"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pushout"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "推出"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2221081"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical measure of overcoming air resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ballistic coefficient"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "彈道係數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2221081"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical measure of overcoming air resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ballistic coefficient"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "弹道系数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2221081"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical measure of overcoming air resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ballistic coefficient"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "弹道系数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2221081"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical measure of overcoming air resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ballistic coefficient"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "彈道係數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3132613"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the ratio of a particle’s sedimentation velocity to the applied acceleration causing the sedimentation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sedimentation coefficient"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "沉降系数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2304066"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cipher used by Soviet spy Reino Häyhänen"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "VIC cipher"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "VIC暗号"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2304066"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cipher used by Soviet spy Reino Häyhänen"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "VIC cipher"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "VIC暗号"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2304066"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cipher used by Soviet spy Reino Häyhänen"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "VIC cipher"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "VIC暗号"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2304066"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cipher used by Soviet spy Reino Häyhänen"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "VIC cipher"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "VIC暗號"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1989639"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Autokey cypher"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "自动密钥密码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2905069"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bi-universal property in category theory"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q91435461"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "zero morphism"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "零態射"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1932524"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dimensionless scalar value which describes the ratio of the force of friction between two bodies and the force pressing them together; depends on the materials used, ranges from near zero to greater than one"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coefficient of friction"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "摩擦系数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1932524"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dimensionless scalar value which describes the ratio of the force of friction between two bodies and the force pressing them together; depends on the materials used, ranges from near zero to greater than one"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coefficient of friction"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "摩擦系数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1143011"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure used to characterise inelastic collisions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coefficient of restitution"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "恢复系数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1143011"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure used to characterise inelastic collisions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coefficient of restitution"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "恢复系数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1143011"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure used to characterise inelastic collisions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coefficient of restitution"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "恢復係數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50700"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4994879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cipher that operates on semantic tokens, rather than individual symbols or fixed-size blocks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "code"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "编码"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4994879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cipher that operates on semantic tokens, rather than individual symbols or fixed-size blocks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "code"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "编码"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1633079"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "category-theoretic colimit of a diagram of the form 𝑋←𝑍→𝑌"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111204834"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pushout"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "推出"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1633079"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "category-theoretic colimit of a diagram of the form 𝑋←𝑍→𝑌"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111204834"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pushout"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "推出"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for encrypting and decrypting information"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4681865"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cipher"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "加密法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1744627"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm that classifies objects into predefined categories based on their characteristics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1744627"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "classification algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分类器"
+      }
+    }
+  ]
+}

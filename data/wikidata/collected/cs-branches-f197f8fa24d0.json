@@ -1,0 +1,1208 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q1511081 wd:Q5432964 wd:Q623950 wd:Q338438 wd:Q1026626 wd:Q446488 wd:Q5448366 wd:Q60792989 wd:Q29794311 wd:Q104985816 wd:Q5452200 wd:Q21086916 wd:Q5456330 wd:Q116609258 wd:Q12580837 wd:Q5426601 wd:Q3076841 wd:Q4392311 wd:Q48893562 wd:Q109284695 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q1511081 wd:Q5432964 wd:Q623950 wd:Q338438 wd:Q1026626 wd:Q446488 wd:Q5448366 wd:Q60792989 wd:Q29794311 wd:Q104985816 wd:Q5452200 wd:Q21086916 wd:Q5456330 wd:Q116609258 wd:Q12580837 wd:Q5426601 wd:Q3076841 wd:Q4392311 wd:Q48893562 wd:Q109284695 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q1511081 wd:Q5432964 wd:Q623950 wd:Q338438 wd:Q1026626 wd:Q446488 wd:Q5448366 wd:Q60792989 wd:Q29794311 wd:Q104985816 wd:Q5452200 wd:Q21086916 wd:Q5456330 wd:Q116609258 wd:Q12580837 wd:Q5426601 wd:Q3076841 wd:Q4392311 wd:Q48893562 wd:Q109284695 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "f197f8fa24d0d97aa1c65823e887e62912157833419de0e2e433d9d1e9df6bd6",
+  "responseSha256": "db5d24448ca49ed5474cb5b8ee24d05780d2a18c2118914df665cb17df0e6627",
+  "retrievedAt": "2026-10-04T05:08:44.660483+00:00",
+  "license": "CC0-1.0",
+  "domain": "cs",
+  "roots": [
+    {
+      "domain": "cs",
+      "id": "Q1511081",
+      "label": "fair division problem",
+      "description": "problem of sharing resources",
+      "parents": [
+        "Q984063"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q5432964",
+      "label": "familiarity heuristic",
+      "description": "situation when the familiar is favored over novel places, people, or things",
+      "parents": [
+        "Q201413"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q623950",
+      "label": "fast Fourier transform",
+      "description": "𝑂(𝑁 log 𝑁) divide‐and‐conquer algorithm to calculate the discrete Fourier transforms",
+      "parents": [
+        "Q671298"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q338438",
+      "label": "fast wavelet transform",
+      "description": "algorithm",
+      "parents": [
+        "Q671298"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1026626",
+      "label": "feature extraction",
+      "description": "process of building informative, nonredundant derived values from an initial set of measured data to facilitate learning, generalization and interpretation",
+      "parents": [
+        "Q16000077"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q446488",
+      "label": "feature selection",
+      "description": "procedure in machine learning and statistics",
+      "parents": [
+        "Q16000077"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q5448366",
+      "label": "File system API",
+      "description": "application programming interface",
+      "parents": [
+        "Q165194"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q60792989",
+      "label": "fine-grained reduction",
+      "description": "reduction between computational problems, used to transfer tight runtime bounds",
+      "parents": [
+        "Q1197709"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q29794311",
+      "label": "finitary tree",
+      "description": "tree with a finite number of children at every node",
+      "parents": [
+        "Q223655"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q104985816",
+      "label": "first-hop redundancy protocol",
+      "description": "family of computer networking protocols allowing first hop fallback on router failure",
+      "parents": [
+        "Q15836568"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q5452200",
+      "label": "first-order reduction",
+      "description": "in computer science, a very strong type of reduction between two computational problems in computational complexity theory",
+      "parents": [
+        "Q1197709"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q21086916",
+      "label": "fisherface",
+      "description": "",
+      "parents": [
+        "Q1192553"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q5456330",
+      "label": "Fixed-priority pre-emptive scheduling",
+      "description": "scheduling system commonly used in real-time systems",
+      "parents": [
+        "Q41401699"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q116609258",
+      "label": "Flattening transformation",
+      "description": "",
+      "parents": [
+        "Q28057154"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q12580837",
+      "label": "floating-point type in C",
+      "description": "",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q5426601",
+      "label": "FM-index",
+      "description": "compressed full-text substring index based on the Burrows-Wheeler transform, with some similarities to the suffix array",
+      "parents": [
+        "Q223655"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q3076841",
+      "label": "force-directed graph drawing",
+      "description": "physical simulation to visualize graphs",
+      "parents": [
+        "Q739462"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q4392311",
+      "label": "foreign function interface",
+      "description": "interface to call functions from other programming languages",
+      "parents": [
+        "Q165194"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q48893562",
+      "label": "fork",
+      "description": "change in consensus rules of a blockchain; if contentious, can result in multiple permanent alternative chains",
+      "parents": [
+        "Q20514253"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q109284695",
+      "label": "formation",
+      "description": "in bandy, position of the players",
+      "parents": [
+        "Q1546627"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "cs branches 201..220",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4392311"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interface to call functions from other programming languages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4392311"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "foreign function interface"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "外部函式呼叫"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4392311"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interface to call functions from other programming languages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4392311"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "foreign function interface"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "跨语言函数接口"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4392311"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interface to call functions from other programming languages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4392311"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "foreign function interface"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "跨语言函数接口"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4392311"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interface to call functions from other programming languages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4392311"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "foreign function interface"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "跨語言函式介面"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5167446"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast Fourier Transform algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623950"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Cooley–Tukey FFT algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "库利－图基快速傅里叶变换算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5167446"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast Fourier Transform algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623950"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Cooley–Tukey FFT algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Cooley-Tukey算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5167446"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast Fourier Transform algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623950"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Cooley–Tukey FFT algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Cooley-Tukey算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5167446"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast Fourier Transform algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623950"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Cooley–Tukey FFT algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Cooley-Tukey演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7243214"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast Fourier Transform algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623950"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "prime-factor FFT algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "互質因子算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q168492"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "framework for enabling Java programs to call and be called by programs in other languages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4392311"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Java Native Interface"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Java本地接口"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q165194"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q168492"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "framework for enabling Java programs to call and be called by programs in other languages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4392311"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Java Native Interface"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Java本地接口"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q165194"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q168492"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "framework for enabling Java programs to call and be called by programs in other languages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4392311"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Java Native Interface"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Java本地介面"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q165194"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q168492"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "framework for enabling Java programs to call and be called by programs in other languages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4392311"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Java Native Interface"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Java本地接口"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4392311"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q168492"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "framework for enabling Java programs to call and be called by programs in other languages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4392311"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Java Native Interface"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Java本地接口"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4392311"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q168492"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "framework for enabling Java programs to call and be called by programs in other languages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4392311"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Java Native Interface"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Java本地介面"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4392311"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q338438"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q338438"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast wavelet transform"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "快速小波轉換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q338438"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q338438"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast wavelet transform"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "快速小波转换"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q338438"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q338438"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast wavelet transform"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "快速小波转换"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q338438"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q338438"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast wavelet transform"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "快速小波轉換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q338438"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q338438"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast wavelet transform"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "快速小波轉換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5448366"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "application programming interface"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5448366"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File system API"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "文件系统API"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141473817"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5448366"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "application programming interface"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5448366"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File system API"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "文件系统API"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141473817"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5448366"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "application programming interface"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5448366"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File system API"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "檔案系統API"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141473817"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q48893562"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "change in consensus rules of a blockchain; if contentious, can result in multiple permanent alternative chains"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q48893562"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fork"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分叉"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3076841"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical simulation to visualize graphs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3076841"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force-directed graph drawing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "力导向图"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1511081"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "problem of sharing resources"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1511081"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fair division problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "公平分配博弈"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1026626"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process of building informative, nonredundant derived values from an initial set of measured data to facilitate learning, generalization and interpretation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1026626"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "feature extraction"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "特徵抽取"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7280126"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Discrete Fourier transform for prime sizes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623950"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Rader's FFT algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "雷德演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18206991"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fair division problem"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1511081"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fair cake-cutting problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "切蛋糕问题"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18206991"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fair division problem"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1511081"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fair cake-cutting problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "切蛋糕問題"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623950"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "𝑂(𝑁 log 𝑁) divide‐and‐conquer algorithm to calculate the discrete Fourier transforms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623950"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast Fourier transform"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "快速傅里叶变换"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623950"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "𝑂(𝑁 log 𝑁) divide‐and‐conquer algorithm to calculate the discrete Fourier transforms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623950"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast Fourier transform"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "快速傅里叶变换"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623950"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "𝑂(𝑁 log 𝑁) divide‐and‐conquer algorithm to calculate the discrete Fourier transforms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623950"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast Fourier transform"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "快速傅里葉變換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623950"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "𝑂(𝑁 log 𝑁) divide‐and‐conquer algorithm to calculate the discrete Fourier transforms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623950"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast Fourier transform"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "快速傅立葉變換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q575703"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "library that provides Java programs easy access to native shared libraries"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4392311"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Java Native Access"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Java Native Access"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188860"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q575703"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "library that provides Java programs easy access to native shared libraries"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4392311"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Java Native Access"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Java Native Access"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4392311"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q446488"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "procedure in machine learning and statistics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q446488"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "feature selection"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "特征选择"
+      }
+    }
+  ]
+}

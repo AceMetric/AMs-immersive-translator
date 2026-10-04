@@ -1,0 +1,2672 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q7632678 wd:Q2756506 wd:Q140773674 wd:Q106645024 wd:Q676024 wd:Q2372426 wd:Q1890437 wd:Q327675 wd:Q1047566 wd:Q2835766 wd:Q30103009 wd:Q126889901 wd:Q126889895 wd:Q16935517 wd:Q3990844 wd:Q5965755 wd:Q2256782 wd:Q2434518 wd:Q690505 wd:Q4461978 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q7632678 wd:Q2756506 wd:Q140773674 wd:Q106645024 wd:Q676024 wd:Q2372426 wd:Q1890437 wd:Q327675 wd:Q1047566 wd:Q2835766 wd:Q30103009 wd:Q126889901 wd:Q126889895 wd:Q16935517 wd:Q3990844 wd:Q5965755 wd:Q2256782 wd:Q2434518 wd:Q690505 wd:Q4461978 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q7632678 wd:Q2756506 wd:Q140773674 wd:Q106645024 wd:Q676024 wd:Q2372426 wd:Q1890437 wd:Q327675 wd:Q1047566 wd:Q2835766 wd:Q30103009 wd:Q126889901 wd:Q126889895 wd:Q16935517 wd:Q3990844 wd:Q5965755 wd:Q2256782 wd:Q2434518 wd:Q690505 wd:Q4461978 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "ba5704caaa588e41eb6a5868175c57da9703cf6d1298bc3854fd32c6f8ba34bf",
+  "responseSha256": "730802c7f33c7b631006e4103ae436c4e485345964a28923cb6b286f77f48700",
+  "retrievedAt": "2026-10-04T03:25:37.900897+00:00",
+  "license": "CC0-1.0",
+  "domain": "cs",
+  "roots": [
+    {
+      "domain": "cs",
+      "id": "Q7632678",
+      "label": "succinct data structure",
+      "description": "data structure in computer science",
+      "parents": [
+        "Q175263"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q2756506",
+      "label": "Sudoku solving algorithm",
+      "description": "algorithm used to complete a sudoku",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q140773674",
+      "label": "summation algorithm",
+      "description": "algorithm that computes the sum of a list of numbers, most commonly floating-point",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q106645024",
+      "label": "supervised clustering algorithm",
+      "description": "type of algorithm",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q676024",
+      "label": "swap algorithm",
+      "description": "process of swapping data between computer variables",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q2372426",
+      "label": "sweep line algorithm",
+      "description": "class of algorithms in computational geometry that uses a conceptual sweep line/surface to solve various problems in Euclidean space",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q1890437",
+      "label": "symbol table",
+      "description": "data structure used by a language translator such as a compiler or Interpreter",
+      "parents": [
+        "Q175263"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q327675",
+      "label": "symmetric-key algorithm",
+      "description": "cryptosystem that uses one key",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q1047566",
+      "label": "system image",
+      "description": "data structure storing the entire state of a computer",
+      "parents": [
+        "Q175263"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q2835766",
+      "label": "TCP congestion control",
+      "description": "techniques to improve network performance over Transmission Control Protocol",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q30103009",
+      "label": "tensor decomposition",
+      "description": "process in algebra",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q126889901",
+      "label": "text rendering",
+      "description": "algorithm that turns text into a pixel representation",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q126889895",
+      "label": "text shaping",
+      "description": "part of text rendering that decides which glyphs should be rendered and where",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q16935517",
+      "label": "text-based protocol",
+      "description": "communications protocol whose content representation is in human-readable format",
+      "parents": [
+        "Q132364"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q3990844",
+      "label": "Thread control block",
+      "description": "data structure in operating system with thread-specific information needed to manage it",
+      "parents": [
+        "Q175263"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q5965755",
+      "label": "Three-phase commit protocol",
+      "description": "distributed algorithm",
+      "parents": [
+        "Q132364"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q2256782",
+      "label": "Threshold Accepting",
+      "description": "Optimisation heuristic algorithms",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q2434518",
+      "label": "Time-Triggered Protocol",
+      "description": "concept related to networking",
+      "parents": [
+        "Q132364"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q690505",
+      "label": "Todd–Coxeter algorithm",
+      "description": "algorithm",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q4461978",
+      "label": "transcomputational problem",
+      "description": "problem whose solution requires a computer at least the size of the Earth and a time period at least the estimated age of the Earth to be computed",
+      "parents": [
+        "Q3435924"
+      ]
+    }
+  ],
+  "limit": 20000,
+  "name": "cs branches 301..320",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5318442"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Simple algorithm to swap binary values"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q676024"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "XOR swap algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "XOR交換演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5636003"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "TCP congestion avoidance algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835766"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "HSTCP"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "高速TCP"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835766"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5965755"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5965755"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Three-phase commit protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "三阶段提交"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7632678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure in computer science"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7632678"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "succinct data structure"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "简洁数据结构"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7632678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure in computer science"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7632678"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "succinct data structure"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "简洁数据结构"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7632678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure in computer science"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7632678"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "succinct data structure"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "簡潔數據結構"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30500573"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "version of the Hypertext Transfer Protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "HTTP/1.1"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "超文本傳輸協議/1.1"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30500573"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "version of the Hypertext Transfer Protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "HTTP/1.1"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "超文本傳輸協議/1.1"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30500573"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "version of the Hypertext Transfer Protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "HTTP/1.1"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "超文本傳輸協議/1.1"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55155149"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7671943"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer network technology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2434518"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "TTEthernet"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "时间触发以太网"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2434518"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7671943"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer network technology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2434518"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "TTEthernet"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "时间触发以太网"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2434518"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7669749"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "congestion control mechanism in computer networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835766"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "TCP Friendly Rate Control"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "友善式傳輸層協定壅塞控制"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835766"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17097998"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tensor decomposition"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30103009"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Higher-order singular value decomposition"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "高階奇異值分解"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835766"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "techniques to improve network performance over Transmission Control Protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835766"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "TCP congestion control"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "TCP拥塞控制"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835766"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "techniques to improve network performance over Transmission Control Protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835766"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "TCP congestion control"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "TCP拥塞控制算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835766"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "techniques to improve network performance over Transmission Control Protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835766"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "TCP congestion control"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "TCP拥塞避免算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835766"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "techniques to improve network performance over Transmission Control Protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835766"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "TCP congestion control"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "TCP擁塞控制演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standardized protocol for transferring files over TCP/IP networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "文件传输协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q290378"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standardized protocol for transferring files over TCP/IP networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "文件传输协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q290378"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standardized protocol for transferring files over TCP/IP networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "檔案傳輸協定"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q290378"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standardized protocol for transferring files over TCP/IP networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "文件传输协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standardized protocol for transferring files over TCP/IP networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "文件传输协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standardized protocol for transferring files over TCP/IP networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "檔案傳輸協定"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standardized protocol for transferring files over TCP/IP networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "文件传输协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standardized protocol for transferring files over TCP/IP networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "文件传输协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standardized protocol for transferring files over TCP/IP networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "檔案傳輸協定"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4461978"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "problem whose solution requires a computer at least the size of the Earth and a time period at least the estimated age of the Earth to be computed"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4461978"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transcomputational problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "超计算问题"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4461978"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "problem whose solution requires a computer at least the size of the Earth and a time period at least the estimated age of the Earth to be computed"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4461978"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transcomputational problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "超计算问题"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4461978"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "problem whose solution requires a computer at least the size of the Earth and a time period at least the estimated age of the Earth to be computed"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4461978"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transcomputational problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "超計算問題"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163393"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet mail protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Post Office Protocol 3"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "郵局協定第3版"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132364"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163393"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet mail protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Post Office Protocol 3"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "邮局协定第3版"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132364"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163393"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet mail protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Post Office Protocol 3"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "邮局协定第3版"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132364"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163393"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet mail protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Post Office Protocol 3"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "郵局協定第3版"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132364"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163393"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet mail protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Post Office Protocol 3"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "郵局協定第3版"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132364"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047566"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure storing the entire state of a computer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047566"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system image"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "系统映像"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047566"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure storing the entire state of a computer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047566"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system image"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "system image"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047566"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure storing the entire state of a computer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047566"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system image"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "系統映像"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163393"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet mail protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Post Office Protocol 3"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "郵局協定第3版"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163393"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet mail protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Post Office Protocol 3"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "邮局协定第3版"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163393"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet mail protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Post Office Protocol 3"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "邮局协定第3版"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163393"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet mail protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Post Office Protocol 3"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "郵局協定第3版"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163393"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet mail protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Post Office Protocol 3"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "郵局協定第3版"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163393"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet mail protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Post Office Protocol 3"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "郵局協定第3版"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55155149"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163393"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet mail protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Post Office Protocol 3"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "邮局协定第3版"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55155149"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163393"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet mail protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Post Office Protocol 3"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "邮局协定第3版"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55155149"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163393"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet mail protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Post Office Protocol 3"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "郵局協定第3版"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55155149"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q163393"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet mail protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Post Office Protocol 3"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "郵局協定第3版"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55155149"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1890437"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure used by a language translator such as a compiler or Interpreter"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1890437"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "symbol table"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "符号表"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1890437"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure used by a language translator such as a compiler or Interpreter"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1890437"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "symbol table"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "符号表"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1890437"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure used by a language translator such as a compiler or Interpreter"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1890437"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "symbol table"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "符號表"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q166936"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "application layer internet protocol for e-mail retrieval and storage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet Message Access Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "IMAP"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q166936"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "application layer internet protocol for e-mail retrieval and storage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet Message Access Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "IMAP"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q166936"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "application layer internet protocol for e-mail retrieval and storage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet Message Access Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "IMAP"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q166936"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "application layer internet protocol for e-mail retrieval and storage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet Message Access Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "電子郵件存取協定"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q166936"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "application layer internet protocol for e-mail retrieval and storage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet Message Access Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "IMAP"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q166936"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "application layer internet protocol for e-mail retrieval and storage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet Message Access Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "IMAP"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q166936"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "application layer internet protocol for e-mail retrieval and storage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet Message Access Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "IMAP"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q166936"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "application layer internet protocol for e-mail retrieval and storage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet Message Access Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "IMAP"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q166936"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "application layer internet protocol for e-mail retrieval and storage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet Message Access Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "電子郵件存取協定"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q166936"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "application layer internet protocol for e-mail retrieval and storage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet Message Access Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "IMAP"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q676024"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process of swapping data between computer variables"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q676024"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "swap algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "交换 (计算机编程)"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standardized protocol for transferring files over TCP/IP networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "文件传输协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q37071"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standardized protocol for transferring files over TCP/IP networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "文件传输协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q37071"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standardized protocol for transferring files over TCP/IP networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "檔案傳輸協定"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q37071"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q997683"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Encryption and decryption method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q327675"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Book cipher"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "書本式加密"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q327675"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q160453"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet protocol used for relaying e-mails"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Simple Mail Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "简单邮件传输协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q160453"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet protocol used for relaying e-mails"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Simple Mail Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "简单邮件传输协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q160453"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet protocol used for relaying e-mails"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Simple Mail Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "简单邮件传输协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q160453"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet protocol used for relaying e-mails"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Simple Mail Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "簡單郵件傳送協定"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q160453"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet protocol used for relaying e-mails"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Simple Mail Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "簡單郵件傳輸協議"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q160453"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet protocol used for relaying e-mails"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Simple Mail Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "简单邮件传输协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q160453"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet protocol used for relaying e-mails"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Simple Mail Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "简单邮件传输协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q160453"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet protocol used for relaying e-mails"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Simple Mail Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "简单邮件传输协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q160453"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet protocol used for relaying e-mails"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Simple Mail Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "簡單郵件傳送協定"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q160453"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet protocol used for relaying e-mails"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Simple Mail Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "簡單郵件傳輸協議"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q709588"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simple network protocols for the exchange of human-oriented status and user information"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Finger"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Finger协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q709588"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simple network protocols for the exchange of human-oriented status and user information"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Finger"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Finger协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q709588"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simple network protocols for the exchange of human-oriented status and user information"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Finger"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Finger协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q709588"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simple network protocols for the exchange of human-oriented status and user information"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Finger"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Finger协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q709588"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simple network protocols for the exchange of human-oriented status and user information"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Finger"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Finger協議"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q709588"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simple network protocols for the exchange of human-oriented status and user information"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Finger"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Finger协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q709588"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simple network protocols for the exchange of human-oriented status and user information"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Finger"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Finger协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q709588"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simple network protocols for the exchange of human-oriented status and user information"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Finger"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Finger協議"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q327675"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptosystem that uses one key"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q327675"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "symmetric-key algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "對稱密鑰加密"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q327675"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptosystem that uses one key"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q327675"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "symmetric-key algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "对等加密"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q327675"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptosystem that uses one key"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q327675"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "symmetric-key algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "对等加密"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q327675"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptosystem that uses one key"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q327675"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "symmetric-key algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "對等加密"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q327675"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptosystem that uses one key"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q327675"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "symmetric-key algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "對等加密"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3990844"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure in operating system with thread-specific information needed to manage it"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3990844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Thread control block"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "引線控制塊"
+      }
+    }
+  ]
+}

@@ -1,0 +1,5222 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q2976589 wd:Q49000007 wd:Q545002 wd:Q2902363 wd:Q3991683 wd:Q26944691 wd:Q7597108 wd:Q2033871 wd:Q1329550 wd:Q2667487 wd:Q7604387 wd:Q1545585 wd:Q10860200 wd:Q2995292 wd:Q957502 wd:Q98097118 wd:Q864718 wd:Q2355076 wd:Q26923058 wd:Q7623705 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q2976589 wd:Q49000007 wd:Q545002 wd:Q2902363 wd:Q3991683 wd:Q26944691 wd:Q7597108 wd:Q2033871 wd:Q1329550 wd:Q2667487 wd:Q7604387 wd:Q1545585 wd:Q10860200 wd:Q2995292 wd:Q957502 wd:Q98097118 wd:Q864718 wd:Q2355076 wd:Q26923058 wd:Q7623705 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q2976589 wd:Q49000007 wd:Q545002 wd:Q2902363 wd:Q3991683 wd:Q26944691 wd:Q7597108 wd:Q2033871 wd:Q1329550 wd:Q2667487 wd:Q7604387 wd:Q1545585 wd:Q10860200 wd:Q2995292 wd:Q957502 wd:Q98097118 wd:Q864718 wd:Q2355076 wd:Q26923058 wd:Q7623705 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "47d94ca07fbd20fb26a87dba4d7d576381a4677e838e1174f1f6ebf5e944b4e5",
+  "responseSha256": "4cc3196f3eed7bde6b6958d4587d04aec001d572387d4119349f79f1f7b3ee51",
+  "retrievedAt": "2026-10-04T05:09:55.321641+00:00",
+  "license": "CC0-1.0",
+  "domain": "cs",
+  "roots": [
+    {
+      "domain": "cs",
+      "id": "Q2976589",
+      "label": "spectral clustering",
+      "description": "clustering methods",
+      "parents": [
+        "Q28058114"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q49000007",
+      "label": "Spiral optimization algorithm",
+      "description": "optimization algorithm",
+      "parents": [
+        "Q24476018"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q545002",
+      "label": "spline interpolation",
+      "description": "mathematical method",
+      "parents": [
+        "Q187631"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q2902363",
+      "label": "SPQR tree",
+      "description": "concept in graph theory, a branch of mathematics",
+      "parents": [
+        "Q223655"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q3991683",
+      "label": "SQL data type",
+      "description": "data type in databases",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q26944691",
+      "label": "stable consistent numerical method",
+      "description": "numerical method which is stable (well-posed) and consistent",
+      "parents": [
+        "Q24262840"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7597108",
+      "label": "stairstep interpolation",
+      "description": "method for interpolating the pixels after enlarging an image",
+      "parents": [
+        "Q187631"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q2033871",
+      "label": "state-space search",
+      "description": "class of search algorithms",
+      "parents": [
+        "Q755673"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1329550",
+      "label": "static program analysis",
+      "description": "program analysis performed without actually executing programs",
+      "parents": [
+        "Q2112188"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q2667487",
+      "label": "static single assignment form",
+      "description": "intermediate representation (IR) in which each variable is assigned exactly once, and every variable is defined before it is used",
+      "parents": [
+        "Q244916"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7604387",
+      "label": "statistical data type",
+      "description": "classification of groups of individual data points",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1545585",
+      "label": "stochastic differential equation",
+      "description": "differential equations involving stochastic processes",
+      "parents": [
+        "Q11214"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q10860200",
+      "label": "stop-and-wait ARQ",
+      "description": "basic automatic repeat-request (ARQ) data transmission and error detection protocol",
+      "parents": [
+        "Q29522"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q2995292",
+      "label": "straightedge construction",
+      "description": "geometric construction without compass",
+      "parents": [
+        "Q10265536"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q957502",
+      "label": "strategem",
+      "description": "player strategy",
+      "parents": [
+        "Q1546627"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q98097118",
+      "label": "strategy for the iterated prisoner's dilemma",
+      "description": "",
+      "parents": [
+        "Q1546627"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q864718",
+      "label": "stream cipher",
+      "description": "symmetric key cipher where plaintext digits are combined with a pseudorandom cipher digit stream",
+      "parents": [
+        "Q4681865"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q2355076",
+      "label": "streaming protocol",
+      "description": "",
+      "parents": [
+        "Q15836568"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q26923058",
+      "label": "strictly consistent numerical method",
+      "description": "numerical method in which the solutions to the desired well-posed problem are solutions of all the direct problems which form the method.",
+      "parents": [
+        "Q24262840"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7623705",
+      "label": "Stride scheduling",
+      "description": "soft real-time scheduling algorithm",
+      "parents": [
+        "Q1087987"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "cs branches 561..580",
+  "rows": [
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q60995314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Zuc stream cipher"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "祖冲之算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5176731"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "statistical data type"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7604387"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "count variable"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "计数资料"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7604387"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5176731"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "statistical data type"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7604387"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "count variable"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "计数资料"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7604387"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5176731"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "statistical data type"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7604387"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "count variable"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "计数资料"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7604387"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5176731"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "statistical data type"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7604387"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "count variable"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "計數資料"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7604387"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5977889"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-fourth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Obtain safe passage to conquer the State of Guo"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "假道伐虢"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5977889"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-fourth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Obtain safe passage to conquer the State of Guo"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "假道伐虢"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5977889"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-fourth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Obtain safe passage to conquer the State of Guo"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "假道伐虢"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5977889"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-fourth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Obtain safe passage to conquer the State of Guo"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "假道伐虢"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q56099250"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stream cipher developed by Daniel J. Bernstein"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Salsa20"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Salsa20"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7604387"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "classification of groups of individual data points"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7604387"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "statistical data type"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "统计数据类型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19478619"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18206127"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measurement based on multiple data items"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7604387"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "composite measure (statistics)"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "综合指标"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922677"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-eighth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Remove the ladder when the enemy has ascended to the roof"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "上屋抽梯"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922677"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-eighth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Remove the ladder when the enemy has ascended to the roof"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "上屋抽梯"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922677"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-eighth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Remove the ladder when the enemy has ascended to the roof"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "上屋抽梯"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922911"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-ninth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Deck the tree with false blossoms"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "樹上開花"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922911"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-ninth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Deck the tree with false blossoms"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "树上开花"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922911"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-ninth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Deck the tree with false blossoms"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "樹上開花"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the thirteenth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Stomp the grass to scare the snake"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "打草驚蛇"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the thirteenth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Stomp the grass to scare the snake"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "打草惊蛇"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922897"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the thirteenth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Stomp the grass to scare the snake"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "打草驚蛇"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922954"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the fifteenth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lure the tiger off its mountain lair"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "調虎離山"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922954"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the fifteenth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lure the tiger off its mountain lair"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "调虎离山"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922954"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the fifteenth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lure the tiger off its mountain lair"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "調虎離山"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10860200"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic automatic repeat-request (ARQ) data transmission and error detection protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10860200"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stop-and-wait ARQ"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "停止并等待ARQ"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10860200"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic automatic repeat-request (ARQ) data transmission and error detection protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10860200"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stop-and-wait ARQ"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "停止并等待ARQ"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10860200"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic automatic repeat-request (ARQ) data transmission and error detection protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10860200"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stop-and-wait ARQ"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "停止并等待ARQ"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10860200"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic automatic repeat-request (ARQ) data transmission and error detection protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10860200"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stop-and-wait ARQ"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "停止並等待ARQ"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6485978"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "scientific theory"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1545585"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Langevin dynamics"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "朗之萬動力學"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q584537"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6485978"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "scientific theory"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1545585"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Langevin dynamics"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "朗之萬動力學"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1545585"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7100785"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "statistical data type"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7604387"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinal variable"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "順序量錶"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7604387"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16979017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equations via random force terms and coefficients"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1545585"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stochastic partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "随机偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16979017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equations via random force terms and coefficients"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1545585"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stochastic partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "随机偏微积分"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16979017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equations via random force terms and coefficients"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1545585"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stochastic partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "隨機偏微積分"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5609214"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trigger strategy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98097118"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "grim trigger"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "冷酷触发策略"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1118810"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5609214"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trigger strategy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98097118"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "grim trigger"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "冷酷觸發策略"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1118810"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5609214"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trigger strategy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98097118"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "grim trigger"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "冷酷触发策略"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98097118"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5609214"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trigger strategy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98097118"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "grim trigger"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "冷酷觸發策略"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98097118"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q56099240"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stream cipher developed by Daniel J. Bernstein"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ChaCha20"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "ChaCha20"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4923264"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-first of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Slough off the cicada's golden shell"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "金蟬脫殼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4923264"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-first of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Slough off the cicada's golden shell"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "金蝉脱壳"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4923264"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-first of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Slough off the cicada's golden shell"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "金蟬脫殼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4923382"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the thirty-fourth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Inflict injury on oneself to win the enemy's trust"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "苦肉計"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4923382"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the thirty-fourth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Inflict injury on oneself to win the enemy's trust"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "苦肉计"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4923382"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the thirty-fourth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Inflict injury on oneself to win the enemy's trust"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "苦肉計"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1940914"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type system paradigm where all type checking is done at compile time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1329550"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "static typing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "静态类型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3046732"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the thirty-second of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Empty Fort Strategy"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "空城計"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3046732"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the thirty-second of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Empty Fort Strategy"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "空城计"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3046732"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the thirty-second of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Empty Fort Strategy"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "空城計"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4921754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the eighteenth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Defeat the enemy by capturing their chief"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "擒賊擒王"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4921754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the eighteenth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Defeat the enemy by capturing their chief"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "擒贼擒王"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4921754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the eighteenth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Defeat the enemy by capturing their chief"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "擒賊擒王"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2033871"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of search algorithms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2033871"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state-space search"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "状态空间搜索"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2033871"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of search algorithms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2033871"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state-space search"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "状态空间搜索"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4921808"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the eighth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Openly repair the gallery roads, but sneak through the passage of Chencang"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "暗渡陈仓"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4921808"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the eighth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Openly repair the gallery roads, but sneak through the passage of Chencang"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "暗渡陈仓"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4921808"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the eighth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Openly repair the gallery roads, but sneak through the passage of Chencang"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "暗渡陳倉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922200"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the tenth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hide a knife behind a smile"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "笑裏藏刀"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922200"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the tenth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hide a knife behind a smile"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "笑里藏刀"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922200"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the tenth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hide a knife behind a smile"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "笑裏藏刀"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922239"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-seventh of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Feign madness but keep your balance"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "假癡不癲"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922239"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-seventh of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Feign madness but keep your balance"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "假痴不癫"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922239"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-seventh of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Feign madness but keep your balance"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "假癡不癲"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922218"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the nineteenth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Remove the firewood from under the pot"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "釜底抽薪"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922218"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the nineteenth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Remove the firewood from under the pot"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "釜底抽薪"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922218"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the nineteenth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Remove the firewood from under the pot"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "釜底抽薪"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922304"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-second of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Shut the door to catch the thief"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "關門捉賊"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922304"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-second of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Shut the door to catch the thief"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "关门捉贼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922304"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-second of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Shut the door to catch the thief"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "關門捉賊"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922314"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twelfth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Take the opportunity to pilfer the goat"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "順手牽羊"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922314"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twelfth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Take the opportunity to pilfer the goat"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "顺手牵羊"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922314"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twelfth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Take the opportunity to pilfer the goat"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "順手牽羊"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922493"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the fourteenth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Borrow a corpse to resurrect the soul"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "借尸还魂"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922493"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the fourteenth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Borrow a corpse to resurrect the soul"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "借屍還魂"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922461"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-fifth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Replace the beams with rotten timbers"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "偷梁換柱"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922461"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-fifth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Replace the beams with rotten timbers"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "偷梁换柱"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922461"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-fifth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Replace the beams with rotten timbers"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "偷梁換柱"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2976589"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "clustering methods"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2976589"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spectral clustering"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "SVD"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922616"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-sixth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Point at the mulberry tree while cursing the locust tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "指桑罵槐"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922616"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-sixth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Point at the mulberry tree while cursing the locust tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "指桑骂槐"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922616"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-sixth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Point at the mulberry tree while cursing the locust tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "指桑罵槐"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922658"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twentieth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Disturb the water and catch a fish"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "渾水摸魚"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922658"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twentieth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Disturb the water and catch a fish"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "浑水摸鱼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922658"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twentieth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Disturb the water and catch a fish"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "渾水摸魚"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922642"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the eleventh of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sacrifice the plum tree to preserve the peach tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "李代桃僵"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922642"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the eleventh of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sacrifice the plum tree to preserve the peach tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "李代桃僵"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922642"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the eleventh of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sacrifice the plum tree to preserve the peach tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "李代桃僵"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2976589"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "clustering methods"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2976589"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spectral clustering"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "谱聚类算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4920216"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the seventh of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Create something from nothing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "無中生有"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4920216"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the seventh of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Create something from nothing"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "无中生有"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4920216"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the seventh of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Create something from nothing"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "無中生有"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4810737"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the thirtieth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Make the host and the guest exchange roles"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "反客為主"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4810737"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the thirtieth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Make the host and the guest exchange roles"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "反客为主"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4810737"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the thirtieth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Make the host and the guest exchange roles"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "反客為主"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1940914"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type system paradigm where all type checking is done at compile time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1329550"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "static typing"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "靜態類型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q122624423"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4725609"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "static code analysis to detect aliasing"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1329550"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "alias analysis"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "别名分析"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28057176"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4725609"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "static code analysis to detect aliasing"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1329550"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "alias analysis"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "别名分析"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28057176"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4725609"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "static code analysis to detect aliasing"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1329550"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "alias analysis"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "别名分析"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28057176"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4725609"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "static code analysis to detect aliasing"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1329550"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "alias analysis"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "別名分析"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28057176"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4725609"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "static code analysis to detect aliasing"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1329550"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "alias analysis"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "別名分析"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28057176"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4922493"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the fourteenth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Borrow a corpse to resurrect the soul"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "借屍還魂"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2285707"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable where there is no ordering among the values"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7604387"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "categorical variable"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分类变量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7604387"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1545585"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equations involving stochastic processes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1545585"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stochastic differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "隨機微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1545585"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equations involving stochastic processes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1545585"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stochastic differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "随机微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1545585"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equations involving stochastic processes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1545585"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stochastic differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "隨機微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4921056"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the seventeenth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tossing out a brick to get a jade gem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "抛砖引玉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4921056"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the seventeenth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tossing out a brick to get a jade gem"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "抛砖引玉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4921056"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the seventeenth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tossing out a brick to get a jade gem"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "拋磚引玉"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1632201"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stream cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "A5/2"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "A5/2"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2667487"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "intermediate representation (IR) in which each variable is assigned exactly once, and every variable is defined before it is used"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2667487"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "static single assignment form"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "静态单赋值形式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2667487"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "intermediate representation (IR) in which each variable is assigned exactly once, and every variable is defined before it is used"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2667487"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "static single assignment form"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "静态单赋值形式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2667487"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "intermediate representation (IR) in which each variable is assigned exactly once, and every variable is defined before it is used"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2667487"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "static single assignment form"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "靜態單賦值形式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4921234"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the sixth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Make a sound in the east, then strike in the west"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "聲東擊西"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4921234"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the sixth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Make a sound in the east, then strike in the west"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "声东击西"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4921234"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the sixth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Make a sound in the east, then strike in the west"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "聲東擊西"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2902363"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "concept in graph theory, a branch of mathematics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2902363"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SPQR tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "SPQR 樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4921268"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the sixteenth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "In order to capture, one must set loose"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "欲擒故縱"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4921268"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the sixteenth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "In order to capture, one must set loose"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "欲擒故纵"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4921268"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the sixteenth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "In order to capture, one must set loose"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "欲擒故縱"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4921320"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the fifth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Loot a burning house"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "趁火打劫"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4921320"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the fifth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Loot a burning house"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "趁火打劫"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4921320"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the fifth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Loot a burning house"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "趁火打劫"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837725"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the thirty-third of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Let the enemy's own spy sow discord in the enemy camp"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "反間計"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837725"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the thirty-third of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Let the enemy's own spy sow discord in the enemy camp"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "反间计"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837725"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the thirty-third of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Let the enemy's own spy sow discord in the enemy camp"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "反間計"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q985823"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the third of the Thirty-Six Stratagems, harm people under the guise of others' hands"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kill with a borrowed sword"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "借刀杀人"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q985823"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the third of the Thirty-Six Stratagems, harm people under the guise of others' hands"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kill with a borrowed sword"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "借刀殺人"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q985820"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the thirty-first of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The beauty trap"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "美人计"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "symmetric key cipher where plaintext digits are combined with a pseudorandom cipher digit stream"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stream cipher"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "流密码"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q545002"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q545002"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spline interpolation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "样条插值"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q846955"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stream cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "RC4"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "李維斯特密码4"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q846955"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stream cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "RC4"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "RC4"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q846955"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stream cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "RC4"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "RC4"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q666421"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Trivium"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Trivium"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q860860"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the first of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Deceive the heavens to cross the ocean"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "瞞天過海"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q783541"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stream cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "A5/1"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "A5/1"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "symmetric key cipher where plaintext digits are combined with a pseudorandom cipher digit stream"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stream cipher"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "流密码"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "symmetric key cipher where plaintext digits are combined with a pseudorandom cipher digit stream"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stream cipher"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "流密碼"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q857309"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the thirty-sixth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "If all else fails, retreat"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "走為上計"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q857309"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the thirty-sixth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "If all else fails, retreat"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "走为上计"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q857309"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the thirty-sixth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "If all else fails, retreat"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "走為上計"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q879717"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Allied codename for any of several German teleprinter stream ciphers used during World War II"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fish"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Fish密码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q879717"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Allied codename for any of several German teleprinter stream ciphers used during World War II"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fish"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Fish密码"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q879717"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Allied codename for any of several German teleprinter stream ciphers used during World War II"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fish"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Fish密碼"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q985820"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the thirty-first of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The beauty trap"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "美人計"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q853135"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the second of the Thirty-Six Stratagems, overtaking the enemy’s rear to force it to withdraw troops"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Besiege Wèi to rescue Zhào"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "圍魏救趙"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q853135"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the second of the Thirty-Six Stratagems, overtaking the enemy’s rear to force it to withdraw troops"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Besiege Wèi to rescue Zhào"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "围魏救赵"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q853135"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the second of the Thirty-Six Stratagems, overtaking the enemy’s rear to force it to withdraw troops"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Besiege Wèi to rescue Zhào"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "圍魏救趙"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q985823"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the third of the Thirty-Six Stratagems, harm people under the guise of others' hands"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kill with a borrowed sword"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "借刀杀人"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q985820"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the thirty-first of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The beauty trap"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "美人計"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1329550"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "program analysis performed without actually executing programs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1329550"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "static program analysis"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "靜態程序分析"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4485156"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1329550"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "program analysis performed without actually executing programs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1329550"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "static program analysis"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "静态程序分析"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4485156"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1329550"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "program analysis performed without actually executing programs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1329550"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "static program analysis"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "靜態程序分析"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4485156"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1329550"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "program analysis performed without actually executing programs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1329550"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "static program analysis"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "靜態程式分析"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4485156"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1367487"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "effective strategy in game theory for the iterated prisoner's dilemma"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98097118"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tit for tat"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "投桃報李"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1118810"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1367487"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "effective strategy in game theory for the iterated prisoner's dilemma"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98097118"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tit for tat"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "以牙还牙"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1118810"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1367487"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "effective strategy in game theory for the iterated prisoner's dilemma"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98097118"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tit for tat"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "投桃報李"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98097118"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1367487"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "effective strategy in game theory for the iterated prisoner's dilemma"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98097118"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tit for tat"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "以牙还牙"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98097118"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q492162"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stream cipher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Rabbit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Rabbit加密算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q864718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q860860"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the first of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Deceive the heavens to cross the ocean"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "瞒天过海"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1367487"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "effective strategy in game theory for the iterated prisoner's dilemma"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98097118"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tit for tat"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "以牙還牙"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1118810"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1367487"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "effective strategy in game theory for the iterated prisoner's dilemma"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98097118"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tit for tat"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "以牙還牙"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98097118"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q986707"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the fourth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Wait at leisure while the enemy labors"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "以逸待勞"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q986707"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the fourth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Wait at leisure while the enemy labors"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "以逸待劳"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q986707"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the fourth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Wait at leisure while the enemy labors"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "以逸待勞"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q986705"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the ninth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Watch the fires burning across the river"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "隔岸觀火"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q986705"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the ninth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Watch the fires burning across the river"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "隔岸观火"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q986705"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the ninth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Watch the fires burning across the river"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "隔岸觀火"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q860860"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the first of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Deceive the heavens to cross the ocean"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "瞞天過海"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1006891"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-third of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Befriend a distant state and strike a neighbouring one"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "遠交近攻"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1006891"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-third of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Befriend a distant state and strike a neighbouring one"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "远交近攻"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1006891"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-third of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Befriend a distant state and strike a neighbouring one"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "远交近攻"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1006891"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the twenty-third of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Befriend a distant state and strike a neighbouring one"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "遠交近攻"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047430"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the thirty-fifth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Chain stratagems"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "連環計"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047430"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the thirty-fifth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Chain stratagems"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "连环计"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047430"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the thirty-fifth of the Thirty-Six Stratagems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Chain stratagems"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "連環計"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957502"
+      }
+    }
+  ]
+}

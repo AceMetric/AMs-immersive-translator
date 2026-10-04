@@ -1,0 +1,4454 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q139528213 wd:Q22676898 wd:Q106535803 wd:Q2174695 wd:Q28739684 wd:Q2172777 wd:Q3900737 wd:Q811367 wd:Q2423400 wd:Q3556678 wd:Q15401756 wd:Q3840065 wd:Q1413664 wd:Q108296019 wd:Q792548 wd:Q340755 wd:Q11898965 wd:Q790454 wd:Q810225 wd:Q810451 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q139528213 wd:Q22676898 wd:Q106535803 wd:Q2174695 wd:Q28739684 wd:Q2172777 wd:Q3900737 wd:Q811367 wd:Q2423400 wd:Q3556678 wd:Q15401756 wd:Q3840065 wd:Q1413664 wd:Q108296019 wd:Q792548 wd:Q340755 wd:Q11898965 wd:Q790454 wd:Q810225 wd:Q810451 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q139528213 wd:Q22676898 wd:Q106535803 wd:Q2174695 wd:Q28739684 wd:Q2172777 wd:Q3900737 wd:Q811367 wd:Q2423400 wd:Q3556678 wd:Q15401756 wd:Q3840065 wd:Q1413664 wd:Q108296019 wd:Q792548 wd:Q340755 wd:Q11898965 wd:Q790454 wd:Q810225 wd:Q810451 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "90ea75a4a27c2bd18c6e8e0335d0af59d3575ef604f994c8aade0479f270f990",
+  "responseSha256": "35992000dd4381a04ec56443a010cde25a18ea17c92a2cf131deee8e50cb9608",
+  "retrievedAt": "2026-10-04T05:04:12.078552+00:00",
+  "license": "CC0-1.0",
+  "domain": "physics",
+  "roots": [
+    {
+      "domain": "physics",
+      "id": "Q139528213",
+      "label": "ancient units of measurement",
+      "description": "units of measurement of ancient civilizations",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q22676898",
+      "label": "animal power",
+      "description": "",
+      "parents": [
+        "Q155640"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q106535803",
+      "label": "anthropogenic mass",
+      "description": "mass of inanimate solid objects made by humans in a given area",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q2174695",
+      "label": "antimuon",
+      "description": "antiparticle of the muon",
+      "parents": [
+        "Q43116"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q28739684",
+      "label": "antiquark or antilepton",
+      "description": "fundamental particle of which all antimatter is composed",
+      "parents": [
+        "Q43116"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q2172777",
+      "label": "antitau",
+      "description": "antiparticle of the tau lepton",
+      "parents": [
+        "Q43116"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q3900737",
+      "label": "apparent weight",
+      "description": "the apparently visible weight of an object, which may or may not differ from the real weight",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q811367",
+      "label": "assembly",
+      "description": "object consisting of multiple parts",
+      "parents": [
+        "Q1454986"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q2423400",
+      "label": "astigmatism",
+      "description": "refractive error in optics",
+      "parents": [
+        "Q639"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q3556678",
+      "label": "astronomical constant",
+      "description": "type of constant",
+      "parents": [
+        "Q173227"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q15401756",
+      "label": "astrophysical process",
+      "description": "type of physical process that occurs at an astronomical scale",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q3840065",
+      "label": "atomic mass",
+      "description": "rest mass of an atom in its ground state",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1413664",
+      "label": "audio frequency",
+      "description": "periodic vibration whose frequency is audible to the average human",
+      "parents": [
+        "Q11652"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q108296019",
+      "label": "average total charge of produced positive ions",
+      "description": "average total charge of positive ions produced by an ionizing charge particle along a path",
+      "parents": [
+        "Q1111"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q792548",
+      "label": "axion",
+      "description": "hypothetical elementary particle",
+      "parents": [
+        "Q43116"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q340755",
+      "label": "axle load",
+      "description": "total weight bearing on the roadway for all wheels connected to a given axle",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q11898965",
+      "label": "barrel distortion",
+      "description": "image distortion in photographs caused by inherent imperfections in the camera/lens optical system, resulting in an image where straight lines appear slightly bent, stronger near image borders, such that square objects appear rounded or \"bloated\"",
+      "parents": [
+        "Q639"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q790454",
+      "label": "baryogenesis",
+      "description": "hypothesized processes that could produce baryonic asymmetry, favoring matter (baryons) over antimatter (antibaryons)",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q810225",
+      "label": "base unit",
+      "description": "unit of measurement adopted by convention for a base quantity",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q810451",
+      "label": "bass",
+      "description": "sound, tone of low frequency or range",
+      "parents": [
+        "Q11652"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "physics branches 21..40",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q870"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "form of rail transport consisting of a series of connected vehicles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "train"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "铁路列车"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q334166"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q870"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "form of rail transport consisting of a series of connected vehicles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "train"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "鐵路列車"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q334166"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q870"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "form of rail transport consisting of a series of connected vehicles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "train"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "鐵路列車"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q334166"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q870"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "form of rail transport consisting of a series of connected vehicles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "train"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "铁路列车"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q334166"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q870"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "form of rail transport consisting of a series of connected vehicles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "train"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "铁路列车"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q140424465"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q870"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "form of rail transport consisting of a series of connected vehicles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "train"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "鐵路列車"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q140424465"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q870"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "form of rail transport consisting of a series of connected vehicles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "train"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "鐵路列車"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q140424465"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q870"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "form of rail transport consisting of a series of connected vehicles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "train"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "铁路列车"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q140424465"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6472"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "changes to a star over its lifespan"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stellar evolution"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "恆星演化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6449"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magnetic field generated by the motion of conductive plasma inside a star"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stellar magnetic field"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "恆星磁場"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42889"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mobile machine used for transport, whether it has an engine or not (eg, towed or prime mover), including wheeled and tracked vehicles, aircraft, watercraft, and spacecraft"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vehicle"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "載具"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q63981612"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42889"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mobile machine used for transport, whether it has an engine or not (eg, towed or prime mover), including wheeled and tracked vehicles, aircraft, watercraft, and spacecraft"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vehicle"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "载具"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q63981612"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42889"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mobile machine used for transport, whether it has an engine or not (eg, towed or prime mover), including wheeled and tracked vehicles, aircraft, watercraft, and spacecraft"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vehicle"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "載具"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q63981612"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42889"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mobile machine used for transport, whether it has an engine or not (eg, towed or prime mover), including wheeled and tracked vehicles, aircraft, watercraft, and spacecraft"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vehicle"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "載具"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q63981612"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16744"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process by which dense regions within molecular clouds in interstellar space, sometimes referred to as \"stellar nurseries\" or \"star-forming regions\", collapse and form stars"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "star formation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "恆星形成"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42889"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mobile machine used for transport, whether it has an engine or not (eg, towed or prime mover), including wheeled and tracked vehicles, aircraft, watercraft, and spacecraft"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vehicle"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "載具"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96251598"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42889"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mobile machine used for transport, whether it has an engine or not (eg, towed or prime mover), including wheeled and tracked vehicles, aircraft, watercraft, and spacecraft"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vehicle"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "载具"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96251598"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42889"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mobile machine used for transport, whether it has an engine or not (eg, towed or prime mover), including wheeled and tracked vehicles, aircraft, watercraft, and spacecraft"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vehicle"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "載具"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96251598"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42889"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mobile machine used for transport, whether it has an engine or not (eg, towed or prime mover), including wheeled and tracked vehicles, aircraft, watercraft, and spacecraft"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vehicle"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "載具"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96251598"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q40609"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "natural light display that occurs in the sky, primarily at high latitudes (near the Arctic and Antarctic on Earth) or even on other planets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "aurora"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "极光"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q40609"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "natural light display that occurs in the sky, primarily at high latitudes (near the Arctic and Antarctic on Earth) or even on other planets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "aurora"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "极光"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q40609"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "natural light display that occurs in the sky, primarily at high latitudes (near the Arctic and Antarctic on Earth) or even on other planets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "aurora"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "极光"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q119830"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sudden flash of increased brightness on the Sun, usually observed near its surface and in close proximity to a sunspot group"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "solar flare"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "耀斑"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q129890"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "significant release of plasma and magnetic field from the solar corona"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coronal mass ejection"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "日冕物质抛射"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q129890"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "significant release of plasma and magnetic field from the solar corona"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coronal mass ejection"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "日冕物质抛射"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q129890"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "significant release of plasma and magnetic field from the solar corona"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coronal mass ejection"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "日冕物质抛射"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q129890"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "significant release of plasma and magnetic field from the solar corona"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coronal mass ejection"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "日冕物質拋射"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q129890"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "significant release of plasma and magnetic field from the solar corona"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coronal mass ejection"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "日冕巨量噴發"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q48930"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "boundary between a magnetosphere and an ambient magnetized medium, for example when the solar wind encounters the magnetic field of Earth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bow shock"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "弓形震波"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130011"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "temporary disturbance of the Earth's magnetosphere caused by a disturbance in the interplanetary medium"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "geomagnetic storm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "磁暴"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130011"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "temporary disturbance of the Earth's magnetosphere caused by a disturbance in the interplanetary medium"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "geomagnetic storm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "磁暴"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130011"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "temporary disturbance of the Earth's magnetosphere caused by a disturbance in the interplanetary medium"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "geomagnetic storm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "磁暴"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130011"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "temporary disturbance of the Earth's magnetosphere caused by a disturbance in the interplanetary medium"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "geomagnetic storm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "磁暴"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130011"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "temporary disturbance of the Earth's magnetosphere caused by a disturbance in the interplanetary medium"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "geomagnetic storm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "磁暴"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q125993"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cause of changes in luminosity of many types of pulsating variable stars"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Κ mechanism"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Κ機制"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q125993"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cause of changes in luminosity of many types of pulsating variable stars"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Κ mechanism"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Κ机制"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q125993"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cause of changes in luminosity of many types of pulsating variable stars"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Κ mechanism"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Κ機制"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28739684"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fundamental particle of which all antimatter is composed"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28739684"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "antiquark or antilepton"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "反夸克與反輕子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12053157"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "two continuous flows of gas from the poles of a star"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bipolar outflow"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "偶極外向流"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17444909"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20747554"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of measurement used in the Byzantine Empire"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139528213"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Byzantine units of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "拜占庭计量体系"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139528213"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20747554"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of measurement used in the Byzantine Empire"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139528213"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Byzantine units of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "拜占庭计量体系"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139528213"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20747554"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of measurement used in the Byzantine Empire"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139528213"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Byzantine units of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "拜占庭计量体系"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139528213"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20747554"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of measurement used in the Byzantine Empire"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139528213"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Byzantine units of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "拜占庭計量體系"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139528213"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of physical process that occurs at an astronomical scale"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "astrophysical process"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "天体物理过程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047053"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "base unit of measurement within the Unified Code for Units of Measure specification"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q810225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "UCUM base unit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "计量单位统一代码基本单位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047053"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "base unit of measurement within the Unified Code for Units of Measure specification"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q810225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "UCUM base unit"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "計量單位統一代碼基本單位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42303986"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "structure enabling energy to flow between networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interconnector"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "聯網"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q181790"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "material made from a combination of two or more unlike substances"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "composite material"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "复合材料"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q137424905"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q181790"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "material made from a combination of two or more unlike substances"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "composite material"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "复合材料"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q137424905"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q181790"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "material made from a combination of two or more unlike substances"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "composite material"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "复合材料"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q137424905"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q181790"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "material made from a combination of two or more unlike substances"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "composite material"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "複合材料"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q137424905"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q181790"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "material made from a combination of two or more unlike substances"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "composite material"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "複合材料"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q137424905"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q197961"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cable assembly containing one or more optical fibers that are used to carry light"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optical fiber cable"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "光纖電纜"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q197961"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cable assembly containing one or more optical fibers that are used to carry light"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optical fiber cable"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "光纤线缆"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q197961"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cable assembly containing one or more optical fibers that are used to carry light"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optical fiber cable"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "光纤电缆"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q197961"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cable assembly containing one or more optical fibers that are used to carry light"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optical fiber cable"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "光纖電纜"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q223662"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one of the seven units of measurement that define the International System of Units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q810225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI base unit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "国际单位制基本单位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q223662"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one of the seven units of measurement that define the International System of Units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q810225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI base unit"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "国际单位制基本单位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q223662"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one of the seven units of measurement that define the International System of Units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q810225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI base unit"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "国际单位制基本单位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q223662"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one of the seven units of measurement that define the International System of Units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q810225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI base unit"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "國際單位制基本單位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q223662"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one of the seven units of measurement that define the International System of Units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q810225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI base unit"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "國際單位制基本單位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188447"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "assembly of one or more electrical conductor lines"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electrical cable"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "电缆"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188447"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "assembly of one or more electrical conductor lines"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electrical cable"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "网线"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188447"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "assembly of one or more electrical conductor lines"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electrical cable"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "网线"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188447"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "assembly of one or more electrical conductor lines"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electrical cable"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "網線"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188447"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "assembly of one or more electrical conductor lines"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electrical cable"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "網線"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "total of plant formations and plant communities"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vegetation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "植被"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q76419415"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "total of plant formations and plant communities"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vegetation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "植被"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q76419415"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "total of plant formations and plant communities"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vegetation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "植被"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q76419415"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "total of plant formations and plant communities"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vegetation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "植被"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q76419415"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "total of plant formations and plant communities"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vegetation"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "植被"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q76419415"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177895"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "refractive error characterized by the optics of the eye to focus a point object into a sharp focused image on the retina, has symptom blurred vision."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2423400"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "astigmatism"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "散光"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112193867"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177895"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "refractive error characterized by the optics of the eye to focus a point object into a sharp focused image on the retina, has symptom blurred vision."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2423400"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "astigmatism"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "散光"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112193867"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177895"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "refractive error characterized by the optics of the eye to focus a point object into a sharp focused image on the retina, has symptom blurred vision."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2423400"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "astigmatism"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "散光"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112193867"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177895"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "refractive error characterized by the optics of the eye to focus a point object into a sharp focused image on the retina, has symptom blurred vision."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2423400"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "astigmatism"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "散光"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112193867"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177895"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "refractive error characterized by the optics of the eye to focus a point object into a sharp focused image on the retina, has symptom blurred vision."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2423400"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "astigmatism"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "散光"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112965645"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177895"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "refractive error characterized by the optics of the eye to focus a point object into a sharp focused image on the retina, has symptom blurred vision."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2423400"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "astigmatism"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "散光"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112193867"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177895"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "refractive error characterized by the optics of the eye to focus a point object into a sharp focused image on the retina, has symptom blurred vision."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2423400"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "astigmatism"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "散光"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112965645"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177895"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "refractive error characterized by the optics of the eye to focus a point object into a sharp focused image on the retina, has symptom blurred vision."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2423400"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "astigmatism"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "散光"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112965645"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177895"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "refractive error characterized by the optics of the eye to focus a point object into a sharp focused image on the retina, has symptom blurred vision."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2423400"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "astigmatism"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "散光"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112965645"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177895"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "refractive error characterized by the optics of the eye to focus a point object into a sharp focused image on the retina, has symptom blurred vision."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2423400"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "astigmatism"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "散光"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112965645"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188533"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "zone of energetic charged particles around the planet Earth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Van Allen radiation belt"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "范艾伦辐射带"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188533"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "zone of energetic charged particles around the planet Earth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Van Allen radiation belt"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "范艾伦辐射带"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188533"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "zone of energetic charged particles around the planet Earth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Van Allen radiation belt"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "范艾伦辐射带"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188533"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "zone of energetic charged particles around the planet Earth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Van Allen radiation belt"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "范艾倫輻射帶"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q188533"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "zone of energetic charged particles around the planet Earth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Van Allen radiation belt"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "范艾倫輻射帶"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q900762"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "battery used to power the electric motors of a battery electric vehicle or hybrid electric vehicle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electric vehicle battery"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "电动车电池"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q900762"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "battery used to power the electric motors of a battery electric vehicle or hybrid electric vehicle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electric vehicle battery"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "电动车电池"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q900762"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "battery used to power the electric motors of a battery electric vehicle or hybrid electric vehicle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electric vehicle battery"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "電動車電池"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1921606"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data input device"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "keyboard"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "键盘"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413664"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "periodic vibration whose frequency is audible to the average human"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413664"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "audio frequency"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "声音频率"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1316958"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "shower of particles from a high energy cosmic ray hitting Earth's atmosphere"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "air shower"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "空气簇射"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1316958"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "shower of particles from a high energy cosmic ray hitting Earth's atmosphere"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "air shower"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "空气簇射"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1316958"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "shower of particles from a high energy cosmic ray hitting Earth's atmosphere"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "air shower"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "空氣簇射"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1316958"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "shower of particles from a high energy cosmic ray hitting Earth's atmosphere"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "air shower"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "空氣射叢"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "object consisting of multiple parts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "assembly"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "装配体"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "object consisting of multiple parts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "assembly"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "装配体"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "object consisting of multiple parts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "assembly"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "装配体"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q810938"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electronic system that manages a rechargeable battery (cell or battery pack)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "battery management system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "电池管理系统"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q810938"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electronic system that manages a rechargeable battery (cell or battery pack)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "battery management system"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "电池管理系统"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1356704"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "marine propulsion system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pump-jet"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "喷水推进器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q810451"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sound, tone of low frequency or range"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q810451"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bass"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "低音"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q504514"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2052084"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "antiparticle of the quark"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28739684"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "antiquark"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "反夸克"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q810451"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sound, tone of low frequency or range"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q810451"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bass"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "低音"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107102354"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1519204"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distortion of cosmic microwave background in galaxy clusters"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sunyaev-Zeldovich effect"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "苏尼亚耶夫-泽尔多维奇效应"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q751989"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1519204"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distortion of cosmic microwave background in galaxy clusters"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sunyaev-Zeldovich effect"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "苏尼亚耶夫-泽尔多维奇效应"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139528213"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3631579"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ancient Mesopotamian units of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "古代美索不達米亞的計量單位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2564410"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "violent reignition of thermonuclear fusion in a white dwarf star"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "carbon detonation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "碳引爆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2564410"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "violent reignition of thermonuclear fusion in a white dwarf star"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "carbon detonation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "碳引爆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2564410"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "violent reignition of thermonuclear fusion in a white dwarf star"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "carbon detonation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "碳引爆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2174695"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "antiparticle of the muon"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2174695"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "antimuon"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "反μ子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2174695"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "antiparticle of the muon"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2174695"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "antimuon"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "反μ子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2353491"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "astronomical phenomenon where rapidly rotating star has brighter poles and darker equator"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gravity darkening"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "重力昏暗"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2353491"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "astronomical phenomenon where rapidly rotating star has brighter poles and darker equator"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gravity darkening"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "重力昏暗"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2353491"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "astronomical phenomenon where rapidly rotating star has brighter poles and darker equator"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gravity darkening"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "重力昏暗"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4461574"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "point on the Hertzsprung-Russell diagram where a star leaves the main sequence after the exhaustion of its main fuel"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Turnoff point"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "主序轉折點"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2172777"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "antiparticle of the tau lepton"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2172777"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "antitau"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "反τ子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5518150"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process by which two galaxies join into one"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "galaxy merger"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "星系合併"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2397485"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a serial assembly of connected pieces, called links, typically made of metal, with an overall character similar to that of a rope in that it is flexible and curved"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "chain"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "鎖鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2467478"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2397485"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a serial assembly of connected pieces, called links, typically made of metal, with an overall character similar to that of a rope in that it is flexible and curved"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "chain"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "鎖鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4470686"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2397485"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a serial assembly of connected pieces, called links, typically made of metal, with an overall character similar to that of a rope in that it is flexible and curved"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "chain"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "鎖鏈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44409287"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3900737"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the apparently visible weight of an object, which may or may not differ from the real weight"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3900737"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "apparent weight"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "視重"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2423400"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "refractive error in optics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2423400"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "astigmatism"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "像散"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3840065"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rest mass of an atom in its ground state"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3840065"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "atomic mass"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "原子量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3840065"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rest mass of an atom in its ground state"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3840065"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "atomic mass"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "原子量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3840065"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rest mass of an atom in its ground state"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3840065"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "atomic mass"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "原子量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9617716"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "positron or any other antiparticle of a lepton"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28739684"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "antilepton"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "反輕子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2174695"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "antiparticle of the muon"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2174695"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "antimuon"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "反缪子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3556678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of constant"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3556678"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "astronomical constant"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "天文常數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6056358"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "random fluctuations in the intensity of radio waves of celestial origin"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interplanetary scintillation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "星际闪烁"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6056358"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "random fluctuations in the intensity of radio waves of celestial origin"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interplanetary scintillation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "星际闪烁"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6056358"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "random fluctuations in the intensity of radio waves of celestial origin"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interplanetary scintillation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "星际闪烁"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6056358"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "random fluctuations in the intensity of radio waves of celestial origin"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interplanetary scintillation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "星際閃爍"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q744654"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "change in the amount of radiation emitted by the Sun"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "solar variation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "太阳活动"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q744654"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "change in the amount of radiation emitted by the Sun"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "solar variation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "太阳活动"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q744654"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "change in the amount of radiation emitted by the Sun"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "solar variation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "太陽活動"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284657"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "beam of ionized matter flowing along the axis of a rotating astronomical object"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "astrophysical jet"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "相对论性喷流"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17444909"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q440311"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coins of Greece from the Archaic to Roman Imperial periods"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139528213"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ancient Greek coinage"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "古希腊钱币"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607056"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "overview about the ancient Greek units of measurement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139528213"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ancient Greek units of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "古希腊度量衡"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607056"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "overview about the ancient Greek units of measurement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139528213"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ancient Greek units of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "希腊计量体系"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607056"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "overview about the ancient Greek units of measurement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139528213"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ancient Greek units of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "古希腊度量衡"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607056"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "overview about the ancient Greek units of measurement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139528213"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ancient Greek units of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "希臘計量體系"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q469567"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rapid decrease in galactic cosmic ray intensity following a coronal mass ejection"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Forbush decrease"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "福布希衰減"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q810225"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of measurement adopted by convention for a base quantity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q810225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "base unit"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "基本单位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q340755"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "total weight bearing on the roadway for all wheels connected to a given axle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q340755"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "axle load"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "軸重"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q340755"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "total weight bearing on the roadway for all wheels connected to a given axle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q340755"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "axle load"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "轴重"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q340755"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "total weight bearing on the roadway for all wheels connected to a given axle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q340755"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "axle load"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "轴重"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q340755"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "total weight bearing on the roadway for all wheels connected to a given axle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q340755"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "axle load"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "軸重"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q810225"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of measurement adopted by convention for a base quantity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q810225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "base unit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "基本单位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q792548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hypothetical elementary particle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q792548"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "axion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "軸子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q790454"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hypothesized processes that could produce baryonic asymmetry, favoring matter (baryons) over antimatter (antibaryons)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q790454"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "baryogenesis"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "重子數產生"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q790454"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hypothesized processes that could produce baryonic asymmetry, favoring matter (baryons) over antimatter (antibaryons)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q790454"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "baryogenesis"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "重子数产生"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q790454"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hypothesized processes that could produce baryonic asymmetry, favoring matter (baryons) over antimatter (antibaryons)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q790454"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "baryogenesis"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "重子数产生"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q790454"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hypothesized processes that could produce baryonic asymmetry, favoring matter (baryons) over antimatter (antibaryons)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q790454"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "baryogenesis"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "重子數產生"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q419978"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "astrophysical process in which matter gravitationally collects into a massive object"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15401756"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "accretion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "吸积"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q751989"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q420116"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electric battery containing multiple cells within a casing"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q811367"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "battery pack"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "電池組"
+      }
+    }
+  ]
+}

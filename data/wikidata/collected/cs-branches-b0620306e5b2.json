@@ -1,0 +1,3635 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q130370792 wd:Q29791660 wd:Q1413465 wd:Q3408090 wd:Q3244670 wd:Q1420493 wd:Q1074854 wd:Q130651834 wd:Q26922914 wd:Q4477763 wd:Q2584477 wd:Q1128629 wd:Q5165192 wd:Q749893 wd:Q5165889 wd:Q26926645 wd:Q3354462 wd:Q2524691 wd:Q108934471 wd:Q2671694 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q130370792 wd:Q29791660 wd:Q1413465 wd:Q3408090 wd:Q3244670 wd:Q1420493 wd:Q1074854 wd:Q130651834 wd:Q26922914 wd:Q4477763 wd:Q2584477 wd:Q1128629 wd:Q5165192 wd:Q749893 wd:Q5165889 wd:Q26926645 wd:Q3354462 wd:Q2524691 wd:Q108934471 wd:Q2671694 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q130370792 wd:Q29791660 wd:Q1413465 wd:Q3408090 wd:Q3244670 wd:Q1420493 wd:Q1074854 wd:Q130651834 wd:Q26922914 wd:Q4477763 wd:Q2584477 wd:Q1128629 wd:Q5165192 wd:Q749893 wd:Q5165889 wd:Q26926645 wd:Q3354462 wd:Q2524691 wd:Q108934471 wd:Q2671694 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "b0620306e5b2de7cb1b89fd06983243d0e0528516d843e2356e7e0fc9e781d49",
+  "responseSha256": "87224a1a9a75f8737266225f20947d0a16aad315eaf1683e472fd73a9209ddf3",
+  "retrievedAt": "2026-10-04T05:08:26.596684+00:00",
+  "license": "CC0-1.0",
+  "domain": "cs",
+  "roots": [
+    {
+      "domain": "cs",
+      "id": "Q130370792",
+      "label": "complete search algorithm",
+      "description": "algorithm that will always find a solution if there is one to be found",
+      "parents": [
+        "Q755673"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q29791660",
+      "label": "complete tree",
+      "description": "tree data structure in which every level, except possibly the deepest, is entirely filled",
+      "parents": [
+        "Q223655"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1413465",
+      "label": "composite data type",
+      "description": "any data type which can be constructed in a program using the programming language's primitive data types and other composite types",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q3408090",
+      "label": "computer network protocol usually blocked by misconfigured firewalls",
+      "description": "",
+      "parents": [
+        "Q15836568"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q3244670",
+      "label": "computer numbering format",
+      "description": "internal representation of numeric values in a digital computer",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1420493",
+      "label": "conceptual graph",
+      "description": "formalism for knowledge representation",
+      "parents": [
+        "Q2479726"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1074854",
+      "label": "concurrency pattern",
+      "description": "types of design patterns",
+      "parents": [
+        "Q181156"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q130651834",
+      "label": "consensus-based optimization",
+      "description": "multi-agent derivative-free optimization method",
+      "parents": [
+        "Q2835765"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q26922914",
+      "label": "consistent numerical method",
+      "description": "numerical method which converge to 0 on the solutions of the desired well-posed problem",
+      "parents": [
+        "Q24262840"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q4477763",
+      "label": "constrained optimization",
+      "description": "class of optimization problems in mathematics, finance, linear programming, economics and cost modeling",
+      "parents": [
+        "Q24476018"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q2584477",
+      "label": "construction of the real numbers",
+      "description": "any constructive definition of the real numbers",
+      "parents": [
+        "Q3044470"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1128629",
+      "label": "content negotiation",
+      "description": "mechanisms, part of HTTP serves possibilty for different versions of a document (or more generally, representations of a resource) at the same URI",
+      "parents": [
+        "Q15836568"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q5165192",
+      "label": "contextual image classification",
+      "description": "classification based on contextual information in images",
+      "parents": [
+        "Q98526763"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q749893",
+      "label": "continuation-passing style",
+      "description": "programming style",
+      "parents": [
+        "Q244916"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q5165889",
+      "label": "control table",
+      "description": "data structure",
+      "parents": [
+        "Q186152"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q26926645",
+      "label": "convergent numerical method",
+      "description": "numerical method in which the approximations of the resolvent on perturbed data are abritrary close to the resolvent on the exact data",
+      "parents": [
+        "Q24262840"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q3354462",
+      "label": "copositive optimization",
+      "description": "",
+      "parents": [
+        "Q984063"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q2524691",
+      "label": "corecursion",
+      "description": "type of algorithm in computer science",
+      "parents": [
+        "Q264164"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q108934471",
+      "label": "count of subdirectories",
+      "description": "type of heuristic",
+      "parents": [
+        "Q201413"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q2671694",
+      "label": "counter mode",
+      "description": "algorithm which uses a block cipher to encrypt and decrypt information",
+      "parents": [
+        "Q154021"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "cs branches 101..120",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4812208"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multithread design pattern where the calling thread is notified when the reply arrives, thereby not blocking the call site while waiting for called code to finish"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "asynchronous method invocation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "异步方法调用"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5359789"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "encoding of negative numbers in binary number systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "signed number representation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "有符號數處理"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7661310"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer arithmetic which is used to overcome the problems of overflow and underflow in scientific computing"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "symmetric level-index arithmetic"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "對稱level-index代數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791660"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree data structure in which every level, except possibly the deepest, is entirely filled"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791660"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "complete tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "完全樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791660"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree data structure in which every level, except possibly the deepest, is entirely filled"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791660"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "complete tree"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "完全樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791664"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary tree data structure in which every level (depth), except possibly the deepest, is completely filled"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791660"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "complete binary tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "完全二元樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791664"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary tree data structure in which every level (depth), except possibly the deepest, is completely filled"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29791660"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "complete binary tree"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "完全二元樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3329233"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer representation of real numbers, in which a number is represented by its logarithm and a sign bit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logarithmic number system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "對數數字系統"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3121132"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "memory management method that uses static or global memory local to a thread"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thread-local storage"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "线程本地存储"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2584477"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "any constructive definition of the real numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2584477"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "construction of the real numbers"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "實數的構造"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "internal representation of numeric values in a digital computer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer numbering format"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "計算機編碼"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "internal representation of numeric values in a digital computer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer numbering format"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "计算机编码"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "internal representation of numeric values in a digital computer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer numbering format"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "計算機編碼"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2524691"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of algorithm in computer science"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2524691"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "corecursion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "共递归"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6821840"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "any architectural pattern that describes communication between software systems or subsystems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "messaging pattern"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "消息模式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6821840"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "any architectural pattern that describes communication between software systems or subsystems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "messaging pattern"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "消息模式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6821840"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "any architectural pattern that describes communication between software systems or subsystems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "messaging pattern"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "消息传递模式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6821840"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "any architectural pattern that describes communication between software systems or subsystems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "messaging pattern"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "訊息模式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5165889"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5165889"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "control table"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "控制表"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q31386861"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a set of RDF triples"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1420493"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "RDF graph"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "資源描述框架圖表"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q31386861"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a set of RDF triples"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1420493"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "RDF graph"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "资源描述框架图表"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3990847"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a method for efficient parallel processing in computer programs (pre-creating threads and reusing them as tasks occur, reducing overhead of thread creation and destruction, improving system performance, and optimizing resource management)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thread pool"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "线程池"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2712542"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "design pattern only locking if the locking criterion check indicates that locking is required"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "double-checked locking"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "双重检查锁定模式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2712542"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "design pattern only locking if the locking criterion check indicates that locking is required"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "double-checked locking"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "双重检查锁定模式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2712542"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "design pattern only locking if the locking criterion check indicates that locking is required"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "double-checked locking"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "雙重檢查鎖定模式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2712542"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "design pattern only locking if the locking criterion check indicates that locking is required"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "double-checked locking"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "双重检查锁定模式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q125292064"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2712542"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "design pattern only locking if the locking criterion check indicates that locking is required"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "double-checked locking"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "双重检查锁定模式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q125292064"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2712542"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "design pattern only locking if the locking criterion check indicates that locking is required"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "double-checked locking"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "雙重檢查鎖定模式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q125292064"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7300441"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "synchronization primitive in computing"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "readers–writer lock"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "读写锁"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4851131"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "design pattern that only executes an action on an object when the object is in a particular state"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "balking pattern"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "止步模式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4477763"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of optimization problems in mathematics, finance, linear programming, economics and cost modeling"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4477763"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "constrained optimization"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "约束优化问题"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1322511"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in computer programming, a type formed by combining other types"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413465"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algebraic data type"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "代數數據類型"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1322511"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in computer programming, a type formed by combining other types"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413465"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algebraic data type"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "代数类型"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1322511"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in computer programming, a type formed by combining other types"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413465"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algebraic data type"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "代数类型"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1322511"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in computer programming, a type formed by combining other types"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413465"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algebraic data type"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "代數型別"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "types of design patterns"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "concurrency pattern"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "併發型模式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "types of design patterns"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "concurrency pattern"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "并发型模式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "types of design patterns"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "concurrency pattern"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "併發型模式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2341242"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "design pattern for concurrency using asynchronous method invocation with a scheduler for handling requests"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "active object"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "主动对象"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2341242"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "design pattern for concurrency using asynchronous method invocation with a scheduler for handling requests"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "active object"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "主动對象"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2470517"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "composite data type; information block containing specific, identified fields"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413465"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "record"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "结构"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413465"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413465"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "any data type which can be constructed in a program using the programming language's primitive data types and other composite types"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413465"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "composite data type"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "複合型別"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413465"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "any data type which can be constructed in a program using the programming language's primitive data types and other composite types"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413465"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "composite data type"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "复合型别"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413465"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "any data type which can be constructed in a program using the programming language's primitive data types and other composite types"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413465"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "composite data type"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "複合型別"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1122024"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "event handling pattern for handling service requests delivered concurrently to a service handler by one or more inputs; the service handler then demultiplexes the incoming requests and dispatches them synchronously to the associated request handlers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "reactor pattern"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "反应器模式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q181156"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1122024"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "event handling pattern for handling service requests delivered concurrently to a service handler by one or more inputs; the service handler then demultiplexes the incoming requests and dispatches them synchronously to the associated request handlers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "reactor pattern"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "反应器模式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2470517"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "composite data type; information block containing specific, identified fields"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413465"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "record"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "记录"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413465"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1128629"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanisms, part of HTTP serves possibilty for different versions of a document (or more generally, representations of a resource) at the same URI"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1128629"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "content negotiation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "内容协商"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1128629"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanisms, part of HTTP serves possibilty for different versions of a document (or more generally, representations of a resource) at the same URI"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1128629"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "content negotiation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "内容协商"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1128629"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanisms, part of HTTP serves possibilty for different versions of a document (or more generally, representations of a resource) at the same URI"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1128629"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "content negotiation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "內容協商"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q749893"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming style"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q749893"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "continuation-passing style"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "續延傳遞風格"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q962139"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q749893"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming style"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q749893"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "continuation-passing style"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "延续传递方式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q962139"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q749893"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming style"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q749893"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "continuation-passing style"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "延续传递方式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q962139"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q749893"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming style"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q749893"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "continuation-passing style"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "延續傳遞方式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q962139"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2470517"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "composite data type; information block containing specific, identified fields"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413465"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "record"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "記錄"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1413465"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1420493"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "formalism for knowledge representation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1420493"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "conceptual graph"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "概念图"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1659648"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1427251"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "synchronization mechanism for enforcing limits on concurrent access to a resource"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lock"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "锁机制"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1427251"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "synchronization mechanism for enforcing limits on concurrent access to a resource"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lock"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "鎖機制"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q729138"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "datum of integral data type"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "integer data type"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "整数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q729138"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "datum of integral data type"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "integer data type"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "整数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q729138"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "datum of integral data type"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "integer data type"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "整數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1426138"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in concurrent programming, an object serves as a placeholder for a result that is initially unknown because the computation is incomplete (such an object is crucial in representing the final result during ongoing or not-yet-started computations)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "future"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "将来和承诺"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1426138"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in concurrent programming, an object serves as a placeholder for a result that is initially unknown because the computation is incomplete (such an object is crucial in representing the final result during ongoing or not-yet-started computations)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "future"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "将来和承诺"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6486712"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1062162"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in concurrent programming, an object or module intended to be used safely by more than one thread"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "monitor"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "監視器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1062162"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in concurrent programming, an object or module intended to be used safely by more than one thread"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "monitor"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "管程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1062162"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in concurrent programming, an object or module intended to be used safely by more than one thread"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "monitor"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "監視器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1427251"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "synchronization mechanism for enforcing limits on concurrent access to a resource"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lock"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "锁"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1123036"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in computing, what carries out the scheduling activity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "scheduling"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "排程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1123036"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in computing, what carries out the scheduling activity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "scheduling"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "调度器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer format for representing rational numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "floating point"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "浮点数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer format for representing rational numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "floating point"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "浮点数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer format for representing rational numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "floating point"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "浮点数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer format for representing rational numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "floating point"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "浮點數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer format for representing rational numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "floating point"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "浮點數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q276582"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of binary encodings of decimal numbers where each decimal digit is represented by a fixed number of bits, usually four or eight. Special bit patterns are sometimes used for a sign or for other indications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary-coded decimal"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "二進碼十進數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q276582"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of binary encodings of decimal numbers where each decimal digit is represented by a fixed number of bits, usually four or eight. Special bit patterns are sometimes used for a sign or for other indications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary-coded decimal"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "二进码十进数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q276582"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of binary encodings of decimal numbers where each decimal digit is represented by a fixed number of bits, usually four or eight. Special bit patterns are sometimes used for a sign or for other indications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary-coded decimal"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "二进码十进数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q276582"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of binary encodings of decimal numbers where each decimal digit is represented by a fixed number of bits, usually four or eight. Special bit patterns are sometimes used for a sign or for other indications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary-coded decimal"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "二進碼十進數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q276582"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of binary encodings of decimal numbers where each decimal digit is represented by a fixed number of bits, usually four or eight. Special bit patterns are sometimes used for a sign or for other indications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary-coded decimal"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "二進碼十進數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q520734"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "undesirable computing scheduling scenario"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "priority inversion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "优先转置"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q621184"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q520734"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "undesirable computing scheduling scenario"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "priority inversion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "优先转置"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q520734"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "undesirable computing scheduling scenario"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "priority inversion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "优先转置"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2141565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q649900"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer format for representing real numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fixed-point arithmetic"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "定点数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q649900"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer format for representing real numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fixed-point arithmetic"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "定点"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q649900"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer format for representing real numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fixed-point arithmetic"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "定点"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q649900"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer format for representing real numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3244670"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fixed-point arithmetic"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "定點"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q59750"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding shortest paths by simultaneously searching from the source and destination until both searches meet"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130370792"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bidirectional search"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "双向搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q755673"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q59750"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding shortest paths by simultaneously searching from the source and destination until both searches meet"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130370792"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bidirectional search"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "双向搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q59750"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding shortest paths by simultaneously searching from the source and destination until both searches meet"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130370792"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bidirectional search"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "双向搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130370792"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q59750"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding shortest paths by simultaneously searching from the source and destination until both searches meet"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130370792"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bidirectional search"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "双向搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130370847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q576997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer network protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408090"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Stream Control Transmission Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "流控制传输协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3408090"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q616554"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "situation in computer system that occurs when multiple processes try to access a common resource"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "race condition"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "競爭危害"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q616554"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "situation in computer system that occurs when multiple processes try to access a common resource"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "race condition"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "竞争危害"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q616554"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "situation in computer system that occurs when multiple processes try to access a common resource"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "race condition"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "競爭危害"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state in which members are blocking each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deadlock"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "死锁"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state in which members are blocking each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deadlock"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "死锁"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state in which members are blocking each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deadlock"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "死鎖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state in which members are blocking each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deadlock"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "死鎖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state in which members are blocking each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deadlock"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "死锁"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1925224"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state in which members are blocking each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deadlock"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "死锁"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1925224"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state in which members are blocking each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deadlock"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "死鎖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1925224"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state in which members are blocking each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deadlock"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "死鎖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1925224"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state in which members are blocking each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deadlock"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "死锁"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2141565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state in which members are blocking each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deadlock"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "死锁"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2141565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state in which members are blocking each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deadlock"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "死鎖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2141565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state in which members are blocking each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deadlock"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "死鎖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2141565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state in which members are blocking each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deadlock"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "死锁"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110314665"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state in which members are blocking each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deadlock"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "死锁"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110314665"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state in which members are blocking each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deadlock"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "死鎖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110314665"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state in which members are blocking each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deadlock"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "死鎖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110314665"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state in which members are blocking each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deadlock"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "死锁"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q125292064"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state in which members are blocking each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deadlock"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "死锁"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q125292064"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state in which members are blocking each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deadlock"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "死鎖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q125292064"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state in which members are blocking each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deadlock"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "死鎖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q125292064"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state in which members are blocking each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deadlock"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "死锁"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q133286903"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state in which members are blocking each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deadlock"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "死锁"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q133286903"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state in which members are blocking each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deadlock"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "死鎖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q133286903"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623276"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "state in which members are blocking each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deadlock"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "死鎖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q133286903"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q277680"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm used for pathfinding and graph traversal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130370792"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "A* search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "A*搜寻算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q277680"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm used for pathfinding and graph traversal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130370792"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "A* search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "A*搜寻算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q277680"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm used for pathfinding and graph traversal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130370792"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "A* search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "A*搜寻算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130370792"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q277680"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm used for pathfinding and graph traversal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130370792"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "A* search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "A*搜寻算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130370867"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q423003"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer programming technique in which a process repeatedly checks to see if a condition is true"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "busy waiting"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "忙碌等待"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q423003"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer programming technique in which a process repeatedly checks to see if a condition is true"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1074854"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "busy waiting"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "忙碌等待"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131960212"
+      }
+    }
+  ]
+}

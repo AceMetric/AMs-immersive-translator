@@ -1,0 +1,2605 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q123142374 wd:Q78323458 wd:Q5198159 wd:Q3008657 wd:Q85208389 wd:Q28454683 wd:Q4388617 wd:Q28058114 wd:Q1783551 wd:Q123684284 wd:Q603944 wd:Q11774485 wd:Q4060699 wd:Q16766476 wd:Q123165441 wd:Q97366811 wd:Q41729162 wd:Q16000452 wd:Q124073149 wd:Q2533936 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q123142374 wd:Q78323458 wd:Q5198159 wd:Q3008657 wd:Q85208389 wd:Q28454683 wd:Q4388617 wd:Q28058114 wd:Q1783551 wd:Q123684284 wd:Q603944 wd:Q11774485 wd:Q4060699 wd:Q16766476 wd:Q123165441 wd:Q97366811 wd:Q41729162 wd:Q16000452 wd:Q124073149 wd:Q2533936 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q123142374 wd:Q78323458 wd:Q5198159 wd:Q3008657 wd:Q85208389 wd:Q28454683 wd:Q4388617 wd:Q28058114 wd:Q1783551 wd:Q123684284 wd:Q603944 wd:Q11774485 wd:Q4060699 wd:Q16766476 wd:Q123165441 wd:Q97366811 wd:Q41729162 wd:Q16000452 wd:Q124073149 wd:Q2533936 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "73855892472e020facf69368cc3072df0a292dc103b4ef0a955fb6122b8d230b",
+  "responseSha256": "d9300d1067098b95b8d68f2b264c2c38269465f12af1fc49ddfa36fc64907a22",
+  "retrievedAt": "2026-10-04T04:57:25.553568+00:00",
+  "license": "CC0-1.0",
+  "domain": "math",
+  "roots": [
+    {
+      "domain": "math",
+      "id": "Q123142374",
+      "label": "Cybenko's theorem",
+      "description": "",
+      "parents": [
+        "Q7894110"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q78323458",
+      "label": "cycle",
+      "description": "mathematical concept: chain that is closed",
+      "parents": [
+        "Q4504468"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q5198159",
+      "label": "cycle double cover",
+      "description": "object in graph theory",
+      "parents": [
+        "Q864377"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q3008657",
+      "label": "cylinder",
+      "description": "topological construction, a product with closed interval",
+      "parents": [
+        "Q179899"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q85208389",
+      "label": "C∞-algebra",
+      "description": "A∞-algebra, whose operations vanish when summed over shuffles",
+      "parents": [
+        "Q205464"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q28454683",
+      "label": "D-space",
+      "description": "topological space where, for every neighborhood assignment of that space, a cover can be created from the union of neighborhoods from the neighborhood assignment of some closed discrete subset of the space",
+      "parents": [
+        "Q179899"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q4388617",
+      "label": "Dantzig–Wolfe decomposition",
+      "description": "algorithm for solving linear programming problems with special structure",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q28058114",
+      "label": "data clustering algorithm",
+      "description": "algorithm used for cluster analysis",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q1783551",
+      "label": "data conversion",
+      "description": "conversion of digital data between formats",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q123684284",
+      "label": "data integrity loss",
+      "description": "information impact category of a security incident",
+      "parents": [
+        "Q217594"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q603944",
+      "label": "data transformation",
+      "description": "application of a function to each point in a data set",
+      "parents": [
+        "Q12202238"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q11774485",
+      "label": "De Rham differential",
+      "description": "",
+      "parents": [
+        "Q750432"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q4060699",
+      "label": "Deadlock prevention algorithms",
+      "description": "technique used in computer science",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q16766476",
+      "label": "decision tree learning",
+      "description": "algorithm that recursively splits data on attributes to build a tree for classification or regression",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q123165441",
+      "label": "decisional privacy",
+      "description": "privacy typology (Koops, 2017)",
+      "parents": [
+        "Q217594"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q97366811",
+      "label": "decomposable negation normal form",
+      "description": "",
+      "parents": [
+        "Q1152398"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q41729162",
+      "label": "decompression algorithm",
+      "description": "algorithm for modeling of inert gases entering and leaving body tissues as pressure changes",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q16000452",
+      "label": "decompression theory",
+      "description": "theoretical modelling of decompression physiology",
+      "parents": [
+        "Q486902"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q124073149",
+      "label": "DeepLab",
+      "description": "",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q2533936",
+      "label": "defect",
+      "description": "failure of some angles to add up to the expected amount of 360° or 180°, when such angles in the plane would",
+      "parents": [
+        "Q2912517"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "math branches 241..260",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28454683"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space where, for every neighborhood assignment of that space, a cover can be created from the union of neighborhoods from the neighborhood assignment of some closed discrete subset of the space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28454683"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "D-space"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "D空间"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28454683"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space where, for every neighborhood assignment of that space, a cover can be created from the union of neighborhoods from the neighborhood assignment of some closed discrete subset of the space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28454683"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "D-space"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "D空間"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17098361"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dictionary learning algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "K-SVD"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "K-SVD"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17098361"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dictionary learning algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "K-SVD"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "K-SVD"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28453861"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space in which, for every sequence of open covers 𝑈₁, 𝑈₂, …, there are finite sets 𝐹₁⊂𝑈₁, 𝐹₂⊂𝑈₂, … such that 𝐹₁∪𝐹₂∪⋯ covers the space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28454683"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Menger space"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "門格爾空間"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28453861"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space in which, for every sequence of open covers 𝑈₁, 𝑈₂, …, there are finite sets 𝐹₁⊂𝑈₁, 𝐹₂⊂𝑈₂, … such that 𝐹₁∪𝐹₂∪⋯ covers the space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28454683"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Menger space"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "门格尔空间"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17125612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data conversion that loses some information present in the input"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lossy data conversion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "有損資料轉換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17125612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data conversion that loses some information present in the input"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lossy data conversion"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "有损数据转换"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17125612"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data conversion that loses some information present in the input"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lossy data conversion"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "有損資料轉換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16766476"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm that recursively splits data on attributes to build a tree for classification or regression"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16766476"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decision tree learning"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "决策树学习"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q334384"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1277447"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of cluster analysis which seeks to build a hierarchy of clusters"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hierarchical clustering"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "层次聚类"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1136838"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "machine learning technique useful for dimensionality reduction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "self-organizing map"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "自组织映射"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard UNIX utility"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Iconv"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard UNIX utility"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard UNIX utility"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard UNIX utility"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard UNIX utility"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard UNIX utility"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Iconv"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4035705"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard UNIX utility"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4035705"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard UNIX utility"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4035705"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard UNIX utility"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4035705"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard UNIX utility"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4035705"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard UNIX utility"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Iconv"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18343316"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard UNIX utility"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18343316"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard UNIX utility"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18343316"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard UNIX utility"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18343316"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284678"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard UNIX utility"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "iconv"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18343316"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q166760"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "controlled conversion between the color representations of various devices"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "color management"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "色彩管理"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1114630"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data clustering algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "DBSCAN"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "DBSCAN"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q603944"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "application of a function to each point in a data set"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q603944"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data transformation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "轉型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047113"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q603944"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "application of a function to each point in a data set"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q603944"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data transformation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "轉型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2267705"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1275153"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "iterative method for finding maximum likelihood estimates in statistical models"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "expectation–maximization algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "最大期望算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q863988"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data pre-processing technique"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q603944"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data binning"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "数据分箱"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q352487"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "theory developed by Stephen Grossberg and Gail Carpenter on aspects of how the brain processes information"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Aadaptive resonance theory"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "自适应共振理论网络"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q166760"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "controlled conversion between the color representations of various devices"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "color management"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "色彩管理"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q310401"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Vector quantization algorithm that minimizes the sum of squared deviations between points and their nearest mean"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "k-means clustering"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "k平均算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q622825"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q310401"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Vector quantization algorithm that minimizes the sum of squared deviations between points and their nearest mean"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "k-means clustering"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "k平均算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q622825"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q310401"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Vector quantization algorithm that minimizes the sum of squared deviations between points and their nearest mean"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "k-means clustering"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "k平均算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q622825"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q310401"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Vector quantization algorithm that minimizes the sum of squared deviations between points and their nearest mean"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "k-means clustering"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "k平均算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q622825"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q310401"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Vector quantization algorithm that minimizes the sum of squared deviations between points and their nearest mean"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "k-means clustering"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "k平均演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q622825"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q310401"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Vector quantization algorithm that minimizes the sum of squared deviations between points and their nearest mean"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "k-means clustering"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "k平均算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q310401"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Vector quantization algorithm that minimizes the sum of squared deviations between points and their nearest mean"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "k-means clustering"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "k平均算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q310401"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Vector quantization algorithm that minimizes the sum of squared deviations between points and their nearest mean"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "k-means clustering"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "k平均算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q310401"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Vector quantization algorithm that minimizes the sum of squared deviations between points and their nearest mean"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "k-means clustering"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "k平均算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q310401"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Vector quantization algorithm that minimizes the sum of squared deviations between points and their nearest mean"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "k-means clustering"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "k平均演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q895499"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of functions to transform data"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q603944"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Power transform"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "博克斯－科克斯變換"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q603944"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q34132"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "surface formed by the points at a fixed distance from a given straight line called the axis of the cylinder; one of the most basic curvilinear geometric shapes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3008657"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cylinder"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "圆柱体"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q34132"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "surface formed by the points at a fixed distance from a given straight line called the axis of the cylinder; one of the most basic curvilinear geometric shapes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3008657"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cylinder"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "圆柱体"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q34132"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "surface formed by the points at a fixed distance from a given straight line called the axis of the cylinder; one of the most basic curvilinear geometric shapes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3008657"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cylinder"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "圓柱體"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1935806"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "clustering method in bioinformatics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "neighbor joining"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "邻接法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1935806"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "clustering method in bioinformatics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "neighbor joining"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "邻接法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1935806"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "clustering method in bioinformatics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "neighbor joining"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "鄰近連接法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2007847"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding density based clusters in spatial data"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "OPTICS algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "OPTICS"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6552455"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm in vector quantization to derive a good codebook"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Linde–Buzo–Gray algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Linde–Buzo–Gray算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6552455"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm in vector quantization to derive a good codebook"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Linde–Buzo–Gray algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Linde–Buzo–Gray算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6552455"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm in vector quantization to derive a good codebook"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Linde–Buzo–Gray algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Linde–Buzo–Gray算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6552455"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm in vector quantization to derive a good codebook"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Linde–Buzo–Gray algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Linde–Buzo–Gray演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3123248"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "resolving geographical coordinates to a street address"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "reverse geocoding"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "反座標化"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9067355"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "artificial neural network that mimics real neurons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spiking neural network"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "脉冲神经网络"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7523744"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "agglomerative hierarchical clustering method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "single-linkage clustering"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "单连接聚类"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "conversion of digital data between formats"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data conversion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "資料轉換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "conversion of digital data between formats"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data conversion"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "转换"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "conversion of digital data between formats"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data conversion"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "数据转换"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "conversion of digital data between formats"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data conversion"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "資料轉換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "conversion of digital data between formats"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data conversion"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "資料轉換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for labeling clusters on a grid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hoshen–Kopelman algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "霍森－科佩尔曼算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for labeling clusters on a grid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hoshen–Kopelman algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "霍森－科佩尔曼算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for labeling clusters on a grid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hoshen–Kopelman algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "霍森－科佩爾曼演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4835721"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "clustering algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "BIRCH"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "BIRCH"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6803557"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm used to determine the modes of distribution of probability of a dataset"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Mean-shift"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "均值漂移"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2976589"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "clustering methods"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spectral clustering"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "SVD"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1779497"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "agglomerative hierarchical clustering method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "UPGMA"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "UPGMA"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2976589"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "clustering methods"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spectral clustering"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "谱聚类算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1888734"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "direct digital-to-digital conversion of one encoding to another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transcoding"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "轉碼"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1888734"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "direct digital-to-digital conversion of one encoding to another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transcoding"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "转码"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1888734"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "direct digital-to-digital conversion of one encoding to another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transcoding"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "轉碼"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5198159"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "object in graph theory"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5198159"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cycle double cover"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "循环双覆盖猜想"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6031013"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Technique in information theory"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "information bottleneck method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "信息瓶颈"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5156437"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "agglomerative hierarchical clustering method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "complete-linkage clustering"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "全连接聚类"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5511111"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cluster analysis where membership of a data point in a cluster is fuzzy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fuzzy clustering"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "模糊聚类"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1346408"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "address geocoding, a process of finding associated geographic coordinates"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783551"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "address geocoding"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "座標化"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3333621"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "criterion applied in hierarchical cluster analysis"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ward's method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Ward法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13414807"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for choosing the initial values for the k-means clustering algorith"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "K-means++"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "K-means++算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13414807"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for choosing the initial values for the k-means clustering algorith"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "K-means++"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "K-means++算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13414807"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for choosing the initial values for the k-means clustering algorith"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "K-means++"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "K-means++算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7517234"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Measue of semantic similarity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SimRank"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "SimRank"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28058114"
+      }
+    }
+  ]
+}

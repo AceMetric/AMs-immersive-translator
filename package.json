@@ -1,6 +1,6 @@
 {
   "name": "am-academic-translator",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": true,
   "description": "保护公式与代码、支持本地模型的学术双语翻译插件",
   "license": "MIT",
@@ -14,7 +14,9 @@
     "test": "vitest run",
     "test:e2e": "playwright test",
     "glossary:validate": "node scripts/validate-glossary.mjs",
-    "glossary:fetch": "python3 scripts/fetch-wikidata.py && node scripts/split-glossaries.mjs",
+    "glossary:fetch": "python3 scripts/fetch-wikidata.py",
+    "glossary:target": "node scripts/validate-glossary.mjs --collection-target",
+    "glossary:benchmark": "node scripts/benchmark-glossary.mjs",
     "glossary:build": "node scripts/build-core.mjs",
     "release": "npm run zip && python3 scripts/package-release.py",
     "benchmark": "node scripts/benchmark.mjs",

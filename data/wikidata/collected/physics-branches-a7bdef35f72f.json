@@ -1,0 +1,3098 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q1501757 wd:Q1095907 wd:Q28530079 wd:Q28607529 wd:Q110748565 wd:Q1775715 wd:Q968594 wd:Q16815754 wd:Q2920313 wd:Q12764947 wd:Q2918240 wd:Q200924 wd:Q365535 wd:Q4227667 wd:Q193135 wd:Q25508474 wd:Q1468336 wd:Q1148098 wd:Q115238 wd:Q846510 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q1501757 wd:Q1095907 wd:Q28530079 wd:Q28607529 wd:Q110748565 wd:Q1775715 wd:Q968594 wd:Q16815754 wd:Q2920313 wd:Q12764947 wd:Q2918240 wd:Q200924 wd:Q365535 wd:Q4227667 wd:Q193135 wd:Q25508474 wd:Q1468336 wd:Q1148098 wd:Q115238 wd:Q846510 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q1501757 wd:Q1095907 wd:Q28530079 wd:Q28607529 wd:Q110748565 wd:Q1775715 wd:Q968594 wd:Q16815754 wd:Q2920313 wd:Q12764947 wd:Q2918240 wd:Q200924 wd:Q365535 wd:Q4227667 wd:Q193135 wd:Q25508474 wd:Q1468336 wd:Q1148098 wd:Q115238 wd:Q846510 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "a7bdef35f72f972edeef287adae5edfafc5f027c380f6af6b2a1c5d6741c6571",
+  "responseSha256": "708b430c95be4d9e3bc60060be55bee5bd71bf7dd5be3498d995f608db62c614",
+  "retrievedAt": "2026-10-04T05:05:45.635630+00:00",
+  "license": "CC0-1.0",
+  "domain": "physics",
+  "roots": [
+    {
+      "domain": "physics",
+      "id": "Q1501757",
+      "label": "Nyquist frequency",
+      "description": "in signal processing, the frequency whose cycle-length is twice the interval between samples",
+      "parents": [
+        "Q11652"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1095907",
+      "label": "objective-collapse theory",
+      "description": "theory according to which wavefunction collapse happens under well-defined, objective conditions",
+      "parents": [
+        "Q9357058"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q28530079",
+      "label": "observable universe",
+      "description": "part of any universe instance observable from any particular location in it",
+      "parents": [
+        "Q1454986"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q28607529",
+      "label": "obsolete units of measurement",
+      "description": "unit of measurement no longer used in contemporary times or discouraged from use",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q110748565",
+      "label": "off-system measurement unit",
+      "description": "measurement unit not belonging to a given system of units",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1775715",
+      "label": "Oort constants",
+      "description": "empirically derived parameters A and B that characterize the differential rotational properties of our galaxy at the position of our Sun",
+      "parents": [
+        "Q173227"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q968594",
+      "label": "operating empty weight",
+      "description": "weight of an aircraft without usable fuel or payload",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q16815754",
+      "label": "operating weight",
+      "description": "weight of a vehicle or machine including operator, fuel, and operational equipment",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q2920313",
+      "label": "optical system",
+      "description": "assembly of optical components, or equivalently a system consisting of regions of material with varying refractive indices",
+      "parents": [
+        "Q1454986"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q12764947",
+      "label": "orbital angular momentum",
+      "description": "angular momentum due to orbital motion",
+      "parents": [
+        "Q161254"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q2918240",
+      "label": "orbital decay",
+      "description": "process that leads to gradual decrease of the distance between two orbiting bodies",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q200924",
+      "label": "orbital speed",
+      "description": "speed at which it orbits around the barycenter of a system, usually around a more massive body. It can be used to refer to either the mean orbital speed, i.e. the average speed as it completes an orbit, or the speed at a particular point in its orbit",
+      "parents": [
+        "Q11465"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q365535",
+      "label": "oscillator",
+      "description": "physical system that undergoes repetitive cyclic change",
+      "parents": [
+        "Q1454986"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q4227667",
+      "label": "oscillatory system",
+      "description": "physical system in which free oscillations can exist",
+      "parents": [
+        "Q1454986"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q193135",
+      "label": "osmotic pressure",
+      "description": "measure of the tendency of a solution to take in pure solvent by osmosis",
+      "parents": [
+        "Q39552"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q25508474",
+      "label": "output power",
+      "description": "",
+      "parents": [
+        "Q25342"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1468336",
+      "label": "overburden pressure",
+      "description": "stress imposed on soil or rock by overlying material",
+      "parents": [
+        "Q39552"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1148098",
+      "label": "overtone",
+      "description": "component of a wave whose frequency is a multiple of the fundamental frequency",
+      "parents": [
+        "Q11652"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q115238",
+      "label": "pair production",
+      "description": "interaction of photon with matter resulting into ejection of electron-positron pair",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q846510",
+      "label": "parity violation",
+      "description": "",
+      "parents": [
+        "Q903282"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "physics branches 341..360",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q97357879"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum mechanical theory of spontaneous collapse"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1095907"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "continuous spontaneous localization model"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "連續自發定域模型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1095907"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16782623"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "historical units of measurement used in England up to 1826, when they were replaced by Imperial units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "English unit of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "英格蘭制單位"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q932268"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16782623"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "historical units of measurement used in England up to 1826, when they were replaced by Imperial units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "English unit of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "英制计量单位"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q932268"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16782623"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "historical units of measurement used in England up to 1826, when they were replaced by Imperial units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "English unit of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "英制度量衡單位"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q932268"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13582667"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "obsolete unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram-force per square centimetre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "工程大气压"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4173969"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13582667"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "obsolete unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram-force per square centimetre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "工程大气压"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28608087"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of measure based on the human body or attributes/abilities of a human"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "human-based unit of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "基于人的计量单位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28608087"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of measure based on the human body or attributes/abilities of a human"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "human-based unit of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "基於人的度量衡單位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17005542"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical process for creating a positron-electron pair from the collision of two photons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115238"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Breit–Wheeler process"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "布萊特-惠勒過程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16670987"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of pressure exerted by large dissolved molecules in biological fluids"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q193135"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "oncotic pressure"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "膠體滲透壓"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of measurement no longer used in contemporary times or discouraged from use"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "obsolete units of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "废弃的计量单位"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27949697"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of measurement no longer used in contemporary times or discouraged from use"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "obsolete units of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "廢棄的度量衡單位"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27949697"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1577757"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "link"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "令 (單位)"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1577757"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of length"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "link"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "令 (單位)"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1751850"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "instrument using light waves for image viewing"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2920313"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optical instrument"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "光学仪器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1775715"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "empirically derived parameters A and B that characterize the differential rotational properties of our galaxy at the position of our Sun"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1775715"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Oort constants"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "歐特常數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1331774"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lowest frequency of a periodic waveform, such as sound"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1148098"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fundamental frequency"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "基本頻率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105495868"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1331774"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lowest frequency of a periodic waveform, such as sound"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1148098"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fundamental frequency"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "基本频率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105495868"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1331774"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lowest frequency of a periodic waveform, such as sound"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1148098"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fundamental frequency"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "基本頻率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105495868"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12764947"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "angular momentum due to orbital motion"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12764947"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "orbital angular momentum"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "轨道角动量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12764947"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "angular momentum due to orbital motion"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12764947"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "orbital angular momentum"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "軌道角動量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2918240"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process that leads to gradual decrease of the distance between two orbiting bodies"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2918240"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "orbital decay"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "軌道衰減"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2918240"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process that leads to gradual decrease of the distance between two orbiting bodies"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2918240"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "orbital decay"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "轨道衰变"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2918240"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process that leads to gradual decrease of the distance between two orbiting bodies"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2918240"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "orbital decay"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "軌道衰變"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6752313"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "photographic system or mode where the user directly sets focus distance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2920313"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "manual focus"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "手動對焦"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20888925"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1161819"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of measurement used in Ancient Rome"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ancient Roman units of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "古罗马计量单位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1161819"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of measurement used in Ancient Rome"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ancient Roman units of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "古罗马计量单位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1161819"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of measurement used in Ancient Rome"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ancient Roman units of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "古罗马计量单位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1161819"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of measurement used in Ancient Rome"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ancient Roman units of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "古羅馬計量單位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1259123"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electronic devices or components that generate electrical voltages with a characteristic time course"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q365535"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "signal generator"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "信号发生器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1259123"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electronic devices or components that generate electrical voltages with a characteristic time course"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q365535"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "signal generator"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "信号发生器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1259123"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electronic devices or components that generate electrical voltages with a characteristic time course"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q365535"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "signal generator"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "信號發生器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1751850"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "instrument using light waves for image viewing"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2920313"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optical instrument"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "光学仪器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1751850"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "instrument using light waves for image viewing"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2920313"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optical instrument"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "光學儀器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1468336"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stress imposed on soil or rock by overlying material"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1468336"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "overburden pressure"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "盖层压力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2920313"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "assembly of optical components, or equivalently a system consisting of regions of material with varying refractive indices"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2920313"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optical system"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "光學系統"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3953133"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass unit in the apothecaries' system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "apothecaries' scruple"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "吩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3647172"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3953133"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass unit in the apothecaries' system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "apothecaries' scruple"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "吩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3953133"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass unit in the apothecaries' system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "apothecaries' scruple"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "吩"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1572918"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "temperature-controlled chamber used to maintain the quartz crystal in electronic crystal oscillators at a constant temperature, in order to prevent changes in the frequency due to variations in ambient temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q365535"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "crystal oven"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "恆溫箱"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1501757"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in signal processing, the frequency whose cycle-length is twice the interval between samples"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1501757"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Nyquist frequency"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "奈奎斯特频率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1501757"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in signal processing, the frequency whose cycle-length is twice the interval between samples"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1501757"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Nyquist frequency"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "奈奎斯特频率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1501757"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in signal processing, the frequency whose cycle-length is twice the interval between samples"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1501757"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Nyquist frequency"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "奈奎斯特頻率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7164652"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "objective collapse theory that uncertainty in spacetime curvature causes collapse of the quantum state"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1095907"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Penrose interpretation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "潘洛斯坍縮模型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9357058"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3984071"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "objective collapse theory in quantum mechanics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1095907"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ghirardi–Rimini–Weber theory"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "GRW理论"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1095907"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3984071"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "objective collapse theory in quantum mechanics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1095907"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ghirardi–Rimini–Weber theory"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "吉拉迪-里米尼-伟柏理论"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1095907"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3984071"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "objective collapse theory in quantum mechanics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1095907"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ghirardi–Rimini–Weber theory"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "吉拉迪-里米尼-偉柏理論"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1095907"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q653294"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optical system diffracting light into several components based on interference"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2920313"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "diffraction grating"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "衍射光栅"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q653294"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optical system diffracting light into several components based on interference"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2920313"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "diffraction grating"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "衍射光栅"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q653294"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optical system diffracting light into several components based on interference"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2920313"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "diffraction grating"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "繞射光柵"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q576006"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "string instrument technique"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1148098"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "string harmonic"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "吉他泛音"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50825544"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1095907"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "theory according to which wavefunction collapse happens under well-defined, objective conditions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1095907"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "objective-collapse theory"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "客觀坍縮理論"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q901448"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "obsolete unit measuring either one mole of photons or the energy of one mole of photons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "einstein"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "愛因斯坦 (單位)"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q968594"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "weight of an aircraft without usable fuel or payload"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q968594"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "operating empty weight"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "空重"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12453"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1142960"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optical system where refraction and reflection are combined"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2920313"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "catadioptric system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "折反射望远镜"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1142960"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optical system where refraction and reflection are combined"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2920313"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "catadioptric system"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "折反射望远镜"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1142960"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optical system where refraction and reflection are combined"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2920313"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "catadioptric system"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "折反射望遠鏡"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q909066"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "obsolete unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "technical atmosphere"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "工程大气压"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4173969"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q909066"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "obsolete unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "technical atmosphere"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "工程大气压"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4173969"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q909066"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "obsolete unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "technical atmosphere"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "工程大氣壓"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4173969"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q909066"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "obsolete unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "technical atmosphere"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "工程大气压"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q909066"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "obsolete unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "technical atmosphere"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "工程大气压"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q909066"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "obsolete unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "technical atmosphere"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "工程大氣壓"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q653294"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optical system diffracting light into several components based on interference"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2920313"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "diffraction grating"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "衍射光栅"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q909066"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "obsolete unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "technical atmosphere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "工程大气压"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4173969"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q909066"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "obsolete unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "technical atmosphere"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "工程大气压"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q909066"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "obsolete unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "technical atmosphere"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "工程大气压"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q909066"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "obsolete unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "technical atmosphere"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "工程大氣壓"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q909066"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "obsolete unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "technical atmosphere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "工程大气压"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q909066"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "obsolete unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "technical atmosphere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "工程大气压"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q902274"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of luminous intensity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "candlepower"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "烛光"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1148098"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "component of a wave whose frequency is a multiple of the fundamental frequency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1148098"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "overtone"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "谐波"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1055293"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1148098"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "component of a wave whose frequency is a multiple of the fundamental frequency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1148098"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "overtone"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "谐波"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1055293"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1148098"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "component of a wave whose frequency is a multiple of the fundamental frequency"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1148098"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "overtone"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "諧波"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1055293"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q829360"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "idealized concept of a pendulum"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q365535"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pendulum"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "钟摆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q193946"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115238"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interaction of photon with matter resulting into ejection of electron-positron pair"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115238"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pair production"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "成對產生"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115238"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interaction of photon with matter resulting into ejection of electron-positron pair"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115238"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pair production"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "成对产生"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115238"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interaction of photon with matter resulting into ejection of electron-positron pair"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115238"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pair production"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "成对产生"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115238"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interaction of photon with matter resulting into ejection of electron-positron pair"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115238"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pair production"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "成對產生"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115238"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interaction of photon with matter resulting into ejection of electron-positron pair"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115238"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pair production"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "成對產生"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q221392"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spherical region of the Universe comprising all matter that can be observed from Earth at the present time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28530079"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "observable universe"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "可觀測宇宙"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28530079"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q221392"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spherical region of the Universe comprising all matter that can be observed from Earth at the present time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28530079"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "observable universe"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "可观测宇宙"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28530079"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q221392"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spherical region of the Universe comprising all matter that can be observed from Earth at the present time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28530079"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "observable universe"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "可观测宇宙"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28530079"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q221392"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spherical region of the Universe comprising all matter that can be observed from Earth at the present time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28530079"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "observable universe"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "可觀測宇宙"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28530079"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q221392"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spherical region of the Universe comprising all matter that can be observed from Earth at the present time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28530079"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "observable universe"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "可觀測宇宙"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28530079"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q521994"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "historical unit of area"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hide"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "海德 (單位)"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1371562"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q521994"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "historical unit of area"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hide"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "海德 (單位)"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16782623"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q521994"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "historical unit of area"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hide"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "海德 (單位)"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q353011"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Historical German units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "obsolete German units of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "德国度量衡"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q353011"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Historical German units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "obsolete German units of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "德国度量衡"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q353011"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Historical German units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "obsolete German units of measurement"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "德國度量衡"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q571589"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lens, mirror or mirror-lens optical system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2920313"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "condenser"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "聚光镜"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q249997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electronic circuit that produces a repetitive, oscillating electronic signal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q365535"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electronic oscillator"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "振盪器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q200924"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "speed at which it orbits around the barycenter of a system, usually around a more massive body. It can be used to refer to either the mean orbital speed, i.e. the average speed as it completes an orbit, or the speed at a particular point in its orbit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q200924"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "orbital speed"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "轨道速度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q200924"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "speed at which it orbits around the barycenter of a system, usually around a more massive body. It can be used to refer to either the mean orbital speed, i.e. the average speed as it completes an orbit, or the speed at a particular point in its orbit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q200924"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "orbital speed"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "轨道速度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q200924"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "speed at which it orbits around the barycenter of a system, usually around a more massive body. It can be used to refer to either the mean orbital speed, i.e. the average speed as it completes an orbit, or the speed at a particular point in its orbit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q200924"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "orbital speed"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "轨道速度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q200924"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "speed at which it orbits around the barycenter of a system, usually around a more massive body. It can be used to refer to either the mean orbital speed, i.e. the average speed as it completes an orbit, or the speed at a particular point in its orbit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q200924"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "orbital speed"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "軌道速度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q200924"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "speed at which it orbits around the barycenter of a system, usually around a more massive body. It can be used to refer to either the mean orbital speed, i.e. the average speed as it completes an orbit, or the speed at a particular point in its orbit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q200924"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "orbital speed"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "軌道速度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q193135"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of the tendency of a solution to take in pure solvent by osmosis"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q193135"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "osmotic pressure"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "滲透壓"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q193135"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of the tendency of a solution to take in pure solvent by osmosis"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q193135"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "osmotic pressure"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "渗透压"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q193135"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of the tendency of a solution to take in pure solvent by osmosis"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q193135"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "osmotic pressure"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "渗透压"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q193135"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of the tendency of a solution to take in pure solvent by osmosis"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q193135"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "osmotic pressure"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "滲透壓"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q193135"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measure of the tendency of a solution to take in pure solvent by osmosis"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q193135"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "osmotic pressure"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "滲透壓"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q846510"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q846510"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parity violation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "宇稱不守恆"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q846510"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q846510"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parity violation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "宇称不守恒"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q846510"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q846510"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parity violation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "宇稱不守恆"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2534228"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "obsolete unit of length"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "废弃的长度单位"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28607529"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2534228"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "obsolete unit of length"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "廢棄的長度單位"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2221 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q1421651 wd:Q1422324 wd:Q109324772 wd:Q2010006 wd:Q61000461 wd:Q7708427 wd:Q607699 wd:Q9358874 wd:Q4129836 wd:Q638123 wd:Q1888734 wd:Q1210082 wd:Q1118810 wd:Q3133388 wd:Q7851097 wd:Q7851772 wd:Q957589 wd:Q4489310 wd:Q232976 wd:Q10880330 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q1421651 wd:Q1422324 wd:Q109324772 wd:Q2010006 wd:Q61000461 wd:Q7708427 wd:Q607699 wd:Q9358874 wd:Q4129836 wd:Q638123 wd:Q1888734 wd:Q1210082 wd:Q1118810 wd:Q3133388 wd:Q7851097 wd:Q7851772 wd:Q957589 wd:Q4489310 wd:Q232976 wd:Q10880330 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q1421651 wd:Q1422324 wd:Q109324772 wd:Q2010006 wd:Q61000461 wd:Q7708427 wd:Q607699 wd:Q9358874 wd:Q4129836 wd:Q638123 wd:Q1888734 wd:Q1210082 wd:Q1118810 wd:Q3133388 wd:Q7851097 wd:Q7851772 wd:Q957589 wd:Q4489310 wd:Q232976 wd:Q10880330 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "88ebfa28608c05c825c404ce99491db90fa322c2d6123318bffdb836c4afe936",
+  "responseSha256": "6974fdb67267fcf30f33c471e17f54854078336332828665bf4413d12762537d",
+  "retrievedAt": "2026-10-04T05:10:02.525232+00:00",
+  "license": "CC0-1.0",
+  "domain": "cs",
+  "roots": [
+    {
+      "domain": "cs",
+      "id": "Q1421651",
+      "label": "team software process",
+      "description": "method for software development teams for self-optimization",
+      "parents": [
+        "Q24476018"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1422324",
+      "label": "Telecommunications Management Network",
+      "description": "protocol model",
+      "parents": [
+        "Q15836568"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q109324772",
+      "label": "Templar Cipher",
+      "description": "",
+      "parents": [
+        "Q4681865"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q2010006",
+      "label": "ternary search",
+      "description": "technique in computer science for finding the minimum or maximum of a unimodal function",
+      "parents": [
+        "Q755673"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q61000461",
+      "label": "testnet",
+      "description": "instance of a blockchain used for testing and experimentation",
+      "parents": [
+        "Q20514253"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7708427",
+      "label": "text parser",
+      "description": "a computer program inside a game which converts user input to computer understandable commands",
+      "parents": [
+        "Q12758225"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q607699",
+      "label": "three-body problem",
+      "description": "classical mechanics problem of three massive point particles interacting via Newtonian gravity; special case of the 𝑛‐body problem for 𝑛=3",
+      "parents": [
+        "Q1199050"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q9358874",
+      "label": "Tlenofon",
+      "description": "VoIP service from Aiton Caldwell",
+      "parents": [
+        "Q81945"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q4129836",
+      "label": "top type",
+      "description": "the universal type, sometimes called the universal supertype as all other types in any given type system are subtypes of top; the type which contains every possible object in the type system of interest",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q638123",
+      "label": "trade-off",
+      "description": "situation requiring choice of balance between desirable but incompatible features; a compromise in design or decision making",
+      "parents": [
+        "Q984063"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1888734",
+      "label": "transcoding",
+      "description": "direct digital-to-digital conversion of one encoding to another",
+      "parents": [
+        "Q1783551"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1210082",
+      "label": "tree traversal",
+      "description": "class of algorithms",
+      "parents": [
+        "Q755673"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1118810",
+      "label": "trigger strategy",
+      "description": "class of strategies employed in a repeated non-cooperative game",
+      "parents": [
+        "Q1546627"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q3133388",
+      "label": "trunk",
+      "description": "main branch (version) of a file tree under revision control",
+      "parents": [
+        "Q925385"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7851097",
+      "label": "Tucker decomposition",
+      "description": "tensor decomposition",
+      "parents": [
+        "Q30103009"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7851772",
+      "label": "Tuitalk",
+      "description": "free Voip client made by Argela",
+      "parents": [
+        "Q81945"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q957589",
+      "label": "tunneling protocol",
+      "description": "computer protocol that allows a network user to access or provide a network service that the underlying network does not support or provide directly",
+      "parents": [
+        "Q15836568"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q4489310",
+      "label": "Turing reduction",
+      "description": "concept in computability theory",
+      "parents": [
+        "Q1197709"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q232976",
+      "label": "two-body problem",
+      "description": "to determine the motion of two point particles that interact only with each other",
+      "parents": [
+        "Q1199050"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q10880330",
+      "label": "two-dimensional array",
+      "description": "",
+      "parents": [
+        "Q186152"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "cs branches 601..620",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28026105"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Microsoft network tunneling protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957589"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "IP-HTTPS"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "IP-HTTPS"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957589"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2403634"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ratio of the pitch circles of meshing gears, determining ratios of speed and torque"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gear ratio"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "齒輪比"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2403634"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ratio of the pitch circles of meshing gears, determining ratios of speed and torque"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gear ratio"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "机械效益"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2403634"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ratio of the pitch circles of meshing gears, determining ratios of speed and torque"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gear ratio"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "机械效益"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2403634"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ratio of the pitch circles of meshing gears, determining ratios of speed and torque"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gear ratio"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "傳動比"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12871890"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "links two network-restricted computers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957589"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "HTTP tunnel"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "HTTP隧道"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5609214"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trigger strategy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1118810"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "grim trigger"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "冷酷触发策略"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1118810"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5609214"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trigger strategy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1118810"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "grim trigger"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "冷酷觸發策略"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1118810"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5609214"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trigger strategy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1118810"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "grim trigger"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "冷酷触发策略"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98097118"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5609214"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trigger strategy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1118810"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "grim trigger"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "冷酷觸發策略"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98097118"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7598329"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "table for decoding a linear code"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10880330"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard array"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "标准阵列"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7598329"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "table for decoding a linear code"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10880330"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard array"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "标准阵列"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7598329"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "table for decoding a linear code"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10880330"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard array"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "标准阵列"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7598329"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "table for decoding a linear code"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10880330"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard array"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "標準陣列"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2564682"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "special case of the two-body problem"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232976"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kepler problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "克卜勒問題"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2564682"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "special case of the two-body problem"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232976"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kepler problem"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "开普勒问题"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2564682"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "special case of the two-body problem"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232976"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kepler problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "克卜勒问题"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2564682"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "special case of the two-body problem"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232976"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kepler problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "克卜勒問題"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4489310"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "concept in computability theory"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4489310"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Turing reduction"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "圖靈歸約"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3133388"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "main branch (version) of a file tree under revision control"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3133388"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trunk"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "主干"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3133388"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "main branch (version) of a file tree under revision control"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3133388"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trunk"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "主干 (软件)"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3133388"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "main branch (version) of a file tree under revision control"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3133388"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trunk"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "主干"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3133388"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "main branch (version) of a file tree under revision control"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3133388"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trunk"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "主幹 (軟體)"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5973201"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Internet protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957589"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "IP in IP"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "IP in IP"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957589"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q119840411"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decision-making tradeoff between relying on current best estimates and seeking more information"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "exploration–exploitation dilemma"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "探索-利用困境"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29028649"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4177149"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the exactly solvable problem of a particle that is acted upon by the gravitational field of two other point masses that are fixed in space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607699"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Euler's three-body problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "歐拉三體問題"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4177149"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the exactly solvable problem of a particle that is acted upon by the gravitational field of two other point masses that are fixed in space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607699"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Euler's three-body problem"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "歐拉三體問題"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4177149"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the exactly solvable problem of a particle that is acted upon by the gravitational field of two other point masses that are fixed in space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607699"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Euler's three-body problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "歐拉三體問題"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4177149"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the exactly solvable problem of a particle that is acted upon by the gravitational field of two other point masses that are fixed in space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607699"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Euler's three-body problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "尤拉三體問題"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3300648"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of Turing reduction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4489310"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "many-one reduction"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "多一规约"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25109742"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "when evolution cannot enhance one trait without diminishing another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Evolutionary trade-offs"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "演化权衡"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17003119"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "property of a set of predictive models whereby models with a lower bias in parameter estimation have a higher variance of the parameter estimates across samples, and vice versa"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bias–variance tradeoff"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "偏差-方差權衡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q254128"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17003119"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "property of a set of predictive models whereby models with a lower bias in parameter estimation have a higher variance of the parameter estimates across samples, and vice versa"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bias–variance tradeoff"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "偏差-方差權衡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17003119"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "property of a set of predictive models whereby models with a lower bias in parameter estimation have a higher variance of the parameter estimates across samples, and vice versa"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bias–variance tradeoff"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "偏差-方差权衡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q254128"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17003119"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "property of a set of predictive models whereby models with a lower bias in parameter estimation have a higher variance of the parameter estimates across samples, and vice versa"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bias–variance tradeoff"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "偏差-方差權衡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q254128"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17003119"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "property of a set of predictive models whereby models with a lower bias in parameter estimation have a higher variance of the parameter estimates across samples, and vice versa"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bias–variance tradeoff"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "偏差-方差权衡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17003119"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "property of a set of predictive models whereby models with a lower bias in parameter estimation have a higher variance of the parameter estimates across samples, and vice versa"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bias–variance tradeoff"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "偏差-方差權衡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10880330"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10880330"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "two-dimensional array"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "二维数组"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1163955"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer network protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957589"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Point-to-Point Tunneling Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "點對點隧道協議"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1163955"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer network protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957589"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Point-to-Point Tunneling Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "点对点隧道协议"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1163955"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer network protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957589"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Point-to-Point Tunneling Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "點對點隧道協議"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1888734"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "direct digital-to-digital conversion of one encoding to another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1888734"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transcoding"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "轉碼"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1888734"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "direct digital-to-digital conversion of one encoding to another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1888734"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transcoding"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "转码"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1888734"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "direct digital-to-digital conversion of one encoding to another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1888734"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transcoding"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "轉碼"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q442343"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "communications channel between two networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957589"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "IP tunnel"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "IP隧道"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957589"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1210082"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of algorithms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1210082"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree traversal"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "树的遍历"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1210082"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of algorithms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1210082"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree traversal"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "樹的走訪"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1367487"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "effective strategy in game theory for the iterated prisoner's dilemma"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1118810"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tit for tat"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "投桃報李"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1118810"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1367487"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "effective strategy in game theory for the iterated prisoner's dilemma"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1118810"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tit for tat"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "以牙还牙"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1118810"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1367487"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "effective strategy in game theory for the iterated prisoner's dilemma"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1118810"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tit for tat"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "投桃報李"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98097118"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1367487"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "effective strategy in game theory for the iterated prisoner's dilemma"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1118810"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tit for tat"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "以牙还牙"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98097118"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1367487"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "effective strategy in game theory for the iterated prisoner's dilemma"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1118810"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tit for tat"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "以牙還牙"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1118810"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1367487"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "effective strategy in game theory for the iterated prisoner's dilemma"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1118810"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tit for tat"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "以牙還牙"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98097118"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q546739"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer network protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957589"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Layer 2 Tunneling Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "第二层隧道协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957589"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "situation requiring choice of balance between desirable but incompatible features; a compromise in design or decision making"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trade-off"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "代价"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "situation requiring choice of balance between desirable but incompatible features; a compromise in design or decision making"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trade-off"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "代價"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607699"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "classical mechanics problem of three massive point particles interacting via Newtonian gravity; special case of the 𝑛‐body problem for 𝑛=3"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607699"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "three-body problem"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "三体问题"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q759676"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607699"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "classical mechanics problem of three massive point particles interacting via Newtonian gravity; special case of the 𝑛‐body problem for 𝑛=3"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607699"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "three-body problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "三体问题"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q759676"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607699"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "classical mechanics problem of three massive point particles interacting via Newtonian gravity; special case of the 𝑛‐body problem for 𝑛=3"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607699"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "three-body problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "三體問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q759676"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607699"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "classical mechanics problem of three massive point particles interacting via Newtonian gravity; special case of the 𝑛‐body problem for 𝑛=3"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607699"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "three-body problem"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "三體問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q759676"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232976"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "to determine the motion of two point particles that interact only with each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232976"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "two-body problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "二體問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q137581967"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q283310"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "case where an algorithm or program trades increases space usage with decreased time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "space–time tradeoff"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "空间与时间取舍"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q283310"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "case where an algorithm or program trades increases space usage with decreased time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "space–time tradeoff"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "空间与时间取舍"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q283310"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "case where an algorithm or program trades increases space usage with decreased time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "space–time tradeoff"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "空間與時間取捨"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1006428"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Interaction of two bodies in general relativity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232976"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "two-body problem in general relativity"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "广义相对论中的开普勒问题"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1006428"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Interaction of two bodies in general relativity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232976"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "two-body problem in general relativity"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "广义相对论中的开普勒问题"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1006428"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Interaction of two bodies in general relativity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232976"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "two-body problem in general relativity"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "廣義相對論中的開普勒問題"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1006428"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Interaction of two bodies in general relativity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232976"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "two-body problem in general relativity"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "廣義相對論中的克卜勒問題"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1421651"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method for software development teams for self-optimization"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1421651"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "team software process"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "团队软件过程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2695280"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1421651"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method for software development teams for self-optimization"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1421651"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "team software process"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "团队软件过程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2695280"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607699"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "classical mechanics problem of three massive point particles interacting via Newtonian gravity; special case of the 𝑛‐body problem for 𝑛=3"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q607699"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "three-body problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "三体问题"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q759676"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1421651"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method for software development teams for self-optimization"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1421651"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "team software process"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "團隊軟體過程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2695280"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957589"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer protocol that allows a network user to access or provide a network service that the underlying network does not support or provide directly"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q957589"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tunneling protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "穿隧協議"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "situation requiring choice of balance between desirable but incompatible features; a compromise in design or decision making"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trade-off"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "取舍"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "situation requiring choice of balance between desirable but incompatible features; a compromise in design or decision making"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q638123"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "trade-off"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "trade off"
+      }
+    }
+  ]
+}

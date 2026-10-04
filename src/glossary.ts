@@ -1,6 +1,18 @@
 import type { Domain, GlossaryPack, Term } from './types';
 export const domainLabels: Record<Domain,string> = { auto:'自动识别', math:'数学', physics:'物理', cs:'计算机', general:'通用' };
 export const termKey = (t: Pick<Term,'source'|'domain'|'sense'>) => `${t.source.trim().toLocaleLowerCase()}|${t.domain}|${t.sense.trim()}`;
+// Stored built-in records represent enable/disable preferences, not new terms.
+// The old toggle path promoted these records to user without setting updatedAt.
+// Edited/imported user records have updatedAt and must retain their overrides.
+export function resolveStoredTerms(builtins: Term[], stored: Term[]): Term[] {
+  const byId=new Map(builtins.map(t=>[t.id,t]));
+  return stored.map(t=>{
+    const builtin=byId.get(t.id);
+    if(!builtin)return t;
+    const legacyToggle=t.quality==='user'&&t.updatedAt===undefined&&termKey(t)===termKey(builtin);
+    return t.quality===builtin.quality||legacyToggle?{...builtin,enabled:t.enabled}:t;
+  });
+}
 const rank: Record<Term['quality'],number> = { user:5, confirmed:4, core:3, article:2, candidate:1 };
 export function mergeTerms(...groups: Term[][]): Term[] {
   const map=new Map<string,Term>();
@@ -17,9 +29,22 @@ export type TermMatch = { start:number; end:number; term:Term; matched:string };
 export function findTerms(text: string, terms: Term[], domain: Domain, candidates=false,context=''): TermMatch[] {
   const eligible=terms.filter(t=>t.enabled && (candidates||t.quality!=='candidate') && (t.domain===domain||t.domain==='general'));
   const hits: TermMatch[]=[];
+  const contextText=(context+' '+text).toLowerCase(),contextHits=new Map<string,boolean>();
+  const score=(t:Term)=>(t.contexts??[]).reduce((n,word)=>{
+    if(!word)return n;
+    const key=word.toLowerCase();
+    if(!contextHits.has(key))contextHits.set(key,contextText.includes(key)&&new RegExp(`(?<![\\p{L}\\p{N}_])${escapeRe(key)}(?![\\p{L}\\p{N}_])`,'u').test(contextText));
+    return n+(contextHits.get(key)?1:0);
+  },0);
+  // Compile Unicode boundary regexes only for aliases present in this text.
+  // Folding via upper then lower also covers long s and Greek final sigma;
+  // the exact regex still decides casing, word boundaries and all matches.
+  const foldedText=text.toUpperCase().toLowerCase();
   for(const term of eligible) for(const alias of [term.source,...term.aliases]) {
     if(!alias) continue;
     const sensitive=/^[A-Z][A-Z0-9-]{1,5}$/.test(alias);
+    if(!(sensitive?text.includes(alias):foldedText.includes(alias.toUpperCase().toLowerCase())))continue;
+    if(term.quality==='core'&&term.requiresContext&&score(term)===0)continue;
     const re=new RegExp(`(?<![\\p{L}\\p{N}_])${escapeRe(alias)}(?![\\p{L}\\p{N}_])`,sensitive?'gu':'giu');
     for(const m of text.matchAll(re)) {
       // Existing protected tokens contain labels that must never be translated.
@@ -27,8 +52,6 @@ export function findTerms(text: string, terms: Term[], domain: Domain, candidate
       hits.push({start:m.index,end:m.index+m[0].length,term,matched:m[0]});
     }
   }
-  const contextText=(context+' '+text).toLowerCase();
-  const score=(t:Term)=>(t.contexts??[]).reduce((n,word)=>n+(contextText.includes(word.toLowerCase())?1:0),0);
   hits.sort((a,b)=> (b.end-b.start)-(a.end-a.start)||rank[b.term.quality]-rank[a.term.quality]||score(b.term)-score(a.term)||a.start-b.start);
   const selected: TermMatch[]=[];
   for(const hit of hits) if(!selected.some(x=>hit.start<x.end&&hit.end>x.start)) {

@@ -1,0 +1,5688 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q20820248 wd:Q3851477 wd:Q11329019 wd:Q17104961 wd:Q4344917 wd:Q7135015 wd:Q116736583 wd:Q55628597 wd:Q7139384 wd:Q271977 wd:Q4008398 wd:Q2072794 wd:Q7142872 wd:Q21595855 wd:Q987969 wd:Q7160329 wd:Q672628 wd:Q141131567 wd:Q2044026 wd:Q117194007 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q20820248 wd:Q3851477 wd:Q11329019 wd:Q17104961 wd:Q4344917 wd:Q7135015 wd:Q116736583 wd:Q55628597 wd:Q7139384 wd:Q271977 wd:Q4008398 wd:Q2072794 wd:Q7142872 wd:Q21595855 wd:Q987969 wd:Q7160329 wd:Q672628 wd:Q141131567 wd:Q2044026 wd:Q117194007 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q20820248 wd:Q3851477 wd:Q11329019 wd:Q17104961 wd:Q4344917 wd:Q7135015 wd:Q116736583 wd:Q55628597 wd:Q7139384 wd:Q271977 wd:Q4008398 wd:Q2072794 wd:Q7142872 wd:Q21595855 wd:Q987969 wd:Q7160329 wd:Q672628 wd:Q141131567 wd:Q2044026 wd:Q117194007 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "77a2a6eba0c4e026c98475c85a628655e03fecb8656e7a14a18d4af77d142fad",
+  "responseSha256": "ea28fd9444fab85f4bb57970ba2f6b482c98598800fd32903cc6aaa96b26278b",
+  "retrievedAt": "2026-10-04T05:09:31.461646+00:00",
+  "license": "CC0-1.0",
+  "domain": "cs",
+  "roots": [
+    {
+      "domain": "cs",
+      "id": "Q20820248",
+      "label": "output feedback mode",
+      "description": "algorithm which uses a block cipher to encrypt and decrypt information",
+      "parents": [
+        "Q154021"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q3851477",
+      "label": "packing problem",
+      "description": "class of optimization problems in mathematics that involve attempting to pack objects together into containers. The goal is to either pack a single container as densely as possible or pack all objects using as few containers as possible",
+      "parents": [
+        "Q984063"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q11329019",
+      "label": "packrat parser",
+      "description": "parsing algorithm that takes parsing expression grammars (PEGs) as input",
+      "parents": [
+        "Q12758225"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q17104961",
+      "label": "pairwise summation",
+      "description": "algorithmic technique",
+      "parents": [
+        "Q140773674"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q4344917",
+      "label": "parallel array",
+      "description": "form of implicit data structure that uses multiple arrays to represent a singular array of records",
+      "parents": [
+        "Q186152",
+        "Q16707838"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7135015",
+      "label": "parallel tempering",
+      "description": "simulation method for physical systems, sampling from both high and low temperature configurations",
+      "parents": [
+        "Q583461"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q116736583",
+      "label": "parameterized approximation algorithm",
+      "description": "type of algorithm",
+      "parents": [
+        "Q621751"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q55628597",
+      "label": "paraphrasing",
+      "description": "automatic generation or recognition of paraphrased text",
+      "parents": [
+        "Q1513879"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7139384",
+      "label": "parody generator",
+      "description": "Software that generates nonsensical text",
+      "parents": [
+        "Q1513879"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q271977",
+      "label": "partial differential equation",
+      "description": "differential equation that contains unknown multivariable functions and their partial derivatives",
+      "parents": [
+        "Q11214"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q4008398",
+      "label": "partial evaluation",
+      "description": "technique for program optimization",
+      "parents": [
+        "Q2881121"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q2072794",
+      "label": "particle swarm optimization",
+      "description": "optimization method using a set of candidate solutions moving around in the search-space",
+      "parents": [
+        "Q24476018"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7142872",
+      "label": "password-authenticated key agreement",
+      "description": "interactive method for two or more parties to establish cryptographic keys based on one or more party's knowledge of a password",
+      "parents": [
+        "Q4825885"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q21595855",
+      "label": "pathfinding algorithm",
+      "description": "algorithm used for searching a path; in telecommunications may be used by a routing protocol",
+      "parents": [
+        "Q755673"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q987969",
+      "label": "Paxos",
+      "description": "family of protocols for solving consensus in a network of unreliable processors",
+      "parents": [
+        "Q1087987"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7160329",
+      "label": "peephole optimization",
+      "description": "compiler optimization technique",
+      "parents": [
+        "Q28057154"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q672628",
+      "label": "permutation box",
+      "description": "method of bit-shuffling used to diffuse bits across S-boxes",
+      "parents": [
+        "Q246593"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q141131567",
+      "label": "person-persistent data",
+      "description": "Data tied to an individual or household rather than to a specific device or browser, so it stays consistent across devices.",
+      "parents": [
+        "Q2427787"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q2044026",
+      "label": "PEXQ",
+      "description": "series of full reference methods for predicting the perceived quality of communication channels",
+      "parents": [
+        "Q44285546"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q117194007",
+      "label": "PHP library",
+      "description": "software library for the PHP programming language",
+      "parents": [
+        "Q165194"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "cs branches 441..460",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55628597"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "automatic generation or recognition of paraphrased text"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55628597"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "paraphrasing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "自動改寫"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15964758"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "software which creates a fake academic paper"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7139384"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "paper generator"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "論文產生器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28088256"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation with nonlinear terms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nonlinear partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "非線性偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7234394"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer program"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7139384"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Postmodernism Generator"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "后现代主义生成器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q35127"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7451766"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one that can be broken into a set of separate equations of lower dimensionality (fewer independent variables) by a method of separation of variables"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "separable partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "可分離變數的偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q60773926"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a password-based authentication Method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7142872"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Simultaneous Authentication of Equals"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "对等同步身份认证"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7142872"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28088256"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation with nonlinear terms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nonlinear partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "非线性偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7234394"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer program"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7139384"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Postmodernism Generator"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "后现代主义生成器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q166142"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7234394"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer program"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7139384"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Postmodernism Generator"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "后现代主义生成器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7139384"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85816613"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of partial differential equations whose solutions are stationary with respect to the Yang–Mills action functional"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Yang–Mills equations"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "杨-米尔斯方程式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215007"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85816613"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of partial differential equations whose solutions are stationary with respect to the Yang–Mills action functional"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Yang–Mills equations"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "杨-米尔斯方程式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85816613"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of partial differential equations whose solutions are stationary with respect to the Yang–Mills action functional"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Yang–Mills equations"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "楊-米爾斯方程式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215007"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85816613"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of partial differential equations whose solutions are stationary with respect to the Yang–Mills action functional"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Yang–Mills equations"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "楊-米爾斯方程式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16979017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equations via random force terms and coefficients"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stochastic partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "随机偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16979017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equations via random force terms and coefficients"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stochastic partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "随机偏微积分"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16979017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equations via random force terms and coefficients"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stochastic partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "隨機偏微積分"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28088256"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation with nonlinear terms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nonlinear partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "非线性偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm used for searching a path; in telecommunications may be used by a routing protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pathfinding algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "探路算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm used for searching a path; in telecommunications may be used by a routing protocol"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pathfinding algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "探路演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10912775"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of partial differential equation describing the successive states of a systyem"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evolution equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "发展方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047576"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding all-pairs shortest paths in graphs, allowing some edge weights to be negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Floyd–Warshall algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "弗洛伊德算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047576"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding all-pairs shortest paths in graphs, allowing some edge weights to be negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Floyd–Warshall algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "弗洛伊德算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047576"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding all-pairs shortest paths in graphs, allowing some edge weights to be negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Floyd–Warshall algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "弗洛伊德算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047576"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding all-pairs shortest paths in graphs, allowing some edge weights to be negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Floyd–Warshall algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "弗洛伊德演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047576"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding all-pairs shortest paths in graphs, allowing some edge weights to be negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Floyd–Warshall algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "弗洛伊德算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047576"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding all-pairs shortest paths in graphs, allowing some edge weights to be negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Floyd–Warshall algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "弗洛伊德算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047576"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding all-pairs shortest paths in graphs, allowing some edge weights to be negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Floyd–Warshall algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "弗洛伊德算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047576"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding all-pairs shortest paths in graphs, allowing some edge weights to be negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Floyd–Warshall algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "弗洛伊德演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q901210"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of mathematical model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "reaction–diffusion system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "反应-扩散系统"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q901210"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of mathematical model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "reaction–diffusion system"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "反应-扩散系统"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q891766"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fokker–Planck equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "佛客－普朗克方程式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q891766"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fokker–Planck equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "佛客－普朗克方程式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q891766"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fokker–Planck equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "佛客－普朗克方程式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q891766"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fokker–Planck equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "佛客－普朗克方程式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q722878"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q891766"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fokker–Planck equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "佛客－普朗克方程式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q722878"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q891766"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fokker–Planck equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "佛客－普朗克方程式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q722878"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q576988"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptographic protocol for identification"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7142872"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Secure Remote Password protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "安全远程密码协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7142872"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q576988"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptographic protocol for identification"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7142872"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Secure Remote Password protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "安全远程密码协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7142872"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q576988"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptographic protocol for identification"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7142872"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Secure Remote Password protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "安全远程密码协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7142872"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q576988"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptographic protocol for identification"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7142872"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Secure Remote Password protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "安全遠端密碼協議"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7142872"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q816022"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding single-source shortest paths in graphs, allowing some edge weights to be negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bellman–Ford algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "贝尔曼-福特算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q816022"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding single-source shortest paths in graphs, allowing some edge weights to be negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bellman–Ford algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "贝尔曼-福特算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q816022"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding single-source shortest paths in graphs, allowing some edge weights to be negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bellman–Ford algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "贝尔曼-福特算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q814581"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "operations research problem of packing items into the fewest bins"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bin packing problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "集装优化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1166625"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q814581"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "operations research problem of packing items into the fewest bins"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bin packing problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "集装优化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1233953"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "object-relational mapping for PHP"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117194007"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Doctrine"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Doctrine"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117194007"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q895274"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simplification for simulating fluids under natural convection"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Boussinesq approximation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "布西内斯克近似和滞弹性近似"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q895274"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simplification for simulating fluids under natural convection"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Boussinesq approximation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "布西内斯克近似和滞弹性近似"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q895274"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simplification for simulating fluids under natural convection"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Boussinesq approximation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "布西内斯克近似和滞弹性近似"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q895274"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simplification for simulating fluids under natural convection"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Boussinesq approximation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "布西内斯克近似和滞弹性近似"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9357058"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q895274"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simplification for simulating fluids under natural convection"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Boussinesq approximation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "布西内斯克近似和滞弹性近似"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9357058"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q895274"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simplification for simulating fluids under natural convection"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Boussinesq approximation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "布西内斯克近似和滞弹性近似"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9357058"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q622741"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of linear partial differential equations characterizing holomorphic (complex differentiable) functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Cauchy–Riemann equations"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "柯西－黎曼方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q925350"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q622741"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of linear partial differential equations characterizing holomorphic (complex differentiable) functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Cauchy–Riemann equations"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "柯西－黎曼方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q925350"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q622741"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of linear partial differential equations characterizing holomorphic (complex differentiable) functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Cauchy–Riemann equations"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "柯西－黎曼方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q925350"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q622741"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of linear partial differential equations characterizing holomorphic (complex differentiable) functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Cauchy–Riemann equations"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "柯西－黎曼方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q622741"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of linear partial differential equations characterizing holomorphic (complex differentiable) functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Cauchy–Riemann equations"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "柯西－黎曼方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q622741"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of linear partial differential equations characterizing holomorphic (complex differentiable) functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Cauchy–Riemann equations"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "柯西－黎曼方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q622741"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of linear partial differential equations characterizing holomorphic (complex differentiable) functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Cauchy–Riemann equations"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "柯西－黎曼方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96407346"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q622741"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of linear partial differential equations characterizing holomorphic (complex differentiable) functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Cauchy–Riemann equations"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "柯西－黎曼方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96407346"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q622741"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of linear partial differential equations characterizing holomorphic (complex differentiable) functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Cauchy–Riemann equations"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "柯西－黎曼方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96407346"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q290526"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "DBMS PHP library"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117194007"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ADOdb"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "ADOdb"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117194007"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q672628"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of bit-shuffling used to diffuse bits across S-boxes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q672628"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "permutation box"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "P盒"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1130010"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "packing problem about packing thirteen 1×2×4 blocks, one 2×2×2 block, one 1×2×2 block and three 1×1×3 blocks into a 5×5×5 box"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Conway puzzle"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "康威立方"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1130010"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "packing problem about packing thirteen 1×2×4 blocks, one 2×2×2 block, one 1×2×2 block and three 1×1×3 blocks into a 5×5×5 box"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Conway puzzle"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "康威立方"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1130010"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "packing problem about packing thirteen 1×2×4 blocks, one 2×2×2 block, one 1×2×2 block and three 1×1×3 blocks into a 5×5×5 box"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Conway puzzle"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "康威立方"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q900117"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "an arrangement of non-overlapping spheres within a containing space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sphere packing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "最密堆积"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q900117"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "an arrangement of non-overlapping spheres within a containing space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sphere packing"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "填球问题"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q900117"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "an arrangement of non-overlapping spheres within a containing space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sphere packing"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "最密堆积"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q900117"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "an arrangement of non-overlapping spheres within a containing space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sphere packing"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "最密堆積"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1130016"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "packing problem that calls for packing six 1×2×2 blocks and three 1×1×1 blocks into a 3×3×3 box"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Slothouber–Graatsma puzzle"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "斯洛陶伯－赫拉茨马立方"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1130016"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "packing problem that calls for packing six 1×2×2 blocks and three 1×1×1 blocks into a 3×3×3 box"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Slothouber–Graatsma puzzle"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "斯洛陶伯－赫拉茨马立方"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1130016"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "packing problem that calls for packing six 1×2×2 blocks and three 1×1×1 blocks into a 3×3×3 box"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Slothouber–Graatsma puzzle"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "斯洛陶伯－赫拉茨馬立方"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q895274"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simplification for simulating fluids under natural convection"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Boussinesq approximation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "布西内斯克近似和滞弹性近似"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27058"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q895274"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simplification for simulating fluids under natural convection"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Boussinesq approximation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "布西内斯克近似和滞弹性近似"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27058"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q895274"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simplification for simulating fluids under natural convection"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Boussinesq approximation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "布西内斯克近似和滞弹性近似"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27058"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q277680"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm used for pathfinding and graph traversal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "A* search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "A*搜寻算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q277680"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm used for pathfinding and graph traversal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "A* search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "A*搜寻算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q277680"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm used for pathfinding and graph traversal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "A* search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "A*搜寻算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130370792"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q277680"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm used for pathfinding and graph traversal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "A* search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "A*搜寻算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130370867"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q987969"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of protocols for solving consensus in a network of unreliable processors"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q987969"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Paxos"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Paxos算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28455561"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q987969"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of protocols for solving consensus in a network of unreliable processors"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q987969"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Paxos"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Paxos算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28455561"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q987969"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of protocols for solving consensus in a network of unreliable processors"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q987969"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Paxos"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Paxos算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28455561"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q987969"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of protocols for solving consensus in a network of unreliable processors"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q987969"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Paxos"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "Paxos演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28455561"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1536235"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "turbulence modeling approach"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Reynolds-averaged Navier–Stokes equations"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "雷诺平均纳维－斯托克斯方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1536235"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "turbulence modeling approach"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Reynolds-averaged Navier–Stokes equations"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "雷诺平均纳维－斯托克斯方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1417609"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1536235"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "turbulence modeling approach"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Reynolds-averaged Navier–Stokes equations"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "雷诺平均纳维－斯托克斯方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18327519"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q343279"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "combination of the diffusion and convection (advection) equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "convection–diffusion equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "對流－擴散方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q343279"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "combination of the diffusion and convection (advection) equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "convection–diffusion equation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "漂移–扩散方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q343279"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "combination of the diffusion and convection (advection) equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "convection–diffusion equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "漂移–擴散方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1974790"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Swift–Hohenberg equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "斯威夫特–奧昂貝格方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1552291"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nonlinear second-order partial differential equation of special kind"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Monge–Ampère equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "齐次蒙日-安培方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1552291"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nonlinear second-order partial differential equation of special kind"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Monge–Ampère equation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "蒙日-安培方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7139384"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Software that generates nonsensical text"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7139384"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parody generator"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "模仿生成器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7207872"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the partial differential equation i∂∂̄u=ρ where ρ is a positive (1,1)‐form on a Kähler manifold"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Poincaré–Lelong equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "庞加莱-勒隆方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4860585"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "wave equation for arbitrary spin particles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bargmann–Wigner equations"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "巴格曼-維格納方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4860585"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "wave equation for arbitrary spin particles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bargmann–Wigner equations"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "巴格曼-維格納方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1129902"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3302775"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "an optimality condition in optimal control theory"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hamilton–Jacobi–Bellman equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "哈密顿-雅可比-贝尔曼方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4950395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Boussinesq approximation for water waves"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Boussinesq approximation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "博欣内斯克方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27058"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2072794"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optimization method using a set of candidate solutions moving around in the search-space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2072794"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "particle swarm optimization"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "粒子群优化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2072794"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optimization method using a set of candidate solutions moving around in the search-space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2072794"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "particle swarm optimization"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "粒子群优化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2072794"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optimization method using a set of candidate solutions moving around in the search-space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2072794"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "particle swarm optimization"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "粒子群優化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7104117"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "eigenvalue equation describing the linear two-dimensional modes of disturbances"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Orr–Sommerfeld equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "奥尔－索末菲方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7104117"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "eigenvalue equation describing the linear two-dimensional modes of disturbances"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Orr–Sommerfeld equation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "奥尔－索末菲方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7104117"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "eigenvalue equation describing the linear two-dimensional modes of disturbances"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Orr–Sommerfeld equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "奧爾－索末菲方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2594824"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer program that randomly generates nonsense in the form of computer science research papers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7139384"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SCIgen"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "SCIgen"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q341"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2594824"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer program that randomly generates nonsense in the form of computer science research papers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7139384"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SCIgen"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "SCIgen"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q341"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2594824"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer program that randomly generates nonsense in the form of computer science research papers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7139384"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SCIgen"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "SCIgen"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q341"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2627459"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation (PDE) of order n that has a well-posed initial value problem for the first n−1 derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hyperbolic partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "雙曲線偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2627459"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation (PDE) of order n that has a well-posed initial value problem for the first n−1 derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hyperbolic partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "双曲型偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2627459"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation (PDE) of order n that has a well-posed initial value problem for the first n−1 derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hyperbolic partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "双曲偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2627459"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation (PDE) of order n that has a well-posed initial value problem for the first n−1 derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hyperbolic partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "雙曲偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5500196"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Type of partial differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Free boundary problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "自由边界问题"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5500196"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Type of partial differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Free boundary problem"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "自由边界问题"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5500196"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Type of partial differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Free boundary problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "自由边界问题"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6510183"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equation that describes density changes of a material that is diffusing in a medium"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "diffusion equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "扩散方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3607962"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of second-order linear partial differential equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "elliptic differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "椭圆型偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3607962"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of second-order linear partial differential equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "elliptic differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "椭圆型微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3607962"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of second-order linear partial differential equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "elliptic differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "橢圓型微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4178434"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Cauchy momentum equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "柯西動量方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q214070"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4381442"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "first-order partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "一阶偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2323892"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation describing the time evolution of plasma"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Vlasov equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "符拉索夫方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5121501"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "study of the arrangement of circles on a given surface such that no overlapping occurs and so that all circles touch one another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "circle packing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "圆堆砌"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5121501"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "study of the arrangement of circles on a given surface such that no overlapping occurs and so that all circles touch one another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "circle packing"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "圆堆砌"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5121501"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "study of the arrangement of circles on a given surface such that no overlapping occurs and so that all circles touch one another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "circle packing"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "圆堆砌"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5121501"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "study of the arrangement of circles on a given surface such that no overlapping occurs and so that all circles touch one another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "circle packing"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "圓堆砌"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7160329"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "compiler optimization technique"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7160329"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "peephole optimization"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "窥孔优化"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4476508"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equilibrium equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Grad–Shafranov equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "格拉德－沙弗拉诺夫方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4950395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Boussinesq approximation for water waves"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Boussinesq approximation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "博欣内斯克方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4950395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Boussinesq approximation for water waves"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Boussinesq approximation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "博欣内斯克方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9357058"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of optimization problems in mathematics that involve attempting to pack objects together into containers. The goal is to either pack a single container as densely as possible or pack all objects using as few containers as possible"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "packing problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "包裝問題"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of optimization problems in mathematics that involve attempting to pack objects together into containers. The goal is to either pack a single container as densely as possible or pack all objects using as few containers as possible"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3851477"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "packing problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "包装问题"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1763840"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "PDE named after statistician and biologist Ronald Fisher"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fisher's equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "费希尔-柯尔莫哥洛夫方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3730817"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equation which describes the evolution of the vorticity ω of a particle of a fluid as it moves with its flow"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vorticity equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "涡量方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7142872"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interactive method for two or more parties to establish cryptographic keys based on one or more party's knowledge of a password"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7142872"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "password-authenticated key agreement"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "口令认证密钥协商"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7142872"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interactive method for two or more parties to establish cryptographic keys based on one or more party's knowledge of a password"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7142872"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "password-authenticated key agreement"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "口令认证密钥协商"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7142872"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interactive method for two or more parties to establish cryptographic keys based on one or more party's knowledge of a password"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7142872"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "password-authenticated key agreement"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "口令认证密钥协商"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7142872"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interactive method for two or more parties to establish cryptographic keys based on one or more party's knowledge of a password"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7142872"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "password-authenticated key agreement"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "口令認證金鑰協商"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4530507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Equation in physics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "screened Poisson equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "屏蔽泊松方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4530507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Equation in physics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "screened Poisson equation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "屏蔽泊松方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4530507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Equation in physics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "screened Poisson equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "屏蔽泊松方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4530507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Equation in physics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "screened Poisson equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "遮蔽泊鬆方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4344917"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "form of implicit data structure that uses multiple arrays to represent a singular array of records"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4344917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parallel array"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "平行数组"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2594824"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer program that randomly generates nonsense in the form of computer science research papers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7139384"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SCIgen"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "SCIgen"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7139384"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2594824"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer program that randomly generates nonsense in the form of computer science research papers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7139384"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SCIgen"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "SCIgen"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7139384"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2594824"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer program that randomly generates nonsense in the form of computer science research papers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7139384"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SCIgen"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "SCIgen"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7139384"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2594824"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer program that randomly generates nonsense in the form of computer science research papers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7139384"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SCIgen"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "SCIgen"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15964758"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2594824"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer program that randomly generates nonsense in the form of computer science research papers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7139384"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SCIgen"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "SCIgen"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15964758"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2594824"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer program that randomly generates nonsense in the form of computer science research papers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7139384"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SCIgen"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "SCIgen"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15964758"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6345653"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "PDE to describe nonlinear wave motion"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kadomtsev–Petviashvili equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "卡东穆塞夫-彼得韦亚斯维利方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7135015"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "simulation method for physical systems, sampling from both high and low temperature configurations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7135015"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parallel tempering"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "并行退火"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1575416"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of second-order linear partial differential equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parabolic partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "抛物偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1575416"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of second-order linear partial differential equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parabolic partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "抛物偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1575416"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of second-order linear partial differential equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parabolic partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "拋物偏微分方程"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5409013"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Euler–Tricomi equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "欧拉－特里科米方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5409013"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Euler–Tricomi equation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "歐拉-特里科米方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5409013"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Euler–Tricomi equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "歐拉-特里科米方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5409013"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Euler–Tricomi equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "尤拉-特里科米方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6899481"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Monge equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "蒙日方程"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6899481"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Monge equation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "蒙日方程"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6899481"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Monge equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "蒙日方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation that contains unknown multivariable functions and their partial derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation that contains unknown multivariable functions and their partial derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation that contains unknown multivariable functions and their partial derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation that contains unknown multivariable functions and their partial derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation that contains unknown multivariable functions and their partial derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "戴克斯特拉算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q504353"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "戴克斯特拉算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q504353"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "戴克斯特拉算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q504353"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "戴克斯特拉演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q504353"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "戴克斯特拉演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q504353"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "戴克斯特拉算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "戴克斯特拉算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "戴克斯特拉算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "戴克斯特拉演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "戴克斯特拉演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "戴克斯特拉算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "戴克斯特拉算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "戴克斯特拉算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "戴克斯特拉演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "戴克斯特拉演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177290"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fluid dynamics equation of state"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Benedict–Webb–Rubin equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "本尼迪克特-韦勃-鲁宾方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177290"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fluid dynamics equation of state"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Benedict–Webb–Rubin equation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "本尼迪克特-韦勃-鲁宾方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q51501"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of partial differential equations that describe how electric and magnetic fields are generated and altered by each other and by charges and currents"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Maxwell's equations"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "麦克斯韦方程组"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6786849"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q51501"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of partial differential equations that describe how electric and magnetic fields are generated and altered by each other and by charges and currents"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Maxwell's equations"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "麦克斯韦方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6786849"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q51501"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of partial differential equations that describe how electric and magnetic fields are generated and altered by each other and by charges and currents"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Maxwell's equations"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "麦克斯韦方程组"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6786849"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q51501"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of partial differential equations that describe how electric and magnetic fields are generated and altered by each other and by charges and currents"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Maxwell's equations"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "麦克斯韦方程组"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9357058"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q51501"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of partial differential equations that describe how electric and magnetic fields are generated and altered by each other and by charges and currents"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Maxwell's equations"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "麦克斯韦方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9357058"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q51501"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of partial differential equations that describe how electric and magnetic fields are generated and altered by each other and by charges and currents"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Maxwell's equations"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "麦克斯韦方程组"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9357058"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q165498"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation describing how the quantum state of a non-relativistic physical system changes with time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Schrödinger equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "薛定谔方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11345"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q165498"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation describing how the quantum state of a non-relativistic physical system changes with time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Schrödinger equation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "薛定谔方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11345"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q165498"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation describing how the quantum state of a non-relativistic physical system changes with time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Schrödinger equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "薛定谔方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11345"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q165498"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation describing how the quantum state of a non-relativistic physical system changes with time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Schrödinger equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "薛定諤方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11345"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q165498"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation describing how the quantum state of a non-relativistic physical system changes with time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Schrödinger equation"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "薛丁格方程式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11345"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "戴克斯特拉算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "戴克斯特拉算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "戴克斯特拉算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "戴克斯特拉演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8548"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph search algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21595855"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dijkstra's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "戴克斯特拉演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    }
+  ]
+}

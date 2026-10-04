@@ -1,0 +1,6144 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q77989741 wd:Q11214 wd:Q3296857 wd:Q5275442 wd:Q11937161 wd:Q16000077 wd:Q209675 wd:Q26922245 wd:Q1137726 wd:Q5280766 wd:Q5282065 wd:Q16961933 wd:Q5282087 wd:Q5282271 wd:Q765035 wd:Q2363730 wd:Q671298 wd:Q858520 wd:Q3526714 wd:Q16698747 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q77989741 wd:Q11214 wd:Q3296857 wd:Q5275442 wd:Q11937161 wd:Q16000077 wd:Q209675 wd:Q26922245 wd:Q1137726 wd:Q5280766 wd:Q5282065 wd:Q16961933 wd:Q5282087 wd:Q5282271 wd:Q765035 wd:Q2363730 wd:Q671298 wd:Q858520 wd:Q3526714 wd:Q16698747 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q77989741 wd:Q11214 wd:Q3296857 wd:Q5275442 wd:Q11937161 wd:Q16000077 wd:Q209675 wd:Q26922245 wd:Q1137726 wd:Q5280766 wd:Q5282065 wd:Q16961933 wd:Q5282087 wd:Q5282271 wd:Q765035 wd:Q2363730 wd:Q671298 wd:Q858520 wd:Q3526714 wd:Q16698747 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "b3e7b546954fa0a0d4e1cc58549756049d82dd47202d38f4743f421dafb619eb",
+  "responseSha256": "ad1805bd5b9987d071575d2a21ac86e88eb6a5e01f2d5739ea1424ca3f25239a",
+  "retrievedAt": "2026-10-04T04:57:36.614592+00:00",
+  "license": "CC0-1.0",
+  "domain": "math",
+  "roots": [
+    {
+      "domain": "math",
+      "id": "Q77989741",
+      "label": "differentiable map",
+      "description": "map between differentiable manifolds",
+      "parents": [
+        "Q1948412"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q11214",
+      "label": "differential equation",
+      "description": "mathematical equation involving derivatives of an unknown function",
+      "parents": [
+        "Q1166625"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q3296857",
+      "label": "differentiation of trigonometric functions",
+      "description": "mathematical process of finding the derivative of a trigonometric function",
+      "parents": [
+        "Q90011163"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q5275442",
+      "label": "diffusion process",
+      "description": "solution to a stochastic differential equation",
+      "parents": [
+        "Q176737"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q11937161",
+      "label": "digital modulation",
+      "description": "",
+      "parents": [
+        "Q12202238"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q16000077",
+      "label": "dimensionality reduction",
+      "description": "process of reducing the number of random variables under consideration",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q209675",
+      "label": "Dirac delta function",
+      "description": "pseudo-function δ such that an integral of δ(x-c)f(x) always takes the value of f(c)",
+      "parents": [
+        "Q865811"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q26922245",
+      "label": "direct problem",
+      "description": "functional relationship F between some input x and some unknown output y",
+      "parents": [
+        "Q1166625",
+        "Q1756942"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q1137726",
+      "label": "directed graph",
+      "description": "graph with oriented edges",
+      "parents": [
+        "Q17104046"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q5280766",
+      "label": "Dirichlet process",
+      "description": "family of stochastic processes",
+      "parents": [
+        "Q176737"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q5282065",
+      "label": "discrete transform",
+      "description": "mathematical transform on discrete signals",
+      "parents": [
+        "Q12202238"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q16961933",
+      "label": "discrete-time stochastic process",
+      "description": "stochastic process for which the index variable takes a discrete set of values, as contrasted with a continuous-time process for which the index variable takes values in a continuous range",
+      "parents": [
+        "Q176737"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q5282087",
+      "label": "discriminative model",
+      "description": "mathematical model used for classification or regression",
+      "parents": [
+        "Q486902"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q5282271",
+      "label": "disjunctive graph",
+      "description": "type of mixed graph that models scheduling problems",
+      "parents": [
+        "Q17104046"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q765035",
+      "label": "dissection problem",
+      "description": "the problem of partitioning a given shape into pieces that can be rearranged to form a second given shape",
+      "parents": [
+        "Q1166625"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q2363730",
+      "label": "distributive lattice",
+      "description": "lattice in which the operations of join and meet distribute over each other",
+      "parents": [
+        "Q205464"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q671298",
+      "label": "divide-and-conquer algorithm",
+      "description": "algorithm design paradigm based on multi-branched recursion",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q858520",
+      "label": "divisibility rule",
+      "description": "shorthand way of determining whether a given number is divisible by a fixed divisor",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q3526714",
+      "label": "division algorithm",
+      "description": "algorithm for quotient and remainder of integer division",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q16698747",
+      "label": "divisor",
+      "description": "operand of division",
+      "parents": [
+        "Q11563"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "math branches 281..300",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192776"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computational model used in machine learning, based on connected, hierarchical functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282087"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "artificial neural network"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "人工神經網絡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120281892"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical equation involving derivatives of an unknown function"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192776"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computational model used in machine learning, based on connected, hierarchical functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282087"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "artificial neural network"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "人工神经网络"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120281892"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192776"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computational model used in machine learning, based on connected, hierarchical functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282087"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "artificial neural network"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "人工神经网络"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120281892"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192776"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computational model used in machine learning, based on connected, hierarchical functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282087"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "artificial neural network"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "人工神經網絡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120281892"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192776"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computational model used in machine learning, based on connected, hierarchical functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282087"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "artificial neural network"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "人工神經網路"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120281892"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2877"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "technique representing data as sums of cosine functions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282065"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "discrete cosine transform"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "离散余弦变换"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2878"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "technique used in advanced mathematics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282065"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "discrete Fourier transform"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "离散傅里叶变换"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "归并排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "归并排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2632949"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "归并排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2705718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "归并排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "归并排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "歸併排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "归并排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2632949"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "归并排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2705718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "归并排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2632949"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "归并排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2705718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "歸併排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "歸併排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2632949"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "歸併排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2705718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "歸併排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2632949"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "歸併排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2705718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q135810"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Mathematical transform which converts signals from the time domain to the frequency domain"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282065"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Z-transform"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Z轉換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1129902"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equations that are linear with respect to the unknown function and its derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "线性微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1129902"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equations that are linear with respect to the unknown function and its derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "线性微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1129902"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equations that are linear with respect to the unknown function and its derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "線性微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q932141"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributive lattice of integer partitions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2363730"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Young's lattice"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "楊格"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2363730"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q886077"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282065"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bluestein's FFT algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Chirp-Z 轉換"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623950"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "𝑂(𝑁 log 𝑁) divide‐and‐conquer algorithm to calculate the discrete Fourier transforms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast Fourier transform"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "快速傅里叶变换"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623950"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "𝑂(𝑁 log 𝑁) divide‐and‐conquer algorithm to calculate the discrete Fourier transforms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast Fourier transform"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "快速傅里叶变换"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623950"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "𝑂(𝑁 log 𝑁) divide‐and‐conquer algorithm to calculate the discrete Fourier transforms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast Fourier transform"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "快速傅里葉變換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623950"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "𝑂(𝑁 log 𝑁) divide‐and‐conquer algorithm to calculate the discrete Fourier transforms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast Fourier transform"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "快速傅立葉變換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486598"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divide and conquer sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quicksort"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "快速排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q181593"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486598"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divide and conquer sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quicksort"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "快速排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q181593"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486598"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divide and conquer sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quicksort"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "快速排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q181593"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486598"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divide and conquer sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quicksort"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "快速排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486598"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divide and conquer sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quicksort"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "快速排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486598"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divide and conquer sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quicksort"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "快速排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486598"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divide and conquer sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quicksort"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "快速排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2632949"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486598"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divide and conquer sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quicksort"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "快速排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2632949"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486598"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divide and conquer sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quicksort"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "快速排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2632949"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1026626"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process of building informative, nonredundant derived values from an initial set of measured data to facilitate learning, generalization and interpretation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16000077"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "feature extraction"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "特徵抽取"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q722878"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equations governing time evolution of physical systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "master equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "主方程式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q722878"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equations governing time evolution of physical systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "master equation"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "老大方程式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q858520"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "shorthand way of determining whether a given number is divisible by a fixed divisor"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q858520"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divisibility rule"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "整除规则"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q858520"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "shorthand way of determining whether a given number is divisible by a fixed divisor"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q858520"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divisibility rule"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "整除规则"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q858520"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "shorthand way of determining whether a given number is divisible by a fixed divisor"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q858520"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divisibility rule"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "整除規則"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q971039"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variant of the discrete Fourier transform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282065"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Discrete sine transform"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "离散正弦变换"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q904041"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equation that links reaction rate with concentrations of reactants in a chemical reaction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rate equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "速率方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q904041"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equation that links reaction rate with concentrations of reactants in a chemical reaction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rate equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "速率方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q904041"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equation that links reaction rate with concentrations of reactants in a chemical reaction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rate equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "速率方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q926112"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical problem"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q765035"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tarski's circle-squaring problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "塔斯基分割圓問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1166625"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q926112"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical problem"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q765035"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tarski's circle-squaring problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "塔斯基分割圆问题"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1166625"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q926112"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical problem"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q765035"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tarski's circle-squaring problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "塔斯基分割圓問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1166625"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q926112"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical problem"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q765035"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tarski's circle-squaring problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "塔斯基分割圓問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q926112"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical problem"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q765035"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tarski's circle-squaring problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "塔斯基分割圆问题"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q926112"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical problem"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q765035"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tarski's circle-squaring problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "塔斯基分割圓問題"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1014065"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "example of a generalized class of Fourier transforms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282065"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hadamard transform"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "阿达马变换"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1014065"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "example of a generalized class of Fourier transforms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282065"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hadamard transform"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "阿达马变换"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1014065"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "example of a generalized class of Fourier transforms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282065"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hadamard transform"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "阿達馬變換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q518831"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "random process of binary (boolean) random variables"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16961933"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bernoulli process"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伯努利过程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm design paradigm based on multi-branched recursion"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divide-and-conquer algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分治法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28455561"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm design paradigm based on multi-branched recursion"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divide-and-conquer algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分治法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131744452"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1412924"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "directed graph where each edge has a capacity and each edge receives a flow"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "flow network"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "网络流"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1412924"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "directed graph where each edge has a capacity and each edge receives a flow"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "flow network"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "网络流"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1412924"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "directed graph where each edge has a capacity and each edge receives a flow"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "flow network"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "網絡流"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1412924"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "directed graph where each edge has a capacity and each edge receives a flow"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "flow network"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "網路流"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1440048"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fourier analysis technique applied to sequences"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282065"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "discrete-time Fourier transform"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "离散时间傅里叶变换"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1545585"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equations involving stochastic processes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stochastic differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "隨機微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1545585"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equations involving stochastic processes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stochastic differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "随机微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1545585"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equations involving stochastic processes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stochastic differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "隨機微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1268231"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical transform using in signal processing"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282065"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "modified discrete cosine transform"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "改進的離散餘弦變換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1377033"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree diagram used to find and analyze potential moves in a game"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "game tree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "遊戲樹"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66739921"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1377033"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree diagram used to find and analyze potential moves in a game"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "game tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "游戏树"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66739921"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1377033"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree diagram used to find and analyze potential moves in a game"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "game tree"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "遊戲樹"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66739921"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1156880"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equations describing the voltage and current on an electrical transmission line"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "telegrapher's equations"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "电报员方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1156880"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equations describing the voltage and current on an electrical transmission line"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "telegrapher's equations"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "电报方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1156880"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equations describing the voltage and current on an electrical transmission line"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "telegrapher's equations"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "电报方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1156880"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equations describing the voltage and current on an electrical transmission line"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "telegrapher's equations"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "電報方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1320634"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "directed graph in which each pair of vertices are the endpoints of one edge"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tournament"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "競賽圖"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1320634"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "directed graph in which each pair of vertices are the endpoints of one edge"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tournament"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "競賽圖"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1617044"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bounded lattice that models intuitionistic propositional logic"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2363730"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Heyting algebra"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "海廷代数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1617044"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bounded lattice that models intuitionistic propositional logic"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2363730"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Heyting algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "海廷代数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1195339"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "directed graph with no directed cycles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "directed acyclic graph"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "有向无环图"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1195339"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "directed graph with no directed cycles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "directed acyclic graph"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "有向非循環圖"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1195339"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "directed graph with no directed cycles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "directed acyclic graph"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "有向非循環圖"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph with oriented edges"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "directed graph"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "有向圖"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph with oriented edges"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "directed graph"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "不对称关系"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph with oriented edges"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "directed graph"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "有向圖"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graph with oriented edges"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "directed graph"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "有向圖"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1132755"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "statistical model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282087"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logistic regression model"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "逻辑回归"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120281892"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1132755"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "statistical model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282087"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logistic regression model"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Logit模型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120281892"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1132755"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "statistical model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282087"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "logistic regression model"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Logit模型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120281892"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215007"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation that describes the motion of a physical system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equations of motion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "运动方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215007"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation that describes the motion of a physical system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equations of motion"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "运动方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215007"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation that describes the motion of a physical system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equations of motion"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "运动方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215007"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation that describes the motion of a physical system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equations of motion"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "運動方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215007"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation that describes the motion of a physical system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equations of motion"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "運動方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q446488"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "procedure in machine learning and statistics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16000077"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "feature selection"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "特征选择"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation that contains unknown multivariable functions and their partial derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation that contains unknown multivariable functions and their partial derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation that contains unknown multivariable functions and their partial derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation that contains unknown multivariable functions and their partial derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation that contains unknown multivariable functions and their partial derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "partial differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "偏微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q209675"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudo-function δ such that an integral of δ(x-c)f(x) always takes the value of f(c)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q209675"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dirac delta function"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "狄拉克δ函数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q209675"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudo-function δ such that an integral of δ(x-c)f(x) always takes the value of f(c)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q209675"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dirac delta function"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "狄拉克δ函数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q209675"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudo-function δ such that an integral of δ(x-c)f(x) always takes the value of f(c)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q209675"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dirac delta function"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "狄拉克δ函数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q209675"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudo-function δ such that an integral of δ(x-c)f(x) always takes the value of f(c)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q209675"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dirac delta function"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "狄拉克δ函數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q209675"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudo-function δ such that an integral of δ(x-c)f(x) always takes the value of f(c)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q209675"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dirac delta function"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "狄拉克δ函數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation containing one or more functions of one independent variable and its derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinary differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "常微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation containing one or more functions of one independent variable and its derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinary differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "常微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation containing one or more functions of one independent variable and its derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinary differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "常微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation containing one or more functions of one independent variable and its derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinary differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "常微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation containing one or more functions of one independent variable and its derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinary differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "常微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q243754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "search algorithm in sorted lists that operates by decreasing the search space by half each pass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "二分查找"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q243754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "search algorithm in sorted lists that operates by decreasing the search space by half each pass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "二分查找"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q755673"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q243754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "search algorithm in sorted lists that operates by decreasing the search space by half each pass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "二分查找"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q243754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "search algorithm in sorted lists that operates by decreasing the search space by half each pass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "二分搜索算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q243754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "search algorithm in sorted lists that operates by decreasing the search space by half each pass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "二分搜尋演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q243754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "search algorithm in sorted lists that operates by decreasing the search space by half each pass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "二分查找"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q755673"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q243754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "search algorithm in sorted lists that operates by decreasing the search space by half each pass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "二分搜索算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q755673"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q243754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "search algorithm in sorted lists that operates by decreasing the search space by half each pass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "二分搜尋演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q755673"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q243754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "search algorithm in sorted lists that operates by decreasing the search space by half each pass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "二分搜尋演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q243754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "search algorithm in sorted lists that operates by decreasing the search space by half each pass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "二分搜尋演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q755673"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q338438"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast wavelet transform"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "快速小波轉換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q338438"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast wavelet transform"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "快速小波转换"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q338438"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast wavelet transform"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "快速小波转换"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q338438"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast wavelet transform"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "快速小波轉換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q338438"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast wavelet transform"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "快速小波轉換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130213955"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Equation in machine learning"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "neural differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "神经微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105547961"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SRT division"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "SRT除法算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105547961"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SRT division"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "SRT除法算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55634128"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Equation relating to oscillating systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Stuart–Landau equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "斯图亚特-朗道方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55634128"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Equation relating to oscillating systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Stuart–Landau equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "斯图亚特-朗道方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q55634128"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Equation relating to oscillating systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Stuart–Landau equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "斯圖亞特-朗道方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65235044"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "frequency shift keying digital mode"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11937161"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "FT8"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "FT8"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132364"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27999410"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "solvable form of differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "inexact differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "非正合微分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q119829169"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "discrete transform"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282065"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "integer transform"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "整數轉換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q31838568"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Newton Raphson Division"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "牛顿-拉弗森除法算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q31838568"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Newton Raphson Division"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "牛顿-拉弗森除法算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q31838568"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Newton Raphson Division"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "牛顿-拉弗森除法算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q31838568"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Newton Raphson Division"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "牛顿-拉弗森除法算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q119717849"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation with nonlinear terms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nonlinear differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "非线性微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18816135"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "directed graph linked to a set of linear algebraic or differential equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "flow graph"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "流向圖"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105834438"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "way to break a division problem into smaller steps"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Short division"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "短除法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q116143262"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "statistical model in population genetics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16000077"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "LFMM"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "潜在因子混合模型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3284399"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16698747"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "operand of division"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16698747"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divisor"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "除数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q719375"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28406324"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation with deviating argument"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "functional differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "泛函微分方程"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7894123"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "universal differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "通用微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2414958"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transform in numerical harmonic analysis"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282065"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "discrete wavelet transform"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "離散小波變換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2414958"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transform in numerical harmonic analysis"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282065"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "discrete wavelet transform"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "离散小波变换"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2414958"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transform in numerical harmonic analysis"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282065"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "discrete wavelet transform"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "離散小波變換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5645302"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "an equation in the Hamiltonian formulation of geometrodynamics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hamilton–Jacobi–Einstein equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "哈密顿-雅可比-爱因斯坦方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1854385"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard division algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "long division"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "長除法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2704282"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Polynomial division computation method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ruffini's rule"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "綜合除法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1085860"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2704282"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Polynomial division computation method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ruffini's rule"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "综合除法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1085860"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2704282"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Polynomial division computation method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ruffini's rule"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "綜合除法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1085860"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2704282"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Polynomial division computation method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ruffini's rule"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "綜合除法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2704282"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Polynomial division computation method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ruffini's rule"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "综合除法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2704282"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Polynomial division computation method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ruffini's rule"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "綜合除法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2434565"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical relation with derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "homogeneous differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "齊次微分方程式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282744"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tiling puzzle where a set of pieces can be assembled in different ways to produce two or more distinct geometric shapes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q765035"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dissection puzzle"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "解剖拼圖"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2736187"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Signal decomposition where wavelet packet decomposition (sampled)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282065"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Wavelet packet decomposition"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "小波包分解"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282065"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical transform on discrete signals"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282065"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "discrete transform"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "離散變換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282065"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical transform on discrete signals"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282065"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "discrete transform"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "離散變換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7690281"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinary differential equation used in the field of fluid dynamics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Taylor–Goldstein equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "泰勒－戈德斯坦方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7690281"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinary differential equation used in the field of fluid dynamics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Taylor–Goldstein equation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "泰勒－戈尔茨坦方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7690281"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinary differential equation used in the field of fluid dynamics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Taylor–Goldstein equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "泰勒－戈尔茨坦方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7690281"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinary differential equation used in the field of fluid dynamics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Taylor–Goldstein equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "泰勒－戈爾茨坦方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5244640"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of logic lacking the excluded middle law"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2363730"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "De Morgan algebra"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "德摩根代数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5244640"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of logic lacking the excluded middle law"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2363730"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "De Morgan algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "德摩根代数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5244640"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of logic lacking the excluded middle law"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2363730"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "De Morgan algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "德摩根代数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5244640"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of logic lacking the excluded middle law"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2363730"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "De Morgan algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "德摩根代數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4476520"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Markovian quantum master equation for density matrices (mixed states)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lindblad equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "林德布劳德方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18389871"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4476520"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Markovian quantum master equation for density matrices (mixed states)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lindblad equation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "林德布劳德方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18389871"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4476520"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Markovian quantum master equation for density matrices (mixed states)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lindblad equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "林德布劳德方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18389871"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4476520"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Markovian quantum master equation for density matrices (mixed states)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lindblad equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "林德布勞德方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18389871"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4476520"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Markovian quantum master equation for density matrices (mixed states)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lindblad equation"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "林盃方程式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q18389871"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5122403"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "directed graph describing citations in documents"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "citation graph"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "引用图"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5122403"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "directed graph describing citations in documents"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "citation graph"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "引用图"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5122403"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "directed graph describing citations in documents"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "citation graph"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "引用圖"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5280766"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of stochastic processes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5280766"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Dirichlet process"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "狄利克雷过程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4973304"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lattice that models the classical propositional logic"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2363730"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Boolean algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "布尔代数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3066095"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "node-link graph representing overlaps between sequences of symbols"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "De Bruijn graph"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "德布鲁因图"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3066095"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "node-link graph representing overlaps between sequences of symbols"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "De Bruijn graph"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "德布鲁因图"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3066095"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "node-link graph representing overlaps between sequences of symbols"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "De Bruijn graph"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "德布鲁因图"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3066095"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "node-link graph representing overlaps between sequences of symbols"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "De Bruijn graph"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "德布魯因圖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7049464"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "summary of algorithms for nonlinear dimensionality reduction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16000077"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nonlinear dimensionality reduction"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "非线性降维"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3890369"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "second order linear differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Chebyshev equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "切比雪夫方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2363730"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lattice in which the operations of join and meet distribute over each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2363730"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributive lattice"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分配格"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2363730"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lattice in which the operations of join and meet distribute over each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2363730"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributive lattice"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "分配格"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2363730"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lattice in which the operations of join and meet distribute over each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2363730"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributive lattice"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "分配格"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1786523"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a specialized flow graph, a directed graph in which nodes represent system variables, and branches (edges, arcs, or arrows) represent functional connections between pairs of nodes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "signal-flow graph"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "信号流图"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1786523"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a specialized flow graph, a directed graph in which nodes represent system variables, and branches (edges, arcs, or arrows) represent functional connections between pairs of nodes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "signal-flow graph"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "信号流图"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1786523"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a specialized flow graph, a directed graph in which nodes represent system variables, and branches (edges, arcs, or arrows) represent functional connections between pairs of nodes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "signal-flow graph"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "信號流圖"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6787870"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of mathematical equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "matrix differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "矩陣微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2003238"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "subgraph of a directed graph containing paths in both directions between each pair of vertices"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "strongly connected component"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "强连通分量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2003238"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "subgraph of a directed graph containing paths in both directions between each pair of vertices"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "strongly connected component"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "强连通分量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2003238"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "subgraph of a directed graph containing paths in both directions between each pair of vertices"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "strongly connected component"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "強連通分量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2003238"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "subgraph of a directed graph containing paths in both directions between each pair of vertices"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "strongly connected component"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "強連通元件"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4973304"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lattice that models the classical propositional logic"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2363730"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Boolean algebra"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "布尔代数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282087"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical model used for classification or regression"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5282087"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "discriminative model"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "判别模型"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4148050"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "directed graph that represents the dependencies of several objects towards each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dependency graph"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "依赖图"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4148050"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "directed graph that represents the dependencies of several objects towards each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dependency graph"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "依赖图"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4148050"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "directed graph that represents the dependencies of several objects towards each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1137726"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dependency graph"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "依賴圖"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4476520"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Markovian quantum master equation for density matrices (mixed states)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lindblad equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "林德布劳德方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4476520"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Markovian quantum master equation for density matrices (mixed states)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lindblad equation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "林德布劳德方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4476520"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Markovian quantum master equation for density matrices (mixed states)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lindblad equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "林德布劳德方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4476520"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Markovian quantum master equation for density matrices (mixed states)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lindblad equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "林德布勞德方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4476520"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Markovian quantum master equation for density matrices (mixed states)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lindblad equation"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "林盃方程式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6095358"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "solution to a specific type of stochastic differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Itō diffusion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伊藤過程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for quotient and remainder of integer division"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "除法器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for quotient and remainder of integer division"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "除法器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for quotient and remainder of integer division"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "除法器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2146125"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "delay differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "时滞微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3890369"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "second order linear differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Chebyshev equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "切比雪夫方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16000077"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process of reducing the number of random variables under consideration"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16000077"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dimensionality reduction"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "降维"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16000077"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process of reducing the number of random variables under consideration"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16000077"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dimensionality reduction"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "降维"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16000077"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process of reducing the number of random variables under consideration"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16000077"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dimensionality reduction"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "降維"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3730881"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equations characterizing continuous-time Markov processes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11214"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kolmogorov equations"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "柯莫哥洛夫后向方程"
+      }
+    }
+  ]
+}

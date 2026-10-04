@@ -1,0 +1,1100 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q26897126 wd:Q1571163 wd:Q6784057 wd:Q719048 wd:Q94373734 wd:Q108132729 wd:Q94692957 wd:Q94633157 wd:Q94633305 wd:Q94633320 wd:Q2024141 wd:Q6788014 wd:Q1566236 wd:Q6803612 wd:Q1940759 wd:Q1789953 wd:Q105946155 wd:Q815284 wd:Q80806956 wd:Q908584 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q26897126 wd:Q1571163 wd:Q6784057 wd:Q719048 wd:Q94373734 wd:Q108132729 wd:Q94692957 wd:Q94633157 wd:Q94633305 wd:Q94633320 wd:Q2024141 wd:Q6788014 wd:Q1566236 wd:Q6803612 wd:Q1940759 wd:Q1789953 wd:Q105946155 wd:Q815284 wd:Q80806956 wd:Q908584 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q26897126 wd:Q1571163 wd:Q6784057 wd:Q719048 wd:Q94373734 wd:Q108132729 wd:Q94692957 wd:Q94633157 wd:Q94633305 wd:Q94633320 wd:Q2024141 wd:Q6788014 wd:Q1566236 wd:Q6803612 wd:Q1940759 wd:Q1789953 wd:Q105946155 wd:Q815284 wd:Q80806956 wd:Q908584 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "c15a0047fb66db256976ef2fdc7b284845c940fe32bf2674d96751bb7c9d051c",
+  "responseSha256": "9fa645a3c73a446cfebde95c10af40beca50a66bd62dba6ab42f747690ffdb50",
+  "retrievedAt": "2026-10-04T05:05:24.218497+00:00",
+  "license": "CC0-1.0",
+  "domain": "physics",
+  "roots": [
+    {
+      "domain": "physics",
+      "id": "Q26897126",
+      "label": "mass defect",
+      "description": "equivalent mass of the binding energy of an atomic nucleus",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1571163",
+      "label": "mass excess",
+      "description": "difference between mass and mass number of a nuclide",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q6784057",
+      "label": "mass in general relativity",
+      "description": "facet of general relativity",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q719048",
+      "label": "mass in special relativity",
+      "description": "concept that incorporates the general understandings from the laws of motion of special relativity along with its concept of mass–energy equivalence",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q94373734",
+      "label": "mass of a gas particle",
+      "description": "",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q108132729",
+      "label": "mass of component",
+      "description": "in a mixture, mass of a component",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q94692957",
+      "label": "mass of dry gas",
+      "description": "",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q94633157",
+      "label": "mass of dry matter",
+      "description": "",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q94633305",
+      "label": "mass of water",
+      "description": "mass of water within a mixture",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q94633320",
+      "label": "mass of water vapour",
+      "description": "",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q2024141",
+      "label": "massless quantum particle",
+      "description": "quantum particle having zero rest mass (zero invariant or intrinsic mass)",
+      "parents": [
+        "Q43116"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q6788014",
+      "label": "Matsubara frequency",
+      "description": "discrete frequences arising in QFT with periodic Wick-rotated time, describing QFT at finite temperature",
+      "parents": [
+        "Q11652"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1566236",
+      "label": "Maxwell force",
+      "description": "force in physics",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q6803612",
+      "label": "mean airway pressure",
+      "description": "mean pressure applied during positive-pressure mechanical ventilation",
+      "parents": [
+        "Q39552"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1940759",
+      "label": "mean corpuscular hemoglobin",
+      "description": "average mass of hemoglobin (Hg) per red blood cell (RBC)",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1789953",
+      "label": "mean effective pressure",
+      "description": "physical quantity",
+      "parents": [
+        "Q39552"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q105946155",
+      "label": "mechanical force",
+      "description": "",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q815284",
+      "label": "mechanical load",
+      "description": "external mechanical resistance against which a machine acts",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q80806956",
+      "label": "mechanical power",
+      "description": "physical quantity defined as the scalar product of force and velocity",
+      "parents": [
+        "Q25342"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q908584",
+      "label": "mechanical tension",
+      "description": "Pulling force transmitted axially – Opposite of compression",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "physics branches 281..300",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3299"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "elementary particle that mediates the strong force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2024141"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gluon"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "膠子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3198"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "elementary particle, the carrier and quantum of electromagnetism"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2024141"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "photon"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "光子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103585"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hypothetical elementary particle that mediates gravitation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2024141"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graviton"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "引力子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103585"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hypothetical elementary particle that mediates gravitation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2024141"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graviton"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "引力子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103585"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hypothetical elementary particle that mediates gravitation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2024141"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graviton"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "引力子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103585"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hypothetical elementary particle that mediates gravitation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2024141"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graviton"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "重力子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103585"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hypothetical elementary particle that mediates gravitation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2024141"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graviton"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "重力子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3198"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "elementary particle, the carrier and quantum of electromagnetism"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2024141"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "photon"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "光子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3198"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "elementary particle, the carrier and quantum of electromagnetism"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2024141"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "photon"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "光子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3198"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "elementary particle, the carrier and quantum of electromagnetism"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2024141"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "photon"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "光子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3198"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "elementary particle, the carrier and quantum of electromagnetism"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2024141"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "photon"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "光子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1571163"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "difference between mass and mass number of a nuclide"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1571163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass excess"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "質量欠缺"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2441902"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "wide ranging subject concerning the effects of wind on the natural and built environment"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q815284"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "wind engineering"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "風工程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6788014"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "discrete frequences arising in QFT with periodic Wick-rotated time, describing QFT at finite temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6788014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Matsubara frequency"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "松原方法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6788014"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "discrete frequences arising in QFT with periodic Wick-rotated time, describing QFT at finite temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6788014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Matsubara frequency"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "松原形式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6788014"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "discrete frequences arising in QFT with periodic Wick-rotated time, describing QFT at finite temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6788014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Matsubara frequency"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "松原方法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6788014"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "discrete frequences arising in QFT with periodic Wick-rotated time, describing QFT at finite temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6788014"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Matsubara frequency"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "鬆原形式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6784057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "facet of general relativity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6784057"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass in general relativity"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "廣義相對論中的質量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2024141"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum particle having zero rest mass (zero invariant or intrinsic mass)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2024141"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "massless quantum particle"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "无质量粒子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2024141"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum particle having zero rest mass (zero invariant or intrinsic mass)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2024141"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "massless quantum particle"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "无质量粒子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2024141"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum particle having zero rest mass (zero invariant or intrinsic mass)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2024141"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "massless quantum particle"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "無質量粒子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1571163"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "difference between mass and mass number of a nuclide"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1571163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass excess"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "质量欠缺"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1571163"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "difference between mass and mass number of a nuclide"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1571163"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass excess"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "質量欠缺"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1940759"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "average mass of hemoglobin (Hg) per red blood cell (RBC)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1940759"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mean corpuscular hemoglobin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "平均红细胞血红蛋白含量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42014143"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q908584"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Pulling force transmitted axially – Opposite of compression"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q908584"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanical tension"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "张力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q908584"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Pulling force transmitted axially – Opposite of compression"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q908584"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanical tension"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "張力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7964839"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "forces, deformations, or accelerations applied to a structure or its components"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q815284"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "structural load"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "結構荷重"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1789953"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical quantity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1789953"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mean effective pressure"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "平均有效压力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q719048"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "concept that incorporates the general understandings from the laws of motion of special relativity along with its concept of mass–energy equivalence"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q719048"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass in special relativity"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "狹義相對論中的質量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q719048"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "concept that incorporates the general understandings from the laws of motion of special relativity along with its concept of mass–energy equivalence"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q719048"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass in special relativity"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "狭义相对论中的质量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q719048"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "concept that incorporates the general understandings from the laws of motion of special relativity along with its concept of mass–energy equivalence"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q719048"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass in special relativity"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "狹義相對論中的質量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q960836"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical process in which a thermal gradient causes different parts of an object to expand by different amounts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q815284"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermal shock"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "热冲击"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q908584"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Pulling force transmitted axially – Opposite of compression"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q908584"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanical tension"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "張力"
+      }
+    }
+  ]
+}

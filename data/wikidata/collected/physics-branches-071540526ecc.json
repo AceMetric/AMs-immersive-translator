@@ -1,0 +1,5029 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q131179447 wd:Q126928158 wd:Q126884212 wd:Q139565186 wd:Q126977469 wd:Q45721316 wd:Q126946209 wd:Q126977158 wd:Q33138136 wd:Q126881495 wd:Q50808019 wd:Q126928002 wd:Q72265179 wd:Q139568522 wd:Q128212625 wd:Q131574216 wd:Q128212480 wd:Q128211714 wd:Q128212642 wd:Q128212769 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q131179447 wd:Q126928158 wd:Q126884212 wd:Q139565186 wd:Q126977469 wd:Q45721316 wd:Q126946209 wd:Q126977158 wd:Q33138136 wd:Q126881495 wd:Q50808019 wd:Q126928002 wd:Q72265179 wd:Q139568522 wd:Q128212625 wd:Q131574216 wd:Q128212480 wd:Q128211714 wd:Q128212642 wd:Q128212769 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q131179447 wd:Q126928158 wd:Q126884212 wd:Q139565186 wd:Q126977469 wd:Q45721316 wd:Q126946209 wd:Q126977158 wd:Q33138136 wd:Q126881495 wd:Q50808019 wd:Q126928002 wd:Q72265179 wd:Q139568522 wd:Q128212625 wd:Q131574216 wd:Q128212480 wd:Q128211714 wd:Q128212642 wd:Q128212769 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "071540526eccc2ae8aa0d7bd531153926f45095cb1c5946bdb9d9b6393618c9e",
+  "responseSha256": "2ccd056abe7f05fd4bef8138a8d3317e17e94554615392775db977bdc33a6a62",
+  "retrievedAt": "2026-10-04T05:07:35.846049+00:00",
+  "license": "CC0-1.0",
+  "domain": "physics",
+  "roots": [
+    {
+      "domain": "physics",
+      "id": "Q131179447",
+      "label": "unit of mechanical stress",
+      "description": "unit for reporting measurement of mechanical stress",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126928158",
+      "label": "unit of modulus of impedance",
+      "description": "unit for reporting measurement of modulus of impedance",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126884212",
+      "label": "unit of molality",
+      "description": "unit for reporting measurement of molality",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q139565186",
+      "label": "unit of molar action",
+      "description": "unit for reporting molar action",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126977469",
+      "label": "unit of molar conductivity",
+      "description": "unit for reporting measurement of molar conductivity",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q45721316",
+      "label": "unit of molar energy",
+      "description": "unit for reporting measurement of molar energy",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126946209",
+      "label": "unit of molar entropy",
+      "description": "unit for reporting measurement of molar entropy",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126977158",
+      "label": "unit of molar heat capacity",
+      "description": "unit for reporting measurement of molar heat capacity",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q33138136",
+      "label": "unit of molar mass",
+      "description": "unit for reporting measurement of molar mass",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126881495",
+      "label": "unit of molar volume",
+      "description": "unit for reporting measurement of molar volume",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q50808019",
+      "label": "unit of moment of inertia",
+      "description": "",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q126928002",
+      "label": "unit of momentum",
+      "description": "unit for reporting measurement of momentum",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q72265179",
+      "label": "unit of musical interval",
+      "description": "",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q139568522",
+      "label": "unit of number density per unit mass",
+      "description": "unit for reporting number density per unit mass",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q128212625",
+      "label": "unit of particle current density",
+      "description": "unit for reporting measurement of particle current density",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q131574216",
+      "label": "unit of particle fluence",
+      "description": "unit for reporting particle fluence",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q128212480",
+      "label": "unit of particle source density",
+      "description": "unit for reporting measurement particle source density",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q128211714",
+      "label": "unit of permittivity",
+      "description": "unit for reporting measurement of permittivity",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q128212642",
+      "label": "unit of photon exitance",
+      "description": "unit for reporting measurement photon exitance",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q128212769",
+      "label": "unit of photon flux",
+      "description": "unit for reporting measurement photon flux",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "physics branches 681..700",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69427692"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molar heat capacity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126977158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per mole kelvin difference"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "焦耳/摩尔开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126977158"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28924753"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit for molar mass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33138136"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per mole"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克/摩尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28924753"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit for molar mass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33138136"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per mole"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克/摩尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33138136"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107096193"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molar conductivity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126977469"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cubic second square ampere per kilogram mole"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "立方秒平方安培每千克摩尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28924753"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit for molar mass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33138136"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per mole"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克/摩尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107096193"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molar conductivity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126977469"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cubic second square ampere per kilogram mole"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "立方秒平方安培每千克摩尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126977469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q39469927"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of pressure and stress"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "newton per square metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "牛顿每平方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4173969"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q39469927"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of pressure and stress"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "newton per square metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "牛顿每平方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q39469927"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of pressure and stress"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "newton per square metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "牛顿每平方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q53679486"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nanoampere"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "纳安"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q53679486"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nanoampere"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "奈安"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q53679486"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nanoampere"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "纳安"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126734856"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q53679486"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nanoampere"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "纳安"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928085"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q53679486"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nanoampere"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "纳安"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q53679486"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nanoampere"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "纳安"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928167"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q53679486"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nanoampere"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "奈安"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126734856"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q53679486"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nanoampere"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "奈安"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928085"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q53679486"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nanoampere"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "奈安"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q53679486"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nanoampere"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "奈安"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928167"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q88957663"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126884212"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mole per kilogram"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "摩尔每千克"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q88957663"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molality"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126884212"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mole per kilogram"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "摩尔每千克"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126884212"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106681449"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of pressure and stress"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per metre square second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克每平方米秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4173969"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106681449"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of pressure and stress"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per metre square second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克每平方米秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q83951055"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of photon irradiance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212625"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "per square metre second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "每平方米秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107095937"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molar energy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per square second mole"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每平方秒摩尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q83951055"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of photon irradiance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212625"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "per square metre second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "每平方米秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212625"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q83951055"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of photon irradiance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212625"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "per square metre second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "每平方米秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212642"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q83951055"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of photon irradiance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212625"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "per square metre second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "每平方米秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106681449"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of pressure and stress"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram per metre square second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克每平方米秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107095937"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molar energy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per square second mole"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每平方秒摩尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107095937"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molar energy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per square second mole"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每平方秒摩尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126895894"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q83951055"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of photon irradiance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212642"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "per square metre second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "每平方米秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q83951055"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of photon irradiance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212642"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "per square metre second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "每平方米秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212625"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q83951055"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of photon irradiance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212642"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "per square metre second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "每平方米秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212642"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q83951055"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of photon irradiance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212642"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "per square metre second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "每平方米秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q53679486"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nanoampere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "纳安"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50808017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of moment of inertia"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50808019"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50808017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of moment of inertia"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50808019"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50808019"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50808017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of moment of inertia"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q50808019"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107095987"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molar heat capacity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126977158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per square second kelvin-difference mole"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每平方秒开尔文摩尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96309077"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molar conductivity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126977469"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "siemens square metre per mole"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "西门子平方米每摩尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q53679486"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nanoampere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "纳安"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126734856"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q53679486"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nanoampere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "纳安"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928085"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q53679486"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nanoampere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "纳安"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q53679486"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nanoampere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "纳安"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928167"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107095987"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molar heat capacity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126977158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per square second kelvin-difference mole"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每平方秒开尔文摩尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126977158"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96309077"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molar conductivity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126977469"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "siemens square metre per mole"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "西门子平方米每摩尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126977469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25499149"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval of 12 half-tones with a frequency ratio of 2:1 (exactly)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "perfect octave"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "纯八度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q386025"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25499149"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval of 12 half-tones with a frequency ratio of 2:1 (exactly)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "perfect octave"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "純八度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q386025"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25499149"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval of 12 half-tones with a frequency ratio of 2:1 (exactly)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "perfect octave"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "完全八度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q386025"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25499149"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval of 12 half-tones with a frequency ratio of 2:1 (exactly)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "perfect octave"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "纯八度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25499149"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval of 12 half-tones with a frequency ratio of 2:1 (exactly)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "perfect octave"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "純八度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25499149"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval of 12 half-tones with a frequency ratio of 2:1 (exactly)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "perfect octave"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "完全八度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25499149"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval of 12 half-tones with a frequency ratio of 2:1 (exactly)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "perfect octave"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "纯八度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25499149"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval of 12 half-tones with a frequency ratio of 2:1 (exactly)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "perfect octave"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "純八度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25499149"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval of 12 half-tones with a frequency ratio of 2:1 (exactly)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "perfect octave"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "完全八度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107096038"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molar entropy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126946209"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per square second kelvin mole"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每平方秒开尔文摩尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q78775089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of momentum"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928002"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram metre per second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克米每秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107096038"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molar entropy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126946209"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram square metre per square second kelvin mole"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克平方米每平方秒开尔文摩尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126946209"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q78775089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of momentum"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928002"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilogram metre per second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千克米每秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928002"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98915792"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of particle source density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212480"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "per cubic metre second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "每立方米秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98915792"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of particle source density"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212480"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "per cubic metre second"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "每立方米秒"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128212480"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69427692"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molar heat capacity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126977158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per mole kelvin difference"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "焦耳/摩尔开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21615967"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molar volume"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126881495"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cubic metre per mole"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "立方米每摩尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21615967"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molar volume"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126881495"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cubic metre per mole"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "立方米每摩尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21615967"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molar volume"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126881495"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cubic metre per mole"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "立方米每摩尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126881495"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of pressure and stress"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pascal"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "帕斯卡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of pressure and stress"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pascal"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "帕斯卡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of pressure and stress"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pascal"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "帕斯卡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of pressure and stress"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pascal"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "帕斯卡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of pressure and stress"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pascal"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "帕斯卡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of pressure and stress"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pascal"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "帕斯卡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of pressure and stress"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pascal"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "帕斯卡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of pressure and stress"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pascal"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "帕斯卡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of pressure and stress"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pascal"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "帕斯卡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of pressure and stress"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pascal"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "帕斯卡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of pressure and stress"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pascal"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "帕斯卡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of pressure and stress"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pascal"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "帕斯卡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of pressure and stress"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pascal"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "帕斯卡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of pressure and stress"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pascal"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "帕斯卡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of pressure and stress"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pascal"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "帕斯卡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q724178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval unit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cent"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "音分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189962"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q724178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval unit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cent"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "音分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189962"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q724178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval unit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cent"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "音分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189962"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q724178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval unit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cent"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "音分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q724178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval unit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cent"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "音分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q724178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval unit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cent"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "音分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q724178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval unit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cent"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "音分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q724178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval unit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cent"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "音分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q724178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval unit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cent"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "音分"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q752197"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of molar energy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilojoule per mole"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千焦耳每摩尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q752197"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of molar energy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilojoule per mole"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "焦耳每摩尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q752197"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of molar energy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilojoule per mole"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "千焦耳每摩爾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q752197"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of molar energy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilojoule per mole"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "千焦耳每莫耳"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1091059"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical resistance in the emu-cgs system; equals 1 nanoohm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abohm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "绝对欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1091059"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical resistance in the emu-cgs system; equals 1 nanoohm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abohm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "绝对欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928085"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1091059"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical resistance in the emu-cgs system; equals 1 nanoohm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abohm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "绝对欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1091059"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical resistance in the emu-cgs system; equals 1 nanoohm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abohm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "绝对欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928167"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1091059"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical resistance in the emu-cgs system; equals 1 nanoohm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abohm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "绝对欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1091059"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical resistance in the emu-cgs system; equals 1 nanoohm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abohm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "绝对欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928085"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1091059"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical resistance in the emu-cgs system; equals 1 nanoohm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abohm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "绝对欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1091059"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical resistance in the emu-cgs system; equals 1 nanoohm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abohm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "绝对欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928167"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1091059"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical resistance in the emu-cgs system; equals 1 nanoohm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abohm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "絕對歐姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1091059"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical resistance in the emu-cgs system; equals 1 nanoohm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abohm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "絕對歐姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928085"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1091059"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical resistance in the emu-cgs system; equals 1 nanoohm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abohm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "絕對歐姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1091059"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electrical resistance in the emu-cgs system; equals 1 nanoohm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abohm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "絕對歐姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928167"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q752197"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of molar energy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilojoule per mole"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "千焦耳每摩尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q752197"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of molar energy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilojoule per mole"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "焦耳每摩尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q752197"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of molar energy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilojoule per mole"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "千焦耳每摩爾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q752197"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of molar energy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "kilojoule per mole"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "千焦耳每莫耳"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13035094"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of molar energy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per mole"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "焦耳每摩尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13035094"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of molar energy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per mole"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "焦耳每莫耳"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13035094"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of molar energy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per mole"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "焦耳每莫耳"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13035094"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of molar energy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per mole"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "焦耳每摩尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13035094"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of molar energy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per mole"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "焦耳每莫耳"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13035094"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of molar energy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per mole"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "焦耳每莫耳"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928085"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "欧姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928167"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13035094"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of molar energy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per mole"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "焦耳每摩尔"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126895894"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13035094"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of molar energy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per mole"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "焦耳每莫耳"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126895894"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13035094"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of molar energy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45721316"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per mole"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "焦耳每莫耳"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126895894"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q738785"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic musical interval"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "semitone"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "半音"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189962"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q738785"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic musical interval"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "semitone"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "半音"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189962"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q738785"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic musical interval"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "semitone"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "半音"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189962"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q738785"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic musical interval"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "semitone"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "半音"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q738785"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic musical interval"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "semitone"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "半音"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q738785"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic musical interval"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "semitone"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "半音"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13221615"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic musical interval"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "whole tone"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "全音"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189962"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1501297"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interval"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "millioctave"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "毫八度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13221615"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic musical interval"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "whole tone"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "全音"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11547252"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of reciprocal area"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131574216"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "reciprocal square metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "每平方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11547252"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of reciprocal area"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131574216"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "reciprocal square metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "每平方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131574216"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11547252"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of reciprocal area"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131574216"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "reciprocal square metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "每平方米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q139563934"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21294882"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric permittivity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128211714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "farad per metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "法拉每米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21294882"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of electric permittivity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128211714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "farad per metre"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "法拉每米"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128211714"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20966455"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molar entropy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126946209"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per mole kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "焦耳每摩尔开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20966455"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molar entropy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126946209"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per mole kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "焦耳每摩爾開爾文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20966455"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molar entropy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126946209"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per mole kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "焦耳每摩尔开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20966455"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molar entropy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126946209"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per mole kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "焦耳每摩爾開爾文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20966455"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molar entropy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126946209"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per mole kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "焦耳每摩尔开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126946209"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20966455"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molar entropy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126946209"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per mole kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "焦耳每摩爾開爾文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126946209"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20966455"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molar entropy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126946209"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per mole kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "焦耳每摩尔开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20966455"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molar entropy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126946209"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per mole kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "焦耳每摩尔开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q69197847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20966455"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of molar entropy"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126946209"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "joule per mole kelvin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "焦耳每摩尔开尔文"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126946209"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1167009"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "musical interval unit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "savart"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "薩瓦 (單位)"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2199357"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "base-10 logarithmic unit for ratios"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decade"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "decade"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17342348"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2199357"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "base-10 logarithmic unit for ratios"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decade"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "decade"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q72265179"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "歐姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208469"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "歐姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68618328"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "歐姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "歐姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126902527"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "歐姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928085"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "歐姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI derived unit of electrical resistance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928158"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ohm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "歐姆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928167"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q239830"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of momentum in the system of Planck units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928002"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Planck momentum"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "普朗克動量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q468999"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q239830"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of momentum in the system of Planck units"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928002"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Planck momentum"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "普朗克動量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126928002"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of pressure and stress"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pascal"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "帕斯卡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4173969"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of pressure and stress"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pascal"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "帕斯卡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4173969"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of pressure and stress"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pascal"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "帕斯卡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4173969"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of pressure and stress"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pascal"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "帕斯卡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4173969"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q44395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SI unit of pressure and stress"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131179447"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pascal"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "帕斯卡"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4173969"
+      }
+    }
+  ]
+}

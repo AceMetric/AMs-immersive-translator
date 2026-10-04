@@ -1,0 +1,6614 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q2257608 wd:Q1729838 wd:Q1510587 wd:Q26806569 wd:Q5362132 wd:Q4382845 wd:Q4382849 wd:Q734896 wd:Q12774855 wd:Q1623338 wd:Q1054766 wd:Q1059648 wd:Q141214984 wd:Q309314 wd:Q2623817 wd:Q7269012 wd:Q7269069 wd:Q232431 wd:Q131611249 wd:Q4218486 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q2257608 wd:Q1729838 wd:Q1510587 wd:Q26806569 wd:Q5362132 wd:Q4382845 wd:Q4382849 wd:Q734896 wd:Q12774855 wd:Q1623338 wd:Q1054766 wd:Q1059648 wd:Q141214984 wd:Q309314 wd:Q2623817 wd:Q7269012 wd:Q7269069 wd:Q232431 wd:Q131611249 wd:Q4218486 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q2257608 wd:Q1729838 wd:Q1510587 wd:Q26806569 wd:Q5362132 wd:Q4382845 wd:Q4382849 wd:Q734896 wd:Q12774855 wd:Q1623338 wd:Q1054766 wd:Q1059648 wd:Q141214984 wd:Q309314 wd:Q2623817 wd:Q7269012 wd:Q7269069 wd:Q232431 wd:Q131611249 wd:Q4218486 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "8fc51bf0bd4565329bc4ebbd35436337765e39855a9fc16c5ae5944938fdef14",
+  "responseSha256": "3caba210541f0946d9d30f04a7945aac5a3a472e910c02b223d3dd61d0538807",
+  "retrievedAt": "2026-10-04T05:02:28.643898+00:00",
+  "license": "CC0-1.0",
+  "domain": "math",
+  "roots": [
+    {
+      "domain": "math",
+      "id": "Q2257608",
+      "label": "prosthaphaeresis",
+      "description": "approximate multiplication and division using formulas from trigonometry",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q1729838",
+      "label": "pseudo magma",
+      "description": "algebraic structure",
+      "parents": [
+        "Q205464"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q1510587",
+      "label": "pseudo-Riemannian manifold",
+      "description": "smooth manifold equipped with nowhere degenerate (but not necessarily positive-definite) metric tensor",
+      "parents": [
+        "Q3552958"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q26806569",
+      "label": "pseudo-ring",
+      "description": "several algebraic structures",
+      "parents": [
+        "Q205464"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q5362132",
+      "label": "pseudocompact space",
+      "description": "topological space with a bounded image under any continuous function to R",
+      "parents": [
+        "Q179899"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q4382845",
+      "label": "pseudogroup",
+      "description": "Concept in mathematics",
+      "parents": [
+        "Q205464"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q4382849",
+      "label": "pseudomanifold",
+      "description": "topological space that is a strongly connected, non-branching simplicial complex",
+      "parents": [
+        "Q179899"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q734896",
+      "label": "Pseudorandom function family",
+      "description": "collection of efficiently-computable functions which emulate a random oracle",
+      "parents": [
+        "Q47279819"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q12774855",
+      "label": "pseudorandom number",
+      "description": "",
+      "parents": [
+        "Q11563"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q1623338",
+      "label": "pseudorandom number generator",
+      "description": "algorithm that generates a sequence of numbers whose properties approximate those of sequences of true random numbers",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q1054766",
+      "label": "public key",
+      "description": "one of the two keys used in asymmetric cryptography, which is published to others, unlike the private key",
+      "parents": [
+        "Q471771"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q1059648",
+      "label": "pumping lemma",
+      "description": "",
+      "parents": [
+        "Q207505"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q141214984",
+      "label": "quality value",
+      "description": "value for a quality",
+      "parents": [
+        "Q2912517"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q309314",
+      "label": "quantity",
+      "description": "property that exists in a range of magnitudes or multitudes; property that can exist as a magnitude or multitude",
+      "parents": [
+        "Q2912517"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q2623817",
+      "label": "quantum algorithm",
+      "description": "algorithms run on quantum computers, typically relying on superposition and/or entanglement",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q7269012",
+      "label": "quantum beat",
+      "description": "concept in quantum physics",
+      "parents": [
+        "Q486902"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q7269069",
+      "label": "quantum mechanics of time travel",
+      "description": "quantum-mechanical models of time travel",
+      "parents": [
+        "Q486902"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q232431",
+      "label": "quantum number",
+      "description": "notation for conserved quantities in physics and chemistry",
+      "parents": [
+        "Q11563"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q131611249",
+      "label": "quantum phase space",
+      "description": "",
+      "parents": [
+        "Q62542"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q4218486",
+      "label": "quantum probability",
+      "description": "",
+      "parents": [
+        "Q9492"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "math branches 861..880",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "property that exists in a range of magnitudes or multitudes; property that can exist as a magnitude or multitude"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantity"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96253971"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "notation for conserved quantities in physics and chemistry"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "量子数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33104303"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "notation for conserved quantities in physics and chemistry"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "量子数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33104303"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "notation for conserved quantities in physics and chemistry"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "量子数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33104303"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "notation for conserved quantities in physics and chemistry"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "量子數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33104303"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "notation for conserved quantities in physics and chemistry"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "量子數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33104303"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "notation for conserved quantities in physics and chemistry"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "量子数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47460393"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "notation for conserved quantities in physics and chemistry"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "量子数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47460393"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "notation for conserved quantities in physics and chemistry"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "量子数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47460393"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "notation for conserved quantities in physics and chemistry"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "量子數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47460393"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "notation for conserved quantities in physics and chemistry"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "量子數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47460393"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q378201"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of quantum information, analogous to the classical bit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "qubit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "量子位元"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550873"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q378201"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of quantum information, analogous to the classical bit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "qubit"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "量子位元"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550873"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q378201"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of quantum information, analogous to the classical bit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "qubit"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "量子位元"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550873"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q378201"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of quantum information, analogous to the classical bit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "qubit"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "量子位元"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550873"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q378201"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of quantum information, analogous to the classical bit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "qubit"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "量子位元"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550873"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380528"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "property of quarks and gluons that is related to the particles’ strong interactions in the theory of quantum chromodynamics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "color charge"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "色荷"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q643669"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380528"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "property of quarks and gluons that is related to the particles’ strong interactions in the theory of quantum chromodynamics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "color charge"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "色荷"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q643669"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380528"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "property of quarks and gluons that is related to the particles’ strong interactions in the theory of quantum chromodynamics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "color charge"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "色荷"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q643669"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380528"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "property of quarks and gluons that is related to the particles’ strong interactions in the theory of quantum chromodynamics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "color charge"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "色荷"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q643669"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q380528"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "property of quarks and gluons that is related to the particles’ strong interactions in the theory of quantum chromodynamics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "color charge"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "色荷"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q643669"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "property that exists in a range of magnitudes or multitudes; property that can exist as a magnitude or multitude"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantity"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96253971"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "property that exists in a range of magnitudes or multitudes; property that can exist as a magnitude or multitude"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantity"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96253971"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "property that exists in a range of magnitudes or multitudes; property that can exist as a magnitude or multitude"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantity"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96253971"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "property that exists in a range of magnitudes or multitudes; property that can exist as a magnitude or multitude"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantity"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96253971"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q337320"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "meal planning tool in diabetes management"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "carbohydrate counting"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "碳水化合物计数法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47574"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q373499"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantity of water contained in a material"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "water content"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "含水量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q174012"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "conserved quantum number representing the number of leptons minus the number of antileptons in an elementary particle reaction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lepton number"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "輕子數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q191780"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical concept generalizing ordinal numerals to extend enumeration to infinite sets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinal number"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "序数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47460393"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q191780"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical concept generalizing ordinal numerals to extend enumeration to infinite sets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinal number"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "序数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47460393"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q191780"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical concept generalizing ordinal numerals to extend enumeration to infinite sets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinal number"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "序数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47460393"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q191780"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical concept generalizing ordinal numerals to extend enumeration to infinite sets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinal number"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "序數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47460393"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q191780"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical concept generalizing ordinal numerals to extend enumeration to infinite sets"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinal number"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "序數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q47460393"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q101395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of heavy particles in the atomic nucleus"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass number"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "質量數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q101395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of heavy particles in the atomic nucleus"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass number"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "质量数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q101395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of heavy particles in the atomic nucleus"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass number"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "质量数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q101395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of heavy particles in the atomic nucleus"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass number"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "質量數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q101395"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of heavy particles in the atomic nucleus"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass number"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "質量數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8805"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic unit of information in computing and digital communications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "位元"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8805"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic unit of information in computing and digital communications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "位元"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550873"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8805"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic unit of information in computing and digital communications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "位元"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110346"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one third of the difference between the number of quarks and antiquarks in a system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "baryon number"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "重子数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110346"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one third of the difference between the number of quarks and antiquarks in a system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "baryon number"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "重子数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110346"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one third of the difference between the number of quarks and antiquarks in a system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "baryon number"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "重子数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110346"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one third of the difference between the number of quarks and antiquarks in a system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "baryon number"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "重子數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110346"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one third of the difference between the number of quarks and antiquarks in a system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "baryon number"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "重子數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8805"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic unit of information in computing and digital communications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bit"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "比特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8805"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic unit of information in computing and digital communications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bit"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "比特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8805"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic unit of information in computing and digital communications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bit"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "位元"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8805"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic unit of information in computing and digital communications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bit"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "比特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550873"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8805"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic unit of information in computing and digital communications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bit"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "比特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550873"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8805"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic unit of information in computing and digital communications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bit"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "位元"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550873"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8805"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic unit of information in computing and digital communications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bit"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "比特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8805"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic unit of information in computing and digital communications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bit"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "比特"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8805"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic unit of information in computing and digital communications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bit"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "位元"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q836938"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number related to the weak interaction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "isospin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "同位旋"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1455736"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q836938"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number related to the weak interaction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "isospin"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "同位旋"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1455736"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q836938"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number related to the weak interaction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "isospin"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "同位旋"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1455736"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q836938"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number related to the weak interaction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "isospin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "同位旋"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3239681"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q836938"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number related to the weak interaction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "isospin"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "同位旋"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3239681"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q836938"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number related to the weak interaction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "isospin"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "同位旋"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3239681"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q940334"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum algorithm for integer factorization"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Shor's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "秀爾演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q940334"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum algorithm for integer factorization"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Shor's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "秀爾演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q97940647"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q938141"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method for finding solutions to combinatorial optimisation problems and ground states of glassy systems using quantum fluctuations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum annealing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "量子退火"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1028209"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Deutsch–Jozsa algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "多伊奇-乔萨算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q874733"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of elementary particles occurring in the Standard Model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "flavour"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "味"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q874733"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of elementary particles occurring in the Standard Model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "flavour"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "味"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q867448"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one of four quantum numbers which are assigned to each electron in an atom to describe that electron's state"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "principal quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "主量子數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q867448"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one of four quantum numbers which are assigned to each electron in an atom to describe that electron's state"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "principal quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "主量子数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q867448"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one of four quantum numbers which are assigned to each electron in an atom to describe that electron's state"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "principal quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "主量子數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1028209"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Deutsch–Jozsa algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "多伊奇-乔萨算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q797258"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "biomedical measurand"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "body fat percentage"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "體脂肪率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42014143"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q797258"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "biomedical measurand"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "body fat percentage"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "体脂肪率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42014143"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q797258"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "biomedical measurand"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "body fat percentage"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "體脂肪率"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42014143"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1028292"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum unstructured search algorithm that finds with high probability the unique input to a black box function that produces a particular output value using 𝑂(𝑁) evaluations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Grover's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "格罗夫算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q755673"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1028292"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum unstructured search algorithm that finds with high probability the unique input to a black box function that produces a particular output value using 𝑂(𝑁) evaluations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Grover's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Grover演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q755673"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1028292"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum unstructured search algorithm that finds with high probability the unique input to a black box function that produces a particular output value using 𝑂(𝑁) evaluations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Grover's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Grover演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q755673"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1028292"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum unstructured search algorithm that finds with high probability the unique input to a black box function that produces a particular output value using 𝑂(𝑁) evaluations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Grover's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Grover演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q755673"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1028292"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum unstructured search algorithm that finds with high probability the unique input to a black box function that produces a particular output value using 𝑂(𝑁) evaluations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Grover's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "格罗夫算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1028292"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum unstructured search algorithm that finds with high probability the unique input to a black box function that produces a particular output value using 𝑂(𝑁) evaluations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Grover's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Grover演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1028292"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum unstructured search algorithm that finds with high probability the unique input to a black box function that produces a particular output value using 𝑂(𝑁) evaluations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Grover's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Grover演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1028292"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum unstructured search algorithm that finds with high probability the unique input to a black box function that produces a particular output value using 𝑂(𝑁) evaluations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Grover's algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Grover演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q874733"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of elementary particles occurring in the Standard Model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "flavour"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "味"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899798"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of times a normal human cell population will divide until cell division stops; (in culture) phenomenon, when fibroblasts can reach a maximum of 50 cell divisions before becoming senescent"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hayflick limit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "海佛烈克極限"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899798"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of times a normal human cell population will divide until cell division stops; (in culture) phenomenon, when fibroblasts can reach a maximum of 50 cell divisions before becoming senescent"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hayflick limit"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "海佛烈克极限"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899798"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of times a normal human cell population will divide until cell division stops; (in culture) phenomenon, when fibroblasts can reach a maximum of 50 cell divisions before becoming senescent"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Hayflick limit"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "海佛烈克極限"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1790389"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudorandom number generator with good statistical randomness and resistance to cryptanalysis"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cryptographically secure pseudo-random number generator"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "密码学安全伪随机数生成器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1092142"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abstraction in a computational model describing a kind of computer resource an algorithm uses"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computational resource"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "計算資源"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1092142"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abstraction in a computational model describing a kind of computer resource an algorithm uses"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computational resource"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "计算资源"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1092142"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "abstraction in a computational model describing a kind of computer resource an algorithm uses"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computational resource"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "計算資源"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1196406"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudorandom number generator whose period is a Mersenne prime"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Mersenne twister"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "梅森旋转算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1196406"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudorandom number generator whose period is a Mersenne prime"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Mersenne twister"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "梅森旋转算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1196406"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudorandom number generator whose period is a Mersenne prime"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Mersenne twister"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "梅森旋轉算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1196406"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudorandom number generator whose period is a Mersenne prime"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Mersenne twister"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "梅森旋轉演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1141095"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number describing the total angular momentum of an atom"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "total angular momentum quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "總角動量量子數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783502"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rate at which a convergent sequence approaches its limit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rate of convergence"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "收斂速度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783502"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rate at which a convergent sequence approaches its limit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rate of convergence"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "收敛速率"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783502"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rate at which a convergent sequence approaches its limit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rate of convergence"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "收敛速率"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1783502"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rate at which a convergent sequence approaches its limit"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "rate of convergence"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "收斂速率"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1054766"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one of the two keys used in asymmetric cryptography, which is published to others, unlike the private key"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1054766"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "public key"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "公钥密码"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1924249"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical quantity which is the subject of a measurement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measurand"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "计量数量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1924249"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical quantity which is the subject of a measurement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measurand"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "度量衡數量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1916324"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number for an atomic orbital that determines its orbital angular momentum and describes the shape of the orbital, and is symbolized as ℓ"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "azimuthal quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "角量子数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1916324"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number for an atomic orbital that determines its orbital angular momentum and describes the shape of the orbital, and is symbolized as ℓ"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "azimuthal quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "角量子数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1916324"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number for an atomic orbital that determines its orbital angular momentum and describes the shape of the orbital, and is symbolized as ℓ"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "azimuthal quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "角量子數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1510587"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "smooth manifold equipped with nowhere degenerate (but not necessarily positive-definite) metric tensor"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1510587"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudo-Riemannian manifold"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伪黎曼流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1510587"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "smooth manifold equipped with nowhere degenerate (but not necessarily positive-definite) metric tensor"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1510587"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudo-Riemannian manifold"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "伪黎曼流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1510587"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "smooth manifold equipped with nowhere degenerate (but not necessarily positive-definite) metric tensor"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1510587"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudo-Riemannian manifold"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "偽黎曼流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1190228"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudorandom number generator"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear congruential generator"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "線性同餘方法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1190228"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudorandom number generator"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear congruential generator"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "线性同余方法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1190228"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudorandom number generator"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear congruential generator"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "線性同餘方法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1748985"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "scalar quantity, changing sign in mirrored coordinates"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudoscalar"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "贗純量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1364131"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number relating the electric charge and the third component of weak isospin"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "weak hypercharge"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "弱超荷"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm that generates a sequence of numbers whose properties approximate those of sequences of true random numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudorandom number generator"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "擬亂數產生器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm that generates a sequence of numbers whose properties approximate those of sequences of true random numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudorandom number generator"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "伪随机数生成器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm that generates a sequence of numbers whose properties approximate those of sequences of true random numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudorandom number generator"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "伪随机数发生器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm that generates a sequence of numbers whose properties approximate those of sequences of true random numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudorandom number generator"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "偽隨機數生成器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1924249"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical quantity which is the subject of a measurement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measurand"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "测量量"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1666609"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudo-Riemannian manifold of signature (1,n)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1510587"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lorentzian manifold"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "洛倫茲流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1194002"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number conserved under the strong interaction; a single charge operator that accounts for properties of isospin, electric charge, and flavour"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hypercharge"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "超荷"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q466575"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudorandom number generator"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "middle-square method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "平方取中法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q466575"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudorandom number generator"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "middle-square method"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "平方取中法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q466575"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudorandom number generator"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "middle-square method"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "平方取中法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q466575"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudorandom number generator"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "middle-square method"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "平方取中法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q466575"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudorandom number generator"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "middle-square method"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "平方取中法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623293"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "biological metric"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basal metabolism"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "基础代谢率"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623293"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "biological metric"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basal metabolism"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "基础代谢率"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623293"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "biological metric"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basal metabolism"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "基礎代謝率"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q632814"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real smooth manifold equipped with a Riemannian metric"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1510587"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Riemannian manifold"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "黎曼流形"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q632814"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real smooth manifold equipped with a Riemannian metric"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1510587"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Riemannian manifold"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "黎曼流形"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q632814"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real smooth manifold equipped with a Riemannian metric"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1510587"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Riemannian manifold"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "黎曼流形"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q632814"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real smooth manifold equipped with a Riemannian metric"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1510587"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Riemannian manifold"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "黎曼流形"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q466575"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudorandom number generator"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "middle-square method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "平方取中法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q466575"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudorandom number generator"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "middle-square method"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "平方取中法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q466575"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudorandom number generator"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "middle-square method"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "平方取中法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q466575"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudorandom number generator"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "middle-square method"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "平方取中法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q466575"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudorandom number generator"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "middle-square method"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "平方取中法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q614112"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "discrete quantity; number of entities of a given kind in a system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of entities"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "量值"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q542869"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in economics, the amount of a good that sellers are willing to provide in the market"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "supply"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "供應"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29028649"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q542869"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in economics, the amount of a good that sellers are willing to provide in the market"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "supply"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "供给曲线"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29028649"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q542869"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in economics, the amount of a good that sellers are willing to provide in the market"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "supply"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "供給曲線"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29028649"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q614112"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "discrete quantity; number of entities of a given kind in a system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of entities"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "量值"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q526999"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "minimum number of members of a deliberative assembly necessary to conduct business"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quorum"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "法定人數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1190554"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q736429"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "property of subatomic particles; the number of strange antiquarks minus strange quarks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "strangeness"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "奇异数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q736429"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "property of subatomic particles; the number of strange antiquarks minus strange quarks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "strangeness"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "奇异数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q736429"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "property of subatomic particles; the number of strange antiquarks minus strange quarks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "strangeness"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "奇異數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q679903"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algebraic structure with a binary operation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1729838"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magma"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "原群"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q679903"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algebraic structure with a binary operation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1729838"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magma"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "原群"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q679903"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algebraic structure with a binary operation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1729838"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magma"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "原群"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q634781"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical quantities that take discrete values because of topological quantum physical effects"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "拓扑量子数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q634781"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical quantities that take discrete values because of topological quantum physical effects"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "拓扑荷"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q634781"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical quantities that take discrete values because of topological quantum physical effects"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "拓扑荷"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q634781"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical quantities that take discrete values because of topological quantum physical effects"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "拓撲荷"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q734896"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "collection of efficiently-computable functions which emulate a random oracle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q734896"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Pseudorandom function family"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伪随机函数家族"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q734896"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "collection of efficiently-computable functions which emulate a random oracle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q734896"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Pseudorandom function family"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "伪随机函数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q734896"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "collection of efficiently-computable functions which emulate a random oracle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q734896"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Pseudorandom function family"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "伪随机函数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q734896"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "collection of efficiently-computable functions which emulate a random oracle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q734896"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Pseudorandom function family"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "偽隨機函式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q776329"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of reactant molecular entities that are involved in the 'microscopic chemical event' constituting an elementary reaction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "molecularity"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "反应分子数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q678322"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number of elementary particles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "weak isospin"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "弱同位旋"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q759811"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of printed copies of a publication"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "print circulation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "印刷發行量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q180160"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q759811"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of printed copies of a publication"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "print circulation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "印刷發行量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q937228"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q762856"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in statistics, the number of times a particular event occurs or a particular statement is true in an experiment, study, or data set"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "frequency"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "頻率"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q762856"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in statistics, the number of times a particular event occurs or a particular statement is true in an experiment, study, or data set"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "frequency"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "頻率"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2719731"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "example of a pseudorandom number generator"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lagged Fibonacci generator"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "时滞斐波那契生成器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2555508"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "flavor quantum number; the difference between the number of top quarks and number of top antiquarks present in a particle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topness"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "頂數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2555508"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "flavor quantum number; the difference between the number of top quarks and number of top antiquarks present in a particle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topness"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "顶数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2009727"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "third in a set of four quantum numbers that distinguishes the orbitals available within a subshell and can be used to calculate the azimuthal component of the orientation of orbital in space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magnetic quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "磁量子数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2009727"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "third in a set of four quantum numbers that distinguishes the orbitals available within a subshell and can be used to calculate the azimuthal component of the orientation of orbital in space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magnetic quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "磁量子数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2009727"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "third in a set of four quantum numbers that distinguishes the orbitals available within a subshell and can be used to calculate the azimuthal component of the orientation of orbital in space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magnetic quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "磁量子數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3589038"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "extent from one surface to the opposite, usually in the smallest solid dimension"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thickness"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "薄度"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2123632"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "prescribed number or percentage that may serve as a maximum, a minimum, or a goal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quota"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "配额"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12812139"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2123632"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "prescribed number or percentage that may serve as a maximum, a minimum, or a goal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quota"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "配额"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96758092"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3676605"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantity used to characterize performance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "figure of merit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "品质因数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96253971"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3123151"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "form of pseudorandom number generator"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Shrinking generator"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "互縮生成器"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1623338"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2257608"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "approximate multiplication and division using formulas from trigonometry"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2257608"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "prosthaphaeresis"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "加减化法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2257608"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "approximate multiplication and division using formulas from trigonometry"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2257608"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "prosthaphaeresis"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "加减化法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2257608"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "approximate multiplication and division using formulas from trigonometry"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2257608"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "prosthaphaeresis"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "加减化法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2257608"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "approximate multiplication and division using formulas from trigonometry"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2257608"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "prosthaphaeresis"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "加減化法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithms run on quantum computers, typically relying on superposition and/or entanglement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "量子算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithms run on quantum computers, typically relying on superposition and/or entanglement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "量子演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithms run on quantum computers, typically relying on superposition and/or entanglement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "量子演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithms run on quantum computers, typically relying on superposition and/or entanglement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "量子演演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2639620"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "flavour quantum number representing the difference between the number of charm quarks and charm antiquarks that are present in a particle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "charm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "魅數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2639620"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "flavour quantum number representing the difference between the number of charm quarks and charm antiquarks that are present in a particle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "charm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "粲数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2639620"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "flavour quantum number representing the difference between the number of charm quarks and charm antiquarks that are present in a particle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "charm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "粲數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2567685"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number (difference between the baryon number and the lepton number), conserved in some grand unified theories even when baryon and lepton numbers are not separately conserved"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B − L"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "重子數減去輕子數的差"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q205805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2567685"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number (difference between the baryon number and the lepton number), conserved in some grand unified theories even when baryon and lepton numbers are not separately conserved"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "B − L"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "重子數減去輕子數的差"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835770"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum algorithm to estimate the eigenvalue of a unitary operator"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum phase estimation algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "量子相位估计算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835770"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum algorithm to estimate the eigenvalue of a unitary operator"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum phase estimation algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "量子相变估计算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835770"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum algorithm to estimate the eigenvalue of a unitary operator"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum phase estimation algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "量子相變估計演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3399648"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "amount of one's holdings of a particular financial asset"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "position"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "部位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3399648"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "amount of one's holdings of a particular financial asset"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "position"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "部位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7100428"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure used in trading of financial instruments"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "order book"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "指令薄"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7100428"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data structure used in trading of financial instruments"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "order book"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "指令薄"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q25351664"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "macroeconomic measure: value of capital assets purchased and not consumed in some time period"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "investment"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "投資"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9378373"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5604179"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "flavor quantum number; the difference between the number of bottom quarks and number of bottom antiquarks present in a particle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bottomness"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "底數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q63185508"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "views of a YouTube video"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "YouTube video views"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "YouTube影片觀看次數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q63185508"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "views of a YouTube video"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "YouTube video views"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "YouTube影片觀看次數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q63185508"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "views of a YouTube video"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "YouTube video views"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "YouTube影片觀看次數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21262209"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "something that is not required, or more than what is sufficient or desirable"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "redundancy"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "過度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6038653"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of units of a product or service in use"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "installed base"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "现有用户群"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3879445"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number parameterizing spin and angular momentum"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spin quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "自旋量子数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11369842"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of people using a transit service"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ridership"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "载客量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q35308049"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11369842"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of people using a transit service"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ridership"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "載客量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q35308049"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11369842"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of people using a transit service"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ridership"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "載客量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q35308049"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6935008"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of quantum number"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multiplicative quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "乘法量子數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11061436"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "difference between hottest month average and coldest month average"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "annual temperature range"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "年較差"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11061436"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "difference between hottest month average and coldest month average"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "annual temperature range"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "年較差"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q845339"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23892516"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of people who speak a language"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of speakers"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "使用者人数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q23892516"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of people who speak a language"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of speakers"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "使用者人數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4918656"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of binary digits (bits), necessary to represent an integer in the binary number system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bit-length"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "位寬"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5763587"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "problem involving an oracle, which quantum computers can solve exponentially faster than classical computers; an oracle separation of BQP and BPP"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Simon's problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "西蒙问题"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7269012"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "concept in quantum physics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7269012"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum beat"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "量子拍頻"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4382845"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Concept in mathematics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4382845"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pseudogroup"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "擬群結構"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7269069"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum-mechanical models of time travel"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7269069"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum mechanics of time travel"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "時間旅行的量子力學"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q51591465"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of blank votes in a voting round for a specific position in a election"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of blank ballots"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "空白票數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q51591465"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of blank votes in a voting round for a specific position in a election"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of blank ballots"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "空白票数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q51591542"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of spoilt votes in a voting round for a specfic position in a election"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of spoilt votes"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "廢票數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q51591542"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of spoilt votes in a voting round for a specfic position in a election"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of spoilt votes"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "废票数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11369842"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of people using a transit service"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ridership"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "载客量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q35308049"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q51590984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "total number of valid votes actually submitted in an election"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of valid votes"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "有效票数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q51590984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "total number of valid votes actually submitted in an election"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "number of valid votes"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "有效票数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5583136"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum number that doesn't change for any eigenstate as time progresses"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q232431"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "good quantum number"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "好量子数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21262209"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "something that is not required, or more than what is sufficient or desirable"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "redundancy"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "过度"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85783144"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in quantum computing, an algorithm that takes in multiple noisy quantum states and outputs a smaller number of more reliable quantum states"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic state distillation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "魔法狀態蒸餾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q121734997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "level of human-caused greenhouse gas emissions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Net-zero emissions"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "淨零"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q121734997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "level of human-caused greenhouse gas emissions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Net-zero emissions"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "淨零"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q121734997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "level of human-caused greenhouse gas emissions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Net-zero emissions"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "淨零"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105666562"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantity of computer data storage or memory capacity occupied by a file, program, dataset, etc."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data size"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "資料大小"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17004438"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105666562"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantity of computer data storage or memory capacity occupied by a file, program, dataset, etc."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data size"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "資料大小"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17004438"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65053013"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Quantum algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bernstein-Vazirani algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "伯恩斯坦-瓦茲拉尼算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2623817"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2516350"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "traffic volume"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "交通流量"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1059648"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1059648"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pumping lemma"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "泵引理"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1059648"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1059648"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pumping lemma"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "泵引理"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1059648"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1059648"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pumping lemma"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "泵引理"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q309314"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2070563"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantity of information"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "信息量"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4218486"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4218486"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quantum probability"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "量子概率"
+      }
+    }
+  ]
+}

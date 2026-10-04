@@ -1,0 +1,2863 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q17097770 wd:Q25416347 wd:Q215007 wd:Q65074105 wd:Q135932618 wd:Q79984 wd:Q11331406 wd:Q5403364 wd:Q181054 wd:Q29794122 wd:Q1069992 wd:Q14489129 wd:Q2596288 wd:Q105581962 wd:Q20923146 wd:Q5421528 wd:Q130644237 wd:Q110651480 wd:Q3062515 wd:Q135937404 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q17097770 wd:Q25416347 wd:Q215007 wd:Q65074105 wd:Q135932618 wd:Q79984 wd:Q11331406 wd:Q5403364 wd:Q181054 wd:Q29794122 wd:Q1069992 wd:Q14489129 wd:Q2596288 wd:Q105581962 wd:Q20923146 wd:Q5421528 wd:Q130644237 wd:Q110651480 wd:Q3062515 wd:Q135937404 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q17097770 wd:Q25416347 wd:Q215007 wd:Q65074105 wd:Q135932618 wd:Q79984 wd:Q11331406 wd:Q5403364 wd:Q181054 wd:Q29794122 wd:Q1069992 wd:Q14489129 wd:Q2596288 wd:Q105581962 wd:Q20923146 wd:Q5421528 wd:Q130644237 wd:Q110651480 wd:Q3062515 wd:Q135937404 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "5d8447a8577506933526dddaa0fa89690a9cee7b6158d616f96a994da9ff0cce",
+  "responseSha256": "87da65f326f2bde9d2f50e861c3a5dbb527188ffc4d2be67a5ecc0354edd8e5b",
+  "retrievedAt": "2026-10-04T05:08:41.342351+00:00",
+  "license": "CC0-1.0",
+  "domain": "cs",
+  "roots": [
+    {
+      "domain": "cs",
+      "id": "Q17097770",
+      "label": "engine balance",
+      "description": "balance of reciprocating and rotating engine components",
+      "parents": [
+        "Q984063"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q25416347",
+      "label": "Enhanced Host Controller Interface",
+      "description": "register-level interface for a host controller for the Universal Serial Bus (USB) Revision 2.0",
+      "parents": [
+        "Q13551889"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q215007",
+      "label": "equations of motion",
+      "description": "differential equation that describes the motion of a physical system",
+      "parents": [
+        "Q11214"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q65074105",
+      "label": "equivalence problem",
+      "description": "decision problem in theoretical computer science and formal language theory",
+      "parents": [
+        "Q3262192"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q135932618",
+      "label": "error diffusion learning algorithm",
+      "description": "optimization algorithm for artificial neural networks, alternative to backpropagation",
+      "parents": [
+        "Q2835765"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q79984",
+      "label": "Ethernet",
+      "description": "family of wired computer networking technologies commonly used in local area networks (LAN), metropolitan area networks (MAN) and wide area networks (WAN)",
+      "parents": [
+        "Q15836568"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q11331406",
+      "label": "Ethernet frame",
+      "description": "protocol data unit of Ethernet telecommunications technologies",
+      "parents": [
+        "Q1324888"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q5403364",
+      "label": "Ethernet over USB",
+      "description": "using a USB connection to transfer Ethernet data",
+      "parents": [
+        "Q15836568"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q181054",
+      "label": "Euclidean division",
+      "description": "division with remainder of integers",
+      "parents": [
+        "Q1226939"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q29794122",
+      "label": "Euclidean Steiner tree",
+      "description": "tree of minimum Euclidean distance connecting a set of points, called terminals, in the plane",
+      "parents": [
+        "Q223655"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q1069992",
+      "label": "evolutionarily stable strategy",
+      "description": "strategy which, if adopted by a population in a given environment, cannot be invaded by any alternative strategy that is initially rare",
+      "parents": [
+        "Q1546627"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q14489129",
+      "label": "evolutionary algorithm",
+      "description": "subset of evolutionary computation",
+      "parents": [
+        "Q2835765"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q2596288",
+      "label": "evolutionary programming",
+      "description": "evolutionary algorithm paradigm where the structure of the program to be optimized is fixed, while its numerical parameters are allowed to evolve",
+      "parents": [
+        "Q188267"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q105581962",
+      "label": "exact string-matching algorithm",
+      "description": "algorithm for finding strings that match a pattern exactly",
+      "parents": [
+        "Q24963771"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q20923146",
+      "label": "exponential cipher",
+      "description": "type of polygraphic cipher based on modular exponentiation",
+      "parents": [
+        "Q4681865"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q5421528",
+      "label": "exponential tree",
+      "description": "tree data structure similar to the binary search tree where the dimension of the tree is not the same at all levels",
+      "parents": [
+        "Q223655"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q130644237",
+      "label": "exports treemap",
+      "description": "treemap on product exports",
+      "parents": [
+        "Q838583"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q110651480",
+      "label": "extendable-output function",
+      "description": "cryptographic function that can output an arbitrarily large number of random-looking bits",
+      "parents": [
+        "Q1064349"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q3062515",
+      "label": "extended boot record",
+      "description": "subsidiary partition table in the MBR partitioning scheme",
+      "parents": [
+        "Q614361"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q135937404",
+      "label": "facial recognition payment system",
+      "description": "payment processors that utilize facial recognition technology",
+      "parents": [
+        "Q1192553"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "cs branches 181..200",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1069992"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "strategy which, if adopted by a population in a given environment, cannot be invaded by any alternative strategy that is initially rare"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1069992"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evolutionarily stable strategy"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "演化均衡策略"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1069992"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "strategy which, if adopted by a population in a given environment, cannot be invaded by any alternative strategy that is initially rare"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1069992"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evolutionarily stable strategy"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "evolutional stable strategy"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1069992"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "strategy which, if adopted by a population in a given environment, cannot be invaded by any alternative strategy that is initially rare"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1069992"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evolutionarily stable strategy"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "进化稳定策略"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1069992"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "strategy which, if adopted by a population in a given environment, cannot be invaded by any alternative strategy that is initially rare"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1069992"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evolutionarily stable strategy"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "進化穩定策略"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q151885"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1069084"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard for Ethernet networking at a data rate of 1 gigabit per second"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Gigabit Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "吉比特以太网"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q317623"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9300786"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equation for the force on a body moving in a fluid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215007"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "drag equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "阻力方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9300786"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equation for the force on a body moving in a fluid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215007"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "drag equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "阻力方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9300786"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equation for the force on a body moving in a fluid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215007"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "drag equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "阻力方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1069084"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard for Ethernet networking at a data rate of 1 gigabit per second"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Gigabit Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "吉比特以太网"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q317623"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1069084"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard for Ethernet networking at a data rate of 1 gigabit per second"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Gigabit Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "吉比特以太網"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q317623"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1069084"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard for Ethernet networking at a data rate of 1 gigabit per second"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Gigabit Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "千兆乙太網"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q317623"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1384131"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "string searching algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105581962"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Rabin–Karp algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "拉宾-卡普算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105581962"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1384131"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "string searching algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105581962"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Rabin–Karp algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "拉宾-卡普算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105582777"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1384131"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "string searching algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105581962"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Rabin–Karp algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Rabin-Karp算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105581962"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1384131"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "string searching algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105581962"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Rabin–Karp algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Rabin-Karp算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105582777"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1384131"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "string searching algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105581962"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Rabin–Karp algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Rabin-Karp算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105581962"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1384131"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "string searching algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105581962"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Rabin–Karp algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Rabin-Karp算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105582777"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1384131"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "string searching algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105581962"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Rabin–Karp algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Rabin-Karp演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105581962"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1384131"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "string searching algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105581962"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Rabin–Karp algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Rabin-Karp演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105582777"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2413791"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "modular connector with 8 contacts, e.g. used for Ethernet"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "8P8C modular connector"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "8P8C"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q58184783"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2413791"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "modular connector with 8 contacts, e.g. used for Ethernet"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "8P8C modular connector"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "8P8C"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q58184783"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2413791"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "modular connector with 8 contacts, e.g. used for Ethernet"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "8P8C modular connector"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "8P8C"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q58184783"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2413791"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "modular connector with 8 contacts, e.g. used for Ethernet"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "8P8C modular connector"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "8P8C"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q58184783"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2413791"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "modular connector with 8 contacts, e.g. used for Ethernet"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "8P8C modular connector"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "8P8C"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q58184783"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5403364"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "using a USB connection to transfer Ethernet data"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5403364"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet over USB"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "USB承载以太网"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5403364"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "using a USB connection to transfer Ethernet data"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5403364"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet over USB"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "USB承载以太网"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5403364"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "using a USB connection to transfer Ethernet data"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5403364"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet over USB"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "USB承載乙太網"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q60788403"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "early 10 Mbit/s Ethernet standards"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Classic Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "傳統網路"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11331406"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "protocol data unit of Ethernet telecommunications technologies"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11331406"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet frame"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "以太网帧格式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2634565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11331406"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "protocol data unit of Ethernet telecommunications technologies"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11331406"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet frame"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "以太网帧格式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2634565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11331406"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "protocol data unit of Ethernet telecommunications technologies"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11331406"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet frame"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "以太網幀格式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2634565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5403365"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "telecommunication technology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet over coax"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "同轴电缆以太网"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5403365"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "telecommunication technology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet over coax"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "同轴电缆以太网"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17097770"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "balance of reciprocating and rotating engine components"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17097770"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "engine balance"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "引擎平衡"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14489129"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "subset of evolutionary computation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14489129"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evolutionary algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "进化算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q102039327"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ethernet physical layers using twisted-pair cables"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet over twisted pair"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "双绞线以太网"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2474721"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "various technologies for transmitting Ethernet frames"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "10-gigabit Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "10吉比特乙太網路"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2474721"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "various technologies for transmitting Ethernet frames"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "10-gigabit Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "10吉比特以太网"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2474721"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "various technologies for transmitting Ethernet frames"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "10-gigabit Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "10吉比特乙太网路"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2474721"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "various technologies for transmitting Ethernet frames"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "10-gigabit Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "10吉比特乙太網路"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2474721"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "various technologies for transmitting Ethernet frames"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "10-gigabit Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "10吉位元乙太網路"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14489129"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "subset of evolutionary computation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14489129"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evolutionary algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "进化算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14489129"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "subset of evolutionary computation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14489129"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evolutionary algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "演化演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14489129"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "subset of evolutionary computation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14489129"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evolutionary algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "演化演演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14489129"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "subset of evolutionary computation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14489129"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evolutionary algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "進化演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2091565"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "technologies for computer networking"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "40 and 100 Gigabit Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "100吉比特以太网"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14946528"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2091565"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "technologies for computer networking"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "40 and 100 Gigabit Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "100吉比特以太网"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21484471"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2596288"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evolutionary algorithm paradigm where the structure of the program to be optimized is fixed, while its numerical parameters are allowed to evolve"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2596288"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evolutionary programming"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "进化规划"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2596288"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evolutionary algorithm paradigm where the structure of the program to be optimized is fixed, while its numerical parameters are allowed to evolve"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2596288"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evolutionary programming"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "进化规划"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2596288"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evolutionary algorithm paradigm where the structure of the program to be optimized is fixed, while its numerical parameters are allowed to evolve"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2596288"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evolutionary programming"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "進化規劃"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q66747126"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3062515"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "subsidiary partition table in the MBR partitioning scheme"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3062515"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "extended boot record"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "扩展引导记录"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7701491"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet speeds above 100 Gbit/s"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Terabit Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "1000G以太网"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85816613"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of partial differential equations whose solutions are stationary with respect to the Yang–Mills action functional"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215007"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Yang–Mills equations"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "杨-米尔斯方程式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215007"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85816613"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of partial differential equations whose solutions are stationary with respect to the Yang–Mills action functional"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215007"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Yang–Mills equations"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "杨-米尔斯方程式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85816613"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of partial differential equations whose solutions are stationary with respect to the Yang–Mills action functional"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215007"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Yang–Mills equations"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "楊-米爾斯方程式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215007"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q85816613"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of partial differential equations whose solutions are stationary with respect to the Yang–Mills action functional"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215007"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Yang–Mills equations"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "楊-米爾斯方程式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q271977"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q895984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "string searching algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105581962"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Boyer–Moore string search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Boyer-Moore字符串搜索算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105581962"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q546389"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet standards that carry traffic at the nominal rate of 100 Mbit/s"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fast Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "快速乙太網路"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20819677"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q546389"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet standards that carry traffic at the nominal rate of 100 Mbit/s"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fast Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "高速乙太网路"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20819677"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q546389"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet standards that carry traffic at the nominal rate of 100 Mbit/s"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fast Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "快速以太网"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20819677"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q546389"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet standards that carry traffic at the nominal rate of 100 Mbit/s"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fast Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "高速乙太網路"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20819677"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of wired computer networking technologies commonly used in local area networks (LAN), metropolitan area networks (MAN) and wide area networks (WAN)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "以太网"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q317623"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of wired computer networking technologies commonly used in local area networks (LAN), metropolitan area networks (MAN) and wide area networks (WAN)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "以太网"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q340169"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of wired computer networking technologies commonly used in local area networks (LAN), metropolitan area networks (MAN) and wide area networks (WAN)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "以太网"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q385853"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of wired computer networking technologies commonly used in local area networks (LAN), metropolitan area networks (MAN) and wide area networks (WAN)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "以太网"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q317623"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of wired computer networking technologies commonly used in local area networks (LAN), metropolitan area networks (MAN) and wide area networks (WAN)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "以太网"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q340169"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of wired computer networking technologies commonly used in local area networks (LAN), metropolitan area networks (MAN) and wide area networks (WAN)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "以太网"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q317623"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of wired computer networking technologies commonly used in local area networks (LAN), metropolitan area networks (MAN) and wide area networks (WAN)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "以太网"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q340169"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of wired computer networking technologies commonly used in local area networks (LAN), metropolitan area networks (MAN) and wide area networks (WAN)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "以太网"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q385853"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of wired computer networking technologies commonly used in local area networks (LAN), metropolitan area networks (MAN) and wide area networks (WAN)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "乙太網路"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q317623"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of wired computer networking technologies commonly used in local area networks (LAN), metropolitan area networks (MAN) and wide area networks (WAN)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "乙太網路"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q340169"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of wired computer networking technologies commonly used in local area networks (LAN), metropolitan area networks (MAN) and wide area networks (WAN)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "以太网"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q385853"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of wired computer networking technologies commonly used in local area networks (LAN), metropolitan area networks (MAN) and wide area networks (WAN)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "乙太網路"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q385853"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of wired computer networking technologies commonly used in local area networks (LAN), metropolitan area networks (MAN) and wide area networks (WAN)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "乙太網路"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q317623"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of wired computer networking technologies commonly used in local area networks (LAN), metropolitan area networks (MAN) and wide area networks (WAN)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "乙太網路"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q340169"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "family of wired computer networking technologies commonly used in local area networks (LAN), metropolitan area networks (MAN) and wide area networks (WAN)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "乙太網路"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q385853"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1028096"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "power-saving option for Ethernet network devices"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q79984"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Energy-Efficient Ethernet"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "節能乙太網路"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "competitive algorithm for searching a problem space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14489129"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "genetic algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "遗传算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "competitive algorithm for searching a problem space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14489129"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "genetic algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "遗传算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "competitive algorithm for searching a problem space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14489129"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "genetic algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "遗传算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "competitive algorithm for searching a problem space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14489129"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "genetic algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "遺傳算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "competitive algorithm for searching a problem space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q14489129"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "genetic algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "遺傳演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215007"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation that describes the motion of a physical system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215007"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equations of motion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "运动方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215007"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation that describes the motion of a physical system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215007"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equations of motion"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "运动方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215007"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation that describes the motion of a physical system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215007"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equations of motion"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "运动方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215007"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation that describes the motion of a physical system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215007"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equations of motion"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "運動方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215007"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation that describes the motion of a physical system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215007"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equations of motion"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "運動方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q402342"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "string searching algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105581962"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Aho–Corasick algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "AC自动机算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105581962"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q402342"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "string searching algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105581962"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Aho–Corasick algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "AC自动机算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105582777"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q402342"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "string searching algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105581962"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Aho–Corasick algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "AC自動機演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105581962"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q402342"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "string searching algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105581962"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Aho–Corasick algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "AC自動機演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105582777"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q402342"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "string searching algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105581962"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Aho–Corasick algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "AC自動機演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105581962"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q402342"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "string searching algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105581962"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Aho–Corasick algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "AC自動機演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105582777"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q45285"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "string searching algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105581962"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Knuth–Morris–Pratt algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "克努斯-莫里斯-普拉特算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105581962"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q181054"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division with remainder of integers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q181054"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Euclidean division"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "带余除法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65943"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q181054"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division with remainder of integers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q181054"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Euclidean division"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "带余除法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3884033"
+      }
+    }
+  ]
+}

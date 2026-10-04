@@ -1,0 +1,30 @@
+{
+  "sourceUrl": "https://lean-lang.org/doc/reference/latest/The-Type-System/",
+  "resolvedUrl": "https://lean-lang.org/doc/reference/latest/The-Type-System/",
+  "retrievedAt": "2026-10-04T06:08:00.280490+00:00",
+  "author": "Lean FRO and Lean reference-manual contributors",
+  "license": "Apache-2.0",
+  "licenseUrl": "https://raw.githubusercontent.com/leanprover/reference-manual/main/LICENSE",
+  "responseSha256": "72996052417d26841d14ebb384c33049045c6621f4c91dd19d7776c3bb6a9092",
+  "textSha256": "510755560b323fcf95735ca315153db5363e8ad4447ebb299bf37aace6a2d0f3",
+  "transformation": "HTML main text; scripts/styles omitted; whitespace normalized; content not rewritten",
+  "anchors": [
+    "--tech-term-Terms",
+    "--tech-term-___",
+    "--tech-term-___-equivalence",
+    "--tech-term-___-next",
+    "--tech-term-___-next-next",
+    "--tech-term-___-next-next-next",
+    "--tech-term-defined-constants",
+    "--tech-term-definitional-equality",
+    "--tech-term-derivation",
+    "--tech-term-expressions",
+    "--tech-term-normal-form",
+    "--tech-term-proof-irrelevance",
+    "--tech-term-reduction",
+    "--tech-term-well-typed",
+    "Computing-types",
+    "LengthList-_LPAR_in-Computing-types_RPAR_"
+  ],
+  "text": "←3. Interacting with Lean4.1. Functions→\n4. The Type System🔗\nTerms, also known as expressions, are the fundamental units of meaning in Lean's core language.\nThey are produced from user-written syntax by the elaborator.\nLean's type system relates terms to their types, which are also themselves terms.\nTypes can be thought of as denoting sets, while terms denote individual elements of these sets.\nA term is well-typed if it has a type under the rules of Lean's type theory.\nOnly well-typed terms have a meaning.\nTerms are a dependently typed λ-calculus: they include function abstraction, application, variables, and let-bindings.\nIn addition to bound variables, variables in the term language may refer to constructors, type constructors, recursors, defined constants, or opaque constants.\nConstructors, type constructors, recursors, and opaque constants are not subject to substitution, while defined constants may be replaced with their definitions.\nA derivation demonstrates the well-typedness of a term by explicitly indicating the precise inference rules that are used.\nImplicitly, well-typed terms can stand in for the derivations that demonstrate their well-typedness.\nLean's type theory is explicit enough that derivations can be reconstructed from well-typed terms, which greatly reduces the overhead that would be incurred from storing a complete derivation, while still being expressive enough to represent modern research mathematics.\nThis means that proof terms are sufficient evidence of the truth of a theorem and are amenable to independent verification.\nIn addition to having types, terms are also related by definitional equality.\nThis is the mechanically-checkable relation that syntactically equates terms modulo their computational behavior.\nDefinitional equality includes the following forms of reduction:\nβ (beta)\nApplying a function abstraction to an argument by substitution for the bound variable\nδ (delta)\nReplacing occurrences of defined constants by the definition's value\nι (iota)\nReduction of recursors whose targets are constructors (primitive recursion)\nζ (zeta)\nReplacement of let-bound variables by their defined values\nQuotient reduction\nReduction of the quotient type's function lifting operator when applied to an element of a quotient\nTerms in which all possible reductions have been carried out are in normal form.\nDefinitional equality includes η-equivalence of functions and single-constructor inductive types.\nThat is, fun x => f x is definitionally equal to f, and S.mk x.f1 x.f2 is definitionally equal to x, if S is a structure with fields f1 and f2.\nIt also features proof irrelevance: any two proofs of the same proposition are definitionally equal.\nIt is reflexive and symmetric, but not transitive.\nDefinitional equality is used by conversion: if two terms are definitionally equal, and a given term has one of them as its type, then it also has the other as its type.\nBecause definitional equality includes reduction, types can result from computations over data.\nComputing types\nWhen passed a natural number, the function LengthList computes a type that corresponds to a list with precisely that many entries in it:\ndef LengthList (α : Type u) : Nat → Type u\n| 0 => PUnit\n| n + 1 => α × LengthList α n\nBecause Lean's tuples nest to the right, multiple nested parentheses are not needed:\nexample : LengthList Int 0 := ()\nexample : LengthList String 2 :=\n(\"Hello\", \"there\", ())\nIf the length does not match the number of entries, then the computed type will not match the term:\nexample : LengthList String 5 :=\n(\"Wrong\", \"number\", Application type mismatch: The argument\n()\nhas type\nUnit\nbut is expected to have type\nLengthList String 3\nin the application\n(\"number\", ())())\nApplication type mismatch: The argument\n()\nhas type\nUnit\nbut is expected to have type\nLengthList String 3\nin the application\n(\"number\", ())\nLive ↪\nThe basic types in Lean are universes, function types, the quotient former Quot, and type constructors of inductive types.\nDefined constants, applications of recursors, function application, axioms or opaque constants may additionally give types, just as they can give rise to terms in any other type.\n4.1. Functions\n4.2. Propositions\n4.3. Universes\n4.4. Inductive Types\n4.5. Quotients\n←3. Interacting with Lean4.1. Functions→"
+}

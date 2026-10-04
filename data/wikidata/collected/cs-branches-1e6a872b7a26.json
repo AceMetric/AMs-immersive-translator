@@ -1,0 +1,4554 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q1143237 wd:Q7095588 wd:Q7096315 wd:Q7095934 wd:Q116870384 wd:Q100320716 wd:Q136311450 wd:Q100320715 wd:Q17081532 wd:Q98520180 wd:Q7062516 wd:Q130370847 wd:Q7098950 wd:Q86165836 wd:Q112631979 wd:Q7099015 wd:Q7100787 wd:Q465274 wd:Q7104529 wd:Q65054805 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q1143237 wd:Q7095588 wd:Q7096315 wd:Q7095934 wd:Q116870384 wd:Q100320716 wd:Q136311450 wd:Q100320715 wd:Q17081532 wd:Q98520180 wd:Q7062516 wd:Q130370847 wd:Q7098950 wd:Q86165836 wd:Q112631979 wd:Q7099015 wd:Q7100787 wd:Q465274 wd:Q7104529 wd:Q65054805 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q1143237 wd:Q7095588 wd:Q7096315 wd:Q7095934 wd:Q116870384 wd:Q100320716 wd:Q136311450 wd:Q100320715 wd:Q17081532 wd:Q98520180 wd:Q7062516 wd:Q130370847 wd:Q7098950 wd:Q86165836 wd:Q112631979 wd:Q7099015 wd:Q7100787 wd:Q465274 wd:Q7104529 wd:Q65054805 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "1e6a872b7a2688a95a3b9a5308887ecbe021f35bc1e00e5595299e1a3868cca2",
+  "responseSha256": "bccfdd707b4b6fe4d44371ed60ca1ee129cec9815fae35915405179e55f8f47d",
+  "retrievedAt": "2026-10-04T05:09:26.892241+00:00",
+  "license": "CC0-1.0",
+  "domain": "cs",
+  "roots": [
+    {
+      "domain": "cs",
+      "id": "Q1143237",
+      "label": "octree",
+      "description": "tree data structure in which each internal node has exactly eight children;most often used to partition a three-dimensional space by recursively subdividing it into eight octants; the three-dimensional analog of quadtrees",
+      "parents": [
+        "Q223655"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-dbe9e93e1113.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7095588",
+      "label": "opaque data type",
+      "description": "data type whose concrete data structure is not defined in an interface",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7096315",
+      "label": "open addressing",
+      "description": "class of collision resolution schemes",
+      "parents": [
+        "Q105204442"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7095934",
+      "label": "open API",
+      "description": "an application programming interface whose all features are public and which can be used without restrictive conditions",
+      "parents": [
+        "Q165194"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q116870384",
+      "label": "OpenHistoricalMap relation",
+      "description": "datatype in OpenHistoricalMap",
+      "parents": [
+        "Q27948"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q100320716",
+      "label": "OpenStreetMap relation",
+      "description": "datatype in OpenStreetMap",
+      "parents": [
+        "Q27948"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q136311450",
+      "label": "OpenStreetMap relation type",
+      "description": "",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q100320715",
+      "label": "OpenStreetMap way",
+      "description": "datatype in OpenStreetMap",
+      "parents": [
+        "Q27948"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q17081532",
+      "label": "optical braille recognition",
+      "description": "automated recognition of braille characters",
+      "parents": [
+        "Q167555"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q98520180",
+      "label": "optimal control problem",
+      "description": "",
+      "parents": [
+        "Q984063"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7062516",
+      "label": "optimal job scheduling",
+      "description": "class of optimization problems for assigning tasks to workers over time",
+      "parents": [
+        "Q984063"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q130370847",
+      "label": "optimal search algorithm",
+      "description": "an algorithm that finds the solution with the lowest path cost",
+      "parents": [
+        "Q755673"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-f5b3b6575f99.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7098950",
+      "label": "optimal stopping",
+      "description": "class of mathematical problems concerned with choosing an optimal time to take a particular action",
+      "parents": [
+        "Q984063"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q86165836",
+      "label": "optimization",
+      "description": "",
+      "parents": [
+        "Q24476018"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q112631979",
+      "label": "optimization method",
+      "description": "systematic approach or method used to improve a process, system, or outcome by maximizing efficiency, performance, or value",
+      "parents": [
+        "Q24476018"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7099015",
+      "label": "option type",
+      "description": "encapsulation of an optional value in programming or type theory",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7100787",
+      "label": "ordinal data type",
+      "description": "class of data types; data types whose values can be counted",
+      "parents": [
+        "Q190087"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q465274",
+      "label": "ordinary differential equation",
+      "description": "differential equation containing one or more functions of one independent variable and its derivatives",
+      "parents": [
+        "Q11214"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-c933c63e00bf.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q7104529",
+      "label": "orthogonal diagonalization",
+      "description": "method in linear algebra",
+      "parents": [
+        "Q11917068"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-d58867585a44.json"
+    },
+    {
+      "domain": "cs",
+      "id": "Q65054805",
+      "label": "OSI model layer",
+      "description": "network communication abstraction layer",
+      "parents": [
+        "Q1200992"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/cs-b0bb76248ae0.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "cs branches 421..440",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134267434"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The continuous process of adjusting decisions, controls, or operations based on live data to achieve optimal outcomes with minimal delay."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real-time optimization"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "实时优化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11660"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134267434"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The continuous process of adjusting decisions, controls, or operations based on live data to achieve optimal outcomes with minimal delay."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real-time optimization"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "實時優化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11660"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q100320716"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "datatype in OpenStreetMap"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q100320716"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "OpenStreetMap relation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "開放街圖關聯"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190087"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134281528"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The process of using algorithms and real-time data to optimize the timing and rate of energy storage charging and discharging in order to maximize economic value or grid efficiency."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "charge/discharge optimization"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "充放电优化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134281528"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The process of using algorithms and real-time data to optimize the timing and rate of energy storage charging and discharging in order to maximize economic value or grid efficiency."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "charge/discharge optimization"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "充放電優化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134281765"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The use of AI and real-time data to continuously adjust pricing for infrastructure-based services such as EV charging, energy supply, & automated mobility systems based on demand, supply."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dynamic pricing in infrastructure services"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "基础设施服务的动态定价"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11660"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134281765"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The use of AI and real-time data to continuously adjust pricing for infrastructure-based services such as EV charging, energy supply, & automated mobility systems based on demand, supply."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dynamic pricing in infrastructure services"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "基礎設施服務的動態定價"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11660"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "systematic approach or method used to improve a process, system, or outcome by maximizing efficiency, performance, or value"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optimization method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "优化技术"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130301930"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "systematic approach or method used to improve a process, system, or outcome by maximizing efficiency, performance, or value"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optimization method"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "優化技術"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130301930"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134267434"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The continuous process of adjusting decisions, controls, or operations based on live data to achieve optimal outcomes with minimal delay."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real-time optimization"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "实时优化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q179310"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134267434"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The continuous process of adjusting decisions, controls, or operations based on live data to achieve optimal outcomes with minimal delay."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real-time optimization"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "實時優化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q179310"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134267434"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The continuous process of adjusting decisions, controls, or operations based on live data to achieve optimal outcomes with minimal delay."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real-time optimization"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "实时优化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134267434"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The continuous process of adjusting decisions, controls, or operations based on live data to achieve optimal outcomes with minimal delay."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real-time optimization"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "實時優化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q116870384"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "datatype in OpenHistoricalMap"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q116870384"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "OpenHistoricalMap relation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "开放史图关系"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190087"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q116870384"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "datatype in OpenHistoricalMap"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q116870384"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "OpenHistoricalMap relation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "开放史图关系"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190087"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q116870384"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "datatype in OpenHistoricalMap"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q116870384"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "OpenHistoricalMap relation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "開放史圖關聯"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190087"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134281528"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The process of using algorithms and real-time data to optimize the timing and rate of energy storage charging and discharging in order to maximize economic value or grid efficiency."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "charge/discharge optimization"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "充放电优化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1779504"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134281528"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The process of using algorithms and real-time data to optimize the timing and rate of energy storage charging and discharging in order to maximize economic value or grid efficiency."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "charge/discharge optimization"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "充放電優化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1779504"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134281528"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The process of using algorithms and real-time data to optimize the timing and rate of energy storage charging and discharging in order to maximize economic value or grid efficiency."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "charge/discharge optimization"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "充放电优化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134281528"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The process of using algorithms and real-time data to optimize the timing and rate of energy storage charging and discharging in order to maximize economic value or grid efficiency."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "charge/discharge optimization"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "充放電優化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q100320715"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "datatype in OpenStreetMap"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q100320715"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "OpenStreetMap way"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "开放街图路径"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190087"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q100320715"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "datatype in OpenStreetMap"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q100320715"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "OpenStreetMap way"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "開放街圖路徑"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q190087"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134281765"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The use of AI and real-time data to continuously adjust pricing for infrastructure-based services such as EV charging, energy supply, & automated mobility systems based on demand, supply."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dynamic pricing in infrastructure services"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "基础设施服务的动态定价"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3394670"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134281765"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The use of AI and real-time data to continuously adjust pricing for infrastructure-based services such as EV charging, energy supply, & automated mobility systems based on demand, supply."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dynamic pricing in infrastructure services"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "基礎設施服務的動態定價"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3394670"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134281765"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The use of AI and real-time data to continuously adjust pricing for infrastructure-based services such as EV charging, energy supply, & automated mobility systems based on demand, supply."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dynamic pricing in infrastructure services"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "基础设施服务的动态定价"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17009728"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134281765"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The use of AI and real-time data to continuously adjust pricing for infrastructure-based services such as EV charging, energy supply, & automated mobility systems based on demand, supply."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dynamic pricing in infrastructure services"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "基礎設施服務的動態定價"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17009728"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "systematic approach or method used to improve a process, system, or outcome by maximizing efficiency, performance, or value"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optimization method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "优化技术"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q46857"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "systematic approach or method used to improve a process, system, or outcome by maximizing efficiency, performance, or value"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optimization method"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "優化技術"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q46857"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q209372"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "layer in the OSI and TCP/IP models providing host-to-host communication services for applications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transport layer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "传输层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1200992"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q209372"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "layer in the OSI and TCP/IP models providing host-to-host communication services for applications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transport layer"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "传输层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1200992"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q209372"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "layer in the OSI and TCP/IP models providing host-to-host communication services for applications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transport layer"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "传输层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1200992"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q209372"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "layer in the OSI and TCP/IP models providing host-to-host communication services for applications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transport layer"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "傳輸層"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1200992"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q209372"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "layer in the OSI and TCP/IP models providing host-to-host communication services for applications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transport layer"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "傳輸層"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1200992"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q209372"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "layer in the OSI and TCP/IP models providing host-to-host communication services for applications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transport layer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "传输层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q209372"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "layer in the OSI and TCP/IP models providing host-to-host communication services for applications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transport layer"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "传输层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q209372"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "layer in the OSI and TCP/IP models providing host-to-host communication services for applications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transport layer"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "传输层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q209372"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "layer in the OSI and TCP/IP models providing host-to-host communication services for applications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transport layer"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "傳輸層"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q209372"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "layer in the OSI and TCP/IP models providing host-to-host communication services for applications"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transport layer"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "傳輸層"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q194134"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "second layer of the OSI networking model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data-link layer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "数据链路层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q194134"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "second layer of the OSI networking model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data-link layer"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "数据链路层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q194134"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "second layer of the OSI networking model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data-link layer"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "数据链路层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q194134"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "second layer of the OSI networking model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data-link layer"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "資料連結層"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q194134"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "second layer of the OSI networking model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data-link layer"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "資料連結層"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208074"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "layer 3 of the OSI model for computer communication"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network layer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "网络层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208074"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "layer 3 of the OSI model for computer communication"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network layer"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "网络层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208074"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "layer 3 of the OSI model for computer communication"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network layer"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "网络层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208074"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "layer 3 of the OSI model for computer communication"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network layer"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "網絡層"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q208074"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "layer 3 of the OSI model for computer communication"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network layer"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "網路層"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q32483"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "primitive data type"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7100787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "字符"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1188648"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q32483"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "primitive data type"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7100787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "字元"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1188648"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q32483"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "primitive data type"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7100787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "字元"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1188648"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q32483"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "primitive data type"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7100787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "字符"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1188648"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q59750"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding shortest paths by simultaneously searching from the source and destination until both searches meet"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130370847"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bidirectional search"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "双向搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q755673"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q59750"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding shortest paths by simultaneously searching from the source and destination until both searches meet"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130370847"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bidirectional search"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "双向搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30503704"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q59750"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding shortest paths by simultaneously searching from the source and destination until both searches meet"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130370847"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bidirectional search"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "双向搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130370792"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q59750"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding shortest paths by simultaneously searching from the source and destination until both searches meet"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130370847"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bidirectional search"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "双向搜索"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130370847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189768"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Highest layer of a networked communication model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "application layer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "应用层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189768"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Highest layer of a networked communication model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "application layer"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "应用层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189768"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Highest layer of a networked communication model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "application layer"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "应用层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189768"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Highest layer of a networked communication model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "application layer"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "應用層"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189768"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Highest layer of a networked communication model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "application layer"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "應用層"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189768"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Highest layer of a networked communication model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "application layer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "应用层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q80096233"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189768"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Highest layer of a networked communication model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "application layer"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "应用层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q80096233"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189768"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Highest layer of a networked communication model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "application layer"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "应用层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q80096233"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189768"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Highest layer of a networked communication model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "application layer"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "應用層"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q80096233"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189768"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Highest layer of a networked communication model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "application layer"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "應用層"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q80096233"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q32483"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "primitive data type"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7100787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "character"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "字符"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1188648"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192727"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the lowest-level electronic or optical transmission functions of a network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical layer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "物理层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192727"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the lowest-level electronic or optical transmission functions of a network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical layer"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "物理层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192727"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the lowest-level electronic or optical transmission functions of a network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical layer"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "物理层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192727"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the lowest-level electronic or optical transmission functions of a network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical layer"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "實體層"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192727"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the lowest-level electronic or optical transmission functions of a network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical layer"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "實體層"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q604374"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "exactly solvable model of coupled oscillators"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Kuramoto model"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "藏本模型"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215121"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "6th layer of the OSI model of telecommunications; the least abstract for which data representation makes much sense"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "presentation layer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "表示层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215121"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "6th layer of the OSI model of telecommunications; the least abstract for which data representation makes much sense"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "presentation layer"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "表示层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215121"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "6th layer of the OSI model of telecommunications; the least abstract for which data representation makes much sense"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "presentation layer"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "表示层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215121"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "6th layer of the OSI model of telecommunications; the least abstract for which data representation makes much sense"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "presentation layer"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "表示層"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q215121"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "6th layer of the OSI model of telecommunications; the least abstract for which data representation makes much sense"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "presentation layer"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "表示層"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q520777"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic computing representation of truth and falsehood"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7100787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Boolean data type"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "布林"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q520777"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic computing representation of truth and falsehood"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7100787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Boolean data type"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "布林"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q478351"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "collision resolution scheme"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "double hashing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "双散列"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q478351"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "collision resolution scheme"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "double hashing"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "double hashing"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q478351"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "collision resolution scheme"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "double hashing"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "双重散列"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q478351"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "collision resolution scheme"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "double hashing"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "雙雜湊"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q760170"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data type consisting of an unordered set of named values"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7100787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "enumerated type"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "枚举"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q216292"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "part of seven-layer computer networking model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "session layer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "会话层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q216292"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "part of seven-layer computer networking model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "session layer"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "会话层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q216292"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "part of seven-layer computer networking model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "session layer"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "会话层"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q216292"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "part of seven-layer computer networking model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "session layer"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "會話層"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q216292"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "part of seven-layer computer networking model"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "session layer"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "會話層"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q520777"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic computing representation of truth and falsehood"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7100787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Boolean data type"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "布尔"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q520777"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic computing representation of truth and falsehood"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7100787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Boolean data type"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "布爾"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q520777"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "basic computing representation of truth and falsehood"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7100787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Boolean data type"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "布尔"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation containing one or more functions of one independent variable and its derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinary differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "常微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation containing one or more functions of one independent variable and its derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinary differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "常微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation containing one or more functions of one independent variable and its derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinary differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "常微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation containing one or more functions of one independent variable and its derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinary differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "常微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential equation containing one or more functions of one independent variable and its derivatives"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinary differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "常微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q729138"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "datum of integral data type"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7100787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "integer data type"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "整数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q729138"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "datum of integral data type"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7100787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "integer data type"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "整数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q729138"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "datum of integral data type"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7100787"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "integer data type"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "整數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2988094"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "collision resolution scheme"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear probing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "线性探测"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2988094"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "collision resolution scheme"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear probing"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "线性探测"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q48773561"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "relation between density and radius for a white dwarf"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Chandrasekhar's white dwarf equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "錢德拉塞卡白矮星方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q48773561"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "relation between density and radius for a white dwarf"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Chandrasekhar's white dwarf equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "錢德拉塞卡白矮星方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3239681"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2735407"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinary differential equation describing an isotropic spherical body in static gravitational equilibrium in general relativity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tolman–Oppenheimer–Volkoff equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "托尔曼－奥本海默－沃尔科夫方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2735407"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinary differential equation describing an isotropic spherical body in static gravitational equilibrium in general relativity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tolman–Oppenheimer–Volkoff equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "托尔曼－奥本海默－沃尔科夫方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2735407"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinary differential equation describing an isotropic spherical body in static gravitational equilibrium in general relativity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tolman–Oppenheimer–Volkoff equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "托爾曼－奧本海默－沃爾科夫方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2735407"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinary differential equation describing an isotropic spherical body in static gravitational equilibrium in general relativity"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Tolman–Oppenheimer–Volkoff equation"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "托爾曼－奧本海默－沃爾科夫方程式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1584911"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hashing data structure with worst-case constant lookup time based on moving old keys to make room for new ones"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cuckoo hashing"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "布谷鸟哈希"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q955889"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of equations that either contains differential equations and algebraic equations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "differential algebraic equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "微分代數方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1366795"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "exact differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "全微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1366795"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "exact differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "全微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1366795"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "exact differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "全微分方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1804812"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dimensionless form of Poisson's equation for the gravitational potential of a Newtonian self-gravitating, spherically symmetric, polytropic fluid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lane–Emden equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "莱恩－埃姆登方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835765"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for finding the optimum or optima of a function"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optimization algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "优化算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1804812"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dimensionless form of Poisson's equation for the gravitational potential of a Newtonian self-gravitating, spherically symmetric, polytropic fluid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lane–Emden equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "莱恩－埃姆登方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q64223577"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7098950"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of mathematical problems concerned with choosing an optimal time to take a particular action"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7098950"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optimal stopping"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "最佳停止問題"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7099015"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "encapsulation of an optional value in programming or type theory"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7099015"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "option type"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "可选类型"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1971426"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical optimization method for deriving control policies"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "optimal control"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "最优控制"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of collision resolution schemes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open addressing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "开放寻址"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of collision resolution schemes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open addressing"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "开放寻址"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of collision resolution schemes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open addressing"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "开放寻址"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of collision resolution schemes"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open addressing"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "開放定址"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1143237"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree data structure in which each internal node has exactly eight children;most often used to partition a three-dimensional space by recursively subdividing it into eight octants; the three-dimensional analog of quadtrees"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1143237"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "octree"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "八叉树"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1143237"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree data structure in which each internal node has exactly eight children;most often used to partition a three-dimensional space by recursively subdividing it into eight octants; the three-dimensional analog of quadtrees"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1143237"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "octree"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "八叉树"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1143237"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree data structure in which each internal node has exactly eight children;most often used to partition a three-dimensional space by recursively subdividing it into eight octants; the three-dimensional analog of quadtrees"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1143237"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "octree"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "八元樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1143237"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tree data structure in which each internal node has exactly eight children;most often used to partition a three-dimensional space by recursively subdividing it into eight octants; the three-dimensional analog of quadtrees"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1143237"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "octree"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "八元樹"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6401153"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear second-order ordinary differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sturm–Liouville equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "斯图姆-刘维尔微分方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6401153"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear second-order ordinary differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sturm–Liouville equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "斯图姆-刘维尔微分方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6401153"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear second-order ordinary differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sturm–Liouville equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "斯图姆-刘维尔微分方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1129902"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6401153"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear second-order ordinary differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sturm–Liouville equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "斯图姆-刘维尔微分方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1129902"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6401153"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear second-order ordinary differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sturm–Liouville equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "斯图姆-刘维尔微分方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6401153"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear second-order ordinary differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sturm–Liouville equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "斯图姆-刘维尔微分方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6401153"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear second-order ordinary differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sturm–Liouville equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "斯图姆-刘维尔微分方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q64223577"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6401153"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear second-order ordinary differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sturm–Liouville equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "斯图姆-刘维尔微分方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q64223577"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7268367"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "collision resolution scheme"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quadratic probing"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "二次探测"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7268367"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "collision resolution scheme"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quadratic probing"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "二次探测"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7268367"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "collision resolution scheme"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quadratic probing"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "二次探测"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7268367"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "collision resolution scheme"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quadratic probing"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "二次探測"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7096315"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7095588"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "data type whose concrete data structure is not defined in an interface"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7095588"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "opaque data type"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "不透明数据类型"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7095589"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "programming datatype"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7095588"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "opaque pointer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "不透明指针"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7104529"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method in linear algebra"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7104529"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "orthogonal diagonalization"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "正交對角化"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7095934"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "an application programming interface whose all features are public and which can be used without restrictive conditions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7095934"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open API"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "开放API"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7095934"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "an application programming interface whose all features are public and which can be used without restrictive conditions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7095934"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open API"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "开放API"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7095934"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "an application programming interface whose all features are public and which can be used without restrictive conditions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7095934"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "open API"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "開放API"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2520550"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear optimal control technique"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98520180"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear-quadratic regulator"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "LQR控制器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6959295"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dimensional reduction of 4d Yang–Mills self-duality equations into one dimension, used to construct monopoles and calorons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Nahm equations"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "纳姆方程式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6959295"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dimensional reduction of 4d Yang–Mills self-duality equations into one dimension, used to construct monopoles and calorons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Nahm equations"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "納姆方程式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q851503"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Riccati equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Riccati方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q851503"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Riccati equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Riccati方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q851503"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Riccati equation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Riccati方程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1094772"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinary differential equation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Clairaut's equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "克萊羅方程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "network communication abstraction layer"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65054805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "OSI model layer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "OSI模型层"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10167591"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "ordinary differential equation together with a specified value, called the initial condition, of the unknown function at a given point in the domain of the solution"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "initial value problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "初值問題"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q465274"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5817450"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "first-order ordinary differential equation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "一阶常微分方程"
+      }
+    }
+  ]
+}

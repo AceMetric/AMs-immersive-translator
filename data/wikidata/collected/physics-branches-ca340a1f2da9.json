@@ -1,0 +1,5071 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q141350777 wd:Q1228244 wd:Q105581076 wd:Q2225 wd:Q1327057 wd:Q28455414 wd:Q260463 wd:Q65280844 wd:Q16670990 wd:Q28920814 wd:Q52234516 wd:Q71130616 wd:Q6753082 wd:Q837718 wd:Q15211908 wd:Q18206829 wd:Q120926552 wd:Q901768 wd:Q12980679 wd:Q1361503 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q141350777 wd:Q1228244 wd:Q105581076 wd:Q2225 wd:Q1327057 wd:Q28455414 wd:Q260463 wd:Q65280844 wd:Q16670990 wd:Q28920814 wd:Q52234516 wd:Q71130616 wd:Q6753082 wd:Q837718 wd:Q15211908 wd:Q18206829 wd:Q120926552 wd:Q901768 wd:Q12980679 wd:Q1361503 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q141350777 wd:Q1228244 wd:Q105581076 wd:Q2225 wd:Q1327057 wd:Q28455414 wd:Q260463 wd:Q65280844 wd:Q16670990 wd:Q28920814 wd:Q52234516 wd:Q71130616 wd:Q6753082 wd:Q837718 wd:Q15211908 wd:Q18206829 wd:Q120926552 wd:Q901768 wd:Q12980679 wd:Q1361503 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "ca340a1f2da9679d40cec1c6a9e3e1a4c2974509feb1e3ed8aea9a8bcc3966c5",
+  "responseSha256": "ff4131493901329b628ba045e9601733ee9afe1e288e9f85976f56ea3c29c142",
+  "retrievedAt": "2026-10-04T05:05:00.087663+00:00",
+  "license": "CC0-1.0",
+  "domain": "physics",
+  "roots": [
+    {
+      "domain": "physics",
+      "id": "Q141350777",
+      "label": "electromagnetic radiation frequency",
+      "description": "",
+      "parents": [
+        "Q11652"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1228244",
+      "label": "electromagnetic unit",
+      "description": "",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q105581076",
+      "label": "electromagnetic wavelength",
+      "description": "for an electromagnetic wave propagating in a medium, quotient of phase speed and frequency",
+      "parents": [
+        "Q41364"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q2225",
+      "label": "electron",
+      "description": "subatomic particle with negative charge",
+      "parents": [
+        "Q43116"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1327057",
+      "label": "electron emission",
+      "description": "",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q28455414",
+      "label": "electron heat capacity",
+      "description": "Heat capacity of an electron gas",
+      "parents": [
+        "Q179388"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q260463",
+      "label": "electron paramagnetic resonance",
+      "description": "technique to study materials with unpaired electrons",
+      "parents": [
+        "Q172858"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q65280844",
+      "label": "electronic system",
+      "description": "system that operates by controlling, amplifying, or converting the flow of electric current",
+      "parents": [
+        "Q1454986"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q16670990",
+      "label": "electrostatic pressure",
+      "description": "",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q28920814",
+      "label": "elementary boson",
+      "description": "particle of non-matter that has no known substructure",
+      "parents": [
+        "Q43116"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q52234516",
+      "label": "elementary fermion",
+      "description": "particle of matter or antimatter that has no known substructure",
+      "parents": [
+        "Q43116"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q71130616",
+      "label": "elementary particle interaction",
+      "description": "interaction of particles responsible for their scattering and transformations (decays and reactions)",
+      "parents": [
+        "Q104934"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q6753082",
+      "label": "empty weight",
+      "description": "mass of a vehicle without usable fuel, passengers, cargo, armament or mission equipment",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q837718",
+      "label": "energy storage",
+      "description": "capture of energy produced at one time for use at a later time",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q15211908",
+      "label": "energy transfer",
+      "description": "process or amount of energy moving from one specified object, system, or location, to another",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q18206829",
+      "label": "engine power",
+      "description": "maximum power that an engine can put out. It can be expressed in kilowatts or horsepower",
+      "parents": [
+        "Q25342"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q120926552",
+      "label": "engineered physical system",
+      "description": "human-designed system consisting of physical components",
+      "parents": [
+        "Q1454986"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q901768",
+      "label": "entropic force",
+      "description": "physical force that originates from thermodynamics instead of fundamental interactions",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q12980679",
+      "label": "equilibrant force",
+      "description": "force which brings a body into mechanical equilibrium",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1361503",
+      "label": "excitation",
+      "description": "process of generating a magnetic field by means of an electric current",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "physics branches 161..180",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2225"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "subatomic particle with negative charge"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "电子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6718"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "elementary particles that make up hadrons in the Standard Model of particle physics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q52234516"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quark"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "夸克"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6718"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "elementary particles that make up hadrons in the Standard Model of particle physics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q52234516"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quark"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "夸克"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6718"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "elementary particles that make up hadrons in the Standard Model of particle physics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q52234516"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quark"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "夸克"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q57573"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "automotive term referring to a vehicle system with self-diagnostic and fault reporting capability"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65280844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "on-board diagnostics"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "車上診斷系統"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1392804"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q57573"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "automotive term referring to a vehicle system with self-diagnostic and fault reporting capability"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65280844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "on-board diagnostics"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "車上診斷系統"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1392804"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42213"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energy transferred to an object via the application of force on it through a displacement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15211908"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "work"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "功"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42213"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energy transferred to an object via the application of force on it through a displacement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15211908"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "work"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "功"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103585"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hypothetical elementary particle that mediates gravitation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28920814"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graviton"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "引力子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103585"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hypothetical elementary particle that mediates gravitation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28920814"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graviton"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "引力子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103585"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hypothetical elementary particle that mediates gravitation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28920814"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graviton"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "引力子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103585"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hypothetical elementary particle that mediates gravitation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28920814"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graviton"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "重力子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103585"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hypothetical elementary particle that mediates gravitation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28920814"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "graviton"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "重力子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11415"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force binding particles within the atomic nucleus"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q71130616"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "strong interaction"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "强相互作用"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104934"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q156849"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "infrastructure that conveys sewage or surface runoff"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sewer network"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "下水道"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q156849"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "infrastructure that conveys sewage or surface runoff"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sewer network"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "下水道"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q156849"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "infrastructure that conveys sewage or surface runoff"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sewer network"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "下水道"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q156849"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "infrastructure that conveys sewage or surface runoff"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sewer network"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "下水道"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q156849"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "infrastructure that conveys sewage or surface runoff"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sewer network"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "下水道"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105580"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force carrier, a bosonic particle that carries any of the fundamental interactions of nature, commonly called forces"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28920814"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gauge boson"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "规范玻色子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105580"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force carrier, a bosonic particle that carries any of the fundamental interactions of nature, commonly called forces"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28920814"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gauge boson"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "规范玻色子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105580"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force carrier, a bosonic particle that carries any of the fundamental interactions of nature, commonly called forces"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28920814"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gauge boson"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "规范玻色子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105580"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force carrier, a bosonic particle that carries any of the fundamental interactions of nature, commonly called forces"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28920814"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gauge boson"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "規範玻色子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105580"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force carrier, a bosonic particle that carries any of the fundamental interactions of nature, commonly called forces"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28920814"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gauge boson"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "規範玻色子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107414"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "outer shell electron that is associated with an atom, and that can participate in the formation of a chemical bond if the outer shell is not closed"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "valence electron"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "價電子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4897819"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107414"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "outer shell electron that is associated with an atom, and that can participate in the formation of a chemical bond if the outer shell is not closed"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "valence electron"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "价电子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4897819"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107414"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "outer shell electron that is associated with an atom, and that can participate in the formation of a chemical bond if the outer shell is not closed"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "valence electron"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "价电子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4897819"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107414"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "outer shell electron that is associated with an atom, and that can participate in the formation of a chemical bond if the outer shell is not closed"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "valence electron"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "價電子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4897819"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q107414"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "outer shell electron that is associated with an atom, and that can participate in the formation of a chemical bond if the outer shell is not closed"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "valence electron"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "價電子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4897819"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132629"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interconnection of electrical components or a model of such an interconnection, consisting of electrical elements"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electrical circuit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "电路"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132629"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interconnection of electrical components or a model of such an interconnection, consisting of electrical elements"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electrical circuit"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "电路"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132629"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interconnection of electrical components or a model of such an interconnection, consisting of electrical elements"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electrical circuit"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "电路"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132629"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interconnection of electrical components or a model of such an interconnection, consisting of electrical elements"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electrical circuit"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "電路"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132629"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "interconnection of electrical components or a model of such an interconnection, consisting of electrical elements"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electrical circuit"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "電路"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q901768"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical force that originates from thermodynamics instead of fundamental interactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q901768"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "entropic force"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "熵力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q901768"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical force that originates from thermodynamics instead of fundamental interactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q901768"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "entropic force"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "熵力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q901768"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical force that originates from thermodynamics instead of fundamental interactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q901768"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "entropic force"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "熵力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1364934"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "chemical substance used for propulsion or pressurization"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "propellant"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "裝藥"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1364934"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "chemical substance used for propulsion or pressurization"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "propellant"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "装药"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1364934"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "chemical substance used for propulsion or pressurization"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "propellant"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "裝藥"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1158282"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "delivery of chilled water to buildings like offices and factories needing cooling"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "district cooling"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "直接制冷"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron in a molecule not associated with a single atom or covalent bond"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "delocalized electron"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "離域電子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4897819"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron in a molecule not associated with a single atom or covalent bond"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "delocalized electron"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "离域电子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4897819"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q899089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron in a molecule not associated with a single atom or covalent bond"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "delocalized electron"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "離域電子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4897819"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1190858"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energy transfer through a medium through emission and absorption of electromagnetic radiation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15211908"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radiative transfer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "輻射轉移"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1190858"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energy transfer through a medium through emission and absorption of electromagnetic radiation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15211908"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radiative transfer"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "辐射转移"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1190858"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energy transfer through a medium through emission and absorption of electromagnetic radiation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15211908"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radiative transfer"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "輻射轉移"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1190858"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energy transfer through a medium through emission and absorption of electromagnetic radiation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15211908"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radiative transfer"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "輻射轉移"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "capture of energy produced at one time for use at a later time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energy storage"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "储能技术"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "capture of energy produced at one time for use at a later time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energy storage"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "储能技术"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "capture of energy produced at one time for use at a later time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energy storage"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "儲能技術"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1185557"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "brings system back toward equilibrium"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12980679"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "restoring force"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "回復力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q719512"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical phenomenon in which the filling of an inner-shell vacancy of an atom is accompanied by the emission of an electron from the same atom"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1327057"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Auger effect"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "俄歇效应"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q719512"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical phenomenon in which the filling of an inner-shell vacancy of an atom is accompanied by the emission of an electron from the same atom"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1327057"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Auger effect"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "俄歇效应"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q719512"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical phenomenon in which the filling of an inner-shell vacancy of an atom is accompanied by the emission of an electron from the same atom"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1327057"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Auger effect"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "奧杰效應"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1832610"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "collection of methods used to energy storage on a large scale within an electrical power grid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "grid energy storage"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "電網儲能"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1832610"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "collection of methods used to energy storage on a large scale within an electrical power grid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "grid energy storage"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "电网储能"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1832610"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "collection of methods used to energy storage on a large scale within an electrical power grid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "grid energy storage"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "电网储能"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1832610"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "collection of methods used to energy storage on a large scale within an electrical power grid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "grid energy storage"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "電網儲能"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1361503"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process of generating a magnetic field by means of an electric current"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1361503"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "excitation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "励磁"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1361503"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process of generating a magnetic field by means of an electric current"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1361503"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "excitation"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "励磁"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1361503"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process of generating a magnetic field by means of an electric current"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1361503"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "excitation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "励磁"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1361503"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process of generating a magnetic field by means of an electric current"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1361503"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "excitation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "勵磁"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1387973"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radar-equipped station, ship, submarine, aircraft, or vehicle used to increase the radar detection range around a force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65280844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radar picket"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "雷達哨"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1418695"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transfer of energy from one electrical medium or circuit segment to another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15211908"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coupling"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "耦合"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q70691163"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1418695"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transfer of energy from one electrical medium or circuit segment to another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15211908"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coupling"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "耦合"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q70691163"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1418695"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transfer of energy from one electrical medium or circuit segment to another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15211908"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "coupling"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "耦合"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q70691163"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q901106"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Free electron in a solution, often liquid ammonia"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Solvated electron"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "溶剂化电子"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q901106"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Free electron in a solution, often liquid ammonia"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Solvated electron"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "溶剂化电子"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q901106"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Free electron in a solution, often liquid ammonia"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Solvated electron"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "溶剂化电子"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q901106"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Free electron in a solution, often liquid ammonia"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Solvated electron"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "溶劑化電子"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1341307"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "flow of energy through a food chain, and is the focus of study in ecological energetics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15211908"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energy flow"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "能量流"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q56575300"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1341307"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "flow of energy through a food chain, and is the focus of study in ecological energetics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15211908"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energy flow"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "能量流"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131362385"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q278784"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system for distributing heat generated in a centralized location for residential and commercial heating requirements"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "district heating"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "區域暖氣"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q121359"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q278784"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system for distributing heat generated in a centralized location for residential and commercial heating requirements"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "district heating"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "区域供热"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q121359"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q278784"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system for distributing heat generated in a centralized location for residential and commercial heating requirements"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "district heating"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "区域供热"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q121359"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q278784"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system for distributing heat generated in a centralized location for residential and commercial heating requirements"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "district heating"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "區域供熱"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q121359"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q517596"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "device designed to transform input forces and movement into a desired set of output forces and movement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanism"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "机构学"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96251598"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175593"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "devices integrating electrical and mechanical functionality on the nanoscale"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nanoelectromechanical system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "纳米机电系统"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175593"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "devices integrating electrical and mechanical functionality on the nanoscale"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nanoelectromechanical system"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "奈米機電系統"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q260463"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "technique to study materials with unpaired electrons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q260463"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron paramagnetic resonance"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "電子自旋共振"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q466416"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unified description of electromagnetism and the weak interaction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q71130616"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electroweak interaction"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "電弱交互作用"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104934"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q466416"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unified description of electromagnetism and the weak interaction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q71130616"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electroweak interaction"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "电弱相互作用"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104934"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q466416"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unified description of electromagnetism and the weak interaction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q71130616"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electroweak interaction"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "电弱交互作用"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104934"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q466416"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unified description of electromagnetism and the weak interaction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q71130616"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electroweak interaction"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "電弱交互作用"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104934"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q466416"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unified description of electromagnetism and the weak interaction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q71130616"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electroweak interaction"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "電弱交互作用"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104934"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175561"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "technology of very small devices"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "micro-electromechanical systems"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "微机电系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96116695"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q386125"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system to present drivers with dynamic information on parking within controlled areas"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65280844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parking guidance and information"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "停车诱导系统"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q386125"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system to present drivers with dynamic information on parking within controlled areas"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65280844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parking guidance and information"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "公路气象信息系统"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q386125"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system to present drivers with dynamic information on parking within controlled areas"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65280844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parking guidance and information"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "停车诱导系统"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q386125"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system to present drivers with dynamic information on parking within controlled areas"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65280844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "parking guidance and information"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "停車誘導系統"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q449343"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "special field"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65280844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "automotive electronics"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "汽車電子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047113"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q449343"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "special field"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65280844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "automotive electronics"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "汽車電子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047113"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q179635"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transport of thermal energy in physical systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15211908"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heat transfer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "熱傳"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q179635"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transport of thermal energy in physical systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15211908"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heat transfer"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "传热"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q179635"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transport of thermal energy in physical systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15211908"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heat transfer"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "传热"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q179635"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transport of thermal energy in physical systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15211908"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heat transfer"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "傳熱"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q179635"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transport of thermal energy in physical systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15211908"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "heat transfer"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "傳熱"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q213016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q374793"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron occupying an orbital by itself rather than in a pair"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unpaired electron"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "不成對電子"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2576923"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hypothetical scalar field driving cosmic inflation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28920814"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "inflaton"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "暴脹子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2576923"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hypothetical scalar field driving cosmic inflation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28920814"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "inflaton"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "暴胀子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2576923"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hypothetical scalar field driving cosmic inflation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28920814"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "inflaton"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "暴脹子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2858615"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electric device where the main functionality is provided by electronic circuits"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65280844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electronic device"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "电子机械"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q63981612"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2858615"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electric device where the main functionality is provided by electronic circuits"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65280844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electronic device"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "電子機械"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q63981612"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2858615"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electric device where the main functionality is provided by electronic circuits"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65280844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electronic device"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "電子機械"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q63981612"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2858615"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electric device where the main functionality is provided by electronic circuits"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65280844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electronic device"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "电子机械"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111360549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2858615"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electric device where the main functionality is provided by electronic circuits"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65280844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electronic device"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "電子機械"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111360549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2858615"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electric device where the main functionality is provided by electronic circuits"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65280844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electronic device"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "電子機械"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111360549"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2858615"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electric device where the main functionality is provided by electronic circuits"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65280844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electronic device"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "电子机械"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q140424281"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2858615"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electric device where the main functionality is provided by electronic circuits"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65280844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electronic device"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "電子機械"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q140424281"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2858615"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electric device where the main functionality is provided by electronic circuits"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65280844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electronic device"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "電子機械"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q140424281"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2750336"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "boson with spin equal to zero"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28920814"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "scalar boson"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "标量玻色子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2789111"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of manufacturing using machinery and division of labor"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "factory system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "工厂生产制"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2789111"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of manufacturing using machinery and division of labor"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "factory system"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "工厂生产制"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2789111"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of manufacturing using machinery and division of labor"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "factory system"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "工厂生产制"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2789111"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method of manufacturing using machinery and division of labor"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "factory system"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "工廠生產製"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3679502"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of pipes used to transport fluids (gases, liquids or pourable or pumpable solids) from one location to another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "piping"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "管路"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3587637"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electrons in an atom's inner shells, which do not participate in chemical bonding"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "core electron"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "内层电子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4897819"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3587637"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electrons in an atom's inner shells, which do not participate in chemical bonding"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "core electron"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "内层电子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4897819"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3587637"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electrons in an atom's inner shells, which do not participate in chemical bonding"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "core electron"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "內層電子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4897819"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2142963"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "achieved with greatly differing technologies that collectively accommodate a wide range of needs; allows excess thermal energy to be collected for later use"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermal energy storage"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "熱能儲存"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2142963"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "achieved with greatly differing technologies that collectively accommodate a wide range of needs; allows excess thermal energy to be collected for later use"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermal energy storage"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "热能存储"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2142963"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "achieved with greatly differing technologies that collectively accommodate a wide range of needs; allows excess thermal energy to be collected for later use"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermal energy storage"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "热能储存#熔融盐技术"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2142963"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "achieved with greatly differing technologies that collectively accommodate a wide range of needs; allows excess thermal energy to be collected for later use"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "thermal energy storage"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "熱能儲存"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2582911"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron generated as ionization product"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "secondary electron"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "二次電子"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2582911"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron generated as ionization product"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "secondary electron"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "二次电子"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2582911"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron generated as ionization product"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "secondary electron"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "二次電子"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3679502"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of pipes used to transport fluids (gases, liquids or pourable or pumpable solids) from one location to another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "piping"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "管线"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3679502"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of pipes used to transport fluids (gases, liquids or pourable or pumpable solids) from one location to another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "piping"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "管線"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3396184"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electromagnetic frequencies ranging from 3 kHz to 300 GHz"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141350777"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radio frequency"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "射頻"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3396184"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electromagnetic frequencies ranging from 3 kHz to 300 GHz"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141350777"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "radio frequency"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "無線射頻技術"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5451695"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "firearms mechanism that moves cartridges and/or seals the breech"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "firearm action"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "枪机"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6753082"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a vehicle without usable fuel, passengers, cargo, armament or mission equipment"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6753082"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "empty weight"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "飞机空机重量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12453"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6753082"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a vehicle without usable fuel, passengers, cargo, armament or mission equipment"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6753082"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "empty weight"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "飞机空机重量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12453"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13407144"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system incorporating digital computers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65280844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "電腦系統"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96116695"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13407144"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system incorporating digital computers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65280844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "電腦系統"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q128889633"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12888135"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "solid block of wax with embedded wick, used as lighting or fragrance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "candle"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "蠟燭"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12888135"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "solid block of wax with embedded wick, used as lighting or fragrance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "candle"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "蠟燭"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5451695"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "firearms mechanism that moves cartridges and/or seals the breech"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "firearm action"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "枪机"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11388587"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron emitted through light impacting a material (photoelectric effect)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "photoelectron"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "光电子"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11388587"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron emitted through light impacting a material (photoelectric effect)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "photoelectron"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "光電子"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10887425"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron emitted by the Auger effect"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Auger electron"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "俄歇电子"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10887425"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron emitted by the Auger effect"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2225"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Auger electron"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "歐傑電子"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11388109"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process of increasing the electrical charge stored in a device"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "charging"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "充電"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11388109"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process of increasing the electrical charge stored in a device"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "charging"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "充电"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11388109"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process of increasing the electrical charge stored in a device"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "charging"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "充电"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5190518"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Energy storage technology based on thermal transformation of air"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Cryogenic energy storage"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "低溫儲能"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12980679"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force which brings a body into mechanical equilibrium"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12980679"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equilibrant force"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "平衡力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11388109"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process of increasing the electrical charge stored in a device"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "charging"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "充電"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4420972"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "technology system enabling tracking of persons or objects on the move and supplying a timely ordered sequence of location data for further processing"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65280844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "tracking system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "追蹤器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12888135"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "solid block of wax with embedded wick, used as lighting or fragrance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "candle"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "蜡烛"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6856398"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transmission of electrical energy from a power source to an electrical load without the use of direct conduction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15211908"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "wireless power transfer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "无线能量传输"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1327057"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1327057"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electron emission"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "電子發射"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134281528"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The process of using algorithms and real-time data to optimize the timing and rate of energy storage charging and discharging in order to maximize economic value or grid efficiency."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "charge/discharge optimization"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "充放电优化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1779504"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134281528"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The process of using algorithms and real-time data to optimize the timing and rate of energy storage charging and discharging in order to maximize economic value or grid efficiency."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "charge/discharge optimization"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "充放電優化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1779504"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19638876"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "It is a force that is transmitted through gas"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pneumatic system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "气源系统"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19638876"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "It is a force that is transmitted through gas"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pneumatic system"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "气源系统"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q101070597"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energy storage system that stores electricity in thermal energy storage"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Carnot battery"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "卡諾電池"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15297198"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "manages power to accomplish a task that involves forces and movement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanical system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "機械系統"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15297198"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "manages power to accomplish a task that involves forces and movement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanical system"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "机械系统"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15297198"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "manages power to accomplish a task that involves forces and movement"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mechanical system"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "機械繫統"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134281528"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The process of using algorithms and real-time data to optimize the timing and rate of energy storage charging and discharging in order to maximize economic value or grid efficiency."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "charge/discharge optimization"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "充放电优化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134281528"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The process of using algorithms and real-time data to optimize the timing and rate of energy storage charging and discharging in order to maximize economic value or grid efficiency."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "charge/discharge optimization"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "充放電優化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112631979"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110426908"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system used to treat water in a specific way"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "water treatment system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "锅炉水处理系统"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110426908"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system used to treat water in a specific way"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "water treatment system"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "锅炉水处理系统"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q31273083"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "locally installed system for storing electrical energy for later consumption by a household"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "home energy storage system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "家庭備用電源"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30082647"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a vessel with fixed equipment, but without consumables, cargo, and persons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6753082"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "light displacement"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "輕排水量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3028081"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30082647"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a vessel with fixed equipment, but without consumables, cargo, and persons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6753082"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "light displacement"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "輕排水量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12812139"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30082647"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mass of a vessel with fixed equipment, but without consumables, cargo, and persons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6753082"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "light displacement"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "輕排水量"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19978220"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65280844"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system that operates by controlling, amplifying, or converting the flow of electric current"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65280844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electronic system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "电子系统"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28920814"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "particle of non-matter that has no known substructure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28920814"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "elementary boson"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "基本玻色子"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q22675015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134281528"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The process of using algorithms and real-time data to optimize the timing and rate of energy storage charging and discharging in order to maximize economic value or grid efficiency."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "charge/discharge optimization"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "充放电优化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q134281528"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "The process of using algorithms and real-time data to optimize the timing and rate of energy storage charging and discharging in order to maximize economic value or grid efficiency."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "charge/discharge optimization"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "充放電優化"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q8366"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20020306"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transfer of energy between large and small scales of motion"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15211908"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energy cascade"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "能量级联"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20020306"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transfer of energy between large and small scales of motion"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15211908"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energy cascade"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "能量级联"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q20020306"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "transfer of energy between large and small scales of motion"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15211908"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energy cascade"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "能量級聯"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15211908"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process or amount of energy moving from one specified object, system, or location, to another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15211908"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energy transfer"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "能量转移"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q900800"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15211908"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process or amount of energy moving from one specified object, system, or location, to another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15211908"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "energy transfer"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "能量轉移"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q900800"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "human-designed system consisting of physical components"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120926552"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "engineered physical system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "工程实体系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q96116695"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q19298719"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Storing surplus electricity production in chemical form"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837718"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "power-to-X"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "電轉X"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17152351"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "adaptive intelligent systems"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65280844"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "smart system"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "智能系统"
+      }
+    }
+  ]
+}

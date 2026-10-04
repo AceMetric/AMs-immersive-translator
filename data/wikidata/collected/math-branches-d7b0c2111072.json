@@ -1,0 +1,3892 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q110688486 wd:Q111862379 wd:Q115215420 wd:Q17120849 wd:Q2314872 wd:Q17125113 wd:Q1417631 wd:Q25893621 wd:Q6730924 wd:Q13645891 wd:Q30591499 wd:Q130301072 wd:Q6730970 wd:Q192089 wd:Q2345737 wd:Q141635778 wd:Q679903 wd:Q203920 wd:Q306560 wd:Q1014869 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q110688486 wd:Q111862379 wd:Q115215420 wd:Q17120849 wd:Q2314872 wd:Q17125113 wd:Q1417631 wd:Q25893621 wd:Q6730924 wd:Q13645891 wd:Q30591499 wd:Q130301072 wd:Q6730970 wd:Q192089 wd:Q2345737 wd:Q141635778 wd:Q679903 wd:Q203920 wd:Q306560 wd:Q1014869 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q110688486 wd:Q111862379 wd:Q115215420 wd:Q17120849 wd:Q2314872 wd:Q17125113 wd:Q1417631 wd:Q25893621 wd:Q6730924 wd:Q13645891 wd:Q30591499 wd:Q130301072 wd:Q6730970 wd:Q192089 wd:Q2345737 wd:Q141635778 wd:Q679903 wd:Q203920 wd:Q306560 wd:Q1014869 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "d7b0c21110728dcb2ac483fd993b8e060394a9d0227340faf9f0bc979d513033",
+  "responseSha256": "ab31ef0abf809e490f45f82e99abf88f42d0ac0b00e3a00633829649eb639da7",
+  "retrievedAt": "2026-10-04T04:58:56.394067+00:00",
+  "license": "CC0-1.0",
+  "domain": "math",
+  "roots": [
+    {
+      "domain": "math",
+      "id": "Q110688486",
+      "label": "machine learning algorithm",
+      "description": "type of algorithm",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q111862379",
+      "label": "machine learning method",
+      "description": "method or algorithm used in machine learning",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q115215420",
+      "label": "machine learning model",
+      "description": "algorithm or set of algorithms that learns from data to make predictions, classify, or recognize patterns without being explicitly programmed to perform the specific task",
+      "parents": [
+        "Q8366",
+        "Q486902"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q17120849",
+      "label": "macroscopic traffic flow model",
+      "description": "Mathematical model formulating traffic flow relationships",
+      "parents": [
+        "Q486902"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q2314872",
+      "label": "magic circle",
+      "description": "arrangement of natural numbers on circles where the sum of the numbers on each circle and the sum of numbers on diameter are identical",
+      "parents": [
+        "Q104451426"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q17125113",
+      "label": "magic graph",
+      "description": "graph whose edges can be labelled by positive integers so that the sum of the labels at any vertex is the same",
+      "parents": [
+        "Q104451426"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q1417631",
+      "label": "Magic hexagon",
+      "description": "Arrangement of numbers",
+      "parents": [
+        "Q104451426"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q25893621",
+      "label": "magic hexagram",
+      "description": "",
+      "parents": [
+        "Q104451426"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q6730924",
+      "label": "Magic hyperbeam",
+      "description": "arrangement of numbers (usually integers) in a hyerbeam grid",
+      "parents": [
+        "Q104451426",
+        "Q188524"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q13645891",
+      "label": "magic hypercube",
+      "description": "arrangement of numbers (usually integers) in a hypercube grid",
+      "parents": [
+        "Q104451426"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q30591499",
+      "label": "magic polygon",
+      "description": "",
+      "parents": [
+        "Q104451426"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q130301072",
+      "label": "magic quadrangle",
+      "description": "magic polygons with quadrangle shape",
+      "parents": [
+        "Q104451426"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q6730970",
+      "label": "magic series",
+      "description": "set of distinct positive numbers",
+      "parents": [
+        "Q104451426"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q192089",
+      "label": "magic square",
+      "description": "sums of each row, column, and main diagonals are equal",
+      "parents": [
+        "Q104451426"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q2345737",
+      "label": "magic star",
+      "description": "Special arrangement of numbers on a star",
+      "parents": [
+        "Q104451426"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q141635778",
+      "label": "magic Venn diagram",
+      "description": "",
+      "parents": [
+        "Q104451426"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q679903",
+      "label": "magma",
+      "description": "algebraic structure with a binary operation",
+      "parents": [
+        "Q205464"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q203920",
+      "label": "manifold",
+      "description": "topological space that at each point resembles Euclidean space (unspecified type)",
+      "parents": [
+        "Q179899"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q306560",
+      "label": "mapping cone",
+      "description": "topological construction",
+      "parents": [
+        "Q179899"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q1014869",
+      "label": "mapping cylinder",
+      "description": "topological construction",
+      "parents": [
+        "Q179899"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "math branches 601..620",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130651"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "learning method used in developing artificial intelligence"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "eager learning"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "积极学习"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130657"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of machine learning method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lazy learning"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "惰性學習"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130657"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of machine learning method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lazy learning"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "惰性学习"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130657"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of machine learning method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lazy learning"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "惰性学习"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130657"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of machine learning method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lazy learning"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "惰性學習"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sums of each row, column, and main diagonals are equal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13645891"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic square"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "幻方"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q125539"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "subset of a manifold that is a manifold itself; an injective immersion into a manifold"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "submanifold"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "子流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q125539"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "subset of a manifold that is a manifold itself; an injective immersion into a manifold"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "submanifold"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "子流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q125539"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "subset of a manifold that is a manifold itself; an injective immersion into a manifold"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "submanifold"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "子流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sums of each row, column, and main diagonals are equal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic square"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "幻方"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175116"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space whose every subset is both open and closed"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "discrete space"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "离散空间"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175116"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space whose every subset is both open and closed"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "discrete space"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "离散空间"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q175116"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space whose every subset is both open and closed"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "discrete space"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "離散空間"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q197536"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "specialized form of machine learning that uses artificial neural networks to identify patterns in data"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deep learning"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "深度学习"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q197536"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "specialized form of machine learning that uses artificial neural networks to identify patterns in data"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deep learning"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "深度学习"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q197536"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "specialized form of machine learning that uses artificial neural networks to identify patterns in data"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deep learning"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "深度學習"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "competitive algorithm for searching a problem space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "genetic algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "遗传算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "competitive algorithm for searching a problem space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "genetic algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "遗传算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "competitive algorithm for searching a problem space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "genetic algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "遗传算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "competitive algorithm for searching a problem space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "genetic algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "遺傳算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q187787"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "competitive algorithm for searching a problem space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "genetic algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "遺傳演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sums of each row, column, and main diagonals are equal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13645891"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic square"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "幻方"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sums of each row, column, and main diagonals are equal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13645891"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic square"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "幻方"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sums of each row, column, and main diagonals are equal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13645891"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic square"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "幻方"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sums of each row, column, and main diagonals are equal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13645891"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic square"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "幻方"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space that at each point resembles Euclidean space (unspecified type)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "manifold"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space that at each point resembles Euclidean space (unspecified type)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "manifold"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space that at each point resembles Euclidean space (unspecified type)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "manifold"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space that at each point resembles Euclidean space (unspecified type)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "manifold"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space that at each point resembles Euclidean space (unspecified type)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "manifold"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sums of each row, column, and main diagonals are equal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic square"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "幻方"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sums of each row, column, and main diagonals are equal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic square"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "幻方"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sums of each row, column, and main diagonals are equal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic square"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "幻方"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "sums of each row, column, and main diagonals are equal"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic square"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "幻方"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q334384"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "machine learning task of learning a function that maps an input to an output based on example input-output pairs"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "supervised learning"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "監督式學習"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1047113"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q830687"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of machine learning where an agent learns how to behave in an environment by performing actions and receiving rewards or penalties in return, aiming to maximize the cumulative reward over time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "reinforcement learning"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "强化学习"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q830687"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of machine learning where an agent learns how to behave in an environment by performing actions and receiving rewards or penalties in return, aiming to maximize the cumulative reward over time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "reinforcement learning"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "强化学习"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q130609847"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1152135"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "machine learning technique"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unsupervised learning"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "非監督式學習"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1152135"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "machine learning technique"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unsupervised learning"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "非监督式学习"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1152135"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "machine learning technique"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unsupervised learning"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "非監督式學習"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q679903"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algebraic structure with a binary operation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q679903"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magma"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "原群"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q679903"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algebraic structure with a binary operation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q679903"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magma"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "原群"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q679903"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algebraic structure with a binary operation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q679903"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magma"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "原群"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q526901"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "manifold of dimension three"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "3-manifold"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "3-流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1014869"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological construction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1014869"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mapping cylinder"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "映射柱"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q91776238"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1014869"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological construction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1014869"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mapping cylinder"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "映射柱"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q91776238"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1014869"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological construction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1014869"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mapping cylinder"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "映射柱"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q91776238"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1143042"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "a decomposition of a manifold into standard pieces"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "handlebody"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "柄体"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1041418"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of machine learning techniques combining a small amount of labeled data with a large amount of unlabeled data during training"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "semi-supervised learning"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "半監督學習"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1041418"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of machine learning techniques combining a small amount of labeled data with a large amount of unlabeled data during training"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "semi-supervised learning"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "半监督学习"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1041418"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of machine learning techniques combining a small amount of labeled data with a large amount of unlabeled data during training"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "semi-supervised learning"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "半监督学习"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1041418"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "class of machine learning techniques combining a small amount of labeled data with a large amount of unlabeled data during training"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "semi-supervised learning"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "半監督學習"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q306560"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological construction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q306560"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mapping cone"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "映射锥"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q91776238"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115215420"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm or set of algorithms that learns from data to make predictions, classify, or recognize patterns without being explicitly programmed to perform the specific task"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115215420"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "machine learning model"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "机器学习模型"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q133503274"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "machine learning technique"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dataset compression"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "資料集壓縮"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120759195"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "machine learning model for speech recognition and transcription"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115215420"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Whisper"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Whisper"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7397"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120759195"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "machine learning model for speech recognition and transcription"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115215420"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Whisper"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Whisper"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7397"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120759195"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "machine learning model for speech recognition and transcription"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115215420"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Whisper"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "Whisper"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7397"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "description of a deep learning network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115215420"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deep learning model"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "深度學習模型"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q113364611"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "description of a deep learning network"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115215420"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deep learning model"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "深度学习模型"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method or algorithm used in machine learning"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "machine learning method"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "机器学习方法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method or algorithm used in machine learning"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "machine learning method"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "机器学习方法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q137396016"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fisher-Kähler geometry"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fisher-Kähler Manifold"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Fisher-Kähler流形"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q137396016"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fisher-Kähler geometry"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Fisher-Kähler Manifold"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Fisher-Kähler流形"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9357058"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112702082"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "artificial intelligence model paradigm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115215420"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "foundation model"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "基础模型"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112702082"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "artificial intelligence model paradigm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115215420"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "foundation model"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "基礎模型"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q112702082"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "artificial intelligence model paradigm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115215420"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "foundation model"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "基礎模型"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120759195"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "machine learning model for speech recognition and transcription"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115215420"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Whisper"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Whisper"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29642950"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120759195"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "machine learning model for speech recognition and transcription"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115215420"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Whisper"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Whisper"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29642950"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120759195"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "machine learning model for speech recognition and transcription"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115215420"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Whisper"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "Whisper"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q29642950"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120759195"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "machine learning model for speech recognition and transcription"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115215420"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Whisper"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Whisper"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115215420"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120759195"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "machine learning model for speech recognition and transcription"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115215420"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Whisper"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Whisper"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115215420"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q120759195"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "machine learning model for speech recognition and transcription"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115215420"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Whisper"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "Whisper"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q115215420"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q123916004"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "inverse reinforcement learning"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "逆向强化学习"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3077490"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Frénicle standard form"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Frenicle 标准型式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3077490"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Frénicle standard form"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Frenicle 标准型式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3077490"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Frénicle standard form"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Frenicle 標準型式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3077490"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Frénicle standard form"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Frenicle 标准型式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6545185"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3077490"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Frénicle standard form"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Frenicle 标准型式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6545185"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3077490"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Frénicle standard form"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Frenicle 標準型式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6545185"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3077490"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Frénicle standard form"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Frenicle 标准型式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3077490"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Frénicle standard form"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Frenicle 标准型式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3077490"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Frénicle standard form"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Frenicle 標準型式"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13220408"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic square that remains so when each number is raised to a power between 1 and k"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "multimagic square"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "多幻方"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2940397"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic square whose broken diagonals also add up to the magic constant"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pandiagonal magic square"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "泛對角幻方"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2940397"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic square whose broken diagonals also add up to the magic constant"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pandiagonal magic square"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "泛對角幻方"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2940397"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic square whose broken diagonals also add up to the magic constant"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pandiagonal magic square"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "泛對角幻方"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2721559"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space (which may also be a separated space) which locally resembles real n-dimensional space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological manifold"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "拓扑流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2721559"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space (which may also be a separated space) which locally resembles real n-dimensional space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological manifold"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "拓扑流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2721559"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space (which may also be a separated space) which locally resembles real n-dimensional space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological manifold"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "拓撲流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2721559"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space (which may also be a separated space) which locally resembles real n-dimensional space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological manifold"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "拓樸流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2482835"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Chinese name for a specific 3×3 magic square occurring in legendary accounts of the creation of Chinese writing and culture"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Luoshu Square"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "洛書"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2482835"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Chinese name for a specific 3×3 magic square occurring in legendary accounts of the creation of Chinese writing and culture"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Luoshu Square"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "洛書"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q959962"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2482835"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Chinese name for a specific 3×3 magic square occurring in legendary accounts of the creation of Chinese writing and culture"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Luoshu Square"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "九宫图"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2482835"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Chinese name for a specific 3×3 magic square occurring in legendary accounts of the creation of Chinese writing and culture"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Luoshu Square"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "九宮圖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2482835"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Chinese name for a specific 3×3 magic square occurring in legendary accounts of the creation of Chinese writing and culture"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Luoshu Square"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "九宫图"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q959962"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2482835"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Chinese name for a specific 3×3 magic square occurring in legendary accounts of the creation of Chinese writing and culture"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q192089"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Luoshu Square"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "九宮圖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q959962"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1503423"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magma satisfying the Latin square property"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q679903"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quasigroup"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "拟群"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1503423"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magma satisfying the Latin square property"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q679903"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quasigroup"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "拟群"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1503423"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magma satisfying the Latin square property"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q679903"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quasigroup"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "擬群"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2345737"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Special arrangement of numbers on a star"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2345737"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic star"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "幻星"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13645891"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "arrangement of numbers (usually integers) in a hypercube grid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13645891"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic hypercube"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "魔术四維超正方体"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13645891"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "arrangement of numbers (usually integers) in a hypercube grid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13645891"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic hypercube"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "魔术超正方体"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13645891"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "arrangement of numbers (usually integers) in a hypercube grid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13645891"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic hypercube"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "魔术四維超正方体"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13645891"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "arrangement of numbers (usually integers) in a hypercube grid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13645891"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic hypercube"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "魔術超正方體"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7239869"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110688486"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "prefrontal cortex basal ganglia working memory"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "前额叶皮质基底节工作记忆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110688486"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7239869"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110688486"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "prefrontal cortex basal ganglia working memory"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "前额叶皮质基底节工作记忆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110688486"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7239869"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110688486"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "prefrontal cortex basal ganglia working memory"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "前额叶皮质基底节工作记忆"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110688486"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7239869"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110688486"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "prefrontal cortex basal ganglia working memory"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "前額葉皮質基底節工作記憶"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110688486"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2566544"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Four-dimensional manifold"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "4-manifold"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "四维流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2566544"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Four-dimensional manifold"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "4-manifold"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "四维流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2566544"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Four-dimensional manifold"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "4-manifold"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "四維流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13645891"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "arrangement of numbers (usually integers) in a hypercube grid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6730924"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic hypercube"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "魔术四維超正方体"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13645891"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "arrangement of numbers (usually integers) in a hypercube grid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6730924"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic hypercube"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "魔术超正方体"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13645891"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "arrangement of numbers (usually integers) in a hypercube grid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6730924"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic hypercube"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "魔术四維超正方体"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13645891"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "arrangement of numbers (usually integers) in a hypercube grid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6730924"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic hypercube"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "魔術超正方體"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5891833"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "concept in algebraic topology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "homotopy sphere"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "同伦球面"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5891833"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "concept in algebraic topology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "homotopy sphere"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "同伦球面"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5891833"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "concept in algebraic topology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "homotopy sphere"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "同倫球面"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4504202"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "in a dynamical system, a manifold consisting of orbits that do not decay or grow exponentially"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "center manifold"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "中心流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4639668"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Five-dimensional manifold"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "5-manifold"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "五維流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q74253442"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "machine learning method to transfer knowledge from a large model to a smaller one"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "knowledge distillation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "知識蒸餾"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q74253442"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "machine learning method to transfer knowledge from a large model to a smaller one"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "knowledge distillation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "知识蒸馏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7191425"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological manifold with a piecewise linear structure on it."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "piecewise linear manifold"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分片線性流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7191425"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological manifold with a piecewise linear structure on it."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "piecewise linear manifold"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "PL结构"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7191425"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological manifold with a piecewise linear structure on it."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "piecewise linear manifold"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "PL结构"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7191425"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological manifold with a piecewise linear structure on it."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "piecewise linear manifold"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "PL結構"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1417631"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Arrangement of numbers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1417631"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Magic hexagon"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "幻六邊形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3519010"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "arrangement of numbers (usually integers) in a tesseract grid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13645891"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic tesseract"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "魔术四維超正方体"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3519010"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "arrangement of numbers (usually integers) in a tesseract grid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13645891"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic tesseract"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "魔術四維超正方體"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16766476"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm that recursively splits data on attributes to build a tree for classification or regression"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q111862379"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "decision tree learning"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "决策树学习"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q334384"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2714507"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "analogue in n-dimensional Euclidean space of a quadrant in the plane or an octant in three dimensions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "orthant"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "象限角"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3554830"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "portion of phase space of a dynamical system that exhibits stable motion"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stable manifold"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "穩定流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3554830"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "portion of phase space of a dynamical system that exhibits stable motion"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stable manifold"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "稳定流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3554830"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "portion of phase space of a dynamical system that exhibits stable motion"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stable manifold"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "稳定流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3554830"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "portion of phase space of a dynamical system that exhibits stable motion"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q203920"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stable manifold"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "穩定流形"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1884152"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "arrangement of numbers (usually integers) in a cubic grid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13645891"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic cube"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "幻立方"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1884152"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "arrangement of numbers (usually integers) in a cubic grid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13645891"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic cube"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "魔术正方体"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1884152"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "arrangement of numbers (usually integers) in a cubic grid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13645891"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic cube"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "魔术正方体"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1884152"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "arrangement of numbers (usually integers) in a cubic grid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13645891"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic cube"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "魔術正方體"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2314872"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "arrangement of natural numbers on circles where the sum of the numbers on each circle and the sum of numbers on diameter are identical"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2314872"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "magic circle"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "幻圆"
+      }
+    }
+  ]
+}

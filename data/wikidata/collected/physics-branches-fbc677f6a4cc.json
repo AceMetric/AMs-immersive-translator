@@ -1,0 +1,4956 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q2497391 wd:Q868425 wd:Q65088069 wd:Q141631942 wd:Q843565 wd:Q38084560 wd:Q28599240 wd:Q7048958 wd:Q41307322 wd:Q106839917 wd:Q21652125 wd:Q3538122 wd:Q2478109 wd:Q3457902 wd:Q1739507 wd:Q109259641 wd:Q238323 wd:Q521918 wd:Q471702 wd:Q97010809 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q2497391 wd:Q868425 wd:Q65088069 wd:Q141631942 wd:Q843565 wd:Q38084560 wd:Q28599240 wd:Q7048958 wd:Q41307322 wd:Q106839917 wd:Q21652125 wd:Q3538122 wd:Q2478109 wd:Q3457902 wd:Q1739507 wd:Q109259641 wd:Q238323 wd:Q521918 wd:Q471702 wd:Q97010809 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q2497391 wd:Q868425 wd:Q65088069 wd:Q141631942 wd:Q843565 wd:Q38084560 wd:Q28599240 wd:Q7048958 wd:Q41307322 wd:Q106839917 wd:Q21652125 wd:Q3538122 wd:Q2478109 wd:Q3457902 wd:Q1739507 wd:Q109259641 wd:Q238323 wd:Q521918 wd:Q471702 wd:Q97010809 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "fbc677f6a4ccc90ce3941f834f9d0481e7e873fa7eddf7e6a3f04e0766ba9af0",
+  "responseSha256": "f59b1887b99fcf5d9818f50e5e98768f6981a4007d05737f9e12ac53eb3de3bc",
+  "retrievedAt": "2026-10-04T05:05:37.269888+00:00",
+  "license": "CC0-1.0",
+  "domain": "physics",
+  "roots": [
+    {
+      "domain": "physics",
+      "id": "Q2497391",
+      "label": "negative pressure",
+      "description": "relative pressure if below ambient pressure",
+      "parents": [
+        "Q39552"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q868425",
+      "label": "net force",
+      "description": "the overall force acting on an object. In order to calculate the net force, the body is isolated and interactions with the environment or other constraints are represented as forces and torques in a free-body diagram",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q65088069",
+      "label": "net weight",
+      "description": "weight of the contents of a vehicle or container",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q141631942",
+      "label": "non-composite unit of measure",
+      "description": "",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q843565",
+      "label": "non-contact force",
+      "description": "force which acts on an object without coming physically in contact with it",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q38084560",
+      "label": "non-gravitational force",
+      "description": "type of force",
+      "parents": [
+        "Q104934",
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q28599240",
+      "label": "non-mechanical work",
+      "description": "work by penetrating, long-range interactions directly with internal parts of a body or system",
+      "parents": [
+        "Q42213"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q7048958",
+      "label": "non-minimally coupled inflation",
+      "description": "model of inflation involving a scalar field nonminimally coupled to gravity",
+      "parents": [
+        "Q9357058"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q41307322",
+      "label": "non-resonance frequency",
+      "description": "type of frequency",
+      "parents": [
+        "Q11652"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q106839917",
+      "label": "non-SI unit",
+      "description": "unit not part of the International System of Units (SI)",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q21652125",
+      "label": "non-standard unit",
+      "description": "not belonging to metric system",
+      "parents": [
+        "Q47574"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q3538122",
+      "label": "nonconservative force",
+      "description": "",
+      "parents": [
+        "Q11402"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q2478109",
+      "label": "nonholonomic system",
+      "description": "system with kinematic constraints that cannot be integrated in position-level constraints",
+      "parents": [
+        "Q1454986"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q3457902",
+      "label": "nonlinear resonance",
+      "description": "physical phenomenon",
+      "parents": [
+        "Q172858"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q1739507",
+      "label": "nuclear mass",
+      "description": "mass of an atomic nucleus without electrons",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q109259641",
+      "label": "nuclear potential energy",
+      "description": "",
+      "parents": [
+        "Q155640"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q238323",
+      "label": "nuclear reaction",
+      "description": "process in which two nuclei collide to produce one or more nuclides",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q521918",
+      "label": "nuclear reactor safety",
+      "description": "set of subsystems that ensure security of a nuclear reactor (against technical failures) and minimize the damage during an incident or accident",
+      "parents": [
+        "Q1454986"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q471702",
+      "label": "nucleosynthesis",
+      "description": "process that creates new atomic nuclei from pre-existing nucleons, primarily protons and neutrons",
+      "parents": [
+        "Q17320256"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    },
+    {
+      "domain": "physics",
+      "id": "Q97010809",
+      "label": "nuclidic mass",
+      "description": "mass of a nuclide in its ground state",
+      "parents": [
+        "Q11423"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/physics-e5001cda9b7e.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "physics branches 321..340",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of astronomical length, defined as the distance that light travels in the vacuum in one year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "light-year"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "光年"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q173227"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of astronomical length, defined as the distance that light travels in the vacuum in one year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "light-year"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "光年"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q173227"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of astronomical length, defined as the distance that light travels in the vacuum in one year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "light-year"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "光年"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1978718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of astronomical length, defined as the distance that light travels in the vacuum in one year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "light-year"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "光年"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q173227"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of astronomical length, defined as the distance that light travels in the vacuum in one year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "light-year"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "光年"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1978718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of astronomical length, defined as the distance that light travels in the vacuum in one year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "light-year"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "光年"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1978718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of astronomical length, defined as the distance that light travels in the vacuum in one year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "light-year"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "光年"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of astronomical length, defined as the distance that light travels in the vacuum in one year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "light-year"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "光年"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of astronomical length, defined as the distance that light travels in the vacuum in one year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "light-year"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "光年"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of astronomical length, defined as the distance that light travels in the vacuum in one year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "light-year"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "光年"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of astronomical length, defined as the distance that light travels in the vacuum in one year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "light-year"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "光年"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q83155724"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of astronomical length, defined as the distance that light travels in the vacuum in one year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "light-year"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "光年"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of astronomical length, defined as the distance that light travels in the vacuum in one year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "light-year"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "光年"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of astronomical length, defined as the distance that light travels in the vacuum in one year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "light-year"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "光年"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q83155724"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q531"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of astronomical length, defined as the distance that light travels in the vacuum in one year"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "light-year"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "光年"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q83155724"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13082"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear reaction in which atomic nuclei combine"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear fusion"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "核聚变"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33104303"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13082"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear reaction in which atomic nuclei combine"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear fusion"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "核聚变"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33104303"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13082"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear reaction in which atomic nuclei combine"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear fusion"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "核融合"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33104303"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11429"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear reaction splitting the nucleus of an atom into multiple parts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear fission"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "核裂变"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11429"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear reaction splitting the nucleus of an atom into multiple parts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear fission"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "核裂变"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103510"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-SI unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bar"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "巴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4173969"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103510"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-SI unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bar"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "巴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4173969"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103510"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-SI unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bar"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "巴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4173969"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103510"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-SI unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bar"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "巴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4173969"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103510"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-SI unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bar"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "巴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4173969"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103510"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-SI unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bar"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "巴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103510"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-SI unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bar"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "巴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103510"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-SI unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bar"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "巴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103510"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-SI unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bar"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "巴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103510"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-SI unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bar"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "巴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103510"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-SI unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bar"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "巴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103510"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-SI unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bar"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "巴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103510"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-SI unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bar"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "巴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103510"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-SI unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bar"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "巴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q103510"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-SI unit of pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "bar"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "巴"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177493"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cgs unit of magnetic flux density (0.1 millitesla)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gauss"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "高斯"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177493"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cgs unit of magnetic flux density (0.1 millitesla)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gauss"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "高斯"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q177493"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cgs unit of magnetic flux density (0.1 millitesla)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gauss"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "高斯"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126955170"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82580"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force resisting the relative motion of solid surfaces, fluid layers, and material elements sliding against each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3538122"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "friction"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "摩擦力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82580"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force resisting the relative motion of solid surfaces, fluid layers, and material elements sliding against each other"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3538122"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "friction"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "摩擦力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q521918"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of subsystems that ensure security of a nuclear reactor (against technical failures) and minimize the damage during an incident or accident"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q521918"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear reactor safety"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "反应堆安全系统"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q521918"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of subsystems that ensure security of a nuclear reactor (against technical failures) and minimize the damage during an incident or accident"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q521918"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear reactor safety"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "反应堆安全系统"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q576621"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of nuclear reaction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "spallation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "核破碎反應"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837317"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nucleosynthesis that occurred during the Big Bang (between ca. 10⁻² and 200 seconds after the Big Bang)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Big Bang nucleosynthesis"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "太初核合成"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1190554"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837317"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nucleosynthesis that occurred during the Big Bang (between ca. 10⁻² and 200 seconds after the Big Bang)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Big Bang nucleosynthesis"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "大爆炸核合成"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1190554"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837317"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nucleosynthesis that occurred during the Big Bang (between ca. 10⁻² and 200 seconds after the Big Bang)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Big Bang nucleosynthesis"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "太初核合成"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1190554"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q837317"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nucleosynthesis that occurred during the Big Bang (between ca. 10⁻² and 200 seconds after the Big Bang)"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Big Bang nucleosynthesis"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "太初核合成"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1190554"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q630369"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of reactive power"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "var"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "乏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387689"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q630369"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of reactive power"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "var"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "乏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q630369"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of reactive power"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "var"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "乏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132680626"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process that creates new atomic nuclei from pre-existing nucleons, primarily protons and neutrons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nucleosynthesis"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "核合成"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process that creates new atomic nuclei from pre-existing nucleons, primarily protons and neutrons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nucleosynthesis"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "核合成"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process that creates new atomic nuclei from pre-existing nucleons, primarily protons and neutrons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nucleosynthesis"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "核合成"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process that creates new atomic nuclei from pre-existing nucleons, primarily protons and neutrons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nucleosynthesis"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "核合成"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process that creates new atomic nuclei from pre-existing nucleons, primarily protons and neutrons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nucleosynthesis"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "核合成"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q843565"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force which acts on an object without coming physically in contact with it"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q843565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-contact force"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "非接觸力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q843565"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force which acts on an object without coming physically in contact with it"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q843565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-contact force"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "非接触力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q843565"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force which acts on an object without coming physically in contact with it"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q843565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "non-contact force"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "非接觸力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q630369"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of reactive power"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "var"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "无功伏安/瓦尔/乏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387689"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q630369"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of reactive power"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "var"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "无功伏安/瓦尔/乏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387689"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q630369"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of reactive power"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "var"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "無功伏安/瓦爾/乏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q10387689"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process that creates new atomic nuclei from pre-existing nucleons, primarily protons and neutrons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nucleosynthesis"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "核合成"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process that creates new atomic nuclei from pre-existing nucleons, primarily protons and neutrons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nucleosynthesis"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "核合成"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process that creates new atomic nuclei from pre-existing nucleons, primarily protons and neutrons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nucleosynthesis"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "核合成"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process that creates new atomic nuclei from pre-existing nucleons, primarily protons and neutrons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nucleosynthesis"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "核合成"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process that creates new atomic nuclei from pre-existing nucleons, primarily protons and neutrons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nucleosynthesis"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "核合成"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q868425"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the overall force acting on an object. In order to calculate the net force, the body is isolated and interactions with the environment or other constraints are represented as forces and torques in a free-body diagram"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q868425"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "net force"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "淨力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q868425"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the overall force acting on an object. In order to calculate the net force, the body is isolated and interactions with the environment or other constraints are represented as forces and torques in a free-body diagram"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q868425"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "net force"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "合力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q868425"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the overall force acting on an object. In order to calculate the net force, the body is isolated and interactions with the environment or other constraints are represented as forces and torques in a free-body diagram"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q868425"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "net force"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "淨力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q630369"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of reactive power"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "var"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "无功伏安/瓦尔/乏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q630369"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of reactive power"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "var"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "无功伏安/瓦尔/乏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q630369"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of reactive power"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "var"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "無功伏安/瓦爾/乏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q630369"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of reactive power"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "var"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "无功伏安/瓦尔/乏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132680626"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q630369"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of reactive power"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "var"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "无功伏安/瓦尔/乏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132680626"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q630369"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of reactive power"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "var"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "無功伏安/瓦爾/乏"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132680626"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q920297"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of volume of wood"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cord"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "考得"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1302471"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q920297"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of volume of wood"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cord"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "考得"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q920297"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of volume of wood"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cord"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "考得"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1057093"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process by which the natural abundances of the chemical elements within stars change due to nuclear fusion reactions in the cores and their overlying mantles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stellar nucleosynthesis"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "恆星核合成"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1057093"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process by which the natural abundances of the chemical elements within stars change due to nuclear fusion reactions in the cores and their overlying mantles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stellar nucleosynthesis"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "恒星核合成"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1057093"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process by which the natural abundances of the chemical elements within stars change due to nuclear fusion reactions in the cores and their overlying mantles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "stellar nucleosynthesis"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "恆星核合成"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q749467"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force between nucleons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q843565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear force"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "核力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q749467"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force between nucleons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q843565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear force"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "核力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q749467"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force between nucleons"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q843565"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear force"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "核力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1790144"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measurement unit for time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141631942"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of time"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "時間單位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1790144"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measurement unit for time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141631942"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of time"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "时间单位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1790144"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measurement unit for time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141631942"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of time"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "时间单位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1790144"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measurement unit for time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141631942"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of time"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "時間單位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1790144"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "measurement unit for time"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141631942"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of time"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "時間單位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1978718"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "way of measuring length or distance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141631942"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of length"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "長度單位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1978718"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "way of measuring length or distance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141631942"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of length"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "長度單位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1978718"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "way of measuring length or distance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141631942"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of length"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "長度單位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1394769"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "disintegration of atomic nuclei from high-energy EM radiation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "photodisintegration"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "光致蛻變"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2088936"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of nuclear reaction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "photofission"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "光致裂变"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1075685"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear fusion process in the cores of massive stars, combining carbon nuclei into heavier elements"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "carbon-burning process"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "碳聚变"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1075685"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear fusion process in the cores of massive stars, combining carbon nuclei into heavier elements"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "carbon-burning process"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "碳燃烧过程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1075685"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear fusion process in the cores of massive stars, combining carbon nuclei into heavier elements"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "carbon-burning process"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "碳燃燒過程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1978718"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "way of measuring length or distance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141631942"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of length"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "长度单位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1978718"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "way of measuring length or distance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141631942"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of length"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "长度单位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1165639"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric elastance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "daraf"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "拉法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1165639"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric elastance"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "daraf"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "拉法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q132631907"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1150817"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "production of the elements in a supernova explosion"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "supernova nucleosynthesis"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "超新星核合成"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1150817"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "production of the elements in a supernova explosion"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "supernova nucleosynthesis"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "超新星核合成"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1150817"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "production of the elements in a supernova explosion"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "supernova nucleosynthesis"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "超新星核合成"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1068896"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of nuclear fusion reactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "oxygen-burning process"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "氧燃燒過程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1068896"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of nuclear fusion reactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "oxygen-burning process"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "氧燃烧过程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1068896"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "set of nuclear fusion reactions"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "oxygen-burning process"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "氧燃燒過程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1064418"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "atomic nuclear process"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "neutron capture"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "中子俘获"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1064418"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "atomic nuclear process"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "neutron capture"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "中子俘获"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1064418"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "atomic nuclear process"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "neutron capture"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "中子俘獲"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1064418"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "atomic nuclear process"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "neutron capture"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "中子捕獲"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q206621"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "retarding force on a body moving in a fluid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3538122"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "drag"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "阻力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q206621"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "retarding force on a body moving in a fluid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3538122"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "drag"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "阻力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q206621"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "retarding force on a body moving in a fluid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3538122"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "drag"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "阻力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q206621"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "retarding force on a body moving in a fluid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3538122"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "drag"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "阻力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q277209"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nucleosynthesis pathway"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "s-process"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "S-過程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process in which two nuclei collide to produce one or more nuclides"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear reaction"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "核反应"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process in which two nuclei collide to produce one or more nuclides"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear reaction"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "核反应"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process in which two nuclei collide to produce one or more nuclides"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear reaction"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "核反应"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process in which two nuclei collide to produce one or more nuclides"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear reaction"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "核反應"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "process in which two nuclei collide to produce one or more nuclides"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear reaction"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "核反應"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284633"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "processes in astrophysics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "p-process"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "P-過程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284633"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "processes in astrophysics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "p-process"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "P-过程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284633"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "processes in astrophysics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "p-process"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "P-过程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284633"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "processes in astrophysics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "p-process"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "P-過程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284633"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "processes in astrophysics"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "p-process"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "P-過程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q285033"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nucleosynthesis pathway"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "r-process"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "R-過程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q285033"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nucleosynthesis pathway"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "r-process"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "R-过程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q285033"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nucleosynthesis pathway"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "r-process"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "R-过程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q285033"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nucleosynthesis pathway"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "r-process"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "R-過程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q285033"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nucleosynthesis pathway"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "r-process"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "R-過程"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q178413"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of volume with different values"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gallon"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "加仑"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1302471"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q178413"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of volume with different values"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gallon"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "加仑"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1302471"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q178413"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of volume with different values"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gallon"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "加仑"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1302471"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q178413"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of volume with different values"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gallon"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "加侖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1302471"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q178413"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of volume with different values"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gallon"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "加侖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1302471"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q178413"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of volume with different values"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gallon"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "加仑"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q178413"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of volume with different values"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gallon"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "加仑"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q178413"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of volume with different values"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gallon"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "加仑"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q178413"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of volume with different values"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gallon"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "加侖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q178413"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of volume with different values"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gallon"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "加侖"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21652125"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q206621"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "retarding force on a body moving in a fluid"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3538122"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "drag"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "阻力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q202651"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "conversion of one chemical element or an isotope into another chemical element"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nuclear transmutation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "核嬗变"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2113713"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "atomic nuclear process"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "proton capture"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "质子俘获"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104117265"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current in the CGSm system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "biot"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "毕奥"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q26240"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104117265"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current in the CGSm system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "biot"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "毕奥"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q26240"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104117265"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current in the CGSm system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "biot"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "必歐"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q26240"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550873"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "capacity of information storage and communication"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141631942"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of information"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "資訊單位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7662712"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "production of rare lustrous high-conductivity elements"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q471702"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "synthesis of precious metals"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "贵金属核合成"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3647172"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical unit which measures mass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141631942"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of mass"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "質量單位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3647172"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical unit which measures mass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141631942"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of mass"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "质量单位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3647172"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical unit which measures mass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141631942"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of mass"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "质量单位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3647172"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical unit which measures mass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141631942"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of mass"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "質量單位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3647172"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "physical unit which measures mass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141631942"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of mass"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "質量單位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q110558361"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "force applied by an item in reaction to an applied force"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3538122"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "resistance force"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "阻力"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2497391"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "relative pressure if below ambient pressure"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2497391"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "negative pressure"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "负压"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q13587321"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of measuring an angle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141631942"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of plane angle"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "角度单位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104117265"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current in the CGSm system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "biot"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "毕奥"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104117265"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current in the CGSm system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "biot"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "毕奥"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104117265"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current in the CGSm system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "biot"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "必歐"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q82047057"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104117265"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current in the CGSm system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "biot"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "毕奥"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104117265"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current in the CGSm system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "biot"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "毕奥"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104117265"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current in the CGSm system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "biot"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "必歐"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104117265"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current in the CGSm system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "biot"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "毕奥"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126734856"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104117265"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current in the CGSm system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "biot"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "毕奥"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126734856"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q104117265"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of electric current in the CGSm system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q106839917"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "biot"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "必歐"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q126734856"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68723978"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for reporting measurement of thermodynamic temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141631942"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of thermodynamic temperature"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "温度单位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q68723978"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit for reporting measurement of thermodynamic temperature"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141631942"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of thermodynamic temperature"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "溫度單位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2478109"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system with kinematic constraints that cannot be integrated in position-level constraints"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2478109"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nonholonomic system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "非完整系統"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2478109"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system with kinematic constraints that cannot be integrated in position-level constraints"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2478109"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nonholonomic system"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "非完整系统"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2478109"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system with kinematic constraints that cannot be integrated in position-level constraints"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2478109"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "nonholonomic system"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "非完整系統"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7098560"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of nuclear reaction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Oppenheimer–Phillips process"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "歐本海默-菲利浦斯過程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7098560"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of nuclear reaction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Oppenheimer–Phillips process"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "奥本海默-菲利浦斯過程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7098560"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of nuclear reaction"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Oppenheimer–Phillips process"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "奧本海默-菲利浦斯過程"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q238323"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3550873"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "capacity of information storage and communication"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141631942"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of information"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "信息單位"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q12039317"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "unit of money used in a particular currency as a standard unit of value"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141631942"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "currency unit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "货币单位"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q61196352"
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "sourceUrl": "https://lean-lang.org/doc/reference/latest/Tactic-Proofs/",
+  "resolvedUrl": "https://lean-lang.org/doc/reference/latest/Tactic-Proofs/",
+  "retrievedAt": "2026-10-04T06:08:10.129089+00:00",
+  "author": "Lean FRO and Lean reference-manual contributors",
+  "license": "Apache-2.0",
+  "licenseUrl": "https://raw.githubusercontent.com/leanprover/reference-manual/main/LICENSE",
+  "responseSha256": "894e16839d0fd8b2c339fb0dac9b6be7a4867f1a3a28009f3dc52ff089b4fba6",
+  "textSha256": "a24d634fe8c7ff250cf36fa6bae81f9b3eb0066ba62f1f3666f55b15ee589e9d",
+  "transformation": "HTML main text; scripts/styles omitted; whitespace normalized; content not rewritten",
+  "anchors": [
+    "--index--next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next",
+    "--index--next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next",
+    "--index--next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next-next",
+    "--marginalia-The-section-on-propositions-desc",
+    "--tech-term-goals",
+    "--tech-term-main-goal",
+    "--tech-term-proof-state",
+    "--tech-term-proof-terms",
+    "--tech-term-subgoals"
+  ],
+  "text": "←13.13. Proofs14.1. Running Tactics→\n14. Tactic Proofs🔗\nThe tactic language is a special-purpose programming language for constructing proofs.\nIn Lean, propositions are represented by types, and proofs are terms that inhabit these types.\nMarginal noteShow marginal noteThe section on propositions describes propositions in more detail.\nWhile terms are designed to make it convenient to indicate a specific inhabitant of a type, tactics are designed to make it convenient to demonstrate that a type is inhabited.\nThis distinction exists because it's important that definitions pick out the precise objects of interest and that programs return the intended results, but proof irrelevance means that there's no technical reason to prefer one proof term over another.\nFor example, given two assumptions of a given type, a program must be carefully written to use the correct one, while a proof may use either without consequence.\nTactics are imperative programs that modify a proof state.\nA proof state consists of an ordered sequence of goals, which are contexts of local assumptions together with types to be inhabited; a tactic may either succeed with a possibly-empty sequence of further goals (called subgoals) or fail if it cannot make progress.\nIf a tactic succeeds with no subgoals, then the proof is complete.\nIf it succeeds with one or more subgoals, then its goal or goals will be proved when those subgoals have been proved.\nThe first goal in the proof state is called the main goal.\nWhile most tactics affect only the main goal, operators such as <;> and all_goals can be used to apply a tactic to many goals, and operators such as bullets, next or case can narrow the focus of subsequent tactics to only a single goal in the proof state.\nBehind the scenes, tactics construct proof terms.\nProof terms are independently checkable evidence of a theorem's truth, written in Lean's type theory.\nEach proof is checked in the kernel, and can be verified with independently-implemented external checkers, so the worst outcome from a bug in a tactic is a confusing error message, rather than an incorrect proof.\nEach goal in a tactic proof corresponds to an incomplete portion of a proof term.\n14.1. Running Tactics\n14.2. Reading Proof States\n14.3. The Tactic Language\n14.4. Options\n14.5. Tactic Reference\n14.6. Targeted Rewriting with conv\n14.7. Naming Bound Variables\n14.8. Custom Tactics\n←13.13. Proofs14.1. Running Tactics→"
+}

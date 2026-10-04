@@ -1,0 +1,3605 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q1229213 wd:Q21281188 wd:Q671298 wd:Q858520 wd:Q1226939 wd:Q3526714 wd:Q1268863 wd:Q5337637 wd:Q123036352 wd:Q21405405 wd:Q2881121 wd:Q24963771 wd:Q389408 wd:Q1192553 wd:Q1921825 wd:Q5439686 wd:Q105072006 wd:Q42283 wd:Q5455479 wd:Q1196156 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q1229213 wd:Q21281188 wd:Q671298 wd:Q858520 wd:Q1226939 wd:Q3526714 wd:Q1268863 wd:Q5337637 wd:Q123036352 wd:Q21405405 wd:Q2881121 wd:Q24963771 wd:Q389408 wd:Q1192553 wd:Q1921825 wd:Q5439686 wd:Q105072006 wd:Q42283 wd:Q5455479 wd:Q1196156 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q1229213 wd:Q21281188 wd:Q671298 wd:Q858520 wd:Q1226939 wd:Q3526714 wd:Q1268863 wd:Q5337637 wd:Q123036352 wd:Q21405405 wd:Q2881121 wd:Q24963771 wd:Q389408 wd:Q1192553 wd:Q1921825 wd:Q5439686 wd:Q105072006 wd:Q42283 wd:Q5455479 wd:Q1196156 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "d72a94f8b267690e1877458c139b5cfeff910765868f99f3ef4d6f6a427ea415",
+  "responseSha256": "f2b452eb9c8042ee6c44443d3897fdd781c007c7fd1fff887bd4069480dd61fd",
+  "retrievedAt": "2026-10-04T03:23:33.496622+00:00",
+  "license": "CC0-1.0",
+  "domain": "cs",
+  "roots": [
+    {
+      "domain": "cs",
+      "id": "Q1229213",
+      "label": "Display Data Channel",
+      "description": "Communication protocols",
+      "parents": [
+        "Q132364"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q21281188",
+      "label": "distributed algorithmic problem",
+      "description": "algorithmic problem involving a distributed structure (a set of agents, ...)",
+      "parents": [
+        "Q3435924"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q671298",
+      "label": "divide-and-conquer algorithm",
+      "description": "algorithm design paradigm based on multi-branched recursion",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q858520",
+      "label": "divisibility rule",
+      "description": "shorthand way of determining whether a given number is divisible by a fixed divisor",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q1226939",
+      "label": "division",
+      "description": "arithmetic operation; one of the four basic operations of arithmetic (others being addition, subtraction, multiplication).The division of two natural numbers is the process of calculating the number of times one number is contained within one another",
+      "parents": [
+        "Q3435924"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q3526714",
+      "label": "division algorithm",
+      "description": "algorithm for quotient and remainder of integer division",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q1268863",
+      "label": "dynamic time warping",
+      "description": "algorithm for measuring similarity between two temporal sequences, which may vary in speed",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q5337637",
+      "label": "edge-preserving smoothing",
+      "description": "image processing technique",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q123036352",
+      "label": "emulator detection",
+      "description": "technique used in Android applications to determine if the current device is emulated or not; some games cease to function or apply restrictive measures if they detect that the device is an emulator",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q21405405",
+      "label": "enumeration algorithm",
+      "description": "an algorithm that outputs all solutions to a problem",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q2881121",
+      "label": "evaluation strategy",
+      "description": "strategy used by programming languages to determine two things—when to evaluate the arguments of a function call and what kind of value to pass to the function",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q24963771",
+      "label": "exact algorithm",
+      "description": "type of algorithm guaranteed to produce an optimal result",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q389408",
+      "label": "extent",
+      "description": "variable-sized, contiguous area of storage that some filesystems use as a unit of disk space allocation",
+      "parents": [
+        "Q175263"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q1192553",
+      "label": "facial recognition system",
+      "description": "computer application capable of identifying or verifying an individual person from a digital image",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q1921825",
+      "label": "feature data",
+      "description": "object in geographic information systems that can have a geographic location and other properties",
+      "parents": [
+        "Q175263"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q5439686",
+      "label": "Feature scaling",
+      "description": "method used to normalize the range of independent variables",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q105072006",
+      "label": "feature selection algorithm",
+      "description": "algorithm",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q42283",
+      "label": "File Transfer Protocol",
+      "description": "standardized protocol for transferring files over TCP/IP networks",
+      "parents": [
+        "Q132364"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q5455479",
+      "label": "Fitness proportionate selection",
+      "description": "variant of the genetic operator selection",
+      "parents": [
+        "Q8366"
+      ]
+    },
+    {
+      "domain": "cs",
+      "id": "Q1196156",
+      "label": "flood fill",
+      "description": "algorithm that determines the area connected to a given node in a multi-dimensional array",
+      "parents": [
+        "Q8366"
+      ]
+    }
+  ],
+  "limit": 20000,
+  "name": "cs branches 101..120",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2881121"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "strategy used by programming languages to determine two things—when to evaluate the arguments of a function call and what kind of value to pass to the function"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2881121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evaluation strategy"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "求值策略"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1854385"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standard division algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "long division"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "長除法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2704282"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Polynomial division computation method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ruffini's rule"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "綜合除法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1085860"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2704282"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Polynomial division computation method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ruffini's rule"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "综合除法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1085860"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2704282"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Polynomial division computation method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ruffini's rule"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "綜合除法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1085860"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2704282"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Polynomial division computation method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ruffini's rule"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "綜合除法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2704282"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Polynomial division computation method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ruffini's rule"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "综合除法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2704282"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Polynomial division computation method"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Ruffini's rule"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "綜合除法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1241487"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "randomized algorithm guaranteed to eventually produce correct or optimal results"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24963771"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Las Vegas algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "拉斯维加斯算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28455561"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1229213"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Communication protocols"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1229213"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Display Data Channel"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "VESA显示数据频道"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16889133"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105547961"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SRT division"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "SRT除法算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105547961"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SRT division"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "SRT除法算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141343183"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "AI facial recognition engine developed by CyberLink"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1192553"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "FaceMe"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "FaceMe"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7397"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141343183"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "AI facial recognition engine developed by CyberLink"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1192553"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "FaceMe"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "FaceMe"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7397"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2765700"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "electronic border control system"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1192553"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "SmartGate"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "智慧閘門"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1268863"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for measuring similarity between two temporal sequences, which may vary in speed"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1268863"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dynamic time warping"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "动态时间规整"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1268863"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for measuring similarity between two temporal sequences, which may vary in speed"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1268863"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dynamic time warping"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "动态时间规整"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1268863"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for measuring similarity between two temporal sequences, which may vary in speed"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1268863"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dynamic time warping"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "动态时间规整"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1268863"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for measuring similarity between two temporal sequences, which may vary in speed"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1268863"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "dynamic time warping"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "動態時間規整"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q31838568"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Newton Raphson Division"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "牛顿-拉弗森除法算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q31838568"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Newton Raphson Division"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "牛顿-拉弗森除法算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2321565"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q31838568"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Newton Raphson Division"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "牛顿-拉弗森除法算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q31838568"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Newton Raphson Division"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "牛顿-拉弗森除法算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5439686"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "method used to normalize the range of independent variables"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5439686"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Feature scaling"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "特徵縮放"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141343183"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "AI facial recognition engine developed by CyberLink"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1192553"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "FaceMe"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "FaceMe"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1192553"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q141343183"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "AI facial recognition engine developed by CyberLink"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1192553"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "FaceMe"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "FaceMe"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1192553"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for quotient and remainder of integer division"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "除法器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for quotient and remainder of integer division"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "除法器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for quotient and remainder of integer division"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "除法器"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21281178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithmic constrained optimisation problem involving a set of commiunicating agents"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21281188"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed constrained optimisation problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分佈式約束推理"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21281182"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21281178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithmic constrained optimisation problem involving a set of commiunicating agents"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21281188"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed constrained optimisation problem"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分佈式約束推理"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21281188"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21281178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithmic constrained optimisation problem involving a set of commiunicating agents"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21281188"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed constrained optimisation problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "分佈式約束推理"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21281182"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21281178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithmic constrained optimisation problem involving a set of commiunicating agents"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21281188"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed constrained optimisation problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "分佈式約束推理"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21281188"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21281178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithmic constrained optimisation problem involving a set of commiunicating agents"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21281188"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed constrained optimisation problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "分散式約束推理"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21281182"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21281178"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithmic constrained optimisation problem involving a set of commiunicating agents"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21281188"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "distributed constrained optimisation problem"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "分散式約束推理"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q21281188"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q105834438"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "way to break a division problem into smaller steps"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Short division"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "短除法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3526714"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24963771"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of algorithm guaranteed to produce an optimal result"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24963771"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "exact algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "精确算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24963771"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of algorithm guaranteed to produce an optimal result"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24963771"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "exact algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "精確演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24963771"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of algorithm guaranteed to produce an optimal result"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24963771"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "exact algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "精確演算法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486598"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divide and conquer sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quicksort"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "快速排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q181593"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486598"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divide and conquer sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quicksort"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "快速排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q181593"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486598"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divide and conquer sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quicksort"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "快速排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q181593"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486598"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divide and conquer sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quicksort"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "快速排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486598"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divide and conquer sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quicksort"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "快速排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486598"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divide and conquer sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quicksort"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "快速排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486598"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divide and conquer sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quicksort"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "快速排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2632949"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486598"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divide and conquer sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quicksort"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "快速排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2632949"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q486598"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divide and conquer sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "quicksort"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "快速排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2632949"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standardized protocol for transferring files over TCP/IP networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "文件传输协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q290378"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standardized protocol for transferring files over TCP/IP networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "文件传输协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q290378"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standardized protocol for transferring files over TCP/IP networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "檔案傳輸協定"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q290378"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standardized protocol for transferring files over TCP/IP networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "文件传输协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standardized protocol for transferring files over TCP/IP networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "文件传输协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standardized protocol for transferring files over TCP/IP networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "檔案傳輸協定"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q15836568"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standardized protocol for transferring files over TCP/IP networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "文件传输协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standardized protocol for transferring files over TCP/IP networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "文件传输协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standardized protocol for transferring files over TCP/IP networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "檔案傳輸協定"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q16935517"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "归并排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "归并排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2632949"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "归并排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2705718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "归并排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "归并排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "歸併排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "归并排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2632949"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "归并排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2705718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "归并排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2632949"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "归并排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2705718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "歸併排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "歸併排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2632949"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "歸併排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2705718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "歸併排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2632949"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q189057"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "worst-case optimal stable divide and conquer comparison sorting algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "merge sort"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "歸併排序"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2705718"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q181054"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division with remainder of integers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1226939"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Euclidean division"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "带余除法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q65943"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q181054"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division with remainder of integers"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1226939"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Euclidean division"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "带余除法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3884033"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q243754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "search algorithm in sorted lists that operates by decreasing the search space by half each pass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "二分查找"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q243754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "search algorithm in sorted lists that operates by decreasing the search space by half each pass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "二分查找"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q755673"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q243754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "search algorithm in sorted lists that operates by decreasing the search space by half each pass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "二分查找"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q243754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "search algorithm in sorted lists that operates by decreasing the search space by half each pass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "二分搜索算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q243754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "search algorithm in sorted lists that operates by decreasing the search space by half each pass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "二分搜尋演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q243754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "search algorithm in sorted lists that operates by decreasing the search space by half each pass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "二分查找"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q755673"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q243754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "search algorithm in sorted lists that operates by decreasing the search space by half each pass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "二分搜索算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q755673"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q243754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "search algorithm in sorted lists that operates by decreasing the search space by half each pass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "二分搜尋演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q755673"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q243754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "search algorithm in sorted lists that operates by decreasing the search space by half each pass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "二分搜尋演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q243754"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "search algorithm in sorted lists that operates by decreasing the search space by half each pass"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "binary search algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "二分搜尋演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q755673"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q389408"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "variable-sized, contiguous area of storage that some filesystems use as a unit of disk space allocation"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q389408"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "extent"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Extent"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standardized protocol for transferring files over TCP/IP networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "文件传输协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q37071"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standardized protocol for transferring files over TCP/IP networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "文件传输协议"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q37071"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "standardized protocol for transferring files over TCP/IP networks"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q42283"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "File Transfer Protocol"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "檔案傳輸協定"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q37071"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q338438"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast wavelet transform"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "快速小波轉換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q338438"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast wavelet transform"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "快速小波转换"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q338438"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast wavelet transform"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "快速小波转换"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q338438"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast wavelet transform"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "快速小波轉換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q338438"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast wavelet transform"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "快速小波轉換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623950"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "𝑂(𝑁 log 𝑁) divide‐and‐conquer algorithm to calculate the discrete Fourier transforms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast Fourier transform"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "快速傅里叶变换"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623950"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "𝑂(𝑁 log 𝑁) divide‐and‐conquer algorithm to calculate the discrete Fourier transforms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast Fourier transform"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "快速傅里叶变换"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623950"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "𝑂(𝑁 log 𝑁) divide‐and‐conquer algorithm to calculate the discrete Fourier transforms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast Fourier transform"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "快速傅里葉變換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q623950"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "𝑂(𝑁 log 𝑁) divide‐and‐conquer algorithm to calculate the discrete Fourier transforms"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fast Fourier transform"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "快速傅立葉變換"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q573952"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evaluation strategy that delays evaluation of expressions until actually needed"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2881121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lazy evaluation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "惰性求值"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1192553"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer application capable of identifying or verifying an individual person from a digital image"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1192553"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "facial recognition system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "人臉辨識系統"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1192553"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer application capable of identifying or verifying an individual person from a digital image"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1192553"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "facial recognition system"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "人脸识别系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1192553"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer application capable of identifying or verifying an individual person from a digital image"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1192553"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "facial recognition system"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "人脸识别系统"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1192553"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "computer application capable of identifying or verifying an individual person from a digital image"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1192553"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "facial recognition system"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "臉部識別系統"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11016"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q858520"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "shorthand way of determining whether a given number is divisible by a fixed divisor"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q858520"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divisibility rule"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "整除规则"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q858520"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "shorthand way of determining whether a given number is divisible by a fixed divisor"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q858520"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divisibility rule"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "整除规则"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q858520"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "shorthand way of determining whether a given number is divisible by a fixed divisor"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q858520"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divisibility rule"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "整除規則"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q615541"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "evaluation strategy that fully evaluates arguments before calling a function"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2881121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "eager evaluation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "及早求值"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2881121"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q605499"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of semantics in some programming languages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2881121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "short-circuit evaluation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "短路求值"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2881121"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q605499"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of semantics in some programming languages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2881121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "short-circuit evaluation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "短路求值"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2881121"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q605499"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of semantics in some programming languages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2881121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "short-circuit evaluation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "短路求值"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2881121"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q605499"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of semantics in some programming languages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2881121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "short-circuit evaluation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "短路求值"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28057154"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q605499"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of semantics in some programming languages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2881121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "short-circuit evaluation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "短路求值"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28057154"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q605499"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of semantics in some programming languages"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2881121"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "short-circuit evaluation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "短路求值"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28057154"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1226939"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "arithmetic operation; one of the four basic operations of arithmetic (others being addition, subtraction, multiplication).The division of two natural numbers is the process of calculating the number of times one number is contained within one another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1226939"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "除法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1226939"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "arithmetic operation; one of the four basic operations of arithmetic (others being addition, subtraction, multiplication).The division of two natural numbers is the process of calculating the number of times one number is contained within one another"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1226939"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "除法"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1196156"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm that determines the area connected to a given node in a multi-dimensional array"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1196156"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "flood fill"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Flood fill"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1196156"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm that determines the area connected to a given node in a multi-dimensional array"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1196156"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "flood fill"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Flood fill"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1196156"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm that determines the area connected to a given node in a multi-dimensional array"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1196156"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "flood fill"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Flood fill"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q848539"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the result yielded by a real number when divided by zero"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1226939"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division by zero"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "除以零"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6498784"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q848539"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the result yielded by a real number when divided by zero"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1226939"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division by zero"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "除以零"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6498784"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q848539"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "the result yielded by a real number when divided by zero"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1226939"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "division by zero"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "除以零"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6498784"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm design paradigm based on multi-branched recursion"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divide-and-conquer algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分治法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28455561"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm design paradigm based on multi-branched recursion"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q671298"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "divide-and-conquer algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "分治法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q131744452"
+      }
+    }
+  ]
+}

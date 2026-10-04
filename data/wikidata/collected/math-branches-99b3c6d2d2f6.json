@@ -1,0 +1,4000 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "query": "SELECT DISTINCT ?root ?item ?en ?zh ?description ?kind WHERE {\n      hint:Query hint:optimizer \"None\".\n      { SELECT DISTINCT ?root ?item ?en ?zh WHERE {\n        { VALUES ?root { wd:Q4925193 wd:Q664495 wd:Q6543810 wd:Q6543816 wd:Q11348833 wd:Q6545927 wd:Q1322614 wd:Q136036266 wd:Q98142278 wd:Q98142232 wd:Q33540 wd:Q936155 wd:Q841805 wd:Q6552558 wd:Q1718195 wd:Q27628 wd:Q17232527 wd:Q77978698 wd:Q1072174 wd:Q6553530 } ?item wdt:P31 ?root }\n        UNION { VALUES ?root { wd:Q4925193 wd:Q664495 wd:Q6543810 wd:Q6543816 wd:Q11348833 wd:Q6545927 wd:Q1322614 wd:Q136036266 wd:Q98142278 wd:Q98142232 wd:Q33540 wd:Q936155 wd:Q841805 wd:Q6552558 wd:Q1718195 wd:Q27628 wd:Q17232527 wd:Q77978698 wd:Q1072174 wd:Q6553530 } ?item wdt:P279 ?root }\n        UNION { VALUES ?root { wd:Q4925193 wd:Q664495 wd:Q6543810 wd:Q6543816 wd:Q11348833 wd:Q6545927 wd:Q1322614 wd:Q136036266 wd:Q98142278 wd:Q98142232 wd:Q33540 wd:Q936155 wd:Q841805 wd:Q6552558 wd:Q1718195 wd:Q27628 wd:Q17232527 wd:Q77978698 wd:Q1072174 wd:Q6553530 } BIND(?root AS ?item) }\n        ?item rdfs:label ?en, ?zh.\n        FILTER(LANG(?en)=\"en\" && LANG(?zh) IN (\"zh-hans\", \"zh-cn\", \"zh\", \"zh-tw\", \"zh-hant\"))\n        FILTER NOT EXISTS { ?item wdt:P31 wd:Q5 }\n      } LIMIT 20000 }\n      OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description)=\"en\") }\n      OPTIONAL { ?item wdt:P31 ?kind }\n    }",
+  "querySha256": "99b3c6d2d2f6c545e06e799d2f80e179e1376730b77047e08b927ed80c132ade",
+  "responseSha256": "3e34e943d871b28362b1abf149a4437161da40ae1356fc764ddeddd9ca120181",
+  "retrievedAt": "2026-10-04T04:58:48.652390+00:00",
+  "license": "CC0-1.0",
+  "domain": "math",
+  "roots": [
+    {
+      "domain": "math",
+      "id": "Q4925193",
+      "label": "lie",
+      "description": "false statement made with the intent to deceive",
+      "parents": [
+        "Q108163"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q664495",
+      "label": "Lie algebra",
+      "description": "vector space with an alternating binary operation satisfying the Jacobi identity.",
+      "parents": [
+        "Q205464"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q6543810",
+      "label": "Lie algebroid",
+      "description": "infinitesimal version of a Lie groupoid: manifold M with vector bundle E, vector bundle map ρ: E→TM, and a Lie bracket on sections of E, so that [s,ft] = (ρ(s)f)t+f[s,t] for any function f: M→ℝ and sections s, t of E",
+      "parents": [
+        "Q205464"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q6543816",
+      "label": "Lie coalgebra",
+      "description": "",
+      "parents": [
+        "Q205464"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q11348833",
+      "label": "Lie group decomposition",
+      "description": "building Lie groups out of subgroups",
+      "parents": [
+        "Q20642780"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q6545927",
+      "label": "Light's associativity test",
+      "description": "algorithm in mathematics",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q1322614",
+      "label": "limit",
+      "description": "category theory term",
+      "parents": [
+        "Q20642780"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q136036266",
+      "label": "limit",
+      "description": "maximum or minimum value allowed",
+      "parents": [
+        "Q2912517"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q98142278",
+      "label": "limit from above",
+      "description": "one of two directions from which a limit (Q177239) can be calculated, and which may or may not be the same as limit from below for a given sequence/series",
+      "parents": [
+        "Q177239"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q98142232",
+      "label": "limit from below",
+      "description": "one of two directions from which a limit (Q177239) can be calculated, and which may or may not be the same as limit from above for a given sequence/series",
+      "parents": [
+        "Q177239"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q33540",
+      "label": "limit of a function",
+      "description": "point to which functions converge in analysis",
+      "parents": [
+        "Q177239"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q936155",
+      "label": "Lindelöf space",
+      "description": "topological space such that every open cover has a countable subcover",
+      "parents": [
+        "Q179899"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q841805",
+      "label": "Lindenbaum–Tarski algebra",
+      "description": "algebra of the operations on a logical theory up to equivalence",
+      "parents": [
+        "Q205464"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q6552558",
+      "label": "Lindley equation",
+      "description": "",
+      "parents": [
+        "Q176737"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q1718195",
+      "label": "line drawing algorithm",
+      "description": "Algorithm to draw angled lines on discrete, gridlike media (e.g. pixel displays)",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q27628",
+      "label": "linear combination",
+      "description": "expression constructed from a set of terms by the addition of terms in the set to each other any number of times",
+      "parents": [
+        "Q6498784"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q17232527",
+      "label": "linear programming problem",
+      "description": "",
+      "parents": [
+        "Q1166625"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q77978698",
+      "label": "linear representation",
+      "description": "mathematical notion, most commonly - group representation",
+      "parents": [
+        "Q2905654"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-8f8058f767e0.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q1072174",
+      "label": "linear system",
+      "description": "mathematical model of a system based on the use of a linear operator",
+      "parents": [
+        "Q486902"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-e803f1e68c46.json"
+    },
+    {
+      "domain": "math",
+      "id": "Q6553530",
+      "label": "linear temporal logic to Büchi automaton",
+      "description": "conversion process for model checking",
+      "parents": [
+        "Q8366"
+      ],
+      "discoverySnapshot": "data/wikidata/discovery/math-d84e49a78840.json"
+    }
+  ],
+  "limit": 20000,
+  "name": "math branches 561..580",
+  "rows": [
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33540"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "point to which functions converge in analysis"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33540"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "limit of a function"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "函數極限"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284885"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fundamental physics principle stating that physical solutions of linear systems are linear"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27628"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "superposition principle"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "叠加原理"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3924032"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284885"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fundamental physics principle stating that physical solutions of linear systems are linear"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27628"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "superposition principle"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "线性叠加"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3924032"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284885"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fundamental physics principle stating that physical solutions of linear systems are linear"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27628"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "superposition principle"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "线性叠加"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3924032"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284885"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fundamental physics principle stating that physical solutions of linear systems are linear"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27628"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "superposition principle"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "線性疊加"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3924032"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27628"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "expression constructed from a set of terms by the addition of terms in the set to each other any number of times"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27628"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear combination"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "线性组合"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vector space with an alternating binary operation satisfying the Jacobi identity."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lie algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "李代數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vector space with an alternating binary operation satisfying the Jacobi identity."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6543810"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lie algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "李代數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q370098"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "behavior of habitual or compulsive lying"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pathological lying"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "幻謊"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q51714514"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284885"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fundamental physics principle stating that physical solutions of linear systems are linear"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27628"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "superposition principle"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "叠加原理"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27628"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284885"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fundamental physics principle stating that physical solutions of linear systems are linear"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27628"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "superposition principle"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "线性叠加"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27628"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284885"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fundamental physics principle stating that physical solutions of linear systems are linear"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27628"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "superposition principle"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "线性叠加"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27628"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q284885"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "fundamental physics principle stating that physical solutions of linear systems are linear"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27628"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "superposition principle"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "線性疊加"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27628"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q549860"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for rasterizing a straight line"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1718195"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bresenham's line algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "布雷森漢姆直線演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1718195"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q549860"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for rasterizing a straight line"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1718195"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bresenham's line algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "布雷森汉姆直线算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1718195"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q549860"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for rasterizing a straight line"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1718195"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bresenham's line algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "布雷森漢姆直線演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1718195"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q549860"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for rasterizing a straight line"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1718195"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bresenham's line algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "布雷森漢姆直線演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3687015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q549860"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for rasterizing a straight line"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1718195"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bresenham's line algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "布雷森汉姆直线算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3687015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q549860"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algorithm for rasterizing a straight line"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1718195"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Bresenham's line algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "布雷森漢姆直線演算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3687015"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vector space with an alternating binary operation satisfying the Jacobi identity."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lie algebra"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "李代數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vector space with an alternating binary operation satisfying the Jacobi identity."
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6543810"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lie algebra"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "李代數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11203"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "collection of linear equations involving the same set of variables"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1072174"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "system of linear equations"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "线性方程组"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q444054"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one of basic infinite-dimensional Lie algebras"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Witt algebra"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Witt 代数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q444054"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one of basic infinite-dimensional Lie algebras"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Witt algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Witt 代数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q444054"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one of basic infinite-dimensional Lie algebras"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Witt algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Witt 代数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q444054"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one of basic infinite-dimensional Lie algebras"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Witt algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Witt 代數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q444054"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one of basic infinite-dimensional Lie algebras"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Witt algebra"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Witt 代数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q444054"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one of basic infinite-dimensional Lie algebras"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Witt algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Witt 代数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q444054"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one of basic infinite-dimensional Lie algebras"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Witt algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Witt 代数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q444054"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one of basic infinite-dimensional Lie algebras"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Witt algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "Witt 代數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6543816"
+      },
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6543816"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lie coalgebra"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "李余代数"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5499906"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "free object in the category of Lie algebras"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "free Lie algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "自由李代數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q7558992"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lie algebra whose derived series terminates in the zero subalgebra"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "solvable Lie algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "可解李代數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6543812"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vector space equipped with both a Lie bracket and a Lie cobracket, with certain compatibility conditions between the two"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lie bialgebra"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "李雙代數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28453861"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space in which, for every sequence of open covers 𝑈₁, 𝑈₂, …, there are finite sets 𝐹₁⊂𝑈₁, 𝐹₂⊂𝑈₂, … such that 𝐹₁∪𝐹₂∪⋯ covers the space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Menger space"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "門格爾空間"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q28453861"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space in which, for every sequence of open covers 𝑈₁, 𝑈₂, …, there are finite sets 𝐹₁⊂𝑈₁, 𝐹₂⊂𝑈₂, … such that 𝐹₁∪𝐹₂∪⋯ covers the space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Menger space"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "门格尔空间"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17011487"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "continuous-time linear system with only negative real parts"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1072174"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "exponential stability"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "指數穩定"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5161031"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear combination where the coefficients are non-negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27628"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "conical combination"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "锥组合"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5161031"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear combination where the coefficients are non-negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27628"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "conical combination"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "锥组合"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5161031"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear combination where the coefficients are non-negative"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27628"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "conical combination"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "錐組合"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6543810"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "infinitesimal version of a Lie groupoid: manifold M with vector bundle E, vector bundle map ρ: E→TM, and a Lie bracket on sections of E, so that [s,ft] = (ρ(s)f)t+f[s,t] for any function f: M→ℝ and sections s, t of E"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6543810"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lie algebroid"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "李代数胚"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6543810"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "infinitesimal version of a Lie groupoid: manifold M with vector bundle E, vector bundle map ρ: E→TM, and a Lie bracket on sections of E, so that [s,ft] = (ρ(s)f)t+f[s,t] for any function f: M→ℝ and sections s, t of E"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6543810"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lie algebroid"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "李代數胚"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6543812"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "vector space equipped with both a Lie bracket and a Lie cobracket, with certain compatibility conditions between the two"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6543816"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lie bialgebra"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "李雙代數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11143305"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "associative algebra together with a Lie bracket that also satisfies Leibniz's law"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Poisson algebra"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "泊松代数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11143305"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "associative algebra together with a Lie bracket that also satisfies Leibniz's law"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Poisson algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "泊松代数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11143305"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "associative algebra together with a Lie bracket that also satisfies Leibniz's law"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Poisson algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "泊松代數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q5532440"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lie algebra with imaginary simple roots"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "generalized Kac–Moody algebra"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "廣義泛卡茨-穆迪代數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117921997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real line endowed with the lower limit topology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sorgenfrey line"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Sorgenfrey直线"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q326908"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117921997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real line endowed with the lower limit topology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sorgenfrey line"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Sorgenfrey直线"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q680081"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117921997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real line endowed with the lower limit topology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sorgenfrey line"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Sorgenfrey直线"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q326908"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117921997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real line endowed with the lower limit topology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sorgenfrey line"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Sorgenfrey直线"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q326908"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117921997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real line endowed with the lower limit topology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sorgenfrey line"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Sorgenfrey直线"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q926996"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117921997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real line endowed with the lower limit topology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sorgenfrey line"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Sorgenfrey直线"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117921997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real line endowed with the lower limit topology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sorgenfrey line"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Sorgenfrey直线"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q680081"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117921997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real line endowed with the lower limit topology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sorgenfrey line"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Sorgenfrey直线"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q680081"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117921997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real line endowed with the lower limit topology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sorgenfrey line"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Sorgenfrey直线"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q926996"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117921997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real line endowed with the lower limit topology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sorgenfrey line"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Sorgenfrey直线"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117921997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real line endowed with the lower limit topology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sorgenfrey line"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Sorgenfrey直线"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q926996"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117921997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real line endowed with the lower limit topology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sorgenfrey line"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Sorgenfrey直线"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117921997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real line endowed with the lower limit topology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sorgenfrey line"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Sorgenfrey直线"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117922447"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117921997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real line endowed with the lower limit topology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sorgenfrey line"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Sorgenfrey直线"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117922447"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117921997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real line endowed with the lower limit topology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sorgenfrey line"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Sorgenfrey直线"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117922447"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117921997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real line endowed with the lower limit topology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sorgenfrey line"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "Sorgenfrey直线"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q123247662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117921997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real line endowed with the lower limit topology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sorgenfrey line"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "Sorgenfrey直线"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q123247662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q117921997"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "real line endowed with the lower limit topology"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Sorgenfrey line"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "Sorgenfrey直线"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q123247662"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98142232"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one of two directions from which a limit (Q177239) can be calculated, and which may or may not be the same as limit from above for a given sequence/series"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98142232"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "limit from below"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "下极限"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98142232"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one of two directions from which a limit (Q177239) can be calculated, and which may or may not be the same as limit from above for a given sequence/series"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98142232"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "limit from below"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "下極限"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98142278"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one of two directions from which a limit (Q177239) can be calculated, and which may or may not be the same as limit from below for a given sequence/series"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98142278"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "limit from above"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "上极限"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98142278"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "one of two directions from which a limit (Q177239) can be calculated, and which may or may not be the same as limit from below for a given sequence/series"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q98142278"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "limit from above"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "上極限"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q17521172"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lie algebra of endomorphisms of a vector space; Lie algebra corresponding to the general linear group"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "general linear Lie algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "一般線性李代數"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2104404"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deceptive statement that is only partly true"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "half-truth"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "片面真理"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2104404"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deceptive statement that is only partly true"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "half-truth"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "片面真理"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2104404"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "deceptive statement that is only partly true"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "half-truth"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "片面真理"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2835867"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "First line algorithm with antialiasing"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1718195"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Xiaolin Wu's line algorithm"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "吴小林直线算法"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1718195"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "false statement made with the intent to deceive"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lie"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "谎言"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q814441"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "false statement made with the intent to deceive"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "lie"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "谎言"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27949697"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1821397"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "language that deliberately disguises, distorts, or reverses the meaning of words"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "doublespeak"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "雙言巧語"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2331011"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2839017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hoaxes or other false stories about Jews and Judaism"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "antisemitic trope"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "反犹谣言"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q427532"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1821397"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "language that deliberately disguises, distorts, or reverses the meaning of words"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "doublespeak"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "双言巧语"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2331011"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1821397"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "language that deliberately disguises, distorts, or reverses the meaning of words"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "doublespeak"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "雙言巧語"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2331011"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2839017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hoaxes or other false stories about Jews and Judaism"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "antisemitic trope"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "反犹谣言"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q427532"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2839017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hoaxes or other false stories about Jews and Judaism"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "antisemitic trope"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "反猶謠言"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q427532"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2839017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hoaxes or other false stories about Jews and Judaism"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "antisemitic trope"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "反犹谣言"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30067981"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2839017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hoaxes or other false stories about Jews and Judaism"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "antisemitic trope"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "反犹谣言"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30067981"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2839017"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "hoaxes or other false stories about Jews and Judaism"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "antisemitic trope"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "反猶謠言"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q30067981"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2083614"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gross distortion or misrepresentation of the truth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "big lie"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "戈培尔效应"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2101619"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2083614"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gross distortion or misrepresentation of the truth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "big lie"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "戈培尔效应"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2331011"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2083614"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "gross distortion or misrepresentation of the truth"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "big lie"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "戈培尔效应"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9357091"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3754024"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical values with different meanings by domain"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q33540"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "critical value"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "臨界值"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q100724091"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4815874"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lie algebroid associated to a principal bundle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6543810"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Atiyah algebroid"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "阿蒂亚代数胚"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4815874"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lie algebroid associated to a principal bundle"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q6543810"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Atiyah algebroid"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "阿蒂亞代數胚"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1397439"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "category-theoretic limit of a diagram of the form 𝑋→𝑍←𝑌"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1322614"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "pullback"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "拉回"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4723980"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear representation of an associative algebra"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q77978698"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algebra representation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "代數表現方式"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2634828"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "construction to \"glue together\" mathematical objects along a downward-directed set"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1322614"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "inverse limit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "逆向极限"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2634828"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "construction to \"glue together\" mathematical objects along a downward-directed set"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1322614"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "inverse limit"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "逆极限"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2634828"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "construction to \"glue together\" mathematical objects along a downward-directed set"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1322614"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "inverse limit"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "逆向极限"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q2634828"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "construction to \"glue together\" mathematical objects along a downward-directed set"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1322614"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "inverse limit"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "逆向極限"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3859441"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "untruth propagated to strengthen social harmony"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "noble lie"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "高貴謊言"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9465"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3859441"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "untruth propagated to strengthen social harmony"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "noble lie"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "高贵谎言"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9465"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3859441"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "untruth propagated to strengthen social harmony"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "noble lie"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "高贵谎言"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9465"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3859441"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "untruth propagated to strengthen social harmony"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "noble lie"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "高貴謊言"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9465"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q3859441"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "untruth propagated to strengthen social harmony"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "noble lie"
+      },
+      "zh": {
+        "xml:lang": "zh-tw",
+        "type": "literal",
+        "value": "高貴謊言"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q9465"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1077350"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "maximum legal speed of vehicles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q136036266"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "speed limit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "车速限制"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1077350"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "maximum legal speed of vehicles"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q136036266"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "speed limit"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "车速限制"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1072174"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical model of a system based on the use of a linear operator"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1072174"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear system"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "線性系統"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1072174"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical model of a system based on the use of a linear operator"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1072174"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear system"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "线性系统"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1072174"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical model of a system based on the use of a linear operator"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1072174"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear system"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "線性系統"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q841805"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algebra of the operations on a logical theory up to equivalence"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q841805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lindenbaum–Tarski algebra"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "林登鲍姆-塔斯基代数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q841805"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algebra of the operations on a logical theory up to equivalence"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q841805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lindenbaum–Tarski algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "林登鲍姆-塔斯基代数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q841805"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "algebra of the operations on a logical theory up to equivalence"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q841805"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lindenbaum–Tarski algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "林登鮑姆-塔斯基代數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space such that every open cover has a countable subcover"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lindelöf space"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "林德洛夫空間"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space such that every open cover has a countable subcover"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lindelöf space"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "林德洛夫空間"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1363919"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space whose topology admits a countable base"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "second-countable space"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "第二可數空間"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1363919"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space whose topology admits a countable base"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "second-countable space"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "第二可数空间"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1363919"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "topological space whose topology admits a countable base"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q936155"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "second-countable space"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "第二可數空間"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1224487"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "type of limit in category theory"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1322614"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "equaliser"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "等化子"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1136782"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "homomorphism of Lie algebras whose codomain is the endomorphism algebra of a vector space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q77978698"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lie algebra representation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "李代數表示"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1136782"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "homomorphism of Lie algebras whose codomain is the endomorphism algebra of a vector space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q77978698"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lie algebra representation"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "李代数表示"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1136782"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "homomorphism of Lie algebras whose codomain is the endomorphism algebra of a vector space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q77978698"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Lie algebra representation"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "李代數表示"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1322614"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "category theory term"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1322614"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "limit"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "极限"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1322614"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "category theory term"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1322614"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "limit"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "極限"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q750099"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical process dealing with Lie groups"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11348833"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Iwasawa decomposition"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "岩泽分解"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11348833"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q750099"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical process dealing with Lie groups"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11348833"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Iwasawa decomposition"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "岩泽分解"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11348833"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q750099"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "mathematical process dealing with Lie groups"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11348833"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Iwasawa decomposition"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "岩澤分解"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q11348833"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1229735"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "attempt to conceal evidence of wrongdoing or failures"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cover-up"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "掩飾"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1229735"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "attempt to conceal evidence of wrongdoing or failures"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cover-up"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "掩盖证据"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1229735"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "attempt to conceal evidence of wrongdoing or failures"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cover-up"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "掩盖"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1229735"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "attempt to conceal evidence of wrongdoing or failures"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "cover-up"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "掩蓋證據"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1322614"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "category theory term"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1322614"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "limit"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "极限"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q24034552"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q694190"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "false accusations"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q4925193"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "calumny"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "誣告"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q938614"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear combination whose coefficients sum to 1"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27628"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "affine combination"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "仿射組合"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q938614"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear combination whose coefficients sum to 1"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27628"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "affine combination"
+      },
+      "zh": {
+        "xml:lang": "zh-cn",
+        "type": "literal",
+        "value": "仿射组合"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q938614"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear combination whose coefficients sum to 1"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27628"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "affine combination"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "仿射组合"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q938614"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "linear combination whose coefficients sum to 1"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q27628"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "affine combination"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "仿射組合"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1055807"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "group homomorphism into the general linear group over a vector space"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q77978698"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "group representation"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "群表示論"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1366201"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "complex Lie algebra, the unique central extension of the Witt algebra"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Virasoro algebra"
+      },
+      "zh": {
+        "xml:lang": "zh",
+        "type": "literal",
+        "value": "维拉宿代数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1366201"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "complex Lie algebra, the unique central extension of the Witt algebra"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Virasoro algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-hans",
+        "type": "literal",
+        "value": "维拉宿代数"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      }
+    },
+    {
+      "item": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q1366201"
+      },
+      "description": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "complex Lie algebra, the unique central extension of the Witt algebra"
+      },
+      "root": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      },
+      "en": {
+        "xml:lang": "en",
+        "type": "literal",
+        "value": "Virasoro algebra"
+      },
+      "zh": {
+        "xml:lang": "zh-hant",
+        "type": "literal",
+        "value": "維拉宿代數"
+      },
+      "kind": {
+        "type": "uri",
+        "value": "http://www.wikidata.org/entity/Q664495"
+      }
+    }
+  ]
+}
