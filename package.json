@@ -1,6 +1,6 @@
 {
   "name": "am-academic-translator",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "private": true,
   "description": "保护公式与代码、支持本地模型的学术双语翻译插件",
   "license": "MIT",
@@ -24,7 +24,9 @@
     "benchmark:graph": "node scripts/evaluate-term-graph.mjs",
     "benchmark:view": "node scripts/render-benchmark.mjs",
     "glossary:provenance": "node scripts/validate-glossary.mjs --provenance",
-    "glossary:screen": "python3 scripts/clean-glossary.py"
+    "glossary:screen": "python3 scripts/clean-glossary.py",
+    "glossary:update-manifest": "node scripts/build-glossary-update.mjs",
+    "glossary:update-check": "node scripts/build-glossary-update.mjs --check"
   },
   "dependencies": {
     "idb": "^8.0.3",
@@ -39,11 +41,12 @@
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@wxt-dev/module-react": "^1.2.2",
+    "fake-indexeddb": "^6.2.5",
     "happy-dom": "^20.0.0",
+    "jiti": "^2.7.0",
     "typescript": "^5.9.0",
     "vitest": "^5.0.3",
-    "wxt": "^0.21.4",
-    "jiti": "^2.7.0"
+    "wxt": "^0.21.4"
   },
   "overrides": {
     "@xmldom/xmldom": "0.9.12"

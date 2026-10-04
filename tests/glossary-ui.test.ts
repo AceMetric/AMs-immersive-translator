@@ -10,7 +10,7 @@ vi.mock('../src/db',()=>({
   getUserTerms:async()=>[...records.values()],
   putTerms:async(terms:Term[])=>{for(const term of terms)records.set(term.id,term);},
   deleteTerm:async(id:string)=>records.delete(id),
-  cacheCount:async()=>0,clearCache:async()=>{},
+  cacheCount:async()=>0,clearCache:async()=>{},getMeta:async()=>undefined,writeMetaBatch:async()=>{},
 }));
 vi.mock('../src/messaging',()=>({background:async()=>({})}));
 const core:Term={id:'am-ui-core',source:'vector space',target:'向量空间',domain:'math',sense:'vector space',aliases:['vector spaces'],sourceUrl:'https://example.org/core',license:'CC0-1.0',quality:'core',enabled:true};
@@ -32,7 +32,7 @@ beforeEach(()=>{
   records.clear();document.body.innerHTML='';
   vi.stubGlobal('IS_REACT_ACT_ENVIRONMENT',true);
   vi.stubGlobal('chrome',{
-    runtime:{getURL:(path:string)=>'https://extension.test/'+path},
+    runtime:{getURL:(path:string)=>'https://extension.test/'+path,onMessage:{addListener:()=>{},removeListener:()=>{}}},
     storage:{local:{get:async()=>({})},onChanged:{addListener:()=>{},removeListener:()=>{}}},
     tabs:{query:async()=>[]},
   });

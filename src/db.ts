@@ -28,3 +28,13 @@ export async function reserveQuota(key:string,limits:NonNullable<import('./types
   const {rows,exhausted,oversized,wait}=quotaDecision(await tx.store.get(key)??[],limits,tokens,now);
   if(!exhausted&&!oversized&&!wait){rows.push({at:now,tokens});await tx.store.put(rows,key);}await tx.done;return {exhausted,oversized,wait};
 }
+
+/** Commit a complete data snapshot and its active pointer in one transaction. */
+export async function writeMetaBatch(writes:{key:string;value:unknown}[],remove:string[]=[]){
+ const db=await dbPromise(),tx=db.transaction('meta','readwrite');
+ try{
+  for(const key of remove)void tx.store.delete(key).catch(()=>{});
+  for(const {key,value} of writes)void tx.store.put(value,key).catch(()=>{});
+  await tx.done;
+ }catch(error){try{tx.abort();}catch{}await tx.done.catch(()=>{});throw error;}
+}

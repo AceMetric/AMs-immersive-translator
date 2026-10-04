@@ -8,13 +8,19 @@
 
 需要 Chrome 116 或更新版本。
 
-1. 从 [GitHub Releases](https://github.com/AceMetric/AMs-immersive-translator/releases/tag/v0.1.8) 下载并解压 `AM-translator-0.1.8.zip`；本地构建包在 `release/`。
+1. 从 [GitHub Releases](https://github.com/AceMetric/AMs-immersive-translator/releases/tag/v0.1.9) 下载并解压 `AM-translator-0.1.9.zip`；本地构建包在 `release/`。
 2. 在 Chrome 地址栏打开 `chrome://extensions`，开启右上角“开发者模式”。
 3. 点击“加载已解压的扩展程序”，选择解压后包含 `manifest.json` 的目录。
 4. 固定 AM 图标，打开插件的“设置”，配置模型并测试连接。
 5. 打开英文网页，点击插件图标中的“开始翻译当前网页”。从弹窗可打开阅读侧栏；启动后也可以点击网页右下角“译”按钮。
 
 开发者可以直接加载项目中的 `.output/chrome-mv3`。更新代码并重新构建后，在扩展管理页点击重新加载，再刷新目标网页。
+
+## 0.1.9：词库独立更新
+
+设置 → 术语库 → **检查词库更新**。首次授权 GitHub 数据域名后，可查看版本和数量、更新词库、回退上一版或恢复内置词库。下载完成后离线可用；个人术语和长期确认译名保留，候选库仍不强制替换。更新失败继续使用旧版。
+
+已有用户需先覆盖原目录并重新加载到 0.1.9 一次。此后更新词库无需重装或重新加载插件；插件代码更新仍使用完整安装包。[使用及发布说明](docs/词库在线更新.md)。
 
 ## 0.1.8：资料不全的有效术语保留
 
