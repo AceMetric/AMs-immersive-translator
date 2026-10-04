@@ -24,3 +24,5 @@ Wikidata 数据清洗脚本保存英语与中文标签，剔除人名/机构明�
 Google 机器学习词汇表和其他官方项目文档也可作为具体词义依据，许可列表见 [数据许可](DATA-LICENSE.md#其他官方参考文档)。使用 `scripts/collect-project-evidence.py` 中已明确登记的来源时，保存固定提交、许可、署名及实际定义位置；抓取工具不会自动生成审校结论。新增来源须同时更新许可声明和目标校验器允许列表。
 
 对于易误锁定的核心词义，可在核对记录中设置 `requiresContext: true` 并填写明确的 `contexts`；构建器会保留该约束。它用于缺乏语境时避免强制替换，不证明关键词命中就一定选对词义。用户明确编辑或导入的个人术语仍保持最高优先级。
+
+严格候选筛选策略见 `data/glossary-screening.json` 和 [筛选报告](docs/扩展词库筛选报告.md)。被隔离的记录完整保存于 `data/glossary-audit/candidate-quarantine.json`；修改分支允许规则或补充实际来源后重新清洗，再用 `npm run glossary:provenance` 重放校验。不要直接把缺乏定义的条目设为通过，不要因为清洗后数量下降而放宽规则。`glossary:target` 仍独立报告 10,000 条数量目标是否达到。

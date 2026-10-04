@@ -86,4 +86,10 @@ describe('glossary settings enable/disable actions',()=>{
     expect(resolveStoredTerms([updated],[{...saved,quality:'user'}])).toEqual([{...updated,enabled:false}]);
     const confirmed={...core,quality:'confirmed' as const,updatedAt:1};expect(resolveStoredTerms([core],[confirmed])).toEqual([confirmed]);
   });
+  it('does not reintroduce screened-out candidates through current or legacy toggles',()=>{
+    const legacy={...candidate,quality:'user' as const};
+    const edited={...legacy,target:'我的明确译名',updatedAt:1};
+    expect(resolveStoredTerms([core],[candidate,legacy,edited])).toEqual([edited]);
+    expect(resolveStoredTerms([core,candidate],[{...candidate,enabled:false}])).toEqual([{...candidate,enabled:false}]);
+  });
 });

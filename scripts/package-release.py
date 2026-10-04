@@ -10,7 +10,7 @@ version=manifest['version']
 index=json.loads((root/'public/glossaries/index.json').read_text())
 core_count=sum(p['count'] for p in index['packs'] if p['group']=='core')
 candidate_count=sum(p['count'] for p in index['packs'] if p['group']=='extended')
-installer=release/f'AM-学术翻译-{version}.zip'
+installer=release/f'AM-translator-{version}.zip'
 with zipfile.ZipFile(installer,'w',zipfile.ZIP_DEFLATED) as z:
     for p in sorted((root/'.output/chrome-mv3').rglob('*')):
         if p.is_file() and p.name!='.DS_Store':z.write(p,p.relative_to(root/'.output/chrome-mv3'))
@@ -41,7 +41,7 @@ with zipfile.ZipFile(installer,'w',zipfile.ZIP_DEFLATED) as z:
 核心 {core_count:,} 条（项目编辑整理，待持续专业复核）；候选 {candidate_count:,} 条。
 目前不支持 PDF、扫描件，未发布 Chrome 商店。
 ''')
-source=release/f'AM-学术翻译-{version}-源码.zip'
+source=release/f'AM-translator-{version}-source.zip'
 files=['package.json','package-lock.json','tsconfig.json','wxt.config.ts','vitest.config.ts','playwright.config.ts','.gitignore','README.md','LICENSE','DATA-LICENSE.md','CONTRIBUTING.md','THIRD_PARTY_NOTICES.md']
 with zipfile.ZipFile(source,'w',zipfile.ZIP_DEFLATED) as z:
     for name in files:z.write(root/name,name)

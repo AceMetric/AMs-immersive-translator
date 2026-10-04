@@ -157,6 +157,7 @@ def clean(entities, exclusions=None):
 
 
 def main():
+    from glossary_screening import screen_candidates
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--cache-dir", type=Path, default=ROOT / "data/wikidata/collected")
     parser.add_argument("--output-dir", type=Path, default=ROOT / "artifacts/glossary-research/preview")
@@ -167,33 +168,49 @@ def main():
         parser.error("No successful snapshots; refusing to replace data with empty output")
     exclusions = json.loads((ROOT / "data/glossary-exclusions.json").read_text())["entries"]
     terms, evidence, rejected, reasons = clean(entities, exclusions)
+    policy_path = ROOT / "data/glossary-screening.json"
+    policy = json.loads(policy_path.read_text())
+    branches = []
+    for name in ("branch-plan.json", "branch-plan-level2.json"):
+        branches.extend(json.loads((ROOT / "data/wikidata" / name).read_text())["roots"])
+    core = [term for path in (ROOT / 'public/glossaries').glob('core-*.json')
+            for term in json.loads(path.read_text())['terms']]
+    terms, evidence, quarantine, screen_rejected, screening = screen_candidates(terms, evidence, policy, branches, core)
     counts = dict(Counter(t["domain"] for t in terms))
     args.output_dir.mkdir(parents=True, exist_ok=True)
     for domain in ("math", "physics", "cs"):
         pack = {"name": f"AM {domain} extended", "version": "2026-10-04", "author": "Wikidata contributors",
-                "license": "CC0-1.0", "domain": domain, "review": "分类筛选与格式清洗；未经专业审校，仅作候选。",
+                "license": "CC0-1.0", "domain": domain, "review": "严格学科证据筛选与格式清洗；证据不足条目已隔离，未经专业审校，仅作候选。",
                 "terms": [t for t in terms if t["domain"] == domain]}
         (args.output_dir / f"extended-{domain}.json").write_text(json.dumps(pack, ensure_ascii=False, indent=2) + "\n")
     audit = {"counts": counts, "total": len(terms), "inputDomainEntities": len(entities),
              "rejectionCounts": dict(reasons), "sourceSnapshots": sources,
              "entries": evidence, "rejected": rejected,
+             "screening": screening, "screeningPolicy": policy_path.relative_to(ROOT).as_posix(),
+             "screeningPolicySha256": hashlib.sha256(policy_path.read_bytes()).hexdigest(),
              "reviewStatus": "automatic-screening-only", "completeTarget": len(terms) >= 10000}
     (args.output_dir / "candidates.json").write_text(json.dumps(audit, ensure_ascii=False, indent=2) + "\n")
+    quarantine_data = {"license": "CC0-1.0", "policyVersion": policy["version"],
+                       "reviewStatus": "not-shipped-recoverable", "screening": screening,
+                       "quarantined": quarantine, "excluded": screen_rejected}
+    (args.output_dir / "candidate-quarantine.json").write_text(json.dumps(quarantine_data, ensure_ascii=False, indent=2) + "\n")
     if args.install_packs:
-        if len(terms) < 10000 or any(not counts.get(domain) for domain in ("math", "physics", "cs")):
-            raise ValueError("Refusing to install an incomplete 10,000-entry, three-domain collection")
+        if not terms or any(not counts.get(domain) for domain in ("math", "physics", "cs")):
+            raise ValueError("Refusing to install an empty collection or one missing a domain")
         if any(source["possiblyLimited"] for source in sources):
             raise ValueError("Source query reached its limit; paginate before installing")
         directory = ROOT / "data/glossary-audit"
         directory.mkdir(exist_ok=True)
         (directory / "candidates.json").write_text(json.dumps(audit, ensure_ascii=False, indent=2) + "\n")
+        (directory / "candidate-quarantine.json").write_text(json.dumps(quarantine_data, ensure_ascii=False, indent=2) + "\n")
         for domain in ("math", "physics", "cs"):
             source = args.output_dir / f"extended-{domain}.json"
             destination = ROOT / "public/glossaries" / source.name
             destination.write_bytes(source.read_bytes())
         subprocess.run(["node", "scripts/split-glossaries.mjs"], cwd=ROOT, check=True)
         subprocess.run(["node", "scripts/validate-glossary.mjs"], cwd=ROOT, check=True)
-    print(json.dumps({"actualCounts": counts, "total": len(terms), "rejected": dict(reasons)}, ensure_ascii=False))
+    print(json.dumps({"actualCounts": counts, "total": len(terms), "rejected": dict(reasons),
+                      "screening": {k: v for k, v in screening.items() if k != "branches"}}, ensure_ascii=False))
 
 
 if __name__ == "__main__":

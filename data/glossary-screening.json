@@ -1,0 +1,144 @@
+{
+  "version": "2026-10-04.1",
+  "license": "CC0-1.0",
+  "scope": "Automatic domain screening, not translation review. Generic taxonomy membership alone is insufficient; uncertain entries are quarantined and remain recoverable.",
+  "methodReferences": [
+    "https://www.wikidata.org/wiki/Help:Basic_membership_properties",
+    "https://github.com/ad-freiburg/entity-linking-annotation-guidelines"
+  ],
+  "excludedBranches": {
+    "Q159535": "conspiracy theory: outside math/physics/cs terminology",
+    "Q108697774": "creator copyright-status heuristic: administrative rule, not a CS algorithm term",
+    "Q61005213": "copyright determination method: administrative rule, not a mathematical algorithm term",
+    "Q957502": "stratagem: historical/social strategy, not a computing algorithm",
+    "Q1926935": "stamp edition: philatelic issue, not physical work",
+    "Q23611439": "Wikidata property change frequency: knowledge-base maintenance metadata"
+  },
+  "excludedText": [
+    "\\bconspiracy theor(?:y|ies)\\b|阴谋论",
+    "\\b(?:apocalypse|end times prediction)\\b|末世预言",
+    "\\bcopyright (?:determination|status)\\b|\\b(?:determining|determine) copyright\\b|\\bcreator.?s copyright\\b",
+    "\\b(?:philatelic|postage stamp issue|postage stamp edition)\\b",
+    "\\b(?:musical note|musical pitches|musical tempo)\\b",
+    "\\bWikipedia article covering multiple topics\\b"
+  ],
+  "domains": {
+    "math": {
+      "trustedAnchors": [
+        "Q65943",
+        "Q748349",
+        "Q1166625",
+        "Q186509",
+        "Q210832",
+        "Q179899",
+        "Q47279819",
+        "Q205464",
+        "Q908207",
+        "Q176737",
+        "Q6498784",
+        "Q21550639",
+        "Q1948412",
+        "Q47460393",
+        "Q3552958",
+        "Q90011163",
+        "Q1422068",
+        "Q77358734"
+      ],
+      "definitionPatterns": [
+        "\\b(?:math(?:ematics|ematical)?|algebra(?:ic)?|geometr(?:y|ic|ical)|topolog(?:y|ic|ical)|calculus|combinator(?:ial|ics)|arithmet(?:ic|ical)|probabil(?:ity|istic)|statistic(?:s|al)|polynomial|manifold|bijection|surjection|injection|isomorphism|homomorphism|diffeomorphism|inequality|integral|derivative|eigenvalue|eigenvector|homotopy|cohomology|functor|monoid|tensor|vector space|metric space|Hilbert space|Banach space|number theory|set theory|graph theory|category theory|type theory|differential equation|real number|complex number|integer|prime number|stochastic|formal logic|propositional logic|predicate logic|proof theory|linear programming|linear equation|optimization|numerical method)\\b",
+        "\\b(?:angle|plane|triangle|polygon|polyhedron|curve|trigonometric|hyperbolic|elliptic|parabolic|vector|matrix|matrices|function|set|graph|encryption|cipher)\\b"
+      ],
+      "foreignPatterns": [
+        "\\b(?:religious|Christian|apocalypse|political|sociological|linguistic|copyright|philatelic|chess strategy|military stratagem)\\b",
+        "\\b(?:psychoanalytical|sociological|philosophical category|kind of music production)\\b"
+      ]
+    },
+    "physics": {
+      "trustedAnchors": [
+        "Q214070",
+        "Q9357058",
+        "Q173227",
+        "Q43116",
+        "Q11402",
+        "Q39552",
+        "Q11423",
+        "Q11465",
+        "Q11376",
+        "Q25342",
+        "Q41364",
+        "Q82047057"
+      ],
+      "definitionPatterns": [
+        "\\b(?:physic(?:s|al)?|quantum|thermodynamic(?:s)?|electromagnetic|magnetic|electric(?:al)?|mechanic(?:s|al)?|optical|optics|photon|electron|boson|fermion|quark|hadron|neutrino|nuclear|relativistic|relativity|cosmolog(?:y|ical)|astrophysic(?:s|al)?|gravitational|gravity|acoustic(?:s)?|fluid|plasma|radiation|wave|wavelength|momentum|angular momentum|energy|entropy|enthalpy|heat|temperature|mass|force|pressure|velocity|acceleration|torque|voltage|current|capacitance|resistance|impedance|frequency|luminance|luminous|viscosity|diffraction|interference|polarization|scattering|radioactivity|radionuclide|SI unit|UCUM|unit of measurement|derived unit|unit of length|unit of time)\\b",
+        "\\b(?:electrons?|photons?|neutrons?|bosons?|fermions?|quarks?|hadrons?|neutrinos?|electrostatic|electrodynamics|electrolytic|power|volume|three-dimensional space|frame of reference|special relativity)\\b"
+      ],
+      "foreignPatterns": [
+        "\\b(?:copyright|philatelic|stamp edition|sport|sports|choreography|dance|biblical|religious|Wikidata property|musical interval|biological process|organism|species|disease|protein|enzyme)\\b",
+        "\\b(?:linguistic|sociological|political|kind of music production)\\b"
+      ]
+    },
+    "cs": {
+      "trustedAnchors": [
+        "Q66747126",
+        "Q15836568",
+        "Q132364",
+        "Q175263",
+        "Q190087",
+        "Q188267",
+        "Q165194",
+        "Q181156",
+        "Q827335",
+        "Q186152",
+        "Q184759",
+        "Q755673",
+        "Q181593",
+        "Q30503704",
+        "Q28057154",
+        "Q2755432",
+        "Q246593",
+        "Q1254335",
+        "Q4825885",
+        "Q4681865",
+        "Q111862379",
+        "Q28058114",
+        "Q20514253",
+        "Q621751",
+        "Q2835765",
+        "Q829546",
+        "Q97940647",
+        "Q130762"
+      ],
+      "definitionPatterns": [
+        "\\b(?:comput(?:er|ing|ational)|program(?:ming)?|software|data structure|database|data type|data model|data flow|dataset|neural|machine learning|artificial intelligence|language model|cryptograph(?:y|ic|ical)|encryption|cipher|compiler|parser|syntax|runtime|operating system|network protocol|networking|packet|TCP|UDP|HTTP|internet|processor|CPU|GPU|memory|binary|bitwise|floating.point|sorting|search algorithm|optimization algorithm|numerical method|numerical analysis|formal verification|type system|type theory|lambda calculus|blockchain|distributed system|API|authentication|encoding|parallel|concurrent|concurrency)\\b",
+        "\\b(?:sort(?:ing)? data|graph partitioning|quantum algorithm|quantum linear algebra|mathematical formula|satisfiability|satisfiable|Boolean formula)\\b"
+      ],
+      "foreignPatterns": [
+        "\\b(?:copyright determination|copyright status|military stratagem|Chinese stratagems|chess strategy|religious|biblical|grammatical construction|linguistics)\\b",
+        "\\bkind of music production\\b"
+      ]
+    }
+  },
+  "translationConflictPolicy": "Quarantine same-domain/source labels conflicting with existing project-checked core translations; variants may be valid and are recoverable.",
+  "uninformativeDefinitions": [
+    "theorem",
+    "a theorem",
+    "mathematical theorem",
+    "conjecture",
+    "lemma",
+    "algorithm",
+    "an algorithm",
+    "formula",
+    "mathematical concept",
+    "mathematical object",
+    "concept",
+    "hypothesis",
+    "physical quantity",
+    "computer science term",
+    "term",
+    "function",
+    "mathematical function",
+    "number",
+    "mathematical constant",
+    "equation"
+  ]
+}

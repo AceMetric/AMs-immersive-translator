@@ -1,5 +1,6 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
+import { execFileSync } from 'node:child_process';
 let total=0;
 const primaryProjects=[
  ['pytorch','pytorch/pytorch','BSD-3-Clause'],['spinning-up','openai/spinningup','MIT'],
@@ -24,8 +25,8 @@ for(const item of index.packs){
 }
 if(coreCount<1000)throw new Error('Core needs at least 1000 real terms');
 console.log('Total:',total,'Core:',coreCount);
-if(process.argv.includes('--collection-target')) {
- if(extendedCount<10000)throw new Error(`Collection target incomplete: ${extendedCount}/10000 candidates`);
+if(process.argv.includes('--collection-target')||process.argv.includes('--provenance')) {
+ if(process.argv.includes('--collection-target')&&extendedCount<10000)throw new Error(`Collection quantity target incomplete after quality screening: ${extendedCount}/10000 candidates; use --provenance to verify integrity without relaxing screening`);
  const audit=JSON.parse(readFileSync('data/glossary-audit/candidates.json','utf8'));
  if(audit.total!==extendedCount||audit.entries.length!==extendedCount)throw new Error('Candidate audit and shipped counts differ');
  const candidateEvidence=new Map(audit.entries.map(e=>[e.id,e]));
@@ -85,5 +86,6 @@ if(process.argv.includes('--collection-target')) {
  if(reviewed.size<1000)throw new Error(`Core source/review target incomplete: ${reviewed.size}/1000 checked terms`);
  const uncheckedCore=allTerms.filter(t=>t.quality==='core'&&!reviewed.has(`${t.domain}|${t.source}|${t.target}`));
  if(uncheckedCore.length)throw new Error(`Core review incomplete: ${reviewed.size}/${coreCount} shipped core terms checked; ${uncheckedCore.length} unchecked (including ${uncheckedCore.slice(0,5).map(t=>t.source).join(', ')})`);
- console.log('Collection target:',extendedCount,'candidates;',reviewed.size,'project-checked core terms (not expert certification)');
+ console.log('Provenance verified:',extendedCount,'candidates;',reviewed.size,'project-checked core terms (not expert certification)');
+ if(existsSync('data/glossary-screening.json'))console.log(execFileSync('python3',['scripts/verify-glossary-screening.py'],{encoding:'utf8'}).trim());
 }

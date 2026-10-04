@@ -6,11 +6,14 @@ export const termKey = (t: Pick<Term,'source'|'domain'|'sense'>) => `${t.source.
 // Edited/imported user records have updatedAt and must retain their overrides.
 export function resolveStoredTerms(builtins: Term[], stored: Term[]): Term[] {
   const byId=new Map(builtins.map(t=>[t.id,t]));
-  return stored.map(t=>{
+  return stored.flatMap(t=>{
     const builtin=byId.get(t.id);
-    if(!builtin)return t;
+    // Removed built-in candidates must not return through old toggle records.
+    // Keep these records in storage so a future reviewed pack can restore the
+    // preference, while genuine edited/imported personal terms remain usable.
+    if(!builtin)return t.id.startsWith('wd-')&&(t.quality==='candidate'||t.quality==='user'&&t.updatedAt===undefined)?[]:[t];
     const legacyToggle=t.quality==='user'&&t.updatedAt===undefined&&termKey(t)===termKey(builtin);
-    return t.quality===builtin.quality||legacyToggle?{...builtin,enabled:t.enabled}:t;
+    return [t.quality===builtin.quality||legacyToggle?{...builtin,enabled:t.enabled}:t];
   });
 }
 const rank: Record<Term['quality'],number> = { user:5, confirmed:4, core:3, article:2, candidate:1 };
