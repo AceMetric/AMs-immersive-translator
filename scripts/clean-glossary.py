@@ -8,8 +8,13 @@ import re
 import subprocess
 
 from opencc import OpenCC
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from glossary_locale import normalize_region
 
 ROOT = Path(__file__).resolve().parents[1]
+# Mainland labels are not automatically semantically better than zh-hans.
+# Prefer zh-cn only when the guarded normalization proves equivalent below.
 LANG_RANK = {"zh-hans": 0, "zh-cn": 1, "zh": 2, "zh-tw": 3, "zh-hant": 4}
 # Direct types plus description checks. These are conservative exclusion rules,
 # not a claim that Wikidata's taxonomy is complete or professionally reviewed.
@@ -82,6 +87,7 @@ def collect(cache_dir):
 
 def clean(entities, exclusions=None):
     converter = OpenCC("t2s")
+    locale = json.loads((ROOT / 'data/glossary-locale.json').read_text())
     terms = []
     rejected = []
     accepted_evidence = []
@@ -89,8 +95,21 @@ def clean(entities, exclusions=None):
     for key, item in sorted(entities.items()):
         source = sorted(item["en"])[0] if item["en"] else ""
         label = min(item["zh"], key=lambda p: (LANG_RANK.get(p[0], 99), p[1])) if item["zh"] else ("", "")
-        target = converter.convert(label[1])
+        script_target = converter.convert(label[1])
         description = " / ".join(sorted(item["descriptions"]))
+        target, locale_rules = normalize_region(script_target, source, description, item['domain'], locale)
+        equivalent_alternative = None
+        for alternative in sorted(item['zh']):
+            if alternative[0] != 'zh-cn':
+                continue
+            alternative_script = converter.convert(alternative[1])
+            alternative_target, changes = normalize_region(alternative_script, source, description, item['domain'], locale)
+            if alternative_target == target:
+                if alternative != label and locale_rules:
+                    equivalent_alternative = {'originalLabel': label[1], 'language': label[0],
+                                              'scriptLabel': script_target, 'rules': locale_rules}
+                label, script_target, locale_rules = alternative, alternative_script, changes
+                break
         reason = None
         excluded = next((e for e in (exclusions or []) if e["domain"] == item["domain"]
                          and ("qid" not in e or e["qid"] == item["qid"])
@@ -129,8 +148,14 @@ def clean(entities, exclusions=None):
                 "license": "CC0-1.0", "quality": "candidate", "enabled": True}
         terms.append(term)
         accepted_evidence.append({"id": term["id"], "originalLabel": label[1], "labelLanguage": label[0],
-                                  "normalization": "OpenCC t2s 0.1.7", "directTypes": sorted(item["types"]),
+                                  "availableLabels": [{'language': lang, 'label': value} for lang, value in sorted(item['zh'])],
+                                  "normalization": "OpenCC t2s 0.1.7 + context-gated zh-CN terminology",
+                                  "locale": {'targetLocale': locale['targetLocale'], 'policyVersion': locale['version'],
+                                             'scriptLabel': script_target, 'rules': locale_rules},
+                                  "directTypes": sorted(item["types"]),
                                   "sources": item["evidence"]})
+        if equivalent_alternative:
+            accepted_evidence[-1]['locale']['equivalentAlternative'] = equivalent_alternative
     # Entities with identical labels and definition are merged rather than
     # counted twice. Different definitions of an English homograph survive.
     grouped = {}
@@ -179,7 +204,7 @@ def main():
     counts = dict(Counter(t["domain"] for t in terms))
     args.output_dir.mkdir(parents=True, exist_ok=True)
     for domain in ("math", "physics", "cs"):
-        pack = {"name": f"AM {domain} extended", "version": "2026-10-04", "author": "Wikidata contributors",
+        pack = {"name": f"AM {domain} extended", "version": policy['version'], "author": "Wikidata contributors",
                 "license": "CC0-1.0", "domain": domain, "review": "严格学科证据筛选与格式清洗；证据不足条目已隔离，未经专业审校，仅作候选。",
                 "terms": [t for t in terms if t["domain"] == domain]}
         (args.output_dir / f"extended-{domain}.json").write_text(json.dumps(pack, ensure_ascii=False, indent=2) + "\n")
@@ -188,6 +213,8 @@ def main():
              "entries": evidence, "rejected": rejected,
              "screening": screening, "screeningPolicy": policy_path.relative_to(ROOT).as_posix(),
              "screeningPolicySha256": hashlib.sha256(policy_path.read_bytes()).hexdigest(),
+             "localePolicy": "data/glossary-locale.json",
+             "localePolicySha256": hashlib.sha256((ROOT / 'data/glossary-locale.json').read_bytes()).hexdigest(),
              "reviewStatus": "automatic-screening-only", "completeTarget": len(terms) >= 10000}
     (args.output_dir / "candidates.json").write_text(json.dumps(audit, ensure_ascii=False, indent=2) + "\n")
     quarantine_data = {"license": "CC0-1.0", "policyVersion": policy["version"],

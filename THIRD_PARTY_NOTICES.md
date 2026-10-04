@@ -15,7 +15,7 @@ MathJax 3.2.2 已在插件内打包，采用 SVG 输出；源码保留 mathjax-f
 
 核心术语为项目自行整理，CC0-1.0；扩展候选为 Wikidata 结构化英中标签，CC0。词条保留原始实体链接，不把未经审校的数据声明为核心。
 
-词库收集与清洗工具使用 [OpenCC Python reimplementation](https://github.com/yichen0831/opencc-python) 0.1.7（Apache-2.0），将选定的 Wikidata 中文地区标签转换为简体。它是构建数据时使用的工具，不随 Chrome 插件运行；原始标签、地区语言和转换方式保留在清洗记录中。转换只统一字形，不宣称已解决地区译名或词义差异。
+词库收集与清洗工具使用 [OpenCC Python reimplementation](https://github.com/yichen0831/opencc-python) 0.1.7（Apache-2.0），将选定的 Wikidata 中文地区标签转换为简体。它是构建数据时使用的工具，不随 Chrome 插件运行；原始标签、地区语言和转换方式保留在清洗记录中。OpenCC 只统一字形；构建器另用项目编写、受英文概念约束的地区用词规则规范部分大陆译名，完整过程可重放。没有无条件使用地区词汇转换，也不宣称已经解决全部译名或词义差异。
 
 Lean 专门术语的核对依据包括 [Lean Language Reference](https://lean-lang.org/doc/reference/latest/)（Lean reference-manual contributors，Apache-2.0）。正文快照在 `data/primary-sources/lean-reference/`，保留完整上游许可；仅作为来源资料，不作为网页脚本执行或模型数据自动导入。
 

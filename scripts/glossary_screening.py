@@ -21,6 +21,7 @@ def screen_candidates(terms, evidence, policy, branches, core_terms=()):
     compiled = {d: {
         'anchors': set(v['trustedAnchors']),
         'positive': [re.compile(p, re.I) for p in v['definitionPatterns']],
+        'branch': [re.compile(p, re.I) for p in v.get('branchPatterns', [])],
         'foreign': [re.compile(p, re.I) for p in v['foreignPatterns']],
     } for d, v in policy['domains'].items()}
 
@@ -45,6 +46,7 @@ def screen_candidates(terms, evidence, policy, branches, core_terms=()):
         rules = compiled[domain]
         roots = item['sources']
         trusted = []
+        branch_signals = []
         blocked = set(item.get('directTypes', [])) & excluded.keys()
         for source in roots:
             root = source['root']
@@ -53,13 +55,24 @@ def screen_candidates(terms, evidence, policy, branches, core_terms=()):
             # A trusted path must itself avoid blocked branches.
             if not parents & excluded.keys() and parents & rules['anchors']:
                 trusted.append(root['id'])
+            metadata = index.get((domain, root['id']), root)
+            # Narrow family names, not incidental technical words in a broad
+            # branch's description (e.g. marketing "AI infrastructure").
+            branch_text = metadata.get('label', '')
+            if not parents & excluded.keys():
+                for pattern in rules['branch']:
+                    match = pattern.search(branch_text)
+                    if match:
+                        branch_signals.append({'root': root['id'], 'pattern': pattern.pattern, 'match': match.group(0)})
         positive = [p.pattern for p in rules['positive'] if p.search(definitions)]
         foreign = [p.pattern for p in rules['foreign'] if p.search(text)]
         hard = [p.pattern for p in deny_patterns if p.search(text)]
         targets = sorted(core_targets.get((domain, term['source'].casefold()), set()))
+        translation_issues = [e['reason'] for e in policy.get('translationReviewEntries', [])
+                              if term['id'].endswith('-' + e['qid']) and term['source'] == e['source']]
         if hard:
             status, reason = 'exclude', 'explicit non-academic subject'
-        elif blocked and not (trusted or positive):
+        elif blocked and not (trusted or positive or branch_signals):
             status, reason = 'exclude', 'out-of-scope source branch/type'
         elif blocked:
             status, reason = 'quarantine', 'conflicting source branch and domain evidence'
@@ -69,7 +82,9 @@ def screen_candidates(terms, evidence, policy, branches, core_terms=()):
             status, reason = 'quarantine', 'definition only repeats a generic class; insufficient evidence'
         elif foreign:
             status, reason = 'quarantine', 'foreign subject signal requires review'
-        elif not (trusted or positive):
+        elif translation_issues:
+            status, reason = 'quarantine', 'label meaning needs review; locale normalization is insufficient'
+        elif not (trusted or positive or branch_signals):
             status, reason = 'quarantine', 'generic taxonomy membership without specific domain evidence'
         elif targets and term['target'] not in targets:
             status, reason = 'quarantine', 'label differs from project-checked core; translation/sense needs review'
@@ -78,6 +93,8 @@ def screen_candidates(terms, evidence, policy, branches, core_terms=()):
         decision = {'status': status, 'reason': reason, 'policyVersion': policy['version'],
                     'trustedRoots': sorted(set(trusted)), 'blockedBranches': sorted(blocked),
                     'coreTargets': targets,
+                    'branchSignals': branch_signals, 'translationIssues': translation_issues,
+                    'definitionMatches': [p.search(definitions).group(0) for p in rules['positive'] if p.search(definitions)],
                     'definitionSignals': positive, 'foreignSignals': foreign, 'exclusionSignals': hard}
         for source in roots:
             root = source['root']

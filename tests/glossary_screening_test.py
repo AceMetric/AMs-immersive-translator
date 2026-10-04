@@ -24,6 +24,33 @@ def classify(t, roots=(), types=(), branches=(), core=()):
 
 
 class ScreeningTests(unittest.TestCase):
+    def test_algorithm_families_cover_reported_false_negatives_and_related_terms(self):
+        examples = [('Aho–Corasick algorithm', 'string searching algorithm', 'cs'),
+                    ('Knuth–Morris–Pratt algorithm', 'string searching algorithm', 'cs'),
+                    ('baby-step giant-step', 'algorithm for solving the discrete logarithm problem', 'math'),
+                    ('baby-step giant-step', 'algorithm for solving the discrete logarithm problem', 'cs'),
+                    ('fast Fourier transform', 'divide-and-conquer algorithm to calculate discrete Fourier transforms', 'cs'),
+                    ('quickselect', 'selection algorithm', 'cs')]
+        for source, definition, domain in examples:
+            self.assertEqual(classify(term(source, definition, domain), ['Q8366']), 'retain', source)
+        self.assertEqual(classify(term('medical algorithm', 'procedure for treating disease', 'cs'), ['Q8366']), 'quarantine')
+
+    def test_narrow_branch_names_help_but_incidental_metadata_does_not(self):
+        branches = [{'domain': 'cs', 'id': 'Q2', 'label': 'exact string-matching algorithm', 'parents': ['Q8366']},
+                    {'domain': 'cs', 'id': 'Q3', 'label': 'infrastructure intelligence',
+                     'description': 'integration of artificial intelligence', 'parents': ['Q8366']}]
+        self.assertEqual(classify(term('matcher', 'finds a pattern exactly', 'cs'), ['Q2'], branches=branches), 'retain')
+        self.assertEqual(classify(term('product platform', 'a branded infrastructure platform', 'cs'), ['Q3'], branches=branches), 'quarantine')
+
+    def test_reported_actual_terms_are_shipped_and_bad_meanings_still_quarantined(self):
+        shipped = [t for p in (ROOT / 'public/glossaries').glob('extended-*.json') for t in json.loads(p.read_text())['terms']]
+        ids = {t['id'] for t in shipped}
+        self.assertTrue({'wd-cs-Q402342', 'wd-cs-Q797983', 'wd-math-Q797983'} <= ids)
+        self.assertFalse(any('人工智慧' in t['target'] for t in shipped))
+        self.assertFalse(any(t['source'] in ['AI-complete', 'Floyd Cycle Detection Algorithm', 'Gerchberg–Saxton algorithm'] for t in shipped))
+        pool = json.loads((ROOT / 'data/glossary-audit/candidate-quarantine.json').read_text())
+        self.assertEqual(sum(r['term']['source'] == 'AI-complete' for r in pool['quarantined']), 2)
+
     def test_reported_real_contamination_is_removed_and_recoverable(self):
         pool = json.loads((ROOT / 'data/glossary-audit/candidate-quarantine.json').read_text())
         records = pool['quarantined'] + pool['excluded']

@@ -31,6 +31,53 @@ def entity(qid, source="field", zh="域", sense="algebraic structure", types=Non
 
 
 class CleaningTests(unittest.TestCase):
+    def test_regional_phrases_follow_english_concept_not_script_or_domain_alone(self):
+        examples = [('artificial intelligence', '人工智慧', '人工智能', 'cs'),
+                    ('database', '資料庫', '数据库', 'cs'),
+                    ('array data type', '陣列数据类型', '数组数据类型', 'cs'),
+                    ('antenna array', '天線陣列', '天线阵列', 'physics'),
+                    ('orthogonal array', '正交陣列', '正交阵列', 'math'),
+                    ('higher-order function', '高階函數', '高阶函数', 'cs'),
+                    ('swarm intelligence', '群體智慧', '群体智慧', 'cs'),
+                    ('Internet Key Exchange', '網際網路金鑰交換', '互联网密钥交换', 'cs'),
+                    ('probability density', '機率密度', '概率密度', 'math'),
+                    ('Schrödinger equation', '薛丁格方程式', '薛定谔方程', 'physics'),
+                    ('baby-step giant-step', '大步小步法', '大步小步法', 'math')]
+        for i, (source, label, expected, domain) in enumerate(examples, 1):
+            e = entity('Q' + str(i), source, label, sense=source)
+            e['domain'] = domain
+            terms, evidence, *_ = cleaner.clean({(domain, e['qid']): e})
+            self.assertEqual(terms[0]['target'], expected, source)
+            self.assertEqual(evidence[0]['originalLabel'], label)
+            self.assertEqual(evidence[0]['locale']['targetLocale'], 'zh-CN')
+            self.assertEqual(terms[0]['quality'], 'candidate')
+
+    def test_localization_rules_are_stable_on_second_pass(self):
+        policy = json.loads((ROOT / 'data/glossary-locale.json').read_text())
+        for rule in policy['rules']:
+            self.assertNotEqual(rule['from'], rule['to'])
+            self.assertNotIn(rule['from'], rule['to'])
+        from glossary_locale import normalize_region
+        context = 'Internet Key Exchange protocol, string searching algorithm and probability density'
+        first, _ = normalize_region('网际网路金钥交换协定、字串搜寻演算法、机率密度', context, '', 'cs', policy)
+        second, changes = normalize_region(first, context, '', 'cs', policy)
+        self.assertEqual(first, second)
+        self.assertFalse(changes)
+
+    def test_mainland_labels_preferred_only_when_equivalent_not_assumed_correct(self):
+        for labels, expected, lang in [
+            ({('zh-hans', '人工智慧'), ('zh-cn', '人工智能')}, '人工智能', 'zh-cn'),
+            ({('zh-hans', '人工智能'), ('zh-cn', '错误词义')}, '人工智能', 'zh-hans')]:
+            e = entity('Q1', 'artificial intelligence', languages=labels)
+            e['domain'] = 'cs'
+            terms, evidence, *_ = cleaner.clean({('cs', 'Q1'): e})
+            self.assertEqual(terms[0]['target'], expected)
+            self.assertEqual(evidence[0]['labelLanguage'], lang)
+            self.assertEqual(len(evidence[0]['availableLabels']), 2)
+            if lang == 'zh-cn':
+                self.assertEqual(evidence[0]['locale']['equivalentAlternative']['originalLabel'], '人工智慧')
+                self.assertEqual(evidence[0]['locale']['equivalentAlternative']['rules'][0]['after'], '人工智能')
+
     def test_selected_entity_snapshot_without_search_label_enters_queue(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

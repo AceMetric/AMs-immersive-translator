@@ -1,10 +1,12 @@
 {
-  "version": "2026-10-04.1",
+  "version": "2026-10-04.2",
   "license": "CC0-1.0",
   "scope": "Automatic domain screening, not translation review. Generic taxonomy membership alone is insufficient; uncertain entries are quarantined and remain recoverable.",
   "methodReferences": [
     "https://www.wikidata.org/wiki/Help:Basic_membership_properties",
-    "https://github.com/ad-freiburg/entity-linking-annotation-guidelines"
+    "https://github.com/ad-freiburg/entity-linking-annotation-guidelines",
+    "https://oi-wiki.org/string/ac-automaton/",
+    "https://oi-wiki.org/math/number-theory/discrete-logarithm/"
   ],
   "excludedBranches": {
     "Q159535": "conspiracy theory: outside math/physics/cs terminology",
@@ -46,11 +48,15 @@
       ],
       "definitionPatterns": [
         "\\b(?:math(?:ematics|ematical)?|algebra(?:ic)?|geometr(?:y|ic|ical)|topolog(?:y|ic|ical)|calculus|combinator(?:ial|ics)|arithmet(?:ic|ical)|probabil(?:ity|istic)|statistic(?:s|al)|polynomial|manifold|bijection|surjection|injection|isomorphism|homomorphism|diffeomorphism|inequality|integral|derivative|eigenvalue|eigenvector|homotopy|cohomology|functor|monoid|tensor|vector space|metric space|Hilbert space|Banach space|number theory|set theory|graph theory|category theory|type theory|differential equation|real number|complex number|integer|prime number|stochastic|formal logic|propositional logic|predicate logic|proof theory|linear programming|linear equation|optimization|numerical method)\\b",
-        "\\b(?:angle|plane|triangle|polygon|polyhedron|curve|trigonometric|hyperbolic|elliptic|parabolic|vector|matrix|matrices|function|set|graph|encryption|cipher)\\b"
+        "\\b(?:angle|plane|triangle|polygon|polyhedron|curve|trigonometric|hyperbolic|elliptic|parabolic|vector|matrix|matrices|function|set|graph|encryption|cipher)\\b",
+        "\\b(?:discrete logarithms?|root[- ]finding|eigenvalues?|eigenvectors?|least squares|interpolation|Fourier transforms?|lattice basis|integer factorization|prime factorization|modular exponentiation|matrix multiplication|polynomial evaluation|random permutation|planar graphs?|perfect matchings?|linear systems?)\\b"
       ],
       "foreignPatterns": [
         "\\b(?:religious|Christian|apocalypse|political|sociological|linguistic|copyright|philatelic|chess strategy|military stratagem)\\b",
         "\\b(?:psychoanalytical|sociological|philosophical category|kind of music production)\\b"
+      ],
+      "branchPatterns": [
+        "\\b(?:discrete logarithms?|root[- ]finding|eigenvalues?|eigenvectors?|least squares|interpolation|Fourier transforms?|lattice basis|integer factorization|prime factorization|modular exponentiation|matrix multiplication|polynomial evaluation|random permutation|planar graphs?|perfect matchings?|linear systems?)\\b"
       ]
     },
     "physics": {
@@ -110,11 +116,15 @@
       ],
       "definitionPatterns": [
         "\\b(?:comput(?:er|ing|ational)|program(?:ming)?|software|data structure|database|data type|data model|data flow|dataset|neural|machine learning|artificial intelligence|language model|cryptograph(?:y|ic|ical)|encryption|cipher|compiler|parser|syntax|runtime|operating system|network protocol|networking|packet|TCP|UDP|HTTP|internet|processor|CPU|GPU|memory|binary|bitwise|floating.point|sorting|search algorithm|optimization algorithm|numerical method|numerical analysis|formal verification|type system|type theory|lambda calculus|blockchain|distributed system|API|authentication|encoding|parallel|concurrent|concurrency)\\b",
-        "\\b(?:sort(?:ing)? data|graph partitioning|quantum algorithm|quantum linear algebra|mathematical formula|satisfiability|satisfiable|Boolean formula)\\b"
+        "\\b(?:sort(?:ing)? data|graph partitioning|quantum algorithm|quantum linear algebra|mathematical formula|satisfiability|satisfiable|Boolean formula)\\b",
+        "\\b(?:string[- ](?:search(?:ing)?|match(?:ing)?)|pattern match(?:ing)?|discrete logarithms?|root[- ]finding|eigenvalues?|eigenvectors?|least squares|interpolation|Fourier transforms?|lattice basis|integer factorization|prime factorization|modular exponentiation|matrix multiplication|polynomial evaluation|decision tree|classification algorithm|selection algorithm|disk[- ]scheduling|suffix trees?|regular expressions?|context[- ]free language|finite automata?|cycle finding|stable matching|random(?:ized| permutation)|image (?:reconstruction|resizing|scaling)|signal processing|Hidden Markov|Monte Carlo|multithreaded|AI[- ]generated|artificial intelligence|problems in AI)\\b"
       ],
       "foreignPatterns": [
         "\\b(?:copyright determination|copyright status|military stratagem|Chinese stratagems|chess strategy|religious|biblical|grammatical construction|linguistics)\\b",
         "\\bkind of music production\\b"
+      ],
+      "branchPatterns": [
+        "\\b(?:string[- ](?:search(?:ing)?|match(?:ing)?)|pattern match(?:ing)?|discrete logarithms?|root[- ]finding|eigenvalues?|eigenvectors?|least squares|interpolation|Fourier transforms?|lattice basis|integer factorization|prime factorization|modular exponentiation|matrix multiplication|polynomial evaluation|decision tree|classification algorithm|selection algorithm|disk[- ]scheduling|suffix trees?|regular expressions?|context[- ]free language|finite automata?|cycle finding|stable matching|random(?:ized| permutation)|image (?:reconstruction|resizing|scaling)|signal processing|Hidden Markov|Monte Carlo|multithreaded)\\b"
       ]
     }
   },
@@ -140,5 +150,22 @@
     "number",
     "mathematical constant",
     "equation"
+  ],
+  "translationReviewEntries": [
+    {
+      "qid": "Q2631839",
+      "source": "AI-complete",
+      "reason": "label describes unsolved problems rather than AI-completeness; regional conversion alone cannot fix meaning"
+    },
+    {
+      "qid": "Q1588200",
+      "source": "Floyd Cycle Detection Algorithm",
+      "reason": "Chinese label names an unrelated person rather than cycle detection"
+    },
+    {
+      "qid": "Q5550413",
+      "source": "Gerchberg–Saxton algorithm",
+      "reason": "Chinese label says edge function instead of identifying the phase-retrieval algorithm"
+    }
   ]
 }
